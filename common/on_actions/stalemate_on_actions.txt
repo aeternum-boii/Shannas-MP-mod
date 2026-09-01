@@ -1,0 +1,68 @@
+on_monthly_pulse = {
+    effect = {
+        if = {
+            limit = {
+                any_country = {
+                    has_country_flag = enacted_possible_stalemate_1
+                }
+            }
+            change_variable = {
+                which = st_months_passed_1
+                value = -1
+            }
+        }
+        if = {
+            limit = {
+                any_country = {
+                    has_country_flag = enacted_possible_stalemate_2
+                }
+            }
+            change_variable = {
+                which = st_months_passed_2
+                value = -1
+            }
+        }
+        if = {
+            limit = {
+                any_country = {
+                    has_country_flag = enacted_possible_stalemate_3
+                }
+            }
+            change_variable = {
+                which = st_months_passed_3
+                value = -1
+            }
+        }
+    }
+}
+on_siege_lost_country = {
+    effect = {
+        if = {
+            limit = {
+                has_country_flag = enacted_possible_stalemate_1
+            }
+            set_variable = { 
+                which = st_months_passed_1
+                value = 36
+            }
+        } 
+        if = {
+            limit = {
+                has_country_flag = enacted_possible_stalemate_2
+            }
+            set_variable = { 
+                which = st_months_passed_2
+                value = 36
+            }
+        } 
+        if = {
+            limit = {
+                has_country_flag = enacted_possible_stalemate_3
+            }
+            set_variable = { 
+                which = st_months_passed_3
+                value = 36
+            }
+        } 
+    }
+}

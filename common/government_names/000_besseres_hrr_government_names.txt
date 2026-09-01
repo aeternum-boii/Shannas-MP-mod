@@ -100,3 +100,18 @@ besseres_hrr_holy_roman_emperor = {
 		}
 	}
 }
+
+son_daughter_of_heaven_title = {
+	
+	ruler_male = {
+		3 = SON_OF_HEAVON
+	}
+
+	ruler_female = {
+		3 = DAUGHTER_OF_HEAVON
+	}
+	
+	trigger = {
+		is_emperor_of_china = yes
+	}
+}

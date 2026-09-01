@@ -1,0 +1,36 @@
+namespace = stalemate_event
+
+country_event = {
+    id = stalemate_event.1
+    title = st.1.t
+    desc = st.1.d
+    picture = 
+
+    mayor = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = st.1.1
+        effect = {
+
+        }
+    }
+}
+country_event = {
+    id = stalemate_event.2
+    title = st.2.t
+    desc = st.2.d
+    picture = 
+
+    mayor = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = st.2.1
+        effect = {
+            
+        }
+    }
+}

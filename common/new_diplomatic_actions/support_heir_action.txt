@@ -176,3 +176,117 @@ heir_spionage_option = {
 		}
 	}
 }
+
+force_tributary_action_button_thingy_I_guess = {
+	category = covert
+
+	require_acceptance = no 
+
+	is_visible = {
+		is_emperor_of_china = yes
+	}
+
+	is_allowed = {
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 80
+					}
+				}
+				NOT = { full_idea_group = spy_ideas }
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_100_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 80
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_spy_network_in = {
+						who = FROM
+						value = 40
+					}
+				}
+				full_idea_group = spy_ideas
+			}
+			custom_trigger_tooltip = {
+				tooltip = REQUIRES_100_SPY_NETWORK_TT
+				has_spy_network_in = {
+					who = FROM
+					value = 40
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_casus_belli = {
+					type = cb_force_tributary_mission
+					target = FROM
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_force_trib_cb_already_tt
+				NOT = {
+					has_casus_belli = {
+						type = cb_force_tributary_mission
+						target = FROM
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = { is_subject = yes }
+			}
+			custom_trigger_tooltip = {
+				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
+				FROM = { is_subject = no }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { total_development = FROM } 
+			}
+			custom_trigger_tooltip = {
+				tooltip = we_need_more_dev_tt
+				total_development = FROM 
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = {
+				full_idea_group = spy_ideas
+			}
+			add_spy_network_in = {
+				who = FROM
+				value = -40
+			}
+		}
+		else = {
+			add_spy_network_in = {
+				who = FROM
+				value = -80
+			}
+		}
+		add_casus_belli = {
+			target = FROM
+			type = cb_force_tributary_mission
+			months = 60
+		}
+	}
+
+	ai_will_do = {
+		has_spy_network_in = {
+			who = FROM
+			value = 80
+		}
+	}
+}

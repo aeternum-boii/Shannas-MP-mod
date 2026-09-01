@@ -1,0 +1,188 @@
+country_decisions = {
+    stalemate_button_start_decision_1 = {
+        major = yes
+        color = { 138 154 91 }
+        potential = {
+            ai = no
+            NOT = {
+                any_country = {
+                    has_country_flag = enacted_possible_stalemate_1
+                }
+            }
+        }
+        allow = {
+            any_war_enemy_country = {
+                ai = no
+            }
+        }
+        effect = {
+            set_country_flag = enacted_possible_stalemate_1
+            set_variable = { 
+                which = st_months_passed_1
+                value = 36
+            }
+            country_event = {
+                id = stalemate_event.1
+            }
+            every_war_enemy_country = {
+                limit = {
+                    ai = no
+                }
+                set_country_flag = enacted_possible_stalemate_1
+                country_event = {
+                    id = stalemate_event.1
+                }
+            }
+        }
+    }
+    stalemate_button_end_decision_1 = {
+        mayor = yes
+        color = { 138 154 91 }
+        potential = {
+            has_country_flag = enacted_possible_stalemate_1
+        }
+        allow = {
+            check_variable = {
+                which = st_months_passed_1
+                value = 0
+            }
+        }
+        effect = {
+            clear_variable = st_months_passed_1
+            evenry_country = {
+                limit = {
+                    has_country_flag = enacted_possible_stalemate_1
+                }
+                clr_country_flag = enacted_possible_stalemate_1
+                country_event = stalemate_event.2
+            }
+        }
+    }
+    stalemate_button_start_decision_2 = {
+        major = yes
+        color = { 138 154 91 }
+        potential = {
+            ai = no
+            any_country = {
+                has_country_flag = enacted_possible_stalemate_1
+            }
+            NOT = {
+                any_country = {
+                    has_country_flag = enacted_possible_stalemate_2
+                }
+            }
+        }
+        allow = {
+            any_war_enemy_country = {
+                ai = no
+            }
+        }
+        effect = {
+            set_country_flag = enacted_possible_stalemate_2
+            set_variable = { 
+                which = st_months_passed_2
+                value = 36
+            }
+            country_event = {
+                id = stalemate_event.1
+            }
+            every_war_enemy_country = {
+                limit = {
+                    ai = no
+                }
+                set_country_flag = enacted_possible_stalemate_2
+                country_event = {
+                    id = stalemate_event.1
+                }
+            }
+        }
+    }
+    stalemate_button_end_decision_2 = {
+        mayor = yes
+        color = { 138 154 91 }
+        potential = {
+            has_country_flag = enacted_possible_stalemate_2
+        }
+        allow = {
+            check_variable = {
+                which = st_months_passed_2
+                value = 0
+            }
+        }
+        effect = {
+            clear_variable = st_months_passed_2
+            evenry_country = {
+                limit = {
+                    has_country_flag = enacted_possible_stalemate_2
+                }
+                clr_country_flag = enacted_possible_stalemate_2
+                country_event = stalemate_event.2
+            }
+        }
+    }
+    stalemate_button_start_decision_3 = {
+        major = yes
+        color = { 138 154 91 }
+        potential = {
+            ai = no
+            any_country = {
+                has_country_flag = enacted_possible_stalemate_1
+            }
+            any_country = {
+                has_country_flag = enacted_possible_stalemate_2
+            }
+            NOT = {
+                any_country = {
+                    has_country_flag = enacted_possible_stalemate_3
+                }
+            }
+        }
+        allow = {
+            any_war_enemy_country = {
+                ai = no
+            }
+        }
+        effect = {
+            set_country_flag = enacted_possible_stalemate_3
+            set_variable = { 
+                which = st_months_passed_3
+                value = 36
+            }
+            country_event = {
+                id = stalemate_event.1
+            }
+            every_war_enemy_country = {
+                limit = {
+                    ai = no
+                }
+                set_country_flag = enacted_possible_stalemate_3
+                country_event = {
+                    id = stalemate_event.1
+                }
+            }
+        }
+    }
+    stalemate_button_end_decision_3 = {
+        mayor = yes
+        color = { 138 154 91 }
+        potential = {
+            has_country_flag = enacted_possible_stalemate_3
+        }
+        allow = {
+            check_variable = {
+                which = st_months_passed_3
+                value = 0
+            }
+        }
+        effect = {
+            clear_variable = st_months_passed_3
+            evenry_country = {
+                limit = {
+                    has_country_flag = enacted_possible_stalemate_3
+                }
+                clr_country_flag = enacted_possible_stalemate_3
+                country_event = stalemate_event.2
+            }
+        }
+    }
+}

@@ -275,7 +275,12 @@ country_event = {
 		}
 		set_country_flag = theo_local_noble_flag # USED IN DEVOTION.TXT
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = { 
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_saved_event_target = noble_province
@@ -458,7 +463,12 @@ country_event = {
 			}
 			ROOT = {
 				if = {
-					limit = { has_government_attribute = can_see_theocratic_heir_stats }
+					limit = { 
+						OR = { 
+							has_government_attribute = can_see_theocratic_heir_stats
+							has_country_modifier = by_the_grace_of_god
+						}
+					}
 					if = {
 						limit = {
 							NOT = {
@@ -571,7 +581,12 @@ country_event = {
 		set_country_flag = theo_merchants_son_flag # USED IN DEVOTION.TXT
 		
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = {
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_saved_event_target = burgher_province
@@ -722,7 +737,12 @@ country_event = {
 		}
 		set_country_flag = theo_talented_theologian_flag # USED IN DEVOTION.TXT
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = {
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_saved_event_target = church_province
@@ -894,7 +914,12 @@ country_event = {
 		set_country_flag = theo_local_preacher_flag # USED IN DEVOTION.TXT
 		
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = {
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_saved_event_target = church_province
@@ -1044,7 +1069,12 @@ country_event = {
 		set_country_flag = theo_papal_protege_flag # USED IN DEVOTION.TXT
 		
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = {
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_saved_event_target = papal_protoge_country
@@ -1184,7 +1214,12 @@ country_event = {
 		}		
 		
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = {
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_global_modifier_value = {
@@ -1269,7 +1304,12 @@ country_event = {
 
 		
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = {
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_global_modifier_value = {
@@ -1336,7 +1376,12 @@ country_event = {
 			NOT = { has_reform = ge_sword_of_islam }
 		}
 		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			limit = {
+				OR = { 
+					has_government_attribute = can_see_theocratic_heir_stats
+					has_country_modifier = by_the_grace_of_god
+				}
+			}
 			if = {
 				limit = {
 					has_global_modifier_value = {

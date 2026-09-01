@@ -200,7 +200,7 @@ theocracy_gov_ideas = {
 		development_cost = -0.05
 	}
 	by_the_grace_of_god = {
-		fire_damage_received = -0.075
+		fire_damage_received = -0.1
 	}
 	friends_in_high_places = {
 		global_religious_conversion_resistance = 0.45
@@ -208,7 +208,7 @@ theocracy_gov_ideas = {
 		reverse_relation_with_same_religion = 25
 	}
 	flesh_is_weak = {
-		morale_damage_received = -0.075
+		morale_damage_received = -0.1
 	}
 	alpha_and_omega = {
 		enforce_religion_cost = -0.5
@@ -218,8 +218,8 @@ theocracy_gov_ideas = {
 		global_heathen_missionary_strength = 0.03
 	}
 	martyrs = {
-		manpower_in_true_faith_provinces = 0.075
-		shock_damage_received = -0.075
+		manpower_in_true_faith_provinces = 0.1
+		shock_damage_received = -0.1
 	}
 	ai_will_do = {
 		factor = 1000.0
