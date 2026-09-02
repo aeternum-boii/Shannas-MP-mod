@@ -215,6 +215,12 @@ snow_life_reform = {
 		native_uprising_chance = -0.50
 		rural_goods_produced_modifier = 0.25
 	}
+	effect = {
+		force_reload_rural_goods_produced_modifier = yes 
+	}
+	removed_effect = {
+		force_reload_rural_goods_produced_modifier = yes 
+	}
 	ai = {
 		factor = 10
 	}

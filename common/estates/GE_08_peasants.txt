@@ -12,13 +12,16 @@ estate_peasants = {
 	country_modifier_happy = {
 		state_maintenance_modifier = -0.20
 		rural_goods_produced_modifier = 0.40
+		rural_goods_produced_modifier_sem = 0.001
 	}
 	country_modifier_neutral = {
 		rural_goods_produced_modifier = 0.20
+		rural_goods_produced_modifier_sem = 0.002
 	}	
 	country_modifier_angry = {
 		state_maintenance_modifier = 0.20
 		rural_goods_produced_modifier = -0.10
+		rural_goods_produced_modifier_sem = 0.004
 		global_unrest = 2
 	}
 	land_ownership_modifier = {

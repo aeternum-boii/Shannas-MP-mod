@@ -1,0 +1,21 @@
+on_monthly_pulse = {
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 1
+	}
+	
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 8
+	}
+	
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 15
+	}
+	
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 22
+	}
+}

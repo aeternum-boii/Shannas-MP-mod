@@ -1,0 +1,86 @@
+country_decisions = {
+	vassal_tax_test = {
+		potential = {
+			aet_is_debug = yes 
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = vassal_tax_test
+				duration = -1
+			}
+		}
+	}
+	
+	rural_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = rural_goods_test
+				duration = -1
+			}
+		}
+	}
+	
+	urban_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = urban_goods_test
+				duration = -1
+			}
+		}
+	}
+	
+	mining_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mining_goods_test
+				duration = -1
+			}
+		}
+	}
+	
+	plantage_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = plantage_goods_test
+				duration = -1
+			}
+		}
+	}
+}

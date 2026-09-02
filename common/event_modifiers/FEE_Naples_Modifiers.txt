@@ -4,6 +4,7 @@ fee_nap_magnanimo = {
 }
 fee_nap_transumanza_ge = {
 	rural_goods_produced_modifier = 0.05
+	rural_goods_produced_modifier_sem = 0.016
 }
 fee_nap_transumanza = {
 	trade_goods_size_modifier = 0.10

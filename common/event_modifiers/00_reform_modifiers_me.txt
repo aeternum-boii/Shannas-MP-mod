@@ -886,6 +886,7 @@ GE_Burgher_Autonomy = {
 }
 GE_colonial_plantations = {
 	plantage_goods_produced_modifier = 0.15
+	plantage_goods_produced_modifier_sem = 0.064
 }
 GE_Landsknecht_Sergeants = {
 	infantry_power = 0.10
@@ -915,6 +916,7 @@ GE_Tunisian_Grain_Trade = {
 }
 GE_Tunisian_Grain_Production = {
 	rural_goods_produced_modifier = 0.20
+	rural_goods_produced_modifier_sem = 0.008
 }
 GE_Italian_Grain_Treaties = {
 	trade_efficiency = 0.10

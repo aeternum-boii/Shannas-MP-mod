@@ -18,6 +18,17 @@ arch_monarchy_reform = {
 	custom_attributes = {
 		enables_blood_tax = yes #5% manpower per non-colonial subject
 	}
+	
+	effect = {
+		hidden_effect = {
+			force_reload_vassal_tax_modifier = yes 
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			force_reload_vassal_tax_modifier = yes 
+		}
+	}
 }
 
 lithuania_warlord_duke = {
@@ -1231,12 +1242,14 @@ city_privileges_reform = {
 	icon = free_city
 	allow_normal_conversion = yes
 	effect = {
+		force_reload_urban_goods_produced_modifier = yes 
 		change_variable = {
 			which = Burgher_Influence
 			value = 1
 		}
 	}
 	removed_effect = {
+		force_reload_urban_goods_produced_modifier = yes 
 		change_variable = {
 			which = Burgher_Influence
 			value = -1
@@ -2542,6 +2555,7 @@ regional_kasbah_reform = {
 	icon = Kasbah
 	allow_normal_conversion = yes
 	effect = {
+		force_reload_plantage_goods_produced_modifier = yes 
 		change_variable = {
 			which = Noble_Influence
 			value = 1
@@ -2553,6 +2567,7 @@ regional_kasbah_reform = {
 		}
 	}
 	removed_effect = {
+		force_reload_plantage_goods_produced_modifier = yes 
 		change_variable = {
 			which = Noble_Influence
 			value = -1
@@ -5647,10 +5662,12 @@ empowered_imperial_circles_political_reform = {
 	effect = {
 		hidden_effect = {
 			ge_country_imperial_circle_update = yes
+			force_reload_vassal_tax_modifier = yes
 		}
 	}
 	removed_effect = {
 		hidden_effect = {
+			force_reload_vassal_tax_modifier = yes
 			remove_country_modifier = GE_Imperial_Circle_1
 			remove_country_modifier = GE_Imperial_Circle_2
 			remove_country_modifier = GE_Imperial_Circle_3

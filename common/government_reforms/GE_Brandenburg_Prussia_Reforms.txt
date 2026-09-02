@@ -168,6 +168,7 @@ fredrickan_reforms_reform = {
 			every_owned_province = {
 				ge_immigrant_settlements_province_update = yes
 			}
+			force_reload_rural_goods_produced_modifier = yes 
 		}
 	}
 	removed_effect = {
@@ -175,6 +176,7 @@ fredrickan_reforms_reform = {
 			every_owned_province = {
 				remove_province_modifier = GE_immigrant_settlements
 			}
+			force_reload_rural_goods_produced_modifier = yes 
 		}
 	}
 	custom_attributes = {

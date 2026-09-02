@@ -984,8 +984,10 @@ estate_nobles_establish_serfdom = {
 		has_government_attribute = enables_serfdom
 	}
 	on_granted = {
+		force_reload_rural_goods_produced_modifier = yes 
 	}
 	on_revoked = {
+		force_reload_rural_goods_produced_modifier = yes 
 	}
 	on_invalid = {
 	}
@@ -1111,8 +1113,14 @@ estate_burghers_town_rights = {
 		exempt_from_seize_land
 	}
 	on_granted = {
+		hidden_effect = {
+			force_reload_urban_goods_produced_modifier = yes 
+		}
 	}
 	on_invalid = {
+		hidden_effect = {
+			force_reload_urban_goods_produced_modifier = yes 
+		}
 	}
 	penalties = {
 	}

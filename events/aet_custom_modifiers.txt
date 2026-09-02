@@ -1,0 +1,41 @@
+namespace = aet_custom_modifier_wrapping
+
+country_event = {
+	id = aet_custom_modifier_wrapping.1
+
+	hidden = yes 
+	is_triggered_only = yes 
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = none
+		ai_chance = { factor = 1 }
+		
+		consumer_tick_vassal_tax_modifier = yes
+		consumer_tick_rural_goods_produced_modifier = yes
+		consumer_tick_urban_goods_produced_modifier = yes
+		consumer_tick_mining_goods_produced_modifier = yes
+		consumer_tick_plantage_goods_produced_modifier = yes
+	}
+}
+
+
+
+namespace = aet_test
+
+country_event = {
+	id = aet_test.1
+	title = GE_reform_cycle_republic.201.t
+	desc = GE_reform_cycle_republic.201.d
+	picture = ACCUSATION_eventPicture
+
+	is_triggered_only = yes 
+	
+	option = {
+		name = GE_reform_cycle_republic.201.a
+			
+		set_global_flag = aet_debug
+	}
+}

@@ -23,6 +23,7 @@ yak_provvision_reform = {
 	}
 	effect = {
 		hidden_effect = {
+			force_reload_rural_goods_produced_modifier = yes
 			every_owned_province = {
 				ge_siberian_tribe_province_update = yes
 			}
@@ -30,6 +31,7 @@ yak_provvision_reform = {
 	}
 	removed_effect = {
 		hidden_effect = {
+			force_reload_rural_goods_produced_modifier = yes
 			every_owned_province = {
 				remove_province_modifier = GE_Siberian_Tribe
 			}

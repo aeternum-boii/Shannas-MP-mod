@@ -261,6 +261,16 @@ electoral_college_reform = {
 		num_accepted_cultures = 2
 		rural_goods_produced_modifier = 0.10
 	}
+	effect = {
+		hidden_effect = {
+			force_reload_rural_goods_produced_modifier = yes 
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			force_reload_rural_goods_produced_modifier = yes 
+		}
+	}
 	ai = {
 		factor = 10
 	}

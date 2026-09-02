@@ -18,6 +18,16 @@ kingdom_of_castille_and_leon = {
 		global_manpower_modifier = 0.05
 		nobles_influence_modifier = 0.05
 	}
+	effect = {
+		hidden_effect = {
+			force_reload_rural_goods_produced_modifier = yes 
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			force_reload_rural_goods_produced_modifier = yes 
+		}
+	}
 	ai = {
 		factor = 100
 	}

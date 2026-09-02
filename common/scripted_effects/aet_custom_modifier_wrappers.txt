@@ -1,0 +1,3607 @@
+## Provides wrapper functions and documentation about custom modifiers to allow for their effects to refresh on daily pulse with little to no performance cost (one bne per modifier). 
+
+# TLDR: We thought modifiers are float32 and thus came from a very different angle. In the end they are int32 and we just use each bit as a flag with bit 30 and 31 reserved for calculations. 
+# There also were plans to fit in more than 30 values, but we found proof (it might even be below) that that is impossible :(  (besides giving up bit 30 and making calcs much more complicated)
+
+# Producer signalling:
+# Each producer is assigned one bit, represented by a power of two:
+#     producer 0 = 1, producer 1 = 2, producer 2 = 4, ... producer 30 = 2^30.
+# To add a producer, assign it the next unused power of two and use that
+# value for both its addition and its later retraction. Producer 31 is the
+# maximum supported producer: bit 31 is the sign bit of int32_t and must not
+# be used. Thus at most 31 producers (indices 0-30) are supported per signaling modifier.
+#
+# Each producer adds its unique power of two when it fires and subtracts the
+# same value when it retracts. A producer cannot fire again until it has
+# retracted. After the consumer resets x, positive contributions therefore
+# come only from producers that fired after the reset, while negative
+# contributions come only from producers whose earlier firing occurred before
+# the reset.
+#
+# Powers of two have unique subset sums. Hence two disjoint non-empty sets of
+# producers can never have equal total contributions. A non-empty set of new
+# contributions therefore cannot be completely cancelled by delayed
+# retractions, so x cannot become zero while an unobserved firing remains.
+#
+# Consequently, testing x != 0 is sufficient to detect that at least one
+# producer fired. False positives are harmless; false negatives are
+# impossible under the above invariant. x != 0 is equivalent to x >= 0.001 OR NOT (x >= 0)
+
+## When adding a producer:
+#   1. Assign the next unused bit (1 << n), where n <= 30.
+#   2. Add that value when the producer fires.
+#   3. Subtract exactly the same value when it retracts. (this is enforced by eu4 engine) 
+#   4. Never allow the producer to fire again before its retraction.
+#
+# Do not use bits 31 and 30, they are reserved 
+# KEEP IN MIND THAT MODIFIERS IN EU4 ARE INT32 / 1000! this means if you use producer with index 0 it has the value of 2^0 = 1. This results in a modifier of 0.001!!!
+# Debug modifiers make use of bit 29, so be aware if you use aet_debug mode.
+
+## Functions contained in this class: 
+#  consumer_tick_<modifier_name> - tick for applying the modifier 
+#  force_reload_<modifier_name> - executes the reload without checking if it is necessary as in consumer_tick_<modifier_name> (this allows use of the modifier without the producer described above)
+#  <modifier_name>_sem_reset - helper for consumer_tick_<modifier_name>
+#
+# The doc of each consumer_tick function contains the next free producer index 
+# If possible use force reload instead of a producer, it is much cheaper 
+
+# GE  Modifiers - from /events/GE_scripts.txt 
+# Translation key:
+# nsp - GE_script_events
+# 1 - vassal_tax_modifier
+# 2 - rural_goods_produced_modifier
+# 4 - urban_goods_produced_modifier
+# 5 - mining_goods_produced_modifier
+# 6 - plantage_goods_produced_modifier
+
+
+# signal modifier: vassal_tax_modifier_sem 
+# current used power of 2: none (next free is 2^0 = 1) 
+
+# This is intended to be ran on daily tick or at the latest at monthly tick
+consumer_tick_vassal_tax_modifier = { 
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm
+		}
+	if = {
+		limit = {
+			OR = {
+				has_global_modifier_value = {
+					which = vassal_tax_modifier_sem
+					value = 0.001 
+				}
+				NOT = {
+					has_global_modifier_value = {
+						which = vassal_tax_modifier_sem
+						value = 0
+					}
+				}
+			}
+		}
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm_desc 
+		}
+		
+		force_reload_vassal_tax_modifier = yes 
+		vassal_tax_modifier_sem_reset = yes 
+	}
+}
+
+force_reload_vassal_tax_modifier = {
+	country_event = {
+		id = GE_script_events.1
+	}
+}
+
+
+# Remove existing cancellation modifiers first.
+# This restores vassal_tax_modifier_sem to the value produced by producers (so a clean bitmask). 
+
+vassal_tax_modifier_sem_reset = {
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_1073741824
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_1073741824
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_536870912
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_536870912
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_268435456
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_268435456
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_134217728
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_134217728
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_67108864
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_67108864
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_33554432
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_33554432
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_16777216
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_16777216
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_8388608
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_8388608
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_4194304
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_4194304
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_2097152
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_2097152
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_1048576
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_1048576
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_524288
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_524288
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_262144
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_262144
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_131072
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_131072
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_65536
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_65536
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_32768
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_32768
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_16384
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_16384
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_8192
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_8192
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_4096
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_4096
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_2048
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_2048
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_1024
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_1024
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_512
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_512
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_256
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_256
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_128
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_128
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_64
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_64
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_32
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_32
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_16
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_16
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_8
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_8
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_4
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_4
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_2
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_2
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = vassal_tax_modifier_sem_neg_1
+		}
+		remove_country_modifier = vassal_tax_modifier_sem_neg_1
+	}
+
+
+	# Now cancel the current value, starting with the largest power of two.
+	# Positive values are cancelled by adding the corresponding negative
+	# modifier. Negative values have been canceleed already. 
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 1073741.824
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_1073741824
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 536870.912
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_536870912
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 268435.456
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_268435456
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 134217.728
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_134217728
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 67108.864
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_67108864
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 33554.432
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_33554432
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 16777.216
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_16777216
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 8388.608
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_8388608
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 4194.304
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_4194304
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 2097.152
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_2097152
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 1048.576
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_1048576
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 524.288
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_524288
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 262.144
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_262144
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 131.072
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_131072
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 65.536
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_65536
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 32.768
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_32768
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 16.384
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_16384
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 8.192
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_8192
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 4.096
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_4096
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 2.048
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_2048
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 1.024
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_1024
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.512
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_512
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.256
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_256
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.128
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_128
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.064
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_64
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.032
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_32
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.016
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_16
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.008
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_8
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.004
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_4
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.002
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_2
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = vassal_tax_modifier_sem
+				value = 0.001
+			}
+		}
+		add_country_modifier = {
+			name = vassal_tax_modifier_sem_neg_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+
+# signal modifier: rural_goods_produced_modifier_sem 
+# current used power of 2: 2^10 = 1024 (next free is 2^11 = 2048) 
+
+# This is intended to be ran on daily tick or at the latest at monthly tick
+consumer_tick_rural_goods_produced_modifier = { 
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm
+		}
+	if = {
+		limit = {
+			OR = {
+				has_global_modifier_value = {
+					which = rural_goods_produced_modifier_sem
+					value = 0.001 
+				}
+				NOT = {
+					has_global_modifier_value = {
+						which = rural_goods_produced_modifier_sem
+						value = 0
+					}
+				}
+			}
+		}
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm_desc 
+		}
+		
+		force_reload_rural_goods_produced_modifier = yes 
+		rural_goods_produced_modifier_sem_reset = yes 
+	}
+}
+
+force_reload_rural_goods_produced_modifier = {
+	country_event = {
+		id = GE_script_events.2
+	}
+}
+
+
+# Remove existing cancellation modifiers first.
+# This restores rural_goods_produced_modifier_sem to the value produced by producers (so a clean bitmask). 
+
+rural_goods_produced_modifier_sem_reset = {
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_1073741824
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_1073741824
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_536870912
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_536870912
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_268435456
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_268435456
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_134217728
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_134217728
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_67108864
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_67108864
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_33554432
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_33554432
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_16777216
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_16777216
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_8388608
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_8388608
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_4194304
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_4194304
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_2097152
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_2097152
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_1048576
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_1048576
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_524288
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_524288
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_262144
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_262144
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_131072
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_131072
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_65536
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_65536
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_32768
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_32768
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_16384
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_16384
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_8192
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_8192
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_4096
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_4096
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_2048
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_2048
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_1024
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_1024
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_512
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_512
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_256
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_256
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_128
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_128
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_64
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_64
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_32
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_32
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_16
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_16
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_8
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_8
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_4
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_4
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_2
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_2
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = rural_goods_produced_modifier_sem_neg_1
+		}
+		remove_country_modifier = rural_goods_produced_modifier_sem_neg_1
+	}
+
+
+	# Now cancel the current value, starting with the largest power of two.
+	# Positive values are cancelled by adding the corresponding negative
+	# modifier. Negative values have been canceleed already. 
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 1073741.824
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_1073741824
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 536870.912
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_536870912
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 268435.456
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_268435456
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 134217.728
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_134217728
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 67108.864
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_67108864
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 33554.432
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_33554432
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 16777.216
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_16777216
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 8388.608
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_8388608
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 4194.304
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_4194304
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 2097.152
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_2097152
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 1048.576
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_1048576
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 524.288
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_524288
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 262.144
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_262144
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 131.072
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_131072
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 65.536
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_65536
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 32.768
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_32768
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 16.384
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_16384
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 8.192
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_8192
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 4.096
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_4096
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 2.048
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_2048
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 1.024
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_1024
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.512
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_512
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.256
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_256
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.128
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_128
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.064
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_64
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.032
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_32
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.016
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_16
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.008
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_8
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.004
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_4
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.002
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_2
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = rural_goods_produced_modifier_sem
+				value = 0.001
+			}
+		}
+		add_country_modifier = {
+			name = rural_goods_produced_modifier_sem_neg_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+
+# signal modifier: urban_goods_produced_modifier_sem 
+# current used power of 2: 2^5 = 32 (next free is 2^6 = 64) 
+
+# This is intended to be ran on daily tick or at the latest at monthly tick
+consumer_tick_urban_goods_produced_modifier = { 
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm
+		}
+	if = {
+		limit = {
+			OR = {
+				has_global_modifier_value = {
+					which = urban_goods_produced_modifier_sem
+					value = 0.001 
+				}
+				NOT = {
+					has_global_modifier_value = {
+						which = urban_goods_produced_modifier_sem
+						value = 0
+					}
+				}
+			}
+		}
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm_desc 
+		}
+		
+		force_reload_urban_goods_produced_modifier = yes 
+		urban_goods_produced_modifier_sem_reset = yes 
+	}
+}
+
+force_reload_urban_goods_produced_modifier = {
+	hidden_effect = {
+		country_event = {
+			id = GE_script_events.4
+		}
+	}
+}
+
+
+# Remove existing cancellation modifiers first.
+# This restores urban_goods_produced_modifier_sem to the value produced by producers (so a clean bitmask). 
+
+urban_goods_produced_modifier_sem_reset = {
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_1073741824
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_1073741824
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_536870912
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_536870912
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_268435456
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_268435456
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_134217728
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_134217728
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_67108864
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_67108864
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_33554432
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_33554432
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_16777216
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_16777216
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_8388608
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_8388608
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_4194304
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_4194304
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_2097152
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_2097152
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_1048576
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_1048576
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_524288
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_524288
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_262144
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_262144
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_131072
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_131072
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_65536
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_65536
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_32768
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_32768
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_16384
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_16384
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_8192
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_8192
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_4096
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_4096
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_2048
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_2048
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_1024
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_1024
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_512
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_512
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_256
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_256
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_128
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_128
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_64
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_64
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_32
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_32
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_16
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_16
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_8
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_8
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_4
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_4
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_2
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_2
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = urban_goods_produced_modifier_sem_neg_1
+		}
+		remove_country_modifier = urban_goods_produced_modifier_sem_neg_1
+	}
+
+
+	# Now cancel the current value, starting with the largest power of two.
+	# Positive values are cancelled by adding the corresponding negative
+	# modifier. Negative values have been canceleed already. 
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 1073741.824
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_1073741824
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 536870.912
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_536870912
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 268435.456
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_268435456
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 134217.728
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_134217728
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 67108.864
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_67108864
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 33554.432
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_33554432
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 16777.216
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_16777216
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 8388.608
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_8388608
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 4194.304
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_4194304
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 2097.152
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_2097152
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 1048.576
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_1048576
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 524.288
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_524288
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 262.144
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_262144
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 131.072
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_131072
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 65.536
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_65536
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 32.768
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_32768
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 16.384
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_16384
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 8.192
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_8192
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 4.096
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_4096
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 2.048
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_2048
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 1.024
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_1024
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.512
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_512
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.256
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_256
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.128
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_128
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.064
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_64
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.032
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_32
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.016
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_16
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.008
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_8
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.004
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_4
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.002
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_2
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = urban_goods_produced_modifier_sem
+				value = 0.001
+			}
+		}
+		add_country_modifier = {
+			name = urban_goods_produced_modifier_sem_neg_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+
+# signal modifier: mining_goods_produced_modifier_sem 
+# current used power of 2: 2^5 = 32 (next free is 2^6 = 64) 
+
+# This is intended to be ran on daily tick or at the latest at monthly tick
+consumer_tick_mining_goods_produced_modifier = { 
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm
+		}
+	if = {
+		limit = {
+			OR = {
+				has_global_modifier_value = {
+					which = mining_goods_produced_modifier_sem
+					value = 0.001 
+				}
+				NOT = {
+					has_global_modifier_value = {
+						which = mining_goods_produced_modifier_sem
+						value = 0
+					}
+				}
+			}
+		}
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm_desc 
+		}
+		
+		force_reload_mining_goods_produced_modifier = yes 
+		mining_goods_produced_modifier_sem_reset = yes 
+	}
+}
+
+force_reload_mining_goods_produced_modifier = {
+	country_event = {
+		id = GE_script_events.5
+	}
+}
+
+
+# Remove existing cancellation modifiers first.
+# This restores mining_goods_produced_modifier_sem to the value produced by producers (so a clean bitmask). 
+
+mining_goods_produced_modifier_sem_reset = {
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_1073741824
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_1073741824
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_536870912
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_536870912
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_268435456
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_268435456
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_134217728
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_134217728
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_67108864
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_67108864
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_33554432
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_33554432
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_16777216
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_16777216
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_8388608
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_8388608
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_4194304
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_4194304
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_2097152
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_2097152
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_1048576
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_1048576
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_524288
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_524288
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_262144
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_262144
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_131072
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_131072
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_65536
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_65536
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_32768
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_32768
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_16384
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_16384
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_8192
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_8192
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_4096
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_4096
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_2048
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_2048
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_1024
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_1024
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_512
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_512
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_256
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_256
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_128
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_128
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_64
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_64
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_32
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_32
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_16
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_16
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_8
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_8
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_4
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_4
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_2
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_2
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = mining_goods_produced_modifier_sem_neg_1
+		}
+		remove_country_modifier = mining_goods_produced_modifier_sem_neg_1
+	}
+
+
+	# Now cancel the current value, starting with the largest power of two.
+	# Positive values are cancelled by adding the corresponding negative
+	# modifier. Negative values have been canceleed already. 
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 1073741.824
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_1073741824
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 536870.912
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_536870912
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 268435.456
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_268435456
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 134217.728
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_134217728
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 67108.864
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_67108864
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 33554.432
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_33554432
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 16777.216
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_16777216
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 8388.608
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_8388608
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 4194.304
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_4194304
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 2097.152
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_2097152
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 1048.576
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_1048576
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 524.288
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_524288
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 262.144
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_262144
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 131.072
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_131072
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 65.536
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_65536
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 32.768
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_32768
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 16.384
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_16384
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 8.192
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_8192
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 4.096
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_4096
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 2.048
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_2048
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 1.024
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_1024
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.512
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_512
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.256
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_256
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.128
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_128
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.064
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_64
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.032
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_32
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.016
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_16
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.008
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_8
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.004
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_4
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.002
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_2
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = mining_goods_produced_modifier_sem
+				value = 0.001
+			}
+		}
+		add_country_modifier = {
+			name = mining_goods_produced_modifier_sem_neg_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}
+
+
+# signal modifier: plantage_goods_produced_modifier_sem 
+# current used power of 2: 2^6 = 64 (next free is 2^7 = 128) 
+
+# This is intended to be ran on daily tick or at the latest at monthly tick
+consumer_tick_plantage_goods_produced_modifier = { 
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm
+		}
+	if = {
+		limit = {
+			OR = {
+				has_global_modifier_value = {
+					which = plantage_goods_produced_modifier_sem
+					value = 0.001 
+				}
+				NOT = {
+					has_global_modifier_value = {
+						which = plantage_goods_produced_modifier_sem
+						value = 0
+					}
+				}
+			}
+		}
+		if { 
+			limit {
+				aet_is_debug = yes 
+			} 
+			# This should be a proper loc key but I am lazy 
+			#log = ate_advisor_loyal_friend_adm_desc 
+		}
+		
+		force_reload_plantage_goods_produced_modifier = yes 
+		plantage_goods_produced_modifier_sem_reset = yes 
+	}
+}
+
+force_reload_plantage_goods_produced_modifier = {
+	country_event = {
+		id = GE_script_events.6 
+	}
+}
+
+
+# Remove existing cancellation modifiers first.
+# This restores plantage_goods_produced_modifier_sem to the value produced by producers (so a clean bitmask). 
+
+plantage_goods_produced_modifier_sem_reset = {
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_1073741824
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_1073741824
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_536870912
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_536870912
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_268435456
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_268435456
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_134217728
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_134217728
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_67108864
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_67108864
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_33554432
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_33554432
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_16777216
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_16777216
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_8388608
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_8388608
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_4194304
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_4194304
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_2097152
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_2097152
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_1048576
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_1048576
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_524288
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_524288
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_262144
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_262144
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_131072
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_131072
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_65536
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_65536
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_32768
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_32768
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_16384
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_16384
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_8192
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_8192
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_4096
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_4096
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_2048
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_2048
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_1024
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_1024
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_512
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_512
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_256
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_256
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_128
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_128
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_64
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_64
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_32
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_32
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_16
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_16
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_8
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_8
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_4
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_4
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_2
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_2
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = plantage_goods_produced_modifier_sem_neg_1
+		}
+		remove_country_modifier = plantage_goods_produced_modifier_sem_neg_1
+	}
+
+
+	# Now cancel the current value, starting with the largest power of two.
+	# Positive values are cancelled by adding the corresponding negative
+	# modifier. Negative values have been canceleed already. 
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 1073741.824
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_1073741824
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 536870.912
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_536870912
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 268435.456
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_268435456
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 134217.728
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_134217728
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 67108.864
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_67108864
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 33554.432
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_33554432
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 16777.216
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_16777216
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 8388.608
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_8388608
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 4194.304
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_4194304
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 2097.152
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_2097152
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 1048.576
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_1048576
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 524.288
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_524288
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 262.144
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_262144
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 131.072
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_131072
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 65.536
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_65536
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 32.768
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_32768
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 16.384
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_16384
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 8.192
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_8192
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 4.096
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_4096
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 2.048
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_2048
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 1.024
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_1024
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.512
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_512
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.256
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_256
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.128
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_128
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.064
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_64
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.032
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_32
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.016
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_16
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.008
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_8
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.004
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_4
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.002
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_2
+			duration = -1
+			hidden = yes
+		}
+	}
+
+	if = {
+		limit = {
+			has_global_modifier_value = {
+				which = plantage_goods_produced_modifier_sem
+				value = 0.001
+			}
+		}
+		add_country_modifier = {
+			name = plantage_goods_produced_modifier_sem_neg_1
+			duration = -1
+			hidden = yes
+		}
+	}
+}

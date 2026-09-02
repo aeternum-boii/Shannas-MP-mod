@@ -49,6 +49,12 @@
 		modifiers = {
 			rural_goods_produced_modifier = 0.15
 		}
+		effect = {
+			force_reload_rural_goods_produced_modifier = yes 
+		}
+		removed_effect = {
+			force_reload_rural_goods_produced_modifier = yes 
+		}
 		ai = {
 			factor = 100
 		}
