@@ -36,20 +36,21 @@ country_decisions = {
         }
     }
     stalemate_button_end_decision_1 = {
-        mayor = yes
+        major = yes
         color = { 138 154 91 }
         potential = {
             has_country_flag = enacted_possible_stalemate_1
         }
         allow = {
-            check_variable = {
-                which = st_months_passed_1
-                value = 0
+            NOT = {
+                check_variable = {
+                    which = st_months_passed_1
+                    value = 0
+                }
             }
         }
         effect = {
-            clear_variable = st_months_passed_1
-            evenry_country = {
+            every_country = {
                 limit = {
                     has_country_flag = enacted_possible_stalemate_1
                 }
@@ -98,20 +99,21 @@ country_decisions = {
         }
     }
     stalemate_button_end_decision_2 = {
-        mayor = yes
+        major = yes
         color = { 138 154 91 }
         potential = {
             has_country_flag = enacted_possible_stalemate_2
         }
         allow = {
-            check_variable = {
-                which = st_months_passed_2
-                value = 0
+            NOT = {
+                check_variable = {
+                    which = st_months_passed_2
+                    value = 0
+                }
             }
         }
         effect = {
-            clear_variable = st_months_passed_2
-            evenry_country = {
+            every_country = {
                 limit = {
                     has_country_flag = enacted_possible_stalemate_2
                 }
@@ -163,20 +165,21 @@ country_decisions = {
         }
     }
     stalemate_button_end_decision_3 = {
-        mayor = yes
+        major = yes
         color = { 138 154 91 }
         potential = {
             has_country_flag = enacted_possible_stalemate_3
         }
         allow = {
-            check_variable = {
-                which = st_months_passed_3
-                value = 0
+            NOT = {
+                check_variable = {
+                    which = st_months_passed_3
+                    value = 0
+                }
             }
         }
         effect = {
-            clear_variable = st_months_passed_3
-            evenry_country = {
+            every_country = {
                 limit = {
                     has_country_flag = enacted_possible_stalemate_3
                 }
