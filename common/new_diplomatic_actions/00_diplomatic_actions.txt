@@ -1296,7 +1296,12 @@ request_protectorate = {
 	alert_tooltip = request_protectorate_alert_tooltip
 
 	is_visible = {
-		FROM = { has_government_attribute = can_establish_trade_protectorates }
+		FROM = { 
+			OR = {
+				has_government_attribute = can_establish_trade_protectorates 
+				has_country_flag = can_establish_trade_protectorates_flag 
+			}
+		}
 		is_subject = no
 		FROM = { is_subject = no }
 		NOT = { has_reform = steppe_horde }
@@ -1351,17 +1356,6 @@ request_protectorate = {
 		}
 	}
 	on_accept = {
-		every_subject_country = {
-			limit = {
-				NOT = { is_subject_of_type = colony }
-				NOT = { is_subject_of_type = crown_colony }
-				NOT = { is_subject_of_type = private_enterprise }
-				NOT = { is_subject_of_type = self_governing_colony }
-			}
-			ROOT = {
-				release = PREV
-			}
-		}
 		FROM = {
 			create_subject = {
 				subject_type = trade_protectorate
