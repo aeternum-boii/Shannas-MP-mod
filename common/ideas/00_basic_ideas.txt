@@ -677,11 +677,12 @@ statecraft_ideas = {
 	}
 
 	statecraft_ideas_0 = {
-		stability_cost_modifier = -0.15
+		stability_cost_modifier = -0.10
 	}
 
 	statecraft_ideas_1 = {
-		national_focus_years = -10
+		monarch_admin_power = 1
+		national_focus_years = -5
 	}
 
 	statecraft_ideas_2 = {
@@ -841,6 +842,37 @@ court_ideas = {
 			}
 		}
 	}
+	
+	long_echo = {
+		reasons_to_elect = 25
+		monarch_diplomatic_power = 1 
+		candidate_random_bonus = 1
+	}
+	recognize_hierarchy = {
+		estate_interaction_cooldown_modifier = -0.15
+		monarch_lifespan = 0.25
+	}
+	welcoming_ceremonies = {
+		autonomy_change_time = -0.3
+		prestige = 1
+	}
+	tranquil_coordination = {
+		reform_progress_growth = 0.2
+		no_stability_loss_on_monarch_death = yes
+	}
+	palace_of_splendor = {
+		allow_free_estate_privilege_revocation = yes
+		monthly_splendor = 2 
+	}
+	respected_authority = {
+		# TODO AET: Implement Absolutism Impact from Privilege (maybe already works?) 
+		all_estate_possible_privileges = 1
+		monarch_power_tribute = 1
+	}
+	court_embassies = {
+		max_absolutism = 20
+		max_absolutism_effect = 0.2
+	}
 
 	bonus = {
 		legitimacy = 1 
@@ -848,39 +880,9 @@ court_ideas = {
 		devotion = 1 
 		horde_unity = 1
 		meritocracy = 0.5 
-		imperial_mandate = 0.2
+		imperial_mandate = 0.15
 		imperial_authority = 0.15
 		monthly_cultural_unity = 0.5
-	}
-	
-	long_echo = {
-		reasons_to_elect = 25
-		monarch_diplomatic_power = 1 
-	}
-	recognize_hierarchy = {
-		all_estate_loyalty_equilibrium = 0.10
-		monarch_lifespan = 0.25
-	}
-	welcoming_ceremonies = {
-		prestige = 2
-		free_concentrate_development = yes
-	}
-	tranquil_coordination = {
-		reform_progress_growth = 0.2
-		no_stability_loss_on_monarch_death = yes
-		allow_free_estate_privilege_revocation = yes
-	}
-	respected_authority = {
-		all_estate_possible_privileges = 1
-		monarch_power_tribute = 1
-	}
-	palace_of_splendor = {
-		monthly_splendor = 2 
-		estate_interaction_cooldown_modifier = -0.15
-	}
-	court_embassies = {
-		max_absolutism = 25
-		max_absolutism_effect = 0.25
 	}
 
 	ai_will_do = {
@@ -924,14 +926,15 @@ diplomatic_ideas = {
 		diplomats = 1
 	}
 	foreign_embassies = {
-		dip_advisor_cost = -0.25
+		dip_advisor_cost = -0.20
 	}
 	cabinet = {
 		unjustified_demands = -0.5
+		improve_relation_modifier = 0.25
 	}
 	benign_diplomats = {
-		improve_relation_modifier = 0.25
 		diplomats = 1
+		envoy_travel_time = -0.15
 	}
 	experienced_diplomats  = {
 		diplomatic_reputation = 2
@@ -992,7 +995,6 @@ exploration_ideas = {
 	}
 	colonial_ventures = {
 		colonists = 1
-		effect = { remove_temporary_colonist = yes }
 	}
 	overseas_exploration = {
 		range = 0.5
@@ -1001,15 +1003,15 @@ exploration_ideas = {
 		global_colonial_growth = 10
 	}
 	factories = {
-		trade_company_governing_cost = -0.1
-		trade_company_investment_cost = -0.1
+		global_tariffs = 0.25
 	}
 	free_colonies = {
 		colonist_placement_chance = 0.1
 	}
 	global_empire = {
-		colony_development_boost = 1
+		global_foreign_trade_power = 0.2
 		treasure_fleet_income = 0.25
+		effect = { remove_temporary_colonist = yes }
 	}
 
 	ai_will_do = {
@@ -1112,12 +1114,10 @@ influence_ideas = {
 	tribute_system = {
 		vassal_income = 0.25
 	}
-	
-	additional_loyalist_recruitment = {
-		reduced_liberty_desire = 25
-		vassal_manpower_bonus = 0.25
+	postal_service = {
+		envoy_travel_time = -0.5
+		liberty_desire_from_subject_development = -0.2
 	}
-	
 	integrated_elites = {
 		diplomatic_annexation_cost = -0.30
 	}
@@ -1127,12 +1127,12 @@ influence_ideas = {
 	diplomatic_influence = {
 		annexation_relations_impact = -0.5
 	}
-	postal_service = {
-		envoy_travel_time = -0.5
-		liberty_desire_from_subject_development = -0.2
-	}
 	marcher_lords = {
 		vassal_forcelimit_bonus = 0.25
+		reduced_liberty_desire = 25
+	}
+	additional_loyalist_recruitment = {
+		monthly_favor_modifier = 0.5
 	}
 
 	ai_will_do = {
@@ -1197,30 +1197,27 @@ maritime_ideas = {
 
 	merchant_traditions = {
 		naval_tradition_from_trade = 1.0
-		global_ship_repair = 0.25
+		global_ship_repair = 0.33
 	}
 	merchant_marine = {
-		global_sailors_modifier = 0.65
-		allowed_marine_fraction = 0.35
-	}
-	sheltered_ports = {
-		global_ship_repair = 0.1
-		capture_ship_chance = 0.15
+		global_sailors_modifier = 0.100
+		global_ship_trade_power = 0.25
 	}
 	grand_navy = {
 		naval_forcelimit_modifier = 0.5
-		global_ship_trade_power = 0.25
 	}
 	ships_penny = {
-		global_ship_cost = -0.2
-	}
-	sea_hawks = {
-		free_navy_leader_pool = 2
-		admiral_cost = -0.25
+		global_ship_cost = -0.25
 	}
 	naval_fighting_instruction = {
 		blockade_efficiency = 1
 		privateer_efficiency = 0.35
+	}
+	sheltered_ports = {
+		sailor_maintenance_modifer = -0.25
+	}
+	sea_hawks = {
+		light_ship_power = 0.2
 	}
 
 	ai_will_do = {
@@ -1310,30 +1307,30 @@ spy_ideas = {
 	}
 
 	efficient_spies = {
-		spy_offence = 1
 		global_spy_defence = 0.5
 	}	
 	
-	agent_training = {
-		warscore_from_battles_modifier = 0.3
-		assault_fort_ability = 0.25
-	}
-
 	vetting = {
 		cb_on_government_enemies = yes
 		no_claim_cost_increasement = yes
 	}
-	
+
 	privateers = {
 		capture_ship_chance = 0.25
 		privateer_efficiency = 0.5
 		available_province_loot = 0.735
 	}
-	
+
 	blackmailing = {
-		monthly_favor_modifier = 0.5
+		spy_offence = 1
 		accept_vassalization_reasons = 25
 		num_of_pronoiars = 1
+	}
+
+	agent_training = {
+		movement_speed = 0.10
+		assault_fort_ability = 0.15
+		siege_ability = 0.10
 	}
 
 	ai_will_do = {
@@ -1388,20 +1385,21 @@ trade_ideas = {
   		merchants = 1
   	}
 	merchant_adventures = {
-		trade_range_modifier = 0.25
+		trade_range_modifier = 0.33
 	}
 	national_trade_policy = {
 		trade_efficiency = 0.1
-		mercantilism_cost = -0.25
 	}
 	overseas_merchants = {
 		placed_merchant_power = 15
 	}
 	trade_manipulation = {
-		trade_steering = 0.25
+		province_trade_power_modifier = 0.10
+		global_ship_trade_power = 0.10
 	}
 	fast_negotiations = {
 		caravan_power = 0.25
+		trade_steering = 0.25
 	}
 
 	ai_will_do = {
@@ -1442,6 +1440,159 @@ trade_ideas = {
 			factor = 5.0
 			has_government_attribute = is_merchant_republic
 		}
+	}
+}
+
+exploitation_ideas = { # WIP; TODO AET 
+	category = DIP
+
+	bonus = {
+		
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+societal_ideas = {
+	category = DIP
+
+	societal_ideas_0 = {
+		stability_cost_modifier = -0.15
+	}
+
+	societal_ideas_1 = {
+		num_accepted_cultures = 2
+		promote_culture_cost = -0.25
+	}
+
+	societal_ideas_2 = {
+		ae_impact = -0.1
+	}
+
+	societal_ideas_3 = {
+		years_of_nationalism = -5
+	}
+
+	societal_ideas_4 = {
+		global_institution_spread = 0.5
+		embracement_cost = -0.15
+	}
+
+	societal_ideas_5 = {
+		global_unrest = -2.5
+	}
+
+	societal_ideas_6 = {
+		advisor_cost = -0.1
+		advisor_pool = 1
+	}
+
+
+	bonus = {
+		all_power_cost = -0.0375
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+grandeur_ideas = {
+	category = DIP
+
+	# TODO AET 
+	# Unless stated otherwhise all modifiers in this group are intended to be scaled with prestige:
+	# negative: 0x
+	# 0 - 25: 0.5x 
+	# 25 - 50: 1x 
+	# 50 - 75: 1.5x
+	# 75 - 100: 2x
+
+	grandeur_ideas_0 = {
+		monthly_splendor = 2
+	}
+
+	grandeur_ideas_1 = {
+		# Inverse Scaling 
+		prestige_from_land = 1
+		prestige_from_naval = 1
+	}
+
+	grandeur_ideas_2 = {
+		province_warscore_cost = -0.125
+	}
+
+	grandeur_ideas_3 = {
+		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
+		meritocracy = 0.5
+		republican_tradition = 0.5
+	}
+
+	grandeur_ideas_4 = {
+		great_project_upgrade_cost = -0.125
+		great_project_upgrade_time = -0.125
+	}
+
+	grandeur_ideas_5 = {
+		advisor_cost = -0.15
+	}
+
+	grandeur_ideas_6 = {
+		# No Scaling 
+		possible_policy = 1
+	}
+
+	bonus = {
+		# Power Projection: 25 
+	}
+
+	ai_will_do = {
+		factor = 1.0
+	}
+}
+
+nationalism_ideas = {
+	category = DIP
+
+	nationalism_ideas_0 = {
+		war_exhaustion = -0.05
+	}
+
+	nationalism_ideas_1 = {
+		culture_conversion_cost = -0.25
+		culture_conversion_time = -0.4
+	}
+
+	nationalism_ideas_2 = {
+		global_regiment_cost = -0.05
+	}
+
+	nationalism_ideas_3 = {
+		# Defensiveness in primary culture: 0.25 
+	}
+
+	nationalism_ideas_4 = {
+		# Combat Bonus in primary culture: 1 
+	}
+
+	nationalism_ideas_5 = {
+		manpower_in_own_culture_provinces = 0.33
+	}
+
+	nationalism_ideas_6 = {
+		land_morale = 0.05
+	}
+
+	bonus = {
+		# Age Scaling Nationalism CB 
+	}
+
+	ai_will_do = {
+		factor = 1.0
 	}
 }
 
