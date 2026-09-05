@@ -83,4 +83,39 @@ country_decisions = {
 			}
 		}
 	}
+
+	guard_trigger_test = {
+		potential = {
+			aet_is_debug = yes
+		}
+
+		allow = {
+			aet_is_debug = yes
+		}
+
+		effect = {
+			set_variable = {
+				which = aet_temp
+				value = 20
+			}
+
+			aet_applyVar = {
+				left = log
+				var = aet_temp
+			}
+		}
+	}
+	guard_trigger_test_1 = {
+		potential = {
+			aet_is_debug = yes
+		}
+
+		allow = {
+			aet_is_debug = yes
+		}
+
+		effect = {
+			test = yes 
+		}
+	}	
 }

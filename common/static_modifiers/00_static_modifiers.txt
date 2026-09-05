@@ -2193,10 +2193,13 @@ carolean_regiment = {
 }
 
 revolutionary_guard_regiment = {
-	fire_damage_received = -0.1
-	shock_damage_received = -0.1
-	drill_gain_modifier = 1.0
-	drill_decay_modifier = -0.5
+	infantry_power = -2
+	cavalry_power = -2
+	artillery_power = -2
+	drill_gain_modifier = 1
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+	land_maintenance_modifier = 0.25
 }
 
 innovativeness = {
@@ -2206,6 +2209,9 @@ innovativeness = {
 }
 
 rajput_regiment = {
+	land_morale = 0.05
+	reinforce_cost_modifier = -0.5
+	drill_decay_modifier = -0.25
 }
 
 raiding_parties_modifier = {

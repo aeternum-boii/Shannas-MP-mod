@@ -1,0 +1,75 @@
+aet_eliteGuards_anyEnabled = {
+	OR = {
+		check_variable = {
+			which = aet_eliteGuards_inf_enable
+			value = 1
+		}
+		check_variable = {
+			which = aet_eliteGuards_cav_enable
+			value = 1
+		}
+		check_variable = {
+			which = aet_eliteGuards_arty_enable
+			value = 1
+		}				
+	}
+}
+aet_eliteGuards_isAboveFL = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			which = aet_guards
+			value = trigger_value:num_of_revolutionary_guard # This works despite static analysis flagging it 
+		}
+
+		export_to_variable = {
+			which = aet_limit
+			value = trigger_value:land_forcelimit
+		}
+
+		export_to_variable = {
+			which = aet_modifier
+			value = modifier:allowed_rev_guard_fraction
+		}
+
+		multiply_variable = {
+			which = aet_limit
+			which = aet_modifier
+		}
+
+		change_variable = {
+			which = aet_limit
+			value = 1
+		}
+		multiply_variable = {
+			which = aet_limit
+			value = 1.1
+		}		
+
+		check_variable = {
+			which = aet_guards
+			which = aet_limit
+		}
+	}
+}
+
+aet_eliteGuard_heavyCavPersistentRequirements = {
+	always = yes 
+}
+aet_eliteGuard_lightCavPersistentRequirements = {
+	always = yes 
+}
+aet_eliteGuard_cavArcherPersistentRequirements = {
+	OR = {
+		aet_is_debug = yes
+
+		culture_group = east_slavic
+		culture = hungarian
+		technology_group = nomad_group
+		has_government_attribute = enables_horde_idea_group
+		uses_horde_unity = yes 
+		tag = TEU
+	}
+}
+aet_eliteGuard_cavArcherNomadPersistentRequirements = {
+	has_idea_group = horde_gov_ideas
+}

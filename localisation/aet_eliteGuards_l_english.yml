@@ -1,0 +1,5 @@
+l_english:
+ aet_eliteGuards_FL_deFactoLimit: "Force Limit Applied (multiply by 5%)"
+ aet_eliteGuards_FL_deFactoUsage: "Force Limit Used (absolute value)"
+
+ aet_eliteGuards_valueDump: "[Root.aet_eliteGuards_FL_deFactoLimit.GetName]: §[Root.aet_eliteGuards_FL_deFactoLimit.GetValue]|+§!\n[Root.aet_eliteGuards_FL_deFactoUsage.GetName]: §[Root.aet_eliteGuards_FL_deFactoUsage.GetValue]|*§!"

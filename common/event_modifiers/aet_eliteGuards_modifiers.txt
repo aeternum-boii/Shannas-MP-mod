@@ -1,0 +1,409 @@
+aet_eliteGuards_infEnable = {
+	is_revolutionary_guard_modifier = yes 
+	infantry_power = 2
+}
+
+aet_eliteGuards_artyEnable = {
+	is_revolutionary_guard_modifier = yes 
+	artillery_power = 2
+}
+
+aet_eliteGuards_FLbelow50_c = {
+    aet_eliteGuards_buffMultiplier = 0.375
+}
+aet_eliteGuards_FLbelow50_u = {
+    is_revolutionary_guard_modifier = yes 
+    infantry_cost = -0.35 # regiment cost did not work for some reason
+    cavalry_cost = -0.35
+    artillery_cost = -0.35
+    land_maintenance_modifier = -0.35
+}
+
+aet_eliteGuards_FLbelow70_c = {
+    aet_eliteGuards_buffMultiplier = 0.25
+}
+aet_eliteGuards_FLbelow70_u = {
+    is_revolutionary_guard_modifier = yes 
+    infantry_cost = -0.25 # regiment cost did not work for some reason
+    cavalry_cost = -0.25
+    artillery_cost = -0.25
+    land_maintenance_modifier = -0.25
+}
+
+aet_eliteGuards_FLbelow80_c = {
+    aet_eliteGuards_buffMultiplier = 0.125
+}
+
+aet_eliteGuards_FLabove125_c = {
+    aet_eliteGuards_buffMultiplier = -0.125
+}
+aet_eliteGuards_FLabove125_u = {
+    is_revolutionary_guard_modifier = yes 
+    infantry_cost = 0.25 # regiment cost did not work for some reason
+    cavalry_cost = 0.25
+    artillery_cost = 0.25
+    land_maintenance_modifier = 0.25
+}
+
+aet_eliteGuards_FLabove135_c = {
+    aet_eliteGuards_buffMultiplier = -0.25
+    land_forcelimit_modifier = -0.05
+}
+aet_eliteGuards_FLabove135_u = {
+    is_revolutionary_guard_modifier = yes 
+    infantry_cost = 0.5 # regiment cost did not work for some reason
+    cavalry_cost = 0.5
+    artillery_cost = 0.5
+    land_maintenance_modifier = 0.5
+}
+
+aet_eliteGuards_FLabove150_c = {
+    aet_eliteGuards_buffMultiplier = -0.375
+    land_forcelimit_modifier = -0.10
+}
+aet_eliteGuards_FLabove150_u = {
+    is_revolutionary_guard_modifier = yes 
+    infantry_cost = 0.5 # regiment cost did not work for some reason
+    cavalry_cost = 0.5
+    artillery_cost = 0.5
+    land_maintenance_modifier = 0.5
+}
+
+aet_eliteGuards_FLabove175_c = { # This is the point where a hard limit would be 
+    aet_eliteGuards_buffMultiplier = -0.5
+    land_forcelimit_modifier = -0.10
+    governing_capacity_modifier = -0.25
+    all_power_cost = 0.05
+}
+aet_eliteGuards_FLabove175_u = {
+    is_revolutionary_guard_modifier = yes 
+    infantry_cost = 0.75 # regiment cost did not work for some reason
+    cavalry_cost = 0.75
+    artillery_cost = 0.75
+    land_maintenance_modifier = 0.75
+}
+
+aet_eliteGuards_FLabove200_c = { # Being here truly is not intended
+    aet_eliteGuards_buffMultiplier = -0.5
+    land_forcelimit_modifier = -0.10
+    governing_capacity_modifier = -0.25
+    all_power_cost = 0.05
+    yearly_corruption = 1
+    min_autonomy = 20
+}
+aet_eliteGuards_FLabove200_u = {
+    is_revolutionary_guard_modifier = yes 
+    infantry_cost = 1 # regiment cost did not work for some reason
+    cavalry_cost = 1
+    artillery_cost = 1
+    land_maintenance_modifier = 1
+}
+
+# CAV
+# General Directions
+# Heavy Cav (Husar style) 
+# Light Cav (Cossack style) 
+# Light Cav Archers (Horde style / semi Muscovite Style)
+
+# Potentially (potentially due to implementation difficulty):
+# Heavy Cav Archers (late Muscovite Style)
+# Combined Arms of Heavy Cav and Light Cav Archers (Teuton Style)
+# Mounted Inf (like Dragoons)
+aet_eliteGuards_cavEnable = {
+	is_revolutionary_guard_modifier = yes 
+	cavalry_power = 2
+}
+
+aet_eliteGuards_heavyCavalry_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	shock_damage = 0.35
+	morale_damage = 0.35
+	fire_damage = -0.05
+	morale_damage_received = -0.2
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+	cavalry_cost = 2 # seems to only affect cost of raising here 
+	land_maintenance_modifier = 1
+	recover_army_morale_speed = -0.35
+	reinforce_speed = -0.75
+}
+aet_eliteGuards_heavyCavalry_specialisation_country = {
+	aet_eliteGuards_forceLimit = -0.075
+	nobles_influence_modifier = 0.1
+}
+
+aet_eliteGuards_lightCavalry_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	shock_damage = 0.1
+	cavalry_flanking = 0.5
+	cavalry_cost = -0.05
+}
+aet_eliteGuards_lightCavalry_country = {
+	cav_to_inf_ratio = 0.05
+	cavalry_power = 0.05
+	cavalry_cost = -0.1
+}
+
+aet_eliteGuards_horseArcher_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	cavalry_fire = 0.5
+	fire_damage = 0.10
+	cavalry_flanking = 1
+}
+aet_eliteGuards_horseArcher_country = {
+	movement_speed = 0.1
+}
+aet_eliteGuards_horseArcher_horde = {
+	is_revolutionary_guard_modifier = yes 
+	cavalry_fire = 1.5 
+	fire_damage = 0.15
+	cavalry_cost = -0.15 
+}
+aet_eliteGuards_horseArcher_horde_country = {
+	movement_speed = 0.1
+}
+
+
+
+
+
+
+aet_eliteGuardsFL_0 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.025
+}
+
+aet_eliteGuardsFL_1 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.05
+}
+
+aet_eliteGuardsFL_2 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.075
+}
+
+aet_eliteGuardsFL_3 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.10
+}
+
+aet_eliteGuardsFL_4 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.125
+}
+
+aet_eliteGuardsFL_5 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.15
+}
+
+aet_eliteGuardsFL_6 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.175
+}
+
+aet_eliteGuardsFL_7 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.20
+}
+
+aet_eliteGuardsFL_8 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.225
+}
+
+aet_eliteGuardsFL_9 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.25
+}
+
+aet_eliteGuardsFL_10 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.275
+}
+
+aet_eliteGuardsFL_11 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.30
+}
+
+aet_eliteGuardsFL_12 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.325
+}
+
+aet_eliteGuardsFL_13 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.35
+}
+
+aet_eliteGuardsFL_14 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.375
+}
+
+aet_eliteGuardsFL_15 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.40
+}
+
+aet_eliteGuardsFL_16 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.425
+}
+
+aet_eliteGuardsFL_17 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.45
+}
+
+aet_eliteGuardsFL_18 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.475
+}
+
+aet_eliteGuardsFL_19 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.50
+}
+
+aet_eliteGuardsFL_20 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.525
+}
+
+aet_eliteGuardsFL_21 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.55
+}
+
+aet_eliteGuardsFL_22 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.575
+}
+
+aet_eliteGuardsFL_23 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.60
+}
+
+aet_eliteGuardsFL_24 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.625
+}
+
+aet_eliteGuardsFL_25 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.65
+}
+
+aet_eliteGuardsFL_26 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.675
+}
+
+aet_eliteGuardsFL_27 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.70
+}
+
+aet_eliteGuardsFL_28 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.725
+}
+
+aet_eliteGuardsFL_29 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.75
+}
+
+aet_eliteGuardsFL_30 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.775
+}
+
+aet_eliteGuardsFL_31 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.80
+}
+
+aet_eliteGuardsFL_32 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.825
+}
+
+aet_eliteGuardsFL_33 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.85
+}
+
+aet_eliteGuardsFL_34 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.875
+}
+
+aet_eliteGuardsFL_35 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.90
+}
+
+aet_eliteGuardsFL_36 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.925
+}
+
+aet_eliteGuardsFL_37 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.95
+}
+
+aet_eliteGuardsFL_38 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 0.975
+}
+
+aet_eliteGuardsFL_39 = {
+    can_recruit_revolutionary_guards = yes
+	aet_eliteGuards_forceLimit = 0.05
+    allowed_rev_guard_fraction = 1.0
+}

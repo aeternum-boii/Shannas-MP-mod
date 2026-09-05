@@ -1,3 +1,0 @@
-aet_is_debug = {
-	has_global_flag = aet_debug
-}

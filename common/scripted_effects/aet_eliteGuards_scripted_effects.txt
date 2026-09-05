@@ -1,0 +1,1263 @@
+aet_eliteGuards_enable_infantry = {
+	aet_eliteGuards_initialSetup = {
+		conditional = yes 
+	} 
+	add_country_modifier = {
+		name = aet_eliteGuards_infEnable
+		duration = -1
+	}
+	change_variable = {
+		which = aet_eliteGuards_inf_enable
+		value = 1
+	}
+}
+
+aet_eliteGuards_enable_cavalry = {
+	aet_eliteGuards_initialSetup = {
+		conditional = yes 
+	} 	add_country_modifier = {
+		name = aet_eliteGuards_cavEnable
+		duration = -1
+	}
+	change_variable = {
+		which = aet_eliteGuards_cav_enable
+		value = 1
+	}
+}
+
+aet_eliteGuards_enable_artillery = {
+	aet_eliteGuards_initialSetup = {
+		conditional = yes 
+	} 	add_country_modifier = {
+		name = aet_eliteGuards_artyEnable
+		duration = -1
+	}
+	change_variable = {
+		which = aet_eliteGuards_arty_enable
+		value = 1
+	}
+}
+
+aet_eliteGuards_disable_infantry = {
+	subtract_variable = {
+		which = aet_eliteGuards_inf_enable
+		value = 1
+	}
+	if {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+
+			remove_country_modifier = aet_eliteGuards_infEnable
+			aet_eliteGuards_cleanup = { conditional = yes }
+		}
+	}
+}
+
+aet_eliteGuards_disable_cavalry = {
+	subtract_variable = {
+		which = aet_eliteGuards_cav_enable
+		value = 1
+	}
+	if {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_eliteGuards_cav_enable
+					value = 1
+				}
+			}
+
+			remove_country_modifier = aet_eliteGuards_cavEnable
+			aet_eliteGuards_cleanup = { conditional = yes }
+		}
+	}
+}
+
+aet_eliteGuards_disable_artillery = {
+	subtract_variable = {
+		which = aet_eliteGuards_arty_enable
+		value = 1
+	}
+	if {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_eliteGuards_arty_enable
+					value = 1
+				}
+			}
+
+			remove_country_modifier = aet_eliteGuards_artyEnable
+			aet_eliteGuards_cleanup = { conditional = yes }
+		}
+	}
+}
+
+aet_eliteGuards_init_vars = {
+	set_variable = {
+		which = aet_eliteGuards_FL_deFactoLimit
+		value = 0
+	}
+	set_variable = {
+		which = aet_eliteGuards_inf_enable
+		value = 0
+	}
+	set_variable = {
+		which = aet_eliteGuards_cav_enable
+		value = 0
+	}
+	set_variable = {
+		which = aet_eliteGuards_arty_enable
+		value = 0
+	}
+	set_variable = {
+		which = aet_eliteGuards_actions_bank
+		value = 1
+	}
+	set_variable = {
+		which = aet_eliteGuards_increaseFLCooldown
+		value = 0 
+	}
+}
+
+aet_eliteGuards_initialSetup = {
+	if {
+		limit = {
+			[[conditional] NOT = {
+				has_country_flag = aet_eliteGuards_commonSetupDone
+			}]
+		}
+		hidden_effect = { aet_eliteGuards_init_vars = yes }
+		set_country_flag = aet_eliteGuards_commonSetupDone
+		add_country_modifier = {
+			name = aet_eliteGuardsFL_1
+			duration = -1
+		}
+		set_variable = {
+			which = aet_eliteGuards_FL_deFactoLimit
+			value = 2
+		}
+		aet_eliteGuards_refreshAll = yes
+	}
+}
+
+aet_eliteGuards_refreshAll = {
+	aet_eliteGuards_recalcFL = yes
+	aet_eliteGuards_checkDecisions = yes 
+}
+
+aet_eliteGuards_checkDecisions = {
+	if = {
+		limit = {
+			NOT = { aet_eliteGuard_heavyCavPersistentRequirements = yes }
+		}
+		remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+		remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation_country
+	}
+	if = {
+		limit = {
+			NOT = { aet_eliteGuard_lightCavPersistentRequirements = yes }
+		}
+		remove_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+		remove_country_modifier = aet_eliteGuards_lightCavalry_country
+	}
+	if = {
+		limit = {
+			NOT = { aet_eliteGuard_cavArcherPersistentRequirements = yes }
+		}
+		remove_country_modifier = aet_eliteGuards_horseArcher_country
+		remove_country_modifier = aet_eliteGuards_horseArcher_specialisation
+		remove_country_modifier = aet_eliteGuards_horseArcher_horde
+		remove_country_modifier = aet_eliteGuards_horseArcher_horde_country		
+	}
+	if = {
+		limit = {
+			NOT = { aet_eliteGuard_cavArcherNomadPersistentRequirements = yes }
+		}
+		remove_country_modifier = aet_eliteGuards_horseArcher_horde
+		remove_country_modifier = aet_eliteGuards_horseArcher_horde_country	
+	}			
+}
+
+aet_eliteGuards_cleanup = {
+	if {
+		limit {
+			[[conditional] NOT = {
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+				check_variable = {
+					which = aet_eliteGuards_cav_enable
+					value = 1
+				}
+				check_variable = {
+					which = aet_eliteGuards_arty_enable
+					value = 1
+				}
+			}]
+		}
+
+		set_variable = {
+			which = aet_eliteGuards_FL_deFactoLimit
+			value = 0
+		}
+		set_variable = {
+			which = aet_eliteGuards_inf_enable
+			value = 0
+		}
+		set_variable = {
+			which = aet_eliteGuards_cav_enable
+			value = 0
+		}
+		set_variable = {
+			which = aet_eliteGuards_arty_enable
+			value = 0
+		}
+
+		remove_country_modifier = aet_eliteGuardsFL_0
+		remove_country_modifier = aet_eliteGuardsFL_1
+		remove_country_modifier = aet_eliteGuardsFL_2
+		remove_country_modifier = aet_eliteGuardsFL_3
+		remove_country_modifier = aet_eliteGuardsFL_4
+		remove_country_modifier = aet_eliteGuardsFL_5
+		remove_country_modifier = aet_eliteGuardsFL_6
+		remove_country_modifier = aet_eliteGuardsFL_7
+		remove_country_modifier = aet_eliteGuardsFL_8
+		remove_country_modifier = aet_eliteGuardsFL_9
+		remove_country_modifier = aet_eliteGuardsFL_10
+		remove_country_modifier = aet_eliteGuardsFL_11
+		remove_country_modifier = aet_eliteGuardsFL_12
+		remove_country_modifier = aet_eliteGuardsFL_13
+		remove_country_modifier = aet_eliteGuardsFL_14
+		remove_country_modifier = aet_eliteGuardsFL_15
+		remove_country_modifier = aet_eliteGuardsFL_16
+		remove_country_modifier = aet_eliteGuardsFL_17
+		remove_country_modifier = aet_eliteGuardsFL_18
+		remove_country_modifier = aet_eliteGuardsFL_19
+		remove_country_modifier = aet_eliteGuardsFL_20
+		remove_country_modifier = aet_eliteGuardsFL_21
+		remove_country_modifier = aet_eliteGuardsFL_22
+		remove_country_modifier = aet_eliteGuardsFL_23
+		remove_country_modifier = aet_eliteGuardsFL_24
+		remove_country_modifier = aet_eliteGuardsFL_25
+		remove_country_modifier = aet_eliteGuardsFL_26
+		remove_country_modifier = aet_eliteGuardsFL_27
+		remove_country_modifier = aet_eliteGuardsFL_28
+		remove_country_modifier = aet_eliteGuardsFL_29
+		remove_country_modifier = aet_eliteGuardsFL_30
+		remove_country_modifier = aet_eliteGuardsFL_31
+		remove_country_modifier = aet_eliteGuardsFL_32
+		remove_country_modifier = aet_eliteGuardsFL_33
+		remove_country_modifier = aet_eliteGuardsFL_34
+		remove_country_modifier = aet_eliteGuardsFL_35
+		remove_country_modifier = aet_eliteGuardsFL_36
+		remove_country_modifier = aet_eliteGuardsFL_37
+		remove_country_modifier = aet_eliteGuardsFL_38
+		remove_country_modifier = aet_eliteGuardsFL_39
+
+		aet_eliteGuards_removeFLModifiers = yes
+	}
+}
+
+aet_eliteGuards_takeFullAction = {
+	if {
+		limit = {
+			NOT = { check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = 0
+			}}
+		}
+
+		if {
+			limit = {
+				check_variable = {
+					which = aet_eliteGuards_actions_bank
+					value = -1
+				}
+			}
+
+			mil_power_cost = 20
+		} else_if {
+			limit = {
+				check_variable = {
+					which = aet_eliteGuards_actions_bank
+					value = -2
+				}
+			} 
+
+			mil_power_cost = 40
+		} else_if {
+			limit = {
+				check_variable = {
+					which = aet_eliteGuards_actions_bank
+					value = -3
+				}
+			} 
+
+			mil_power_cost = 80
+		} else_if {
+			limit = {
+				check_variable = {
+					which = aet_eliteGuards_actions_bank
+					value = -4
+				}
+			} 
+
+			mil_power_cost = 160
+		} else_if {
+			limit = {
+				check_variable = {
+					which = aet_eliteGuards_actions_bank
+					value = -5
+				}
+			} 
+
+			mil_power_cost = 320
+		} else {
+			mil_power_cost = 600
+		}
+	} 
+
+	subtract_variable = {
+		which = aet_eliteGuards_actions_bank
+		value = 1
+	}
+}
+
+aet_eliteGuards_takeHalfAction = {
+	aet_getEliteGuardActionCost = {
+		var = aet_cost
+		half = no 
+	}
+	aet_applyVar = {
+		left = mil_power_cost
+		var = aet_cost
+	}
+}
+
+# Returns the military power cost of an elite guard action.*
+
+# @param var the return variable
+# @param half whether this is a half action
+
+aet_getEliteGuardActionCost = {
+	if {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = -1
+			}
+		}
+
+		set_variable = {
+			which = $var$
+			value = 20
+		}
+	} else_if {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = -2
+			}
+		}
+
+		set_variable = {
+			which = $var$
+			value = 40
+		}
+	} else_if {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = -3
+			}
+		}
+
+		set_variable = {
+			which = $var$
+			value = 80
+		}
+	} else_if {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = -4
+			}
+		}
+
+		set_variable = {
+			which = $var$
+			value = 160
+		}
+	} else_if {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = -5
+			}
+		}
+
+		set_variable = {
+			which = $var$
+			value = 320
+		}
+	} else {
+		set_variable = {
+			which = $var$
+			value = 600
+		}
+	}
+
+	[[half] multiply_variable = {
+		which = $var$
+		value = 0.585786
+	}]
+}
+
+aet_eliteGuards_recalcFL = {
+	hidden_effect = {
+		export_to_variable = {
+			variable_name = aet_deIureLimit
+			value = modifier:aet_eliteGuards_forceLimit
+		}
+
+		multiply_variable = {
+			which = aet_deIureLimit
+			value = 40
+		}
+
+		set_variable = {
+			which = aet_proportion
+			which = aet_eliteGuards_FL_deFactoLimit
+		}
+
+		divide_variable = {
+			which = aet_proportion
+			which = aet_deIureLimit
+		}
+	}
+
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 0.50
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			50 = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 0.70
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			70 = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 0.80
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			80 = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 1.25
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			100 = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 1.35
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			125 = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 1.50
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			135 = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 1.75
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			150 = yes
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = aet_proportion
+					value = 2.00
+				}
+			}
+		}
+		aet_eliteGuards_applyFLModifier = {
+			175 = yes
+		}
+	}
+	else = {
+		aet_eliteGuards_applyFLModifier = {
+			200 = yes
+		}
+	}
+}
+
+# Applies the Modifier that fits the proportion of the de iure and de facto force limit
+# requires exactly one param (the corresponding proportion range)
+# @param 50 bool 
+# @param 70 bool
+# @param 80 bool
+# @param 100 bool
+# @param 125 bool
+# @param 135 bool
+# @param 150 bool
+# @param 175 bool
+# @param 200 bool
+aet_eliteGuards_applyFLModifier = {
+	aet_eliteGuards_removeFLModifiers = yes 
+
+	[[50]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLbelow50_c
+			duration = -1
+		}
+		add_country_modifier = {
+			name = aet_eliteGuards_FLbelow50_u
+			duration = -1
+		}		
+	]
+	[[70]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLbelow70_c
+			duration = -1
+		}
+		add_country_modifier = {
+			name = aet_eliteGuards_FLbelow70_u
+			duration = -1
+		}
+	]
+	[[80]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLbelow80_c
+			duration = -1
+		}
+	]
+	[[100]]
+	[[125]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove125_c
+			duration = -1
+		}
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove125_u
+			duration = -1
+		}
+	]
+	[[135]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove135_c
+			duration = -1
+		}
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove135_u
+			duration = -1
+		}
+	]
+	[[150]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove150_c
+			duration = -1
+		}
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove150_u
+			duration = -1
+		}
+	]
+	[[175]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove175_c
+			duration = -1
+		}
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove175_u
+			duration = -1
+		}
+	]
+	[[200]
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove200_c
+			duration = -1
+		}
+		add_country_modifier = {
+			name = aet_eliteGuards_FLabove200_u
+			duration = -1
+		}
+	]
+
+}
+
+aet_eliteGuards_removeFLModifiers = {
+	remove_country_modifier = aet_eliteGuards_FLbelow50_c
+	remove_country_modifier = aet_eliteGuards_FLbelow50_u
+	remove_country_modifier = aet_eliteGuards_FLbelow70_c
+	remove_country_modifier = aet_eliteGuards_FLbelow70_u
+	remove_country_modifier = aet_eliteGuards_FLbelow80_c
+	remove_country_modifier = aet_eliteGuards_FLabove125_c
+	remove_country_modifier = aet_eliteGuards_FLabove125_u
+	remove_country_modifier = aet_eliteGuards_FLabove135_c
+	remove_country_modifier = aet_eliteGuards_FLabove135_u
+	remove_country_modifier = aet_eliteGuards_FLabove150_c
+	remove_country_modifier = aet_eliteGuards_FLabove150_u
+	remove_country_modifier = aet_eliteGuards_FLabove175_c
+	remove_country_modifier = aet_eliteGuards_FLabove175_u
+	remove_country_modifier = aet_eliteGuards_FLabove200_c
+	remove_country_modifier = aet_eliteGuards_FLabove200_u
+}
+
+
+aet_eliteGuards_increase_FL = {
+	custom_tooltip = aet_eliteGuards_increase_FL_tt
+	hidden_effect = {
+		if {
+			limit = {
+				NOT = {
+					has_country_modifier = aet_eliteGuardsFL_39
+				}
+			}
+
+			change_variable = {
+				which = aet_eliteGuards_FL_deFactoLimit
+				value = 1
+			}
+
+			trigger_switch = {
+				on_trigger = has_country_modifier
+
+				aet_eliteGuardsFL_0 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_0 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_1
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_1 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_1 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_2
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_2 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_2 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_3
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_3 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_3 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_4
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_4 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_4 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_5
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_5 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_5 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_6
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_6 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_6 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_7
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_7 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_7 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_8
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_8 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_8 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_9
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_9 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_9 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_10
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_10 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_10 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_11
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_11 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_11 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_12
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_12 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_12 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_13
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_13 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_13 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_14
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_14 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_14 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_15
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_15 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_15 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_16
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_16 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_16 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_17
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_17 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_17 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_18
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_18 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_18 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_19
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_19 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_19 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_20
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_20 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_20 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_21
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_21 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_21 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_22
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_22 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_22 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_23
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_23 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_23 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_24
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_24 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_24 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_25
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_25 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_25 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_26
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_26 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_26 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_27
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_27 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_27 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_28
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_28 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_28 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_29
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_29 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_29 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_30
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_30 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_30 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_31
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_31 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_31 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_32
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_32 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_32 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_33
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_33 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_33 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_34
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_34 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_34 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_35
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_35 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_35 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_36
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_36 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_36 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_37
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_37 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_37 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_38
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_38 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_38 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_39
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	aet_eliteGuards_recalcFL = yes 
+}
+
+aet_eliteGuards_reduce_FL = {
+	custom_tooltip = aet_eliteGuards_reduce_FL_tt
+	hidden_effect = {
+		if {
+			limit = {
+				NOT = {
+					has_country_modifier = aet_eliteGuardsFL_39
+				}
+			}
+
+			subtract_variable = {
+				which = aet_eliteGuards_FL_deFactoLimit
+				value = 1
+			}
+
+			
+			trigger_switch = {
+				on_trigger = has_country_modifier
+
+				aet_eliteGuardsFL_39 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_39 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_38
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_38 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_38 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_37
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_37 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_37 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_36
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_36 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_36 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_35
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_35 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_35 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_34
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_34 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_34 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_33
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_33 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_33 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_32
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_32 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_32 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_31
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_31 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_31 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_30
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_30 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_30 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_29
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_29 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_29 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_28
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_28 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_28 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_27
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_27 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_27 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_26
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_26 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_26 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_25
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_25 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_25 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_24
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_24 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_24 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_23
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_23 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_23 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_22
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_22 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_22 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_21
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_21 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_21 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_20
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_20 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_20 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_19
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_19 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_19 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_18
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_18 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_18 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_17
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_17 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_17 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_16
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_16 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_16 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_15
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_15 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_15 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_14
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_14 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_14 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_13
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_13 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_13 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_12
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_12 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_12 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_11
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_11 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_11 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_10
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_10 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_10 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_9
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_9 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_9 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_8
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_8 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_8 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_7
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_7 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_7 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_6
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_6 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_6 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_5
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_5 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_5 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_4
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_4 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_4 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_3
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_3 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_3 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_2
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_2 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_2 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_1
+						duration = -1
+					}
+				}
+				aet_eliteGuardsFL_1 = {
+					hidden_effect = { remove_country_modifier = aet_eliteGuardsFL_1 }
+					add_country_modifier = {
+						name = aet_eliteGuardsFL_0
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	aet_eliteGuards_recalcFL = yes
+}

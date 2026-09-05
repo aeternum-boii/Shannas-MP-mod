@@ -1,0 +1,46 @@
+# Returns the Current Date as used in aet (so 360 day years, 30 day months) 
+# @param var the return variable 
+aet_getCurrentDate = {
+	export_to_variable = {
+		variable_name = current_month
+		value = trigger_value:is_month
+	}
+	export_to_variable = {
+		variable_name = current_year
+		value = trigger_value:is_year
+	}
+
+	multiply_variable = {
+		which = current_month
+		value = 30
+	}
+
+	multiply_variable = {
+		which = current_year
+		value = 360
+	}
+
+	change_variable = {
+		which = current_month
+		which = current_year
+	}
+
+	set_variable = {
+		which = $var$
+		which = current_month
+	}
+}
+
+# Returns the current date with offset $offset$
+# @param var the return variable 
+# @param offset the offset in days (raw integer)
+aet_getCurrentDateOffset = {
+	aet_getCurrentDate = {
+		var = $var$
+	}
+	change_variable = {
+		which = $var$
+		value = $offset$
+	}
+}
+

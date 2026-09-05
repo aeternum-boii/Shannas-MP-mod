@@ -19,3 +19,29 @@ on_monthly_pulse = {
 		days = 22
 	}
 }
+
+on_yearly_pulse = {
+	if = {
+		limit = {
+			has_country_flag = aet_eliteGuards_commonSetupDone
+			NOT = { check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = 5
+			}}
+		}
+
+		change_variable = {
+			which = aet_eliteGuards_actions_bank
+			value = 1 
+		}
+	}
+}
+
+on_five_year_pulse = {
+	if = {
+		limit = {
+			aet_eliteGuards_anyEnabled = yes 
+		}
+		aet_eliteGuards_refreshAll = yes 
+	}
+}

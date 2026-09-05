@@ -1,0 +1,47 @@
+# Checks if current_month * 30 + current_year * 12 * 30 is larger than $date$ 
+# as such it treats each month as 30 days 
+#
+# @param date integer variable representing the days passed since 1.1.0
+aet_isPastDate = {
+	variable_arithmetic_trigger = {
+		export_to_variable = {
+			variable_name = current_month
+			value = trigger_value:is_month
+		}
+		export_to_variable = {
+			variable_name = current_year
+			value = trigger_value:is_year
+		}
+
+		multiply_variable = {
+			which = current_month
+			value = 30
+		}
+
+		multiply_variable = {
+			which = current_year
+			value = 360
+		}
+
+		change_variable = {
+			which = current_month
+			which = current_year
+		}
+
+		check_variable = {
+			which = $date$ 
+			which = current_month
+		}
+	}
+}
+
+aet_is_debug = {
+	hidden_trigger = { has_global_flag = aet_debug }
+}
+
+# Checks if var < value
+aet_isSmaller = {
+	NOT = {
+		check_variable = { which = $var$ value = $value$  }
+	}
+}

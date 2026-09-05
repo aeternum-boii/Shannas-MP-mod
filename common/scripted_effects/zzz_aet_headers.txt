@@ -1,0 +1,73 @@
+# Header File for static analysis of otherwhise too large functions
+
+# Applies a variable $var$ to $left$ 
+# acts as if $left$ = $var$ (but works) 
+# For Negative Floats use aet_applyVar_neg
+# For Integers use aet_applyVar_int
+# Runs in average 11 checks, max 12 
+# @param $var$ the variable to apply
+# 			precision of 3 points < 1
+#			precision of 2 points < 5
+# 			precision of 1 point else
+#			0 <= var < 100
+# @param $left$ left side of the expression
+aet_applyVar = {
+	# See Actual Implementation in aet_util.generated.txt
+
+	if = {
+		limit = {
+			check_variable = {
+				which = $var$
+				value = 0
+			}
+		}
+		$left$ = 0.001
+	}
+}
+
+# Applies a variable $var$ to $left$ 
+# acts as if $left$ = $var$ (but works) 
+# For Positive Floats use aet_applyVar
+# For Integers use aet_applyVar_int
+# Runs in average 11 checks, max 12 
+# @param $var$ the variable to apply
+# 			precision of 3 points > -1
+#			precision of 2 points > -5
+# 			precision of 1 point else
+#			101 < var <= 0
+# @param $left$ left side of the expression
+aet_applyVar_neg = {
+	# See Actual Implementation in aet_util.generated.txt
+
+	if = {
+		limit = {
+			check_variable = {
+				which = $var$
+				value = 0
+			}
+		}
+		$left$ = -0.001
+	}	
+}
+
+# Applies a variable $var$ to $left$ 
+# acts as if $left$ = $var$ (but works) 
+# For Positive Floats use aet_applyVar
+# For Negative Floats use aet_applyVar_neg
+# Runs in average 12 checks, max 13 
+# @param $var$ the variable to apply
+#			-4096 < var < 4096
+# @param $left$ left side of the expression
+aet_applyVar_int = {
+	# See Actual Implementation in aet_util.generated.txt
+
+	if = {
+		limit = {
+			check_variable = {
+				which = $var$
+				value = 0
+			}
+		}
+		$left$ = 4096
+	}		
+}

@@ -1601,6 +1601,8 @@ aristocracy_ideas = {
 
 	bonus = {
 		leader_land_shock = 1
+		max_general_shock = 1
+		general_cost = -0.10
 		nobles_loyalty_modifier = 0.1
 		rajput_loyalty_modifier = 0.1
 		maratha_loyalty_modifier = 0.1
@@ -1613,29 +1615,15 @@ aristocracy_ideas = {
 	
 	noble_knights = {
 		cavalry_power = 0.15
-
-		effect = {
-			add_adm_power = 5000
-		}
-		removed_effect = {
-			add_mil_power = 5000
-		}
 	}
 
 	serfdom = {
 		global_manpower_modifier = 0.15
 		development_cost = -0.05
-		
-		effect = {
-			add_treasury = 5000
-		}
-		removed_effect = {
-			add_dip_power = 5000
-		}
 	}
 
 	noble_resilience = {
-		cav_to_inf_ratio = 0.1
+		cav_to_inf_ratio = 0.15
 		cavalry_cost = -0.20
 	}
 	noble_officers = {
@@ -1644,18 +1632,22 @@ aristocracy_ideas = {
 		num_of_pronoiars = 1
 	}
 	international_nobility = {
-		diplomats = 1
-		general_cost = -0.1
-	}
-	rightful_conquest = {
-		fabricate_claims_cost = -0.5
-		unjustified_demands = -0.25
+		aet_eliteGuards_forceLimit = 0.1
+		effect = {
+			aet_eliteGuards_enable_cavalry = yes
+		}
+		removed_effect = {
+			aet_eliteGuards_disable_cavalry = yes
+		}
 	}
 	local_nobility = {
 		global_autonomy = -0.025
-		yearly_absolutism = 0.5
+		nobles_loyalty_modifier = 0.1
 	}
-	
+	rightful_conquest = {
+		yearly_absolutism = 0.5
+		max_absolutism = 10
+	}
 
 	ai_will_do = {
 		factor = 6.0
