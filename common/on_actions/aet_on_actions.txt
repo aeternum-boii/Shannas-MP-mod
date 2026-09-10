@@ -45,3 +45,9 @@ on_five_year_pulse = {
 		aet_eliteGuards_refreshAll = yes 
 	}
 }
+
+on_bankruptcy = {
+	events = {
+		aet_ideas.1
+	}
+}

@@ -117,7 +117,6 @@ economic_ideas = { # INDUSTRIAL IDEAS IN LOC
 	}
 	efficient_mining = {
 		expand_infrastructure_cost_modifier = -0.15
-		# TODO AET: Maybe remove the loan thingy, is somewhere in on_actions 
 	}
 	debt_and_loans = {
 		state_maintenance_modifier = -0.15
@@ -464,7 +463,9 @@ innovativeness_ideas = {
 	}
 
 	bonus = {
-		advisor_cost = -0.2 # TODO AET: Potentially regain the 35% with innovativeness requirements 
+		advisor_cost = -0.2 
+		# 10 % if inno > 50
+		# 5 % if inno > 75 
 	}
 
 	patron_of_art  = {
@@ -640,7 +641,7 @@ decentralised_ideas = {
 	}
 
 	decentralised_ideas_6 = {
-		# Transfer Trade Reasons 25 TODO AET: Implement this 
+		transfer_trade_power_reasons = 25 
 		embargo_efficiency = 0.25 
 		
 
@@ -763,8 +764,8 @@ fiscal_ideas = { # Death war ideas
 	}
 
 	bonus = {
+		# Remind of Decision in Loc ! 
 		trade_efficiency = 0.1
-		# TODO AET: Maybe grant access to a decision that gives 2 years of income, when close to a bankruptcy that will grant strongly negative modifiers after some time
 	}
 
 
@@ -1446,12 +1447,59 @@ trade_ideas = {
 exploitation_ideas = { # WIP; TODO AET 
 	category = DIP
 
-	bonus = {
+	exploitation_ideas_0 = {
+		global_tariffs = 0.25
+	}
+	exploitation_ideas_1 = {
+		treasure_fleet_income = 0.4
+		expel_minorities_cost = -0.4
+	}
+	exploitation_ideas_2 = {
+		# in Colonial Subject 
+		# global_trade_goods_size_modifier = 0.2
+
+		reduced_liberty_desire = -0.15
+	}
+	exploitation_ideas_3 = {
+		trade_steering = 0.2
+		global_foreign_trade_power = 0.33
+	}
+	exploitation_ideas_4 = {
+		# Decision for Colonial Subject 
+		# Grants Cheaper Production or Trade Buildings en masse 
+
+		build_cost = -0.0
+	}
+	exploitation_ideas_5 = {
+		# In Colonial Subject 
+		# land_forcelimit_modifier = -0.25
+		# naval_forcelimit_modifier = -0.15
+		# global_trade_goods_size = 0.2
+
+		global_trade_goods_size = 0.0
+	}
+	exploitation_ideas_6 = {
+		# In Colonial Subject 
+		# global_prov_trade_power_modifier = 0.25
+
+		global_prov_trade_power_modifier = 0.0
 		
+		# Enables Limited Decision to gain money from colonies for liberty desire 
+	}
+
+	bonus = {
+		global_ship_trade_power = 0.25
+		mercantilism_cost = -0.25
+		native_assimilation = 0.15 
 	}
 
 	ai_will_do = {
-		factor = 1.0
+		factor = 5.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_colonist = yes }
+		}
 	}
 }
 
@@ -1916,7 +1964,6 @@ mercenary_ideas = {
 		if = {
 			limit = { 
 				ai = yes
-				
 			}
 		}
 	}
@@ -2496,7 +2543,7 @@ militarism_ideas = {
 		drill_gain_modifier = 0.25
 	}	
 	militarism_ideas_3 = {
-		army_tradition_decay = -0.5
+		army_tradition_decay = -0.005
 	}
 	militarism_ideas_4 = {
 		global_regiment_cost = -0.05

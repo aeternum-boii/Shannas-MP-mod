@@ -1,0 +1,29 @@
+namespace = aet_ideas 
+
+country_event = {
+	id = aet_ideas.1
+
+	is_triggered_only = yes 
+	trigger = {
+		has_country_flag = aet_ideas_fiscalCountryRuined
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		clr_country_flag = aet_ideas_fiscalCountryRuined
+	}
+	
+	option = {
+		name = aet_ideas.1.a
+		ai_chance = { factor = 1 }
+		
+		add_stability = -3
+		add_country_modifier = {
+			name = aet_ideas_fiscalCountryRuined
+			duration = 3600
+		}		
+	}
+}

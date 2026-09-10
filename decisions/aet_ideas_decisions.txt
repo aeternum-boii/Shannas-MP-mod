@@ -1,0 +1,61 @@
+country_decisions = {
+	aet_ideas_fiscalShortTermMoney = {
+		potential = {
+			OR = {
+				has_idea_group = fiscal_ideas
+				aet_is_debug = yes
+			}
+			NOT = {
+				has_country_flag = aet_ideas_fiscalCountryRuined
+				has_country_modifier = aet_ideas_fiscalCountryRuined
+			}
+		}
+
+		allow = {
+			fiscal_ideas = 7 
+		}
+
+
+		effect = {
+			add_years_of_income = 5 
+			set_country_flag = aet_ideas_fiscalCountryRuined
+
+			custom_tooltip = aet_ideas_fiscalShortTermMoney_tt 
+			tooltip = {
+				add_stability = -3
+				add_country_modifier = {
+					name = aet_ideas_fiscalCountryRuined
+					duration = 3600
+				}
+			}
+
+			hidden_effect = {
+				country_event = {
+					id = aet_ideas.1
+					days = 1800
+				}
+			}
+		}
+	}
+
+	aet_ideas_fiscalShortTermMoneyFireNow = {
+		potential = {
+			has_country_flag = aet_ideas_fiscalCountryRuined
+		}
+
+		allow = {
+			fiscal_ideas = 7 
+			has_country_flag = aet_ideas_fiscalCountryRuined
+		}
+
+
+		effect = {
+			clr_country_flag = aet_ideas_fiscalCountryRuined
+			add_stability = -3
+			add_country_modifier = {
+				name = aet_ideas_fiscalCountryRuined
+				duration = 3600
+			}
+		}		
+	}
+}
