@@ -144,6 +144,19 @@ aet_eliteGuards_lightCavalry_country = {
 	cavalry_cost = -0.1
 }
 
+aet_eliteGuards_lightCavalryCossack_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	shock_damage = 0.025
+	cavalry_cost = -0.05
+}
+aet_eliteGuards_lightCavalryCossack_country = {
+	cav_to_inf_ratio = 0.025
+	cavalry_power = 0.025
+	cavalry_cost = -0.05
+    allowed_cossack_fraction = -1
+    aet_eliteGuards_forceLimit = 0.10
+}
+
 aet_eliteGuards_horseArcher_specialisation = {
 	is_revolutionary_guard_modifier = yes 
 	cavalry_fire = 0.5

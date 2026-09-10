@@ -1458,7 +1458,7 @@ exploitation_ideas = { # WIP; TODO AET
 		# in Colonial Subject 
 		# global_trade_goods_size_modifier = 0.2
 
-		reduced_liberty_desire = -0.15
+		reduced_liberty_desire = -15
 	}
 	exploitation_ideas_3 = {
 		trade_steering = 0.2

@@ -18,6 +18,9 @@
 # aet_eliteGuards_takeHalfAction
 # Takes a half action out of the bank.
 
+# aet_eliteGuards_preloadActionCosts
+# Preloads the costs into relevant variables for tooltips 
+
 # Force Limit
 
 # aet_eliteGuards_increase_FL
@@ -37,6 +40,9 @@
 # Returns the current action cost.
 
 
+# Invariants:
+# aet_eliteGuards_halfcost > aet_getEliteGuardActionCost(half) - 100 
+# aet_eliteGuards_fullcost > aet_getEliteGuardActionCost - 100
 
 aet_eliteGuards_enable_infantry = {
 	aet_eliteGuards_initialSetup = {
@@ -163,6 +169,14 @@ aet_eliteGuards_init_vars = {
 		which = aet_eliteGuards_increaseFLCooldown
 		value = 0 
 	}
+	set_variable = {
+		which = aet_eliteGuards_fullCost
+		value = 600
+	}
+	set_variable = {
+		which = aet_eliteGuards_halfCost
+		value = 200
+	}	
 }
 
 aet_eliteGuards_initialSetup = {
@@ -306,32 +320,52 @@ aet_eliteGuards_cleanup = {
 }
 
 aet_eliteGuards_takeFullAction = {
-	aet_getEliteGuardActionCost = {
-		var = aet_cost
-		half = no 
+	hidden_effect = {
+		aet_getEliteGuardActionCost = {
+			var = aet_eliteGuards_fullcost
+		}
 	}
 	aet_applyVar = {
 		left = mil_power_cost
-		var = aet_cost
+		var = aet_eliteGuards_fullcost
 	}
 	subtract_variable = {
 		which = aet_eliteGuards_actions_bank
 		value = 1
 	}
+	hidden_effect = {
+		aet_eliteGuards_preloadActionCosts = yes
+	}	
 }
 
 aet_eliteGuards_takeHalfAction = {
-	aet_getEliteGuardActionCost = {
-		var = aet_cost
-		half = yes 
+	hidden_effect = {
+		aet_getEliteGuardActionCost = {
+			var = aet_eliteGuards_halfcost
+			half = yes 
+		}		
 	}
+
 	aet_applyVar = {
 		left = mil_power_cost
-		var = aet_cost
+		var = aet_eliteGuards_halfcost
 	}
 	subtract_variable = {
 		which = aet_eliteGuards_actions_bank
 		value = 0.5
+	}	
+	hidden_effect = {
+		aet_eliteGuards_preloadActionCosts = yes
+	}
+}
+
+aet_eliteGuards_preloadActionCosts = {
+	aet_getEliteGuardActionCost = {
+		var = aet_eliteGuards_halfcost 
+		half = yes 
+	}	
+	aet_getEliteGuardActionCost = {
+		var = aet_eliteGuards_fullcost
 	}	
 }
 

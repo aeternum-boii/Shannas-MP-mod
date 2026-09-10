@@ -14,6 +14,14 @@ aet_eliteGuards_anyEnabled = {
 		}				
 	}
 }
+aet_eliteGuards_baseDecisionTrigger = {
+	OR = {
+		AND = {
+			aet_eliteGuards_anyEnabled = yes
+			NOT = { has_country_flag = aet_eliteGuards_hideDecisions }
+		}
+	}
+}
 aet_eliteGuards_isAboveFL = {
 	variable_arithmetic_trigger = {
 		export_to_variable = {
@@ -57,6 +65,10 @@ aet_eliteGuard_heavyCavPersistentRequirements = {
 }
 aet_eliteGuard_lightCavPersistentRequirements = {
 	always = yes 
+}
+
+aet_eliteGuard_lightCavCossackPersistentRequirements = {
+	num_of_cossacks = 1
 }
 aet_eliteGuard_cavArcherPersistentRequirements = {
 	OR = {
