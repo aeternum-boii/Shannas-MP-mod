@@ -1548,6 +1548,12 @@ grandeur_ideas = {
 
 	bonus = {
 		# Power Projection: 25 
+		effect = {
+			add_power_projection = { 
+				type = 25_permanent_power_projection
+				amount = 25 
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -1609,8 +1615,10 @@ aristocracy_ideas = {
 	}
 
 	trigger = {
-		has_government_attribute = enables_aristocratic_idea_group
-		
+		OR = {
+			aet_is_debug = yes
+			has_government_attribute = enables_aristocratic_idea_group
+		}
 	}
 	
 	noble_knights = {
@@ -1632,7 +1640,7 @@ aristocracy_ideas = {
 		num_of_pronoiars = 1
 	}
 	international_nobility = {
-		aet_eliteGuards_forceLimit = 0.1
+		aet_eliteGuards_forceLimit = 0.05
 		effect = {
 			aet_eliteGuards_enable_cavalry = yes
 		}
@@ -1681,19 +1689,19 @@ defensive_ideas = {
 	}
 
 	bonus = {
-		hostile_attrition = 5
-		max_hostile_attrition = 5
+		own_territory_dice_roll_bonus = 1
 	}
 
 	battlefield_commisions = {
-		army_tradition_from_battle = 1.0
+		fire_damage_received = -0.05
+		shock_damage_received = -0.05
 	}
 	military_drill = {
 		land_morale = 0.1
 		garrison_damage = 0.33
 	}
 	improved_manuever = {
-		leader_land_manuever = 1
+		movement_speed = 0.1
 	}
 	regimental_system = {
 		land_maintenance_modifier = -0.05
@@ -1701,13 +1709,13 @@ defensive_ideas = {
 	}
 	defensive_mentality = {
 		defensiveness = 0.25
-		attack_bonus_in_capital_terrain = 1
+		fort_maintenance_modifier = -0.1
 	}
 	supply_trains = {
-		reinforce_speed = 0.3
+		global_monthly_devastation = -0.1
 	}
 	improved_foraging = {
-		garrison_size = 0.33
+		garrison_size = 0.5
 		effect = {
 			hidden_effect = {
 				if = {
@@ -1769,7 +1777,7 @@ defensive_ideas = {
 	#}
 	
 	ai_will_do = {
-		factor = 5.25
+		factor = 0.25
 		modifier = {
 			factor = 1.5
 			NOT = { is_year = 1500 }
@@ -1818,6 +1826,7 @@ horde_gov_ideas = {
 	trigger = {
 		
 		OR = {
+			aet_is_debug = yes
 			has_government_attribute = enables_horde_idea_group
 			uses_horde_unity = yes
 		}
@@ -1831,7 +1840,7 @@ horde_gov_ideas = {
 		ae_impact = -0.1
 	}
 	mandate_of_the_khan = {
-		religious_unity = 0.25
+		religious_unity = 0.33
 	}
 	there_shall_be_no_grass = {
 		land_attrition = -0.2
@@ -1846,10 +1855,17 @@ horde_gov_ideas = {
 	}
 	a_magnanimous_empire = {
 		num_accepted_cultures = 2
+
+		effect = {
+			aet_eliteGuards_enable_cavalry = yes
+		}
+		removed_effect = {
+			aet_eliteGuards_disable_cavalry = yes
+		}
 	}
 	
 	ai_will_do = {
-		factor = 1000.0
+		factor = 10000.0
 	}
 }
 
@@ -1920,19 +1936,21 @@ mercenary_ideas = {
 	expanded_contracts = {
 		merc_maintenance_modifier = -0.25
 	}
-	nation_of_war = {
-		mil_tech_cost_modifier = -0.1
-	}
 	benefits_for_mercenaries = {
 		merc_leader_army_tradition = 0.5
 	}
 	seasoned_veterans = {
 		army_tradition_from_battle = 0.5
+		mercs_do_not_cost_army_professionalism = yes # TODO AET: Test this, implement if necessary 
 	}
 	organised_mercenary_recruitment = { 
 		mercenary_manpower = 0.3
 		allow_mercenary_drill = yes
 	}
+	nation_of_war = {
+		possible_condottieri = 1
+		allow_mercenaries_to_split = yes 
+	}	
 
 	ai_will_do = {
 		factor = 0
@@ -1947,37 +1965,40 @@ naval_ideas = {
 	}
 
 	bonus = {
-		global_naval_barrage_cost = -0.8
-		global_naval_engagement_modifier = 0.1
+		is_marine_modifier = yes 
+		discipline = 0.075
+		regiment_manpower_usage = -0.10
+		shock_damage_received = -0.10
 	}
 
-	boarding_parties = {
-		regiment_disembark_speed = 0.5
-		landing_penalty = -2
-	}
 	improved_rams = {
-		hull_size_modifier = 0.1
-		sailors_recovery_speed = 0.25
+		siege_blockade_progress = 1
 	}
 	naval_cadets = {
-		leader_naval_fire = 2
-		max_admiral_fire = 2
+		leader_naval_manuever = 1
+		max_admiral_maneuver = 1
 	}
 	naval_glory = {
-		leader_naval_shock = 2
-		max_admiral_shock = 2
+		navy_tradition = 0.5
 	}
 	professional_marines = {
-		allowed_marine_fraction = 0.25
-	}
-	oak_forests_for_ships = {
-		siege_blockade_progress = 1
-		ship_durability = 0.2
+		sailors_recovery_speed = 0.25
+		allowed_marine_fraction = 0.15
 	}
 	superior_seamanship = {
 		naval_morale = 0.1
 		sunk_ship_morale_hit_recieved = -0.33
+	}	
+	boarding_parties = {
+		regiment_disembark_speed = 0.5
+		landing_penalty = -1 # This means that a combined army of marines and normal troops has no penalty 
+	}	
+	oak_forests_for_ships = {
+		naval_attrition = -0.15
+		transport_attrition = 0.25
+		ship_durability = 0.05
 	}
+
 
 	ai_will_do = {
 		factor = 1.0
@@ -2013,38 +2034,42 @@ offensive_ideas = {
 	}
 
 	bonus = {
-		recover_army_morale_speed = 0.1
+		discipline = 0.05
 		qizilbash_loyalty_modifier = 0.1
 	}
 
 	bayonet_leaders = {
-		leader_land_shock = 1
-		max_general_shock = 1
+		reinforce_speed = 0.15
+		war_taxes_cost_modifier = -1
 	}
 	national_conscripts = {
-		global_regiment_recruit_speed = -0.1
-		max_general_maneuver = 2
+		shock_damage = 0.05
+		fire_damage = 0.05
 	}
 	superior_firepower = {
-		leader_land_fire = 1
-		max_general_fire = 1
+		war_exhaustion = -0.05
 	}
 	glorious_arms = {
-		reinforce_speed = 0.25
+		province_warscore_cost = -0.10
 		num_of_pronoiars = 1
+	}
+	grand_army = {
+		can_claim_states = yes
+		autonomy_change_time = -0.33
+	}
+	napoleonic_warfare = {
+		special_unit_forcelimit = 0.1
+
+		effect = {
+			aet_eliteGuards_enable_infantry = yes
+		}
+		removed_effect = {
+			aet_eliteGuards_disable_infantry = yes
+		}
 	}
 	engineer_corps = {
 		siege_ability = 0.20
 		assault_fort_ability = 0.25
-	}
-	grand_army = {
-		land_forcelimit_modifier = 0.15
-		special_unit_cost_modifier = -0.2
-	}
-	napoleonic_warfare = {
-		discipline = 0.05
-		can_recruit_rajputs = yes
-		allowed_rajput_fraction = 0.2
 	}
 
 	ai_will_do = {
@@ -2084,28 +2109,22 @@ plutocracy_ideas = {
 	category = MIL
 
 	bonus = {
-		global_prov_trade_power_modifier = 0.25
-		burghers_loyalty_modifier = 0.1
-		vaisyas_loyalty_modifier = 0.1
-		burghers_privilege_slots = 1
-		vaisyas_privilege_slots = 1
+		ship_trade_power_modifier = 0.15
+		interest = -0.5		
 	}
 
 	trigger = {
 		
 		OR = {
+			aet_is_debug = yes
 			has_government_attribute = enables_plutocratic_idea_group
 			uses_republican_tradition = yes
 		}
 	}
 
-	tradition_of_payment = {
-		reinforce_cost_modifier = -0.10
-		general_cost = -0.10
-	}
 	abolished_serfdom = {
-		centralize_state_cost = -0.1
-		inflation_action_cost = -0.6
+		development_cost = -0.05
+		inflation_action_cost = -0.5
 	}
 	bill_of_rights = {
 		monthly_reform_progress = 0.1
@@ -2113,18 +2132,31 @@ plutocracy_ideas = {
 	}
 	free_merchants = {
 		merchants = 1
-		mercantilism_cost = -0.5
+		placed_merchant_power = 10
+		placed_merchant_power_modifier = 0.33
 	}
 	free_subjects = {
-		enable_forced_march = yes
-		reelection_cost = -0.2
+		manpower_recovery_speed = 0.15
+		land_morale = 0.05
+		naval_morale = 0.05
 	}
 	free_cities = {
-		caravan_power = 0.25
-		development_cost_modifier = -0.05
+		province_trade_power_modifier = 0.10
+		burghers_privilege_slots = 1
+		burghers_loyalty_modifier = 0.10
 	}
+	tradition_of_payment = {
+		merc_maintenance_modifier = -0.15
+
+		effect = {
+			aet_eliteGuards_enable_artillery = yes
+		}
+
+		removed_effect = {
+			aet_eliteGuards_disable_artillery = yes
+		}
+	}	
 	emancipation = {
-		backrow_artillery_damage = 0.10
 		candidate_random_bonus = 2
 	}
 
@@ -2150,26 +2182,27 @@ quality_ideas = {
 	}
 
 	private_to_marshal = {
-		infantry_power = 0.1
+		infantry_power = 0.075
 	}
 	quality_education = {
 		army_tradition = 0.5
 		navy_tradition = 0.5
 	}
 	finest_of_horses = {
-		cavalry_power = 0.1
+		cavalry_power = 0.075
 	}
 	escort_ships = {
-		ship_durability = 0.05
+		ship_durability = 0.075
 	}
 	naval_drill = {
-		naval_morale = 0.10
+		naval_morale_damage_received = -0.075 # To somewhat justify the loc 
+		morale_damage_received = -0.075
 	}
 	copper_bottoms = {
-		naval_attrition = -0.25
+		free_mil_policy = 1
 	}
 	massed_battery = {
-		artillery_power = 0.1
+		artillery_power = 0.075
 	}
 
 	ai_will_do = {
@@ -2218,25 +2251,28 @@ quantity_ideas = {
 	}
 	mass_army = {
 		global_manpower_modifier = 0.33
+		global_sailors_modifier = 0.20
 		num_of_pronoiars = 1
 	}
 	the_young_can_serve = {
 		manpower_recovery_speed = 0.20
+		sailors_recovery_speed = 0.12
 	}
 	enforced_service = {
 		global_regiment_cost = -0.1
 	}
 	camp_followers = {
-		global_supply_limit_modifier = 0.33
+		global_regiment_recruit_speed = -0.15
 	}
 	reinforcement_drafts = {
-		reinforce_cost_modifier = -0.33
+		recover_army_morale_speed = 0.20
+		recover_navy_morale_speed = 0.12
 	}
 	the_old_and_infirm = {
-		land_maintenance_modifier = -0.05
+		reserves_organisation = 0.25
 	}
 	expanded_supply_trains = {
-		land_attrition = -0.25
+		reinforce_speed = 0.25
 	}
 
 	ai_will_do = {
@@ -2293,6 +2329,7 @@ theocracy_gov_ideas = {
 	trigger = {
 		
 		OR = {
+			aet_is_debug = yes
 			government = theocracy
 			has_government_attribute = enables_divine_idea_group
 			uses_devotion = yes
@@ -2304,33 +2341,200 @@ theocracy_gov_ideas = {
 		legitimacy = 0.5
 		development_cost = -0.05
 	}
-	by_the_grace_of_god = {
-		fire_damage_received = -0.1
-	}
 	friends_in_high_places = {
 		global_religious_conversion_resistance = 0.45
 		relation_with_same_religion = 25
 		reverse_relation_with_same_religion = 25
-	}
-	flesh_is_weak = {
-		morale_damage_received = -0.1
-	}
-	alpha_and_omega = {
-		enforce_religion_cost = -0.5
-	}
+	}	
 	conviction_of_sin = {
-		warscore_cost_vs_other_religion = -0.125
-		global_heathen_missionary_strength = 0.03
+		warscore_cost_vs_other_religion = -0.15
+	}	
+	by_the_grace_of_god = {
+		tolerance_own = 3
 	}
 	martyrs = {
-		manpower_in_true_faith_provinces = 0.1
-		shock_damage_received = -0.1
+		land_morale = 0.025 # TODO AET: Increased to 10% when fighting heretics or heathens 
+	}	
+	flesh_is_weak = {
+		manpower_in_true_faith_provinces = 0.15
+		leader_cost = -0.10
 	}
+	alpha_and_omega = {
+		global_missionary_strength = 0.02
+		church_loyalty_modifier = 0.10
+	}
+
 	ai_will_do = {
 		factor = 1000.0
 		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
+		}
+	}
+}
+
+leadership_ideas = {
+	category = MIL
+	
+	trigger = {
+		OR = {
+			aet_is_debug = yes
+			OR = {
+				army_tradition = 65
+				army_professionalism = 0.2
+				has_country_modifier = aet_ideas_militaryAcademy_0 # TODO AET: Implement decisions system for this 
+			}
+		}
+	}
+
+	leadership_ideas_0 = {
+		leader_land_manuever = 1
+	}
+	leadership_ideas_1 = {
+		leader_naval_shock = 1
+	}	
+	leadership_ideas_2 = {
+		leader_naval_fire = 1
+	}	
+	leadership_ideas_3 = {
+		leader_cost = -0.075
+	}
+	leadership_ideas_4 = {
+		artillery_barrage_cost = -0.125
+		global_naval_barrage_cost = -0.25
+	}	
+	leadership_ideas_5 = {
+		leader_naval_manuever = 1
+	}
+	leadership_ideas_6 = {
+		leader_land_fire = 1
+	}
+
+	bonus = {
+		leader_siege = 1
+		leader_land_shock = 1
+	}	
+
+	ai_will_do = {
+		factor = 5.0
+	}
+}
+
+modernisation_ideas = {
+	category = MIL
+	
+	trigger = {
+		OR = {
+			aet_is_debug = yes
+			OR = {
+				army_professionalism = 0.4
+				mil_tech = 12
+				has_idea = smithian_economics # Full Industrialisation Ideas 
+			}
+			mil_tech = 7 
+		}
+	}
+
+	modernisation_ideas_0 = {
+		infantry_power = 0.075
+	}
+	modernisation_ideas_1 = {
+		artillery_cost = -0.15
+	}	
+	modernisation_ideas_2 = {
+		reinforce_speed = 0.15
+	}	
+	modernisation_ideas_3 = {
+		mil_tech_cost_modifier = -0.10
+	}
+	modernisation_ideas_4 = {
+		artillery_levels_available_vs_fort = 1
+	}	
+	modernisation_ideas_5 = {
+		backrow_artillery_damage = 0.10
+		effect = {
+			aet_eliteGuards_enable_artillery = yes
+		}
+		removed_effect = {
+			aet_eliteGuards_disable_artillery = yes
+		}
+	}
+	modernisation_ideas_6 = {
+		military_tactics = 0.10 # Maybe make this 0.05 per age? 
+	}
+
+	bonus = {
+		yearly_army_professionalism = 0.002
+	}	
+
+	ai_will_do = {
+		factor = 15.0
+	}
+}
+
+militarism_ideas = {
+	category = MIL
+	
+	trigger = {
+
+	}
+
+	militarism_ideas_0 = {
+		army_tradition = 0.5
+		monthly_militarized_society = 0.05
+		monthly_prussian_militarized_society_1 = 0.05
+		monthly_prussian_militarized_society_2 = 0.05
+		monthly_prussian_militarized_society_3 = 0.05
+		monthly_hessian_militarization = 0.10 # What is this? Never seen it before, looks fitting tho. 
+	}
+	militarism_ideas_1 = {
+		assault_fort_ability = 0.25
+		assault_fort_cost_modifier = -0.5 
+	}	
+	militarism_ideas_2 = {
+		drill_decay_modifier = -0.45
+		drill_gain_modifier = 0.25
+	}	
+	militarism_ideas_3 = {
+		army_tradition_decay = -0.5
+	}
+	militarism_ideas_4 = {
+		global_regiment_cost = -0.05
+		effect = {
+			aet_eliteGuards_enable_infantry = yes
+		}
+		effect = {
+			aet_eliteGuards_disable_infantry = yes
+		}
+	}	
+	militarism_ideas_5 = {
+		army_tradition_from_battle = 1
+		effect = {
+			aet_eliteGuards_enable_artillery = yes
+		}
+		removed_effect = {
+			aet_eliteGuards_disable_artillery = yes
+		}
+	}
+	militarism_ideas_6 = {
+		recover_army_morale_speed = 0.15
+		manpower_recovery_speed = 0.05
+	}
+
+	bonus = {
+		discipline = 0.05
+	}	
+
+	ai_will_do = {
+		factor = 5.0
+
+		modifier = {
+			factor = 500.0
+			has_government_mechanic = militarization_mechanic
+			has_government_mechanic = prussian_militarization_mechanic_1
+			has_government_mechanic = prussian_militarization_mechanic_2
+			has_government_mechanic = prussian_militarization_mechanic_3
+			has_government_mechanic = hessian_militarization_mechanic
 		}
 	}
 }

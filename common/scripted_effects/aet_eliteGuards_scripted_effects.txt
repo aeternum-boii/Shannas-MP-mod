@@ -1,3 +1,43 @@
+## "Public" Functions provided by the Elite Guards system
+
+# Enable / Disable Unit Types
+
+# aet_eliteGuards_enable_infantry
+# aet_eliteGuards_enable_cavalry
+# aet_eliteGuards_enable_artillery
+
+# aet_eliteGuards_disable_infantry
+# aet_eliteGuards_disable_cavalry
+# aet_eliteGuards_disable_artillery
+
+# Actions
+
+# aet_eliteGuards_takeFullAction
+# Takes a full action out of the bank.
+
+# aet_eliteGuards_takeHalfAction
+# Takes a half action out of the bank.
+
+# Force Limit
+
+# aet_eliteGuards_increase_FL
+# aet_eliteGuards_reduce_FL
+
+# State Management
+
+# aet_eliteGuards_refreshAll
+# Recalculates and refreshes state.
+
+# aet_eliteGuards_cleanup
+# Removes unused system state.
+
+# Validation / Cost Calculation
+
+# aet_getEliteGuardActionCost
+# Returns the current action cost.
+
+
+
 aet_eliteGuards_enable_infantry = {
 	aet_eliteGuards_initialSetup = {
 		conditional = yes 
@@ -266,64 +306,14 @@ aet_eliteGuards_cleanup = {
 }
 
 aet_eliteGuards_takeFullAction = {
-	if {
-		limit = {
-			NOT = { check_variable = {
-				which = aet_eliteGuards_actions_bank
-				value = 0
-			}}
-		}
-
-		if {
-			limit = {
-				check_variable = {
-					which = aet_eliteGuards_actions_bank
-					value = -1
-				}
-			}
-
-			mil_power_cost = 20
-		} else_if {
-			limit = {
-				check_variable = {
-					which = aet_eliteGuards_actions_bank
-					value = -2
-				}
-			} 
-
-			mil_power_cost = 40
-		} else_if {
-			limit = {
-				check_variable = {
-					which = aet_eliteGuards_actions_bank
-					value = -3
-				}
-			} 
-
-			mil_power_cost = 80
-		} else_if {
-			limit = {
-				check_variable = {
-					which = aet_eliteGuards_actions_bank
-					value = -4
-				}
-			} 
-
-			mil_power_cost = 160
-		} else_if {
-			limit = {
-				check_variable = {
-					which = aet_eliteGuards_actions_bank
-					value = -5
-				}
-			} 
-
-			mil_power_cost = 320
-		} else {
-			mil_power_cost = 600
-		}
-	} 
-
+	aet_getEliteGuardActionCost = {
+		var = aet_cost
+		half = no 
+	}
+	aet_applyVar = {
+		left = mil_power_cost
+		var = aet_cost
+	}
 	subtract_variable = {
 		which = aet_eliteGuards_actions_bank
 		value = 1
@@ -333,12 +323,16 @@ aet_eliteGuards_takeFullAction = {
 aet_eliteGuards_takeHalfAction = {
 	aet_getEliteGuardActionCost = {
 		var = aet_cost
-		half = no 
+		half = yes 
 	}
 	aet_applyVar = {
 		left = mil_power_cost
 		var = aet_cost
 	}
+	subtract_variable = {
+		which = aet_eliteGuards_actions_bank
+		value = 0.5
+	}	
 }
 
 # Returns the military power cost of an elite guard action.*
@@ -347,7 +341,18 @@ aet_eliteGuards_takeHalfAction = {
 # @param half whether this is a half action
 
 aet_getEliteGuardActionCost = {
-	if {
+	if = {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = 1
+			}
+		}
+		set_variable = {
+			which = $var$
+			value = 0
+		}		
+	} else_if = {
 		limit = {
 			check_variable = {
 				which = aet_eliteGuards_actions_bank
@@ -359,7 +364,7 @@ aet_getEliteGuardActionCost = {
 			which = $var$
 			value = 20
 		}
-	} else_if {
+	} else_if = {
 		limit = {
 			check_variable = {
 				which = aet_eliteGuards_actions_bank
@@ -371,7 +376,7 @@ aet_getEliteGuardActionCost = {
 			which = $var$
 			value = 40
 		}
-	} else_if {
+	} else_if = {
 		limit = {
 			check_variable = {
 				which = aet_eliteGuards_actions_bank
@@ -383,7 +388,7 @@ aet_getEliteGuardActionCost = {
 			which = $var$
 			value = 80
 		}
-	} else_if {
+	} else_if = {
 		limit = {
 			check_variable = {
 				which = aet_eliteGuards_actions_bank
@@ -395,7 +400,7 @@ aet_getEliteGuardActionCost = {
 			which = $var$
 			value = 160
 		}
-	} else_if {
+	} else_if = {
 		limit = {
 			check_variable = {
 				which = aet_eliteGuards_actions_bank
@@ -407,7 +412,7 @@ aet_getEliteGuardActionCost = {
 			which = $var$
 			value = 320
 		}
-	} else {
+	} else = {
 		set_variable = {
 			which = $var$
 			value = 600
