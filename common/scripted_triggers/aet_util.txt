@@ -45,3 +45,11 @@ aet_isSmaller = {
 		check_variable = { which = $var$ value = $value$  }
 	}
 }
+
+aet_hasCountryFlag = {
+	aet_applyPrefixed = {
+		var = $var$
+		string = $string$
+		left = has_country_flag 
+	}
+}

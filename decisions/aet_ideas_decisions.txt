@@ -58,4 +58,33 @@ country_decisions = {
 			}
 		}		
 	}
+
+	aet_ideas_exploitationExploitSubject = {
+		potential = {
+			has_idea_group = exploitation_ideas
+		}
+
+		allow = {
+			exploitation_ideas = 7 
+			any_subject_country = {
+				is_colonial_nation = yes 
+				NOT = {
+					has_country_modifier = aet_ideas_exploitedSubject_2
+					liberty_desire = 75
+				}
+			}
+
+			NOT = {
+				has_country_modifier = aet_ideas_recentlyExploitedSubject
+			}
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_exploitationExploitSubject_tt
+			country_event = {
+				id = aet_ideas.3
+			}
+		}		
+	}	
 }

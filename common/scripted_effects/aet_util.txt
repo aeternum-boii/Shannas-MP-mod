@@ -44,3 +44,124 @@ aet_getCurrentDateOffset = {
 	}
 }
 
+
+# Provides a way to dynamically generate event target names with a number prefix 
+# @param string the string for the event target
+# @param return the return variable 
+# @see aet_executeInEventTarget
+# @see aet_clearGlobalEventTarget
+aet_saveGlobalEventTarget = {
+	aet_applyPrefixed = {
+		var = aet_util_globalEventTargetCounter
+		string = $string$
+		left = save_global_event_target_as
+	}
+	set_variable = {
+		which = $return$
+		which = aet_util_globalEventTargetCounter
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				which = aet_util_globalEventTargetCounter
+				value = 4096
+			}
+		}
+		set_variable = {
+			which = aet_util_globalEventTargetCounter
+			value = -4097
+		}
+		log = aet_saveGlobalEventTarget_overflow # In reality harmless, as usually dynamic event targets don't persist that long 
+	}
+
+	change_variable = {
+		which = aet_util_globalEventTargetCounter
+		value = 1
+	}
+}
+
+# Provides a way to dynamically generate event target names with a number prefix 
+# @param string the string for the event target
+# @param var the prefix variable 
+# @see aet_executeInEventTarget
+# @see aet_clearGlobalEventTarget
+aet_saveGlobalEventTargetNR = {
+	aet_applyPrefixed = {
+		var = $var$
+		string = $string$
+		left = save_global_event_target_as
+	}
+}
+
+aet_clearGlobalEventTarget = {
+	aet_applyPrefixed = {
+		var = $var$
+		string = $string$
+		left = clear_global_event_target
+	}
+}
+
+aet_setCountryFlag = {
+	aet_applyPrefixed = {
+		var = $var$
+		string = $string$
+		left = set_country_flag
+	}
+}
+
+aet_clearCountryFlag = {
+	aet_applyPrefixed = {
+		var = $var$
+		string = $string$
+		left = clr_country_flag
+	}
+}
+
+#Country effect
+# Copy of transfer_treasury without the giver (so FROM = { FROM = {}} bs is not necessary)
+#Make sure to make your own custom tooltip for it because parameters can't be given as input. Sadly. 
+aet_transfer_treasury = {
+	#custom_tooltip = transfer_treasury_tt	#Transfer §Y[$giver$.$variable$.GetValue]§! Ducats to $Y[$taker$.GetName]§!.
+	hidden_effect = {
+			while = {
+				limit = {
+					check_variable = {
+						which = $variable$
+						value = 1
+					}
+				}
+				$taker$ = {
+					add_treasury = 1
+				}
+				add_treasury = -1
+				subtract_variable = {
+					which = $variable$
+					value = 1
+				}
+			}
+			multiply_variable = {
+				which = $variable$
+				value = 100
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = $variable$
+						value = 1
+					}
+				}
+				$taker$ = {
+					add_treasury = 0.01
+				}
+				add_treasury = -0.01
+				subtract_variable = {
+					which = $variable$
+					value = 1
+				}
+			}
+	}
+	[[custom_tooltip]
+		custom_tooltip = $custom_tooltip$
+	]
+}

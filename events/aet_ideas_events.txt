@@ -27,3 +27,891 @@ country_event = {
 		}		
 	}
 }
+
+country_event = {
+	id = aet_ideas.2
+
+	is_triggered_only = yes 
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	
+	option = {
+		name = aet_ideas.2.a
+		ai_chance = { factor = 1 }
+		
+		every_subject_country = {
+			every_owned_province = {
+				if = {
+					limit = {
+						aet_ideas_hasExploitationModifier = yes 
+					}
+					ROOT = {
+						adm_power_cost = 6
+						dip_power_cost = 6
+					}
+				}
+			}
+		}		
+	}
+	option = {
+		name = aet_ideas.2.b
+		ai_chance = { factor = 1 }
+		
+		every_subject_country = {
+			every_owned_province = {
+				aet_ideas_clearExploitationModifiersProvince = yes 
+			}
+		}			
+	}	
+}
+
+country_event = {
+	id = aet_ideas.3
+
+	is_triggered_only = yes 
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = aet_ideas_3_initiated }
+			}
+			set_country_flag = aet_ideas_3_initiated
+		
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+					NOT = {
+						liberty_desire = 75 
+						has_country_modifier = aet_ideas_exploitedSubject_2
+					}
+				}
+
+				set_country_flag = aet_ideas_3_eventFlag
+			}
+		}
+
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					has_country_flag = aet_ideas_3_eventFlag
+				}
+
+				clr_country_flag = aet_ideas_3_eventFlag
+				save_event_target_as = aet_ideas_3_a_target 
+
+				hidden_effect = {
+					export_to_variable = {
+						which = aet_ideas_ducatsTransfer_a
+						value = monthly_income
+					}
+					multiply_variable = {
+						which = aet_ideas_ducatsTransfer_a
+						value = 6
+					}			
+					
+					export_to_variable = {
+						which = aet_temp 
+						value = modifier:global_tariffs
+						who = ROOT
+					}
+					change_variable = {
+						which = aet_temp
+						value = 1
+					}
+					multiply_variable = {
+						which = aet_ideas_ducatsTransfer_a
+						which = aet_temp
+					}				
+				}
+
+				ROOT = { set_country_flag = aet_ideas_3_opt1Set }
+
+				log = "[This.GetName]: Ducats to be transfered [This.aet_ideas_ducatsTransfer_a.GetValue]"
+			}
+			random_subject_country = {
+				limit = {
+					has_country_flag = aet_ideas_3_eventFlag
+				}
+
+				clr_country_flag = aet_ideas_3_eventFlag
+				save_event_target_as = aet_ideas_3_b_target 
+
+				hidden_effect = {
+					export_to_variable = {
+						which = aet_ideas_ducatsTransfer_b
+						value = monthly_income
+					}
+					multiply_variable = {
+						which = aet_ideas_ducatsTransfer_b
+						value = 6
+					}			
+					
+					export_to_variable = {
+						which = aet_temp 
+						value = modifier:global_tariffs
+						who = ROOT
+					}
+					change_variable = {
+						which = aet_temp
+						value = 1
+					}
+					multiply_variable = {
+						which = aet_ideas_ducatsTransfer_b
+						which = aet_temp
+					}				
+				}
+
+				ROOT = { set_country_flag = aet_ideas_3_opt2Set }
+
+				log = "[This.GetName]: Ducats to be transfered [This.aet_ideas_ducatsTransfer_b.GetValue]"
+			}		
+		}
+	}
+
+
+	option = {
+		name = aet_ideas.3.a 
+
+		trigger = {
+			has_country_flag = aet_ideas_3_opt1Set
+		}
+
+		add_country_modifier = {
+			name = aet_ideas_recentlyExploitedSubject
+			duration = 360
+		}
+
+		event_target:aet_ideas_3_a_target = {
+			if = {
+				limit = {
+					has_country_modifier = aet_ideas_exploitedSubject_1
+				}
+				remove_country_modifier = aet_ideas_exploitedSubject_1
+				add_country_modifier = {
+					name = aet_ideas_exploitedSubject_2
+					duration = 3600
+				}
+			} else_if = {
+				limit = {
+					has_country_modifier = aet_ideas_exploitedSubject_0
+				}
+				remove_country_modifier = aet_ideas_exploitedSubject_0
+				add_country_modifier = {
+					name = aet_ideas_exploitedSubject_1
+					duration = 1800
+				}		
+			} else = {
+				add_country_modifier = {
+					name = aet_ideas_exploitedSubject_0
+					duration = 1800
+				}
+			}			
+
+			aet_transfer_treasury = {
+				taker = PREV 
+				variable = aet_ideas_ducatsTransfer_a
+				custom_tooltip = "[Prev.GetName] will receive [This.aet_ideas_ducatsTransfer_a.GetValue] from [This.GetNaem]"
+			}
+		}
+
+		every_subject_country = {
+			limit = {
+				has_country_flag = aet_ideas_3_eventFlag
+			}
+			clr_country_flag = aet_ideas_3_eventFlag
+		}
+
+		#hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+					OR = {
+						has_country_modifier = aet_ideas_exploitedSubject_1
+						has_country_modifier = aet_ideas_exploitedSubject_2
+					}
+					liberty_desire = 65
+				}
+
+				random_list = {
+					20 = {
+						trigger = {
+							NOT = {
+								liberty_desire = 75
+							}
+						}
+					}
+					20 = {
+						trigger = {
+							NOT = {
+								liberty_desire = 85
+							}
+						}						
+						add_liberty_desire = 15
+					}
+					20 = {
+						trigger = {
+							NOT = {
+								liberty_desire = 100
+							}
+						}						
+						add_liberty_desire = 5
+						create_unit_forcelimit_percentage = {
+							type = infantry
+							force_limit_percentage = 0.15
+						}				
+					}
+					20 = {
+						add_liberty_desire = 15
+						create_unit_forcelimit_percentage = {
+							type = infantry
+							force_limit_percentage = 0.25
+						}				
+					}
+					20 = {
+						trigger = {
+							liberty_desire = 75 
+						}
+						modifier = {
+							factor = 5.0
+							liberty_desire = 100
+						}
+
+						country_event = {
+							id = aet_ideas.4
+							days = 3 
+						}						
+					}
+				}
+			}
+		#}	
+
+		clr_country_flag = aet_ideas_3_initiated
+	}
+
+	option = {
+		name = aet_ideas.3.b
+
+		trigger = {
+			has_country_flag = aet_ideas_3_opt2Set
+		}		
+
+		add_country_modifier = {
+			name = aet_ideas_recentlyExploitedSubject
+			duration = 360
+		}
+
+		event_target:aet_ideas_3_b_target = {
+			if = {
+				limit = {
+					has_country_modifier = aet_ideas_exploitedSubject_1
+				}
+				remove_country_modifier = aet_ideas_exploitedSubject_1
+				add_country_modifier = {
+					name = aet_ideas_exploitedSubject_2
+					duration = 3600
+				}
+			} else_if = {
+				limit = {
+					has_country_modifier = aet_ideas_exploitedSubject_0
+				}
+				remove_country_modifier = aet_ideas_exploitedSubject_0
+				add_country_modifier = {
+					name = aet_ideas_exploitedSubject_1
+					duration = 1800
+				}		
+			} else = {
+				add_country_modifier = {
+					name = aet_ideas_exploitedSubject_0
+					duration = 1800
+				}
+			}			
+
+			aet_transfer_treasury = {
+				taker = PREV 
+				variable = aet_ideas_ducatsTransfer_b
+				custom_tooltip = "[Prev.GetName] will receive [This.aet_ideas_ducatsTransfer_b.GetValue] from [This.GetNaem]"
+			}
+		}
+
+		every_subject_country = {
+			limit = {
+				has_country_flag = aet_ideas_3_eventFlag
+			}
+			clr_country_flag = aet_ideas_3_eventFlag
+		}		
+
+		#hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+					OR = {
+						has_country_modifier = aet_ideas_exploitedSubject_1
+						has_country_modifier = aet_ideas_exploitedSubject_2
+					}
+					liberty_desire = 65
+				}
+
+				random_list = {
+					20 = {
+						trigger = {
+							NOT = {
+								liberty_desire = 75
+							}
+						}
+					}
+					20 = {
+						trigger = {
+							NOT = {
+								liberty_desire = 85
+							}
+						}						
+						add_liberty_desire = 15
+					}
+					20 = {
+						trigger = {
+							NOT = {
+								liberty_desire = 100
+							}
+						}						
+						add_liberty_desire = 5
+						create_unit_forcelimit_percentage = {
+							type = infantry
+							force_limit_percentage = 0.15
+						}				
+					}
+					20 = {
+						add_liberty_desire = 15
+						create_unit_forcelimit_percentage = {
+							type = infantry
+							force_limit_percentage = 0.25
+						}				
+					}
+					20 = {
+						trigger = {
+							liberty_desire = 75 
+						}
+						modifier = {
+							factor = 5.0
+							liberty_desire = 100
+						}
+
+						country_event = {
+							id = aet_ideas.4
+							days = 3 
+						}						
+					}
+				}
+			}
+		#}		
+		
+		
+		clr_country_flag = aet_ideas_3_initiated
+	}	
+
+	option = {
+		name = aet_ideas.3.c
+
+		country_event = {
+			id = aet_ideas.3
+			days = 1
+		}
+	}
+
+	option = {
+		name = aet_ideas.3.d
+
+		every_subject_country = {
+			limit = {
+				has_country_flag = aet_ideas_3_eventFlag
+			}
+			clr_country_flag = aet_ideas_3_eventFlag
+		}
+
+		clr_country_flag = aet_ideas_3_initiated
+	}
+
+	after = {
+		clr_country_flag = aet_ideas_3_opt1Set
+		clr_country_flag = aet_ideas_3_opt2Set
+	}
+}
+
+country_event = {
+	id = aet_ideas.4
+
+	is_triggered_only = yes 
+
+	trigger = {
+		liberty_desire = 65
+	}
+
+	option = { # Let us prepare for war immediately 
+		name = aet_ideas.4.a
+
+		overlord = {
+			country_event = {
+				id = aet_ideas.5
+				days = 3
+			}
+		}
+		country_event = {
+			id = aet_ideas.6
+			days = 30
+		}
+
+		add_liberty_desire = 15
+		create_unit_forcelimit_percentage = {
+			type = infantry
+			force_limit_percentage = 0.25
+		}	
+		create_unit_forcelimit_percentage = {
+			type = cavalry
+			force_limit_percentage = 0.10
+		}								
+		create_unit_forcelimit_percentage = {
+			type = artillery
+			force_limit_percentage = 0.05
+		}		
+		create_unit_forcelimit_percentage = {
+			type = heavy_ship
+			special_unit_category = man_of_war
+			force_limit_percentage = 0.05
+		}	
+	}
+
+	option = { # Let us bide our time and instigate our fellow colonies 
+		name = aet_ideas.4.b
+
+		overlord = {
+			country_event = {
+				id = aet_ideas.5
+				days = 3
+			}
+		}
+		country_event = {
+			id = aet_ideas.6
+			days = 365
+		}
+
+		overlord = {
+			every_subject_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+					liberty_desire = 30
+					is_colonial_nation = yes 
+				}
+
+				random_list = {
+					50 = {
+						trigger = {
+							NOT = {
+								liberty_desire = 65 
+							}
+						}
+
+						modifier = {
+							factor = 0.5
+							liberty_desire = 40
+						}
+						modifier = {
+							factor = 0.5
+							liberty_desire = 50
+						}						
+					}
+
+					10 = {
+						trigger = {
+							liberty_desire = 65
+						}
+						modifier = {
+							factor = 3.5
+							liberty_desire = 100
+						}
+
+						country_event = {
+							id = aet_ideas.4
+							days = 3
+						}
+					}
+
+					10 = {
+						add_liberty_desire = 5
+					}
+
+					20 = {
+						add_liberty_desire = 15
+					}
+				}
+			}
+		}
+	}
+
+	option = { # let us slow down 
+		name = aet_ideas.4.c
+
+		add_liberty_desire = -50
+		add_stability = -1
+
+		add_country_modifier = {
+			name = aet_ideas_gullibleSubject
+			duration = 1800
+		}
+
+		overlord = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+				}
+				add_liberty_desire = -5
+			}
+		}
+	}	
+}
+
+country_event = { # Warning for overlord 
+	id = aet_ideas.5
+
+	is_triggered_only = yes 
+
+	option = {
+		name = aet_ideas.5.a
+	}
+}
+
+country_event = {
+	id = aet_ideas.6
+
+	is_triggered_only = yes 
+
+	trigger = {
+		liberty_desire = 75
+	}
+
+
+	option = { # Send our demands to the overlord 
+		name = aet_ideas.6.a
+
+		overlord = {
+			country_event = {
+				id = aet_ideas.7
+				days = 3
+			}
+		}
+
+		tooltip = {
+
+		}
+	}
+
+	option = { # Back down
+		name = aet_ideas.6.b
+
+		add_stability = -3 
+		add_liberty_desire = -100
+		add_country_modifier = {
+			name = aet_ideas_gullibleSubject
+			duration = 1800
+		}
+
+		every_country = {
+			limit = {
+				alliance_with = PREV 
+			}
+
+			PREV = { break_alliance = PREV }
+			add_opinion = {
+				who = PREV 
+				years = 20
+				modifier = break_alliance
+				multiplier = 10
+			}
+		}
+	}	
+}
+
+country_event = {
+	id = aet_ideas.7
+
+	is_triggered_only = yes 
+
+	option = { # Give in to their demands
+		name = aet_ideas.7.a
+		goto = FROM
+
+		adm_power_cost = 50 
+		hidden_effect = { FROM = { grant_independence = yes } }
+		create_subject = {
+			subject_type = aet_dominion
+			subject = FROM 
+		}
+	}
+
+	option = { # Let them try! 
+		name = aet_ideas.7.b
+		goto = FROM
+
+		FROM = {
+			declare_war_with_cb = {
+				casus_belli = cb_colonial_independence_war
+				who = ROOT
+			}
+		}
+
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes 
+				liberty_desire = 65
+			}
+
+			white_peace = FROM 
+			create_alliance = FROM 
+			create_unit_forcelimit_percentage = {
+				type = infantry
+				force_limit_percentage = 0.15
+			}	
+			join_all_offensive_wars_of = FROM 
+		}
+	}	
+}
+
+#country_event = { # This concept works quite well, but it does need a LOT of time during startup (like good 10 minutes)
+#	id = aet_ideas.3
+#
+#	is_triggered_only = yes 
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_country_flag = aet_ideas.3
+#				}
+#			}
+#
+#			set_country_flag = aet_ideas.3
+#
+#			set_variable = {
+#				which = aet_ideas.3_eventTargetId
+#				value = 0 
+#			}			
+#			aet_saveGlobalEventTarget = {
+#				string = aet_ideas.3_getter
+#				return = aet_ideas.3_eventTargetId
+#			}
+#			aet_clearGlobalEventTarget = {
+#				string = aet_ideas.3_getter
+#				var = aet_ideas.3_eventTargetId				
+#			}
+#		}
+#
+#		aet_ideas_3_selection = { num = 0 }
+#		aet_ideas_3_selection = { num = 1 }
+#		aet_ideas_3_selection = { num = 2 }
+#		aet_ideas_3_selection = { num = 3 }	
+#	}
+#
+#	option = {
+#		name = aet_ideas.3.a
+#		trigger = {
+#			has_country_flag = aet_ideas.3_hasOption0
+#		}
+#
+#		aet_ideas_3_effect = { num = 0 }
+#		aet_ideas_3_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#
+#	option = {
+#		name = aet_ideas.3.b
+#		trigger = {
+#			has_country_flag = aet_ideas.3_hasOption1
+#		}
+#
+#		aet_ideas_3_effect = { num = 1 }
+#		aet_ideas_3_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#	
+#	option = {
+#		name = aet_ideas.3.c
+#		trigger = {
+#			has_country_flag = aet_ideas.3_hasOption2
+#		}
+#
+#		aet_ideas_3_effect = { num = 2 }
+#		aet_ideas_3_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#	
+#	option = {
+#		name = aet_ideas.3.d
+#		trigger = {
+#			has_country_flag = aet_ideas.3_hasOption3
+#		}
+#
+#		aet_ideas_3_effect = { num = 3 }
+#		aet_ideas_3_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}	
+#
+#	option = {
+#		name = aet_ideas.3.e
+#
+#		country_event = {
+#			id = aet_ideas.3
+#		}
+#		aet_ideas_3_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#
+#	after = {
+#		aet_ideas_3_clearTargets = yes 
+#	}
+#}
+
+
+# Template Events 
+#country_event = {
+#	id = aet_ideas.z.0
+#
+#	is_triggered_only = yes 
+#
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_country_flag = aet_ideas.z.0
+#				}
+#			}
+#
+#			set_country_flag = aet_ideas.z.0
+#
+#			set_variable = {
+#				which = aet_ideas.z.0_eventTargetId
+#				value = 0 
+#			}			
+#			aet_saveGlobalEventTarget = {
+#				string = aet_ideas.z.0_getter
+#				return = aet_ideas.z.0_eventTargetId
+#			}
+#			aet_clearGlobalEventTarget = {
+#				string = aet_ideas.z.0_getter
+#				var = aet_ideas.z.0_eventTargetId				
+#			}
+#		}
+#
+#		aet_ideas.z.0_selection = { num = 0 }
+#		aet_ideas.z.0_selection = { num = 1 }
+#		aet_ideas.z.0_selection = { num = 2 }
+#		aet_ideas.z.0_selection = { num = 3 }	
+#	}
+#
+#	option = {
+#		name = aet_ideas.z.0.a
+#		trigger = {
+#			has_country_flag = aet_ideas.z.0_hasOption0
+#		}
+#
+#		aet_ideas.z.0_effect = { num = 0 }
+#		aet_ideas.z.0_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}
+#	}
+#
+#	option = {
+#		name = aet_ideas.z.0.b
+#		trigger = {
+#			has_country_flag = aet_ideas.z.0_hasOption1
+#		}
+#
+#		aet_ideas.z.0_effect = { num = 1 }
+#		aet_ideas.z.0_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#	
+#	option = {
+#		name = aet_ideas.z.0.c
+#		trigger = {
+#			has_country_flag = aet_ideas.z.0_hasOption2
+#		}
+#
+#		aet_ideas.z.0_effect = { num = 2 }
+#		aet_ideas.z.0_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#	
+#	option = {
+#		name = aet_ideas.z.0.d
+#		trigger = {
+#			has_country_flag = aet_ideas.z.0_hasOption3
+#		}
+#
+#		aet_ideas.z.0_effect = { num = 3 }
+#		aet_ideas.z.0_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}	
+#
+#	option = {
+#		name = aet_ideas.z.0.e
+#
+#		#country_event = {
+#		#	id = aet_ideas.z.0
+#		#}
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#
+#	option = {
+#		name = aet_ideas.z.0.f
+#
+#		aet_ideas.z.0_cleanup = yes 
+#
+#		ai_chance = {
+#			factor = 1.0 
+#		}		
+#	}
+#
+#	after = {
+#		aet_ideas.z.0_clearTargets = yes 
+#	}
+#}

@@ -882,7 +882,10 @@ offer_protectorate = {
 	alert_tooltip = offer_protectorate_alert_tooltip
 
 	is_visible = {
-		has_government_attribute = can_establish_trade_protectorates
+			OR = {
+				has_government_attribute = can_establish_trade_protectorates 
+				has_country_flag = can_establish_trade_protectorates_flag 
+			}
 		is_subject = no
 		FROM = { is_subject = no }
 	}
@@ -1298,7 +1301,7 @@ request_protectorate = {
 	is_visible = {
 		FROM = { 
 			OR = {
-				has_government_attribute = can_establish_trade_protectorates 
+				has_government_attribute = can_establish_trade_protectorates
 				has_country_flag = can_establish_trade_protectorates_flag 
 			}
 		}

@@ -94,15 +94,7 @@ country_decisions = {
 		}
 
 		effect = {
-			set_variable = {
-				which = aet_temp
-				value = 20
-			}
 
-			aet_applyVar = {
-				left = log
-				var = aet_temp
-			}
 		}
-	}
+	}	
 }

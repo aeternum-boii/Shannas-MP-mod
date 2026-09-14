@@ -94,21 +94,3 @@ aet_applyPrefixed = {
 		$left$ = 4096_$string$
 	}	
 }
-
-# Executes an effect in an event_target: prefix_string 
-# @param var the variable holding the prefix value -4096 < var < 4096
-# @param action the scripted effect that is executed 
-# @param string the postfix of the event_target 
-aet_executeInEventTarget = {
-	# See Actual Implementation in aet_util.generated.txt
-
-	if = {
-		limit = {
-			check_variable = {
-				which = $var$
-				value = 0
-			}
-		}
-		event_target:4096_$string$ = { $action$ = yes }
-	}	
-}
