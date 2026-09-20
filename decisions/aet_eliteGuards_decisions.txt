@@ -1,0 +1,359 @@
+country_decisions = {
+	aet_eliteGuards_hideAll= {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes
+		}
+
+		allow = {
+			
+		}
+
+		effect = {
+			set_country_flag = aet_eliteGuards_hideDecisions
+		}
+	}
+	aet_eliteGuards_showAll= {
+		potential = {
+			aet_eliteGuards_anyEnabled = yes
+			has_country_flag = aet_eliteGuards_hideDecisions
+		}
+
+		allow = {
+			
+		}
+
+		effect = {
+			clr_country_flag = aet_eliteGuards_hideDecisions
+		}
+	}	
+	aet_eliteGuards_preloadActionCosts = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes
+		}
+
+		allow = {
+			
+		}
+
+		effect = {
+			aet_eliteGuards_preloadActionCosts = yes
+		}
+	}
+	aet_eliteGuards_increaseFL = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes
+		}
+
+		allow = {
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_halfcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuardsFL_39
+			}
+		}
+
+		effect = {
+			aet_eliteGuards_takeHalfAction = yes
+			aet_eliteGuards_increase_FL = yes
+		}
+	}
+
+	aet_eliteGuards_decreaseFL = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes
+		}
+
+		allow = {
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_halfcost
+			}			
+			NOT = {
+				has_country_modifier = aet_eliteGuardsFL_0
+			}
+		}
+
+		effect = {
+			aet_eliteGuards_takeHalfAction = yes
+			aet_eliteGuards_reduce_FL = yes
+		}
+	}
+
+	aet_eliteGuards_HeavyCav = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+			}				
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_cav_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = {
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			}
+			aet_eliteGuard_heavyCavPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_heavyCavalry_specialisation
+				duration = -1
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_heavyCavalry_specialisation_country
+				duration = -1
+			}
+		}
+	}
+	aet_eliteGuards_HeavyCav_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+		}
+		
+		allow = {
+
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+			remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation_country
+		}
+	}
+
+
+	aet_eliteGuards_LightCav = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+			}				
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_cav_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			}
+			aet_eliteGuard_lightCavPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_lightCavalry_specialisation
+				duration = -1
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_lightCavalry_country
+				duration = -1
+			}
+		}
+	}
+
+	aet_eliteGuards_LightCavCossack = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_lightCavalryCossack_specialisation
+			}				
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_cav_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+			aet_eliteGuard_lightCavCossackPersistentRequirements = yes 
+			cossacks_percentage = 0.20
+			estate_influence = {
+				estate = estate_cossacks
+				influence = 0.6
+			}
+			estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 0.6
+			}
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_lightCavalryCossack_specialisation
+				duration = -1
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_lightCavalryCossack_country
+				duration = -1
+			}
+		}
+	}
+
+	aet_eliteGuards_LightCav_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+		}
+		
+		allow = {
+
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+			remove_country_modifier = aet_eliteGuards_lightCavalry_country
+		}
+	}	
+
+	aet_eliteGuards_HorseArchers = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			}			
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_cav_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			}
+			aet_eliteGuard_cavArcherPersistentRequirements = yes 			
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_horseArcher_specialisation
+				duration = -1
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_horseArcher_country
+				duration = -1
+			}			
+		}
+	}
+
+	aet_eliteGuards_HorseArchers_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+		}
+		
+		allow = {
+
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			remove_country_modifier = aet_eliteGuards_horseArcher_country
+			remove_country_modifier = aet_eliteGuards_horseArcher_horde
+			remove_country_modifier = aet_eliteGuards_horseArcher_horde_country
+		}
+	}	
+
+	aet_eliteGuards_HorseArchers_nomadic = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_horseArcher_horde
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_cav_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			NOT = {
+				has_country_modifier = aet_eliteGuards_horseArcher_horde
+			}
+			aet_eliteGuard_cavArcherNomadPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_horseArcher_horde
+				duration = -1
+			}
+
+			add_country_modifier = {
+				name = aet_eliteGuards_horseArcher_horde_country
+				duration = -1
+			}			
+		}
+	}
+}

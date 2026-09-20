@@ -38,7 +38,7 @@ RB_CorruptState = {
 	stability_cost_modifier = 0.75 
 }
 
-RB_ClampDiscovery = {
+RB_ClampDiscovery = { # This should all be on_new_age 
 	potential = {
 		current_age = age_of_discovery
 	}
@@ -78,7 +78,7 @@ RB_ClampRevolutions = {
 	governing_capacity_modifier = 0.1
 }
 
-RB_MissionToCivilize = {
+RB_MissionToCivilize = { # why isn't this a subject modifier 
 	potential = {
 		is_colonial_nation = yes
 	}

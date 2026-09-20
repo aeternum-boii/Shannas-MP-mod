@@ -1,0 +1,119 @@
+aet_dominion = {}
+
+aet_dominion = {
+	copy_from = colony
+    sprite = GFX_icon_diplomacy_am_integrated_personal_union_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_integrated_personal_union_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_integrated_personal_union_subject_type
+
+	change_colonial_type = no
+	upgrade_subject_type = yes
+	is_colony_subtype = yes
+	count = colony
+
+	# Properties:
+	can_release_in_peace = yes
+	transfer_trade_power = no
+	can_concentrate_development = no
+	extend_trading_range = no
+	can_have_subjects_of_other_types = yes
+	does_overlord_size_count_for_warscore_cost = no
+	joins_overlords_wars = no
+	joins_colonial_wars = yes	
+	can_be_co_belligerented = yes
+	separatists_become_subjects = yes 
+	can_have_great_projects_moved_by_overlord = no 
+	overlord_protects_external = yes 
+
+	relative_power_class = 20
+	base_liberty_desire = -10
+	liberty_desire_development_ratio = 0.025
+	liberty_desire_negative_prestige = 0.25
+	opinion_on_subject_integration = 0
+	max_government_rank = 2
+	cities_required_for_bonuses = 10
+
+
+	forcelimit_to_overlord = 0.001
+	manpower_to_overlord = 0.001
+	naval_forcelimit_to_overlord = 0.001
+	sailors_to_overlord = 0.001
+
+	# Subject Interactions:
+	replace_governor = no
+	block_settlement_growth = no
+	allow_settlement_growth = no
+	press_sailors = no
+	enforce_culture = no
+	send_officers = yes
+	
+	# Modifiers:	
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = aet_dominion_overlordModifier
+	}
+	
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = aet_dominion_subjectModifier
+	}
+
+	can_fight = {
+		same_overlord = colony
+		same_overlord = crown_colony
+		same_overlord = private_enterprise
+		same_overlord = self_governing_colony
+		other_overlord = all
+		neighboring_primitives = yes
+		colonial_region_nations = yes
+		independent_nations = yes 
+	}
+	can_rival = {
+		same_overlord = colony
+		same_overlord = crown_colony
+		same_overlord = private_enterprise
+		same_overlord = self_governing_colony
+		other_overlord = all
+		neighboring_primitives = yes
+		colonial_region_nations = yes
+		independent_nations = yes
+	}
+	can_ally = {
+		same_overlord = colony
+		same_overlord = crown_colony
+		same_overlord = private_enterprise
+		same_overlord = self_governing_colony
+		other_overlord = all		
+		neighboring_primitives = yes
+		independent_nations = yes
+	}	
+}
+
+colony = {
+	modifier_subject = {
+		modifier = aet_ideas_exploitationSubject_0
+		trigger = {
+			overlord = { 
+				exploitation_ideas = 3 
+				NOT = { exploitation_ideas = 6 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = aet_ideas_exploitationSubject_1
+		trigger = {
+			overlord = { 
+				exploitation_ideas = 6 
+				NOT = { exploitation_ideas = 7 }
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = aet_ideas_exploitationSubject_2
+		trigger = {
+			overlord = { 
+				exploitation_ideas = 7 
+			}
+		}
+	}		
+}

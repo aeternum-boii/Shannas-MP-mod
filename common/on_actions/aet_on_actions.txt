@@ -19,3 +19,87 @@ on_monthly_pulse = {
 		days = 22
 	}
 }
+
+on_yearly_pulse = {
+	if = {
+		limit = {
+			has_country_flag = aet_eliteGuards_commonSetupDone
+			NOT = { check_variable = {
+				which = aet_eliteGuards_actions_bank
+				value = 5
+			}}
+		}
+
+		change_variable = {
+			which = aet_eliteGuards_actions_bank
+			value = 1 
+		}
+	}
+}
+
+on_five_year_pulse = {
+	if = {
+		limit = {
+			aet_eliteGuards_anyEnabled = yes 
+		}
+		aet_eliteGuards_refreshAll = yes 
+	}
+	aet_ideas_refreshModifiers = yes 
+}
+
+on_bankruptcy = {
+	events = {
+		aet_ideas.1
+	}
+}
+
+on_colonial_liberation = {
+		if = {
+			limit = {
+				has_country_modifier = aet_ideas_exploitedSubject_0
+			}
+			set_country_flag = aet_ideas_exploitedSubject_0
+		} else_if = {
+			limit = {
+				has_country_modifier = aet_ideas_exploitedSubject_1
+			}
+			set_country_flag = aet_ideas_exploitedSubject_1
+		} else_if = {
+			limit = {
+				has_country_modifier = aet_ideas_exploitedSubject_2
+			}
+			set_country_flag = aet_ideas_exploitedSubject_2
+		}
+
+		aet_ideas_clearExploitationModifiers = yes 
+
+		# Mainly to keep the buffs in any potential wars 
+		if = {
+			limit = {
+				has_country_flag = aet_ideas_exploitedSubject_0
+			}
+			clr_country_flag = aet_ideas_exploitedSubject_0
+			add_country_modifier = {
+				name = aet_ideas_exploitedSubject_0
+				duration = 1800
+			}
+		} else_if = {
+			limit = {
+				has_country_flag = aet_ideas_exploitedSubject_1
+			}
+			clr_country_flag = aet_ideas_exploitedSubject_1
+			add_country_modifier = {
+				name = aet_ideas_exploitedSubject_1
+				duration = 1800
+			}			
+		} else_if = {
+			limit = {
+				has_country_flag = aet_ideas_exploitedSubject_2
+			}
+			clr_country_flag = aet_ideas_exploitedSubject_2
+			add_country_modifier = {
+				name = aet_ideas_exploitedSubject_2
+				duration = 1800
+			}			
+		}
+}

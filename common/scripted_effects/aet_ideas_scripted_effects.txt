@@ -1,0 +1,283 @@
+aet_ideas_refreshModifiers = {
+	if = {
+		limit = {
+			has_idea_group = exploitation_ideas 
+		}
+		aet_ideas_applyBaseExploitationModifier = yes 
+	}
+}
+aet_ideas_clearExploitationModifiers = {
+	country_event = {
+		id = aet_ideas.2
+		days = 1
+	}
+	remove_country_modifier = aet_ideas_exploitationSubject_0
+	remove_country_modifier = aet_ideas_exploitationSubject_1
+	remove_country_modifier = aet_ideas_exploitationSubject_2
+	remove_country_modifier = aet_ideas_exploitedSubject_0
+	remove_country_modifier = aet_ideas_exploitedSubject_1
+	remove_country_modifier = aet_ideas_exploitedSubject_2
+}
+aet_ideas_clearExploitationModifiersProvince = {
+
+}
+aet_ideas_applyBaseExploitationModifier = {
+	if = {
+		limit = {
+			exploitation_ideas = 7 
+		}
+
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes
+				NOT = { has_country_modifier = aet_ideas_exploitationSubject_2 }
+			}
+			add_country_modifier = {
+				name = aet_ideas_exploitationSubject_2
+				duration = -1
+			}
+		}
+	} else_if = {
+		limit = {
+			exploitation_ideas = 6 
+		}
+
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes
+				NOT = { has_country_modifier = aet_ideas_exploitationSubject_1 }
+			}
+			add_country_modifier = {
+				name = aet_ideas_exploitationSubject_1
+				duration = -1
+			}
+		}
+	} else_if = {
+		limit = {
+			exploitation_ideas = 3 
+		}
+
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes
+				NOT = { has_country_modifier = aet_ideas_exploitationSubject_0 }
+			}
+			add_country_modifier = {
+				name = aet_ideas_exploitationSubject_0
+				duration = -1
+			}
+		}
+	}
+}
+
+
+
+
+# The following code works in theory and does work fast, however it makes static analysis at startup take a lot of time (>10 minutes)
+
+#aet_ideas_3_selection = {
+#	random_subject_country = {
+#		limit = {
+#			is_colonial_nation = yes 
+#			NOT = { 
+#				aet_hasCountryFlag = {
+#					var = aet_ideas.3_eventTargetId
+#					string = aet_ideas.3_seen
+#				}
+#			}
+#		}
+#
+#		aet_setCountryFlag = {
+#			var = aet_ideas.3_eventTargetId
+#			string = aet_ideas.3_seen
+#		}
+#		set_country_flag = aet_ideas_wasTouched
+#		PREV = { set_country_flag = aet_ideas.3_hasOption$num$ }
+#		aet_saveGlobalEventTargetNR = {
+#			string = aet_ideas.3_option$num$
+#			var = aet_ideas.3_eventTargetId
+#		}
+#	}		
+#}
+#
+#aet_ideas_3_effect = {
+#	aet_executeInEventTarget = {
+#		var = aet_ideas.3_eventTargetId
+#		string = aet_ideas.3_option$num$
+#		action = aet_ideas.3_effectDeep
+#	}
+#}
+#
+#aet_ideas_3_effectDeep = {
+#	if = {
+#		limit = {
+#			has_country_modifier = aet_ideas_exploitedSubject_1
+#		}
+#		remove_country_modifier = aet_ideas_exploitedSubject_1
+#		add_country_modifier = {
+#			name = aet_ideas_exploitedSubject_2
+#			duration = 3600
+#		}
+#	} else_if = {
+#		limit = {
+#			has_country_modifier = aet_ideas_exploitedSubject_0
+#		}
+#		remove_country_modifier = aet_ideas_exploitedSubject_0
+#		add_country_modifier = {
+#			name = aet_ideas_exploitedSubject_1
+#			duration = 1800
+#		}		
+#	} else = {
+#		add_country_modifier = {
+#			name = aet_ideas_exploitedSubject_1
+#			duration = 1800
+#		}
+#	}
+#
+#	overlord = {
+#		export_to_variable = {
+#			variable_name = aet_ideas_exploitationIncome
+#			value = monthly_income
+#			who = PREV 
+#		}
+#		export_to_variable = {
+#			variable_name = aet_ideas_tariffs
+#			value = modifier:global_tariffs			
+#		}
+#
+#		change_variable = {
+#			which = aet_ideas_tariffs
+#			value = 1
+#		}
+#
+#		multiply_variable = {
+#			which = aet_ideas_exploitationIncome
+#			which = aet_ideas_tariffs
+#		}
+#
+#		multiply_variable = {
+#			which = aet_ideas_exploitationIncome
+#			value = 3
+#		}
+#
+#		aet_applyVar_int = {
+#			left = add_treasury 
+#			var = aet_ideas_exploitationIncome
+#		}
+#		aet_applyVar_int = {
+#			left = add_treasury 
+#			var = aet_ideas_exploitationIncome
+#		}
+#		aet_applyVar_int = {
+#			left = add_treasury 
+#			var = aet_ideas_exploitationIncome
+#		}
+#		aet_applyVar_int = {
+#			left = add_treasury 
+#			var = aet_ideas_exploitationIncome
+#		}						
+#	}
+#}
+#
+#aet_ideas_3_clearTargets = {
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.3_eventTargetId
+#		string = aet_ideas.3_option0
+#	}
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.3_eventTargetId
+#		string = aet_ideas.3_option1
+#	}
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.3_eventTargetId
+#		string = aet_ideas.3_option2
+#	}
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.3_eventTargetId
+#		string = aet_ideas.3_option3
+#	}			
+#}
+#
+#aet_ideas_3_cleanup = {
+#	every_subject_country = {
+#		limit = {  
+#			has_country_flag = aet_ideas_wasTouched
+#		}
+#		clr_country_flag = aet_ideas_wasTouched
+#		aet_clearCountryFlag = {
+#			var = aet_ideas.3_eventTargetId
+#			string = aet_ideas.3_seen
+#		}
+#	}
+#
+#	clr_country_flag = aet_ideas.3
+#}
+
+
+
+
+
+## Events Util 
+#
+#aet_ideas.z.0_selection = {
+#	random_country = {
+#		limit = {
+#			# Event Specific Condition  
+#			NOT = { 
+#				aet_hasCountryFlag = {
+#					var = aet_ideas.z.0_eventTargetId
+#					string = aet_ideas.z.0_seen
+#				}
+#			}
+#		}
+#
+#		set_country_flag = aet_ideas.z.0_seen
+#		PREV = { set_country_flag = aet_ideas.z.0_hasOption$num$ }
+#		aet_saveGlobalEventTargetNR = {
+#			string = aet_ideas.z.0_option$num$
+#			var = aet_ideas.z.0_eventTargetId
+#		}
+#	}
+#}
+#
+#aet_ideas.z.0_effect = {
+#	aet_executeInEventTarget = {
+#		var = aet_ideas.z.0_eventTargetId
+#		string = aet_ideas.z.0_option$num$
+#		action = aet_ideas.z.0_effectDeep
+#	}
+#}
+#
+#aet_ideas.z.0_effectDeep = {
+#	# Event Effect 
+#}
+#
+#aet_ideas.z.0_clearTargets = {
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.z.0_eventTargetId
+#		string = aet_ideas.z.0_option0
+#	}
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.z.0_eventTargetId
+#		string = aet_ideas.z.0_option1
+#	}
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.z.0_eventTargetId
+#		string = aet_ideas.z.0_option2
+#	}
+#	aet_clearGlobalEventTarget = {
+#		var = aet_ideas.z.0_eventTargetId
+#		string = aet_ideas.z.0_option3
+#	}			
+#}
+#
+#aet_ideas.z.0_cleanup = {
+#	every_country = {
+#		aet_clearCountryFlag = {
+#			var = aet_ideas.z.0_eventTargetId
+#			string = aet_ideas.z.0_seen
+#		}
+#	}
+#
+#	clr_country_flag = aet_ideas.z.0
+#}

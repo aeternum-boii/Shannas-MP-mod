@@ -1,0 +1,16 @@
+estate_special = {
+	modifier_definition = {
+		type = loyalty
+		key = aet_eliteGuards_forceLimit
+		trigger = {
+			always = yes
+		}
+	}
+	modifier_definition = {
+		type = loyalty
+		key = aet_eliteGuards_buffMultiplier
+		trigger = {
+			always = yes
+		}
+	}	
+}
