@@ -509,18 +509,16 @@ innovativeness_ideas = {
 	}
 }
 
-religious_ideas = { # TODO AET: Prone for full rework 
+religious_ideas = {
 	category = ADM
 
 	trigger = {
-		if = {
-			limit = { 
-				ai = yes
-			}
-			NOT = { religion = confucianism }
-		}
 		NOT = {
 			has_idea_group = humanist_ideas
+            religion_group = christian
+            religion_group = muslim
+            religion_group = dharmic
+            religion_group = eastern
 		}
 	}
 
@@ -530,20 +528,20 @@ religious_ideas = { # TODO AET: Prone for full rework
 		church_loyalty_modifier = 0.1
 	}
 
-	missionary_schools = {
+	missionary_schools_1 = {
 		missionaries = 2
 		missionary_maintenance_cost = -0.5
 	}
-	church_attendance_duty = { 
+	church_attendance_duty_1 = { 
 		manpower_in_true_faith_provinces = 0.1
 	}
-	divine_supremacy = {
+	divine_supremacy_1 = {
 		global_missionary_strength = 0.04
 	}
-	devoutness = {
+	devoutness_1 = {
 		tolerance_own = 2
 	}
-	inquisition = {
+	inquisition_1 = {
 		papal_influence = 2
 		devotion = 0.25
 		monthly_fervor_increase = 0.25
@@ -555,10 +553,10 @@ religious_ideas = { # TODO AET: Prone for full rework
 		yearly_patriarch_authority = 0.005
 		prestige_per_development_from_conversion = 0.1
 	}
-	religious_tradition = {
+	religious_tradition_1 = {
 		reverse_relation_with_same_religion = 10
 	}
-	deus_vult = {
+	deus_vult_1 = {
 		cb_on_religious_enemies = yes
 	}
 
@@ -590,6 +588,328 @@ religious_ideas = { # TODO AET: Prone for full rework
 		modifier = {
 			factor = 2.0
 			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 3.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = 5.0
+			has_idea_group = theocracy_gov_ideas
+		}
+		modifier = {
+			factor = 1000.0
+			has_reform = theocratic_government
+		}
+	}
+}
+
+christian_ideas = {
+	category = ADM
+
+	trigger = {
+		religion_group = christian
+
+        NOT = {
+			has_idea_group = humanist_ideas
+        }
+	}
+
+	bonus = {
+        backrow_artillery_damage = 0.10
+	}
+
+	study_of_scripture = {
+		papal_influence = 2
+		devotion = 0.25
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.1
+	}
+	inquisition = { 
+		global_heretic_missionary_strength = 0.02
+        global_missionary_strength = 0.02
+	}
+	devoutness = {
+		tolerance_own = 2
+	}
+	work_is_worship = {
+		production_efficiency = 0.15
+	}
+	spread_the_word_of_god = {
+        global_heathen_missionary_strength = 0.01
+        global_missionary_strength = 0.01
+	}
+	proselytize_the_masses = {
+	    missionaries = 1
+        missionary_maintenance_cost = -0.33
+	}
+	deus_vult = {
+		cb_on_religious_enemies = yes
+	}
+
+	ai_will_do = {
+		factor = 4.25
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 1.5
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religious_unity = 0.75 }
+		}
+		modifier = {
+			factor = 2.0
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 3.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = 5.0
+			has_idea_group = theocracy_gov_ideas
+		}
+		modifier = {
+			factor = 1000.0
+			has_reform = theocratic_government
+		}
+	}
+}
+
+muslim_ideas = {
+	category = ADM
+
+	trigger = {
+		religion_group = muslim
+
+        NOT = {
+			has_idea_group = humanist_ideas
+        }
+	}
+
+	bonus = {
+		core_creation = -0.1
+	}
+
+	jizya = {
+        global_tax_modifier = 0.1
+        tolerance_own = 1
+	}
+	illuminate_the_unbelievers= { 
+        global_missionary_strength = 0.04
+	}
+	silk_road_trade = {
+		province_trade_power_modifier = 0.2
+	}
+	imam_schools = {
+		missionaries = 1
+	}
+	gate_between_east_and_west  = {
+        merchants = 1
+	}
+	call_upon_the_believers = {
+		manpower_in_true_faith_provinces = 0.15
+	}
+	jihad = {
+		cb_on_religious_enemies = yes
+	}
+
+	ai_will_do = {
+		factor = 4.25
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = buddhism
+				religion = confucianism
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religious_unity = 0.75 }
+		}
+		modifier = {
+			factor = 3.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = 5.0
+			has_idea_group = theocracy_gov_ideas
+		}
+		modifier = {
+			factor = 1000.0
+			has_reform = theocratic_government
+		}
+	}
+}
+
+dharmic_ideas = {
+	category = ADM
+
+	trigger = {
+		religion_group = dharmic
+
+        NOT = {
+			has_idea_group = humanist_ideas
+        }
+	}
+
+	bonus = {
+        development_cost = -0.1
+	}
+
+	accept_small_religious_differences = {
+        religious_unity = 0.15
+        improve_relation_modifier = 0.25
+	}
+	open_theological_debate = { 
+		missionaries = 1
+        global_missionary_strength = 0.03
+	}
+	teachings_of_buddha = {
+		idea_cost = -0.075
+	}
+	follow_the_gurus = {
+		same_religion_advisor_cost = -0.15
+	}
+	meltingpot_of_cultures = {
+        num_accepted_cultures = 2
+	    promote_culture_cost = -0.2
+	}
+	the_land_provides = {
+		build_cost = -0.15
+	}
+	 dharmashastra = {
+		governing_capacity_modifier = 0.1
+	}
+
+	ai_will_do = {
+		factor = 4.25
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 1.5
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = buddhism
+				religion = confucianism
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religious_unity = 0.75 }
+		}
+		modifier = {
+			factor = 2.0
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 3.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = 5.0
+			has_idea_group = theocracy_gov_ideas
+		}
+		modifier = {
+			factor = 1000.0
+			has_reform = theocratic_government
+		}
+	}
+}
+
+eastern_ideas = {
+	category = ADM
+
+	trigger = {
+		religion_group = eastern
+
+        NOT = {
+			has_idea_group = humanist_ideas
+        }
+	}
+
+	bonus = {
+	development_cost = -0.1
+	}
+
+	harmony_through_conversion = {
+		global_heretic_missionary_strength = 0.04
+	}
+	defending_the_land = { 
+		defensiveness = 0.1
+	}
+	monuments_to_heaven = {
+		great_project_upgrade_cost = -0.1
+        great_project_upgrade_time = -0.1
+	}
+	early_urbanization = {
+		expand_infrastructure_cost_modifier = -0.2
+        centralize_state_cost = -0.2
+	}
+	divine_right_to_rule = {
+		legitimacy = 1
+        meritocracy = 0.5
+        horde_unity = 0.5
+        republican_tradition = 0.5
+        prestige_decay = -0.05
+	}
+	counter_western_religion = {
+		missionaries = 1
+        global_missionary_strength = 0.02
+	}
+	legalism = {
+		state_governing_cost = -0.15
+	}
+
+	ai_will_do = {
+		factor = 4.25
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 1.5
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = buddhism
+				religion = confucianism
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religious_unity = 0.75 }
 		}
 		modifier = {
 			factor = 3.5
