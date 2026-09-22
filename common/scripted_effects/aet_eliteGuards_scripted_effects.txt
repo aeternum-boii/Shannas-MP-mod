@@ -61,7 +61,8 @@ aet_eliteGuards_enable_infantry = {
 aet_eliteGuards_enable_cavalry = {
 	aet_eliteGuards_initialSetup = {
 		conditional = yes 
-	} 	add_country_modifier = {
+	} 	
+	add_country_modifier = {
 		name = aet_eliteGuards_cavEnable
 		duration = -1
 	}
@@ -89,7 +90,7 @@ aet_eliteGuards_disable_infantry = {
 		which = aet_eliteGuards_inf_enable
 		value = 1
 	}
-	if {
+	if = {
 		limit = {
 			NOT = {
 				check_variable = {
@@ -97,10 +98,10 @@ aet_eliteGuards_disable_infantry = {
 					value = 1
 				}
 			}
-
-			remove_country_modifier = aet_eliteGuards_infEnable
-			aet_eliteGuards_cleanup = { conditional = yes }
 		}
+
+		remove_country_modifier = aet_eliteGuards_infEnable
+		aet_eliteGuards_cleanup = { conditional = yes }
 	}
 }
 
@@ -109,7 +110,7 @@ aet_eliteGuards_disable_cavalry = {
 		which = aet_eliteGuards_cav_enable
 		value = 1
 	}
-	if {
+	if = {
 		limit = {
 			NOT = {
 				check_variable = {
@@ -117,10 +118,10 @@ aet_eliteGuards_disable_cavalry = {
 					value = 1
 				}
 			}
-
-			remove_country_modifier = aet_eliteGuards_cavEnable
-			aet_eliteGuards_cleanup = { conditional = yes }
 		}
+
+		remove_country_modifier = aet_eliteGuards_cavEnable
+		aet_eliteGuards_cleanup = { conditional = yes }
 	}
 }
 
@@ -129,7 +130,7 @@ aet_eliteGuards_disable_artillery = {
 		which = aet_eliteGuards_arty_enable
 		value = 1
 	}
-	if {
+	if =  {
 		limit = {
 			NOT = {
 				check_variable = {
@@ -137,10 +138,10 @@ aet_eliteGuards_disable_artillery = {
 					value = 1
 				}
 			}
-
-			remove_country_modifier = aet_eliteGuards_artyEnable
-			aet_eliteGuards_cleanup = { conditional = yes }
 		}
+
+		remove_country_modifier = aet_eliteGuards_artyEnable
+		aet_eliteGuards_cleanup = { conditional = yes }		
 	}
 }
 
@@ -180,7 +181,7 @@ aet_eliteGuards_init_vars = {
 }
 
 aet_eliteGuards_initialSetup = {
-	if {
+	if = {
 		limit = {
 			[[conditional] NOT = {
 				has_country_flag = aet_eliteGuards_commonSetupDone
@@ -239,7 +240,7 @@ aet_eliteGuards_checkDecisions = {
 }
 
 aet_eliteGuards_cleanup = {
-	if {
+	if = {
 		limit {
 			[[conditional] NOT = {
 				check_variable = {
@@ -709,7 +710,7 @@ aet_eliteGuards_removeFLModifiers = {
 aet_eliteGuards_increase_FL = {
 	custom_tooltip = aet_eliteGuards_increase_FL_tt
 	hidden_effect = {
-		if {
+		if = {
 			limit = {
 				NOT = {
 					has_country_modifier = aet_eliteGuardsFL_39
@@ -1006,7 +1007,7 @@ aet_eliteGuards_increase_FL = {
 aet_eliteGuards_reduce_FL = {
 	custom_tooltip = aet_eliteGuards_reduce_FL_tt
 	hidden_effect = {
-		if {
+		if = {
 			limit = {
 				NOT = {
 					has_country_modifier = aet_eliteGuardsFL_39

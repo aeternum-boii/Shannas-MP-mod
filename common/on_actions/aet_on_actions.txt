@@ -1,3 +1,6 @@
+on_startup = { # Make AI actually choose them 
+	aet_ideas_removeAllIdeas = yes 
+}
 on_monthly_pulse = {
 	country_event = {
 		id = aet_custom_modifier_wrapping.1
@@ -102,4 +105,7 @@ on_colonial_liberation = {
 				duration = 1800
 			}			
 		}
+}
+on_dip_tech_taken = {
+	aet_ideas_applyTradeRangeModifier = yes 
 }

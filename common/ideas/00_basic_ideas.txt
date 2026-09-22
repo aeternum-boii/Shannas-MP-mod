@@ -48,6 +48,15 @@ administrative_ideas = {
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 1.5
 			has_idea_group = quantity_ideas
@@ -130,11 +139,20 @@ economic_ideas = { # INDUSTRIAL IDEAS IN LOC
 		#Note for modders; the two mechanics introduced in 1.35  
 		#for eco ideas are done so via on_actions 
 
-		# TODO AET: Test if this still works 
+		# It works, I think I removed the other one? 
  	}	
 
 	ai_will_do = {
 		factor = 1.1
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 2.0
 			has_idea_group = offensive_ideas
@@ -187,14 +205,7 @@ expansion_ideas = {
 	important = yes
 
 	trigger = {
-		if = {
-			limit = { 
-				ai = yes
-			}
-			OR = {
-				is_colonial_nation = yes
-			}
-		}
+
 	}
 
 	bonus = {
@@ -231,8 +242,17 @@ expansion_ideas = {
 
 	ai_will_do = {
 		factor = 4.5
+
 		modifier = {
-			factor = 0.5
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
+		modifier = {
+			factor = 0.0
 			NOT = { has_idea_group = exploration_ideas }
 		}
 		modifier = {
@@ -330,6 +350,15 @@ humanist_ideas = {
 
 	ai_will_do = {
 		factor = 7.5
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 0
 			has_idea_group = religious_ideas
@@ -430,6 +459,15 @@ infrastructure_ideas = {
 
 	ai_will_do = {
 		factor = 2.7
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 1.1 
 			personality = ai_capitalist
@@ -494,6 +532,15 @@ innovativeness_ideas = {
 
 	ai_will_do = {
 		factor = 10.1
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 2.0
 			in_golden_age = yes
@@ -562,6 +609,15 @@ religious_ideas = {
 
 	ai_will_do = {
 		factor = 4.25
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
@@ -854,7 +910,7 @@ eastern_ideas = {
 	}
 
 	bonus = {
-	development_cost = -0.1
+		development_cost = -0.1
 	}
 
 	harmony_through_conversion = {
@@ -951,8 +1007,17 @@ decentralised_ideas = {
 
 	decentralised_ideas_4 = {
 		trade_steering = 0.33 
-		#trade_range = 150 Not a thing it seems, TODO AET: Implement this with tech scaling
-		trade_range_modifier = 0.45
+
+		effect = {
+			hidden_effect = {
+				aet_ideas_applyTradeRangeModifier = yes 
+			}
+		}
+		removed_effect = {
+			hidden_effect = {
+				aet_ideas_applyTradeRangeModifier = yes 
+			}
+		}		
 	}
 
 	decentralised_ideas_5 = {
@@ -981,7 +1046,26 @@ decentralised_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.0
+		factor = 2.0
+
+		modifier = {
+			factor = 2.5
+			num_of_ports = 5
+		}
+
+		modifier = {
+			factor = 5
+			trade_company_size = 5
+		}
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -1036,6 +1120,15 @@ statecraft_ideas = {
 
 	ai_will_do = {
 		factor = 5.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -1084,13 +1177,21 @@ fiscal_ideas = { # Death war ideas
 	}
 
 	bonus = {
-		# Remind of Decision in Loc ! 
 		trade_efficiency = 0.1
 	}
 
 
 	ai_will_do = {
 		factor = 2.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -1112,8 +1213,8 @@ internal_affair_ideas = {
 	}
 
 	internal_affair_ideas_1 = {
-		global_autonomy = -0.005
-		min_autonomy = -2.5
+		global_autonomy = -0.05
+		min_autonomy = -5
 	}
 
 	internal_affair_ideas_2 = {
@@ -1149,6 +1250,15 @@ internal_affair_ideas = {
 
 	ai_will_do = {
 		factor = 4.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -1186,7 +1296,6 @@ court_ideas = {
 		monthly_splendor = 2 
 	}
 	respected_authority = {
-		# TODO AET: Implement Absolutism Impact from Privilege (maybe already works?) 
 		all_estate_possible_privileges = 1
 		monarch_power_tribute = 1
 	}
@@ -1208,6 +1317,15 @@ court_ideas = {
 
 	ai_will_do = {
 		factor = 0.5
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 1.25
 			num_of_powerful_estates = 3 
@@ -1269,6 +1387,15 @@ diplomatic_ideas = {
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 1.5
 			has_idea_group = defensive_ideas
@@ -1298,12 +1425,7 @@ exploration_ideas = {
 
 	trigger = {
 		
-		if = {
-			limit = { 
-				ai = yes
-				
-			}
-		}
+
 	}
 
 	bonus = {
@@ -1336,7 +1458,16 @@ exploration_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 6.0
+		factor = 3.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 0
 			NOT = { num_of_ports = 3 }
@@ -1458,6 +1589,15 @@ influence_ideas = {
 
 	ai_will_do = {
 		factor = 1.2
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 1.5
 			is_emperor = yes
@@ -1543,6 +1683,15 @@ maritime_ideas = {
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 0
 			is_tribal = yes
@@ -1656,6 +1805,15 @@ spy_ideas = {
 
 	ai_will_do = {
 		factor = 5.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 4.5
 			is_part_of_hre = yes
@@ -1725,6 +1883,15 @@ trade_ideas = {
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 2.0
 			government_rank = 3
@@ -1777,7 +1944,7 @@ exploitation_ideas = {
 	exploitation_ideas_2 = {
 		# in Colonial Subject 
 		# global_trade_goods_size_modifier = 0.2
-
+	
 		reduced_liberty_desire = -15
 
 		effect = {
@@ -1889,7 +2056,16 @@ exploitation_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 5.0
+		factor = 10.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 
 		modifier = {
 			factor = 0.0
@@ -1939,6 +2115,15 @@ societal_ideas = {
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2001,6 +2186,15 @@ grandeur_ideas = {
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2042,6 +2236,15 @@ nationalism_ideas = {
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2102,6 +2305,15 @@ aristocracy_ideas = {
 
 	ai_will_do = {
 		factor = 6.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 2.0
 			cavalry_fraction = 0.4
@@ -2221,6 +2433,15 @@ defensive_ideas = {
 	
 	ai_will_do = {
 		factor = 0.25
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 1.5
 			NOT = { is_year = 1500 }
@@ -2350,6 +2571,15 @@ indigenous_ideas = {
 
 	ai_will_do = {
 		factor = 1000.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2397,6 +2627,15 @@ mercenary_ideas = {
 
 	ai_will_do = {
 		factor = 0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2408,10 +2647,8 @@ naval_ideas = {
 	}
 
 	bonus = {
-		is_marine_modifier = yes 
-		discipline = 0.075
-		regiment_manpower_usage = -0.10
-		shock_damage_received = -0.10
+		regiment_disembark_speed = 0.5
+		landing_penalty = -1 # This means that a combined army of marines and normal troops has no penalty 
 	}
 
 	improved_rams = {
@@ -2426,25 +2663,44 @@ naval_ideas = {
 	}
 	professional_marines = {
 		sailors_recovery_speed = 0.25
-		allowed_marine_fraction = 0.15
+		allowed_marine_fraction = 0.10
 	}
 	superior_seamanship = {
 		naval_morale = 0.1
 		sunk_ship_morale_hit_recieved = -0.33
 	}	
 	boarding_parties = {
-		regiment_disembark_speed = 0.5
-		landing_penalty = -1 # This means that a combined army of marines and normal troops has no penalty 
+		allowed_marine_fraction = 0.05
+
+		effect = {
+			add_country_modifier = {
+				name = aet_ideas_navalMarines
+				duration = -1 
+			}
+		}
+
+		removed_effect = {
+			remove_country_modifier = aet_ideas_navalMarines
+		}
 	}	
 	oak_forests_for_ships = {
 		naval_attrition = -0.15
-		transport_attrition = 0.25
+		transport_attrition = -0.25
 		ship_durability = 0.05
 	}
 
 
 	ai_will_do = {
 		factor = 1.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 0
 			is_tribal = yes
@@ -2517,6 +2773,15 @@ offensive_ideas = {
 
 	ai_will_do = {
 		factor = 5.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 0.1
 			NOT = { mil_tech = 7 }
@@ -2606,6 +2871,15 @@ plutocracy_ideas = {
 
 	ai_will_do = {
 		factor = 1000.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2651,6 +2925,15 @@ quality_ideas = {
 
 	ai_will_do = {
 		factor = 5.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 2.0
 			num_of_ports = 3
@@ -2721,6 +3004,15 @@ quantity_ideas = {
 
 	ai_will_do = {
 		factor = 10.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 3.0
 			total_development = 300
@@ -2810,6 +3102,15 @@ theocracy_gov_ideas = {
 
 	ai_will_do = {
 		factor = 1000.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
@@ -2861,6 +3162,15 @@ leadership_ideas = {
 
 	ai_will_do = {
 		factor = 5.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2914,6 +3224,15 @@ modernisation_ideas = {
 
 	ai_will_do = {
 		factor = 15.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }
 
@@ -2976,6 +3295,15 @@ militarism_ideas = {
 		factor = 5.0
 
 		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
+
+		modifier = {
 			factor = 500.0
 			has_government_mechanic = militarization_mechanic
 			has_government_mechanic = prussian_militarization_mechanic_1
@@ -3022,5 +3350,14 @@ logistics_ideas = {
 
 	ai_will_do = {
 		factor = 5.0
+
+		modifier = {
+			factor = 0.0
+			NOT = { has_idea_group = horde_gov_ideas }
+			OR = {
+				has_government_attribute = enables_horde_idea_group
+				uses_horde_unity = yes 
+			}
+		}
 	}
 }

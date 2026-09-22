@@ -2,6 +2,10 @@ namespace = aet_ideas
 
 country_event = {
 	id = aet_ideas.1
+	title = aet_ideas.1.t
+	desc = aet_ideas.1.d
+
+	picture = CORRUPTION_eventPicture
 
 	is_triggered_only = yes 
 	trigger = {
@@ -21,6 +25,7 @@ country_event = {
 		ai_chance = { factor = 1 }
 		
 		add_stability = -3
+		set_bankruptcy = THIS
 		add_country_modifier = {
 			name = aet_ideas_fiscalCountryRuined
 			duration = 3600
@@ -30,6 +35,10 @@ country_event = {
 
 country_event = {
 	id = aet_ideas.2
+	title = aet_ideas.2.t
+	desc = aet_ideas.2.d	
+
+	picture = CITY_DEVELOPMENT_eventPicture
 
 	is_triggered_only = yes 
 
@@ -70,6 +79,10 @@ country_event = {
 
 country_event = {
 	id = aet_ideas.3
+	title = aet_ideas.3.t
+	desc = aet_ideas.3.d
+
+	picture = TRADE_GOODS_eventPicture
 
 	is_triggered_only = yes 
 
@@ -213,7 +226,7 @@ country_event = {
 			aet_transfer_treasury = {
 				taker = PREV 
 				variable = aet_ideas_ducatsTransfer_a
-				custom_tooltip = "[Prev.GetName] will receive [This.aet_ideas_ducatsTransfer_a.GetValue] from [This.GetNaem]"
+				custom_tooltip = aet_ideas_3_transfer_treasury_a
 			}
 		}
 
@@ -332,7 +345,7 @@ country_event = {
 			aet_transfer_treasury = {
 				taker = PREV 
 				variable = aet_ideas_ducatsTransfer_b
-				custom_tooltip = "[Prev.GetName] will receive [This.aet_ideas_ducatsTransfer_b.GetValue] from [This.GetNaem]"
+				custom_tooltip = aet_ideas_3_transfer_treasury_b
 			}
 		}
 
@@ -441,6 +454,10 @@ country_event = {
 
 country_event = {
 	id = aet_ideas.4
+	title = aet_ideas.4.t
+	desc = aet_ideas.4.d
+
+	picture = BURGHER_ESTATE_UPSET_eventPicture
 
 	is_triggered_only = yes 
 
@@ -575,6 +592,10 @@ country_event = {
 
 country_event = { # Warning for overlord 
 	id = aet_ideas.5
+	title = aet_ideas.5.t
+	desc = aet_ideas.5.d
+
+	picture = REVOLT_eventPicture
 
 	is_triggered_only = yes 
 
@@ -585,6 +606,10 @@ country_event = { # Warning for overlord
 
 country_event = {
 	id = aet_ideas.6
+	title = aet_ideas.6.t
+	desc = aet_ideas.6.d
+
+	picture = DECLARATION_INDEPENDENCE_eventPicture
 
 	is_triggered_only = yes 
 
@@ -636,6 +661,10 @@ country_event = {
 
 country_event = {
 	id = aet_ideas.7
+	title = aet_ideas.7.t
+	desc = aet_ideas.7.d
+
+	picture = DECLARATION_INDEPENDENCE_eventPicture
 
 	is_triggered_only = yes 
 
@@ -677,6 +706,886 @@ country_event = {
 			join_all_offensive_wars_of = FROM 
 		}
 	}	
+}
+
+country_event = { # Colonial Development
+	id = aet_ideas.8
+	title = aet_ideas.8.t
+	desc = aet_ideas.8.d
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = aet_ideas_8_adminPossible
+				value = 0
+			}
+			set_variable = {
+				which = aet_ideas_8_dipPossible
+				value = 0
+			}
+			set_variable = {
+				which = aet_ideas_8_milPossible
+				value = 0
+			}
+
+
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+				}
+
+				every_owned_province = {
+					limit = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_administrativeDevelopment
+						}
+					}
+
+					PREV = {
+						overlord = {
+							change_variable = {
+								which = aet_ideas_8_adminPossible
+								value = 1 
+							}
+						}
+					}
+				}
+				every_owned_province = {
+					limit = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_diplomaticDevelopment
+						}
+					}
+
+					PREV = {
+						overlord = {
+							change_variable = {
+								which = aet_ideas_8_dipPossible
+								value = 1 
+							}
+						}
+					}
+				}
+				every_owned_province = {
+					limit = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_militaryDevelopment
+						}
+					}
+
+					PREV = {
+						overlord = {
+							change_variable = {
+								which = aet_ideas_8_milPossible
+								value = 1 
+							}
+						}
+					}
+				}								
+			}			
+		}
+	}
+
+	option = {
+		name = aet_ideas.8.a
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_adminPossible
+				value = 1
+			}
+		}
+
+		custom_tooltip = aet_ideas.8.a_tt 
+		tooltip = {
+			random_subject_country = {
+				limit = {
+					is_colonial_nation = yes
+					any_owned_province = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_administrativeDevelopment
+						}
+					}
+				}
+
+				random_owned_province = {
+					limit = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_administrativeDevelopment
+						}
+					}
+					add_province_modifier = {
+						name = aet_ideas_colony_administrativeDevelopment
+						duration = -1 
+					}
+				}
+			}
+		}
+
+		country_event = {
+			id = aet_ideas.9
+		}
+	}
+
+	option = {
+		name = aet_ideas.8.b
+
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_dipPossible
+				value = 1
+			}
+		}
+
+		custom_tooltip = aet_ideas.8.b_tt 
+		tooltip = {
+			random_subject_country = {
+				limit = {
+					is_colonial_nation = yes
+					any_owned_province = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_diplomaticDevelopment
+						}
+					}
+				}
+
+				random_owned_province = {
+					limit = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_diplomaticDevelopment
+						}
+					}
+					add_province_modifier = {
+						name = aet_ideas_colony_diplomaticDevelopment
+						duration = -1 
+					}
+				}
+			}
+		}
+
+		country_event = {
+			id = aet_ideas.12
+		}
+	}	
+
+	option = {
+		name = aet_ideas.8.c
+
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_milPossible
+				value = 1
+			}
+		}
+
+		custom_tooltip = aet_ideas.8.c_tt 
+		tooltip = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+				}
+
+				every_owned_province = {
+					limit = {
+						has_fort_building_trigger = yes
+						NOT = { has_province_modifier = aet_ideas_colony_fortDevelopment }
+					}
+
+					add_province_modifier = {
+						name = aet_ideas_colony_fortDevelopment
+						duration = -1 
+					}
+				}
+			}
+			random_subject_country = {
+				limit = {
+					is_colonial_nation = yes
+					any_owned_province = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_militaryDevelopment
+						}
+					}
+				}
+
+				random_owned_province = {
+					limit = {
+						NOT = {
+							has_province_modifier = aet_ideas_colony_militaryDevelopment
+						}
+					}
+					add_province_modifier = {
+						name = aet_ideas_colony_militaryDevelopment
+						duration = -1 
+					}
+				}
+			}
+		}
+
+		country_event = {
+			id = aet_ideas.14
+		}
+	}	
+}
+
+country_event = { # ADM Dev 1 
+	id = aet_ideas.9
+	title = aet_ideas.9.t
+	desc = aet_ideas.9.d 
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes 
+			}
+
+			every_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = aet_ideas_colony_administrativeDevelopment }
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_colonyMarker
+					duration = -1 
+					hidden = yes 
+				}
+			}
+		}
+	}
+
+	option = { # 3 Provinces 
+		name = aet_ideas.9.a 
+
+		adm_power_cost = 30
+		aet_ideas_fireProvinceEvent = {
+			count = 3
+			event = aet_ideas.10
+			marker = aet_ideas_colonyMarker
+		}
+	}
+
+	option = { # 10 Provinces 
+		name = aet_ideas.9.a 
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_adminPossible
+				value = 10
+			}
+		}
+
+		adm_power_cost = 100
+		aet_ideas_fireProvinceEvent = {
+			count = 10
+			event = aet_ideas.10
+			marker = aet_ideas_colonyMarker
+		}		
+	}	
+
+	option = { # 20 Provinces 
+		name = aet_ideas.9.a 
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_adminPossible
+				value = 20
+			}
+		}
+
+		adm_power_cost = 200
+		aet_ideas_fireProvinceEvent = {
+			count = 20
+			event = aet_ideas.10
+			marker = aet_ideas_colonyMarker
+		}		
+	}	
+
+	option = { # Cancel  
+		name = aet_ideas.9.a 
+
+		remove_country_modifier = aet_ideas_investingInTheColonies
+	}	
+}
+
+province_event = {
+	id = aet_ideas.10
+
+	is_triggered_only = yes 
+	hidden = yes 
+
+	option = {
+		ai_chance = {
+			factor = 1.0 
+		}
+
+		add_province_modifier = {
+			name = aet_ideas_colony_administrativeDevelopmentPrepared
+			duration = -1 
+		}		
+
+		owner = {
+			country_event = {
+				id = aet_ideas.11
+				days = 3 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = aet_ideas.11
+	title = aet_ideas.11.t
+	desc = aet_ideas.11.d
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	option = {
+		aet_ideas_exploitationApplyPrepared = yes 	
+	}
+}
+
+country_event = { # DIP Dev 1 
+	id = aet_ideas.12
+	title = aet_ideas.12.t
+	desc = aet_ideas.12.d 
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes 
+			}
+
+			every_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = aet_ideas_colony_diplomaticDevelopment }
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_colonyMarker
+					duration = -1 
+					hidden = yes 
+				}
+			}
+		}
+	}
+
+	option = { # 3 Provinces 
+		name = aet_ideas.9.a 
+
+		dip_power_cost = 30
+		aet_ideas_fireProvinceEvent = {
+			count = 3
+			event = aet_ideas.13
+			marker = aet_ideas_colonyMarker
+		}
+	}
+
+	option = { # 10 Provinces 
+		name = aet_ideas.9.b 
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_dipPossible
+				value = 10
+			}
+		}
+
+		dip_power_cost = 100
+		aet_ideas_fireProvinceEvent = {
+			count = 10
+			event = aet_ideas.13
+			marker = aet_ideas_colonyMarker
+		}		
+	}	
+
+	option = { # 20 Provinces 
+		name = aet_ideas.9.c 
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_dipPossible
+				value = 20
+			}
+		}
+
+		dip_power_cost = 200
+		aet_ideas_fireProvinceEvent = {
+			count = 20
+			event = aet_ideas.13
+			marker = aet_ideas_colonyMarker
+		}		
+	}	
+
+	option = { # Cancel  
+		name = aet_ideas.9.d 
+
+		remove_country_modifier = aet_ideas_investingInTheColonies
+	}	
+}
+
+province_event = {
+	id = aet_ideas.13
+
+	is_triggered_only = yes 
+	hidden = yes 
+
+	option = {
+		ai_chance = {
+			factor = 1.0 
+		}
+
+		add_province_modifier = {
+			name = aet_ideas_colony_diplomaticDevelopmentPrepared
+			duration = -1 
+		}		
+
+		owner = {
+			country_event = {
+				id = aet_ideas.11
+				days = 3 
+			}
+		}
+	}
+}
+
+country_event = { # Mil Dev 1 
+	id = aet_ideas.14
+	title = aet_ideas.14.t
+	desc = aet_ideas.14.d 
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+		every_subject_country = {
+			limit = {
+				is_colonial_nation = yes 
+			}
+
+			every_owned_province = {
+				limit = {
+					NOT = { has_province_modifier = aet_ideas_colony_militaryDevelopment }
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_colonyMarker
+					duration = -1 
+					hidden = yes 
+				}
+			}
+
+			every_owned_province = {
+				limit = {
+					has_fort_building_trigger = yes
+					NOT = { has_province_modifier = aet_ideas_colony_fortDevelopment }
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_colony_fortDevelopmentPrepared
+					duration = -1
+				}
+			}			
+		}
+	}
+
+	option = { # 3 Provinces 
+		name = aet_ideas.9.a 
+
+		mil_power_cost = 30
+		aet_ideas_fireProvinceEvent = {
+			count = 3
+			event = aet_ideas.15
+			marker = aet_ideas_colonyMarker
+		}
+	}
+
+	option = { # 10 Provinces 
+		name = aet_ideas.9.b 
+
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_milPossible
+				value = 10
+			}
+		}
+
+		mil_power_cost = 100
+		aet_ideas_fireProvinceEvent = {
+			count = 10
+			event = aet_ideas.15
+			marker = aet_ideas_colonyMarker
+		}		
+	}	
+
+	option = { # 20 Provinces 
+		name = aet_ideas.9.c 
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_8_milPossible
+				value = 20
+			}
+		}
+
+
+		mil_power_cost = 200
+		aet_ideas_fireProvinceEvent = {
+			count = 20
+			event = aet_ideas.15
+			marker = aet_ideas_colonyMarker
+		}		
+	}	
+
+	option = { # Cancel  
+		name = aet_ideas.9.d 
+
+		remove_country_modifier = aet_ideas_investingInTheColonies
+	}	
+}
+
+province_event = {
+	id = aet_ideas.15
+
+	is_triggered_only = yes 
+	hidden = yes 
+
+	
+
+	option = {
+		ai_chance = {
+			factor = 1.0 
+		}
+
+		add_province_modifier = {
+			name = aet_ideas_colony_militaryDevelopmentPrepared
+			duration = -1 
+		}		
+
+		owner = {
+			country_event = {
+				id = aet_ideas.11
+				days = 3 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = aet_ideas.16
+	title = aet_ideas.16.t
+	desc = aet_ideas.16.d	
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = aet_ideas_16_possibleWorkshops
+				value = 0
+			}
+			set_variable = {
+				which = aet_ideas_16_possibleCountingHouse
+				value = 0
+			}
+
+
+
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+				}
+
+				every_owned_province = {
+					limit = {
+						NOT = {
+							has_building = workshop
+							has_building = counting_house
+						}
+					}
+
+					PREV = {
+						overlord = {
+							change_variable = {
+								which = aet_ideas_16_possibleWorkshops
+								value = 1
+							}
+						}
+					}
+				}
+
+				every_owned_province = {
+					limit = {
+						NOT = {
+							has_building = counting_house
+						}
+					}
+
+					PREV = {
+						overlord = {
+							change_variable = {
+								which = aet_ideas_16_possibleCountingHouse
+								value = 1
+							}
+						}
+					}
+				}		
+				
+				every_owned_province = {
+					limit = {
+						NOT = {
+							has_manufactory_trigger = yes
+						}
+					}
+
+					PREV = {
+						overlord = {
+							change_variable = {
+								which = aet_ideas_16_possibleManufactory
+								value = 1
+							}
+						}
+					}
+				}						
+			}
+		}
+	}
+
+	option = { # workshop 
+		name = aet_ideas.16.a
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_16_possibleWorkshops
+				value = 1
+			}
+		}
+
+		set_country_flag = aet_buildingWorkshop
+
+		country_event = {
+			id = aet_ideas.17
+		}
+	}
+
+	option = { # counting house  
+		name = aet_ideas.16.b
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_16_possibleCountingHouse
+				value = 1
+			}
+		}
+
+		set_country_flag = aet_buildingCountingHouse
+
+		country_event = {
+			id = aet_ideas.17
+		}
+	}	
+
+	option = { # manufactory
+		name = aet_ideas.16.c
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_16_possibleManufactory
+				value = 1
+			}
+		}
+
+		set_country_flag = aet_buildingManufactory
+
+		country_event = {
+			id = aet_ideas.17
+		}
+	}		
+
+	option = { # nevermind 
+		name = aet_ideas.16.e
+
+		remove_country_modifier = aet_ideas_investingInTheColonies
+	}	
+}
+
+country_event = {
+	id = aet_ideas.17
+	title = aet_ideas.17.t
+	desc = aet_ideas.17.d
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				which = aet_ideas_17_costEstimator
+				value = 0
+			}
+			set_variable = {
+				which = aet_ideas_17_provinceCount
+				value = 0
+			}		
+
+			if = {
+				limit = {
+					has_country_flag = aet_buildingWorkshop
+				}
+				set_variable = {
+					which = aet_ideas_17_possibleBuildings
+					which = aet_ideas_16_possibleWorkshops
+				}
+			} else_if = {
+				limit = {
+					has_country_flag = aet_buildingCountingHouse
+				}
+				set_variable = {
+					which = aet_ideas_17_possibleBuildings
+					which = aet_ideas_16_possibleCountingHouse
+				}
+			} else = {
+				set_variable = {
+					which = aet_ideas_17_possibleBuildings
+					which = aet_ideas_16_possibleManufactory
+				}
+			}
+
+
+			every_subject_country = {
+				limit = {
+					is_colonial_nation = yes 
+				}
+
+				every_owned_province = {
+					limit = {
+						NOT = { 
+							has_building = workshop
+							has_building = counting_house 
+						}
+					}
+
+					add_province_modifier = {
+						name = aet_ideas_colonyMarker
+						duration = -1 
+						hidden = yes 
+					}
+
+					hidden_effect = {
+						aet_ideas_exploitationCalculateJointBuildCost = {
+							cost = 100 
+							compound = aet_ideas_17_costEstimator
+							increment = aet_ideas_17_provinceCount
+						}
+					}
+				}		
+			}
+
+			divide_variable = {
+				which = aet_ideas_17_costEstimator
+				which = aet_ideas_17_provinceCount
+			}		
+		}
+	}
+
+	option = {
+		name = aet_ideas.9.a
+
+		custom_tooltip = "Estimated Cost per Province: [This.aet_ideas_17_costEstimator.GetValue] ducats\n\n(estimation uses the average value of (0.8 + local_build_cost + colony:build_cost + build_cost) * 100"
+	
+		aet_ideas_fireProvinceEvent = {
+			count = 3
+			event = aet_ideas.18
+			marker = aet_ideas_colonyMarker
+		}		
+	}
+	option = {
+		name = aet_ideas.9.b
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_17_possibleBuildings
+				value = 10
+			}
+		}
+
+		custom_tooltip = "Estimated Cost per Province: [This.aet_ideas_17_costEstimator.GetValue] ducats\n\n(estimation uses the average value of (0.8 + local_build_cost + colony:build_cost + build_cost) * 100"
+	
+		aet_ideas_fireProvinceEvent = {
+			count = 10
+			event = aet_ideas.18
+			marker = aet_ideas_colonyMarker
+		}		
+	}
+	option = {
+		name = aet_ideas.9.c
+
+		trigger = {
+			check_variable = {
+				which = aet_ideas_17_possibleBuildings
+				value = 20
+			}
+		}
+
+		custom_tooltip = "Estimated Cost per Province: [This.aet_ideas_17_costEstimator.GetValue] ducats\n\n(estimation uses the average value of (0.8 + local_build_cost + colony:build_cost + build_cost) * 100"
+	
+		aet_ideas_fireProvinceEvent = {
+			count = 20
+			event = aet_ideas.18
+			marker = aet_ideas_colonyMarker
+		}		
+	}		
+
+}
+
+province_event = {
+	id = aet_ideas.18
+
+	hidden = yes 
+	is_triggered_only = yes 
+
+	option = {
+		ai_chance = {
+			factor = 1.0 
+		}
+
+		aet_ideas_exploitationBuildPrepare = yes 
+	}
+}
+
+country_event = {
+	id = aet_ideas.19
+	title = aet_ideas.19.t
+	desc = aet_ideas.19.d
+
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+
+	option = {
+		name = aet_ideas.19.a
+
+		aet_ideas_exploitationBuildExecute = yes 
+	}
 }
 
 #country_event = { # This concept works quite well, but it does need a LOT of time during startup (like good 10 minutes)

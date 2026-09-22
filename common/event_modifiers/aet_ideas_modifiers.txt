@@ -135,3 +135,181 @@ aet_dominion_overlordModifier = {
 aet_ideas_militaryAcademy_0 = {
 	
 }
+
+
+aet_ideas_decentralisedRule_tradeRange_3 = {
+    trade_range_modifier = 1.5
+}
+
+aet_ideas_decentralisedRule_tradeRange_4 = {
+    trade_range_modifier = 1.42857
+}
+
+aet_ideas_decentralisedRule_tradeRange_5 = {
+    trade_range_modifier = 1.30435
+}
+
+aet_ideas_decentralisedRule_tradeRange_6 = {
+    trade_range_modifier = 1.30435
+}
+
+aet_ideas_decentralisedRule_tradeRange_7 = {
+    trade_range_modifier = 1.30435
+}
+
+aet_ideas_decentralisedRule_tradeRange_8 = {
+    trade_range_modifier = 1.25
+}
+
+aet_ideas_decentralisedRule_tradeRange_9 = {
+    trade_range_modifier = 1.25
+}
+
+aet_ideas_decentralisedRule_tradeRange_10 = {
+    trade_range_modifier = 1.15385
+}
+
+aet_ideas_decentralisedRule_tradeRange_11 = {
+    trade_range_modifier = 1.15385
+}
+
+aet_ideas_decentralisedRule_tradeRange_12 = {
+    trade_range_modifier = 1.15385
+}
+
+aet_ideas_decentralisedRule_tradeRange_13 = {
+    trade_range_modifier = 1.15385
+}
+
+aet_ideas_decentralisedRule_tradeRange_14 = {
+    trade_range_modifier = 1.15385
+}
+
+aet_ideas_decentralisedRule_tradeRange_15 = {
+    trade_range_modifier = 1.15385
+}
+
+aet_ideas_decentralisedRule_tradeRange_16 = {
+    trade_range_modifier = 1.07143
+}
+
+aet_ideas_decentralisedRule_tradeRange_17 = {
+    trade_range_modifier = 1.0
+}
+
+aet_ideas_decentralisedRule_tradeRange_18 = {
+    trade_range_modifier = 1.0
+}
+
+aet_ideas_decentralisedRule_tradeRange_19 = {
+    trade_range_modifier = 1.0
+}
+
+aet_ideas_decentralisedRule_tradeRange_20 = {
+    trade_range_modifier = 0.9375
+}
+
+aet_ideas_decentralisedRule_tradeRange_21 = {
+    trade_range_modifier = 0.9375
+}
+
+aet_ideas_decentralisedRule_tradeRange_22 = {
+    trade_range_modifier = 0.9375
+}
+
+aet_ideas_decentralisedRule_tradeRange_23 = {
+    trade_range_modifier = 0.9375
+}
+
+aet_ideas_decentralisedRule_tradeRange_24 = {
+    trade_range_modifier = 0.88235
+}
+
+aet_ideas_decentralisedRule_tradeRange_25 = {
+    trade_range_modifier = 0.88235
+}
+
+aet_ideas_decentralisedRule_tradeRange_26 = {
+    trade_range_modifier = 0.88235
+}
+
+aet_ideas_decentralisedRule_tradeRange_27 = {
+    trade_range_modifier = 0.88235
+}
+
+aet_ideas_decentralisedRule_tradeRange_28 = {
+    trade_range_modifier = 0.83333
+}
+
+aet_ideas_decentralisedRule_tradeRange_29 = {
+    trade_range_modifier = 0.83333
+}
+
+aet_ideas_decentralisedRule_tradeRange_30 = {
+    trade_range_modifier = 0.78947
+}
+
+aet_ideas_decentralisedRule_tradeRange_31 = {
+    trade_range_modifier = 0.78947
+}
+
+aet_ideas_decentralisedRule_tradeRange_32 = {
+    trade_range_modifier = 0.75
+}
+
+aet_ideas_colony_administrativeDevelopmentPrepared = {}
+aet_ideas_colony_administrativeDevelopment = {
+	development_cost_modifier = -0.05
+	local_unrest = -0.5 
+	local_friendly_movement_speed = 0.25
+	local_state_maintenance_modifier = -0.25 
+	local_gold_depletion_chance_modifier = -0.15
+	local_production_efficiency = 0.15
+	local_governing_cost = -0.25	
+}
+aet_ideas_colony_diplomaticDevelopmentPrepared = {}
+aet_ideas_colony_diplomaticDevelopment = {
+	development_cost_modifier = -0.05
+	local_unrest = -0.5
+	local_ship_repair = 0.2 
+	blockade_force_required = 0.25
+	province_trade_power_modifier = 0.25
+	trade_value_modifier = 0.15
+}
+aet_ideas_colony_militaryDevelopmentPrepared = {}
+aet_ideas_colony_militaryDevelopment = {
+	development_cost_modifier = -0.05
+	local_unrest = -0.5
+	local_defensiveness = 0.15
+	supply_limit_modifier = 0.15
+	local_hostile_movement_speed = -0.15
+}
+aet_ideas_colony_fortDevelopmentPrepared = {}
+aet_ideas_colony_fortDevelopment = {
+	local_hostile_attrition = 0.2 
+	local_defensiveness = 0.25
+	local_assault_fort_ability = -0.25
+	local_garrison_damage = 0.25 
+	local_garrison_size = 0.10 
+	local_fort_maintenance_modifier = -0.10
+}
+aet_ideas_colonyMarker = {}
+aet_ideas_investingInTheColonies = {
+	global_unrest = 0.2
+	global_tax_modifier = -0.04
+	colonist_placement_chance = 0.02
+}
+aet_ideas_navalMarines = {
+	is_marine_modifier = yes 
+	discipline = 0.075
+	regiment_manpower_usage = -0.10
+	shock_damage_received = -0.10	
+}
+aet_ideas_previouslyColonised = {
+	local_colonial_growth = 25
+	local_colonist_placement_chance = 0.25
+	local_colony_cost_modifier = 0.5
+}
+aet_ideas_colony_preparedWorkshop = {}
+aet_ideas_colony_preparedCountingHouse = {}
+aet_ideas_colony_preparedManufactory = {}

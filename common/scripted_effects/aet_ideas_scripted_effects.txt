@@ -70,7 +70,820 @@ aet_ideas_applyBaseExploitationModifier = {
 	}
 }
 
+aet_ideas_removeAllIdeas = {
+    remove_idea_group = administrative_ideas
+    remove_idea_group = economic_ideas
+    remove_idea_group = expansion_ideas
+    remove_idea_group = humanist_ideas
+    remove_idea_group = infrastructure_ideas
+    remove_idea_group = innovativeness_ideas
+    remove_idea_group = religious_ideas
+    remove_idea_group = decentralised_ideas
+    remove_idea_group = statecraft_ideas
+    remove_idea_group = fiscal_ideas
+    remove_idea_group = internal_affair_ideas
+    remove_idea_group = court_ideas
+    remove_idea_group = diplomatic_ideas
+    remove_idea_group = exploration_ideas
+    remove_idea_group = influence_ideas
+    remove_idea_group = maritime_ideas
+    remove_idea_group = spy_ideas
+    remove_idea_group = trade_ideas
+    remove_idea_group = exploitation_ideas
+    remove_idea_group = societal_ideas
+    remove_idea_group = grandeur_ideas
+    remove_idea_group = nationalism_ideas
+    remove_idea_group = aristocracy_ideas
+    remove_idea_group = defensive_ideas
+    remove_idea_group = horde_gov_ideas
+    remove_idea_group = indigenous_ideas
+    remove_idea_group = mercenary_ideas
+    remove_idea_group = naval_ideas
+    remove_idea_group = offensive_ideas
+    remove_idea_group = plutocracy_ideas
+    remove_idea_group = quality_ideas
+    remove_idea_group = quantity_ideas
+    remove_idea_group = theocracy_gov_ideas
+    remove_idea_group = leadership_ideas
+    remove_idea_group = modernisation_ideas
+    remove_idea_group = militarism_ideas
+    remove_idea_group = logistics_ideas	
+}
 
+aet_ideas_applyTradeRangeModifier = {
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_3
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_4
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_5
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_6
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_7
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_8
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_9
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_10
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_11
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_12
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_13
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_14
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_15
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_16
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_17
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_18
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_19
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_20
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_21
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_22
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_23
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_24
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_25
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_26
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_27
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_28
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_29
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_30
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_31
+	remove_country_modifier = aet_ideas_decentralisedRule_tradeRange_32	
+
+	if = {
+		limit = {
+			decentralised_ideas = 4
+		}
+
+		if = {
+			limit = {
+				dip_tech = 32
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_32
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 31
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_31
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 30
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_30
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 29
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_29
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 28
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_28
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 27
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_27
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 26
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_26
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 25
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_25
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 24
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_24
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 23
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_23
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 22
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_22
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 21
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_21
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 20
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_20
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 19
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_19
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 18
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_18
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 17
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_17
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 16
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_16
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 15
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_15
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 14
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_14
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 13
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_13
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 12
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_12
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 11
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_11
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 10
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_10
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 9
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_9
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 8
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_8
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 7
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_7
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 6
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_6
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 5
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_5
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				dip_tech = 4
+			}
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_4
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = aet_ideas_decentralisedRule_tradeRange_3
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+}
+
+# Fires an event for count times in random provinces having a specified flag 
+# @param event id of the province event to fire for its owner 
+# @param count how often to fire it 
+# @param marker modifier that triggers selection 
+aet_ideas_fireProvinceEvent = {
+	hidden_effect = {
+		set_variable = {
+			which = aet_index
+			value = 0 
+		}
+		set_variable = {
+			which = aet_test 
+			value = $count$ 
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_test
+						value = 0 
+					}
+				}
+			}
+			set_variable = {
+				which = aet_test 
+				value = 0 			
+			}
+			log = aet_ideas_fireProvinceEvent_invalidArgument
+		}
+
+		while = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_index 
+						which = aet_test
+					}
+				}
+			}
+
+			random_province = {
+				limit = {
+					has_province_modifier = $marker$
+				}
+
+				remove_province_modifier = $marker$
+				province_event = {
+					id = $event$ 
+				}
+			}
+
+			change_variable = {
+				which = aet_index
+				value = 1 
+			}
+		}
+
+
+		every_province = {
+			limit = {
+				has_province_modifier = $marker$
+			}
+			remove_province_modifier = $marker$
+		}
+	}
+}
+
+aet_ideas_exploitationApplyPrepared = {
+	every_owned_province = {
+		if = {
+			limit = {
+				has_province_modifier = aet_ideas_colony_administrativeDevelopmentPrepared
+			}
+			remove_province_modifier = aet_ideas_colony_administrativeDevelopmentPrepared
+
+			add_province_modifier = {
+				name = aet_ideas_colony_administrativeDevelopment
+				duration = -1 
+			}
+
+			random_list = {
+				20 = {
+					add_base_tax = 3
+				}
+				20 = {
+					add_base_tax = 2 
+				}
+				45 = {
+					add_base_tax = 1 
+				}
+				30 = {
+
+				}
+			}
+
+			aet_ideas_potentialNativeRevolt = yes
+		}
+	}
+	every_owned_province = {
+		if = {
+			limit = {
+				has_province_modifier = aet_ideas_colony_diplomaticDevelopmentPrepared
+			}
+			remove_province_modifier = aet_ideas_colony_diplomaticDevelopmentPrepared
+
+			add_province_modifier = {
+				name = aet_ideas_colony_diplomaticDevelopment
+				duration = -1 
+			}
+
+			random_list = {
+				20 = {
+					add_base_production = 3
+				}
+				20 = {
+					add_base_production = 2 
+				}
+				45 = {
+					add_base_production = 1 
+				}
+				30 = {
+
+				}
+			}
+
+			aet_ideas_potentialNativeRevolt = yes
+		}
+	}
+	every_owned_province = {
+		if = {
+			limit = {
+				has_province_modifier = aet_ideas_colony_militaryDevelopmentPrepared
+			}
+			remove_province_modifier = aet_ideas_colony_militaryDevelopmentPrepared
+
+			add_province_modifier = {
+				name = aet_ideas_colony_militaryDevelopment
+				duration = -1 
+			}
+
+			random_list = {
+				20 = {
+					add_base_manpower = 3
+				}
+				20 = {
+					add_base_manpower = 2 
+				}
+				45 = {
+					add_base_manpower = 1 
+				}
+				30 = {
+
+				}
+			}
+
+			aet_ideas_potentialNativeRevolt = yes 
+		}
+	}
+	every_owned_province = {
+		if = {
+			limit = {
+				has_province_modifier = aet_ideas_colony_fortDevelopmentPrepared
+			}
+			remove_province_modifier = aet_ideas_colony_fortDevelopmentPrepared
+
+			add_province_modifier = {
+				name = aet_ideas_colony_fortDevelopment
+				duration = -1 
+			}
+
+			add_base_manpower = 1 
+		}
+	}			
+}
+
+aet_ideas_potentialNativeRevolt = {
+	random_list = {
+		5 = {
+			spawn_rebels = {
+				type = aet_native_rebels
+				size = 1
+				culture = THIS 
+				religion = THIS 
+			}
+
+			modifier = {
+				factor = 5.0 
+
+				NOT = {
+					has_owner_accepted_culture = yes 
+				}
+			}
+
+			modifier = {
+				factor = 5.0
+
+				NOT = {
+					tolerance_to_this = 0
+				}
+			}
+
+			modifier = {
+				factor = 0.5 
+
+				NOT = {
+					unrest = -5
+				}
+			}
+
+			modifier = {
+				factor = 0.1 
+
+				NOT = {
+					unrest = -10
+				}
+			}			
+		}
+
+		65 = {
+			modifier = {
+				factor = 1.2
+
+				development = 10 
+			}
+
+			modifier = {
+				factor = 1.2
+
+				development = 15 
+			}			
+
+			modifier = {
+				factor = 1.2
+
+				development = 20 
+			}			
+		}
+	}
+}
+
+aet_ideas_exploitationCalculateJointBuildCost = {
+	save_event_target_as = aet_province
+	owner = {
+		save_event_target_as = aet_colony
+		overlord = {
+			save_event_target_as = aet_investor
+		}
+	}
+
+	event_target:aet_investor = {
+		export_to_variable = {
+			which = aet_localCost 
+			value = modifier:local_build_cost
+			who = event_target:aet_province
+		}
+		export_to_variable = {
+			which = aet_colonyCost 
+			value = modifier:build_cost
+			who = event_target:aet_colony 
+		}
+		export_to_variable = {
+			which = aet_ownCost 
+			value = modifier:build_cost
+		}						
+
+		change_variable = {
+			which = aet_ownCost
+			which = aet_colonyCost
+		}
+		change_variable = {
+			which = aet_ownCost
+			which = aet_localCost
+		}
+		change_variable = {
+			which = aet_ownCost
+			value = 0.8
+		}				
+			
+
+		multiply_variable = {
+			which = aet_ownCost
+			value = $cost$
+		}
+		multiply_variable = {
+			which = aet_ownCost
+			value = -1
+		}		
+
+		[[compound]change_variable = {
+			which = $compound$
+			which = aet_ownCost
+		}]
+
+		[[increment]change_variable = {
+			which = $increment$
+			value = 1	
+		}]
+
+		[[apply_cost]aet_applyVar_int = {
+			left = add_treasury
+			var = aet_ownCost
+		}]
+	}
+}
+
+aet_ideas_exploitationBuildPrepare = {
+	if = {
+		limit = {
+			owner = {
+				overlord = {
+					has_country_flag = aet_buildingWorkshop
+				}
+			}
+		}
+		add_province_modifier = {
+			name = aet_ideas_colony_preparedWorkshop
+			duration = -1 
+			hidden = yes 
+		}
+
+		aet_ideas_exploitationCalculateJointBuildCost = {
+			cost = 100
+			apply_cost = yes 
+		}		
+	}
+
+	if = {
+		limit = {
+			owner = {
+				overlord = {
+					has_country_flag = aet_buildingCountingHouse
+				}
+			}
+		}
+		add_province_modifier = {
+			name = aet_ideas_colony_preparedCountingHouse
+			duration = -1 
+			hidden = yes 
+		}
+
+		aet_ideas_exploitationCalculateJointBuildCost = {
+			cost = 400
+			apply_cost = yes 
+		}		
+	}	
+
+
+	if = {
+		limit = {
+			owner = {
+				overlord = {
+					has_country_flag = aet_buildingManufactory
+				}
+			}
+		}
+		add_province_modifier = {
+			name = aet_ideas_colony_preparedManufactory
+			duration = -1 
+			hidden = yes 
+		}
+
+		aet_ideas_exploitationCalculateJointBuildCost = {
+			cost = 500
+			apply_cost = yes 
+		}		
+	}	
+
+
+	owner = {
+		country_event = {
+			id = aet_ideas.19
+			days = 1
+		}
+	}	
+}
+
+aet_ideas_exploitationBuildExecute = {
+	if = {
+		limit = {
+			any_owned_province = {
+				has_province_modifier = aet_ideas_colony_preparedWorkshop
+			}
+		}
+	
+		every_owned_province = {
+			limit = {
+				has_province_modifier = aet_ideas_colony_preparedWorkshop
+			}
+			hidden_effect = { remove_province_modifier = aet_ideas_colony_preparedWorkshop }
+
+			add_building = workshop
+
+			aet_ideas_potentialNativeRevolt = yes 
+		}
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				has_province_modifier = aet_ideas_colony_preparedCountingHouse
+			}
+		}	
+		every_owned_province = {
+			limit = {
+				has_province_modifier = aet_ideas_colony_preparedCountingHouse
+			}
+			hidden_effect = { remove_province_modifier = aet_ideas_colony_preparedCountingHouse }
+
+			add_building = counting_house
+
+			aet_ideas_potentialNativeRevolt = yes 
+		}	
+	}
+	if = {
+		limit = {
+			any_owned_province = {
+				has_province_modifier = aet_ideas_colony_preparedManufactory
+			}
+		}	
+		every_owned_province = {
+			limit = {
+				has_province_modifier = aet_ideas_colony_preparedManufactory
+			}
+			hidden_effect = { remove_province_modifier = aet_ideas_colony_preparedManufactory }
+
+			add_manufactory = yes
+
+			aet_ideas_potentialNativeRevolt = yes 
+		}		
+	}
+
+	overlord = {
+		clr_country_flag = aet_buildingCountingHouse
+		clr_country_flag = aet_buildingManufactory
+		clr_country_flag = aet_buildingWorkshop
+	}
+}
 
 
 # The following code works in theory and does work fast, however it makes static analysis at startup take a lot of time (>10 minutes)

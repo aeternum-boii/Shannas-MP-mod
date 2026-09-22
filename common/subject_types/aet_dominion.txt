@@ -93,18 +93,18 @@ colony = {
 	modifier_subject = {
 		modifier = aet_ideas_exploitationSubject_0
 		trigger = {
-			overlord = { 
-				exploitation_ideas = 3 
-				NOT = { exploitation_ideas = 6 }
+			overlord = {
+				has_idea = exploitation_ideas_2
+				NOT = { has_idea = exploitation_ideas_5 }
 			}
 		}
-	}
+	}	
 	modifier_subject = {
 		modifier = aet_ideas_exploitationSubject_1
 		trigger = {
 			overlord = { 
-				exploitation_ideas = 6 
-				NOT = { exploitation_ideas = 7 }
+				has_idea = exploitation_ideas_5
+				NOT = { has_idea = exploitation_ideas_6 }
 			}
 		}
 	}
@@ -112,7 +112,7 @@ colony = {
 		modifier = aet_ideas_exploitationSubject_2
 		trigger = {
 			overlord = { 
-				exploitation_ideas = 7 
+				has_idea = exploitation_ideas_6
 			}
 		}
 	}		

@@ -23,6 +23,7 @@ country_decisions = {
 			custom_tooltip = aet_ideas_fiscalShortTermMoney_tt 
 			tooltip = {
 				add_stability = -3
+				set_bankruptcy = THIS
 				add_country_modifier = {
 					name = aet_ideas_fiscalCountryRuined
 					duration = 3600
@@ -36,6 +37,17 @@ country_decisions = {
 				}
 			}
 		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.0
+				NOT = {
+					num_of_loans = 50
+				}
+			}
+		}				
 	}
 
 	aet_ideas_fiscalShortTermMoneyFireNow = {
@@ -52,6 +64,7 @@ country_decisions = {
 		effect = {
 			clr_country_flag = aet_ideas_fiscalCountryRuined
 			add_stability = -3
+			set_bankruptcy = THIS
 			add_country_modifier = {
 				name = aet_ideas_fiscalCountryRuined
 				duration = 3600
@@ -86,5 +99,78 @@ country_decisions = {
 				id = aet_ideas.3
 			}
 		}		
+
+
+		ai_will_do = {
+			factor = 1
+		}		
 	}	
+
+
+	aet_ideas_exploitationDevelopSubject = {
+		potential = {
+			has_idea_group = exploitation_ideas
+		}
+
+		allow = {
+			exploitation_ideas = 5 
+			any_subject_country = {
+				is_colonial_nation = yes 
+			}
+
+			NOT = {
+				has_country_modifier = aet_ideas_investingInTheColonies
+			}
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_exploitationDevelopSubject_tt
+			country_event = {
+				id = aet_ideas.8
+			}
+			add_country_modifier = {
+				name = aet_ideas_investingInTheColonies
+				duration = 365
+			}
+		}		
+
+
+		ai_will_do = {
+			factor = 1
+		}		
+	}	
+
+	aet_ideas_exploitationBuildInSubject = {
+		potential = {
+			has_idea_group = exploitation_ideas
+		}
+
+		allow = {
+			exploitation_ideas = 5 
+			any_subject_country = {
+				is_colonial_nation = yes 
+			}
+
+			NOT = {
+				has_country_modifier = aet_ideas_investingInTheColonies
+			}
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_exploitationBuildInSubject_tt
+			country_event = {
+				id = aet_ideas.16
+			}
+			add_country_modifier = {
+				name = aet_ideas_investingInTheColonies
+				duration = 365
+			}
+		}		
+
+		ai_will_do = {
+			factor = 1
+		}
+	}		
 }
