@@ -11,6 +11,10 @@ country_decisions = {
 		effect = {
 			set_country_flag = aet_eliteGuards_hideDecisions
 		}
+
+		ai_will_do = {
+			factor = 0
+		}
 	}
 	aet_eliteGuards_showAll= {
 		potential = {
@@ -25,6 +29,10 @@ country_decisions = {
 		effect = {
 			clr_country_flag = aet_eliteGuards_hideDecisions
 		}
+
+		ai_will_do = {
+			factor = 400
+		}	
 	}	
 	aet_eliteGuards_preloadActionCosts = {
 		potential = {
@@ -58,6 +66,20 @@ country_decisions = {
 			aet_eliteGuards_takeHalfAction = yes
 			aet_eliteGuards_increase_FL = yes
 		}
+
+		ai_will_do = {
+			factor = 400
+
+			modifier = {
+				factor = 0.0
+
+				NOT = {
+					has_country_modifier = aet_eliteGuards_FLbelow50_c
+					has_country_modifier = aet_eliteGuards_FLbelow70_c
+					has_country_modifier = aet_eliteGuards_FLbelow80_c
+				}
+			}			
+		}
 	}
 
 	aet_eliteGuards_decreaseFL = {
@@ -79,6 +101,22 @@ country_decisions = {
 			aet_eliteGuards_takeHalfAction = yes
 			aet_eliteGuards_reduce_FL = yes
 		}
+
+		ai_will_do = {
+			factor = 400
+
+			modifier = {
+				factor = 0.0
+
+				NOT = {
+					has_country_modifier = aet_eliteGuards_FLabove200_c
+					has_country_modifier = aet_eliteGuards_FLabove175_c
+					has_country_modifier = aet_eliteGuards_FLabove150_c
+					has_country_modifier = aet_eliteGuards_FLabove135_c
+					has_country_modifier = aet_eliteGuards_FLabove125_c
+				}
+			}
+		}		
 	}
 
 	aet_eliteGuards_HeavyCav = {
@@ -122,6 +160,15 @@ country_decisions = {
 				duration = -1
 			}
 		}
+
+		ai_will_do = {
+			factor = 400
+
+			modifier = {
+				factor = 0.0
+				aet_eliteGuard_cavArcherPersistentRequirements = yes
+			}
+		}
 	}
 	aet_eliteGuards_HeavyCav_remove = {
 		potential = {
@@ -138,6 +185,10 @@ country_decisions = {
 
 			remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
 			remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation_country
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
@@ -183,6 +234,15 @@ country_decisions = {
 				duration = -1
 			}
 		}
+
+		ai_will_do = {
+			factor = 400
+
+			modifier = {
+				factor = 0.0
+				aet_eliteGuard_cavArcherPersistentRequirements = yes
+			}
+		}		
 	}
 
 	aet_eliteGuards_LightCavCossack = {
@@ -211,11 +271,11 @@ country_decisions = {
 			cossacks_percentage = 0.20
 			estate_influence = {
 				estate = estate_cossacks
-				influence = 0.6
+				influence = 60
 			}
 			estate_loyalty = {
 				estate = estate_cossacks
-				loyalty = 0.6
+				loyalty = 60
 			}
 		}
 		
@@ -248,6 +308,10 @@ country_decisions = {
 
 			remove_country_modifier = aet_eliteGuards_lightCavalry_specialisation
 			remove_country_modifier = aet_eliteGuards_lightCavalry_country
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}	
 
@@ -292,6 +356,12 @@ country_decisions = {
 				duration = -1
 			}			
 		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}
 	}
 
 	aet_eliteGuards_HorseArchers_remove = {
@@ -312,6 +382,10 @@ country_decisions = {
 			remove_country_modifier = aet_eliteGuards_horseArcher_horde
 			remove_country_modifier = aet_eliteGuards_horseArcher_horde_country
 		}
+
+		ai_will_do = {
+			factor = 0
+		}		
 	}	
 
 	aet_eliteGuards_HorseArchers_nomadic = {
@@ -355,5 +429,11 @@ country_decisions = {
 				duration = -1
 			}			
 		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}		
 	}
 }

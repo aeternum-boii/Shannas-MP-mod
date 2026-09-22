@@ -1,5 +1,10 @@
 on_startup = { # Make AI actually choose them 
-	aet_ideas_removeAllIdeas = yes 
+	if = {
+		limit = {
+			NOT = { is_year = 1445 }
+		}
+		aet_ideas_removeAllIdeas = yes 
+	}
 }
 on_monthly_pulse = {
 	country_event = {

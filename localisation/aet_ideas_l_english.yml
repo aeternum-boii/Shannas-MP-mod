@@ -383,3 +383,7 @@
  aet_ideas_fiscalShortTermMoneyFireNow_desc:0 ""
 
  aet_ideas_previouslyColonised:0 "Previously Colonised"
+ aet_ideas_colony_fortDevelopment:0 "Provincial Fortification Works"
+ aet_ideas_colony_militaryDevelopment:0 "Military Establishment"
+ aet_ideas_colony_diplomaticDevelopment:0 "Mercantile Development"
+ aet_ideas_colony_administrativeDevelopment:0 "Provincial Administration"

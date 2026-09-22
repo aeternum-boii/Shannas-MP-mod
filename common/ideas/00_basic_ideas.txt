@@ -1007,7 +1007,8 @@ decentralised_ideas = {
 
 	decentralised_ideas_4 = {
 		trade_steering = 0.33 
-
+		# Trade Range: 300 
+		
 		effect = {
 			hidden_effect = {
 				aet_ideas_applyTradeRangeModifier = yes 

@@ -39,7 +39,7 @@ country_decisions = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 400
 
 			modifier = {
 				factor = 0.0
@@ -103,6 +103,14 @@ country_decisions = {
 
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 400.0 
+				any_subject_country = {
+					is_colonial_nation = yes 
+					was_player = yes 
+				}
+			}
 		}		
 	}	
 
@@ -138,6 +146,14 @@ country_decisions = {
 
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 400.0 
+				any_subject_country = {
+					is_colonial_nation = yes 
+					was_player = yes 
+				}
+			}
 		}		
 	}	
 
@@ -171,6 +187,14 @@ country_decisions = {
 
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				factor = 400.0 
+				any_subject_country = {
+					is_colonial_nation = yes 
+					was_player = yes 
+				}
+			}
 		}
 	}		
 }
