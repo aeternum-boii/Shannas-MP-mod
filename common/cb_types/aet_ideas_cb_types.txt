@@ -1,0 +1,42 @@
+cb_aet_ideas_nationalism_aod = {
+
+	prerequisites_self = {
+		full_idea_group = nationalism_ideas
+		current_age = age_of_discovery
+	}
+
+	prerequisites = {
+		culture_group_claim = FROM
+	}
+
+	war_goal = aet_ideas_nationalism_take_province_nationalist_aod
+}
+cb_aet_ideas_nationalism_aor = {
+
+	prerequisites_self = {
+		full_idea_group = nationalism_ideas
+		current_age = age_of_reformation
+	}
+
+	prerequisites = {
+		culture_group_claim = FROM
+	}
+
+	war_goal = aet_ideas_nationalism_take_province_nationalist_aor
+}
+cb_aet_ideas_nationalism = {
+
+	prerequisites_self = {
+		full_idea_group = nationalism_ideas
+		NOT = {
+			current_age = age_of_reformation
+			current_age = age_of_discovery
+		}
+	}
+
+	prerequisites = {
+		culture_group_claim = FROM
+	}
+
+	war_goal = aet_ideas_nationalism_take_province_nationalist
+}

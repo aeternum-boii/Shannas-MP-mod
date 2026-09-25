@@ -43,6 +43,13 @@ on_yearly_pulse = {
 			value = 1 
 		}
 	}
+	if = {
+		limit = {
+			has_idea_group = grandeur_ideas
+		}
+
+		aet_ideas_grandeurApplyModifiers = yes
+	}
 }
 
 on_five_year_pulse = {
@@ -113,4 +120,21 @@ on_colonial_liberation = {
 }
 on_dip_tech_taken = {
 	aet_ideas_applyTradeRangeModifier = yes 
+}
+
+# There might be some duplication here 
+on_province_culture_changed = {
+	aet_ideas_applyNationalismModifier = yes
+}
+on_province_culture_converted = {
+	aet_ideas_applyNationalismModifier = yes
+}
+on_province_owner_change = {
+	aet_ideas_applyNationalismModifier = yes
+}
+on_siege_lost_province = {
+	aet_ideas_applyNationalismModifier = yes
+}
+on_siege_won_province = {
+	aet_ideas_applyNationalismModifier = yes
 }

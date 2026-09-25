@@ -885,6 +885,521 @@ aet_ideas_exploitationBuildExecute = {
 	}
 }
 
+aet_ideas_grandeurApplyModifiers_hidden = {
+	hidden_effect = {
+		aet_ideas_grandeurApplyModifiers = yes 
+	}
+}
+
+aet_ideas_grandeurApplyModifiers = {
+	aet_ideas_grandeurRemoveAll = yes 
+
+	if = {
+		limit = {
+			grandeur_ideas = 1 
+		}
+
+		if = {
+			limit = {
+				prestige = 75
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_0_4
+				duration = -1 
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 50
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_0_3
+				duration = -1 
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 25
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_0_2
+				duration = -1 
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 0
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_0_1
+				duration = -1 
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = grandeur_ideas_0_0
+				duration = -1 
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			grandeur_ideas = 2
+		}
+
+		if = {
+			limit = {
+				prestige = 75
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_1_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 50
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_1_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 25
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_1_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 0
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_1_1
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = grandeur_ideas_1_0
+				duration = -1
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			grandeur_ideas = 3
+		}
+
+		if = {
+			limit = {
+				prestige = 75
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_2_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 50
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_2_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 25
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_2_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 0
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_2_1
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = grandeur_ideas_2_0
+				duration = -1
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			grandeur_ideas = 4
+		}
+
+		if = {
+			limit = {
+				prestige = 75
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_3_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 50
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_3_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 25
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_3_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 0
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_3_1
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = grandeur_ideas_3_0
+				duration = -1
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			grandeur_ideas = 5
+		}
+
+		if = {
+			limit = {
+				prestige = 75
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_4_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 50
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_4_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 25
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_4_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 0
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_4_1
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = grandeur_ideas_4_0
+				duration = -1
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			grandeur_ideas = 6
+		}
+
+		if = {
+			limit = {
+				prestige = 75
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_5_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 50
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_5_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 25
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_5_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 0
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_5_1
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = grandeur_ideas_5_0
+				duration = -1
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			grandeur_ideas = 7
+		}
+
+		if = {
+			limit = {
+				prestige = 75
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_6_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 50
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_6_3
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 25
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_6_2
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				prestige = 0
+			}
+
+			add_country_modifier = {
+				name = grandeur_ideas_6_1
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = grandeur_ideas_6_0
+				duration = -1
+			}
+		}
+	}	
+}
+
+aet_ideas_grandeurRemoveAll = {
+	remove_country_modifier = grandeur_ideas_0_0
+	remove_country_modifier = grandeur_ideas_0_1
+	remove_country_modifier = grandeur_ideas_0_2
+	remove_country_modifier = grandeur_ideas_0_3
+	remove_country_modifier = grandeur_ideas_0_4
+
+	remove_country_modifier = grandeur_ideas_1_0
+	remove_country_modifier = grandeur_ideas_1_1
+	remove_country_modifier = grandeur_ideas_1_2
+	remove_country_modifier = grandeur_ideas_1_3
+	remove_country_modifier = grandeur_ideas_1_4
+
+	remove_country_modifier = grandeur_ideas_2_0
+	remove_country_modifier = grandeur_ideas_2_1
+	remove_country_modifier = grandeur_ideas_2_2
+	remove_country_modifier = grandeur_ideas_2_3
+	remove_country_modifier = grandeur_ideas_2_4
+
+	remove_country_modifier = grandeur_ideas_3_0
+	remove_country_modifier = grandeur_ideas_3_1
+	remove_country_modifier = grandeur_ideas_3_2
+	remove_country_modifier = grandeur_ideas_3_3
+	remove_country_modifier = grandeur_ideas_3_4
+
+	remove_country_modifier = grandeur_ideas_4_0
+	remove_country_modifier = grandeur_ideas_4_1
+	remove_country_modifier = grandeur_ideas_4_2
+	remove_country_modifier = grandeur_ideas_4_3
+	remove_country_modifier = grandeur_ideas_4_4
+
+	remove_country_modifier = grandeur_ideas_5_0
+	remove_country_modifier = grandeur_ideas_5_1
+	remove_country_modifier = grandeur_ideas_5_2
+	remove_country_modifier = grandeur_ideas_5_3
+	remove_country_modifier = grandeur_ideas_5_4	
+
+	remove_country_modifier = grandeur_ideas_6_0
+	remove_country_modifier = grandeur_ideas_6_1
+	remove_country_modifier = grandeur_ideas_6_2
+	remove_country_modifier = grandeur_ideas_6_3
+	remove_country_modifier = grandeur_ideas_6_4		
+}
+
+aet_ideas_applyNationalismModifier = {
+	if = {
+		limit = {
+			culture = owner
+		}
+
+		if = {
+			limit = {
+				controlled_by = owner 
+			}
+
+			aet_ideas_applyNationalismModifierBasedOnIdea = {
+				controlled = yes 
+			}
+		} else = {
+			aet_ideas_applyNationalismModifierBasedOnIdea = {
+				taken = yes 
+			}
+		}
+	}
+}
+
+aet_ideas_applyNationalismModifierBasedOnIdea = {
+	[[controlled]
+			if = {
+				limit = {
+					controller = {
+						nationalism_ideas = 5 
+					}
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_nationalismProvinceModifier_1_controlled
+					duration = -1 
+				}
+			} else_if = {
+				limit = {
+					controller = {
+						nationalism_ideas = 4 
+					}
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_nationalismProvinceModifier_0_controlled
+					duration = -1 
+				}				
+			}
+	]
+
+	[[taken]
+		if = {
+			limit = {
+				controller = {
+					NOT = { has_country_flag = aet_ideas_nationalismNoUncontrolledModifier }
+				}
+			}
+
+
+			if = {
+				limit = {
+					controller = {
+						nationalism_ideas = 5 
+					}
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_nationalismProvinceModifier_1_uncontrolled
+					duration = -1 
+				}
+			} else_if = {
+				limit = {
+					controller = {
+						nationalism_ideas = 4 
+					}
+				}
+
+				add_province_modifier = {
+					name = aet_ideas_nationalismProvinceModifier_0_uncontrolled
+					duration = -1 
+				}				
+			}
+		}
+	]
+}
+
+aet_ideas_applyNationalismModifierGlobal = {
+	every_owned_province = {
+		aet_ideas_applyNationalismModifier = yes 
+	}
+}
 
 # The following code works in theory and does work fast, however it makes static analysis at startup take a lot of time (>10 minutes)
 

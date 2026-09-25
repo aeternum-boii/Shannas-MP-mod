@@ -197,4 +197,39 @@ country_decisions = {
 			}
 		}
 	}		
+
+	aet_ideas_nationalismToggleUncontrolled = {
+		potential = {
+			has_idea_group = nationalism_ideas
+		}
+
+		allow = {
+			nationalism_ideas = 4 
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_nationalismToggleUncontrolled_tt
+			if = {
+				limit = {
+					has_country_flag = aet_ideas_nationalismNoUncontrolledModifier
+				}
+
+				set_country_flag = aet_ideas_nationalismNoUncontrolledModifier
+				hidden_effect = {
+					aet_ideas_applyNationalismModifierGlobal = yes
+				}
+			} else = {
+				clr_country_flag = aet_ideas_nationalismNoUncontrolledModifier
+				hidden_effect = {
+					aet_ideas_applyNationalismModifierGlobal = yes
+				}
+			}
+			
+		}		
+
+		ai_will_do = {
+			factor = 0
+		}
+	}			
 }

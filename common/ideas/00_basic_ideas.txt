@@ -112,7 +112,7 @@ economic_ideas = { # INDUSTRIAL IDEAS IN LOC
 	}
 
 	bonus = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.10
 	}
 
 	bureaucracy = { 
@@ -122,7 +122,7 @@ economic_ideas = { # INDUSTRIAL IDEAS IN LOC
 		global_allowed_num_of_buildings = 1
 	}
 	merchant_passes = {
-		production_efficiency = 0.1
+		production_efficiency = 0.10
 	}
 	efficient_mining = {
 		expand_infrastructure_cost_modifier = -0.15
@@ -767,6 +767,7 @@ muslim_ideas = {
 	}
 	imam_schools = {
 		missionaries = 1
+		monthly_piety_accelerator = 0.05
 	}
 	gate_between_east_and_west  = {
         merchants = 1
@@ -1112,7 +1113,7 @@ statecraft_ideas = {
 	}
 
 	statecraft_ideas_6 = {
-		administrative_efficiency = 0.025
+		administrative_efficiency = 0.017
 	}
 
 	bonus = {
@@ -1245,7 +1246,7 @@ internal_affair_ideas = {
 	}
 
 	bonus = {
-		core_creation = -0.10
+		core_creation = -0.15
 	}
 
 
@@ -1662,7 +1663,7 @@ maritime_ideas = {
 		global_ship_repair = 0.33
 	}
 	merchant_marine = {
-		global_sailors_modifier = 0.100
+		global_sailors_modifier = 1.00
 		global_ship_trade_power = 0.25
 	}
 	grand_navy = {
@@ -2078,41 +2079,41 @@ exploitation_ideas = {
 societal_ideas = {
 	category = DIP
 
-	societal_ideas_0 = {
-		stability_cost_modifier = -0.15
-	}
+    societal_ideas_0 = {
+        stability_cost_modifier = -0.15
+		num_of_parliament_issues = 3
+    }
 
-	societal_ideas_1 = {
-		num_accepted_cultures = 2
-		promote_culture_cost = -0.25
-	}
+    societal_ideas_1 = {
+        monthly_reform_progress_modifier = 0.15
+    }
 
-	societal_ideas_2 = {
-		ae_impact = -0.1
-	}
+    societal_ideas_2 = {
+        ae_impact = -0.1
+    }
 
-	societal_ideas_3 = {
-		years_of_nationalism = -5
-	}
+    societal_ideas_3 = {
+        yearly_corruption = -0.1
+        female_advisor_chance = 0.25
+    }
 
-	societal_ideas_4 = {
-		global_institution_spread = 0.5
-		embracement_cost = -0.15
-	}
+    societal_ideas_4 = {
+        global_institution_spread = 0.5
+        embracement_cost = -0.15
+    }
 
-	societal_ideas_5 = {
-		global_unrest = -2.5
-	}
+    societal_ideas_5 = {
+        advisor_pool = 1
+        advisor_cost = -0.1
+    }
 
-	societal_ideas_6 = {
-		advisor_cost = -0.1
-		advisor_pool = 1
-	}
+    societal_ideas_6 = {
+        global_rebel_suppression_efficiency = 0.25
+    }
 
-
-	bonus = {
-		all_power_cost = -0.0375
-	}
+    bonus = {
+        all_power_cost = -0.0375
+    }
 
 	ai_will_do = {
 		factor = 1.0
@@ -2141,16 +2142,37 @@ grandeur_ideas = {
 
 	grandeur_ideas_0 = {
 		monthly_splendor = 2
+
+		effect = {
+			aet_ideas_grandeurApplyModifiers_hidden = yes 
+		}
+		removed_effect = {
+			aet_ideas_grandeurRemoveAll = yes 
+		}
 	}
 
 	grandeur_ideas_1 = {
 		# Inverse Scaling 
 		prestige_from_land = 1
 		prestige_from_naval = 1
+
+		effect = {
+			aet_ideas_grandeurApplyModifiers_hidden = yes 
+		}
+		removed_effect = {
+			aet_ideas_grandeurRemoveAll = yes 
+		}		
 	}
 
 	grandeur_ideas_2 = {
 		province_warscore_cost = -0.125
+
+		effect = {
+			aet_ideas_grandeurApplyModifiers_hidden = yes 
+		}
+		removed_effect = {
+			aet_ideas_grandeurRemoveAll = yes 
+		}		
 	}
 
 	grandeur_ideas_3 = {
@@ -2159,20 +2181,48 @@ grandeur_ideas = {
 		devotion = 1
 		meritocracy = 0.5
 		republican_tradition = 0.5
+
+		effect = {
+			aet_ideas_grandeurApplyModifiers_hidden = yes 
+		}
+		removed_effect = {
+			aet_ideas_grandeurRemoveAll = yes 
+		}		
 	}
 
 	grandeur_ideas_4 = {
 		great_project_upgrade_cost = -0.125
 		great_project_upgrade_time = -0.125
+
+		effect = {
+			aet_ideas_grandeurApplyModifiers_hidden = yes 
+		}
+		removed_effect = {
+			aet_ideas_grandeurRemoveAll = yes 
+		}		
 	}
 
 	grandeur_ideas_5 = {
 		advisor_cost = -0.15
+
+		effect = {
+			aet_ideas_grandeurApplyModifiers_hidden = yes 
+		}
+		removed_effect = {
+			aet_ideas_grandeurRemoveAll = yes 
+		}		
 	}
 
 	grandeur_ideas_6 = {
-		# No Scaling 
-		possible_policy = 1
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.2
+
+		effect = {
+			aet_ideas_grandeurApplyModifiers_hidden = yes 
+		}
+		removed_effect = {
+			aet_ideas_grandeurRemoveAll = yes 
+		}		
 	}
 
 	bonus = {
@@ -2200,7 +2250,7 @@ grandeur_ideas = {
 }
 
 nationalism_ideas = {
-	category = DIP
+	category = MIL # yes was intended as dip but became to mil heavy
 
 	nationalism_ideas_0 = {
 		war_exhaustion = -0.05
@@ -2216,11 +2266,16 @@ nationalism_ideas = {
 	}
 
 	nationalism_ideas_3 = {
-		# Defensiveness in primary culture: 0.25 
+		# Defensiveness in owned primary culture: 0.33 
+
+		defensiveness = 0.001
 	}
 
 	nationalism_ideas_4 = {
-		# Combat Bonus in primary culture: 1 
+		# Defense Bonus in owned primary culture: 1 
+		# modifier inverts on control loss 
+
+		enemy_core_creation = 0.25
 	}
 
 	nationalism_ideas_5 = {
@@ -2228,11 +2283,11 @@ nationalism_ideas = {
 	}
 
 	nationalism_ideas_6 = {
-		land_morale = 0.05
+		# Age Scaling Nationalism CB 
 	}
 
 	bonus = {
-		# Age Scaling Nationalism CB 
+		land_morale = 0.05
 	}
 
 	ai_will_do = {
@@ -2613,6 +2668,9 @@ mercenary_ideas = {
 	benefits_for_mercenaries = {
 		merc_leader_army_tradition = 0.5
 	}
+	nation_of_war = {
+		mercenary_discipline = 0.05
+	}		
 	seasoned_veterans = {
 		army_tradition_from_battle = 0.5
 		#mercs_do_not_cost_army_professionalism = yes # TODO AET: Test this, implement if necessary 
@@ -2621,10 +2679,7 @@ mercenary_ideas = {
 		mercenary_manpower = 0.3
 		allow_mercenary_drill = yes
 	}
-	nation_of_war = {
-		possible_condottieri = 1
-		allow_mercenaries_to_split = yes 
-	}	
+
 
 	ai_will_do = {
 		factor = 0
@@ -3181,12 +3236,14 @@ modernisation_ideas = {
 	trigger = {
 		OR = {
 			aet_is_debug = yes
-			OR = {
-				army_professionalism = 0.4
-				mil_tech = 12
-				has_idea = smithian_economics # Full Industrialisation Ideas 
+			AND = {
+				OR = {
+					army_professionalism = 0.4
+					mil_tech = 12
+					has_idea = smithian_economics # Full Industrialisation Ideas 
+				}
+				mil_tech = 7 
 			}
-			mil_tech = 7 
 		}
 	}
 
@@ -3322,32 +3379,49 @@ logistics_ideas = {
 
 	}
 
-	logistics_ideas_0 = {
-		global_supply_limit_modifier = 0.5
-	}
-	logistics_ideas_1 = {
-		movement_speed = 0.10
-	}	
-	logistics_ideas_2 = {
-		fort_maintenance_modifier = -0.15
-		land_maintenance_modifier = -0.10
-	}	
-	logistics_ideas_3 = {
-		reinforce_cost_modifier = -0.25
-	}
-	logistics_ideas_4 = {
-		land_attrition = -0.25
-	}
-	logistics_ideas_5 = {
-		global_regiment_recruit_speed = -0.15
-	}
-	logistics_ideas_6 = {
-		manpower_recovery_speed = 0.15
-	}
+    # Operational Reserves
+    logistics_ideas_0 = {
+        reserves_organisation = 0.25
+    }
 
-	bonus = {
-		land_forcelimit_modifier = 0.2
-	}	
+    # Strategic Mobility
+    logistics_ideas_1 = {
+        movement_speed = 0.25
+        enable_forced_march = yes
+    }
+
+    # Technical Genius
+    logistics_ideas_2 = {
+        land_forcelimit_modifier = 0.2
+    }
+
+    # Sustained Warfare
+    logistics_ideas_3 = {
+        reinforce_cost_modifier = -0.33
+        war_exhaustion = -0.05
+    }
+
+    # Supply Networks
+    logistics_ideas_4 = {
+        land_attrition = -0.33
+        global_supply_limit_modifier = 0.50
+    }
+
+    # Replacement System
+    logistics_ideas_5 = {
+        reinforce_speed = 0.50
+        regiment_manpower_usage = -0.10 # This does not work for regular units, but maybe we can bait someone to actually take this idea group :D 
+    }
+
+    # Rapid Deployment
+    logistics_ideas_6 = {
+        global_regiment_recruit_speed = -0.20
+        regiment_disembark_speed = 0.25
+    }
+
+    bonus = {
+        force_march_free = yes
+    }
 
 	ai_will_do = {
 		factor = 5.0

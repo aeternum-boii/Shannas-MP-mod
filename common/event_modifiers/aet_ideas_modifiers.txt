@@ -313,3 +313,170 @@ aet_ideas_previouslyColonised = {
 aet_ideas_colony_preparedWorkshop = {}
 aet_ideas_colony_preparedCountingHouse = {}
 aet_ideas_colony_preparedManufactory = {}
+
+
+grandeur_ideas_0_0 = {
+    monthly_splendor = -2
+}
+grandeur_ideas_0_1 = {
+    monthly_splendor = -1
+}
+grandeur_ideas_0_2 = {
+    monthly_splendor = 0
+}
+grandeur_ideas_0_3 = {
+    monthly_splendor = 1
+}
+grandeur_ideas_0_4 = {
+    monthly_splendor = 2
+}
+
+grandeur_ideas_1_0 = {
+    prestige_from_land = -1
+    prestige_from_naval = -1
+}
+grandeur_ideas_1_1 = {
+    prestige_from_land = -0.5
+    prestige_from_naval = -0.5
+}
+grandeur_ideas_1_2 = {
+    prestige_from_land = 0
+    prestige_from_naval = 0
+}
+grandeur_ideas_1_3 = {
+    prestige_from_land = 0.5
+    prestige_from_naval = 0.5
+}
+grandeur_ideas_1_4 = {
+    prestige_from_land = 1
+    prestige_from_naval = 1
+}
+
+grandeur_ideas_2_0 = {
+    province_warscore_cost = 0.125
+}
+grandeur_ideas_2_1 = {
+    province_warscore_cost = 0.0625
+}
+grandeur_ideas_2_2 = {
+    province_warscore_cost = 0
+}
+grandeur_ideas_2_3 = {
+    province_warscore_cost = -0.0625
+}
+grandeur_ideas_2_4 = {
+    province_warscore_cost = -0.125
+}
+
+grandeur_ideas_3_0 = {
+    legitimacy = -1
+    horde_unity = -1
+    devotion = -1
+    meritocracy = -0.5
+    republican_tradition = -0.5
+}
+grandeur_ideas_3_1 = {
+    legitimacy = -0.5
+    horde_unity = -0.5
+    devotion = -0.5
+    meritocracy = -0.25
+    republican_tradition = -0.25
+}
+grandeur_ideas_3_2 = {
+    legitimacy = 0
+    horde_unity = 0
+    devotion = 0
+    meritocracy = 0
+    republican_tradition = 0
+}
+grandeur_ideas_3_3 = {
+    legitimacy = 0.5
+    horde_unity = 0.5
+    devotion = 0.5
+    meritocracy = 0.25
+    republican_tradition = 0.25
+}
+grandeur_ideas_3_4 = {
+    legitimacy = 1
+    horde_unity = 1
+    devotion = 1
+    meritocracy = 0.5
+    republican_tradition = 0.5
+}
+
+grandeur_ideas_4_0 = {
+    great_project_upgrade_cost = 0.125
+    great_project_upgrade_time = 0.125
+}
+grandeur_ideas_4_1 = {
+    great_project_upgrade_cost = 0.0625
+    great_project_upgrade_time = 0.0625
+}
+grandeur_ideas_4_2 = {
+    great_project_upgrade_cost = 0
+    great_project_upgrade_time = 0
+}
+grandeur_ideas_4_3 = {
+    great_project_upgrade_cost = -0.0625
+    great_project_upgrade_time = -0.0625
+}
+grandeur_ideas_4_4 = {
+    great_project_upgrade_cost = -0.125
+    great_project_upgrade_time = -0.125
+}
+
+grandeur_ideas_5_0 = {
+    advisor_cost = 0.15
+}
+grandeur_ideas_5_1 = {
+    advisor_cost = 0.075
+}
+grandeur_ideas_5_2 = {
+    advisor_cost = 0
+}
+grandeur_ideas_5_3 = {
+    advisor_cost = -0.075
+}
+grandeur_ideas_5_4 = {
+    advisor_cost = -0.15
+}
+
+grandeur_ideas_6_0 = {
+	diplomatic_reputation = -2
+	improve_relation_modifier = -0.2
+}
+
+grandeur_ideas_6_1 = {
+	diplomatic_reputation = -1
+	improve_relation_modifier = -0.1
+}
+
+grandeur_ideas_6_2 = {
+	diplomatic_reputation = 0
+	improve_relation_modifier = 0
+}
+
+grandeur_ideas_6_3 = {
+	diplomatic_reputation = 1
+	improve_relation_modifier = 0.1
+}
+
+grandeur_ideas_6_4 = {
+	diplomatic_reputation = 2
+	improve_relation_modifier = 0.2
+}
+
+aet_ideas_nationalismProvinceModifier_0_controlled = {
+	defensiveness = 0.33
+}
+aet_ideas_nationalismProvinceModifier_0_uncontrolled = {
+	defensiveness = -0.33
+}
+aet_ideas_nationalismProvinceModifier_1_controlled = {
+	defensiveness = 0.33
+	local_defender_dice_roll_bonus = 1
+}
+aet_ideas_nationalismProvinceModifier_1_uncontrolled = {
+	defensiveness = -0.33
+	local_attacker_dice_roll_bonus = 1
+}
