@@ -259,7 +259,7 @@ aet_ideas_decentralisedRule_tradeRange_32 = {
 
 aet_ideas_colony_administrativeDevelopmentPrepared = {}
 aet_ideas_colony_administrativeDevelopment = {
-	development_cost_modifier = -0.05
+	local_development_cost_modifier = -0.05
 	local_unrest = -0.5 
 	local_friendly_movement_speed = 0.25
 	local_state_maintenance_modifier = -0.25 
@@ -269,7 +269,7 @@ aet_ideas_colony_administrativeDevelopment = {
 }
 aet_ideas_colony_diplomaticDevelopmentPrepared = {}
 aet_ideas_colony_diplomaticDevelopment = {
-	development_cost_modifier = -0.05
+	local_development_cost_modifier = -0.05
 	local_unrest = -0.5
 	local_ship_repair = 0.2 
 	blockade_force_required = 0.25
@@ -278,7 +278,7 @@ aet_ideas_colony_diplomaticDevelopment = {
 }
 aet_ideas_colony_militaryDevelopmentPrepared = {}
 aet_ideas_colony_militaryDevelopment = {
-	development_cost_modifier = -0.05
+	local_development_cost_modifier = -0.05
 	local_unrest = -0.5
 	local_defensiveness = 0.15
 	supply_limit_modifier = 0.15

@@ -1377,6 +1377,8 @@ country_event = {
 				which = aet_ideas_16_possibleWorkshops
 				value = 1
 			}
+
+			adm_tech = 6
 		}
 
 		set_country_flag = aet_buildingWorkshop
@@ -1394,6 +1396,8 @@ country_event = {
 				which = aet_ideas_16_possibleCountingHouse
 				value = 1
 			}
+
+			adm_tech = 18
 		}
 
 		set_country_flag = aet_buildingCountingHouse
@@ -1411,6 +1415,8 @@ country_event = {
 				which = aet_ideas_16_possibleManufactory
 				value = 1
 			}
+
+			adm_tech = 11 
 		}
 
 		set_country_flag = aet_buildingManufactory
