@@ -60,8 +60,8 @@
 
 # This is intended to be ran on daily tick or at the latest at monthly tick
 consumer_tick_vassal_tax_modifier = { 
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -82,8 +82,8 @@ consumer_tick_vassal_tax_modifier = {
 				}
 			}
 		}
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -770,8 +770,8 @@ vassal_tax_modifier_sem_reset = {
 
 # This is intended to be ran on daily tick or at the latest at monthly tick
 consumer_tick_rural_goods_produced_modifier = { 
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -792,8 +792,8 @@ consumer_tick_rural_goods_produced_modifier = {
 				}
 			}
 		}
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -1480,8 +1480,8 @@ rural_goods_produced_modifier_sem_reset = {
 
 # This is intended to be ran on daily tick or at the latest at monthly tick
 consumer_tick_urban_goods_produced_modifier = { 
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -1502,8 +1502,8 @@ consumer_tick_urban_goods_produced_modifier = {
 				}
 			}
 		}
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -2192,8 +2192,8 @@ urban_goods_produced_modifier_sem_reset = {
 
 # This is intended to be ran on daily tick or at the latest at monthly tick
 consumer_tick_mining_goods_produced_modifier = { 
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -2214,8 +2214,8 @@ consumer_tick_mining_goods_produced_modifier = {
 				}
 			}
 		}
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -2902,8 +2902,8 @@ mining_goods_produced_modifier_sem_reset = {
 
 # This is intended to be ran on daily tick or at the latest at monthly tick
 consumer_tick_plantage_goods_produced_modifier = { 
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 
@@ -2924,8 +2924,8 @@ consumer_tick_plantage_goods_produced_modifier = {
 				}
 			}
 		}
-		if { 
-			limit {
+		if = { 
+			limit = {
 				aet_is_debug = yes 
 			} 
 			# This should be a proper loc key but I am lazy 

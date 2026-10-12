@@ -83,4 +83,18 @@ country_decisions = {
 			}
 		}
 	}
+
+	guard_trigger_test = {
+		potential = {
+			aet_is_debug = yes
+		}
+
+		allow = {
+			aet_is_debug = yes
+		}
+
+		effect = {
+
+		}
+	}	
 }

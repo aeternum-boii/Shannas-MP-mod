@@ -1,0 +1,235 @@
+country_decisions = {
+	aet_ideas_fiscalShortTermMoney = {
+		potential = {
+			OR = {
+				has_idea_group = fiscal_ideas
+				aet_is_debug = yes
+			}
+			NOT = {
+				has_country_flag = aet_ideas_fiscalCountryRuined
+				has_country_modifier = aet_ideas_fiscalCountryRuined
+			}
+		}
+
+		allow = {
+			fiscal_ideas = 7 
+		}
+
+
+		effect = {
+			add_years_of_income = 5 
+			set_country_flag = aet_ideas_fiscalCountryRuined
+
+			custom_tooltip = aet_ideas_fiscalShortTermMoney_tt 
+			tooltip = {
+				add_stability = -3
+				set_bankruptcy = THIS
+				add_country_modifier = {
+					name = aet_ideas_fiscalCountryRuined
+					duration = 3600
+				}
+			}
+
+			hidden_effect = {
+				country_event = {
+					id = aet_ideas.1
+					days = 1800
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 400
+
+			modifier = {
+				factor = 0.0
+				NOT = {
+					num_of_loans = 50
+				}
+			}
+		}				
+	}
+
+	aet_ideas_fiscalShortTermMoneyFireNow = {
+		potential = {
+			has_country_flag = aet_ideas_fiscalCountryRuined
+		}
+
+		allow = {
+			fiscal_ideas = 7 
+			has_country_flag = aet_ideas_fiscalCountryRuined
+		}
+
+
+		effect = {
+			clr_country_flag = aet_ideas_fiscalCountryRuined
+			add_stability = -3
+			set_bankruptcy = THIS
+			add_country_modifier = {
+				name = aet_ideas_fiscalCountryRuined
+				duration = 3600
+			}
+		}		
+	}
+
+	aet_ideas_exploitationExploitSubject = {
+		potential = {
+			has_idea_group = exploitation_ideas
+		}
+
+		allow = {
+			exploitation_ideas = 7 
+			any_subject_country = {
+				is_colonial_nation = yes 
+				NOT = {
+					has_country_modifier = aet_ideas_exploitedSubject_2
+					liberty_desire = 75
+				}
+			}
+
+			NOT = {
+				has_country_modifier = aet_ideas_recentlyExploitedSubject
+			}
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_exploitationExploitSubject_tt
+			country_event = {
+				id = aet_ideas.3
+			}
+		}		
+
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 400.0 
+				any_subject_country = {
+					is_colonial_nation = yes 
+					was_player = yes 
+				}
+			}
+		}		
+	}	
+
+
+	aet_ideas_exploitationDevelopSubject = {
+		potential = {
+			has_idea_group = exploitation_ideas
+		}
+
+		allow = {
+			exploitation_ideas = 5 
+			any_subject_country = {
+				is_colonial_nation = yes 
+			}
+
+			NOT = {
+				has_country_modifier = aet_ideas_investingInTheColonies
+			}
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_exploitationDevelopSubject_tt
+			country_event = {
+				id = aet_ideas.8
+			}
+			add_country_modifier = {
+				name = aet_ideas_investingInTheColonies
+				duration = 365
+			}
+		}		
+
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 400.0 
+				any_subject_country = {
+					is_colonial_nation = yes 
+					was_player = yes 
+				}
+			}
+		}		
+	}	
+
+	aet_ideas_exploitationBuildInSubject = {
+		potential = {
+			has_idea_group = exploitation_ideas
+		}
+
+		allow = {
+			exploitation_ideas = 5 
+			any_subject_country = {
+				is_colonial_nation = yes 
+			}
+
+			NOT = {
+				has_country_modifier = aet_ideas_investingInTheColonies
+			}
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_exploitationBuildInSubject_tt
+			country_event = {
+				id = aet_ideas.16
+			}
+			add_country_modifier = {
+				name = aet_ideas_investingInTheColonies
+				duration = 365
+			}
+		}		
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 400.0 
+				any_subject_country = {
+					is_colonial_nation = yes 
+					was_player = yes 
+				}
+			}
+		}
+	}		
+
+	aet_ideas_nationalismToggleUncontrolled = {
+		potential = {
+			has_idea_group = nationalism_ideas
+		}
+
+		allow = {
+			nationalism_ideas = 4 
+		}
+
+
+		effect = {
+			custom_tooltip = aet_ideas_nationalismToggleUncontrolled_tt
+			if = {
+				limit = {
+					has_country_flag = aet_ideas_nationalismNoUncontrolledModifier
+				}
+
+				set_country_flag = aet_ideas_nationalismNoUncontrolledModifier
+				hidden_effect = {
+					aet_ideas_applyNationalismModifierGlobal = yes
+				}
+			} else = {
+				clr_country_flag = aet_ideas_nationalismNoUncontrolledModifier
+				hidden_effect = {
+					aet_ideas_applyNationalismModifierGlobal = yes
+				}
+			}
+			
+		}		
+
+		ai_will_do = {
+			factor = 0
+		}
+	}			
+}
