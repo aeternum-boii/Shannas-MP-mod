@@ -1,1 +1,0 @@
-namespace = aet_eliteGuards_internal

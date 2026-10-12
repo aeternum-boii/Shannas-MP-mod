@@ -10,25 +10,11 @@ on_startup = { # Make AI actually choose them
 on_yearly_pulse = {
 	if = {
 		limit = {
-			has_country_flag = aet_eliteGuards_commonSetupDone
-			NOT = { check_variable = {
-				which = aet_eliteGuards_actions_bank
-				value = 5
-			}}
-		}
-
-		change_variable = {
-			which = aet_eliteGuards_actions_bank
-			value = 1 
-		}
-	}
-	if = {
-		limit = {
 			has_idea_group = grandeur_ideas
 		}
 
 		aet_ideas_grandeurApplyModifiers = yes
-	}  
+	}	
 }
 
 on_bankruptcy = {
@@ -56,22 +42,6 @@ on_monthly_pulse = {
 	country_event = {
 		id = aet_custom_modifier_wrapping.1
 		days = 22
-	}
-}
-
-on_five_year_pulse = {
-	if = {
-		limit = {
-			aet_eliteGuards_anyEnabled = yes 
-		}
-		aet_eliteGuards_refreshAll = yes 
-	}
-	aet_ideas_refreshModifiers = yes 
-}
-
-on_bankruptcy = {
-	events = {
-		aet_ideas.1
 	}
 }
 
@@ -188,20 +158,4 @@ on_yearly_pulse_2 = {
 on_new_age = {
 	aet_ages_removeAgeTimedModifiers = yes 
 	aet_ages_refreshPulse = yes
-}
-# There might be some duplication here 
-on_province_culture_changed = {
-	aet_ideas_applyNationalismModifier = yes
-}
-on_province_culture_converted = {
-	aet_ideas_applyNationalismModifier = yes
-}
-on_province_owner_change = {
-	aet_ideas_applyNationalismModifier = yes
-}
-on_siege_lost_province = {
-	aet_ideas_applyNationalismModifier = yes
-}
-on_siege_won_province = {
-	aet_ideas_applyNationalismModifier = yes
 }
