@@ -146,4 +146,8 @@
   trade_company_punjab:0 "Punjab Charter"
   TRADE_COMPANY_PUNJAB_Root_Culture_GetName:0 "[Root.GetAdjective] Punjab Company"
   TRADE_COMPANY_PUNJAB_Trade_Company:0 "Punjab Company"
+  TRADE_COMPANY_INDOCHINA_CHARTER_COMPANY:0 "Indochinese Company"
+  trade_company_indian_ocean:0 "Indian Ocean Charter"
+  TRADE_COMPANY_INDIAN_OCEAN_CHARTER_COMPANY:0 "Indian Ocean Company"
+  trade_company_malaysia:0 "Malay Charter"
  

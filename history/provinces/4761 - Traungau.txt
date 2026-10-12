@@ -23,14 +23,8 @@ discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
 
-1444.11.11 = {
-	owner = AAE
-	controller = AAE
-	add_core = AAE
-}
 1457.11.24 = {	
 	owner = HAB
 	controller = HAB
-	remove_core = AAE
 }
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

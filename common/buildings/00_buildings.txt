@@ -814,7 +814,7 @@ regimental_camp = {
 	cost = 200
 	time = 12
 	modifier = {
-		
+		land_forcelimit = 0.125
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -840,6 +840,7 @@ regimental_camp = {
 #		}
 #	}
 	on_built = {
+		aet_flBuilding_applyCorrect = yes 
 		add_development_from_building = {
 			building = regimental_camp
 			type = manpower
@@ -1980,9 +1981,10 @@ conscription_center = {
 #	}
 
 	modifier = {
-		
+		land_forcelimit = 0.25
 	}
 	on_built = {
+		aet_flBuilding_applyCorrect = yes 
 		add_development_from_upgrading_or_building = {
 			building = conscription_center
 			obsolete_building = regimental_camp

@@ -1,8 +1,0 @@
-tm_md_delhi_claims = {
-	potential = {
-		current_age = age_of_discovery
-		tag = DLH
-	}
-	trigger = {}
-	ae_impact = -0.10
-}

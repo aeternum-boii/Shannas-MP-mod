@@ -21,3 +21,9 @@ mfp_suggestion_box = {
 mfp_monument_of_the_people = {
 	local_unrest = -2
 }
+
+HRE_Capital = {
+	global_manpower = 3
+	global_tax_income = 9
+	land_forcelimit = 6
+}

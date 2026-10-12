@@ -22,7 +22,6 @@ fort_15th = yes
 1444.11.11 = {
 	owner = TIR
 	controller = TIR
-	add_core = STY
 }
 
 1463.12.2 = {

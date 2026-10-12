@@ -27,8 +27,6 @@ discovered_by = ottoman
 } # To the Habsburgs
 
 1444.11.11 = {
-	owner = STY
-	controller = STY
 	add_core = CNO
 }
 

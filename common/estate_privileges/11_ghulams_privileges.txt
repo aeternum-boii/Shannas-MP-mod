@@ -257,6 +257,44 @@ estate_ghulams_military = {
 	}
 }
 
+estate_ghulams_advisor = {
+	icon = privilege_limited_war_support
+	max_absolutism = -5
+	influence = 0.1
+	is_valid = {
+		NOT = { religion_group = muslim }
+		NOT = {
+			total_development = 100
+		}
+	}
+	loyalty = 0.05
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	can_select = { 
+		NOT = { has_estate_privilege = estate_nobles_advisors }
+		NOT = { has_estate_privilege = estate_rajput_advisor }
+		NOT = { has_estate_privilege = estate_maratha_advisor }
+		NOT = {
+			total_development = 100
+		}
+	}
+	benefits = {
+		mil_advisor_cost = -0.15
+	}
+	ai_will_do = {
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
+	}
+}
+
 estate_ghulams_loyalty_privilege = {
 	icon = privilege_royal_authority
 	max_absolutism = -10

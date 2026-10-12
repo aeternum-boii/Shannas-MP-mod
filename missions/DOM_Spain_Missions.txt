@@ -4350,7 +4350,7 @@ dom_cas_missions_5_c = {
 		trigger = {
 			southern_luzon_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			luzon_area = {
 				type = all

@@ -1,6 +1,4 @@
 
-eyalet = {}
-core_eyalet = {}
 
 eyalet = {
 	copy_from = default
@@ -89,6 +87,7 @@ core_eyalet = {
 
 	# Properties:
 
+	can_be_annexed = yes
 	max_government_rank = 2
 
 	liberty_desire_development_ratio = 0.1
@@ -98,7 +97,7 @@ core_eyalet = {
 	naval_forcelimit_to_overlord = 0.2					# Percent of subject FL to use as base for modifiers
 	manpower_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
 	sailors_to_overlord = 0.2							# Percent of subject FL to use as base for modifiers
-	annex_cost_per_development = 6.0					# annex/integrate cost per development
+	annex_cost_per_development = 3.0					# annex/integrate cost per development
 	must_accept_cta_from_overlord = no
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes

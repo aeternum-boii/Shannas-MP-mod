@@ -9,7 +9,6 @@ capital = 192	# Dijon
 add_army_professionalism = 0.1
 historical_friend = LIE
 historical_friend = STY
-historical_friend = HAB
 historical_friend = CAS
 historical_friend = SPA
 

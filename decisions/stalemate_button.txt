@@ -9,6 +9,15 @@ country_decisions = {
                     has_country_flag = enacted_possible_stalemate_1
                 }
             }
+            any_war_enemy_country = {
+                ai = no
+            }
+            NOT = {
+                has_country_flag = enacted_possible_stalemate_2
+            }
+            NOT = {
+                has_country_flag = enacted_possible_stalemate_3
+            }
         }
         allow = {
             any_war_enemy_country = {
@@ -16,19 +25,65 @@ country_decisions = {
             }
         }
         effect = {
-            set_country_flag = enacted_possible_stalemate_1
-            set_variable = { 
-                which = st_months_passed_1
-                value = 36
-            }
-            country_event = {
-                id = stalemate_event.1
-            }
-            every_war_enemy_country = {
+            # Temporary pair identifying which player war we mean
+            save_global_event_target_as = stalemate_1_temp_a
+
+            random_war_enemy_country = {
                 limit = {
                     ai = no
                 }
+                save_global_event_target_as = stalemate_1_temp_b
+            }
+
+            # Find attacking war leader
+            every_country = {
+                limit = {
+                    is_in_war = {
+                        attacker_leader = THIS
+                        participants = event_target:stalemate_1_temp_a
+                        participants = event_target:stalemate_1_temp_b
+                    }
+                }
+
+                save_global_event_target_as = stalemate_1_attacker
+                set_country_flag = stalemate_1_attacker_anchor
+            }
+
+            # Find defending war leader
+            every_country = {
+                limit = {
+                    is_in_war = {
+                        defender_leader = THIS
+                        participants = event_target:stalemate_1_temp_a
+                        participants = event_target:stalemate_1_temp_b
+                    }
+                }
+
+                save_global_event_target_as = stalemate_1_defender
+                set_country_flag = stalemate_1_defender_anchor
+            }
+
+            clear_global_event_target = stalemate_1_temp_a
+            clear_global_event_target = stalemate_1_temp_b
+
+            # Give the counter to every human participant in that exact war
+            every_country = {
+                limit = {
+                    ai = no
+
+                    is_in_war = {
+                        participants = event_target:stalemate_1_attacker
+                        participants = event_target:stalemate_1_defender
+                    }
+                }
+
                 set_country_flag = enacted_possible_stalemate_1
+
+                set_variable = {
+                    which = st_months_passed_1
+                    value = 36
+                }
+
                 country_event = {
                     id = stalemate_event.1
                 }
@@ -39,13 +94,17 @@ country_decisions = {
         major = yes
         color = { 138 154 91 }
         potential = {
+            ai = no
             has_country_flag = enacted_possible_stalemate_1
+            NOT = {
+               has_country_flag = stalemate_1_enforced 
+            }
         }
         allow = {
             NOT = {
                 check_variable = {
                     which = st_months_passed_1
-                    value = 0
+                    value = 1
                 }
             }
         }
@@ -54,8 +113,10 @@ country_decisions = {
                 limit = {
                     has_country_flag = enacted_possible_stalemate_1
                 }
-                clr_country_flag = enacted_possible_stalemate_1
-                country_event = stalemate_event.2
+                set_country_flag = stalemate_1_enforced
+                country_event = {
+                    id = stalemate_event.2
+                }
             }
         }
     }
@@ -72,6 +133,15 @@ country_decisions = {
                     has_country_flag = enacted_possible_stalemate_2
                 }
             }
+            any_war_enemy_country = {
+                ai = no
+            }
+            NOT = {
+                has_country_flag = enacted_possible_stalemate_1
+            }
+            NOT = {
+                has_country_flag = enacted_possible_stalemate_3
+            }
         }
         allow = {
             any_war_enemy_country = {
@@ -79,19 +149,66 @@ country_decisions = {
             }
         }
         effect = {
-            set_country_flag = enacted_possible_stalemate_2
-            set_variable = { 
-                which = st_months_passed_2
-                value = 36
-            }
-            country_event = {
-                id = stalemate_event.1
-            }
-            every_war_enemy_country = {
+            # Temporary pair identifying which player war we mean
+            save_global_event_target_as = stalemate_2_temp_a
+
+            random_war_enemy_country = {
                 limit = {
                     ai = no
                 }
+                save_global_event_target_as = stalemate_2_temp_b
+            }
+
+            # Find attacking war leader
+            every_country = {
+                limit = {
+                    is_in_war = {
+                        attacker_leader = THIS
+                        participants = event_target:stalemate_2_temp_a
+                        participants = event_target:stalemate_2_temp_b
+                    }
+                }
+
+                save_global_event_target_as = stalemate_2_attacker
+                set_country_flag = stalemate_2_attacker_anchor
+            }
+
+            # Find defending war leader
+            every_country = {
+                limit = {
+                    is_in_war = {
+                        defender_leader = THIS
+                        participants = event_target:stalemate_2_temp_a
+                        participants = event_target:stalemate_2_temp_b
+                    }
+                }
+
+                save_global_event_target_as = stalemate_2_defender
+                set_country_flag = stalemate_2_defender_anchor
+            }
+
+            clear_global_event_target = stalemate_2_temp_a
+            clear_global_event_target = stalemate_2_temp_b
+
+
+            # Give the counter to every human participant in that exact war
+            every_country = {
+                limit = {
+                    ai = no
+
+                    is_in_war = {
+                        participants = event_target:stalemate_2_attacker
+                        participants = event_target:stalemate_2_defender
+                    }
+                }
+
                 set_country_flag = enacted_possible_stalemate_2
+
+                set_variable = {
+                    which = st_months_passed_2
+                    value = 36
+                }
+
                 country_event = {
                     id = stalemate_event.1
                 }
@@ -102,13 +219,17 @@ country_decisions = {
         major = yes
         color = { 138 154 91 }
         potential = {
+            ai = no
             has_country_flag = enacted_possible_stalemate_2
+            NOT = {
+               has_country_flag = stalemate_2_enforced 
+            }
         }
         allow = {
             NOT = {
                 check_variable = {
                     which = st_months_passed_2
-                    value = 0
+                    value = 1
                 }
             }
         }
@@ -117,8 +238,10 @@ country_decisions = {
                 limit = {
                     has_country_flag = enacted_possible_stalemate_2
                 }
-                clr_country_flag = enacted_possible_stalemate_2
-                country_event = stalemate_event.2
+                set_country_flag = stalemate_2_enforced
+                country_event = {
+                    id = stalemate_event.2
+                }
             }
         }
     }
@@ -138,6 +261,15 @@ country_decisions = {
                     has_country_flag = enacted_possible_stalemate_3
                 }
             }
+            any_war_enemy_country = {
+                ai = no
+            }
+            NOT = {
+                has_country_flag = enacted_possible_stalemate_1
+            }
+            NOT = {
+                has_country_flag = enacted_possible_stalemate_2
+            }
         }
         allow = {
             any_war_enemy_country = {
@@ -145,19 +277,66 @@ country_decisions = {
             }
         }
         effect = {
-            set_country_flag = enacted_possible_stalemate_3
-            set_variable = { 
-                which = st_months_passed_3
-                value = 36
-            }
-            country_event = {
-                id = stalemate_event.1
-            }
-            every_war_enemy_country = {
+            # Temporary pair identifying which player war we mean
+            save_global_event_target_as = stalemate_3_temp_a
+
+            random_war_enemy_country = {
                 limit = {
                     ai = no
                 }
+                save_global_event_target_as = stalemate_3_temp_b
+            }
+
+            # Find attacking war leader
+            every_country = {
+                limit = {
+                    is_in_war = {
+                        attacker_leader = THIS
+                        participants = event_target:stalemate_3_temp_a
+                        participants = event_target:stalemate_3_temp_b
+                    }
+                }
+
+                save_global_event_target_as = stalemate_3_attacker
+                set_country_flag = stalemate_3_attacker_anchor
+            }
+
+            # Find defending war leader
+            every_country = {
+                limit = {
+                    is_in_war = {
+                        defender_leader = THIS
+                        participants = event_target:stalemate_3_temp_a
+                        participants = event_target:stalemate_3_temp_b
+                    }
+                }
+
+                save_global_event_target_as = stalemate_3_defender
+                set_country_flag = stalemate_3_defender_anchor
+            }
+
+            clear_global_event_target = stalemate_3_temp_a
+            clear_global_event_target = stalemate_3_temp_b
+
+
+            # Give the counter to every human participant in that exact war
+            every_country = {
+                limit = {
+                    ai = no
+
+                    is_in_war = {
+                        participants = event_target:stalemate_3_attacker
+                        participants = event_target:stalemate_3_defender
+                    }
+                }
+
                 set_country_flag = enacted_possible_stalemate_3
+
+                set_variable = {
+                    which = st_months_passed_3
+                    value = 36
+                }
+
                 country_event = {
                     id = stalemate_event.1
                 }
@@ -168,13 +347,17 @@ country_decisions = {
         major = yes
         color = { 138 154 91 }
         potential = {
+            ai = no
             has_country_flag = enacted_possible_stalemate_3
+            NOT = {
+               has_country_flag = stalemate_3_enforced 
+            }
         }
         allow = {
             NOT = {
                 check_variable = {
                     which = st_months_passed_3
-                    value = 0
+                    value = 1
                 }
             }
         }
@@ -183,8 +366,10 @@ country_decisions = {
                 limit = {
                     has_country_flag = enacted_possible_stalemate_3
                 }
-                clr_country_flag = enacted_possible_stalemate_3
-                country_event = stalemate_event.2
+                set_country_flag = stalemate_3_enforced
+                country_event = {
+                    id = stalemate_event.2
+                }
             }
         }
     }

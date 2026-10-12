@@ -5502,17 +5502,19 @@ humanist_reform = {
 		}
 	}
 	trigger = {
-		has_idea = tolerance_idea
+		full_idea_group = humanist_ideas
 	}
 	has_parliament = yes
-	different_religion_acceptance = 20
-	different_religion_group_acceptance = 20
 	modifiers = {
 		legitimacy = 0.5
 		republican_tradition = 0.5
 		meritocracy = 0.5
 		monthly_reform_progress_modifier = 0.1
 		yearly_corruption = -0.1
+		relation_with_heretics = 20
+		relation_with_heathens = 20
+		reverse_relation_with_heretic_religion = 20
+		reverse_relation_with_heathen_religion = 20
 	}
 	ai = {
 		factor = 1

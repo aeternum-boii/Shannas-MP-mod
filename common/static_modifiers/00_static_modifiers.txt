@@ -1515,20 +1515,17 @@ gbr_colonial_investment = {
 
 crown_colony_overlord = {
 	merchants = 1
-	colonists = 1
 	global_trade_power = 0.05
 }
 
 private_enterprise_overlord = {
 	merchants = 1
-	colonists = 1
 	global_trade_power = 0.05
 	global_tariffs = 0.05
 }
 
 self_governing_colony_overlord = {
 	merchants = 1
-	colonists = 1
 	global_trade_power = 0.05
 	global_tariffs = -0.10
 }
@@ -1536,7 +1533,6 @@ self_governing_colony_overlord = {
 crown_colony_subject = {
 	global_autonomy = -0.1
 	global_colonial_growth = 10
-	colonists = -4
 }
 
 private_enterprise_subject = {
@@ -1544,15 +1540,12 @@ private_enterprise_subject = {
 	global_trade_goods_size_modifier = 0.25
 	naval_tradition_from_trade = 0.1
 	ship_power_propagation = 0.1
-	governing_capacity = 200
-	governing_capacity_modifier = 0.50
-	colonists = -4
 }
 
 self_governing_colony_subject = {
-	colonists = -4
 	development_cost = -0.25
 	liberty_desire = 25
+	colonists = 1
 }
 
 march_subject = {
@@ -2311,7 +2304,7 @@ expanded_infrastructure = {
 	local_build_time = -0.05
 	province_trade_power_modifier = 0.05
 	trade_goods_size_modifier = 0.05
-	local_governing_cost_increase = 10
+	local_governing_cost_increase = 15
 	local_governing_cost = 0.1
 	local_great_project_upgrade_cost = -0.05
 }

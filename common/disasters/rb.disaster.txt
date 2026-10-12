@@ -2,6 +2,9 @@ rb_country_collapse = {
 	potential = {
 		governing_capacity_percentage = 0.9
 		corruption = 15
+		NOT = {
+			government_reform = banco_dei_medici_reform
+		}
 	}
 
 	can_start={	

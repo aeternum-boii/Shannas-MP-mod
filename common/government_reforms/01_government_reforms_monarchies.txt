@@ -1035,7 +1035,7 @@ ottoman_government = {
 		unjustified_demands = -0.1
 		legitimacy = 0.5
 		max_absolutism = 5
-		governing_capacity = 50
+		governing_capacity = 150
 	}
 
 	removed_effect = {

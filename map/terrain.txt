@@ -180,7 +180,7 @@ categories =  {
 		sound_type = mountains
 
 		movement_cost = 1.40
-		defence = 0.6
+		defence = 1
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
@@ -324,7 +324,7 @@ categories =  {
 		sound_type = mountains
 
 		movement_cost = 1.5
-		defence = 1.2
+		defence = 2
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.75
 		supply_limit = 4
@@ -519,12 +519,12 @@ categories =  {
 		sound_type = forest
 
 		movement_cost = 1.3
-		defence = 1
+		defence = 2
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
 		combat_width = -0.25
-		garrison_growth = 0.2
+		garrison_growth = 0.5
 		local_defensiveness = 0.6
 
 		terrain_override = {

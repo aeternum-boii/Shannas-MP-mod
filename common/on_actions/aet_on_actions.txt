@@ -6,27 +6,6 @@ on_startup = { # Make AI actually choose them
 		aet_ideas_removeAllIdeas = yes 
 	}
 }
-on_monthly_pulse = {
-	country_event = {
-		id = aet_custom_modifier_wrapping.1
-		days = 1
-	}
-	
-	country_event = {
-		id = aet_custom_modifier_wrapping.1
-		days = 8
-	}
-	
-	country_event = {
-		id = aet_custom_modifier_wrapping.1
-		days = 15
-	}
-	
-	country_event = {
-		id = aet_custom_modifier_wrapping.1
-		days = 22
-	}
-}
 
 on_yearly_pulse = {
 	if = {
@@ -49,6 +28,34 @@ on_yearly_pulse = {
 		}
 
 		aet_ideas_grandeurApplyModifiers = yes
+	}  
+}
+
+on_bankruptcy = {
+	events = {
+		aet_ideas.1
+	}
+}
+
+on_monthly_pulse = {
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 1
+	}
+	
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 8
+	}
+	
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 15
+	}
+	
+	country_event = {
+		id = aet_custom_modifier_wrapping.1
+		days = 22
 	}
 }
 
@@ -118,10 +125,70 @@ on_colonial_liberation = {
 			}			
 		}
 }
+
+on_five_year_pulse_2 = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				has_building = regimental_camp
+				has_building = conscription_center
+			}
+		}
+		aet_flBuilding_removeAll = yes
+		aet_flBuilding_applyCorrect = yes
+	}
+}
+
+
 on_dip_tech_taken = {
 	aet_ideas_applyTradeRangeModifier = yes 
 }
 
+on_concentrate_development = {
+	aet_flBuilding_applyCorrect = yes 
+}
+
+on_dip_development = {
+	aet_flBuilding_applyCorrect = yes
+}
+on_dip_exploited = {
+	aet_flBuilding_applyCorrect = yes
+}
+
+on_mil_development = {
+    aet_flBuilding_applyCorrect = yes
+}
+on_mil_exploited = {
+    aet_flBuilding_applyCorrect = yes
+}
+
+on_adm_development = {
+    aet_flBuilding_applyCorrect = yes
+}
+on_adm_exploited = {
+    aet_flBuilding_applyCorrect = yes
+}
+
+on_loan_repaid = {
+	on_loan_repaid_estate_privileges_effect = yes
+	if = {
+		limit = { 
+			THIS = {
+				fiscal_ideas = 2 
+			}
+		}
+		THIS = { add_inflation = -0.05 }
+	}
+}
+
+on_yearly_pulse_2 = {
+	aet_ages_refreshPulse = yes 
+}
+
+on_new_age = {
+	aet_ages_removeAgeTimedModifiers = yes 
+	aet_ages_refreshPulse = yes
+}
 # There might be some duplication here 
 on_province_culture_changed = {
 	aet_ideas_applyNationalismModifier = yes
