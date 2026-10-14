@@ -986,6 +986,85 @@ eastern_ideas = {
 	}
 }
 
+jewish_ideas = {
+	category = ADM
+
+	trigger = {
+		religion_group = eastern
+
+        NOT = {
+			has_idea_group = humanist_ideas
+        }
+	}
+
+	jewish_ideas_0 = {
+		interest = -1
+	}
+	jewish_ideas_1 = { 
+		missionaries = 1
+		missionary_maintenance_cost = -0.5
+	}
+	jewish_ideas_2 = {
+		prestige_per_development_from_conversion = 0.10
+		church_power_modifier = 0.25
+	}
+	jewish_ideas_3 = {
+		build_cost = -0.10
+	}
+	jewish_ideas_4 = {
+		tolerance_own = 3
+	}
+	jewish_ideas_5 = {
+		global_missionary_strength = 0.03
+	}
+	jewish_ideas_6 = {
+		land_morale = 0.075
+	}
+
+	bonus = {
+		church_loyalty_modifier = 0.10
+	}	
+
+	ai_will_do = {
+		factor = 4.25
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+		modifier = {
+			factor = 1.5
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				religion = buddhism
+				religion = confucianism
+			}
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religious_unity = 0.9 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religious_unity = 0.75 }
+		}
+		modifier = {
+			factor = 3.5
+			is_subject = yes
+		}
+		modifier = {
+			factor = 5.0
+			has_idea_group = theocracy_gov_ideas
+		}
+		modifier = {
+			factor = 1000.0
+			has_reform = theocratic_government
+		}
+	}
+}
+
 decentralised_ideas = {
 	category = ADM 
 
@@ -3193,14 +3272,15 @@ theocracy_gov_ideas = {
 		tolerance_own = 3
 	}
 	martyrs = {
-		land_morale = 0.025 # TODO AET: 
+		land_morale = 0.025 
 
 		# when fighting heretics or heathens:
-		# land_morale = 0.075
+		# land_morale = 0.05
 
 		# when fightings heathens:
-		# shock_damage_received = -0.05
-		# fire_damage_received = -0.05
+		# land_morale = 0.025
+		# shock_damage_received = -0.025
+		# fire_damage_received = -0.025
 	}	
 	flesh_is_weak = {
 		manpower_in_true_faith_provinces = 0.15
@@ -3297,7 +3377,7 @@ modernisation_ideas = {
 				OR = {
 					army_professionalism = 0.4
 					mil_tech = 12
-					has_idea = smithian_economics # Full Industrialisation Ideas 
+					full_idea_group = economic_ideas
 				}
 				mil_tech = 7 
 			}

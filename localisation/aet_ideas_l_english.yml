@@ -95,7 +95,7 @@
  exploitation_ideas_subject_2:0 "Colonial Commercial Extraction"
  
  
- societal_ideas:0 "Social Ideas"
+ societal_ideas:0 "Societal Ideas"
  societal_ideas_bonus:0 "Social Cohesion"
  societal_ideas_0:0 "Social Stability"
  societal_ideas_0_desc:0 "A stable society is the foundation upon which all other achievements rest. By addressing the causes of social unrest and maintaining public confidence, we can preserve stability at a lower cost."
@@ -116,19 +116,19 @@
  grandeur_ideas:0 "Grandeur Ideas"
  grandeur_ideas_bonus:0 "Permanent Prestige"
  grandeur_ideas_0:0 "Splendour of the Court"
- grandeur_ideas_0_desc:0 "The magnificence of the state reflects the power of its ruler. Grand ceremonies, impressive institutions and lavish displays of wealth enhance the splendour of our realm."
+ grandeur_ideas_0_desc:0 "The magnificence of the state reflects the power of its ruler. Grand ceremonies, impressive institutions and lavish displays of wealth enhance the splendour of our realm.\n\nScaling with our Prestige (0x at 0 - 2x at 100):"
  grandeur_ideas_1:0 "Glory in War"
- grandeur_ideas_1_desc:0 "Victory is one of the most visible measures of a nation's greatness. Our armies and fleets shall ensure that every triumph adds to the prestige of the realm."
+ grandeur_ideas_1_desc:0 "Victory is one of the most visible measures of a nation's greatness. Our armies and fleets shall ensure that every triumph adds to the prestige of the realm.\n\nInversely Scaling with our Prestige (2x at 0 - 0x at 100):"
  grandeur_ideas_2:0 "Imposing Power"
- grandeur_ideas_2_desc:0 "A nation renowned for its greatness is feared as much as it is respected. The reputation of our power makes our territorial demands more difficult for our enemies to resist."
+ grandeur_ideas_2_desc:0 "A nation renowned for its greatness is feared as much as it is respected. The reputation of our power makes our territorial demands more difficult for our enemies to resist.\n\nScaling with our Prestige (0x at 0 - 2x at 100):"
  grandeur_ideas_3:0 "Dynastic Prestige"
- grandeur_ideas_3_desc:0 "The legitimacy of our institutions is inseparable from the grandeur of the state they represent. By cultivating the traditions and reputation of our government, we strengthen every form of authority upon which our realm rests."
+ grandeur_ideas_3_desc:0 "The legitimacy of our institutions is inseparable from the grandeur of the state they represent. By cultivating the traditions and reputation of our government, we strengthen every form of authority upon which our realm rests.\n\nScaling with our Prestige (0x at 0 - 2x at 100):"
  grandeur_ideas_4:0 "Monuments to Greatness"
- grandeur_ideas_4_desc:0 "Great rulers leave behind great works. By investing in the monuments and great projects that embody our power, we can construct and improve them with considerably less expense and delay."
+ grandeur_ideas_4_desc:0 "Great rulers leave behind great works. By investing in the monuments and great projects that embody our power, we can construct and improve them with considerably less expense and delay.\n\nScaling with our Prestige (0x at 0 - 2x at 100):"
  grandeur_ideas_5:0 "Distinguished Court"
- grandeur_ideas_5_desc:0 "A prestigious court attracts talented individuals from across the world. The fame of our realm allows us to employ distinguished advisers without bearing their full customary expense."
+ grandeur_ideas_5_desc:0 "A prestigious court attracts talented individuals from across the world. The fame of our realm allows us to employ distinguished advisers without bearing their full customary expense.\n\nScaling with our Prestige (0x at 0 - 2x at 100):"
  grandeur_ideas_6:0 "Diplomatic Favour"
- grandeur_ideas_6_desc:0 "Prestige creates influence beyond the battlefield. The reputation of our realm gives our diplomats greater freedom to establish favourable agreements and pursue additional policies."
+ grandeur_ideas_6_desc:0 "Prestige creates influence beyond the battlefield. The reputation of our realm gives our diplomats greater freedom to establish favourable agreements and pursue additional policies.\n\nScaling with our Prestige (0x at 0 - 2x at 100):"
  grandeur_ideas_bonus_desc:0 "The accumulated prestige of our realm has become permanent. Our reputation alone is sufficient to command respect among foreign powers."
  
  
@@ -141,13 +141,13 @@
  nationalism_ideas_2:0 "National Mobilisation"
  nationalism_ideas_2_desc:0 "Every citizen has a role to play in defending the nation. A strong sense of national duty allows us to maintain our armed forces at a lower cost."
  nationalism_ideas_3:0 "Defence of the Homeland"
- nationalism_ideas_3_desc:0 "The people are most determined to defend the lands they consider their own. Provinces sharing our primary culture will therefore fight with considerably greater defensive resolve."
+ nationalism_ideas_3_desc:0 "The people are most determined to defend the lands they consider their own. Provinces sharing our primary culture will therefore fight with considerably greater defensive resolve.\n\nIn Primary Culture Provinces:\n    - Fort Defense: §G+50%§!\n    - National Tax Modifier: §G+35%§!"
  nationalism_ideas_4:0 "National Martial Spirit"
- nationalism_ideas_4_desc:0 "The struggle to defend the nation produces soldiers who fight with exceptional determination. Armies operating within the heartland of our national culture gain a significant advantage in combat."
+ nationalism_ideas_4_desc:0 "The struggle to defend the nation produces soldiers who fight with exceptional determination. Armies operating within the heartland of our national culture gain a significant advantage in combat.\n\nIn Primary Culture Provinces:\n    - Hostile Movement Speed: §G-25%§!\n    - Goods Produced: §G+35%§!"
  nationalism_ideas_5:0 "Citizen Soldiers"
  nationalism_ideas_5_desc:0 "The population of our national heartland considers military service a duty owed to the nation. Our primary-culture provinces can consequently provide a far greater reserve of manpower."
  nationalism_ideas_6:0 "Patriotic Armies"
- nationalism_ideas_6_desc:0 "The national cause gives soldiers a reason to fight beyond simple obedience. A patriotic army possesses greater morale and is less easily broken on the battlefield."
+ nationalism_ideas_6_desc:0 "The national cause gives soldiers a reason to fight beyond simple obedience. A patriotic army possesses greater morale and is less easily broken on the battlefield.\n\nUnlocks an age scaling Nationalism CB."
  
  
  leadership_ideas:0 "Leadership Ideas"
@@ -165,9 +165,23 @@
  leadership_ideas_5:0 "Fleet Manoeuvres"
  leadership_ideas_5_desc:0 "Naval warfare demands commanders capable of positioning their fleets under rapidly changing conditions. Skilled admirals allow our ships to manoeuvre more effectively during battle."
  leadership_ideas_6:0 "Offensive Command"
- leadership_ideas_6_desc:0 "An army's firepower is wasted without commanders capable of directing it. Officers trained in offensive warfare ensure that our forces make effective use of their weapons."
+ leadership_ideas_6_desc:0 "An army's firepower is wasted without commanders capable of directing it. Officers trained in offensive warfare ensure that our forces make effective use of their weapons.\n\nUnlocks Decisions to upsize our Military Academy, granting +1 Maximum Admiral and General Pips at the highest level."
  leadership_ideas_bonus_desc:0 "Our command institutions have produced a generation of exceptional officers. Both armies and fleets benefit from commanders whose skill has been refined through experience."
  
+ aet_ideas_militaryAcademy_0:0 "Military Academy"
+ aet_ideas_militaryAcademy_1:0 "Military Academy"
+ aet_ideas_militaryAcademy_2:0 "Military Academy"
+ aet_ideas_militaryAcademy_3:0 "Military Academy"
+ aet_ideas_militaryAcademy_4:0 "Military Academy"
+ aet_ideas_militaryAcademy_5:0 "Military Academy"
+
+ aet_ideas_establishMilAcademy_title:0 "Establish a Military Academy"
+ aet_ideas_establishMilAcademy_desc:0 ""
+ aet_ideas_establishMilAcademy_tt:0 "Permanently Unlocks Leadership Ideas"
+ aet_ideas_improveMilAcademy_title:0 "Improve our Military Academy"
+ aet_ideas_improveMilAcademy_desc:0 ""
+ aet_ideas_disbandMilAcademy_title:0 "Disband our Military Academy"
+ aet_ideas_disbandMilAcademy_desc:0 ""
  
  modernisation_ideas:0 "Modernisation Ideas"
  modernisation_ideas_bonus:0 "Professional Military"
@@ -186,6 +200,7 @@
  modernisation_ideas_6:0 "Modern Tactics"
  modernisation_ideas_6_desc:0 "The battlefield is constantly changing. By continually adapting our doctrine to new weapons and methods of warfare, our armies can maintain an advantage over less progressive enemies."
  
+ aet_ideas_modernisationTactics_aod:0 "Age of Disovery Decreased Military Tactics (gets removed in Age of Reformation)"
  
  militarism_ideas:0 "Militarism Ideas"
  militarism_ideas_bonus:0 "Militarised Society"
@@ -222,6 +237,9 @@
  logistics_ideas_5_desc:0 "A functioning military bureaucracy can recruit and equip new soldiers without unnecessary delays. Standardised procedures allow new regiments to be raised more efficiently."
  logistics_ideas_6:0 "Manpower Administration"
  logistics_ideas_6_desc:0 "The reserves of the nation must be managed as carefully as any other resource. Efficient recruitment and administration allow manpower reserves to recover more rapidly." 
+
+ aet_ideas_divineHeretics:0 "Divine Ideas: At war with Heretics or Heathens"
+ aet_ideas_divineHeathens:0 "Divine Ideas: At war with Heathens"
 
  aet_ideas_navalMarines:0 "Naval Ideas Marine Modifier"
  
@@ -387,3 +405,42 @@
  aet_ideas_colony_militaryDevelopment:0 "Military Establishment"
  aet_ideas_colony_diplomaticDevelopment:0 "Mercantile Development"
  aet_ideas_colony_administrativeDevelopment:0 "Provincial Administration"
+
+ aet_ideas_divine_holyOrderKnightsHospitaller:0 "Knights Hospitaller"
+ aet_ideas_divine_holyOrderKnightsHospitaller_open:0 "Knights Hospitaller"
+ 
+ aet_ideas_divine_holyOrderOfTheHolySepulchre:0 "Order of the Holy Sepulchre"
+ aet_ideas_divine_holyOrderOfTheHolySepulchre_open:0 "Order of the Holy Sepulchre"
+ 
+ aet_ideas_divine_holyOrderOfLazarus:0 "Order of Saint Lazarus"
+ aet_ideas_divine_holyOrderOfLazarus_open:0 "Order of Saint Lazarus"
+ 
+ aet_ideas_divine_holyOrderTeutonicKnights:0 "Teutonic Order"
+ aet_ideas_divine_holyOrderTeutonicKnights_open:0 "Teutonic Order"
+ 
+ aet_ideas_divine_holyOrderQizilbash:0 "Qizilbash"
+ aet_ideas_divine_holyOrderQizilbash_open:0 "Qizilbash"
+ 
+ aet_ideas_divine_holyOrderBektashi:0 "Bektashi Order"
+ aet_ideas_divine_holyOrderBektashi_open:0 "Bektashi Order"
+ 
+ aet_ideas_divine_holyOrderGhazis:0 "Ghazi Warriors"
+ aet_ideas_divine_holyOrderGhazis_open:0 "Ghazi Warriors"
+ 
+ aet_ideas_divine_holyOrderStratiotai:0 "Stratiotai"
+ aet_ideas_divine_holyOrderStratiotai_open:0 "Stratiotai"
+ 
+ aet_ideas_divine_holyOrderSohei:0 "Sohei"
+ aet_ideas_divine_holyOrderSohei_open:0 "Sohei"
+ 
+ aet_ideas_divine_holyOrderShugendoWarriors:0 "Shugendo Warriors"
+ aet_ideas_divine_holyOrderShugendoWarriors_open:0 "Shugendo Warriors"
+ 
+ aet_ideas_divine_holyOrderJomsvikings:0 "Jomsvikings"
+ aet_ideas_divine_holyOrderJomsvikings_open:0 "Jomsvikings"
+ 
+ aet_ideas_divine_holyOrderImmortals:0 "Immortals"
+ aet_ideas_divine_holyOrderImmortals_open:0 "Immortals"
+ 
+ aet_ideas_divine_holyOrderNagaWarriors:0 "Naga Warriors"
+ aet_ideas_divine_holyOrderNagaWarriors_open:0 "Naga Warriors" 

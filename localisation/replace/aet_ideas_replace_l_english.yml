@@ -1,2 +1,5 @@
 ﻿l_english:
  efficient_mining_desc: "Issue a decree to refine every aspect of metal mining within our domain, in an effort to regulate its presence in our markets."
+ economic_ideas: "Industrial Ideas"
+ martyrs_desc: "A martyr is someone who understands that dying in behalf of their god is the highest of honors. The people of our land keep their faith close to their hearts and are always keen to join our cause.\n\nWhile being at war with Heretics or Heathens:\n    - Morale of Armies: §G+5%§!\nWhile being at war with Heathens:\n    - Morale of Armies: §G+2.5%§!\n    - Shock Damage Received: §G-2.5%§!\n    - Fire Damage Received: §G-2.5%§!"
+ flesh_is_weak_desc: "The flesh is weak, the soul is not. Our armies have learned to fight as if they shared the same soul, and thus their morale shall never be broken.\n\nEnables recruitment of Holy Orders when at war with Heretics or Heathens."

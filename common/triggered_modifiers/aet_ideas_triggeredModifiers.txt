@@ -23,3 +23,41 @@ aet_ideas_innoAdvisorCost_1 = {
 
 	advisor_cost = -0.15
 }
+
+aet_ideas_divineHeathens = {
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+	}
+
+	trigger = {
+		has_idea = martyrs
+
+		any_war_enemy_country = {
+			NOT = {
+				religion_group = ROOT
+			}
+		}
+	}
+
+	land_morale = 0.025
+	shock_damage_received = -0.025
+	fire_damage_received = -0.025	
+}
+
+aet_ideas_divineHeathens = {
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+	}
+
+	trigger = {
+		has_idea = martyrs
+
+		any_war_enemy_country = {
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+
+	land_morale = 0.05	
+}
