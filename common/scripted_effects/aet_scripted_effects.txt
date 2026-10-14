@@ -1243,6 +1243,7 @@ aet_ages_removeAgeTimedModifiers_age_of_discovery = {
 	remove_country_modifier = aet_ages_aod_turkeySiege
 	remove_country_modifier = aet_ages_aod_veniceTradeships
 	remove_country_modifier = aet_ages_aod_vijayanagarLeaders
+	remove_country_modifier = aet_ideas_modernisationTactics_aod
 }
 aet_ages_aor_auditGovernment = {
 	if = {

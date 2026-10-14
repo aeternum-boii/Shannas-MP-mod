@@ -10,7 +10,7 @@ aet_ideas_innoAdvisorCost_0 = {
 		NOT = { innovativeness = 75 }
 	}
 
-	advisor_cost = 0.10
+	advisor_cost = -0.10
 }
 aet_ideas_innoAdvisorCost_1 = {
 	potential = {
@@ -21,5 +21,5 @@ aet_ideas_innoAdvisorCost_1 = {
 		innovativeness = 75 
 	}
 
-	advisor_cost = 0.15
+	advisor_cost = -0.15
 }

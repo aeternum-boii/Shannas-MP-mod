@@ -1333,6 +1333,12 @@ aet_ideas_applyNationalismModifier = {
 }
 
 aet_ideas_applyNationalismModifierBasedOnIdea = {
+	remove_province_modifier = aet_ideas_nationalismProvinceModifier_0_controlled
+	remove_province_modifier = aet_ideas_nationalismProvinceModifier_1_controlled
+	remove_province_modifier = aet_ideas_nationalismProvinceModifier_0_uncontrolled
+	remove_province_modifier = aet_ideas_nationalismProvinceModifier_1_uncontrolled
+
+
 	[[controlled]
 			if = {
 				limit = {
@@ -1398,6 +1404,46 @@ aet_ideas_applyNationalismModifierBasedOnIdea = {
 aet_ideas_applyNationalismModifierGlobal = {
 	every_owned_province = {
 		aet_ideas_applyNationalismModifier = yes 
+	}
+}
+
+aet_ideas_leadershipRemoveMilAcademy = {
+	if = {
+		limit = {
+			has_country_modifier = aet_ideas_militaryAcademy_0
+		}
+
+		remove_country_modifier = aet_ideas_militaryAcademy_0
+	} else_if = {
+		limit = {
+			has_country_modifier = aet_ideas_militaryAcademy_1
+		}
+
+		remove_country_modifier = aet_ideas_militaryAcademy_1
+	} else_if = {
+		limit = {
+			has_country_modifier = aet_ideas_militaryAcademy_2
+		}
+
+		remove_country_modifier = aet_ideas_militaryAcademy_2
+	} else_if = {
+		limit = {
+			has_country_modifier = aet_ideas_militaryAcademy_3
+		}
+
+		remove_country_modifier = aet_ideas_militaryAcademy_3
+	} else_if = {
+		limit = {
+			has_country_modifier = aet_ideas_militaryAcademy_4
+		}
+
+		remove_country_modifier = aet_ideas_militaryAcademy_4
+	} else_if = {
+		limit = {
+			has_country_modifier = aet_ideas_militaryAcademy_5
+		}
+
+		remove_country_modifier = aet_ideas_militaryAcademy_5
 	}
 }
 

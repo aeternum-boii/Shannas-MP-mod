@@ -1,7 +1,29 @@
 country_decisions = {
-	vassal_tax_test = {
+	aet_debug_toggleSemTests = {
+		potential = {
+			aet_is_debug = yes
+		}
+
+		allow = {
+			
+		}
+
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = aet_debug_semTest 
+				}
+				clr_global_flag = aet_debug_semTest 
+			} else = {
+				set_global_flag = aet_debug_semTest
+			}
+
+		}
+	}
+	aet_debug_vassal_tax_test = {
 		potential = {
 			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
 		}
 		
 		allow = { # UI I guess 
@@ -16,9 +38,10 @@ country_decisions = {
 		}
 	}
 	
-	rural_goods_test = {
+	aet_debug_rural_goods_test = {
 		potential = {
 			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
 		}
 		
 		allow = { # UI I guess 
@@ -33,9 +56,10 @@ country_decisions = {
 		}
 	}
 	
-	urban_goods_test = {
+	aet_debug_urban_goods_test = {
 		potential = {
 			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
 		}
 		
 		allow = { # UI I guess 
@@ -50,9 +74,10 @@ country_decisions = {
 		}
 	}
 	
-	mining_goods_test = {
+	aet_debug_mining_goods_test = {
 		potential = {
 			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
 		}
 		
 		allow = { # UI I guess 
@@ -67,9 +92,10 @@ country_decisions = {
 		}
 	}
 	
-	plantage_goods_test = {
+	aet_debug_plantage_goods_test = {
 		potential = {
 			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
 		}
 		
 		allow = { # UI I guess 
@@ -83,18 +109,4 @@ country_decisions = {
 			}
 		}
 	}
-
-	guard_trigger_test = {
-		potential = {
-			aet_is_debug = yes
-		}
-
-		allow = {
-			aet_is_debug = yes
-		}
-
-		effect = {
-
-		}
-	}	
 }

@@ -401,3 +401,15 @@ aet_ages_aorv_russianEmpire = {
 aet_ages_aorv_universities = {
     all_power_cost = -0.025
 }
+
+
+aet_debug_armySupport = {
+    land_forcelimit = 100
+    global_manpower = 1000
+    manpower_recovery_speed = 100
+    global_supply_limit_modifier = 10000
+    land_attrition = -5
+    recover_army_morale_speed = 500
+    global_regiment_cost = -1
+    movement_speed = 10
+}

@@ -1,3 +1,13 @@
 aet_ideas_hasExploitationModifier = {
 	always = no 
 }
+aet_ideas_hasMilAcademy = {
+	OR = {
+		has_country_modifier = aet_ideas_militaryAcademy_0
+		has_country_modifier = aet_ideas_militaryAcademy_1
+		has_country_modifier = aet_ideas_militaryAcademy_2
+		has_country_modifier = aet_ideas_militaryAcademy_3
+		has_country_modifier = aet_ideas_militaryAcademy_4
+		has_country_modifier = aet_ideas_militaryAcademy_5
+	}
+}
