@@ -241,7 +241,7 @@ aet_eliteGuards_checkDecisions = {
 
 aet_eliteGuards_cleanup = {
 	if = {
-		limit {
+		limit = {
 			[[conditional] NOT = {
 				check_variable = {
 					which = aet_eliteGuards_inf_enable

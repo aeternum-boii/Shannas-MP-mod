@@ -2402,6 +2402,7 @@ is_not_free_merc_company = {
 		NOT = { mercenary_company = aet_ideas_divine_holyOrderJomsvikings }
 		NOT = { mercenary_company = aet_ideas_divine_holyOrderImmortals }
 		NOT = { mercenary_company = aet_ideas_divine_holyOrderNagaWarriors }
+		NOT = { mercenary_company = aet_ideas_divine_barKohba }
 	}
 } 
 

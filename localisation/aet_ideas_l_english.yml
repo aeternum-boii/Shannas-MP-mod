@@ -262,13 +262,7 @@
  
  aet_ideas_historyOfExploitation:0 "History of Exploitation"
  aet_ideas_historyOfExploitation_desc:0 "Generations of extraction have left their mark upon this territory. The infrastructure and institutions established under colonial rule continue to provide economic benefits, but the legacy of exploitation remains a source of resentment and instability."
- 
- aet_dominion_subjectModifier:0 "Dominion Administration"
- aet_dominion_subjectModifier_desc:0 "Our former colonial possessions retain considerable autonomy while benefiting from access to our markets and institutions."
- 
- aet_dominion_overlordModifier:0 "Dominion Relations"
- aet_dominion_overlordModifier_desc:0 "Our former colony has been transformed into a Dominion. Although we have relinquished direct control, its continued prosperity remains beneficial to our state."
- 
+
  aet_ideas_investingInTheColonies:0 "Investing in the Colonies"
  aet_ideas_investingInTheColonies_desc:0 ""
 
@@ -374,6 +368,10 @@
  aet_dominion_title:0 "Dominion"
  aet_dominion_desc:0 "Dominions are partially self governing colonies."
  aet_dominion_long_desc:0 "Dominions are partially self governing colonies, who are autonomous communities within the realm, equal in status, in no way subordinate one to another in any aspect of their domestic or external affairs, though united by a common allegiance to the Crown.\nAs such a Dominion (sic!) is §Yfree in their diplomacy§!, and enjoys large boosts to their own income, benefiting themselves far more than comparable colonies."
+ aet_dominion_subjectModifier:0 "Dominion Administration"
+ aet_dominion_subjectModifier_desc:0 "Our former colonial possessions retain considerable autonomy while benefiting from access to our markets and institutions."
+ aet_dominion_overlordModifier:0 "Dominion Relations"
+ aet_dominion_overlordModifier_desc:0 "Our former colony has been transformed into a Dominion. Although we have relinquished direct control, its continued prosperity remains beneficial to our state."
 
  aet_native_rebels_name:0 "Native Rebels"
  aet_native_rebels_title:0 "Native Rebels"
@@ -408,39 +406,29 @@
 
  aet_ideas_divine_holyOrderKnightsHospitaller:0 "Knights Hospitaller"
  aet_ideas_divine_holyOrderKnightsHospitaller_open:0 "Knights Hospitaller"
- 
  aet_ideas_divine_holyOrderOfTheHolySepulchre:0 "Order of the Holy Sepulchre"
  aet_ideas_divine_holyOrderOfTheHolySepulchre_open:0 "Order of the Holy Sepulchre"
- 
  aet_ideas_divine_holyOrderOfLazarus:0 "Order of Saint Lazarus"
  aet_ideas_divine_holyOrderOfLazarus_open:0 "Order of Saint Lazarus"
- 
  aet_ideas_divine_holyOrderTeutonicKnights:0 "Teutonic Order"
  aet_ideas_divine_holyOrderTeutonicKnights_open:0 "Teutonic Order"
- 
  aet_ideas_divine_holyOrderQizilbash:0 "Qizilbash"
  aet_ideas_divine_holyOrderQizilbash_open:0 "Qizilbash"
- 
  aet_ideas_divine_holyOrderBektashi:0 "Bektashi Order"
  aet_ideas_divine_holyOrderBektashi_open:0 "Bektashi Order"
- 
  aet_ideas_divine_holyOrderGhazis:0 "Ghazi Warriors"
  aet_ideas_divine_holyOrderGhazis_open:0 "Ghazi Warriors"
- 
  aet_ideas_divine_holyOrderStratiotai:0 "Stratiotai"
  aet_ideas_divine_holyOrderStratiotai_open:0 "Stratiotai"
- 
  aet_ideas_divine_holyOrderSohei:0 "Sohei"
  aet_ideas_divine_holyOrderSohei_open:0 "Sohei"
- 
  aet_ideas_divine_holyOrderShugendoWarriors:0 "Shugendo Warriors"
  aet_ideas_divine_holyOrderShugendoWarriors_open:0 "Shugendo Warriors"
- 
  aet_ideas_divine_holyOrderJomsvikings:0 "Jomsvikings"
  aet_ideas_divine_holyOrderJomsvikings_open:0 "Jomsvikings"
- 
  aet_ideas_divine_holyOrderImmortals:0 "Immortals"
  aet_ideas_divine_holyOrderImmortals_open:0 "Immortals"
- 
  aet_ideas_divine_holyOrderNagaWarriors:0 "Naga Warriors"
- aet_ideas_divine_holyOrderNagaWarriors_open:0 "Naga Warriors" 
+ aet_ideas_divine_holyOrderNagaWarriors_open:0 "Naga Warriors"  
+ aet_ideas_divine_barKohba:0 "Bar Kokhba's Warriors"
+ aet_ideas_divine_barKohba_open:0 "Bar Kokhba's Warriors" 

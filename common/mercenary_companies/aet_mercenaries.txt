@@ -228,7 +228,7 @@ aet_ideas_divine_holyOrderQizilbash = {
 	regiments_per_development = 0.04
 	cavalry_weight = 0.45
 	cost_modifier = 0.5
-	sprites = { muslim_sprite_pack westerngfx_sprite_pack }
+	sprites = { dlc002_per_sprite_pack muslim_sprite_pack westerngfx_sprite_pack }
 
 	trigger = {
 		religion_group = muslim
@@ -721,8 +721,6 @@ aet_ideas_divine_holyOrderNagaWarriors = {
 	trigger = {
 		religion_group = dharmic
 
-		religion = hinduism
-
 		has_idea = flesh_is_weak
 
 		any_war_enemy_country = {
@@ -752,8 +750,6 @@ aet_ideas_divine_holyOrderNagaWarriors_open = {
 	trigger = {
 		religion_group = dharmic
 
-		religion = hinduism
-
 		any_war_enemy_country = {
 			NOT = {
 				religion = ROOT
@@ -765,6 +761,70 @@ aet_ideas_divine_holyOrderNagaWarriors_open = {
 		infantry_power = 0.075
 		shock_damage = 0.05
 		fire_damage_received = -0.05
+	}
+
+	max_size = 22
+}
+
+# ============================================================
+# JEWISH
+# ============================================================
+
+aet_ideas_divine_barKohba = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+
+	regiments_per_development = 0.05
+	cavalry_weight = 0.05
+	cost_modifier = 0.5
+	sprites = { westerngfx_sprite_pack }
+
+	trigger = {
+		religion_group = jewish_group
+
+		religion = jewish
+
+		has_idea = flesh_is_weak
+
+		any_war_enemy_country = {
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+
+	modifier = {
+		morale_damage = 0.30
+		morale_damage_received = -0.30
+		regiment_manpower_usage = 2
+	}
+
+	counts_towards_force_limit = no
+}
+
+aet_ideas_divine_holyOrderbarKohba_open = {
+	home_province = 379
+
+	regiments_per_development = 0.05
+	cavalry_weight = 0.05
+	cost_modifier = 5
+	sprites = { dlc129_ISR_sprite_pack westerngfx_sprite_pack }
+
+	trigger = {
+		religion_group = jewish_group
+
+		religion = jewish
+
+		any_war_enemy_country = {
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+
+	modifier = {
+		morale_damage = 0.15
+		morale_damage_received = -0.15
+		regiment_manpower_usage = 1.5
 	}
 
 	max_size = 22

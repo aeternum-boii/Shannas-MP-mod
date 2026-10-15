@@ -1,0 +1,42 @@
+common/mercenary_companies/00_mercenaries.txt
+
+merc_lombard_free_company = {
+    regiments_per_development = 0.04
+    home_province = 4728 # Pavia
+	cavalry_weight = 0.2
+	cavalry_cap = 4
+	cost_modifier = 3
+	sprites = { dlc056_mlo_sprite_pack sav_base_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		custom_trigger_tooltip = {
+			tooltip = italian_wars_flag_tt
+			has_global_flag = italian_wars_global_flag
+		}
+		religion_group = christian
+		capital_scope = {
+			continent = europe
+		}
+		OR = {
+			AND = {
+				NOT = {
+					capital_scope = {
+						region = italy_region
+					}
+				}
+				any_country = {
+					war_with = root
+					capital_scope = {
+						region = italy_region
+					}
+				}
+			}
+			capital_scope = {
+				region = italy_region
+			}
+		}
+	}
+	modifier = { 
+		infantry_power = 0.05
+	}
+}
