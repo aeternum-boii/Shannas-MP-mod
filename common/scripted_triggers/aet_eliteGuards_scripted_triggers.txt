@@ -15,11 +15,93 @@ aet_eliteGuards_anyEnabled = {
 	}
 }
 aet_eliteGuards_baseDecisionTrigger = {
-	OR = {
-		AND = {
-			aet_eliteGuards_anyEnabled = yes
-			NOT = { has_country_flag = aet_eliteGuards_hideDecisions }
-		}
+	AND = {
+		aet_eliteGuards_anyEnabled = yes
+		NOT = { has_country_flag = aet_eliteGuards_hideDecisions }
+	}
+}
+aet_eliteGuards_upgradeTrigger = {
+	aet_eliteGuards_baseDecisionTrigger = yes 
+	NOT = {
+		has_country_modifier = $modifier$
+	}	
+}
+aet_eliteGuards_upgradeTrigger_inf = {
+	aet_eliteGuards_upgradeTrigger = {
+		modifier = $modifier$
+	}	
+
+	hidden_trigger = { 
+		OR = {
+			aet_is_debug = yes 
+
+			check_variable = {
+				which = aet_eliteGuards_inf_enable
+				value = 1
+			}
+		}		
+	}
+}
+aet_eliteGuards_upgradeTrigger_inf_allow = {
+	aet_eliteGuards_upgradeTrigger_inf = {
+		modifier = $modifier$
+	}
+
+	aet_applyVar = {
+		left = mil_power
+		var = aet_eliteGuards_fullcost
+	}
+}
+aet_eliteGuards_upgradeTrigger_cav = {
+	aet_eliteGuards_upgradeTrigger = {
+		modifier = $modifier$
+	}	
+
+	hidden_trigger = { 
+		OR = {
+			aet_is_debug = yes 
+
+			check_variable = {
+				which = aet_eliteGuards_cav_enable
+				value = 1
+			}
+		}		
+	}
+}
+aet_eliteGuards_upgradeTrigger_cav_allow = {
+	aet_eliteGuards_upgradeTrigger_inf = {
+		modifier = $modifier$
+	}
+
+	aet_applyVar = {
+		left = mil_power
+		var = aet_eliteGuards_fullcost
+	}
+}
+aet_eliteGuards_upgradeTrigger_arty = {
+	aet_eliteGuards_upgradeTrigger = {
+		modifier = $modifier$
+	}	
+
+	hidden_trigger = { 
+		OR = {
+			aet_is_debug = yes 
+
+			check_variable = {
+				which = aet_eliteGuards_arty_enable
+				value = 1
+			}
+		}		
+	}
+}
+aet_eliteGuards_upgradeTrigger_arty_allow = {
+	aet_eliteGuards_upgradeTrigger_inf = {
+		modifier = $modifier$
+	}
+
+	aet_applyVar = {
+		left = mil_power
+		var = aet_eliteGuards_fullcost
 	}
 }
 aet_eliteGuards_isAboveFL = {
@@ -84,4 +166,14 @@ aet_eliteGuard_cavArcherPersistentRequirements = {
 }
 aet_eliteGuard_cavArcherNomadPersistentRequirements = {
 	has_idea_group = horde_gov_ideas
+}
+
+aet_eliteGuards_plutoPersistentRequirements = {
+	OR = {
+		has_idea_group = plutocracy_ideas
+		has_idea_group = mercenary_ideas
+	}
+}
+aet_eliteGuards_offensivePersistentRequirements = {
+	has_idea_group = offensive_ideas
 }

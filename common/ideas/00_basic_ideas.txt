@@ -1009,7 +1009,7 @@ jewish_ideas = {
 		church_power_modifier = 0.25
 	}
 	jewish_ideas_3 = {
-		build_cost = -0.10
+		land_morale = 0.075
 	}
 	jewish_ideas_4 = {
 		tolerance_own = 3
@@ -1018,7 +1018,8 @@ jewish_ideas = {
 		global_missionary_strength = 0.03
 	}
 	jewish_ideas_6 = {
-		land_morale = 0.075
+		build_cost = 0.10
+		discipline = 0.025
 	}
 
 	bonus = {
@@ -2941,6 +2942,7 @@ offensive_ideas = {
 	}
 	napoleonic_warfare = {
 		special_unit_forcelimit = 0.1
+		aet_eliteGuards_forceLimit = 0.05
 
 		effect = {
 			aet_eliteGuards_enable_infantry = yes

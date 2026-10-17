@@ -15,6 +15,7 @@ interaction you have to engage in.
 - common/cb_types/aet_ideas_cb_types.txt
 - common/event_modifiers/aet_ideas_modifiers.txt
 - common/ideas/00_ideas.txt
+- common/on_actions/aet_ideas_on_actions.txt
 - common/scripted_effects/aet_ideas_scripted_effects.txt
 - common/scripted_triggers/aet_ideas_scripted_triggers.txt
 - common/triggered_modifiers/aet_ideas_triggeredModifiers.txt
@@ -26,5 +27,16 @@ interaction you have to engage in.
 
 ### Modified
 
-- file: common/on_actions/aet_on_actions.txt
-  modified_content: ideas_fileDiffs.txt
+- file: common/subject_types/00_subject_types.txt
+  modified_content: added dominion
+  reason: crossreferencing ability
+- file: common/technologies/dip.txt
+  modified_content: changed colony range between tech 3 and 7, keeping same range < 3 and > 7
+  reason: earlier access to colonial ideas 
+- file: common/technologies/adm.txt
+  modifieed_content: the idea groups
+  reason: needed to allow more idea groups 
+
+### Referenced
+
+- modules: util

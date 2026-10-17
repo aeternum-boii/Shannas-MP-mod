@@ -238,6 +238,22 @@
  logistics_ideas_6:0 "Manpower Administration"
  logistics_ideas_6_desc:0 "The reserves of the nation must be managed as carefully as any other resource. Efficient recruitment and administration allow manpower reserves to recover more rapidly." 
 
+ jewish_ideas:0 "Jewish Ideas"
+ jewish_ideas_0:0 "Jewish Bankers"
+ jewish_ideas_0_desc:0 "A tradition of working as merchants and bankers has allowed us to know the ins and outs of loans and thus get lower interest." 
+ jewish_ideas_1:0 "Religious teachings"
+ jewish_ideas_1_desc:0 "The word of God spreads to the next generation."
+ jewish_ideas_2:0 "The Shabbat"
+ jewish_ideas_2_desc:0 "We must keep the sanctity and holiness of the Shabbat."
+ jewish_ideas_3:0 "Memories of Bar Kokhva"
+ jewish_ideas_3_desc:0 "The Jewish revolt against the Roman Empire has taught us that morale and conviction is the most important thing in battle."
+ jewish_ideas_4:0 "Holiness of Life"
+ jewish_ideas_4_desc:0 "The Torah says that the most important thing is the preservation of life."
+ jewish_ideas_5:0 "One God"
+ jewish_ideas_5_desc:0 "The second commandment teaches us that there is only one true God, and we must spread his word."
+ jewish_ideas_6:0 "Kosher Establishments"
+ jewish_ideas_6_desc:0 "It’s required of every establishment to get certified Kosher by a rabbi, thus increasing costs."
+
  aet_ideas_divineHeretics:0 "Divine Ideas: At war with Heretics or Heathens"
  aet_ideas_divineHeathens:0 "Divine Ideas: At war with Heathens"
 
@@ -397,6 +413,7 @@
 
  aet_ideas_fiscalShortTermMoneyFireNow_title:0 "Meet our demise"
  aet_ideas_fiscalShortTermMoneyFireNow_desc:0 ""
+ aet_ideas_fiscalShortTermMoneyFireNow_tt:0 "This will force us to repay the money we have plundered, resulting in a smaller penalty. If we cannot afford this, we will receive the full penalty. Amount needed: [This.aet_ideas_fiscalPayout.GetValue]"
 
  aet_ideas_previouslyColonised:0 "Previously Colonised"
  aet_ideas_colony_fortDevelopment:0 "Provincial Fortification Works"

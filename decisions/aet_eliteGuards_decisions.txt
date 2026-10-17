@@ -121,24 +121,14 @@ country_decisions = {
 
 	aet_eliteGuards_HeavyCav = {
 		potential = {
-			aet_eliteGuards_baseDecisionTrigger = yes 
-			NOT = {
-				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
-			}				
-			OR = {
-				aet_is_debug = yes 
-
-				check_variable = {
-					which = aet_eliteGuards_cav_enable
-					value = 1
-				}
+			aet_eliteGuards_upgradeTrigger_cav = {
+				modifier = aet_eliteGuards_heavyCavalry_specialisation
 			}
 		}
 		
 		allow = {
-			aet_applyVar = {
-				left = mil_power
-				var = aet_eliteGuards_fullcost
+			aet_eliteGuards_upgradeTrigger_cav_allow = {
+				modifier = aet_eliteGuards_heavyCavalry_specialisation
 			}
 			NOT = {
 				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
@@ -195,24 +185,14 @@ country_decisions = {
 
 	aet_eliteGuards_LightCav = {
 		potential = {
-			aet_eliteGuards_baseDecisionTrigger = yes 
-			NOT = {
-				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
-			}				
-			OR = {
-				aet_is_debug = yes 
-
-				check_variable = {
-					which = aet_eliteGuards_cav_enable
-					value = 1
-				}
+			aet_eliteGuards_upgradeTrigger_cav = {
+				modifier = aet_eliteGuards_lightCavalry_specialisation
 			}
 		}
 		
-		allow = { 
-			aet_applyVar = {
-				left = mil_power
-				var = aet_eliteGuards_fullcost
+		allow = {
+			aet_eliteGuards_upgradeTrigger_cav_allow = {
+				modifier = aet_eliteGuards_lightCavalry_specialisation
 			}
 			NOT = {
 				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
@@ -317,24 +297,14 @@ country_decisions = {
 
 	aet_eliteGuards_HorseArchers = {
 		potential = {
-			aet_eliteGuards_baseDecisionTrigger = yes 
-			NOT = {
-				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
-			}			
-			OR = {
-				aet_is_debug = yes 
-
-				check_variable = {
-					which = aet_eliteGuards_cav_enable
-					value = 1
-				}
+			aet_eliteGuards_upgradeTrigger_cav = {
+				modifier = aet_eliteGuards_horseArcher_specialisation
 			}
 		}
 		
 		allow = { 
-			aet_applyVar = {
-				left = mil_power
-				var = aet_eliteGuards_fullcost
+			aet_eliteGuards_upgradeTrigger_cav_allow = {
+				modifier = aet_eliteGuards_lightCavalry_specialisation
 			}
 			NOT = {
 				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
@@ -434,6 +404,523 @@ country_decisions = {
 
 		ai_will_do = {
 			factor = 400
+		}				
+	}
+
+	aet_eliteGuards_plutoMoraleDamage = {
+		potential = {
+			aet_eliteGuards_upgradeTrigger_cav = {
+				modifier = aet_eliteGuards_plutoMoraleDamage
+			}
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+			}
+			aet_eliteGuards_plutoPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoMoraleDamage
+				duration = -1
+			}	
+
+			hidden_effect = {
+				aet_eliteGuards_removePlutoCost = yes 
+				aet_eliteGuards_getPlutoCost = yes				
+			}
+		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
 		}		
 	}
+
+	aet_eliteGuards_plutoMoraleDamage_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+			aet_eliteGuards_plutoPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_plutoMoraleDamage
+
+			hidden_effect = {
+				aet_eliteGuards_removePlutoCost = yes 
+				aet_eliteGuards_getPlutoCost = yes				
+			}
+		}
+
+		ai_importance = 0
+
+		ai_will_do = {
+			factor = 0
+		}		
+	}	
+
+	aet_eliteGuards_plutoMoraleDamageReceived = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+			}
+			aet_eliteGuards_plutoPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoMoraleDamageReceived
+				duration = -1
+			}	
+
+			hidden_effect = {
+				aet_eliteGuards_removePlutoCost = yes 
+				aet_eliteGuards_getPlutoCost = yes				
+			}
+		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}		
+	}
+
+	aet_eliteGuards_plutoMoraleDamageReceived_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+			aet_eliteGuards_plutoPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+
+			hidden_effect = {
+				aet_eliteGuards_removePlutoCost = yes 
+				aet_eliteGuards_getPlutoCost = yes				
+			}
+		}
+
+		ai_importance = 0
+
+		ai_will_do = {
+			factor = 0
+		}		
+	}	
+	
+	aet_eliteGuards_plutoManpower = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+			}
+			aet_eliteGuards_plutoPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoManpowerUsage
+				duration = -1
+			}	
+
+			hidden_effect = {
+				aet_eliteGuards_removePlutoCost = yes 
+				aet_eliteGuards_getPlutoCost = yes				
+			}
+		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}		
+	}
+
+	aet_eliteGuards_plutoManpower_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+			aet_eliteGuards_plutoPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_plutoManpowerUsage
+
+			hidden_effect = {
+				aet_eliteGuards_removePlutoCost = yes 
+				aet_eliteGuards_getPlutoCost = yes				
+			}
+		}
+
+		ai_importance = 0
+
+		ai_will_do = {
+			factor = 0
+		}		
+	}		
+
+
+
+	aet_eliteGuards_offensiveShock = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_offensiveShockDealt
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_offensiveShockDealt
+				has_country_modifier = aet_eliteGuards_offensiveFireDealt
+			}
+			aet_eliteGuards_offensivePersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_offensiveShockDealt
+				duration = -1
+			}	
+		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}		
+	}
+
+	aet_eliteGuards_offensiveShock_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_offensiveShockDealt
+
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_offensiveShockDealt
+			aet_eliteGuards_offensivePersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_offensiveShockDealt
+		}
+
+		ai_importance = 0
+
+		ai_will_do = {
+			factor = 0
+		}		
+	}	
+
+	aet_eliteGuards_offensiveFire = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_offensiveFireDealt
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_offensiveShockDealt
+				has_country_modifier = aet_eliteGuards_offensiveFireDealt
+			}
+			aet_eliteGuards_offensivePersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_offensiveFireDealt
+				duration = -1
+			}	
+		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}		
+	}
+
+	aet_eliteGuards_offensiveFire_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_offensiveFireDealt
+
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_offensiveFireDealt
+			aet_eliteGuards_offensivePersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_offensiveFireDealt
+		}
+
+		ai_importance = 0
+
+		ai_will_do = {
+			factor = 0
+		}		
+	}	
+	
+	aet_eliteGuards_offensiveAssault = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+			}
+			aet_eliteGuards_offensivePersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_offensiveAssaultAbility
+				duration = -1
+			}	
+		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}		
+	}
+
+	aet_eliteGuards_offensiveAssault_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_offensiveAssaultAbility
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+			aet_eliteGuards_offensivePersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+		}
+
+		ai_importance = 0
+
+		ai_will_do = {
+			factor = 0
+		}		
+	}		
 }

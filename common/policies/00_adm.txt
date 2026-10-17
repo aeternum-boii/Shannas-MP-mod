@@ -2697,11 +2697,11 @@ admin_societal = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = admin_ideas
+		has_idea_group = administrative_ideas
 		has_idea_group = societal_ideas
 	}
 	allow = {
-		full_idea_group = admin_ideas
+		full_idea_group = administrative_ideas
 		full_idea_group = societal_ideas
 	}
 	
@@ -2722,11 +2722,11 @@ admin_grandeur = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = admin_ideas
+		has_idea_group = administrative_ideas
 		has_idea_group = grandeur_ideas
 	}
 	allow = {
-		full_idea_group = admin_ideas
+		full_idea_group = administrative_ideas
 		full_idea_group = grandeur_ideas
 	}
 	
@@ -2747,11 +2747,11 @@ admin_nationalism = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = admin_ideas
+		has_idea_group = administrative_ideas
 		has_idea_group = nationalism_ideas
 	}
 	allow = {
-		full_idea_group = admin_ideas
+		full_idea_group = administrative_ideas
 		full_idea_group = nationalism_ideas
 	}
 	
@@ -2998,11 +2998,11 @@ innovative_exploitation = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = exploitation_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = exploitation_ideas
 	}
 	
@@ -3023,11 +3023,11 @@ innovative_societal = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = societal_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = societal_ideas
 	}
 	
@@ -3048,11 +3048,11 @@ innovative_grandeur = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = grandeur_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = grandeur_ideas
 	}
 	
@@ -3073,11 +3073,11 @@ innovative_nationalism = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = nationalism_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = nationalism_ideas
 	}
 	
@@ -4082,11 +4082,11 @@ admin_leadership = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = admin_ideas
+		has_idea_group = administrative_ideas
 		has_idea_group = leadership_ideas
 	}
 	allow = {
-		full_idea_group = admin_ideas
+		full_idea_group = administrative_ideas
 		full_idea_group = leadership_ideas
 	}
 	
@@ -4108,11 +4108,11 @@ admin_modernisation = {
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = admin_ideas
+		has_idea_group = administrative_ideas
 		has_idea_group = modernisation_ideas
 	}
 	allow = {
-		full_idea_group = admin_ideas
+		full_idea_group = administrative_ideas
 		full_idea_group = modernisation_ideas
 	}
 	
@@ -4183,11 +4183,11 @@ admin_logistics = {# Quartermaster General's Office
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = admin_ideas
+		has_idea_group = administrative_ideas
 		has_idea_group = logistics_ideas
 	}
 	allow = {
-		full_idea_group = admin_ideas
+		full_idea_group = administrative_ideas
 		full_idea_group = logistics_ideas
 	}
 	
@@ -4365,11 +4365,11 @@ innovative_leadership = {# Technocratic Leadership
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = leadership_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = leadership_ideas
 	}
 	
@@ -4391,11 +4391,11 @@ innovative_modernisation = {# Applied Sciences
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = modernisation_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = modernisation_ideas
 	}
 	
@@ -4416,11 +4416,11 @@ innovative_militarism = {# Institutionalized Doctrine
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = militarism_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = militarism_ideas
 	}
 	
@@ -4442,11 +4442,11 @@ innovative_logistics = {# Networks of Knowledge
 	monarch_power = ADM
 
 	potential = {
-		has_idea_group = innovative_ideas
+		has_idea_group = innovativeness_ideas
 		has_idea_group = logistics_ideas
 	}
 	allow = {
-		full_idea_group = innovative_ideas
+		full_idea_group = innovativeness_ideas
 		full_idea_group = logistics_ideas
 	}
 	
@@ -4827,11 +4827,11 @@ grandeur_admin = {
 
 	potential = {
 		has_idea_group = grandeur_ideas
-		has_idea_group = admin_ideas
+		has_idea_group = administrative_ideas
 	}
 	allow = {
 		full_idea_group = grandeur_ideas
-		full_idea_group = admin_ideas
+		full_idea_group = administrative_ideas
 	}
 	
 	governing_capacity_modifier = 0.1

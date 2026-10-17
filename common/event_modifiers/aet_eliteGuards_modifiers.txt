@@ -99,6 +99,92 @@ aet_eliteGuards_FLabove200_u = {
     land_maintenance_modifier = 1
 }
 
+# INF 
+
+aet_eliteGuards_plutoMoraleDamage = {
+    is_revolutionary_guard_modifier = yes
+    morale_damage = 0.10
+}
+aet_eliteGuards_plutoMoraleDamageReceived = {
+    is_revolutionary_guard_modifier = yes
+    morale_damage_received = -0.10
+}
+aet_eliteGuards_plutoManpowerUsage = {
+    is_revolutionary_guard_modifier = yes
+    regiment_manpower_usage = -0.20
+}
+
+aet_eliteGuards_plutoCost_0 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 0.25
+}
+aet_eliteGuards_plutoCost_1 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 0.50
+}
+aet_eliteGuards_plutoCost_2 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 0.75
+}
+aet_eliteGuards_plutoCost_3 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.00
+}
+aet_eliteGuards_plutoCost_4 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.25
+}
+aet_eliteGuards_plutoCost_5 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.5
+}
+aet_eliteGuards_plutoCost_6 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.75
+}
+aet_eliteGuards_plutoCost_7 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.00
+}
+aet_eliteGuards_plutoCost_8 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.25
+}
+aet_eliteGuards_plutoCost_9 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.5
+}
+aet_eliteGuards_plutoCost_10 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.75
+}
+aet_eliteGuards_plutoCost_11 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 3.00
+}
+
+aet_eliteGuards_offensiveShockDealt = {
+    is_revolutionary_guard_modifier = yes
+    shock_damage = 0.10
+
+    reinforce_cost_modifier = 0.33
+    land_maintenance_modifier = 0.25
+}
+aet_eliteGuards_offensiveFireDealt = {
+    is_revolutionary_guard_modifier = yes
+    fire_damage = 0.10
+
+    reinforce_cost_modifier = 0.33
+    land_maintenance_modifier = 0.25
+}
+aet_eliteGuards_offensiveAssaultAbility = {
+    is_revolutionary_guard_modifier = yes
+    assault_fort_ability = 0.50
+
+    reinforce_cost_modifier = 0.05  
+}
+
+
 # CAV
 # General Directions
 # Heavy Cav (Husar style) 

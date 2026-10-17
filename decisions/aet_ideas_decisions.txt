@@ -12,11 +12,29 @@ country_decisions = {
 		}
 
 		allow = {
-			fiscal_ideas = 7 
+			full_idea_group = fiscal_ideas
 		}
 
 
 		effect = {
+			hidden_effect = {
+				export_to_variable = {
+					which = aet_ideas_fiscalPayout
+					value = monthly_income
+				}
+
+				multiply_variable = {
+					which = aet_ideas_fiscalPayout
+					value = 60
+				}
+
+				multiply_variable = {
+					which = aet_ideas_fiscalPayout
+					value = 1.2 # Interest over 3 years (6.6%)
+				}				
+			}
+
+
 			add_years_of_income = 5 
 			set_country_flag = aet_ideas_fiscalCountryRuined
 
@@ -56,19 +74,64 @@ country_decisions = {
 		}
 
 		allow = {
-			fiscal_ideas = 7 
+			full_idea_group = fiscal_ideas 
 			has_country_flag = aet_ideas_fiscalCountryRuined
 		}
 
 
 		effect = {
-			clr_country_flag = aet_ideas_fiscalCountryRuined
-			add_stability = -3
-			set_bankruptcy = THIS
-			add_country_modifier = {
-				name = aet_ideas_fiscalCountryRuined
-				duration = 3600
+			if = {
+				limit = {
+					had_country_flag = {
+						flag = aet_ideas_fiscalCountryRuined
+						days = 1095
+					}
+				}
+
+				add_stability = -3
+				set_bankruptcy = THIS
+			
+			} else = {
+				add_country_modifier = {
+					name = aet_ideas_fiscalCountryRuined
+					duration = 1800
+				}	
+
+				custom_tooltip = aet_ideas_fiscalShortTermMoneyFireNow_tt
+
+				hidden_effect = {
+					while = {
+						limit = {
+							check_variable = {
+								which = aet_ideas_fiscalPayout
+								value = 0
+							}
+						}
+
+						add_treasury = -1
+						subtract_variable = {
+							which = aet_ideas_fiscalPayout
+							value = 1
+						}
+
+						if = {
+							limit = {
+								NOT = {
+									treasury = 0
+								}
+							}
+
+							add_loan = {
+								interest_modifier = 1.5
+								duration = 60
+							}							
+						}
+					}
+				}
+
 			}
+
+			clr_country_flag = aet_ideas_fiscalCountryRuined
 		}		
 	}
 

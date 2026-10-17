@@ -237,6 +237,30 @@ aet_eliteGuards_checkDecisions = {
 		remove_country_modifier = aet_eliteGuards_horseArcher_horde
 		remove_country_modifier = aet_eliteGuards_horseArcher_horde_country	
 	}			
+	if = {
+		limit = {
+			OR = {
+				has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+				has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+				has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+			}
+		}
+
+		aet_eliteGuards_removePlutoCost = yes 
+		aet_eliteGuards_getPlutoCost = yes		
+	}
+	if = {
+		limit = {
+			NOT = {
+				aet_eliteGuards_plutoPersistentRequirements = yes 
+			}
+		}
+		remove_country_modifier = aet_eliteGuards_plutoMoraleDamage
+		remove_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+		remove_country_modifier = aet_eliteGuards_plutoManpowerUsage
+
+		aet_eliteGuards_removePlutoCost = yes 
+	}
 }
 
 aet_eliteGuards_cleanup = {
@@ -1300,4 +1324,211 @@ aet_eliteGuards_reduce_FL = {
 		}
 	}
 	aet_eliteGuards_recalcFL = yes
+}
+
+aet_eliteGuards_getPlutoCost = {
+	aet_eliteGuards_removePlutoCost = yes 
+
+	export_to_variable = {
+		which = aet_eliteGuardsMercMaintenance
+		value = modifier:merc_maintenance_modifier
+	}
+	export_to_variable = {
+		which = aet_eliteGuardsMercCost
+		value = modifier:mercenary_cost
+	}
+
+	set_variable = {
+		which = aet_eliteGuardsCombinedModifier
+		value = aet_eliteGuardsMercMaintenance
+	}
+	change_variable = {
+		which = aet_eliteGuardsCombinedModifier
+		value = aet_eliteGuardsMercCost
+	}
+
+	# Multiplier 1: modifiers 0-3
+	if = {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuardsMultiplier
+				value = 1
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = -0.5
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_0
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = 0
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_1
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = 0.5
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_2
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_3
+				duration = -1
+			}
+		}
+	}
+
+	# Multiplier 2: modifiers 4-7
+	else_if = {
+		limit = {
+			check_variable = {
+				which = aet_eliteGuardsMultiplier
+				value = 2
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = -0.5
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_4
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = 0
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_5
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = 0.5
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_6
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_7
+				duration = -1
+			}
+		}
+	}
+
+	# Multiplier 3: modifiers 8-11
+	else = {
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = -0.5
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_8
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = 0
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_9
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = aet_eliteGuardsCombinedModifier
+						value = 0.5
+					}
+				}
+			}
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_10
+				duration = -1
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = aet_eliteGuards_plutoCost_11
+				duration = -1
+			}
+		}
+	}
+}
+
+aet_eliteGuards_removePlutoCost = {
+	remove_country_modifier = aet_eliteGuards_plutoCost_0
+	remove_country_modifier = aet_eliteGuards_plutoCost_1
+	remove_country_modifier = aet_eliteGuards_plutoCost_2
+	remove_country_modifier = aet_eliteGuards_plutoCost_3
+	remove_country_modifier = aet_eliteGuards_plutoCost_4
+	remove_country_modifier = aet_eliteGuards_plutoCost_5
+	remove_country_modifier = aet_eliteGuards_plutoCost_6
+	remove_country_modifier = aet_eliteGuards_plutoCost_7
+	remove_country_modifier = aet_eliteGuards_plutoCost_8
+	remove_country_modifier = aet_eliteGuards_plutoCost_9
+	remove_country_modifier = aet_eliteGuards_plutoCost_10
+	remove_country_modifier = aet_eliteGuards_plutoCost_11
 }

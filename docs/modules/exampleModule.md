@@ -28,6 +28,7 @@ Note: if the modified content is provided in the diff file just paste the smalle
 ### Referenced (required)
 
 - file: events/aet_elite_guards.txt
+- module: ideas
 
 ## Non-obvious interactions
 

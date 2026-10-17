@@ -2175,31 +2175,6 @@ internal_affair_exploitation = {
 	}
 }
 
-statecraft_exploitation = {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = statecraft_ideas
-		has_idea_group = exploitation_ideas
-	}
-	allow = {
-		full_idea_group = statecraft_ideas
-		full_idea_group = exploitation_ideas
-	}
-	
-	expel_minorities_cost = -0.15
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { production_income_percentage = 0.1 }
-		}			
-	}
-}
-
 statecraft_societal = {
 	monarch_power = DIP
 
@@ -2316,31 +2291,6 @@ decentralised_nationalism = {
 	
 	relation_with_same_culture = 25
 	relation_with_same_culture_group = 25
-
-	effect = {}
-	removed_effect = {}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			NOT = { production_income_percentage = 0.1 }
-		}			
-	}
-}
-
-internal_affair_exploitation = {
-	monarch_power = DIP
-
-	potential = {
-		has_idea_group = internal_affair_ideas
-		has_idea_group = exploitation_ideas
-	}
-	allow = {
-		full_idea_group = internal_affair_ideas
-		full_idea_group = exploitation_ideas
-	}
-	
-	reduced_liberty_desire_on_other_continent = -0.1
 
 	effect = {}
 	removed_effect = {}

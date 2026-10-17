@@ -11,3 +11,14 @@ aet_ideas_hasMilAcademy = {
 		has_country_modifier = aet_ideas_militaryAcademy_5
 	}
 }
+
+full_religious_ideas = {
+	OR = {
+		full_idea_group = religious_ideas
+		full_idea_group = jewish_ideas
+		full_idea_group = christian_ideas
+		full_idea_group = muslim_ideas
+		full_idea_group = eastern_ideas
+		full_idea_group = dharmic_ideas
+	}
+}
