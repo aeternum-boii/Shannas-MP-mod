@@ -770,7 +770,7 @@ aet_ideas_divine_holyOrderNagaWarriors_open = {
 # JEWISH
 # ============================================================
 
-aet_ideas_divine_barKohba = {
+aet_ideas_divine_holyOrderbarKohba = {
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 
 	regiments_per_development = 0.05
@@ -828,4 +828,33 @@ aet_ideas_divine_holyOrderbarKohba_open = {
 	}
 
 	max_size = 22
+}
+
+## ENGLAND LONGBOWMEN 100 YEARS WAR
+
+aet_englishLongbowmen = {
+	home_province = 236
+
+	regiments_per_development = 0.06
+	cavalry_weight = 0.00
+	cost_modifier = 0.2
+	sprites = { dlc001_bri_sprite_pack dlc016_eng_sprite_pack dlc028_eng_sprite_pack dlc028_eng_sprite_pack_anglois westerngfx_sprite_pack }
+
+	trigger = {
+		was_tag = ENG
+
+		NOT = { has_country_flag = eng_took_gbr_branch }
+
+		OR = {
+			has_country_flag = eng_took_ave_branch
+			NOT = { is_year = 1460 }
+		}
+	}
+
+	modifier = {
+		infantry_fire = 0.25
+	}
+
+	min_size = 14
+	counts_towards_force_limit = no
 }

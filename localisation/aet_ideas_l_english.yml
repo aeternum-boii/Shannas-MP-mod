@@ -376,7 +376,6 @@
  aet_ideas.19.d:0 "The Overlord has approved our proposed construction programme and granted its support for the undertaking. The designated projects may now proceed, bringing new workshops, counting houses, and manufactories to our colonial territories."
  aet_ideas.19.a:0 "Very Well"
 
- # Optional custom tooltip localisation used by the exploitation event.
  aet_ideas_3_transfer_treasury_a:0 "[This.GetName] will transfer [This.aet_ideas_ducatsTransfer_a.GetValue] to us."
  aet_ideas_3_transfer_treasury_b:0 "[This.GetName] will transfer [This.aet_ideas_ducatsTransfer_b.GetValue] to us."
 
@@ -447,5 +446,5 @@
  aet_ideas_divine_holyOrderImmortals_open:0 "Immortals"
  aet_ideas_divine_holyOrderNagaWarriors:0 "Naga Warriors"
  aet_ideas_divine_holyOrderNagaWarriors_open:0 "Naga Warriors"  
- aet_ideas_divine_barKohba:0 "Bar Kokhba's Warriors"
- aet_ideas_divine_barKohba_open:0 "Bar Kokhba's Warriors" 
+ aet_ideas_divine_holyOrderbarKohba:0 "Bar Kokhba's Warriors"
+ aet_ideas_divine_holyOrderbarKohba_open:0 "Bar Kokhba's Warriors" 
