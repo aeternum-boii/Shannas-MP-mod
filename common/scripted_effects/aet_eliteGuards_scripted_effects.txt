@@ -350,7 +350,7 @@ aet_eliteGuards_takeFullAction = {
 			var = aet_eliteGuards_fullcost
 		}
 	}
-	aet_applyVar = {
+	aet_applyVar_int = {
 		left = mil_power_cost
 		var = aet_eliteGuards_fullcost
 	}
@@ -371,7 +371,7 @@ aet_eliteGuards_takeHalfAction = {
 		}		
 	}
 
-	aet_applyVar = {
+	aet_applyVar_int = {
 		left = mil_power_cost
 		var = aet_eliteGuards_halfcost
 	}
