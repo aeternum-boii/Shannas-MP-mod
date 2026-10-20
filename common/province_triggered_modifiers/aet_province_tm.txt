@@ -6,12 +6,13 @@ aet_englandAngevinBuffs = {
 	}
 
 	trigger = {
-		number_of_owned_provinces_with = {
-			count = 5
-			
-			OR = {
-				culture_group = french
-				region = france_region
+		owner = {
+			num_of_owned_provinces_with = {
+				OR = {
+					region = france_region
+					culture_group = french
+				}
+				value = 5
 			}
 		}
 	}

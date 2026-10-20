@@ -111,4 +111,5 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 631;627;sea;1354;-1;-1;-1;-1;Bali-Blambangan
 3190;667;sea;1371;-1;-1;-1;-1;Hong Kong-Canton
 3190;668;sea;1371;-1;-1;-1;-1;Hong Kong-Macau
+235;87;canal;235;-1;-1;-1;-1;kent_canal
 -1;-1;;-1;-1;-1;-1;-1;-1;

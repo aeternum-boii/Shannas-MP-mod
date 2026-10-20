@@ -2801,7 +2801,7 @@ mercenary_ideas = {
 	}		
 	seasoned_veterans = {
 		army_tradition_from_battle = 0.5
-		mercs_do_not_cost_army_professionalism = yes # Works
+		# mercs do not cost army prof
 	}
 	organised_mercenary_recruitment = { 
 		mercenary_manpower = 0.3
