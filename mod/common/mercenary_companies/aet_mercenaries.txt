@@ -856,6 +856,7 @@ aet_englishLongbowmen = {
 
 	modifier = {
 		infantry_fire = 0.25
+		merc_leader_army_tradition = 2
 	}
 
 	min_size = 14
@@ -889,6 +890,7 @@ aet_englishLongbowmen_late = {
 
 	modifier = {
 		infantry_fire = 0.25
+		merc_leader_army_tradition = 2
 	}
 
 	min_size = 14

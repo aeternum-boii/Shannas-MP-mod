@@ -44,7 +44,7 @@ change_estate_land_share = { #compensates for lack of nobles, distributes 20 bet
 	add_ruler_personality = infertile_personality
 }
 
-#1434.1.1 = { leader = {	name = "Richard Neville"	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1460.12.31 } }
+1434.1.1 = { leader = {	name = "Richard Neville"	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1460.12.31 } }
 
 1444.1.1 = { 
 	leader = {	
@@ -57,6 +57,17 @@ change_estate_land_share = { #compensates for lack of nobles, distributes 20 bet
 		death_date = 1453.7.17 
 	} 
 	set_estate_privilege = estate_nobles_english_villeinage
+	queen = {
+		country_of_origin = PRO
+		name = "Margaret"
+		dynasty = "d'Anjou"
+		birth_date = 1430.3.23
+		death_date = 1471.4.11
+		female = yes
+		adm = 4
+		dip = 4
+		mil = 4
+	}	
 }
 
 1445.4.23 = {
