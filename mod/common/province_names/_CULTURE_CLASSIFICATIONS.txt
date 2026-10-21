@@ -1,0 +1,22 @@
+# The following  cultures should use the same fallback names, if more specific ones aren't possible.
+# Not to be confused with culture groups.
+
+# TURKIC turkish, tartar, altaic
+
+# MONGOLIC khalkha, mongol, oirats, chahar
+
+# ARABIC andalucian, turko_semitic, maghrebi
+
+# FINNO-UGRIC finnish, estonian, karelian, uralic
+
+# PORTUGUESE portugese, brazilian, galician
+
+# SPANISH castilian, leonese, mexican, platinean
+
+# LECHITIC polish, sorbian, schlesian
+
+# CZECHOSLOVAK czech, slovak
+
+# HUNGARIAN hungarian, transylvanian
+
+# OCCITAN occitain, gascon, aragonese, catalan

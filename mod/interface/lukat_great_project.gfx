@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_great_project_fortress_of_luxembourg"	
+		texturefile = "gfx//interface//great_projects//great_project_fortress_of_luxembourg.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_hohenzollern_castle"
+		texturefile = "gfx//interface//great_projects//great_project_hohenzollern_castle.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_rock_of_gibraltar"
+		texturefile = "gfx//interface//great_projects//great_project_rock_of_gibraltar.dds"
+	}
+}

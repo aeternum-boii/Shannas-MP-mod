@@ -1,0 +1,300 @@
+﻿l_english:
+
+# Decisions
+ fee_mug_get_rid_of_brothers_title: "Get Rid of your Brothers"
+ fee_mug_get_rid_of_brothers_desc: ""
+
+ fee_mug_industrialise_india_title: "Industrialise India"
+ fee_mug_industrialise_india_desc: ""
+
+# Events
+ FEE_Mughals_Events.1.T: "Young Timurid prince without a kingdom"
+ FEE_Mughals_Events.1.D: "A young Timurid prince who became ruler of Fergana when he was 11 and conquered Samarkand twice at the age of 15. But because was too capable his relatives installed his younger and more controllable brother on the throne of Fergana. While he was trying to reclaim Fergana he was defeated in battle and thus Babur was without a kingdom. His situation was so dire that wandering through the mountains he and his followers only had 1 tent which was used by his mother. Fortunately, he has finally found some luck in Afghanistan, Kabul is ruled by an unpopular and weak ruler so it would be easy for him to take over it."
+ FEE_Mughals_Events.1.OPT1: "We can only submit to him."
+ FEE_Mughals_Events.1.OPT2: "Try to fight off the Timurid prince."
+ FEE_Mughals_Events.1.OPT3: "Welcome Babur to your court."
+
+ FEE_Mughals_Events.2.T: "Gardens of Babur"
+ FEE_Mughals_Events.2.D: "With your rule secure in Kabul, it is time to bring beauty and tranquility to your seat of power. You envision a grand avenue garden, lined with terraced buildings, a serene mosque, and wide walkways shaded by rows of maple trees. The scent of blooming pomegranate and cherry trees will fill the air, offering peace and reflection amidst the bustling city. This garden will be a testament to your rule, blending the art of nature and architecture, a place where the soul can find respite. Shall we begin this work of paradise?"
+ FEE_Mughals_Events.2.OPT1: "Re-develop the area into a guest house."
+ FEE_Mughals_Events.2.OPT2: "It is too expensive."
+
+ FEE_Mughals_Events.3.T: "Ottoman generals"
+ FEE_Mughals_Events.3.D: "Despite early tensions, your growing alignment with the Ottoman Empire has borne fruit. In recognition of your shared faith and ambition, the Ottoman Sultan has sent two of his finest military minds to your court - Ustad Ali Quli, a master strategist, and Mustafa Rumi, famed for his unmatched marksmanship and command. Their presence will greatly enhance your campaigns, offering both wisdom in planning and expertise in battle. With their aid, you are better equipped than ever to reclaim the glory of your ancestors, the legacy of the Khan and Timur."
+ FEE_Mughals_Events.3.OPT1: "I have so much to learn from Ottoman tactics."
+
+ FEE_Mughals_Events.4.T: "Modernize and train the army"
+ FEE_Mughals_Events.4.D: "Under the supervision of the Ottoman commanders, our ragtag group of fighters has transformed into a well disciplined and professional army. Yet, the Hindustanis still outnumber us considerably. To remedy this issue, we will have to adopt tactics and weaponry considered foreign by those who inhabit this rich land. The Rajputs and the petty Sultans may possess mighty Elephants, but they shall stand no chance against the “Tulugma”. By flanking the enemy army with our reliable horse archers, we shall force the majority of their soldiers to face the wrath of our cannoneers, causing disarray in their ranks, thus allowing our centre to finish any remaining resistance with their matchlocks. Let us see how the hordes of the infidels fare against the lakshar of the great Babur."
+ FEE_Mughals_Events.4.OPT1: "Adopt Ottoman tactics"
+
+ FEE_Mughals_Events.5.T: "Timurid Claim on Punjab"
+ FEE_Mughals_Events.5.D: "As Babur, the rightful heir to the legacies of Timur and Genghis Khan, you have risen from the harsh and unforgiving lands of Afghanistan to amass a formidable force. With several failures to recapture Samarkand, It is time to try your luck and extend your reach beyond the rugged mountains of Kabul. The fertile and prosperous lands of Punjab now lie open before you, a gateway to the riches of India. This is your destiny-to step into India and begin your conquest, carving out an empire that will stand the test of time. The world will soon witness the rise of a new power."
+ FEE_Mughals_Events.5.OPT1: "Punjab is my ancestral claim"
+
+ FEE_Mughals_Events.6.T: "The Struggle for Punjab"
+ FEE_Mughals_Events.6.D: "The time has come to assert your claim over this vital region. While war is always an option, a diplomatic approach may yield quicker results. Send envoys to Delhi, demanding the cession of Punjab under the shadow of your growing might. Let them weigh the cost of defiance against the power of my cannons, for it may be better for them to yield now than to face inevitable defeat on the battlefield."
+ FEE_Mughals_Events.6.OPT1: "The Sultanate shall cede Punjab to me."
+
+ FEE_Mughals_Events.7.T: "Babur Demands Punjab"
+ FEE_Mughals_Events.7.D: "A request has arrived from Babur, the ambitious Amir of Kabul, demanding the cession of Punjab. Though his current realm may not be vast, the blood of Timur and Genghis Khan flows through his veins, and his growing power cannot be dismissed lightly. The question now looms over our court: should we contest Babur's claim to Punjab, risking a confrontation with a potential conqueror? Or should we concede the territory, avoiding a conflict that could threaten the stability of our Sultanate? The fate of Punjab-and perhaps Delhi itself-hangs in the balance."
+ FEE_Mughals_Events.7.OPT1: "His request is ridiculous."
+ FEE_Mughals_Events.7.OPT2: "We have no choice but to accede."
+
+ FEE_Mughals_Events.8.T: "Delhi Refuses Demands"
+ FEE_Mughals_Events.8.D: "The Sultan of Delhi has dared to deny your rightful claim to Punjab, ignoring the bloodline that traces back to the great Timur and Genghis Khan. Such an insult cannot stand. It is time to rally your forces and march to war. With your newly strengthened army, you will teach the Sultan the price of defiance. The battlefield awaits, and your destiny as a conqueror will be forged in the fires of war. Victory will be yours, and the path to domination in North-Western India will be clear."
+ FEE_Mughals_Events.8.OPT1: "To war!"
+ FEE_Mughals_Events.8.OPT2: "Punjab will be mine... eventually."
+
+ FEE_Mughals_Events.9.T: "Babur Attacks"
+ FEE_Mughals_Events.9.D: "The audacity of Babur knows no bounds. How could this upstart from Kabul dare to challenge the might of the Delhi Sultanate? We have ruled over nearly all of India, and our legacy is not one to be trifled with by a brash, untested ruler. His bloodline may boast of grand ancestors, but we are the enduring power of the subcontinent. The time has come to remind him that the Sultanate of Delhi will not be cowed by a child still basking in the glory of his forefathers. War will be his lesson, and defeat his fate."
+ FEE_Mughals_Events.9.OPT1: "Hah! Their army is no threat to Delhi."
+
+ FEE_Mughals_Events.10.T: "Indian Ambitions Shattered"
+ FEE_Mughals_Events.10.D: "The unthinkable has happened. The siege is lost, and with it, our hopes and dreams. The Afghan Eagle, once soaring high with ambition, has plummeted to the earth, shattered by the might of Delhi. The enemy is within our gates, and all that remains is ruin. The dream of conquering Punjab has crumbled into dust. Now, all that is left is to flee, to hide in the shadows while there is still time. The dream is lost - perhaps forever."
+ FEE_Mughals_Events.10.OPT1: "I have no choice but to give up on Punjab."
+
+ FEE_Mughals_Events.11.T: "Triumph over Hindustan"
+ FEE_Mughals_Events.11.D: "We have overcome incredible odds and victory is ours! The once-mighty Sultanate of Delhi has been utterly crushed under your gunpowder army, and the path to Hindustan and its riches now lies open before us. With this decisive triumph, we have carved our legacy into the annals of history, echoing the wrath of Timur. Hindustan will remember this day, just as they remember the fury that descended upon them in the past.\n\nSeveral of your begs find India to be a foreign land in every aspect, neither baked bread nor the hammas. They are urging you to return to Kabul and enjoy the spoils of Hindustan, but your ambitions are too great. You have not endured the hardship for years to abandon Hindustan just to return to Kabul “the spot of harsh poverty“. You have sternly forbade your begs to raise this matter again, but you allowed those who were determined to return back to Kabul to do so."
+ FEE_Mughals_Events.11.OPT1: "I have brought peace, freedom, justice and security to my new Empire!"
+
+ FEE_Mughals_Events.12.T: "Timurid Incursion of India"
+ FEE_Mughals_Events.12.D: "The once-mighty Lodi dynasty has crumbled, and now Babur and his Afghan forces sweep through Hindustan like a storm. The shadow of their conquest grows ever closer to the gates of Rajasthan, threatening not just your kingdom but all of India. As the Rana of Mewar, the time has come to make a fateful choice. You must call upon the valor of all Rajput clans, unite them in a last stand against the invaders. This coalition may be India’s only hope to repel the tide of foreign conquest and safeguard your ancestral lands from ruin."
+ FEE_Mughals_Events.12.OPT1: "We shall expel them from India."
+ FEE_Mughals_Events.12.OPT2: "We can ill afford a war like this."
+
+ FEE_Mughals_Events.13.T: "Rajput Attack"
+ FEE_Mughals_Events.13.D: "Word has reached you, Babur, that the Rajputs have gathered their armies into a mighty host, a coalition of warriors renowned for their valor and unmatched skill in battle. Their prowess is legendary, and our forces must tread carefully against such a formidable foe. Yet, hesitation has no place here. We are descendants of Timur and Genghis Khan, and the path to India will not be blocked by the swords of the Pratiharas. Steel yourself for battle, for ours is the fury, and nothing will stand in the way of our destiny. Victory, and the riches of Hindustan, await."
+ FEE_Mughals_Events.13.OPT1: "Declare a Jihad against the Rajputs!"
+
+ FEE_Mughals_Events.14.T: "Rajput Victory"
+ FEE_Mughals_Events.14.D: "The messenger brings terrible news. Your armies, though competent, have been crushed by the Rajput coalition. The city of Delhi, the most lucrative of your possessions has fallen to the Hindus and a puppet ruler installed on its throne. You played a great gambit and you lost. As the remainder of the army retreats beyond the Indus, your hope of uniting all of Hindustan under a single banner has been shattered. The name “Babur” shall be forever relegated as a footnote in the history of the subcontinent, of another conqueror who saw himself as the next Sikander, only to fall prey to his own ambition."
+ FEE_Mughals_Events.14.OPT1: "I didn't want to rule Hindustan anyways."
+
+ FEE_Mughals_Events.15.T: "Timurid Incursion Expelled"
+ FEE_Mughals_Events.15.D: "Victory is ours! The valiant Rajput forces have triumphed over the Timurid invader, and Babur lies defeated. Our swords, strong as iron, have repelled the mighty Afghan armies, securing the safety of Pratihara and Rajasthan. With this triumph, not only have we protected our homeland, but now we stand poised to reclaim the ancient seat of Delhi. The defeat inflicted upon us by Muhammad Ghori centuries ago will be avenged, and the Rajputs will once again rise as the protectors of Rajastahan. The days of foreign rule are numbered, and our honor restored."
+ FEE_Mughals_Events.15.OPT1: "Time to claim our prize, send a delegation to Delhi."
+
+ FEE_Mughals_Events.16.T: "Rajput Demands"
+ FEE_Mughals_Events.16.D: "Babur’s defeat at the hands of the Rajput Confederacy has granted us a fleeting moment of freedom, but the threat now looms closer than ever. Once broken by the Timurids, Delhi stands free once more, a city that rose from the ashes under the Tughlaq dynasty, only to face new perils. The Rajputs, emboldened by their victory, now march toward our throne, their eyes set on ruling all of Hindustan. We face a dire choice-shall we submit to them as vassals, biding our time to regain true independence, or defy their might, risking all in the hope of reclaiming our dynasty’s legacy?"
+ FEE_Mughals_Events.16.OPT1: "Who do they think they are?!"
+ FEE_Mughals_Events.16.OPT2: "Very well, we should be grateful."
+
+ FEE_Mughals_Events.17.T: "Rajputs Crushed"
+ FEE_Mughals_Events.17.D: "The Rajputs have failed. Their valiant but futile stand, led by the Rana of Mewar, has ended in bloodshed. The mighty Rajput Confederacy, once the greatest threat to our ambitions, now lies shattered, its land ripe for the taking. Hindustan bends before us, and Rajasthan is but another open field for us to take. The legacy of Timur is fulfilled - India is ours. I, Babur, have become the scourge of this land, its true ruler. Now, I may finally rest in my Summer capital, basking in the glory of our conquests, for our dominion over Hindustan is complete."
+ FEE_Mughals_Events.17.OPT1: "My rule over Hindustan is indisputable!"
+
+ FEE_Mughals_Events.18.T: "Summer Capital"
+ FEE_Mughals_Events.18.D: "Despite the riches and luxuries Hindustan has to offer, many of your Begs are quite displeased by the climate of the region. Hailing from the Central Asian steppe, most of them have not yet acclimated to the higher temperature of Delhi. Perhaps it would prove wise to shift our administration to a city much cooler than Delhi during the summer season. The choice of the city is obvious. Kabul, located in a narrow valley within the Hindu Kush mountain range is relatively large, allowing for easy transfer of our administrative apparatus. A higher altitude also ensures that the summers are a lot more bearable."
+ FEE_Mughals_Events.18.OPT1: "Kabul shall be summer capital due to its cooler temperature."
+
+ FEE_Mughals_Events.19.T: "Death of Babur"
+ FEE_Mughals_Events.19.D: ""
+ FEE_Mughals_Events.19.OPT1: "Bury him in [Root.Capital.GetName]"
+ FEE_Mughals_Events.19.OPT2: "He wished to be buried in Kabul."
+
+ FEE_Mughals_Events.20.T: "Timurid partition"
+ FEE_Mughals_Events.20.D: ""
+ FEE_Mughals_Events.20.OPT1: "The empire shall be split according to tradition."
+
+ FEE_Mughals_Events.21.T: "Bengal proto industrialization"
+ FEE_Mughals_Events.21.D: ""
+ FEE_Mughals_Events.21.OPT1: "We need to heavily invest into Bengal"
+
+ FEE_Mughals_Events.22.T: "Bengali province has industrialised"
+ FEE_Mughals_Events.22.D: ""
+ FEE_Mughals_Events.22.OPT1: "Wonderful"
+
+ FEE_Mughals_Events.23.T: "Akbar the Great"
+ FEE_Mughals_Events.23.D: ""
+ FEE_Mughals_Events.23.OPT1: "Long live the young emperor."
+
+ FEE_Mughals_Events.24.T: "Jharoka Darshana"
+ FEE_Mughals_Events.24.D: "Emperor Akbar, in his devotion to a just and unified empire, initiated the practice of Jharokha Darshan. Each morning, Akbar would appear at the jharokha window of his residence in Agra Fort after his sun worship, greeting the gathered crowd below. Hindus, bathing in the river at dawn, and people of all walks of life-soldiers, merchants, craftsmen, peasants, and the infirm-gathered to witness their emperor. \nThis daily practice served a dual purpose: to reassure his subjects of his health and the stability of the empire, and to symbolically blend imperial authority with public faith. The emperor would spend hours each day, listening to grievances and petitions, with even the simplest of requests being heard. The Jharokha Darshan became a vital connection between ruler and subject, reinforcing Akbar's liberal approach to governance and ensuring the empire's cohesion. This practice of transparency and communication stood as a symbol of Akbar's commitment to his people, blending spiritual reverence with political duty."
+ FEE_Mughals_Events.24.OPT1: "Public appearances shall become a daily practice."
+
+ FEE_Mughals_Events.25.T: "Abolition of Jizya"
+ FEE_Mughals_Events.25.D: "I have made the monumental decision to abolish the Jizya, the tax levied on my non-Muslim subjects. Though this will undoubtedly decrease the revenue collected from the empire, the long-term benefits outweigh the cost. By removing this burden, we pave the way for a more unified and harmonious realm, fostering loyalty and gratitude among all subjects, regardless of their faith. This step will solidify the foundation of an empire where all religions can coexist peacefully, and our reign will be remembered as one that valued integration and justice over division."
+ FEE_Mughals_Events.25.OPT1: "A more just empire."
+
+ FEE_Mughals_Events.26.T: "House of Worship"
+ FEE_Mughals_Events.26.D: "In his quest to understand the spiritual fabric of his realm, Akbar has commissioned the construction of the Ibadat Khana, or House of Worship, at Fatehpur Sikri. This sacred hall will serve as a place where mystics, theologians, and scholars of various faiths-Hinduism, Islam, Zoroastrianism, Christianity, and even atheism-can gather to discuss and debate the truths of their beliefs. Inspired by the spiritual practices of Sulaiman Kirani, Akbar seeks to deepen his theological knowledge and explore the unity underlying all religions. This monumental initiative signals a bold new direction in the religious discourse of the empire, fostering dialogue and understanding across the faiths."
+ FEE_Mughals_Events.26.OPT1: "Uncover the Faith of the Divine"
+
+ FEE_Mughals_Events.27.T: "A brave young prince faces off an elephant"
+ FEE_Mughals_Events.27.D: "During your favourite royal pastime of watching a fight between 2 imperial elephants named Sudhakar and Surat Sundar, Sudhakar suddenly charged at your 15 year old son. But your son Aurangzeb stood his ground and speared the elephant's head. Sudhakar then gouged your son's horse which flung Aurangzeb to the ground. Fortunately your other son and prominent Rajput were able to distract the elephant with weapons and fireworks. Ultimately it was Surat Sundar who was able to draw Sudhakar from Aurangzeb and continue the fight. You commend your son for his courage, he also reminds you of your younger self when you repelled a raging tiger while the late Emperor was watching."
+ FEE_Mughals_Events.27.OPT1: "He will be great help in running the empire."
+ FEE_Mughals_Events.27.OPT2: "He was just lucky."
+
+ FEE_Mughals_Events.28.T: "Emperor at Death's doorstep"
+ FEE_Mughals_Events.28.D: "The Emperor has woken up severely ill and failed to make his daily morning appearance before his subjects at the palatial balcony. He hasn't shown himself to the public for a week now and rumours are starting to spread like a wildfire about the Emperor's death. His sons, believing that their father is on the brink of death, seized the opportunity to get the throne of Hindustan for themselves in the honoured Mughal tradition of battling each other to the death or dividing the Empire. His eldest and favourite Son Dara Shikoh who was in the Delhi at the time assumed himself as a regent while rest of his brothers gathered their forces and marched to Delhi."
+ FEE_Mughals_Events.28.OPT1: "Aurangzeb has the true skills to lead."
+ FEE_Mughals_Events.28.OPT2: "Aurangzeb is not a threat to me."
+ FEE_Mughals_Events.28.OPT3: "Dara Shikoh, my favourite son, will be the Emperor."
+
+ FEE_Mughals_Events.29.T: "Aurangzeb seizes Deccan"
+ FEE_Mughals_Events.29.D: "Aurangzeb has gathered all of allies and forces in Deccan and is ready to march to Delhi to take the throne."
+ FEE_Mughals_Events.29.OPT1: "Civil War is inevitable."
+
+ FEE_Mughals_Events.30.T: "Dara's Victory"
+ FEE_Mughals_Events.30.D: "Despite all odds being stacked against Dara, he was able to defeat his brother Aurangzeb and proclaim himself as emperor. But his remaining brothers hold too much influence so it would be impossible to get rid of them without causing another war."
+ FEE_Mughals_Events.30.OPT1: "Make an example of Aurangzeb and execute him!"
+
+ FEE_Mughals_Events.31.T: "Aurangzeb's Victory"
+ FEE_Mughals_Events.31.D: "It is no surprise to anyone that Aurangzeb turned victorious. As ever since he was young he has been making powerful allies throughout the empire, honing his skills on the battlefields in Deccan. Aurangzeb is the only one fit to rule the Mughal Empire."
+ FEE_Mughals_Events.31.OPT1: "Aurangzeb will be the Emperor!"
+
+ FEE_Mughals_Events.32.T: "Father's Wish"
+ FEE_Mughals_Events.32.D: "With Dara's ascension none of his brothers had enough influence to go against him. Unfortunately for Dara the Emperor has recovered from his illness and is now appealing to his favourite son to split the empire amongst his brothers. If Dara agrees the Emperor will abdicate the throne."
+ FEE_Mughals_Events.32.OPT1: "As you wish, Father."
+ FEE_Mughals_Events.32.OPT2: "No, the whole Empire is mine."
+
+ FEE_Mughals_Events.33.T: "Aurangzeb, Seizer of the World"
+ FEE_Mughals_Events.33.D: "With Dara’s defeat, it is time to deal with the recovered Emperor who is still the nominal head of the Empire. The Emperor tried to meet with Aurangzeb, but Aurangzeb sensed deceit and instead began a siege on Agra with his brother. After a few days the Emperor surrendered and made a last ditch effort to convince Aurangzeb to split the Empire. Even though the Emperor was still alive, the majority of the Emperor's supporters accepted Aurangzeb's victory and pledged their loyalty to him. Now that the throne is in Aurangzeb's hand, the last thing to do is to get rid of his brothers."
+ FEE_Mughals_Events.33.OPT1: "Ya takht ya tabut!"
+
+ FEE_Mughals_Events.34.T: "Pashtun Uprising"
+ FEE_Mughals_Events.34.D: "Mughal governor of Kabul Amir Khan allegedly molested Parachi woman which sparked a revolt lead by poet warrior Khushal Khattak. The governor tried to reassert his authority, but his army was surrounded and crushed by the Pashtun. Mughal authority in the region has nearly collapsed, and important trade routes had to be closed until the violence stops."
+ FEE_Mughals_Events.34.OPT1: "The governor of the region shall deal with it."
+
+ FEE_Mughals_Events.35.T: "Deal with the Pashtuns personally"
+ FEE_Mughals_Events.35.D: "The Pashtun uprising has been raging for months now, and the local governor has failed to reestablish even a modicum of control. Perhaps a more firm handed approach is required, razing rebelling villages to the ground until the rest bend the knee, and bribing tribal leaders to fight each other, shattering the unity of their rebellion."
+ FEE_Mughals_Events.35.OPT1: "Use the carrots and stick approach on the tribes."
+
+ FEE_Mughals_Events.36.T: "Crisis of the Rathore Tribe"
+ FEE_Mughals_Events.36.D: "As a Mughal Emperor Aurangzeb has a right to regulate Rajput succession although by tradition it is heavily guided by Rajputs opinion. With the death of the ruling Raja of Rathore tribe, a crisis began. There were two candidates, his grandson and his son Ajit Singh that was born shortly after he died. Aurangzeb tried to intervene and chose the grandson as Raja and suggested for the infant to be raised at the imperial court. The royal family of Rathore did not like his intervention and rebelled, while sending the infant into hiding."
+ FEE_Mughals_Events.36.OPT1: "The infant should be raised as muslim."
+
+ FEE_Mughals_Events.37.T: "Rathore Rebellion"
+ FEE_Mughals_Events.37.D: "Aurangzeb's action regarding Rathore tribe and annexation of Jodhpur has angered neighbouring Sisodias tribe. Detesting Mughal interference in Rajput politics and annexing Marwar's territory, ruler of Mewar Raj Singh I decided to take Ajit's cause and fight the Mughals."
+ FEE_Mughals_Events.37.OPT1: "I cannot ignore this provocation!"
+
+ FEE_Mughals_Events.38.T: "Heir attempts to overthrow me"
+ FEE_Mughals_Events.38.D: "During one Rajput raid, the army sent to deal with them had its supplies stolen and was left starving. Aurangzeb’s son, whom he had appointed as general, wrote a letter to his father, who decided to punish his son and replaced him. His son felt insulted and struck a deal with the rebelling Rajputs to overthrow his father. Upon learning this, Aurangzeb sowed dissension between the Rajputs and his son, causing the former to abandon the latter. Following this, the treacherous heir has decided to go into hiding in the Deccan and bide his time."
+ FEE_Mughals_Events.38.OPT1: "Let us see who dies first. [Root.Heir.GetSheHeCap] or I!"
+
+ FEE_Mughals_Events.39.T: "Abolition of Jharoka Darshana"
+ FEE_Mughals_Events.39.D: "Initially, Aurangzeb practised the Jharoka Darshana, but, being a devout follower of the islamic code, he stopped the practice on the basis that it was an idolization of human beings."
+ FEE_Mughals_Events.39.OPT1: "This practice is superstitious and against Islam."
+
+ FEE_Mughals_Events.40.T: "Cheap Throne Room"
+ FEE_Mughals_Events.40.D: "Due to Aurangzeb's following of strict Islamic code of conduct and also financial crisis he asked the courtiers not to wear silk gowns, or gowns of mixed silk and cotton. He ordered the throne room to be furnished in a cheap and simple style, clerks were asked to use porcelain ink-stands instead of silver ones, the gold railings in the diwan i-am were replaced by those of lapis lazuli set on gold."
+ FEE_Mughals_Events.40.OPT1: "The treasury lacks funds."
+
+ FEE_Mughals_Events.41.T: "Implementation of Jizya"
+ FEE_Mughals_Events.41.D: "Jizya the tax on non muslims has been abolished for more than 100 years by Akbar the Great. Due to the financial crisis and pressure from orthodox muslims Aurangzeb reestablished jizya. But the income from jizya was put in a separate treasury and redistributed to poor muslims. Thus, it didn't help with the financial crisis and only angered the Hindu nobility."
+ FEE_Mughals_Events.41.OPT1: "We need to replenish the treasury."
+
+ FEE_Mughals_Events.42.T: "Conqueror of the World"
+ FEE_Mughals_Events.42.D: ""
+ FEE_Mughals_Events.42.OPT1: "My regnal name shall be Alamgir!"
+
+ FEE_Mughals_Events.43.T: "Travelling physician from France"
+ FEE_Mughals_Events.43.D: "François Bernier was a French physician who travelled to India. At first he worked for Dara Shikoh, but after Aurangzeb became Emperor he became a medical doctor at Aurangzeb's court. He wrote about Mughal practices but also heavily contributed to scientific racism as first to propose such a system."
+ FEE_Mughals_Events.43.OPT1: "François Bernier shall be my personal physician."
+
+ FEE_Mughals_Events.44.T: "Marathas Raid"
+ FEE_Mughals_Events.44.D: "Until now we have had peaceful relations with Shivaji. Apparently he was dissatisfied with our response to his claims and decided to raid our territory."
+ FEE_Mughals_Events.44.OPT1: "The Damn Shivaji."
+
+ FEE_Mughals_Events.45.T: "Raid of Ahmadnagar"
+ FEE_Mughals_Events.45.D: ""
+ FEE_Mughals_Events.45.OPT1: "We have received a better offer."
+
+# Modifiers
+ fee_mug_bagh_babur: "Bagh-e Babur"
+ desc_fee_mug_bagh_babur: ""
+ fee_mug_ottoman_tactics: "Adopted Ottoman Tactics"
+ desc_fee_mug_ottoman_tactics: ""
+ fee_mug_babur_tactics: "Babur's Superior Tactics"
+ desc_fee_mug_babur_tactics: ""
+ fee_mug_babur_generalship: "Babur's Superior Generalship"
+ desc_fee_mug_babur_generalship: ""
+ fee_mug_memories_of_timur: "Memories of Timur"
+ desc_fee_mug_memories_of_timur: ""
+ fee_mug_rajput_coalition: "Rajput Coalition"
+ desc_fee_mug_rajput_coalition: ""
+ fee_mug_rajput_fear: "Fear of the Rajput"
+ desc_fee_mug_rajput_fear: ""
+ fee_mug_rajput_triumph: "Rajput Triumph"
+ desc_fee_mug_rajput_triumph: ""
+ fee_mug_summer_capital: "Summer Capital"
+ desc_fee_mug_summer_capital: ""
+ fee_mug_baburs_legacy: "Babur's Legacy"
+ desc_fee_mug_baburs_legacy: ""
+
+ fee_mug_timurid_partition: "Timurid Partition"
+ desc_fee_mug_timurid_partition: ""
+
+ fee_mug_bengali_expansion: "Bengali Expansion"
+ desc_fee_mug_bengali_expansion: ""
+ fee_mug_bengali_industrialisation: "Bengali Industrialisation"
+ desc_fee_mug_bengali_industrialisation: ""
+ fee_mug_bengali_shipyard: "Bengali Shipyard"
+ desc_fee_mug_bengali_shipyard: ""
+ fee_mug_mughal_industrialisation: "Mughal Industrialisation"
+ desc_fee_mug_mughal_industrialisation: ""
+
+ fee_mug_jharoka_darshana: "Jharoka Darshana"
+ desc_fee_mug_jharoka_darshana: ""
+ fee_abolished_jizya: "Abolished Jizya"
+ desc_fee_abolished_jizya: ""
+ fee_mug_ibadat_khana: "Ibadat Khana"
+ desc_fee_mug_ibadat_khana: ""
+
+ fee_mug_deserted_army: "Deserted Army"
+ desc_fee_mug_deserted_army: ""
+ fee_mug_aurangzeb_leadership: "Aurangzeb Leadership"
+ desc_fee_mug_aurangzeb_leadership: ""
+ fee_mug_overthrown_the_emperor: "Overthrown the Emperor"
+ desc_fee_mug_overthrown_the_emperor: ""
+ fee_mug_pashtun_revolt: "Pashtun Revolt"
+ desc_fee_mug_pashtun_revolt: ""
+ fee_mug_closed_trade_route: "Closed Trade Route"
+ desc_fee_mug_closed_trade_route: ""
+ fee_mug_rajput_guerillas: "Rajput Guerrillas"
+ desc_fee_mug_rajput_guerillas: ""
+ fee_mug_cheap_throne_room: "Cheap Throne Room"
+ desc_fee_mug_cheap_throne_room: ""
+ fee_jizya: "Jizya"
+ desc_fee_jizya: ""
+ fee_mug_alamgir: "Alamgir"
+ desc_fee_mug_alamgir: ""
+
+# Opinion Modifiers
+ fee_mug_paid_tribute: "Paid Tribute"
+
+# Privileges
+ estate_church_fee_abolished_jizya: "Abolished Jizya"
+ estate_church_fee_abolished_jizya_desc: ""
+ estate_church_fee_abolished_jizya_gt: "Every owned §YNon Muslim§! province gains the following bonus:"
+ estate_church_fee_abolished_jizya_rt: "The modifier '§YAbolished Jizya§!' is removed from all eligible provinces."
+
+ estate_church_fee_reestablished_jizya: "Reestablished Jizya"
+ estate_church_fee_reestablished_jizya_desc: ""
+ estate_church_fee_reestablished_jizya_gt: "Every owned §YNon Muslim§! province gains the following bonus:"
+ estate_church_fee_reestablished_jizya_rt: "The modifier '§YJizya§!' is removed from all eligible provinces."
+
+# Tooltips
+ fee_mug_punjab_claim_tt: "While we might be ready for war, we could §Ywait§! a few months and try and fabricate documents to legitimize our claims over Punjab..."
+ fee_mug_delhi_warning_tt: "§RBabur will try to take Punjab by force.§!"
+ fee_mug_delhi_war_modifier_tt: "[Root.Country.GetName] gets §YBabur's Superior Tactics§! until §Ythe end of the war§!, giving the following effects:\nMilitary Tactics: §G+0.75§!"
+ fee_mug_delhi_how_to_win_tt: "Babur is an excellent tactician, and his army punches well above its weight. Do not underestimate it.\n\nShould we reach §R-40%§! warscore or Babur defeat [Root.Monarch.GetName] in battle, Delhi will be no more."
+ fee_mug_annex_delhi_tt: "Annex §Y[DLH.GetName]§!.\nCountry changes to §Y[MUG.GetName]§!.\n\nAll owned provinces in Hindustan will gain §YMemories of Timur§! for §Y10 years§!, giving the following effects:\nLocal Unrest: §R+3.00§!\nMinimum Local Autonomy: §R+20§!"
+ fee_mug_mewar_coalition_tt: "We will assemble a large coalition of Rajputs to expel the nascent empire from India and restore the Sultanate of Delhi. Do not underestimate Babur's forces, as losing too much warscore will end the war.\n\nShould we win, we may be able to leverage our influence in Delhi to subjugate them."
+ fee_mug_mewar_back_down_tt: "§RWe will not get another opportunity like this.§!"
+ fee_mug_babur_rebel_tt: "\nIf these rebels take control of the capital, Babur will seize the country §Rimmediately§!."
+ fee_mug_babur_stats_tt: "He will have the §YPatron of the Arts§! and §YConqueror§! traits and become a 6/5/4/5 general."
+ FEE_Mughals_Events.27.TT.1: "You send your son away from the court, for him to gain valuable experiences."
+ FEE_Mughals_Events.27.TT.2: "You acknowledge your son's bravery, but you don't like his demeanour."
+ FEE_Mughals_Events.28.TT.1: "Your brothers proclaim themselves as kings of their respective regions they govern over."
+ FEE_Mughals_Events.28.TT.2: "Your more ambitious and more cunning brother has been building connections and alliances with powerful people in the empire for years. Most of the army and generals are loyal to him. It is a matter of time before he tries to usurp the throne."
+ FEE_MUG_ANNEX_DEC_TT: "@[Root.GetTag] §Y[Root.GetName]§! annexes @DEC §Y[DEC.GetName]§! in its entirety."
+ FEE_Mughals_Events.32.TT.1: "@[new_bengal_owner.GetTag] §Y[new_bengal_owner.GetName]§!, @[new_deccan_owner.GetTag] §Y[new_deccan_owner.GetName]§!, @[new_west_india_owner.GetTag] §Y[new_west_india_owner.GetName]§! gain cores on all core provinces of @[Root.GetTag] §Y[Root.GetName]§!."
+ FEE_Mughals_Events.32.TT.2: "The modifier '§YTimurid Partition§!' is removed from all owned provinces."
+ FEE_Mughals_Events.33.TT.1: "You assassinated your brothers to unite the Empire."
+ FEE_Mughals_Events.34.TT.1: "Every owned province in the areas §YKabulistan§!, §YSind Sagar§! and §YMultan§!:"
+ FEE_Mughals_Events.34.TT.2: "Every owned province with the §YAfghani§! culture: \n§RParticularist§! regiments rise up in a revolt."
+ FEE_Mughals_Events.35.TT: "Every owned province loses the modifiers '§YPastun Revolt§!' and '§YClosed Trade Route§!'. \n\nEvery owned province with the §YAfghani§! culture gains §R25.0%§! devastation and has a chance of §Y50.0%§! to lose §R1§! of each development type."
+ FEE_Mughals_Events.37.TT: "Every owned province with the §YRajasthani§! culture:"
+ FEE_Mughals_Events.38.TT: "Your current heir goes into hiding in Deccan."
+ FEE_Mughals_Events.42.TT: "§YThis power projection does not decay, but it is removed on ruler death.§!"

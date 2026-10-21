@@ -1,0 +1,7 @@
+on_mercenary_recruited = {
+	FROM = {
+		country_event = {
+			id = RW_MERCS.001
+		}
+	}
+}

@@ -1,0 +1,20 @@
+on_centralized_state = {
+	if = {
+		limit = {
+			owner = { has_government_attribute = centralize_state_no_reform_cost }
+		}
+		owner = {
+			# add_adm_power = 50 # They get 50 from vanilla onaction
+			change_government_reform_progress = -30 # They get 50 from vanilla ona
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_government_attribute = centralize_state_half_refund }
+		}
+		owner = {
+			# add_adm_power = 25 # They get 25 from vanilla onaction
+			change_government_reform_progress = -15  # They get 25 from vanilla onaction
+		}
+	}
+}

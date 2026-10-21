@@ -1,0 +1,32 @@
+country_decisions = {
+
+    call_all_to_war = {
+        mayor = yes
+        potential = {
+            ai = no
+            OR = {
+                is_in_war = {
+                    attacker_leader = ROOT
+                }
+                is_in_war = {
+                    defender_leader = ROOT
+                }
+            }
+        }
+        allow = {
+            any_war_enemy_country = {
+                ai = no
+            }
+        }
+        effect = {
+            every_ally = {
+                limit = {
+                    ai = no
+                }
+                country_event = {
+                    id = join_war_event
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+can_colonize_province = {
+	condition = {
+		tooltip = "colorlessness_ColonyRegionRestriction"
+		potential = {
+			FROM = {
+				is_colonial_nation = yes
+			}
+		}
+		allow = {
+			FROM = {
+				capital_scope = {
+					colonial_region = ROOT
+				}
+			}
+		}
+	}
+}
+
+is_possible_hre_province = {
+	condition = {
+		tooltip = "APH_ONLY_EUROPE"
+		potential = {
+			NOT = {
+				continent = europe
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+can_add_province_to_hre = {
+	condition = {
+		tooltip = "APH_ONLY_EUROPE"
+		potential = {
+			NOT = {
+				continent = europe
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}

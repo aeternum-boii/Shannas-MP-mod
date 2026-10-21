@@ -1,0 +1,124 @@
+ae_gamerule_colonization_on = {
+	has_global_flag = ae_gamerule_colonization_on_flag
+}
+
+ae_gamerule_colonization_ai = {
+	has_global_flag = ae_gamerule_colonization_ai_flag
+}
+
+ae_gamerule_colonization_off = {
+	has_global_flag = ae_gamerule_colonization_off_flag
+}
+
+ae_gamerule_formables_on = {
+	has_global_flag = ae_gamerule_formables_on_flag
+}
+
+ae_gamerule_formables_ai = {
+	has_global_flag = ae_gamerule_formables_ai_flag
+}
+
+ae_gamerule_formables_off = {
+	has_global_flag = ae_gamerule_formables_off_flag
+}
+
+ae_gamerule_unions_on = {
+	has_global_flag = ae_gamerule_unions_on_flag
+}
+
+ae_gamerule_unions_ai = {
+	has_global_flag = ae_gamerule_unions_ai_flag
+}
+
+ae_gamerule_unions_off = {
+	has_global_flag = ae_gamerule_unions_off_flag
+}
+
+ae_gamerule_dynasties_on = {
+	has_global_flag = ae_gamerule_dynasties_on_flag
+}
+
+ae_gamerule_dynasties_ai = {
+	has_global_flag = ae_gamerule_dynasties_ai_flag
+}
+
+ae_gamerule_dynasties_off = {
+	has_global_flag = ae_gamerule_dynasties_off_flag
+}
+
+
+ae_gamerule_historical_expansion_on = {
+	has_global_flag = ae_gamerule_historical_expansion_on_flag
+}
+
+ae_gamerule_historical_expansion_ai = {
+	has_global_flag = ae_gamerule_historical_expansion_ai_flag
+}
+
+ae_gamerule_historical_expansion_off = {
+	has_global_flag = ae_gamerule_historical_expansion_off_flag
+}
+
+
+ae_gamerule_restricted_expansion_on = {
+	has_global_flag = ae_gamerule_restricted_expansion_on_flag
+}
+
+ae_gamerule_restricted_expansion_ai = {
+	has_global_flag = ae_gamerule_restricted_expansion_ai_flag
+}
+
+ae_gamerule_restricted_expansion_off = {
+	has_global_flag = ae_gamerule_restricted_expansion_off_flag
+}
+
+
+ae_gamerule_exclaves_on = {
+	has_global_flag = ae_gamerule_exclaves_on_flag
+}
+
+ae_gamerule_exclaves_ai = {
+	has_global_flag = ae_gamerule_exclaves_ai_flag
+}
+
+ae_gamerule_exclaves_off = {
+	has_global_flag = ae_gamerule_exclaves_off_flag
+}
+
+
+ae_gamerule_reformation_on = {
+	has_global_flag = ae_gamerule_reformation_on_flag
+}
+
+ae_gamerule_reformation_ai = {
+	has_global_flag = ae_gamerule_reformation_ai_flag
+}
+
+ae_gamerule_reformation_off = {
+	has_global_flag = ae_gamerule_reformation_off_flag
+}
+
+
+ae_gamerule_institutions_on = {
+	has_global_flag = ae_gamerule_institutions_on_flag
+}
+
+ae_gamerule_institutions_ai = {
+	has_global_flag = ae_gamerule_institutions_ai_flag
+} 
+
+ae_gamerule_institutions_off = {
+	has_global_flag = ae_gamerule_institutions_off_flag
+}
+
+ae_gamerule_hre_on = {
+	has_global_flag = ae_gamerule_hre_on_flag
+}
+
+ae_gamerule_hre_ai = {
+	has_global_flag = ae_gamerule_hre_ai_flag
+}
+
+ae_gamerule_hre_off = {
+	has_global_flag = ae_gamerule_hre_off_flag
+}

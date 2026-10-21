@@ -1,0 +1,21 @@
+namespace = join_war
+
+country_event = {
+	id = join_war_event
+	title = join_war_event
+	desc = join_war_event
+	picture = CONQUEST_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = join_war_event.1
+		join_all_offensive_wars_of = FROM
+        join_all_defensive_wars_of = FROM
+		ai_chance = { 100 }
+	}
+
+    option = {
+        name = noo 
+        add_treasury = -1
+    }
+}

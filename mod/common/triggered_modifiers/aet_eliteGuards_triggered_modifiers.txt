@@ -1,0 +1,11 @@
+aet_eliteGuards_isAboveFL = {
+	potential = {
+		aet_eliteGuards_anyEnabled = yes 
+	}
+	trigger = {
+		aet_eliteGuards_isAboveFL = yes 
+	}
+
+	land_forcelimit_modifier = -1
+	global_regiment_cost = 20
+}

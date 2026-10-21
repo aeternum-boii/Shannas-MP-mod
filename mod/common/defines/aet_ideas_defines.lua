@@ -1,0 +1,5 @@
+NDefines.NCountry.ABANDON_IDEAGROUP_REFUND = 0.8
+
+NDefines.NCountry.IDEA_TO_TECH = -0.013
+NDefines.NCountry.PS_BUY_IDEA = 266.66
+NDefines.NCountry.TARIFF_LIBERTY_INCREASE = 2.5

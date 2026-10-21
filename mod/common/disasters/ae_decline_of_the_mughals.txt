@@ -1,0 +1,91 @@
+ae_decline_of_the_mughals = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		tag = MUG
+		NOT = { has_country_flag = ae_decline_of_the_mughals }
+		normal_or_historical_nations = yes
+		
+	}
+	
+	can_start = {
+		has_any_disaster = no
+		any_country = {
+			technology_group = western
+			num_of_owned_provinces_with = {
+				value = 1
+				superregion = india_superregion
+			}
+		}
+		num_of_cities = 20
+		OR = {
+			NOT = { religious_unity = 0.5 }
+			NOT = { hindu = 3 }
+		}
+		current_age = age_of_revolutions
+	}
+	
+	can_stop = { 
+		has_any_disaster = yes
+	}
+	
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { religious_unity = 1 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { religious_unity = 0.5 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { hindu = 3 }
+		}
+		modifier = {
+			factor = 1
+			any_country = {
+				technology_group = western
+				num_of_owned_provinces_with = {
+					value = 10
+					superregion = india_superregion
+				}
+			}
+		}
+	}
+	
+	can_end = {
+		OR = {
+			had_country_flag = { 
+				flag = ae_decline_of_the_mughals 
+				days = 7500 
+			}
+			NOT = { num_of_cities = 20 }
+			is_year = 1800
+		}
+	}
+	
+
+	modifier = {
+		stability_cost_modifier = 0.15
+		global_autonomy = 0.05
+		global_unrest = 1
+	}
+	
+	on_start = ae_decline_of_the_mughals.100 
+	on_end = ae_decline_of_the_mughals.101 
+	
+	on_monthly = {
+		events = { 
+		
+		}
+		random_events = {
+			1000 = 0
+			100 = ae_decline_of_the_mughals.102 #Rajput rebellion
+			100 = ae_decline_of_the_mughals.103 #Maratha rebellion
+			100 = ae_decline_of_the_mughals.1031 #2nd Maratha rebellion
+			50 = ae_decline_of_the_mughals.104 #Afsharid invasion
+		}
+	}
+}
+

@@ -1,0 +1,554 @@
+full_ai = {
+	ai = yes 
+	if = {
+		limit = { is_subject = yes }
+		overlord = {
+			ai = yes 
+		}
+	}
+}
+
+
+
+
+# PARTITION OF LIVONIA - actors and province definitions
+
+is_liv_partition_muscovy = {
+	if = {
+		limit = { RUS = { is_neighbor_of = ROOT } }
+		tag = RUS
+	}
+	else_if = {
+		limit = { MOS = { is_neighbor_of = ROOT } }
+		tag = MOS
+	}
+	else = {
+		NOT = {
+			any_country = {
+				NOT = { tag = PREV }
+				AND = {
+					culture_group = east_slavic
+					NOT = {
+						primary_culture = ruthenian
+						primary_culture = byelorussian
+					}
+				}
+				army_size = PREV
+			}
+		}
+	}
+}
+
+is_liv_partition_sweden = { 
+	if = {
+		limit = { 1254 = { is_neighbor_of = SWE } } #Gulf of Finland
+		tag = SWE
+	}
+	else = {
+		capital_scope = { 
+			region = scandinavia_region
+			NOT = { province_id = 1777 }
+		}
+		1254 = { is_neighbor_of = PREV }
+	}
+}
+
+is_liv_partition_denmark = { 
+	if = {
+		limit = { baltic_sea_region = { is_neighbor_of = DAN } } 
+		tag = DAN
+	}
+	else = {
+		capital_scope = { 
+			region = scandinavia_region
+			NOT = { province_id = 1777 }
+		}
+		owns = 25 #Gotland
+	}
+}
+
+
+is_liv_partition_plc = { 
+	if = {
+		limit = { ROOT = { is_neighbor_of = PLC } } 
+		tag = PLC
+	}
+	else_if = {
+		limit = { ROOT = { is_neighbor_of = LIT } } 
+		tag = LIT
+	}
+	else_if = {
+		limit = { ROOT = { is_neighbor_of = POL } } 
+		tag = POL
+	}
+	else = {
+		
+		owns = 770 #Braslaw
+	}
+}
+
+
+
+
+livonian_region = {
+	OR = {
+		area = curonia_area
+		area = estonia_ingria_area
+		area = livonia_area
+	}
+}
+
+estland_area = { 
+	area = estonia_ingria_area
+	NOT = { province_id = 1834 } #Dorpat 
+}
+
+livland_area = {
+	OR = {
+		province_id = 37
+		province_id = 4241
+		province_id = 1834
+	}
+}
+
+kurland_area = {
+	area = curonia_area
+	NOT = { province_id = 35 } #Ösel
+}
+
+livonian_country = {
+	OR = {
+		tag = LIV
+		tag = LVA
+		tag = LTG
+		tag = EST
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+# PARTITIONS OF POLAND - actors and province definitions
+
+is_plc_partition_russia = {
+
+	if = {
+		limit = { 
+			RUS = { 
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+			} 
+		}
+		tag = RUS
+	}
+	else_if = {
+		limit = { 
+			MOS = { 
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+			} 
+		}
+		tag = MOS
+	}
+	else = {
+		capital_scope = { 
+			region = russia_region 
+		}
+		OR = {
+			is_neighbor_of = PLC
+			is_neighbor_of = POL
+			is_neighbor_of = LIT
+		}
+		is_subject = no
+		NOT = {
+			any_country = {
+				
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+				NOT = { tag = PREV }
+				capital_scope = { 
+					region = russia_region 
+				}
+				army_size = PREV
+			}
+		}
+	}
+}
+
+is_plc_partition_prussia = {
+	if = {
+		limit = { 
+			PRU = { 
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+			} 
+		}
+		tag = PRU
+	}
+	else_if = {
+		
+		limit = { 
+			BRA = { 
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+			} 
+		}
+		tag = BRA
+	}
+	else = {
+		
+		OR = {
+			is_neighbor_of = PLC
+			is_neighbor_of = POL
+			is_neighbor_of = LIT
+		}
+		
+		is_subject = no
+		capital_scope = {
+			OR = {
+				AND = {
+					region = north_german_region
+					NOT = {
+						area = bohemia_area
+						area = moravia_area
+						area = erzgebirge_area
+					}
+				}
+				area = silesia_area
+				area = west_prussia_area
+				area = east_prussia_area
+			} 
+		}
+		NOT = {
+			any_country = {
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				
+				is_subject = no
+				NOT = { tag = PREV }
+				capital_scope = {
+					OR = {
+						AND = {
+							region = north_german_region
+							NOT = {
+								area = bohemia_area
+								area = moravia_area
+								area = erzgebirge_area
+							}
+						}
+						area = silesia_area
+						area = west_prussia_area
+						area = east_prussia_area
+					}
+					
+				}
+				army_size = PREV
+			}
+		}
+	}
+}
+
+is_plc_partition_austria = {
+	if = {
+		
+		limit = { 
+			HAB = { 
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+			} 
+		}
+		tag = HAB
+	}
+	else_if = {
+		
+		limit = { 
+			HUN = { 
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+			} 
+		}
+		tag = HUN
+	}
+	else_if = {
+		
+		limit = { 
+			BOH = { 
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+			} 
+		}
+		tag = BOH
+	}
+	else = {
+		OR = {
+			is_neighbor_of = PLC
+			is_neighbor_of = POL
+			is_neighbor_of = LIT
+		}
+		is_subject = no
+		capital_scope = {
+			OR = {
+				region = south_german_region
+				region = carpathia_region
+				area = bohemia_area
+				area = moravia_area
+				area = erzgebirge_area
+			}
+		}
+		NOT = {
+			any_country = {
+				
+				OR = {
+					is_neighbor_of = PLC
+					is_neighbor_of = POL
+					is_neighbor_of = LIT
+				}
+				is_subject = no
+				NOT = { tag = PREV }
+				capital_scope = {
+					OR = {
+						region = south_german_region
+						region = carpathia_region
+						area = bohemia_area
+						area = moravia_area
+						area = erzgebirge_area
+					}
+				}
+				army_size = PREV
+			}
+		}
+	}
+}
+
+
+
+plc_1_partition_russia = {
+	OR = {
+		NOT = { continent = europe }
+		region = russia_region
+		region = crimea_region
+		region = ural_region
+		region = caucasia_region
+		area = east_dniepr_area
+		area = chernigov_area
+		area = sloboda_ukraine_area
+		area = white_ruthenia_area
+		area = smolensk_area	 
+		area = livonia_area
+		area = estonia_ingria_area
+		province_id = 280 #Kiev
+	}
+}
+
+plc_2_partition_russia = {
+	OR = {
+		plc_1_partition_russia = yes
+		area = minsk_area 
+		area = podolia_volhynia_area 
+		area = west_dniepr_area 
+		AND = {
+			area = pripyat_area 
+			NOT = { province_id = 4537 } #Navahrudak
+		}
+		AND = {
+			area = moldavia_area 
+			NOT = { province_id = 268 } #Suceava
+		}
+	}
+}
+
+plc_3_partition_russia = {
+	OR = {
+		plc_1_partition_russia = yes
+		plc_2_partition_russia = yes
+		area = curonia_area
+		area = lithuania_area
+		area = pripyat_area
+		AND = {
+			area = samogitia_area 
+			NOT = { province_id = 4534 } #Sudovia
+		}
+		AND = {
+			area = podlasie_area 
+			NOT = { province_id = 269 } #Podlasie
+		}
+		AND = {
+			area = volhynia_area 
+			NOT = { province_id = 4538 } #Chelm
+		}
+	}
+}
+
+plc_1_partition_prussia = {
+	OR = {
+		region = north_german_region
+		region = low_countries_region
+		region = scandinavia_region
+		region = british_isles_region
+		area = east_prussia_area 
+		area = silesia_area
+		AND = {
+			area = west_prussia_area 
+			NOT = { province_id = 43 } #Danzig
+		}
+		province_id = 2963 #Naklo
+		province_id = 4523 #Inowroclaw
+		province_id = 1859 #Kulm
+	}
+}
+
+plc_2_partition_prussia = {
+	OR = {
+		plc_1_partition_prussia = yes
+		area = wielkopolska_area
+		area = kuyavia_area
+		province_id = 43 #Danzig
+		AND = {
+			area = central_poland_area
+			NOT = { province_id = 4533 } #Myslowice
+		}
+	}
+}
+
+plc_3_partition_prussia = {
+	OR = {
+		plc_1_partition_prussia = yes
+		plc_2_partition_prussia = yes
+		province_id = 4533 #Myslowice
+		province_id = 269 #Podlasie
+		province_id = 4534 #Sudovia
+		AND = {
+			area = mazovia_area
+			NOT = { province_id = 4525 } #Siedlce
+		}
+	}
+}
+
+
+plc_1_partition_austria = {
+	OR = {
+		region = south_german_region
+		region = italy_region
+		region = balkan_region
+		region = iberia_region
+		region = france_region
+		AND = { 
+			region = carpathia_region
+			NOT = {
+				area = moldavia_area 
+				NOT = { province_id = 268 } #Suceava
+			}
+		}
+		area = red_ruthenia_area  
+		province_id = 2960 #Nowy Sãcz
+		province_id = 2959 #Tarnow
+	}
+}
+
+plc_2_partition_austria = {
+	plc_1_partition_austria = yes
+}
+
+plc_3_partition_austria = {
+	OR = {
+		plc_1_partition_austria = yes
+		plc_2_partition_austria = yes
+		area = malopolska_area
+		area = sandomierz_area
+		province_id = 4538 #Chelm
+		province_id = 4525 #Siedlce
+	}
+}
+
+plc_max_extent = {
+	OR = {
+		AND = { 
+			region = poland_region
+			NOT = { area = silesia_area }
+		}
+		AND = { 
+			region = ruthenia_region
+			NOT = { 
+				area = sloboda_ukraine_area 
+				province_id = 297
+			}
+		}
+		area = west_prussia_area
+		
+		AND = { 
+			area = curonia_area
+			NOT = { province_id = 35 }
+		}
+		area = livonia_area
+		area = lithuania_area
+		area = samogitia_area
+		province_id = 1834
+		
+		province_id = 42
+		province_id = 275
+		province_id = 2411
+		province_id = 283
+	}
+}
+
+is_plc_or_poland_lithuania = {
+	OR = {
+		tag = PLC
+		AND = {
+			PLC = { exists = no }
+			OR = {
+				AND = {
+					tag = POL
+					LIT = { is_subject_of = ROOT }
+				}
+				AND = {
+					tag = LIT
+					POL = { is_subject_of = ROOT }
+				}
+			}
+		}
+	} 
+}

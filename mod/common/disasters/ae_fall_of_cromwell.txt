@@ -1,0 +1,63 @@
+ae_fall_of_cromwell = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		OR = {
+			AND = {
+				tag = ENG
+				NOT = { exists = GBR }
+				NOT = { exists = AVE }
+			}
+			tag = GBR
+			tag = AVE
+		}
+		has_country_flag = eng_civil_war_happened
+		has_country_flag = english_civil_war_won_by_parliamentarians
+		government = republic
+		is_free_or_tributary_trigger = yes
+		is_lesser_in_union = no
+		normal_or_historical_nations = yes
+	}
+
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = ae_no_cromwell
+			NOT = { has_ruler_flag = cromwell_flag }
+		}
+	}
+	
+	can_stop = {
+		NOT = { government = republic }
+	}
+	
+	progress = {
+		modifier = {
+			factor = 5
+			NOT = { has_ruler_flag = cromwell_flag }
+		} 
+	}
+	
+	modifier = {
+		global_unrest = 10
+		legitimacy = -1
+		republican_tradition = -0.5
+	}	
+	
+	can_end = {
+		OR = {
+			has_country_flag = ae_fall_of_cromwell_passed
+			NOT = { government = republic }
+		}
+	}
+	
+	on_start = ae_fall_of_cromwell.100
+	on_end = ae_fall_of_cromwell.102
+	
+	on_monthly = {
+		events = { }
+		random_events = {
+			900 = 0
+			100 = ae_fall_of_cromwell.101
+		}
+	}
+}
+

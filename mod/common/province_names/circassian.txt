@@ -1,0 +1,7 @@
+# assuming Circassian would represent Adyghe
+2195 = {"Saeudzha'k" "Saeudzha'k"}
+463 = {"Myaejkhuap'hã" "Myaejkhuap'hã"}
+2197 = {"Kheshchhk'yteué" "Kheshchhk'yteué"}
+2201 = {"Nartkhwe" "Nartkhwe"}
+2198 = {"Kh'unzykhwe" "Kh'unzykhwe"}
+2447 = {"Dzhe'ederekwe" "Dzhe'ederekwe"}

@@ -1,0 +1,627 @@
+# See doc in common/scripted_effects/aet_custom_modifier_wrappers.txt
+
+vassal_tax_modifier_sem_neg_1073741824 = {
+	vassal_tax_modifier_sem = -1073741.824
+}
+
+vassal_tax_modifier_sem_neg_536870912 = {
+	vassal_tax_modifier_sem = -536870.912
+}
+
+vassal_tax_modifier_sem_neg_268435456 = {
+	vassal_tax_modifier_sem = -268435.456
+}
+
+vassal_tax_modifier_sem_neg_134217728 = {
+	vassal_tax_modifier_sem = -134217.728
+}
+
+vassal_tax_modifier_sem_neg_67108864 = {
+	vassal_tax_modifier_sem = -67108.864
+}
+
+vassal_tax_modifier_sem_neg_33554432 = {
+	vassal_tax_modifier_sem = -33554.432
+}
+
+vassal_tax_modifier_sem_neg_16777216 = {
+	vassal_tax_modifier_sem = -16777.216
+}
+
+vassal_tax_modifier_sem_neg_8388608 = {
+	vassal_tax_modifier_sem = -8388.608
+}
+
+vassal_tax_modifier_sem_neg_4194304 = {
+	vassal_tax_modifier_sem = -4194.304
+}
+
+vassal_tax_modifier_sem_neg_2097152 = {
+	vassal_tax_modifier_sem = -2097.152
+}
+
+vassal_tax_modifier_sem_neg_1048576 = {
+	vassal_tax_modifier_sem = -1048.576
+}
+
+vassal_tax_modifier_sem_neg_524288 = {
+	vassal_tax_modifier_sem = -524.288
+}
+
+vassal_tax_modifier_sem_neg_262144 = {
+	vassal_tax_modifier_sem = -262.144
+}
+
+vassal_tax_modifier_sem_neg_131072 = {
+	vassal_tax_modifier_sem = -131.072
+}
+
+vassal_tax_modifier_sem_neg_65536 = {
+	vassal_tax_modifier_sem = -65.536
+}
+
+vassal_tax_modifier_sem_neg_32768 = {
+	vassal_tax_modifier_sem = -32.768
+}
+
+vassal_tax_modifier_sem_neg_16384 = {
+	vassal_tax_modifier_sem = -16.384
+}
+
+vassal_tax_modifier_sem_neg_8192 = {
+	vassal_tax_modifier_sem = -8.192
+}
+
+vassal_tax_modifier_sem_neg_4096 = {
+	vassal_tax_modifier_sem = -4.096
+}
+
+vassal_tax_modifier_sem_neg_2048 = {
+	vassal_tax_modifier_sem = -2.048
+}
+
+vassal_tax_modifier_sem_neg_1024 = {
+	vassal_tax_modifier_sem = -1.024
+}
+
+vassal_tax_modifier_sem_neg_512 = {
+	vassal_tax_modifier_sem = -0.512
+}
+
+vassal_tax_modifier_sem_neg_256 = {
+	vassal_tax_modifier_sem = -0.256
+}
+
+vassal_tax_modifier_sem_neg_128 = {
+	vassal_tax_modifier_sem = -0.128
+}
+
+vassal_tax_modifier_sem_neg_64 = {
+	vassal_tax_modifier_sem = -0.064
+}
+
+vassal_tax_modifier_sem_neg_32 = {
+	vassal_tax_modifier_sem = -0.032
+}
+
+vassal_tax_modifier_sem_neg_16 = {
+	vassal_tax_modifier_sem = -0.016
+}
+
+vassal_tax_modifier_sem_neg_8 = {
+	vassal_tax_modifier_sem = -0.008
+}
+
+vassal_tax_modifier_sem_neg_4 = {
+	vassal_tax_modifier_sem = -0.004
+}
+
+vassal_tax_modifier_sem_neg_2 = {
+	vassal_tax_modifier_sem = -0.002
+}
+
+vassal_tax_modifier_sem_neg_1 = {
+	vassal_tax_modifier_sem = -0.001
+}
+
+
+rural_goods_produced_modifier_sem_neg_1073741824 = {
+	rural_goods_produced_modifier_sem = -1073741.824
+}
+
+rural_goods_produced_modifier_sem_neg_536870912 = {
+	rural_goods_produced_modifier_sem = -536870.912
+}
+
+rural_goods_produced_modifier_sem_neg_268435456 = {
+	rural_goods_produced_modifier_sem = -268435.456
+}
+
+rural_goods_produced_modifier_sem_neg_134217728 = {
+	rural_goods_produced_modifier_sem = -134217.728
+}
+
+rural_goods_produced_modifier_sem_neg_67108864 = {
+	rural_goods_produced_modifier_sem = -67108.864
+}
+
+rural_goods_produced_modifier_sem_neg_33554432 = {
+	rural_goods_produced_modifier_sem = -33554.432
+}
+
+rural_goods_produced_modifier_sem_neg_16777216 = {
+	rural_goods_produced_modifier_sem = -16777.216
+}
+
+rural_goods_produced_modifier_sem_neg_8388608 = {
+	rural_goods_produced_modifier_sem = -8388.608
+}
+
+rural_goods_produced_modifier_sem_neg_4194304 = {
+	rural_goods_produced_modifier_sem = -4194.304
+}
+
+rural_goods_produced_modifier_sem_neg_2097152 = {
+	rural_goods_produced_modifier_sem = -2097.152
+}
+
+rural_goods_produced_modifier_sem_neg_1048576 = {
+	rural_goods_produced_modifier_sem = -1048.576
+}
+
+rural_goods_produced_modifier_sem_neg_524288 = {
+	rural_goods_produced_modifier_sem = -524.288
+}
+
+rural_goods_produced_modifier_sem_neg_262144 = {
+	rural_goods_produced_modifier_sem = -262.144
+}
+
+rural_goods_produced_modifier_sem_neg_131072 = {
+	rural_goods_produced_modifier_sem = -131.072
+}
+
+rural_goods_produced_modifier_sem_neg_65536 = {
+	rural_goods_produced_modifier_sem = -65.536
+}
+
+rural_goods_produced_modifier_sem_neg_32768 = {
+	rural_goods_produced_modifier_sem = -32.768
+}
+
+rural_goods_produced_modifier_sem_neg_16384 = {
+	rural_goods_produced_modifier_sem = -16.384
+}
+
+rural_goods_produced_modifier_sem_neg_8192 = {
+	rural_goods_produced_modifier_sem = -8.192
+}
+
+rural_goods_produced_modifier_sem_neg_4096 = {
+	rural_goods_produced_modifier_sem = -4.096
+}
+
+rural_goods_produced_modifier_sem_neg_2048 = {
+	rural_goods_produced_modifier_sem = -2.048
+}
+
+rural_goods_produced_modifier_sem_neg_1024 = {
+	rural_goods_produced_modifier_sem = -1.024
+}
+
+rural_goods_produced_modifier_sem_neg_512 = {
+	rural_goods_produced_modifier_sem = -0.512
+}
+
+rural_goods_produced_modifier_sem_neg_256 = {
+	rural_goods_produced_modifier_sem = -0.256
+}
+
+rural_goods_produced_modifier_sem_neg_128 = {
+	rural_goods_produced_modifier_sem = -0.128
+}
+
+rural_goods_produced_modifier_sem_neg_64 = {
+	rural_goods_produced_modifier_sem = -0.064
+}
+
+rural_goods_produced_modifier_sem_neg_32 = {
+	rural_goods_produced_modifier_sem = -0.032
+}
+
+rural_goods_produced_modifier_sem_neg_16 = {
+	rural_goods_produced_modifier_sem = -0.016
+}
+
+rural_goods_produced_modifier_sem_neg_8 = {
+	rural_goods_produced_modifier_sem = -0.008
+}
+
+rural_goods_produced_modifier_sem_neg_4 = {
+	rural_goods_produced_modifier_sem = -0.004
+}
+
+rural_goods_produced_modifier_sem_neg_2 = {
+	rural_goods_produced_modifier_sem = -0.002
+}
+
+rural_goods_produced_modifier_sem_neg_1 = {
+	rural_goods_produced_modifier_sem = -0.001
+}
+
+
+
+urban_goods_produced_modifier_sem_neg_1073741824 = {
+	urban_goods_produced_modifier_sem = -1073741.824
+}
+
+urban_goods_produced_modifier_sem_neg_536870912 = {
+	urban_goods_produced_modifier_sem = -536870.912
+}
+
+urban_goods_produced_modifier_sem_neg_268435456 = {
+	urban_goods_produced_modifier_sem = -268435.456
+}
+
+urban_goods_produced_modifier_sem_neg_134217728 = {
+	urban_goods_produced_modifier_sem = -134217.728
+}
+
+urban_goods_produced_modifier_sem_neg_67108864 = {
+	urban_goods_produced_modifier_sem = -67108.864
+}
+
+urban_goods_produced_modifier_sem_neg_33554432 = {
+	urban_goods_produced_modifier_sem = -33554.432
+}
+
+urban_goods_produced_modifier_sem_neg_16777216 = {
+	urban_goods_produced_modifier_sem = -16777.216
+}
+
+urban_goods_produced_modifier_sem_neg_8388608 = {
+	urban_goods_produced_modifier_sem = -8388.608
+}
+
+urban_goods_produced_modifier_sem_neg_4194304 = {
+	urban_goods_produced_modifier_sem = -4194.304
+}
+
+urban_goods_produced_modifier_sem_neg_2097152 = {
+	urban_goods_produced_modifier_sem = -2097.152
+}
+
+urban_goods_produced_modifier_sem_neg_1048576 = {
+	urban_goods_produced_modifier_sem = -1048.576
+}
+
+urban_goods_produced_modifier_sem_neg_524288 = {
+	urban_goods_produced_modifier_sem = -524.288
+}
+
+urban_goods_produced_modifier_sem_neg_262144 = {
+	urban_goods_produced_modifier_sem = -262.144
+}
+
+urban_goods_produced_modifier_sem_neg_131072 = {
+	urban_goods_produced_modifier_sem = -131.072
+}
+
+urban_goods_produced_modifier_sem_neg_65536 = {
+	urban_goods_produced_modifier_sem = -65.536
+}
+
+urban_goods_produced_modifier_sem_neg_32768 = {
+	urban_goods_produced_modifier_sem = -32.768
+}
+
+urban_goods_produced_modifier_sem_neg_16384 = {
+	urban_goods_produced_modifier_sem = -16.384
+}
+
+urban_goods_produced_modifier_sem_neg_8192 = {
+	urban_goods_produced_modifier_sem = -8.192
+}
+
+urban_goods_produced_modifier_sem_neg_4096 = {
+	urban_goods_produced_modifier_sem = -4.096
+}
+
+urban_goods_produced_modifier_sem_neg_2048 = {
+	urban_goods_produced_modifier_sem = -2.048
+}
+
+urban_goods_produced_modifier_sem_neg_1024 = {
+	urban_goods_produced_modifier_sem = -1.024
+}
+
+urban_goods_produced_modifier_sem_neg_512 = {
+	urban_goods_produced_modifier_sem = -0.512
+}
+
+urban_goods_produced_modifier_sem_neg_256 = {
+	urban_goods_produced_modifier_sem = -0.256
+}
+
+urban_goods_produced_modifier_sem_neg_128 = {
+	urban_goods_produced_modifier_sem = -0.128
+}
+
+urban_goods_produced_modifier_sem_neg_64 = {
+	urban_goods_produced_modifier_sem = -0.064
+}
+
+urban_goods_produced_modifier_sem_neg_32 = {
+	urban_goods_produced_modifier_sem = -0.032
+}
+
+urban_goods_produced_modifier_sem_neg_16 = {
+	urban_goods_produced_modifier_sem = -0.016
+}
+
+urban_goods_produced_modifier_sem_neg_8 = {
+	urban_goods_produced_modifier_sem = -0.008
+}
+
+urban_goods_produced_modifier_sem_neg_4 = {
+	urban_goods_produced_modifier_sem = -0.004
+}
+
+urban_goods_produced_modifier_sem_neg_2 = {
+	urban_goods_produced_modifier_sem = -0.002
+}
+
+urban_goods_produced_modifier_sem_neg_1 = {
+	urban_goods_produced_modifier_sem = -0.001
+}
+
+
+mining_goods_produced_modifier_sem_neg_1073741824 = {
+	mining_goods_produced_modifier_sem = -1073741.824
+}
+
+mining_goods_produced_modifier_sem_neg_536870912 = {
+	mining_goods_produced_modifier_sem = -536870.912
+}
+
+mining_goods_produced_modifier_sem_neg_268435456 = {
+	mining_goods_produced_modifier_sem = -268435.456
+}
+
+mining_goods_produced_modifier_sem_neg_134217728 = {
+	mining_goods_produced_modifier_sem = -134217.728
+}
+
+mining_goods_produced_modifier_sem_neg_67108864 = {
+	mining_goods_produced_modifier_sem = -67108.864
+}
+
+mining_goods_produced_modifier_sem_neg_33554432 = {
+	mining_goods_produced_modifier_sem = -33554.432
+}
+
+mining_goods_produced_modifier_sem_neg_16777216 = {
+	mining_goods_produced_modifier_sem = -16777.216
+}
+
+mining_goods_produced_modifier_sem_neg_8388608 = {
+	mining_goods_produced_modifier_sem = -8388.608
+}
+
+mining_goods_produced_modifier_sem_neg_4194304 = {
+	mining_goods_produced_modifier_sem = -4194.304
+}
+
+mining_goods_produced_modifier_sem_neg_2097152 = {
+	mining_goods_produced_modifier_sem = -2097.152
+}
+
+mining_goods_produced_modifier_sem_neg_1048576 = {
+	mining_goods_produced_modifier_sem = -1048.576
+}
+
+mining_goods_produced_modifier_sem_neg_524288 = {
+	mining_goods_produced_modifier_sem = -524.288
+}
+
+mining_goods_produced_modifier_sem_neg_262144 = {
+	mining_goods_produced_modifier_sem = -262.144
+}
+
+mining_goods_produced_modifier_sem_neg_131072 = {
+	mining_goods_produced_modifier_sem = -131.072
+}
+
+mining_goods_produced_modifier_sem_neg_65536 = {
+	mining_goods_produced_modifier_sem = -65.536
+}
+
+mining_goods_produced_modifier_sem_neg_32768 = {
+	mining_goods_produced_modifier_sem = -32.768
+}
+
+mining_goods_produced_modifier_sem_neg_16384 = {
+	mining_goods_produced_modifier_sem = -16.384
+}
+
+mining_goods_produced_modifier_sem_neg_8192 = {
+	mining_goods_produced_modifier_sem = -8.192
+}
+
+mining_goods_produced_modifier_sem_neg_4096 = {
+	mining_goods_produced_modifier_sem = -4.096
+}
+
+mining_goods_produced_modifier_sem_neg_2048 = {
+	mining_goods_produced_modifier_sem = -2.048
+}
+
+mining_goods_produced_modifier_sem_neg_1024 = {
+	mining_goods_produced_modifier_sem = -1.024
+}
+
+mining_goods_produced_modifier_sem_neg_512 = {
+	mining_goods_produced_modifier_sem = -0.512
+}
+
+mining_goods_produced_modifier_sem_neg_256 = {
+	mining_goods_produced_modifier_sem = -0.256
+}
+
+mining_goods_produced_modifier_sem_neg_128 = {
+	mining_goods_produced_modifier_sem = -0.128
+}
+
+mining_goods_produced_modifier_sem_neg_64 = {
+	mining_goods_produced_modifier_sem = -0.064
+}
+
+mining_goods_produced_modifier_sem_neg_32 = {
+	mining_goods_produced_modifier_sem = -0.032
+}
+
+mining_goods_produced_modifier_sem_neg_16 = {
+	mining_goods_produced_modifier_sem = -0.016
+}
+
+mining_goods_produced_modifier_sem_neg_8 = {
+	mining_goods_produced_modifier_sem = -0.008
+}
+
+mining_goods_produced_modifier_sem_neg_4 = {
+	mining_goods_produced_modifier_sem = -0.004
+}
+
+mining_goods_produced_modifier_sem_neg_2 = {
+	mining_goods_produced_modifier_sem = -0.002
+}
+
+mining_goods_produced_modifier_sem_neg_1 = {
+	mining_goods_produced_modifier_sem = -0.001
+}
+
+
+
+plantage_goods_produced_modifier_sem_neg_1073741824 = {
+	plantage_goods_produced_modifier_sem = -1073741.824
+}
+
+plantage_goods_produced_modifier_sem_neg_536870912 = {
+	plantage_goods_produced_modifier_sem = -536870.912
+}
+
+plantage_goods_produced_modifier_sem_neg_268435456 = {
+	plantage_goods_produced_modifier_sem = -268435.456
+}
+
+plantage_goods_produced_modifier_sem_neg_134217728 = {
+	plantage_goods_produced_modifier_sem = -134217.728
+}
+
+plantage_goods_produced_modifier_sem_neg_67108864 = {
+	plantage_goods_produced_modifier_sem = -67108.864
+}
+
+plantage_goods_produced_modifier_sem_neg_33554432 = {
+	plantage_goods_produced_modifier_sem = -33554.432
+}
+
+plantage_goods_produced_modifier_sem_neg_16777216 = {
+	plantage_goods_produced_modifier_sem = -16777.216
+}
+
+plantage_goods_produced_modifier_sem_neg_8388608 = {
+	plantage_goods_produced_modifier_sem = -8388.608
+}
+
+plantage_goods_produced_modifier_sem_neg_4194304 = {
+	plantage_goods_produced_modifier_sem = -4194.304
+}
+
+plantage_goods_produced_modifier_sem_neg_2097152 = {
+	plantage_goods_produced_modifier_sem = -2097.152
+}
+
+plantage_goods_produced_modifier_sem_neg_1048576 = {
+	plantage_goods_produced_modifier_sem = -1048.576
+}
+
+plantage_goods_produced_modifier_sem_neg_524288 = {
+	plantage_goods_produced_modifier_sem = -524.288
+}
+
+plantage_goods_produced_modifier_sem_neg_262144 = {
+	plantage_goods_produced_modifier_sem = -262.144
+}
+
+plantage_goods_produced_modifier_sem_neg_131072 = {
+	plantage_goods_produced_modifier_sem = -131.072
+}
+
+plantage_goods_produced_modifier_sem_neg_65536 = {
+	plantage_goods_produced_modifier_sem = -65.536
+}
+
+plantage_goods_produced_modifier_sem_neg_32768 = {
+	plantage_goods_produced_modifier_sem = -32.768
+}
+
+plantage_goods_produced_modifier_sem_neg_16384 = {
+	plantage_goods_produced_modifier_sem = -16.384
+}
+
+plantage_goods_produced_modifier_sem_neg_8192 = {
+	plantage_goods_produced_modifier_sem = -8.192
+}
+
+plantage_goods_produced_modifier_sem_neg_4096 = {
+	plantage_goods_produced_modifier_sem = -4.096
+}
+
+plantage_goods_produced_modifier_sem_neg_2048 = {
+	plantage_goods_produced_modifier_sem = -2.048
+}
+
+plantage_goods_produced_modifier_sem_neg_1024 = {
+	plantage_goods_produced_modifier_sem = -1.024
+}
+
+plantage_goods_produced_modifier_sem_neg_512 = {
+	plantage_goods_produced_modifier_sem = -0.512
+}
+
+plantage_goods_produced_modifier_sem_neg_256 = {
+	plantage_goods_produced_modifier_sem = -0.256
+}
+
+plantage_goods_produced_modifier_sem_neg_128 = {
+	plantage_goods_produced_modifier_sem = -0.128
+}
+
+plantage_goods_produced_modifier_sem_neg_64 = {
+	plantage_goods_produced_modifier_sem = -0.064
+}
+
+plantage_goods_produced_modifier_sem_neg_32 = {
+	plantage_goods_produced_modifier_sem = -0.032
+}
+
+plantage_goods_produced_modifier_sem_neg_16 = {
+	plantage_goods_produced_modifier_sem = -0.016
+}
+
+plantage_goods_produced_modifier_sem_neg_8 = {
+	plantage_goods_produced_modifier_sem = -0.008
+}
+
+plantage_goods_produced_modifier_sem_neg_4 = {
+	plantage_goods_produced_modifier_sem = -0.004
+}
+
+plantage_goods_produced_modifier_sem_neg_2 = {
+	plantage_goods_produced_modifier_sem = -0.002
+}
+
+plantage_goods_produced_modifier_sem_neg_1 = {
+	plantage_goods_produced_modifier_sem = -0.001
+}

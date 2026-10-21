@@ -1,0 +1,85 @@
+#Country Name: Please see filename.
+
+army_names = {
+	"Hukbo ng $PROVINCE$"
+}
+
+fleet_names = {
+	"Bangka ng $PROVINCE$"
+}
+
+graphical_culture = asiangfx
+
+color = { 0  51  0 }
+
+historical_idea_groups = {
+	trade_ideas
+	maritime_ideas
+	defensive_ideas
+	spy_ideas
+	religious_ideas
+	offensive_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	"Avirjirkaya #0" = 30
+	"Ahmad #0" = 10
+	"Salilla #0" = 30
+	"Matanda #0" = 30
+	"Sulayman #0" = 30
+	"Magisa #0" = 10
+	"Ladyangbata #0" = 10
+	"Timamanukum #0" = 10
+	
+	"Lela #0" = -5
+	"Ysmeria #0" = -5
+	"Malyag #0" = -5
+}
+
+leader_names = {
+	Agung
+	Batara
+	Bima
+	Elok
+	Karna
+	Rimba
+	Saleh
+	Satria
+	Sentosa
+	Yuda
+}
+
+ship_names = {
+	Alaminos Angeles Antipolo Bacolod Bacoor Bago
+	Baguio Bais Balanga Batac Batangas	Bayawan Biñan
+	Bisilig Butuan Cabanatuan Cabuyao Cadiz Cagayan
+	Calamba Calapan Calbayog Caloocan Candon Cauayan
+	Cavite Cebu Cotabato Dagupan Danao Dapitan Dasmariñas
+	Davo Digos Dipolog Dumaguete Escalante Gapan Santos
+	Gingoog Himamaylan Iligan Iloilo Iriga Isabela Kabankalan
+	Kidapawan Koronadal Carlota Laoag Lapu-Lapu Las Piñas
+	Laguna Legazpi Lipa Lucena Maasin Makati Malaybalay Malolos 
+	Mandaluyong Mandaue Manila Marawi Marikina Masbate 
+	Meycauayan Muntinglupa Muñoz Naga Navotas Olongapo
+	Ormoc Oroquieta Ozamiz Pagadian Palayan Panabo Parañaque
+	Pasay Pasig Passi Puerto-Princessa Quezon Roxas
+	Sagay Samal San-Fernando San-Jose San-Juan San-Pablo
+	Santa-Rosa Santiago Silay Sipalay Sorsogon Surigao
+	Tabaco Tacloban Tacurong Tagaytay Tagbiliran Taguig
+	Tagum Talisay Tanauan Tangub Tanjay Tarlac Tayabas
+	Toledo Trece-Martines Tuguegarao Urdaneta Valencia
+	Valenzuela Victorias Vigan Zamboanga
+}

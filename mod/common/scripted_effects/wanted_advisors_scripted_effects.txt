@@ -1,0 +1,128 @@
+grant_wanted_advisor = {
+	if = {
+		limit = {
+			has_country_flag = new_advisor_skill_stufe_1
+			has_country_flag = new_advisor_female
+		}
+		define_advisor = {
+			type = $type$
+			skill = 1
+			female = yes
+		}
+		custom_tooltip = " "
+		add_treasury = -50
+		clr_country_flag = new_advisor_skill_stufe_1
+		clr_country_flag = new_advisor_female
+	}
+	if = {
+		limit = {
+			has_country_flag = new_advisor_skill_stufe_1
+			has_country_flag = new_advisor_male
+		}
+		define_advisor = {
+			type = $type$
+			skill = 1
+			female = no
+		}
+		custom_tooltip = " "
+		add_treasury = -50
+		clr_country_flag = new_advisor_skill_stufe_1
+		clr_country_flag = new_advisor_male
+	}
+	if = {
+		limit = {
+			has_country_flag = new_advisor_skill_stufe_2
+			has_country_flag = new_advisor_female
+		}
+		define_advisor = {
+			type = $type$
+			skill = 2
+			female = yes
+		}
+		custom_tooltip = " "
+		add_treasury = -100
+		clr_country_flag = new_advisor_skill_stufe_2
+		clr_country_flag = new_advisor_female
+	}
+	if = {
+		limit = {
+			has_country_flag = new_advisor_skill_stufe_2
+			has_country_flag = new_advisor_male
+		}
+		define_advisor = {
+			type = $type$
+			skill = 2
+			female = no
+		}
+		custom_tooltip = " "
+		add_treasury = -100
+		clr_country_flag = new_advisor_skill_stufe_2
+		clr_country_flag = new_advisor_male
+	}
+	if = {
+		limit = {
+			has_country_flag = new_advisor_skill_stufe_3
+			has_country_flag = new_advisor_female
+		}
+		define_advisor = {
+			type = $type$
+			skill = 3
+			female = yes
+		}
+		custom_tooltip = " "
+		add_treasury = -150
+		clr_country_flag = new_advisor_skill_stufe_3
+		clr_country_flag = new_advisor_female
+	}
+	if = {
+		limit = {
+			has_country_flag = new_advisor_skill_stufe_3
+			has_country_flag = new_advisor_male
+		}
+		define_advisor = {
+			type = $type$
+			skill = 3
+			female = no
+		}
+		custom_tooltip = " "
+		add_treasury = -150
+		clr_country_flag = new_advisor_skill_stufe_3
+		clr_country_flag = new_advisor_male
+	}
+}
+
+clear_wanted_advisor_flags_and_modifiers = {
+	hidden_effect = {
+		remove_country_modifier = neuer_berater_rekrutiert_countdown
+		if = {
+			limit = {
+				has_country_flag = new_advisor_skill_stufe_1
+			}
+			clr_country_flag = new_advisor_skill_stufe_1
+		}
+		if = {
+			limit = {
+				has_country_flag = new_advisor_skill_stufe_2
+			}
+			clr_country_flag = new_advisor_skill_stufe_2
+		}
+		if = {
+			limit = {
+				has_country_flag = new_advisor_skill_stufe_3
+			}
+			clr_country_flag = new_advisor_skill_stufe_3
+		}
+		if = {
+			limit = {
+				has_country_flag = new_advisor_female
+			}
+			clr_country_flag = new_advisor_female
+		}
+		if = {
+			limit = {
+				has_country_flag = new_advisor_male
+			}
+			clr_country_flag = new_advisor_male
+		}
+	}
+}

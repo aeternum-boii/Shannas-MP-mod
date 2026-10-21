@@ -1,0 +1,1506 @@
+
+on_new_consort = {
+	#to be sure it is all removed before new modifiers are applied
+	remove_country_modifier = consort_power_mod_adm_plus_1
+	remove_country_modifier = consort_power_mod_adm_plus_2
+	remove_country_modifier = consort_power_mod_adm_plus_3
+	remove_country_modifier = consort_power_mod_adm_plus_4
+	remove_country_modifier = consort_power_mod_adm_plus_5
+	remove_country_modifier = consort_power_mod_adm_plus_6
+	
+	remove_country_modifier = consort_power_mod_dip_plus_1
+	remove_country_modifier = consort_power_mod_dip_plus_2
+	remove_country_modifier = consort_power_mod_dip_plus_3
+	remove_country_modifier = consort_power_mod_dip_plus_4
+	remove_country_modifier = consort_power_mod_dip_plus_5
+	remove_country_modifier = consort_power_mod_dip_plus_6
+	
+	remove_country_modifier = consort_power_mod_mil_plus_1
+	remove_country_modifier = consort_power_mod_mil_plus_2
+	remove_country_modifier = consort_power_mod_mil_plus_3
+	remove_country_modifier = consort_power_mod_mil_plus_4
+	remove_country_modifier = consort_power_mod_mil_plus_5
+	remove_country_modifier = consort_power_mod_mil_plus_6
+	#ADM
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 1
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 2 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 2
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 3 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 3
+					NOT = { adm = 3 }
+					NOT = { consort_adm = 4 }
+				}
+				AND = {
+					adm = 3		#monarch
+					consort_adm = 4
+					NOT = { adm = 4 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 4		#monarch
+					consort_adm = 5
+					NOT = { adm = 5 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 5		#monarch
+					consort_adm = 6
+					NOT = { adm = 6 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_1"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			NOT = { adm = 5 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 2
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 3 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 3
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 4 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 4
+					NOT = { adm = 3 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 3		#monarch
+					consort_adm = 5
+					NOT = { adm = 4 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 4		#monarch
+					consort_adm = 6
+					NOT = { adm = 5 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_2"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			NOT = { adm = 5 }
+			NOT = { adm = 4 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 3
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 4 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 4
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 5
+					NOT = { adm = 3 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 3		#monarch
+					consort_adm = 6
+					NOT = { adm = 4 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_3"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			NOT = { adm = 5 }
+			NOT = { adm = 4 }
+			NOT = { adm = 3 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 4
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 5
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 6
+					NOT = { adm = 3 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_4"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 2 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 5
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 6
+					NOT = { adm = 2 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_5"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 1 }
+			adm = 0		#monarch
+			consort_adm = 6
+			NOT = { adm = 1	}
+			}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_6"
+			duration = -1
+		}
+	}
+	
+	#DIP
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 1
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 2 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 2
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 3 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 3
+					NOT = { dip = 3 }
+					NOT = { consort_dip = 4 }
+				}
+				AND = {
+					dip = 3		#monarch
+					consort_dip = 4
+					NOT = { dip = 4 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 4		#monarch
+					consort_dip = 5
+					NOT = { dip = 5 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 5		#monarch
+					consort_dip = 6
+					NOT = { dip = 6 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_1"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			NOT = { dip = 5 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 2
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 3 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 3
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 4 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 4
+					NOT = { dip = 3 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 3		#monarch
+					consort_dip = 5
+					NOT = { dip = 4 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 4		#monarch
+					consort_dip = 6
+					NOT = { dip = 5 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_2"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			NOT = { dip = 5 }
+			NOT = { dip = 4 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 3
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 4 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 4
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 5
+					NOT = { dip = 3 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 3		#monarch
+					consort_dip = 6
+					NOT = { dip = 4 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_3"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			NOT = { dip = 5 }
+			NOT = { dip = 4 }
+			NOT = { dip = 3 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 4
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 5
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 6
+					NOT = { dip = 3 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_4"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 2 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 5
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 6
+					NOT = { dip = 2 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_5"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 1 }
+			dip = 0		#monarch
+			consort_dip = 6
+			NOT = { dip = 1	}
+			}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_6"
+			duration = -1
+		}
+	}
+	
+	#MIL
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 1
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 2 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 2
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 3 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 3
+					NOT = { mil = 3 }
+					NOT = { consort_mil = 4 }
+				}
+				AND = {
+					mil = 3		#monarch
+					consort_mil = 4
+					NOT = { mil = 4 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 4		#monarch
+					consort_mil = 5
+					NOT = { mil = 5 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 5		#monarch
+					consort_mil = 6
+					NOT = { mil = 6 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_1"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			NOT = { mil = 5 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 2
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 3 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 3
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 4 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 4
+					NOT = { mil = 3 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 3		#monarch
+					consort_mil = 5
+					NOT = { mil = 4 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 4		#monarch
+					consort_mil = 6
+					NOT = { mil = 5 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_2"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			NOT = { mil = 5 }
+			NOT = { mil = 4 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 3
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 4 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 4
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 5
+					NOT = { mil = 3 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 3		#monarch
+					consort_mil = 6
+					NOT = { mil = 4 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_3"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			NOT = { mil = 5 }
+			NOT = { mil = 4 }
+			NOT = { mil = 3 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 4
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 5
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 6
+					NOT = { mil = 3 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_4"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 2 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 5
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 6
+					NOT = { mil = 2 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_5"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 1 }
+			mil = 0		#monarch
+			consort_mil = 6
+			NOT = { mil = 1	}
+			}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_6"
+			duration = -1
+		}
+	}
+}
+
+on_startup = {
+	#ADM
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 1
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 2 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 2
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 3 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 3
+					NOT = { adm = 3 }
+					NOT = { consort_adm = 4 }
+				}
+				AND = {
+					adm = 3		#monarch
+					consort_adm = 4
+					NOT = { adm = 4 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 4		#monarch
+					consort_adm = 5
+					NOT = { adm = 5 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 5		#monarch
+					consort_adm = 6
+					NOT = { adm = 6 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_1"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			NOT = { adm = 5 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 2
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 3 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 3
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 4 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 4
+					NOT = { adm = 3 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 3		#monarch
+					consort_adm = 5
+					NOT = { adm = 4 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 4		#monarch
+					consort_adm = 6
+					NOT = { adm = 5 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_2"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			NOT = { adm = 5 }
+			NOT = { adm = 4 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 3
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 4 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 4
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 5
+					NOT = { adm = 3 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 3		#monarch
+					consort_adm = 6
+					NOT = { adm = 4 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_3"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 6 }
+			NOT = { adm = 5 }
+			NOT = { adm = 4 }
+			NOT = { adm = 3 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 4
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 5 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 5
+					NOT = { adm = 2 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 2		#monarch
+					consort_adm = 6
+					NOT = { adm = 3 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_4"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 2 }
+			OR = {
+				AND = {
+					adm = 0		#monarch
+					consort_adm = 5
+					NOT = { adm = 1 }
+					NOT = { consort_adm = 6 }
+				}
+				AND = {
+					adm = 1		#monarch
+					consort_adm = 6
+					NOT = { adm = 2 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_5"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { adm = 1 }
+			adm = 0		#monarch
+			consort_adm = 6
+			NOT = { adm = 1	}
+			}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_adm_plus_6"
+			duration = -1
+		}
+	}
+	
+	#DIP
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 1
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 2 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 2
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 3 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 3
+					NOT = { dip = 3 }
+					NOT = { consort_dip = 4 }
+				}
+				AND = {
+					dip = 3		#monarch
+					consort_dip = 4
+					NOT = { dip = 4 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 4		#monarch
+					consort_dip = 5
+					NOT = { dip = 5 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 5		#monarch
+					consort_dip = 6
+					NOT = { dip = 6 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_1"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			NOT = { dip = 5 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 2
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 3 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 3
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 4 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 4
+					NOT = { dip = 3 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 3		#monarch
+					consort_dip = 5
+					NOT = { dip = 4 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 4		#monarch
+					consort_dip = 6
+					NOT = { dip = 5 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_2"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			NOT = { dip = 5 }
+			NOT = { dip = 4 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 3
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 4 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 4
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 5
+					NOT = { dip = 3 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 3		#monarch
+					consort_dip = 6
+					NOT = { dip = 4 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_3"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 6 }
+			NOT = { dip = 5 }
+			NOT = { dip = 4 }
+			NOT = { dip = 3 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 4
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 5 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 5
+					NOT = { dip = 2 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 2		#monarch
+					consort_dip = 6
+					NOT = { dip = 3 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_4"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 2 }
+			OR = {
+				AND = {
+					dip = 0		#monarch
+					consort_dip = 5
+					NOT = { dip = 1 }
+					NOT = { consort_dip = 6 }
+				}
+				AND = {
+					dip = 1		#monarch
+					consort_dip = 6
+					NOT = { dip = 2 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_5"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { dip = 1 }
+			dip = 0		#monarch
+			consort_dip = 6
+			NOT = { dip = 1	}
+			}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_dip_plus_6"
+			duration = -1
+		}
+	}
+	
+	#MIL
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 1
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 2 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 2
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 3 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 3
+					NOT = { mil = 3 }
+					NOT = { consort_mil = 4 }
+				}
+				AND = {
+					mil = 3		#monarch
+					consort_mil = 4
+					NOT = { mil = 4 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 4		#monarch
+					consort_mil = 5
+					NOT = { mil = 5 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 5		#monarch
+					consort_mil = 6
+					NOT = { mil = 6 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_1"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			NOT = { mil = 5 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 2
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 3 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 3
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 4 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 4
+					NOT = { mil = 3 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 3		#monarch
+					consort_mil = 5
+					NOT = { mil = 4 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 4		#monarch
+					consort_mil = 6
+					NOT = { mil = 5 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_2"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			NOT = { mil = 5 }
+			NOT = { mil = 4 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 3
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 4 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 4
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 5
+					NOT = { mil = 3 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 3		#monarch
+					consort_mil = 6
+					NOT = { mil = 4 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_3"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 6 }
+			NOT = { mil = 5 }
+			NOT = { mil = 4 }
+			NOT = { mil = 3 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 4
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 5 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 5
+					NOT = { mil = 2 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 2		#monarch
+					consort_mil = 6
+					NOT = { mil = 3 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_4"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 2 }
+			OR = {
+				AND = {
+					mil = 0		#monarch
+					consort_mil = 5
+					NOT = { mil = 1 }
+					NOT = { consort_mil = 6 }
+				}
+				AND = {
+					mil = 1		#monarch
+					consort_mil = 6
+					NOT = { mil = 2 }
+				}
+			}
+		}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_5"
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				government = monarchy
+				government = tribal
+			}
+			has_consort = yes
+			has_regency = no
+			NOT = { mil = 1 }
+			mil = 0		#monarch
+			consort_mil = 6
+			NOT = { mil = 1	}
+			}
+		
+		add_country_modifier = {
+			name = "consort_power_mod_mil_plus_6"
+			duration = -1
+		}
+	}
+}
+
+on_queen_death = {
+	remove_country_modifier = consort_power_mod_adm_plus_1
+	remove_country_modifier = consort_power_mod_adm_plus_2
+	remove_country_modifier = consort_power_mod_adm_plus_3
+	remove_country_modifier = consort_power_mod_adm_plus_4
+	remove_country_modifier = consort_power_mod_adm_plus_5
+	remove_country_modifier = consort_power_mod_adm_plus_6
+	
+	remove_country_modifier = consort_power_mod_dip_plus_1
+	remove_country_modifier = consort_power_mod_dip_plus_2
+	remove_country_modifier = consort_power_mod_dip_plus_3
+	remove_country_modifier = consort_power_mod_dip_plus_4
+	remove_country_modifier = consort_power_mod_dip_plus_5
+	remove_country_modifier = consort_power_mod_dip_plus_6
+	
+	remove_country_modifier = consort_power_mod_mil_plus_1
+	remove_country_modifier = consort_power_mod_mil_plus_2
+	remove_country_modifier = consort_power_mod_mil_plus_3
+	remove_country_modifier = consort_power_mod_mil_plus_4
+	remove_country_modifier = consort_power_mod_mil_plus_5
+	remove_country_modifier = consort_power_mod_mil_plus_6
+}
+on_monarch_death = {		#removes if Ruler dies without consort dying
+	remove_country_modifier = consort_power_mod_adm_plus_1
+	remove_country_modifier = consort_power_mod_adm_plus_2
+	remove_country_modifier = consort_power_mod_adm_plus_3
+	remove_country_modifier = consort_power_mod_adm_plus_4
+	remove_country_modifier = consort_power_mod_adm_plus_5
+	remove_country_modifier = consort_power_mod_adm_plus_6
+	
+	remove_country_modifier = consort_power_mod_dip_plus_1
+	remove_country_modifier = consort_power_mod_dip_plus_2
+	remove_country_modifier = consort_power_mod_dip_plus_3
+	remove_country_modifier = consort_power_mod_dip_plus_4
+	remove_country_modifier = consort_power_mod_dip_plus_5
+	remove_country_modifier = consort_power_mod_dip_plus_6
+	
+	remove_country_modifier = consort_power_mod_mil_plus_1
+	remove_country_modifier = consort_power_mod_mil_plus_2
+	remove_country_modifier = consort_power_mod_mil_plus_3
+	remove_country_modifier = consort_power_mod_mil_plus_4
+	remove_country_modifier = consort_power_mod_mil_plus_5
+	remove_country_modifier = consort_power_mod_mil_plus_6
+}
+on_regent = {		#removes if Ruler dies without consort dying
+	remove_country_modifier = consort_power_mod_adm_plus_1
+	remove_country_modifier = consort_power_mod_adm_plus_2
+	remove_country_modifier = consort_power_mod_adm_plus_3
+	remove_country_modifier = consort_power_mod_adm_plus_4
+	remove_country_modifier = consort_power_mod_adm_plus_5
+	remove_country_modifier = consort_power_mod_adm_plus_6
+	
+	remove_country_modifier = consort_power_mod_dip_plus_1
+	remove_country_modifier = consort_power_mod_dip_plus_2
+	remove_country_modifier = consort_power_mod_dip_plus_3
+	remove_country_modifier = consort_power_mod_dip_plus_4
+	remove_country_modifier = consort_power_mod_dip_plus_5
+	remove_country_modifier = consort_power_mod_dip_plus_6
+	
+	remove_country_modifier = consort_power_mod_mil_plus_1
+	remove_country_modifier = consort_power_mod_mil_plus_2
+	remove_country_modifier = consort_power_mod_mil_plus_3
+	remove_country_modifier = consort_power_mod_mil_plus_4
+	remove_country_modifier = consort_power_mod_mil_plus_5
+	remove_country_modifier = consort_power_mod_mil_plus_6
+}
+on_new_monarch = {		#removes if Ruler changes without ruler death
+	remove_country_modifier = consort_power_mod_adm_plus_1
+	remove_country_modifier = consort_power_mod_adm_plus_2
+	remove_country_modifier = consort_power_mod_adm_plus_3
+	remove_country_modifier = consort_power_mod_adm_plus_4
+	remove_country_modifier = consort_power_mod_adm_plus_5
+	remove_country_modifier = consort_power_mod_adm_plus_6
+	
+	remove_country_modifier = consort_power_mod_dip_plus_1
+	remove_country_modifier = consort_power_mod_dip_plus_2
+	remove_country_modifier = consort_power_mod_dip_plus_3
+	remove_country_modifier = consort_power_mod_dip_plus_4
+	remove_country_modifier = consort_power_mod_dip_plus_5
+	remove_country_modifier = consort_power_mod_dip_plus_6
+	
+	remove_country_modifier = consort_power_mod_mil_plus_1
+	remove_country_modifier = consort_power_mod_mil_plus_2
+	remove_country_modifier = consort_power_mod_mil_plus_3
+	remove_country_modifier = consort_power_mod_mil_plus_4
+	remove_country_modifier = consort_power_mod_mil_plus_5
+	remove_country_modifier = consort_power_mod_mil_plus_6
+}

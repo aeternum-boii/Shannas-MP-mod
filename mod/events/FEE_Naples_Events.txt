@@ -1,0 +1,1197 @@
+namespace = FEE_Naples_Events
+
+#The Court of Alfonso il Magnanimo
+country_event = {
+	id = FEE_Naples_Events.1
+	title = FEE_Naples_Events.1.T
+	desc = FEE_Naples_Events.1.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1412
+		NOT = { is_year = 1458 }
+		fee_is_was_nap_sic = yes
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	immediate = {
+		add_ruler_modifier = {
+			name = fee_nap_magnanimo
+			duration = -1
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.1.OPT1
+		ai_chance = {
+			factor = 33
+		}
+
+		define_advisor = {
+			type = philosopher
+			name = "Lorenzo Valla"
+			skill = 2
+			culture = umbrian
+			religion = catholic
+			cost_multiplier = 0.33
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.1.OPT2
+		ai_chance = {
+			factor = 33
+		}
+
+		define_advisor = {
+			type = master_of_mint
+			name = "Antonio Beccadelli"
+			skill = 2
+			culture = sicilian
+			religion = catholic
+			cost_multiplier = 0.33
+		}
+		custom_tooltip = NAP_ACCADEMY_BECCADELLI_TT
+		set_country_flag = nap_antonio_beccadelli
+	}
+
+	option = {
+		name = FEE_Naples_Events.1.OPT3
+		ai_chance = {
+			factor = 33
+		}
+
+		define_advisor = {
+			type = diplomat
+			name = "Manuele Crisolora"
+			skill = 2
+			culture = greek
+			religion = catholic
+			cost_multiplier = 0.33
+		}
+
+		add_opinion = {
+			who = BYZ
+			modifier = fee_nap_recoinciliation
+		}
+		reverse_add_opinion = {
+			who = BYZ
+			modifier = fee_nap_recoinciliation
+		}
+		add_opinion = {
+			who = PAP
+			modifier = fee_nap_recoinciliation
+		}
+		reverse_add_opinion = {
+			who = PAP
+			modifier = fee_nap_recoinciliation
+		}
+	}
+}
+
+#Regia dogana della mena delle pecore di Puglia
+country_event = {
+	id = FEE_Naples_Events.2
+	title = FEE_Naples_Events.2.T
+	desc = FEE_Naples_Events.2.D
+	picture = FARMING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1447
+		fee_is_was_nap_sic = yes
+		development_in_provinces = {
+			value = 100
+			region = italy_region
+			OR = {
+				has_terrain = hills
+				has_terrain = mountain
+				trade_goods = livestock
+			}
+		}
+		any_owned_province = {
+			OR = {
+				has_terrain = hills
+				has_terrain = mountain
+				trade_goods = livestock
+			}
+			OR = {
+				num_of_times_improved = 3
+				base_production = 7
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.2.OPT1
+
+		if = {
+			limit = {
+				is_expanded_mod_active = { mod = governments }
+			}
+			add_country_modifier = {
+				name = fee_nap_transumanza_ge
+				duration = -1
+			}
+		}
+		custom_tooltip = FEE_NAP_TRANSUMANZA_TT
+		tooltip = {
+			random_owned_province = {
+				limit = {
+					region = italy_region
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						has_terrain = hills
+						has_terrain = mountain
+						trade_goods = livestock
+					}
+				}
+				add_base_production = 1
+				add_permanent_province_modifier = {
+					name = fee_nap_transumanza
+					duration = -1
+				}
+			}
+		}
+		hidden_effect = {
+			italy_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						has_terrain = hills
+						has_terrain = mountain
+						trade_goods = livestock
+					}
+				}
+				add_base_production = 1
+				add_permanent_province_modifier = {
+					name = fee_nap_transumanza
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+#Gjergj Kastrioti Skënderbeu
+country_event = {
+	id = FEE_Naples_Events.3
+	title = FEE_Naples_Events.3.T
+	desc = FEE_Naples_Events.3.D
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1451
+		exists = ALB
+		OR = {
+			AND = {
+				fee_is_was_nap_sic = yes
+				is_free_or_tributary_trigger = yes
+			}
+			AND = {
+				tag = ARA
+				OR = {
+					overlord_of = NAP
+					overlord_of = SIC
+					overlord_of = TTS
+				}
+			}
+		}
+		NOT = { war_with = ALB }
+	}
+
+	option = {
+		name = FEE_Naples_Events.3.OPT1
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				is_at_war = no
+			}
+		}
+
+		create_guarantee = ALB
+		ALB = {
+			country_event = {
+				id = FEE_Naples_Events.4
+				days = 30
+			}
+		}
+		add_opinion = {
+			who = TUR
+			modifier = fee_nap_helps_skanderberg
+		}
+		custom_tooltip = ALB_HELP_TT
+	}
+
+	option = {
+		name = FEE_Naples_Events.3.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		add_stability_or_adm_power = yes
+		ALB = {
+			add_yearly_manpower = 2
+			add_years_of_income = 3
+		}
+	}
+}
+
+#Helps from Naples
+country_event = {
+	id = FEE_Naples_Events.4
+	title = FEE_Naples_Events.4.T
+	desc = FEE_Naples_Events.4.D
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = FEE_Naples_Events.4.OPT1
+		trigger = {
+			is_free_or_tributary_trigger = yes
+		}
+		ai_chance = {
+			factor = 50
+		}
+
+		add_yearly_manpower = 2
+		add_years_of_income = 3
+		if = {
+			limit = {
+				NOT = { war_exhaustion = 1 }
+			}
+			add_war_exhaustion = -2.5
+		}
+		FROM = {
+			create_subject = {
+				subject_type = march
+				subject = ROOT
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.4.OPT2
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 2
+				is_at_war = yes
+			}
+		}
+
+		add_yearly_manpower = 2
+		add_years_of_income = 3
+		if = {
+			limit = {
+				war_exhaustion = 1
+			}
+			add_war_exhaustion = -2.5
+		}
+	}
+}
+
+#Accademia Pontaniana
+country_event = {
+	id = FEE_Naples_Events.5
+	title = FEE_Naples_Events.5.T
+	desc = FEE_Naples_Events.5.D
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1458
+		fee_is_was_nap_sic = yes
+		owns = 121
+		121 = { num_of_times_improved = 2 }
+		OR = {
+			theologian = 2
+			diplomat = 2
+			statesman = 2
+			philosopher = 2
+			artist = 2
+			master_of_mint = 2
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			OR = {
+				master_of_mint = 2
+				has_country_flag = nap_antonio_beccadelli
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.5.OPT1
+		add_adm_power = 25
+		add_innovativeness_or_monarch_power = {
+			amount = 2
+			adm = 20
+			dip = 20
+			mil = 20
+		}
+		121 = {
+			add_institution_embracement = {
+				which = renaissance
+				value = 24
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = nap_antonio_beccadelli
+		}
+	}
+}
+
+#Porta Capuana
+country_event = {
+	id = FEE_Naples_Events.6
+	title = FEE_Naples_Events.6.T
+	desc = FEE_Naples_Events.6.D
+	picture = FORTIFIED_CITY_WITH_CARAVAN_OUTSIDE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1484
+		owns = 121
+		121 = {
+			base_manpower = 10
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.5
+			OR = {
+				fortification_expert = 2
+				has_country_flag = nap_antonio_beccadelli
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.6.OPT1
+
+		121 = {
+			add_permanent_province_modifier = {
+				name = fee_nap_porta_capuana
+				duration = -1
+			}
+		}
+	}
+}
+
+#Isabella di Chiaromonte
+country_event = {
+	id = FEE_Naples_Events.7
+	title = FEE_Naples_Events.7.T
+	desc = FEE_Naples_Events.7.D
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1440
+		fee_is_was_nap_sic = yes
+		NOT = { has_ruler = "Alfons V" }
+		has_regency = no
+		NOT = { is_year = 1465 }
+		is_lesser_in_union = no
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = FEE_Naples_Events.7.OPT1
+		ai_chance = {
+			factor = 50
+		}
+		trigger = {
+			hidden_trigger = {
+				has_consort = yes
+			}
+		}
+
+		add_legitimacy_equivalent = { amount = 10 republican_tradition = 5 }
+	}
+
+	option = {
+		name = FEE_Naples_Events.7.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		if = {
+			limit = { has_consort = yes }
+			remove_consort = yes
+		}
+		add_legitimacy_equivalent = { amount = -5 republican_tradition = -3 }
+		define_consort = {
+			name = "Isabella Chiaromonte"
+			culture = neapolitan
+			religion = catholic
+			age = 20
+			adm = 3
+			dip = 4
+			mil = 2
+		}
+		apulia_area = {
+			add_province_modifier = {
+				name = home_of_consort
+				duration = 9125
+			}
+		}
+	}
+}
+
+#Dream of Ladislao I
+country_event = {
+	id = FEE_Naples_Events.8
+	title = FEE_Naples_Events.8.T
+	desc = FEE_Naples_Events.8.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1377
+		fee_is_was_nap_sic = yes
+		is_free_or_tributary_trigger = yes
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = FEE_Naples_Events.8.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		tuscany_area = { add_permanent_claim = ROOT }
+		lazio_area = { add_permanent_claim = ROOT }
+		set_country_flag = fee_nap_followed_dream_ladislao
+		custom_tooltip = FEE_NAP_FOLLOWED_DREAM_LADISLAO_TT
+	}
+
+	option = {
+		name = FEE_Naples_Events.8.OPT2
+		ai_chance = {
+			factor = 50
+		}
+
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+}
+
+#Legacy of Ladislao I
+country_event = {
+	id = FEE_Naples_Events.9
+	title = FEE_Naples_Events.9.T
+	desc = FEE_Naples_Events.9.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			is_year = 1492
+			adm_tech = 7
+		}
+		has_country_flag = fee_nap_followed_dream_ladislao
+		fee_is_was_nap_sic = yes
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = formed_italy_flag }
+		tuscany_area = {
+			type = all
+			owned_by = ROOT
+		}
+		lazio_area = {
+			type = all
+			owned_by = ROOT
+		}
+		naples_area = {
+			type = all
+			owned_by = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = FEE_Naples_Events.9.OPT1
+		ai_chance = {
+			factor = 90
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				emperor = {
+					add_opinion = {
+						who = root
+						modifier = opinion_left_empire
+					}
+				}
+				set_in_empire = no
+				emperor = {
+					country_event = { id = hre_event.5 }
+				}
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				hidden_effect = {
+					set_in_empire = no
+				}
+				if = {
+					limit = {
+						NOT = { is_part_of_hre = yes } #for tooltip purposes
+					}
+					set_government_rank = 2
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_reform_on_level = 0 }
+				}
+				add_government_reform = signoria_reform
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			on_change_tag_effect = yes
+			set_country_flag = formed_italy_flag
+			set_global_flag = formed_italy_flag_global # for german mission
+		}
+		change_tag = ITA
+		italy_region = { add_permanent_claim = ITA }
+		add_prestige_or_monarch_power = { amount = 25 }
+		set_capital = 118
+		swap_non_generic_missions = yes
+	}
+
+	option = {
+		name = FEE_Naples_Events.9.OPT2
+		ai_chance = {
+			factor = 10
+		}
+
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+}
+
+### History of Naples under the rule of Ferdinando I di Napoli 1458 - 1494 and or a bit before
+
+# Giovanni Antonio Orsini 
+country_event = {
+	id = FEE_Naples_Events.10
+	title = FEE_Naples_Events.10.T
+	desc = FEE_Naples_Events.10.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		fee_is_was_nap_sic = yes
+		owns = 122
+		is_year = 1401
+		NOT = { is_year = 1463 }
+	}
+
+	goto = 122
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = FEE_Naples_Events.10.OPT1
+		ai_chance = {
+			factor = 50
+		}
+
+		define_advisor = {
+			type = trader
+			age = 43
+			skill = 2
+			cost_multiplier = 0.75
+			religion = catholic
+			culture = neapolitan
+			name = "Giovanni Antonio Orsini"
+		}
+		122 = {
+			add_base_production = 1
+			add_permanent_province_modifier = {
+				name = fee_nap_taranto_del_balzo
+				duration = -1
+			}
+			province_event = {
+				id = FEE_Naples_Events.11
+				days = 1825
+				random = 547
+			}
+		}
+	}
+}
+
+# Commissioni Marittime dei del Balzo
+province_event = {
+	id = FEE_Naples_Events.11
+	title = FEE_Naples_Events.11.T
+	desc = FEE_Naples_Events.11.D
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 122
+
+	immediate = {
+		hidden_effect = {
+			122 = {
+				owner = { save_event_target_as = fee_nap_owner_122 }
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.11.OPT1
+		ai_chance = {
+			factor = 75
+		}
+
+		owner = { add_treasury = -25 }
+		add_prosperity = 50
+		add_trade_modifier = {
+			who = event_target:fee_nap_owner_122
+			duration = 5475
+			power = 15
+			key = fee_nap_commissioni_del_balzo
+		}
+		remove_province_modifier = fee_nap_taranto_del_balzo
+		add_permanent_province_modifier = {
+			name = fee_nap_commissioni_del_balzo
+			duration = -1
+		}
+		every_neighbor_province = {
+			limit = { owned_by = event_target:fee_nap_owner_122 }
+			random = {
+				chance = 50
+				add_base_production = 1
+			}
+		}
+		province_event = {
+			id = FEE_Naples_Events.12
+			days = 1825
+			random = 547
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.11.OPT2
+		ai_chance = {
+			factor = 25
+		}
+
+		122 = { remove_province_modifier = fee_nap_taranto_del_balzo }
+		reduce_estate_burghers_loyalty_effect = yes
+	}
+}
+
+# Espansione Marittima dei del Balzo
+province_event = {
+	id = FEE_Naples_Events.12
+	title = FEE_Naples_Events.12.T
+	desc = FEE_Naples_Events.12.D
+	picture = SHIP_SAILING_eventPicture
+
+	is_triggered_only = yes
+
+	goto = 122
+
+	option = {
+		name = FEE_Naples_Events.12.OPT1
+		ai_chance = {
+			factor = 75
+		}
+
+		owner = { add_mercantilism_or_monarch_power = { amount = 3 } }
+		151 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 15
+				key = fee_nap_commissioni_del_balzo
+			}
+		}
+		321 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 15
+				key = fee_nap_commissioni_del_balzo
+			}
+		}
+		137 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 3650
+				power = 15
+				key = fee_nap_commissioni_del_balzo
+			}
+		}
+	}
+}
+
+# The reclusion of Giovanni Antonio Orsini
+country_event = {
+	id = FEE_Naples_Events.13
+	title = FEE_Naples_Events.13.T
+	desc = FEE_Naples_Events.13.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		fee_is_was_nap_sic = yes
+		NOT = { has_ruler = "Alfons V" }
+		NOT = { is_year = 1463 }
+	}
+
+	goto = 122
+
+	option = {
+		name = FEE_Naples_Events.13.OPT1
+		ai_chance = {
+			factor = 75
+		}
+
+		add_legitimacy_equivalent = { amount = -5 republican_tradition = -3 }
+	}
+}
+
+# The Orsini Conundrum
+country_event = {
+	id = FEE_Naples_Events.14
+	title = FEE_Naples_Events.14.T
+	desc = FEE_Naples_Events.14.D
+	picture = REVOLT_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owns = 122
+		controls = 122
+	}
+
+	option = {
+		name = FEE_Naples_Events.14.OPT1
+		ai_chance = {
+			factor = 75
+		}
+
+		set_country_flag = fee_nap_conjury_orsini
+		122 = {
+			add_devastation = 100
+			add_base_tax = -1
+			add_base_production = -1
+			add_base_manpower = -1
+			spawn_rebels = {
+				size = 1
+				type = noble_rebels
+				friend = FRA
+				leader = "Giovanni Antonio Orsini"
+				leader_dynasty = "del Balzo"
+			}
+		}
+	}
+}
+
+# End of del Balzo?
+country_event = {
+	id = FEE_Naples_Events.15
+	title = FEE_Naples_Events.15.T
+	desc = FEE_Naples_Events.15.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		122 = {
+			owned_by = ROOT
+			has_province_modifier = fee_nap_commissioni_del_balzo
+		}
+		has_country_flag = fee_nap_conjury_orsini
+	}
+
+	option = {
+		name = FEE_Naples_Events.15.OPT1
+		ai_chance = {
+			factor = 75
+		}
+
+		add_years_of_income = -0.25
+	}
+
+	option = {
+		name = FEE_Naples_Events.15.OPT2
+		ai_chance = {
+			factor = 25
+		}
+
+		add_legitimacy_equivalent = { amount = -5 republican_tradition = -3 }
+		122 = { remove_province_modifier = fee_nap_commissioni_del_balzo }
+	}
+
+	after = {
+		hidden_effect = {
+			clr_country_flag = fee_nap_conjury_orsini
+		} 
+	}
+}
+
+#########	On the Ottoman Invasion	#########
+
+# The Turkish threat
+# country_event = {
+# 	id = FEE_Naples_Events.16
+# 	title = FEE_Naples_Events.16.T
+# 	desc = FEE_Naples_Events.16.D
+# 	picture = SHIP_SAILING_eventPicture
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 		owns = 122
+# 		1310 = {
+# 			any_neighbor_province = {
+# 				owned_by = TUR
+# 			}
+# 		}
+# 	}
+
+# 	option = {
+# 		name = FEE_Naples_Events.16.OPT1
+# 		ai_chance = {
+# 			factor = 75
+# 		}
+
+# 		add_years_of_income = -0.25
+# 		122 = {
+# 			add_base_manpower = 2
+# 		}
+# 	}
+
+# 	option = {
+# 		name = FEE_Naples_Events.16.OPT2
+# 		ai_chance = {
+# 			factor = 25
+# 		}
+
+		
+# 	}
+# }
+
+# Pedro Alvarez de Toledo
+country_event = {
+	id = FEE_Naples_Events.95
+	title = FEE_Naples_Events.95.T
+	desc = FEE_Naples_Events.95.D
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		fee_is_was_nap_sic = yes
+		is_year = 1520
+		NOT = { is_year = 1560 }
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.8
+			adm = 4
+		}
+		modifier = {
+			factor = 0.8
+			is_subject = yes
+		}
+	}
+
+	#We need to centralise our state.
+	option = {
+		name = FEE_Naples_Events.95.OPT1
+
+		add_adm_power = -50
+		add_dip_power = -50
+		capital_scope = {
+			add_permanent_province_modifier = {
+				name = fee_nap_pedro_alvarez
+				duration = 7300
+			}
+		}
+	}
+
+	#Naples must become a military power to rival any in Europe.
+	option = {
+		name = FEE_Naples_Events.95.OPT2
+
+		add_mil_power = 75
+	}
+}
+
+# The Construction Projects of Pedro Alvarez de Toledo
+country_event = {
+	id = FEE_Naples_Events.96
+	title = FEE_Naples_Events.96.T
+	desc = FEE_Naples_Events.96.D
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		fee_is_was_nap_sic = yes
+		is_year = 1530
+		NOT = { is_year = 1570 }
+		owns = 121
+	}
+
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.6
+			capital_scope = { has_province_modifier = fee_nap_pedro_alvarez }
+		}
+		modifier = {
+			factor = 0.8
+			has_idea_group = economic_ideas
+		}
+		modifier = {
+			factor = 0.8
+			overlord = { has_idea_group = influence_ideas }
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.96.OPT1
+
+		121 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_permanent_province_modifier = {
+				name = fee_nap_de_toledo_naples
+				duration = 3650
+			}
+		}
+	}
+
+	option = {
+		name = FEE_Naples_Events.96.OPT2
+
+		121 = {
+			add_base_tax = 1
+			add_base_manpower = 1
+			add_permanent_province_modifier = {
+				name = fee_nap_de_toledo_naples
+				duration = 3650
+			}
+		}
+	}
+}
+
+# The Flood of Bones
+country_event = {
+	id = FEE_Naples_Events.97
+	title = FEE_Naples_Events.97.T
+	desc = FEE_Naples_Events.97.D
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 121
+		is_year = 1750
+	}
+
+	mean_time_to_happen = {
+		months = 540
+	}
+
+	option = {
+		name = FEE_Naples_Events.97.OPT1
+
+		121 = { add_base_tax = 1 }
+	}
+}
+
+# San Gennaro dei Poveri
+country_event = {
+	id = FEE_Naples_Events.98
+	title = FEE_Naples_Events.98.T
+	desc = FEE_Naples_Events.98.D
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 121
+		is_year = 1650
+		NOT = { is_year = 1700 }
+		is_at_war = no
+	}
+
+	mean_time_to_happen = {
+		months = 420
+		modifier = {
+			factor = 0.8
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 0.8
+			has_idea_group = humanist_ideas
+		}
+	}
+
+	#We need this, for the good of the pour
+	option = {
+		name = FEE_Naples_Events.98.OPT1
+
+		121 = {
+			add_permanent_province_modifier = {
+				name = fee_nap_gennaro_poveri
+				duration = -1
+			}
+		}
+	}
+
+	#Our resources are better spent elsewhere
+	option = {
+		name = FEE_Naples_Events.98.OPT2
+
+		add_adm_power = 25
+	}
+}
+
+# Ospedale L'Albergo Reale dei Poveri
+country_event = {
+	id = FEE_Naples_Events.99
+	title = FEE_Naples_Events.99.T
+	desc = FEE_Naples_Events.99.D
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1750
+		owns = 121
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	#Let us show the world we care!
+	option = {
+		name = FEE_Naples_Events.99.OPT1
+
+		add_years_of_income = -0.08
+		add_country_modifier = {
+			name = fee_nap_albergo_reale
+			duration = -1
+		}
+	}
+
+	#Who can afford to spend money on the poor?
+	option = {
+		name = FEE_Naples_Events.99.OPT2
+
+		add_prestige = -5
+	}
+}
+
+# Francesco Solimena
+country_event = {
+	id = FEE_Naples_Events.100
+	title = FEE_Naples_Events.100.T
+	desc = FEE_Naples_Events.100.D
+	picture = IMPORTANT_STATUE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1670
+		NOT = { is_year = 1750 }
+	}
+
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	#Let him show what baroque art truly means!
+	option = {
+		name = FEE_Naples_Events.100.OPT1
+
+		add_prestige_or_monarch_power = { amount = 10 }
+		add_stability_or_adm_power = yes
+		add_treasury = 50
+	}
+}
+
+#
+#country_event = {
+#	id = FEE_Naples_Events.
+#	title = FEE_Naples_Events..T
+#	desc = FEE_Naples_Events..D
+#	picture = FARMING_eventPicture
+#
+#	fire_only_once = yes
+#	trigger = {
+#		tag = NAP
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 60
+#	}
+#
+#	option = {
+#		name = FEE_Naples_Events..OPT1
+#
+#	}
+#}

@@ -1,0 +1,488 @@
+namespace = wanted_advisor_event_adm
+
+country_event = {
+	id = wanted_advisor_event_adm.1
+	title = "wanted_advisor_event_adm.EVTNAME1"
+	desc = "wanted_advisor_event_adm.EVTDESC1"
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {	# Artist
+		name = "wanted_advisor_event_adm.EVTOPT1"
+
+		trigger = {
+			can_grant_wanted_advisor = { artist = yes }
+		}
+
+		grant_wanted_advisor = { type = artist }
+	}
+
+	option = { 	# Inquisitor
+		name = "wanted_advisor_event_adm.EVTOPT2"
+
+		trigger = {
+			can_grant_wanted_advisor = { inquisitor = yes }
+		}
+
+		grant_wanted_advisor = { type = inquisitor }
+	}
+
+	option = { 	# Master of Mint
+		name = "wanted_advisor_event_adm.EVTOPT3"
+
+		trigger = {
+			can_grant_wanted_advisor = { master_of_mint = yes }
+		}
+
+		grant_wanted_advisor = { type = master_of_mint }
+	}
+
+	option = { 	# Natural Scientist
+		name = "wanted_advisor_event_adm.EVTOPT4"
+
+		trigger = {
+			can_grant_wanted_advisor = { natural_scientist = yes }
+		}
+
+		grant_wanted_advisor = { type = natural_scientist }
+	}
+
+	option = { 	# Philosopher
+		name = "wanted_advisor_event_adm.EVTOPT5"
+
+		trigger = {
+			can_grant_wanted_advisor = { philosopher = yes }
+		}
+
+		grant_wanted_advisor = { type = philosopher }
+	}
+
+	option = { 	# Theologian
+		name = "wanted_advisor_event_adm.EVTOPT6"
+
+		trigger = {
+			can_grant_wanted_advisor = { theologian = yes }
+		}
+
+		grant_wanted_advisor = { type = theologian }
+	}
+
+	option = { 	# Treasurer
+		name = "wanted_advisor_event_adm.EVTOPT7"
+
+		trigger = {
+			can_grant_wanted_advisor = { treasurer = yes }
+		}
+
+		grant_wanted_advisor = { type = treasurer }
+	}
+
+	# Advisors Expanded Advisors
+	option = { 	# Administrator
+		name = "wanted_advisor_event_adm.EVTOPT9"
+
+		trigger = {
+			can_grant_wanted_advisor = { administrator = yes }
+		}
+
+		grant_wanted_advisor = { type = administrator }
+	}
+
+	option = { 	# State Overseer
+		name = "wanted_advisor_event_adm.EVTOPT10"
+
+		trigger = {
+			can_grant_wanted_advisor = { state_overseer = yes }
+		}
+
+		grant_wanted_advisor = { type = state_overseer }
+	}
+
+	option = { 	# Civil Engineer
+		name = "wanted_advisor_event_adm.EVTOPT11"
+
+		trigger = {
+			can_grant_wanted_advisor = { civil_engineer = yes }
+		}
+
+		grant_wanted_advisor = { type = civil_engineer }
+	}
+
+	option = { 	# Researcher
+		name = "wanted_advisor_event_adm.EVTOPT12"
+
+		trigger = {
+			can_grant_wanted_advisor = { researcher = yes }
+		}
+
+		grant_wanted_advisor = { type = researcher }
+	}
+
+	option = { 	# Reformist
+		name = "wanted_advisor_event_adm.EVTOPT13"
+
+		trigger = {
+			can_grant_wanted_advisor = { reformist = yes }
+		}
+
+		grant_wanted_advisor = { type = reformist }
+	}
+
+	option = { 	# Religious Representative
+		name = "wanted_advisor_event_adm.EVTOPT14"
+
+		trigger = {
+			can_grant_wanted_advisor = { religious_representative = yes }
+		}
+
+		grant_wanted_advisor = { type = religious_representative }
+	}
+
+	# Advisor Types Expanded
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT15"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_loyal_friend_adm = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_loyal_friend_adm }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT16"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_court_physician = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_court_physician }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT17"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_cardinal = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_cardinal }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT18"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_arch_bishop_catholic = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_arch_bishop_catholic }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT19"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_arch_bishop_protestant = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_arch_bishop_protestant }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT20"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_arch_bishop_reformed = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_arch_bishop_reformed }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT21"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_feudal_tax_collector = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_feudal_tax_collector }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT22"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_architect = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_architect }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT23"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_great_administrator = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_great_administrator }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT24"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_steward = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_steward }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT25"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_administrative_genius = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_administrative_genius }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT26"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_anti_corruption_officer = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_anti_corruption_officer }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT27"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_first_minister_monarchy = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_first_minister_monarchy }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT28"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_first_minister_theocracy = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_first_minister_theocracy }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT29"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_first_minister_republic = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_first_minister_republic }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT30"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_state_administrator = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_state_administrator }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT31"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_gold_digger = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_gold_digger }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT32"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_free_thinker = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_free_thinker }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT33"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_revolutionist = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_revolutionist }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT34"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_reformist = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_reformist }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT35"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_state_theorist = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_state_theorist }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT36"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_visionary = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_visionary }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT37"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_great_philosopher = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_great_philosopher }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT38"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_arch_chamberlain = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_arch_chamberlain }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT39"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_monk = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_monk }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT40"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_brahmins_preacher = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_brahmins_preacher }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT41"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_dhimmi_scholar = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_dhimmi_scholar }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT42"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_jains_bureaucrat = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_jains_bureaucrat }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT43"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_missionary = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_missionary }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT44"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_imperial_bureaucrat = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_imperial_bureaucrat }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT45"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_imam = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_imam }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT46"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_scholar = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_scholar }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT47"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_inventor = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_inventor }
+	}
+
+	option = {
+		name = "wanted_advisor_event_adm.EVTOPT48"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_witch_hunter = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_witch_hunter }
+	}
+
+	option = {	# Cancel
+		name = "wanted_advisor_event_adm.EVTOPT8"
+
+		clear_wanted_advisor_flags_and_modifiers = yes
+	}
+}

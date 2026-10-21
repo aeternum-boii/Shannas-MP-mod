@@ -1,0 +1,448 @@
+#excl. bashkir, crimean, nogaybak, siberian
+#cultures: mishary, kazani, astrakhani
+149 = {"Ädirnä" "Ädirnä"}
+151 = {"Istanbul" "Istanbul"}
+161 = {"Bükräs" "Bükräs"}
+261 = {"Galiç" "Galiç"}
+268 = {"Suçäva" "Suçäva"}
+269 = {"Podlasye" "Podlasye"}
+270 = {"Trakay" "Trakay"}
+272 = {"Vilnüs" "Vilnüs"}
+#SAME 274
+#SAME 275
+#SAME 276
+#SAME 277
+#SAME 278
+279 = {"Volin" "Volin"} #?
+#SAME 280
+281 = {"Kamaniça" "Kamaniça"}
+282 = {"Xacibäy" "Xacibäy"}
+283 = {"Busagalar arti" "Busagalar arti"} #?
+#SAME 284
+285 = {"Käfä" "Käfä"}
+#SAME 286
+287 = {"Qoban" "Qoban"} #?
+#SAME 288
+289 = {"Çernigov" "Çernigov"}
+#SAME 290
+291 = {"Xarkov" "Xarkov"} # or Xarqaw, or Xärkäw?
+292 = {"Mogilöv" "Mogilöv"} #Mogiläw?
+#SAME 293
+#SAME 294
+295 = {"Mäskäw" "Mäskäw"}
+#SAME 296
+297 = {"Bränsk" "Bränsk"}
+#SAME 298
+299 = {"Voronej" "Voronej"}
+#SAME 300
+301 = {"Räzän" "Räzän"}
+#SAME 302
+#SAME 303
+#SAME 304
+305 = {"Pirem" "Pirem"}
+306 = {"Noqrat" "Noqrat"} #Nijgar or Tübän Novgorod or Tübänsähär
+#SAME 307
+308 = {"Yarislaw" "Yarislaw"} # or #SAME
+309 = {"Olonets" "Olonets"}
+#SAME 310
+311 = {"Xolm" "Xolm"}
+#SAME 312 or Aq Kül?
+#SAME 313 or Sayisqan?
+#SAME 314
+316 = {"Xucaile" "Xucaile"} #?
+317 = {"Bursa" "Bursa"}
+318 = {"Izmir" "Izmir"}
+319 = {"Mugla" "Mugla"} #?
+320 = {"Rodos" "Rodos"}
+321 = {"Kipr" "Kipr"}
+322 = {"Kütähyä" "Kütähyä"} #?
+323 = {"Qonya" "Qonya"} #? or Könyä?
+324 = {"Qaraman" "Qaraman"} #?
+325 = {"Qastamonu" "Qastamonu"} #?
+326 = {"Änqara" "Änqara"}
+#SAME 327 #?
+#SAME 328 #?
+#SAME 329 #?
+330 = {"Trabzon" "Trabzon"} #?
+331 = {"Ärzurum" "Ärzurum"} #?
+#SAME 332 #?
+358 = {"Iskändäriä" "Iskändäriä"}
+361 = {"Qähirä" "Qähirä"}
+362 = {"Räsid" "Räsid"} #?, Räsit?
+364 = {"Gazzä" "Gazzä"}
+365 = {"Sinay" "Sinay"}
+377 = {"Xäleb" "Xäleb"}
+378 = {"Trablus" "Trablus"} #?
+379 = {"Qodüs" "Qodüs"}
+380 = {"Kärak" "Kärak"} #?
+381 = {"Gäclun" "Gäclun"} #?
+382 = {"Dimäsq" "Dimäsq"}
+384 = {"Mädinä" "Mädinä"}
+385 = {"Mäkkä" "Mäkkä"}
+388 = {"Gadän" "Gadän"} #Gäden?
+390 = {"Sänga" "Sänga"}
+#SAME 395
+396 = {"Bähräyn" "Bähräyn"}
+405 = {"Palmira" "Palmira"} #? or Tadmur?
+406 = {"Hadisä" "Hadisä"} #?
+407 = {"Raqqa" "Raqqa"}
+408 = {"Basra" "Basra"} #?, Bäsrä?
+409 = {"Kärbälä" "Kärbälä"} #?, Kärbalaq?
+410 = {"Bagdad" "Bagdad"}
+411 = {"Mosul" "Mosul"}
+412 = {"Ähwaz" "Ähwaz"} #Ähvaz?
+413 = {"Xörrämabad" "Xörrämabad"} #?
+414 = {"Hämädän" "Hämädän"}
+415 = {"Kärkük" "Kärkük"}
+416 = {"Täbriz" "Täbriz"}
+417 = {"Lahican" "Lahican"} #?
+418 = {"Diyarbaqir" "Diyarbaqir"} #?
+419 = {"Irävan" "Irävan"}
+420 = {"Gäncä" "Gäncä"}
+#SAME 421
+422 = {"Basaçiq" "Basaçiq"} #?
+423 = {"Tiflis" "Tiflis"}
+424 = {"Ärdäbil" "Ärdäbil"}
+425 = {"Därbänt" "Därbänt"}
+426 = {"Amul" "Amul"} #?
+#SAME 427 #?
+428 = {"Tähran" "Tähran"}
+429 = {"Isfahan" "Isfahan"}
+430 = {"Dästistan" "Dästistan"} #?
+#SAME 431 #?
+432 = {"Kirmän" "Kirmän"}
+433 = {"Yäzd" "Yäzd"}
+434 = {"Qohistan" "Qohistan"} #?
+435 = {"Zäränc" "Zäränc"}
+436 = {"Bircänd" "Bircänd"} #?
+437 = {"Köpet" "Köpet"} # or Köpet tawlari
+438 = {"Qaraqom" "Qaraqom"} #?
+439 = {"Meñqisliq" "Meñqisliq"} #? or Mañgislaq?
+#SAME 440
+441 = {"Xiwä" "Xiwä"}
+442 = {"Boxara" "Boxara"} # or Boxar?
+443 = {"Üstyort" "Üstyort"} #?
+444 = {"Çärcäw" "Çärcäw"} #?
+445 = {"Märv" "Märv"} #?
+446 = {"Härat" "Härat"}
+447 = {"Qandahar" "Qandahar"}
+448 = {"Gäzni" "Gäzni"}
+449 = {"Gur" "Gur"}
+450 = {"Bälx" "Bälx"}
+451 = {"Kabul" "Kabul"}
+452 = {"Bädäxsan" "Bädäxsan"}
+453 = {"Qarsi" "Qarsi"} #?
+454 = {"Sämärqand" "Sämärqand"}
+455 = {"Qizilqom" "Qizilqom"} #?
+456 = {"Törkistan" "Törkistan"}
+457 = {"Taskänt" "Taskänt"} #Taskent
+458 = {"Qoqand" "Qoqand"}
+#SAME 459 #?
+460 = {"Üzgän" "Üzgän"} #?
+461 = {"Almati" "Almati"} # or Almali
+462 = {"Mingrellär" "Mingrellär"} #?
+463 = {"Çerkeslär" "Çerkeslär"} # or Çirkäslär
+#SAME 464 or Actarxan, modern Tatar: Ästerxan
+465 = {"Sarayçiq" "Sarayçiq"} # or Nugay
+#SAME 466
+467 = {"Xopör" "Xopör"}
+468 = {"Maniç" "Maniç"} #?
+469 = {"Narin qomi" "Narin qomi"} #?
+470 = {"Bayugli" "Bayugli"} #?
+471 = {"Galimugli" "Galimugli"} #?
+472 = {"Jetiru" "Jetiru"} #?
+#SAME 473
+474 = {"Cäyek" "Cäyek"}
+475 = {"Qaraidel" "Qaraidel"} #Ufa
+476 = {"Qipçaq" "Qipçaq"}
+477 = {"Nadim" "Nadim"} #?
+478 = {"Argin" "Argin"} #?
+#SAME 479 #?
+522 = {"Dähli" "Dähli"}
+578 = {"Pisäwär" "Pisäwär"} #?
+#SAME 712
+713 = {"Bisbaliq" "Bisbaliq"}
+714 = {"Qoboqsar" "Qoboqsar"} #?
+715 = {"Öremçe" "Öremçe"}
+739 = {"Qasgar" "Qasgar"} #?
+#SAME 770
+#SAME 771
+1071 = {"Irtes" "Irtes"}
+1074 = {"Qasliq" "Qasliq"} # Iskär, Seber
+#SAME 1075
+#SAME 1076
+#SAME 1077
+1078 = {"Türe" "Türe"}
+1079 = {"Hilin" "Hilin"}
+1080 = {"Pelim" "Pelim"}
+#SAME 1081
+#SAME 1082
+#SAME 1083
+1752 = {"Rjev" "Rjev"}
+#SAME 1753
+1754 = {"Möräm" "Möräm"}
+1755 = {"Ustüg" "Ustüg"}
+1756 = {"Bucaq" "Bucaq"} #?
+#SAME 1778 or Qasím
+#SAME 1846 #?
+1848 = {"Isparta" "Isparta"} #?
+1849 = {"Hama" "Hama"} #?
+1854 = {"Yaffa" "Yaffa"} #?
+1855 = {"Saydä" "Saydä"}
+1856 = {"Abxazlar" "Abxazlar"}
+#SAME 1937
+#SAME 1940 #?
+#SAME 1941 #?
+1942 = {"Jitomir" "Jitomir"}
+#SAME 1943 #?
+1944 = {"Çerkassi" "Çerkassi"}
+1945 = {"Cagalday" "Cagalday"}
+1955 = {"Xolmogori" "Xolmogori"}
+#SAME 1956
+1957 = {"Gäreç" "Gäreç"} #Galiç
+#SAME 1958
+1959 = {"Torjok" "Torjok"}
+#SAME 1960
+#SAME 1961
+1962 = {"Kudimkar" "Kudimkar"} # or Qudimqar
+1963 = {"Çärdän" "Çärdän"}
+1964 = {"Sisola" "Sisola"}
+1965 = {"Bozliq" "Bozliq"} # not Bozawliq
+1966 = {"Çiläbe" "Çiläbe"}
+1967 = {"Xucand" "Xucand"}
+1968 = {"Küläb" "Küläb"} #?
+#SAME 1969 #?
+1970 = {"Siganaq" "Siganaq"} #or Aq Mäçet
+1971 = {"Sarysu" "Sarysu"}
+1972 = {"Ijaw" "Ijaw"}
+1973 = {"Ürgäneç" "Ürgäneç"}
+1974 = {"Yediskül" "Yediskül"} #?
+2118 = {"Ürcar" "Ürcar"} #?
+2119 = {"Çuguçaq" "Çuguçaq"} #?
+#SAME 2120 #?
+2125 = {"Qoçqor" "Qoçqor"} #?
+2126 = {"Çuy" "Çuy"}
+2127 = {"Yäselkül" "Yäselkül"} #?
+2195 = {"Socuq-Qala" "Socuq-Qala"} #? or Adiglar
+2196 = {"Guryä" "Guryä"} #?
+2197 = {"Qabarda" "Qabarda"} #?
+2198 = {"Çeçennar" "Çeçennar"} # or Çiçännär
+2199 = {"Tärki" "Tärki"} #? or Targu?
+2201 = {"Magas" "Magas"} #? or Alannar
+2202 = {"Qarabaq" "Qarabaq"}
+2203 = {"Kaxeti" "Kaxeti"} #?
+2204 = {"Qars" "Qars"} #?
+2205 = {"Naxçivan" "Naxçivan"}
+2206 = {"Urmiyä" "Urmiyä"}
+2207 = {"Märaga" "Märaga"} #?
+2208 = {"Kizlär" "Kizlär"}
+2209 = {"Ilam" "Ilam"} #?
+2210 = {"Kirmänsah" "Kirmänsah"}
+2211 = {"Ärdälan" "Ärdälan"} #?
+2212 = {"Zäncan" "Zäncan"}
+#SAME 2213
+2214 = {"Ästärabad" "Ästärabad"} #?
+2215 = {"Qäzvin" "Qäzvin"} #?, Qazvin?
+2216 = {"Simnan" "Simnan"} #?
+2217 = {"Yasuc" "Yasuc"} #?
+2218 = {"Siraz" "Siraz"}
+2219 = {"Bändär Länge" "Bändär Länge"} #?
+2220 = {"Bäm" "Bäm"} #?
+2221 = {"Mäshäd" "Mäshäd"}
+2222 = {"Ärdäkan" "Ärdäkan"} #?
+2223 = {"Laristan" "Laristan"} #?
+2224 = {"Färah" "Färah"}
+#SAME 2225
+2226 = {"Cälalabad" "Cälalabad"}
+2227 = {"Qondiz" "Qondiz"}
+2228 = {"Mäymanä" "Mäymanä"} #?
+2229 = {"Büst" "Büst"} #? or Bost?
+#SAME 2230
+2232 = {"Xaran" "Xaran"} #?
+2233 = {"Çabahar" "Çabahar"} #?
+2234 = {"Räfsäncan" "Räfsäncan"} #?
+2235 = {"Säbzevar" "Säbzevar"} #?
+2236 = {"Bocnurd" "Bocnurd"} #?
+2296 = {"Balikesir" "Balikesir"} #?
+2297 = {"Manisa" "Manisa"} #?
+2298 = {"Antalya" "Antalya"} #?
+#SAME 2299 #?
+2300 = {"Yozgat" "Yozgat"} #? or Bozoq?
+2301 = {"Qaysäri" "Qaysäri"} #?
+2302 = {"Mersin" "Mersin"} #?
+#SAME 2303 #?
+#SAME 2304 #?
+2305 = {"Ärzincan" "Ärzincan"} #?
+2306 = {"Mus" "Mus"} #?
+#SAME 2307 #?
+2308 = {"Urfa" "Urfa"} #?
+2309 = {"Säncar" "Säncar"} #? or Sincar?
+#SAME 2310 #?
+2311 = {"Sämäwä" "Sämäwä"}
+2312 = {"Wäsit" "Wäsit"}
+2313 = {"Antakya" "Antakya"} #?
+2314 = {"Däyräzür" "Däyräzür"} #?
+2331 = {"Ciddä" "Ciddä"}
+2340 = {"Küväyt" "Küväyt"}
+2344 = {"Märib" "Märib"}
+2349 = {"Qizilsu" "Qizilsu"} #?
+2350 = {"Küktübä" "Küktübä"} #or Ashabad, or Asqabad
+2351 = {"Sekti" "Sekti"} #?
+2352 = {"Alti Qudiq" "Alti Qudiq"} #?
+2353 = {"Tortqara" "Tortqara"} #?
+2354 = {"Segendiq" "Segendiq"} #?
+2355 = {"Narim" "Narim"} #?
+2356 = {"Çimkent" "Çimkent"}
+2357 = {"Aqsari" "Aqsari"} #?
+2358 = {"Altin" "Altin"}
+2359 = {"Baganali" "Baganali"} #?
+2360 = {"Tobiqti" "Tobiqti"} #?
+2361 = {"Caman Qodiq" "Caman Qodiq"} #?
+2362 = {"Iske Ürgäneç" "Iske Ürgäneç"}
+#SAME 2363 #?
+2364 = {"Firganä" "Firganä"}
+#SAME 2365 #?
+2366 = {"Siñgirlaw" "Siñgirlaw"} #?
+2367 = {"Tübän Cäyek" "Tübän Cäyek"}
+2368 = {"Qaramägdan" "Qaramägdan"} #?
+2369 = {"Yugary Isem" "Yugary Isem"}
+2370 = {"Qongrat" "Qongrat"} #?
+2405 = {"Tägänäkçä" "Tägänäkçä"} #? or Bender?
+#SAME 2406 #?
+#SAME 2407
+#SAME 2408 or Qarasu?
+#SAME 2409 #?
+2410 = {"Baqçasaray" "Baqçasaray"} #or Aqyar
+#SAME 2411 #?
+#SAME 2412 #?
+#SAME 2413
+#SAME 2414 #?
+#SAME 2415 or Atqar
+2416 = {"Macar" "Macar"}
+2417 = {"Qom" "Qom"} #?
+#SAME 2418
+#SAME 2419
+2420 = {"Agídel" "Agídel"}
+#SAME 2421 or Çistay
+2422 = {"Çabaqsar" "Çabaqsar"}
+2423 = {"Alatir" "Alatir"}
+2424 = {"Psemisl" "Psemisl"}
+2427 = {"Istäklär" "Istäklär"} #?
+#SAME 2434 or Barnawil?
+#SAME 2441
+#SAME 2444
+2447 = {"Matriqa" "Matriqa"} #?
+2749 = {"Tixvin" "Tixvin"}
+2961 = {"Ilbaw" "Ilbaw"}
+#SAME 2962
+2998 = {"Buziw" "Buziw"}
+4115 = {"Mozir" "Mozir"}
+4116 = {"Uqa" "Uqa"}
+4117 = {"Bejetsk" "Bejetsk"}
+4122 = {"Senkursk" "Senkursk"}
+4129 = {"Vim" "Vim"} #?
+#SAME 4147
+4148 = {"Böyek Luki" "Böyek Luki"}
+4171 = {"Äbärkuh" "Äbärkuh"} #?
+#SAME 4242 #?
+#SAME 4243
+4244 = {"Trubçevsk" "Trubçevsk"}
+4245 = {"Väzma" "Väzma"}
+#SAME 4246 #?
+4247 = {"Ovruç" "Ovruç"}
+4248 = {"Kasin" "Kasin"}
+#SAME 4249
+#SAME 4250
+4251 = {"Mojaysk" "Mojaysk"}
+#SAME 4252
+4253 = {"Yüryev" "Yüryev"}
+#SAME 4254 or Iske Imän?
+#SAME 4255
+4256 = {"Solviçegodsk" "Solviçegodsk"}
+#SAME 4257
+#SAME 4258
+#SAME 4259
+4260 = {"Yugari Voloçok" "Yugari Voloçok"} #?
+4261 = {"Ustüjna" "Ustüjna"}
+#SAME 4262
+4263 = {"Soligaliç" "Soligaliç"}
+#SAME 4264
+#SAME 4265
+4266 = {"Qala" "Qala"} 
+#SAME 4267
+4270 = {"Gazraq" "Gazraq"} #?
+4271 = {"Süwäydäg" "Süwäydäg"} #?
+4280 = {"Tägiz" "Tägiz"}
+4281 = {"Damar" "Damar"}
+4282 = {"Sägäda" "Sägäda"}
+4288 = {"Qornä" "Qornä"} #?, Sättülgäräb?
+4289 = {"Sostär" "Sostär"} #?
+4290 = {"Huväyzä" "Huväyzä"} #?
+4291 = {"Qazaniyä" "Qazaniyä"} #?
+4292 = {"Märdin" "Märdin"} #?
+4293 = {"Ärbil" "Ärbil"}
+4294 = {"Söläymaniyä" "Söläymaniyä"}
+4295 = {"Hasankäyf" "Hasankäyf"} #?
+4296 = {"Bitlis" "Bitlis"} #?
+4297 = {"Homs" "Homs"} #?
+4298 = {"Antep" "Antep"} #?
+4299 = {"Semaxa" "Semaxa"} #? or Samaxi
+4300 = {"Miyanä" "Miyanä"} #?
+4301 = {"Qartli" "Qartli"} #?
+4302 = {"Bayazit" "Bayazit"}
+4303 = {"Oltu" "Oltu"} #?
+#SAME 4304 #?
+4305 = {"Säki" "Säki"}
+4306 = {"Qomix" "Qomix"} #? or Lakistan? or Dagstan
+4307 = {"Aqsaray" "Aqsaray"}
+4308 = {"Diñgezle" "Diñgezle"} #?
+#SAME 4309 #?
+4310 = {"Täfrikä" "Täfrikä"} #?
+#SAME 4311 #?
+4312 = {"Iskesähär" "Iskesähär"}
+4313 = {"Çankiri" "Çankiri"} #?
+4314 = {"Qirsähär" "Qirsähär"}
+4315 = {"Toqat" "Toqat"} #?
+4324 = {"Goryan" "Goryan"} #?
+4325 = {"Säraxs" "Säraxs"} #?
+4326 = {"Nisapur" "Nisapur"} #?
+4327 = {"Cask" "Cask"} #?
+4329 = {"Fäsa" "Fäsa"} #?
+#SAME 4330 #?
+4331 = {"Kazirun" "Kazirun"} #?
+#SAME 4332 #?
+4334 = {"Täbäs" "Täbäs"} #?
+4335 = {"Kasan" "Kasan"} #?
+#SAME 4336 #?
+4337 = {"Savä" "Savä"} #?
+4338 = {"Soltaniyä" "Soltaniyä"} #?
+4339 = {"Räst" "Räst"}
+#SAME 4340 #?
+#SAME 4341 #?
+#SAME 4342 #?
+#SAME 4343 #?
+4344 = {"Sähresäbz" "Sähresäbz"} # or Yäsel Sähär
+4345 = {"Sägídabad" "Sägídabad"} #?
+
+4529 = {"Yäs" "Yäs"}
+4530 = {"Birlad" "Birlad"}
+4531 = {"Curcu" "Curcu"}
+#SAME 4539
+#SAME 4540 #?
+4541 = {"Drogobiç" "Drogobiç"}
+4542 = {"Lubni" "Lubni"}
+4543 = {"Rilsk" "Rilsk"}
+#SAME 4544
+#SAME 4545
+
+4685 = {"Qaraganda" "Qaraganda"}
+4686 = {"Ikebastoz" "Ikebastoz"}
+4687 = {"Yämäk" "Yämäk"} #Qahan-Kimäk
+#SAME 4688
+4689 = {"Umbi" "Umbi"}
+4690 = {"Tübän Isem" "Tübän Isem"}
+4691 = {"Ümär" "Ümär"} #Uba
+4692 = {"Turgay" "Turgay"}
+4693 = {"Keriä" "Keriä"} #?
+
+4706 = {"Tulçä" "Tulçä"}

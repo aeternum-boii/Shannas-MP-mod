@@ -1,0 +1,133 @@
+ae_polish_deluge = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		OR = {
+			tag = PLC
+			tag = POL
+			tag = LIT
+		}
+		is_free_or_tributary_trigger = yes
+		is_lesser_in_union = no
+		normal_or_historical_nations = yes
+		current_age = age_of_absolutism
+		
+		NOT = { ae_gamerule_historical_expansion_off = yes }
+	}
+
+	can_start = {
+		is_year = 1646
+		OR = {
+			ZAZ = { 
+				ai = yes 
+				is_subject_of = ROOT 
+			}
+			SWE = {
+				exists = yes 
+				army_size = ROOT
+			}
+			AND = {
+				if = { 
+					limit = { NOT = { exists = MOS } }
+					RUS = {
+						exists = yes 
+						army_size = ROOT
+					}
+				}
+				else = { 
+					MOS = {
+						exists = yes 
+						army_size = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			ZAZ = {
+				NOT = { 
+					exists = yes 
+					is_subject_of = ROOT 
+				}
+			}
+
+			SWE = {
+				NOT = {
+					exists = yes 
+					army_size = ROOT
+				}
+			}
+			AND = {
+				if = { 
+					limit = { NOT = { exists = MOS } }
+					RUS = {
+						NOT = {
+							exists = yes 
+							army_size = ROOT
+						}
+					}
+				}
+				else = { 
+					MOS = {
+						NOT = {
+							exists = yes 
+							army_size = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			ZAZ = { is_subject_of = ROOT }
+		} 
+		modifier = {
+			factor = 1
+			SWE = { army_size = ROOT }
+		} 
+		modifier = {
+			factor = 1
+			if = { 
+				limit = { NOT = { exists = MOS } }
+				RUS = { army_size = ROOT }
+			}
+			else = { 
+				MOS = { army_size = ROOT }
+			}
+		} 
+		
+	}
+	
+	modifier = {
+		land_morale = -0.25
+		discipline = 0.01
+	}	
+	
+	can_end = {
+		is_at_war = no
+		had_country_flag = {
+			flag = ae_polish_deluge_flag
+			days = 6900 #19 Years
+		}
+	}
+	
+	on_start = ae_polish_deluge.100
+	on_end = ae_polish_deluge.101
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+			1000 = 0
+			100 = ae_polish_deluge.102 #Russia joins ZAZ 
+			100 = ae_polish_deluge.103 #Sweden attacks
+			100 = ae_polish_deluge.104 #Alliance with Russia
+		}
+		
+	}
+}
+

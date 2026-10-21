@@ -1,0 +1,9 @@
+151 = { "Tsarigrad" "Tsarigrad" }
+149 = { "Odrin" "Odrin" }
+4779 = { "Galipoli" "Galipoli" }
+4705 = { "Gyumyurdjina" "Gyumyurdjina" }
+4702 = { "Ser" "Ser" }
+1853 = { "Kostur" "Kostur" }
+147 = { "Larisa" "Larisa" }
+4706 = {"Dobruja" "Dobruja"}
+148 = { "Solun" "Solun" }

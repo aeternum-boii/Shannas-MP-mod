@@ -1,0 +1,25 @@
+country_decisions = {
+	remove_planted_rebellion_cor = {
+		major = yes
+		potential = {
+			has_country_modifier = religious_rebellion_crackdown
+		}
+		allow = {
+			has_country_flag = esp_crackdown_started
+			had_country_flag = { flag = esp_crackdown_started days = 365 }
+			treasury = 1000
+			adm_power = 100
+			dip_power = 100
+		}
+		effect = {
+			add_treasury = -1000
+			add_adm_power = -100
+			add_dip_power = -100
+			remove_country_modifier = religious_rebellion_crackdown
+			clr_country_flag = esp_crackdown_started
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

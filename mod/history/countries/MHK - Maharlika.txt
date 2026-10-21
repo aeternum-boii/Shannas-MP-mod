@@ -1,0 +1,5 @@
+government = monarchy
+technology_group = chinese
+religion = animism
+primary_culture = filipino
+capital = 656	# Manila

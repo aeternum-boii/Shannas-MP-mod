@@ -1,0 +1,2048 @@
+namespace = lukat_events
+
+country_event = { #chistians in africa
+    id = lukat_events.1
+    title = lukat_events.1title
+    desc = lukat_events.1desc
+    picture = muslimgfx_COLONIZATION_eventPicture
+
+    trigger = {
+        capital_scope = {
+            OR = {
+                region = niger_region
+                region = guinea_region
+                region = sahel_region
+            }
+        }
+        any_owned_province = {
+            has_port = yes
+        }
+        any_country = {
+            AND = {
+                capital_scope = { has_discovered = PREV }
+                religion = catholic
+            }
+        }
+        NOT = {
+            has_country_flag = discovered_by_europeanss
+        }
+    }
+    mean_time_to_happen = {
+        months = 2
+    }
+
+    immediate = {
+        set_country_flag = discovered_by_europeanss
+    }
+
+    option = {
+        name = lukat_events.1.1
+        
+        ROOT = {
+            random_owned_province = {
+                spawn_rebels = {
+                    type = catholic_rebels
+                    size = 4
+                    religion = catholic
+                    unrest = 5
+                    leader = "Fiona Pedro"
+                    female = yes
+                    estate = estate_church
+                    as_if_faction = yes
+                    should_take_capital = yes
+                }
+            }
+            random_owned_province = {
+                spawn_rebels = {
+                    type = catholic_rebels
+                    size = 3
+                    religion = catholic
+                    unrest = 5
+                    estate = estate_church
+                    as_if_faction = yes
+                    should_take_capital = yes
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+	id = lukat_events.2
+	title = lukat_events.2title
+	desc = lukat_events.1desc
+    picture = muslimgfx_COLONIZATION_eventPicture
+
+	trigger = {
+		any_neighbor_country = {
+			has_institution = new_world_i
+		}
+		NOT = {
+			has_country_flag = got_colonialism
+		}
+	}
+
+	hidden = yes
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = lukat_events.2.1
+
+		set_country_flag = got_colonialism
+	}
+}
+
+country_event = {
+	id = lukat_events.3
+	title = none 
+	desc = none 
+	picture = none 
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		naval_ideas = 5
+	}
+
+	option = {
+		name = lukat_events.3.1
+		add_country_modifier = {
+			name = professional_marines_tm
+			duration = -1
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = lukat_events.4
+	title = none 
+	desc = none 
+	picture = none 
+	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		offensive_ideas = 7
+	}
+
+	option = {
+		name = lukat_events.4.1
+		add_country_modifier = {
+			name = napoleonic_warfare_tm
+			duration = -1
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+namespace = lukat_heir_events
+
+country_event = { #start event spy heir
+    id = lukat_heir_events.1
+    title = lukat_heir_events.1title
+    desc = lukat_heir_events.1desc
+    picture = wihgfx_FEMALE_RULER_eventPicture
+
+    major = yes
+    is_triggered_only = yes
+
+    immediate = {
+		hidden_effect = {
+			set_country_flag = heir_supported_in_our_country
+			add_country_modifier = {
+				name = just_got_pretender_rebels
+				duration = 7300
+				hidden = yes
+			}
+			export_to_variable = {
+				which = year_of_last_try_to_support_heir_in_our_country
+				value = trigger_value:is_year
+			}
+			change_variable = { which = year_of_last_try_to_support_heir_in_our_country value = -1 }
+            if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 10
+						is_overseas = no
+						OR = {
+							island = no
+							AND = {
+								island = yes
+								owner = {
+									all_owned_province = {
+										island = yes
+									}
+								}
+							}
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_capital = no
+						is_overseas = no
+						OR = {
+							island = no
+							AND = {
+								island = yes
+								owner = {
+									all_owned_province = {
+										island = yes
+									}
+								}
+							}
+						}
+						NOT = {	has_province_flag = pretender_rebels_spawned_here }
+					}
+					set_province_flag = pretender_rebels_spawned_here
+				}
+			}
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 15
+						is_overseas = no
+						OR = {
+							island = no
+							AND = {
+								island = yes
+								owner = {
+									all_owned_province = {
+										island = yes
+									}
+								}
+							}
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_capital = no
+						is_overseas = no
+						OR = {
+							island = no
+							AND = {
+								island = yes
+								owner = {
+									all_owned_province = {
+										island = yes
+									}
+								}
+							}
+						}
+						NOT = {	has_province_flag = pretender_rebels_spawned_here }
+						NOT = {	has_province_flag = pretender_rebels_spawned_here_2 }
+					}
+					set_province_flag = pretender_rebels_spawned_here_2
+				}
+			}
+		}
+	}
+
+    option = {
+        name = lukat_heir_events.1.1
+
+        ai_chance = { factor = 100 }
+
+        random_owned_province = {
+			limit = {
+				is_capital = no
+				is_overseas = no
+				OR = {
+					island = no
+					AND = {
+						island = yes
+						owner = {
+							all_owned_province = {
+								island = yes
+							}
+						}
+					}
+				}
+				has_province_flag = pretender_rebels_spawned_here
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+				win = yes
+			}
+		}
+
+        random_owned_province = {
+			limit = {
+				is_capital = no
+				is_overseas = no
+				OR = {
+					island = no
+					AND = {
+						island = yes
+						owner = {
+							all_owned_province = {
+								island = yes
+							}
+						}
+					}
+				}
+				has_province_flag = pretender_rebels_spawned_here_2
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 4
+				win = yes
+			}
+		}
+
+        if = { # rebel army (size 3), if more than 2 provinces
+			limit = {
+				num_of_owned_provinces_with = {
+					value = 3
+					is_overseas = no
+					OR = {
+						island = no
+						AND = {
+							island = yes
+							owner = {
+								all_owned_province = {
+									island = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						any_neighbor_province = {
+							NOT = {	has_province_flag = pretender_rebels_spawned_here }
+							NOT = {	has_province_flag = pretender_rebels_spawned_here_2 }
+							owned_by = ROOT
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_capital = no
+						is_overseas = no
+						OR = {
+							island = no
+							AND = {
+								island = yes
+								owner = {
+									all_owned_province = {
+										island = yes
+									}
+								}
+							}
+						}
+						NOT = {	has_province_flag = pretender_rebels_spawned_here }
+						NOT = {	has_province_flag = pretender_rebels_spawned_here_2 }
+						any_neighbor_province = {
+							is_capital = yes
+							owned_by = ROOT
+						}
+					}
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 3
+					}
+				}
+				if = {
+					limit = {
+						army_size = 200
+					}
+					random_owned_province = {
+						limit = {
+							is_capital = no
+							is_overseas = no
+							OR = {
+								island = no
+								AND = {
+									island = yes
+									owner = {
+										all_owned_province = {
+											island = yes
+										}
+									}
+								}
+							}
+							NOT = {	has_province_flag = pretender_rebels_spawned_here }
+							NOT = {	has_province_flag = pretender_rebels_spawned_here_2 }
+							any_neighbor_province = {
+								is_capital = yes
+								owned_by = ROOT
+							}
+						}
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 3
+						}
+					}
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						is_capital = no
+						is_overseas = no
+						OR = {
+							island = no
+							AND = {
+								island = yes
+								owner = {
+									all_owned_province = {
+										island = yes
+									}
+								}
+							}
+						}
+						NOT = {	has_province_flag = pretender_rebels_spawned_here }
+						NOT = {	has_province_flag = pretender_rebels_spawned_here_2 }
+					}
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 3
+					}
+				}
+			}
+		}
+		else_if = { # rebel army (size 1), if exactly 2 provinces (cities)
+			limit = {
+				num_of_owned_provinces_with = {
+					value = 2
+					is_overseas = no
+					OR = {
+						island = no
+						AND = {
+							island = yes
+							owner = {
+								all_owned_province = {
+									island = yes
+								}
+							}
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					is_overseas = no
+					OR = {
+						island = no
+						AND = {
+							island = yes
+							owner = {
+								all_owned_province = {
+									island = yes
+								}
+							}
+						}
+					}
+					NOT = {	has_province_flag = pretender_rebels_spawned_here }
+					NOT = {	has_province_flag = pretender_rebels_spawned_here_2 }
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+				}
+			}
+		}
+
+        hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_flag = pretender_rebels_spawned_here
+				}
+				clr_province_flag = pretender_rebels_spawned_here
+			}
+			every_owned_province = {
+				limit = {
+					has_province_flag = pretender_rebels_spawned_here_2
+				}
+				clr_province_flag = pretender_rebels_spawned_here_2
+			}
+		}
+    }
+}
+
+country_event = { #rebels win
+    id = lukat_heir_events.2
+    title = lukat_heir_events.2title
+    desc = lukat_heir_events.2desc
+    picture = REVOLUTION_eventPicture
+
+    trigger = {
+		capital_scope = {
+			controlled_by = pretender_rebels
+		}
+		has_country_flag = heir_supported_in_our_country
+	}
+
+    mean_time_to_happen = {
+		days = 1
+	}
+
+    option = {
+        name = lukat_heir_events.2.1
+
+        ai_chance = { factor = 100 }
+
+        disband_rebels = pretender_rebels
+		every_country = {
+			limit = {
+				has_country_flag = supported_heir_at_@ROOT
+			}
+			country_event = { id = lukat_heir_events.3 }
+			clr_country_flag = supported_heir_at_@ROOT
+		}
+		clr_country_flag = heir_supported_in_our_country
+    }
+}
+
+country_event = { #your action succeded
+    id = lukat_heir_events.3
+    title = lukat_heir_events.3title
+    desc = lukat_heir_events.3desc
+    picture = wihgfx_FEMALE_RULER_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = lukat_heir_events.3.1
+
+
+        ai_chance = { factor = 100 }
+
+        random_list = {
+            15 = { # new heir, claim = weak, male
+                custom_tooltip = NEW_HEIR_OF_OUR_DYNASTY_WEAK_CLAIM
+                hidden_effect = {
+					FROM = {
+						define_heir = {
+							claim = 30
+							dynasty = ROOT
+							age = 16
+							male = yes
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted
+					}
+					reverse_add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted_target
+					}
+                }
+            }
+            15 = { # new heir, claim = weak, female
+                custom_tooltip = NEW_HEIR_OF_OUR_DYNASTY_WEAK_CLAIM
+                hidden_effect = {
+					FROM = {
+						define_heir = {
+							claim = 30
+							dynasty = ROOT
+							age = 16
+							female = yes
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted
+					}
+					reverse_add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted_target
+					}
+                }
+            }
+            12 = { # new heir, claim = middle, male
+               custom_tooltip = NEW_HEIR_OF_OUR_DYNASTY_MIDDLE_CLAIM
+				hidden_effect = {
+					FROM = {
+						define_heir = {
+							claim = 50
+							dynasty = ROOT
+							age = 17
+							male = yes
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted
+					}
+					reverse_add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted_target
+					}
+				} 
+            }
+            13 = { # new heir, claim = middle, female
+                custom_tooltip = NEW_HEIR_OF_OUR_DYNASTY_MIDDLE_CLAIM
+				hidden_effect = {
+					FROM = {
+						define_heir = {
+							claim = 50
+							dynasty = ROOT
+							age = 17
+							female = yes
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted
+					}
+					reverse_add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted_target
+					}
+				}
+            }
+            10 = { # new heir, claim = strong, male
+                custom_tooltip = NEW_HEIR_OF_OUR_DYNASTY_STRONG_CLAIM
+				hidden_effect = {
+					FROM = {
+						define_heir = {
+							claim = 75
+							dynasty = ROOT
+							age = 18
+							male = yes
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted
+					}
+					reverse_add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted_target
+					}
+				}
+            }
+            10 = { # new heir, claim = strong, female
+                custom_tooltip = NEW_HEIR_OF_OUR_DYNASTY_STRONG_CLAIM
+				hidden_effect = {
+					FROM = {
+						define_heir = {
+							claim = 75
+							dynasty = ROOT
+							age = 18
+							female = yes
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted
+					}
+					reverse_add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted_target
+					}
+				}
+            }
+            15 = { # FROM gets lesser in union under USER
+				hidden_effect = {
+					if = {
+						limit = { war_with = FROM }
+						white_peace = FROM
+					}
+				}
+				create_union = FROM
+			}
+            10 = {
+                custom_tooltip = HEIR_ACCEPTED_AS_RULER
+                hidden_effect = {
+					if = {
+						limit = { war_with = FROM }
+						white_peace = FROM
+					}
+                    FROM = {
+						define_ruler = {
+							claim = 100
+							dynasty = ROOT
+							min_age = 16
+                            max_age = 20
+							female = yes
+                            adm = 4
+                            max_random_adm = 6
+                            dip = 5
+                            max_random_dip = 6
+                            mil = 6
+                            culture = ROOT
+                            religion = ROOT
+						}
+					}
+					add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted
+					}
+					reverse_add_opinion = {
+						who = FROM
+						modifier = supported_heir_accepted_target
+					}
+                }
+            }
+        }
+    }
+}
+
+country_event = { #all rebels killed, ROOT won
+    id = lukat_heir_events.4
+    title = lukat_heir_events.4title
+    desc = lukat_heir_events.4desc
+    picture = CONQUEST_eventPicture
+
+    trigger = {
+		has_country_flag = heir_supported_in_our_country
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = {
+			any_owned_province = {
+				controlled_by = pretender_rebels
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    option = {
+        name = lukat_heir_events.4.1
+
+        ai_chance = { factor = 100 }
+
+        every_country = {
+			limit = {
+				has_country_flag = supported_heir_at_@ROOT
+			}
+			country_event = { id = lukat_heir_events.5 }
+			clr_country_flag = supported_heir_at_@ROOT
+		}
+		clr_country_flag = heir_supported_in_our_country
+    }
+}
+
+country_event = { #rebels in FROM killed, effects for ROOT and others
+    id = lukat_heir_events.5
+    title = lukat_heir_events.5title
+    desc = lukat_heir_events.5desc
+    picture = BAD_WITH_MONARCH_eventPicture
+
+    is_triggered_only = yes
+
+    option = {
+        name = lukat_heir_events.5.1
+
+        ai_chance = { factor = 100 }
+
+        add_opinion = {
+			who = FROM
+			modifier = supported_heir_rejected
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = supported_heir_rejected_target
+		}
+        random_list = {
+			40 = { add_prestige = -5 }
+			35 = {
+				add_prestige = -10
+				FROM = {
+					define_general = {
+						fire = 3
+						shock = 3
+						manuever = 3
+						siege = 1
+					}
+				}
+			}
+			25 = {
+				add_prestige = -15
+				FROM = {
+					add_casus_belli = {
+						target = FROM
+						type = cb_claim_throne
+						months = 12
+					}
+				}
+			}
+		}
+    }
+}
+
+country_event = { #rebel armies killed, but one province still controlled by REBELS
+    id = lukat_heir_events.6
+    title = lukat_heir_events.6title
+    desc = lukat_heir_events.6desc
+    picture = ANGRY_MOB_eventPicture
+
+    trigger = {
+		has_country_flag = heir_supported_in_our_country
+		NOT = { num_of_rebel_armies = 1 }
+		any_owned_province = {
+			is_capital = no
+			controlled_by = pretender_rebels
+		}
+		NOT = {
+			calc_true_if = {
+				all_owned_province = {
+					is_capital = no
+					controlled_by = pretender_rebels
+					has_siege = no
+				}
+				amount = 2
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+    option = {
+        name = lukat_heir_events.6.1
+
+        ai_chance = { factor = 100 }
+
+        random_owned_province = {
+			limit = {
+				is_capital = no
+                controlled_by = pretender_rebels
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 3
+			}
+		}
+    }
+}
+
+country_event = { #rebel backup
+    id = lukat_heir_events.7
+    title = lukat_heir_events.7title
+    desc = lukat_heir_events.7desc
+    picture = ANGRY_MOB_eventPicture
+
+    trigger = {
+		has_country_flag = heir_supported_in_our_country
+		num_of_rebel_armies = 1
+		any_owned_province = {
+			is_capital = no
+			controlled_by = pretender_rebels
+		}
+		capital_scope = {
+			controlled_by = ROOT
+			has_siege = no
+		}
+        OR = {
+            had_country_flag = { flag = heir_supported_in_our_country days = 365 }
+            had_country_flag = { flag = heir_supported_in_our_country days = 730 }
+            had_country_flag = { flag = heir_supported_in_our_country days = 1095 }
+            had_country_flag = { flag = heir_supported_in_our_country days = 1460 }
+            had_country_flag = { flag = heir_supported_in_our_country days = 1825 }
+        }
+	}
+
+    mean_time_to_happen = {
+		days = 1
+	}
+
+    option = {
+        name = lukat_heir_events.7.1
+
+        ai_chance = { factor = 100 }
+
+        capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+			}
+		}
+    }
+}
+
+namespace = rename_country
+
+country_event = {
+	id = rename_country.1
+	title = rename_country.t
+	desc = rename_country.d
+	picture = muslimgfx_BIG_BOOK_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = rename_country.a
+		restore_country_name = yes
+	}
+	option = {
+		name = rename_country_rome.b
+		trigger = { tag = ROM }
+		override_country_name = ROMAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_rome.c
+		trigger = { tag = ROM }
+		override_country_name = IMPERIUM_ROMANUM_NAME
+	}
+	option = {
+		name = rename_country_rome.d
+		trigger = { tag = ROM }
+		override_country_name = ROMAN_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_rome.e
+		trigger = { tag = ROM }
+		override_country_name = SPQR_NAME
+	}
+	option = {
+		name = rename_country_rome.f
+		trigger = { tag = ROM }
+		override_country_name = RES_PUBLICA_ROMANA_NAME
+	}
+	option = {
+		name = rename_country_rome.g
+		trigger = { tag = ROM }
+		override_country_name = ROMAN_THEOCRACY_NAME
+	}
+	option = {
+		name = rename_country_rome.h
+		trigger = { tag = ROM }
+		override_country_name = THEOCRATIA_ROMANA_NAME
+	}
+	option = {
+		name = rename_country_rome.i
+		trigger = { tag = ROM }
+		override_country_name = ROMAN_HORDE_NAME
+	}
+	option = {
+		name = rename_country_byzantium.b
+		trigger = { tag = BYZ }
+		override_country_name = RHOMANIA_NAME
+	}
+	option = {
+		name = rename_country_byzantium.c
+		trigger = { tag = BYZ }
+		override_country_name = EASTERN_ROME_NAME
+	}
+	option = {
+		name = rename_country_byzantium.d
+		trigger = { tag = BYZ }
+		override_country_name = BYZANTINE_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_byzantium.e
+		trigger = { tag = BYZ }
+		override_country_name = RHOMANIAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_byzantium.f
+		trigger = { tag = BYZ }
+		override_country_name = BASILEIA_RHOMAION_NAME
+	}
+	option = {
+		name = rename_country_byzantium.g
+		trigger = { tag = BYZ }
+		override_country_name = EASTERN_ROMAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_byzantium.h
+		trigger = { tag = BYZ }
+		override_country_name = BYZANTINE_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_byzantium.i
+		trigger = { tag = BYZ }
+		override_country_name = RHOMANIAN_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_byzantium.j
+		trigger = { tag = BYZ }
+		override_country_name = EASTERN_ROMAN_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_byzantium.k
+		trigger = { tag = BYZ }
+		override_country_name = BYZANTINE_THEOCRACY_NAME
+	}
+	option = {
+		name = rename_country_byzantium.l
+		trigger = { tag = BYZ }
+		override_country_name = RHOMANIAN_THEOCRACY_NAME
+	}
+	option = {
+		name = rename_country_byzantium.m
+		trigger = { tag = BYZ }
+		override_country_name = EASTERN_ROMAN_THEOCRACY_NAME
+	}
+	option = {
+		name = rename_country_byzantium.n
+		trigger = { tag = BYZ owns_core_province = 118 }
+		override_country_name = BYZANTINE_ROME_NAME
+	}
+	option = {
+		name = rename_country_byzantium.p
+		trigger = { tag = BYZ owns_core_province = 118 }
+		override_country_name = BYZANTINE_ROMAN_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_byzantium.o
+		trigger = { tag = BYZ owns_core_province = 118 }
+		override_country_name = BYZANTINE_ROMAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_ottomans.b
+		trigger = { tag = TUR }
+		override_country_name = OWOMAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_ottomans.c
+		trigger = { tag = TUR }
+		override_country_name = OTTOMAN_SULTANATE_NAME
+	}
+	option = {
+		name = rename_country_ottomans.e
+		trigger = { tag = TUR }
+		override_country_name = OTTOMAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_ottomans.m
+		trigger = { tag = TUR }
+		override_country_name = RUM_NAME
+	}
+	option = {
+		name = rename_country_great_britain.b
+		trigger = { tag = GBR }
+		override_country_name = UNITED_KINGDOM_NAME
+	}
+	option = {
+		name = rename_country_great_britain.c
+		trigger = { tag = GBR }
+		override_country_name = BRITISH_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_great_britain.d
+		trigger = { tag = GBR }
+		override_country_name = COMMONWEALTH_OF_ENGLAND_NAME
+	}
+	option = {
+		name = rename_country_great_britain.e
+		trigger = { tag = GBR }
+		override_country_name = COMMONWEALTH_OF_BRITAIN_NAME
+	}
+	option = {
+		name = rename_country_great_britain.f
+		trigger = { tag = GBR }
+		override_country_name = UNITED_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_great_britain.d
+		trigger = { tag = ENG }
+		override_country_name = COMMONWEALTH_OF_ENGLAND_NAME
+	}
+	option = {
+		name = rename_country_great_britain.g
+		trigger = { tag = GBR }
+		override_country_name = ALBION_NAME
+	}
+	option = {
+		name = rename_country_great_britain.h
+		trigger = { tag = GBR }
+		override_country_name = IMPERIAL_FEDERATION_NAME
+	}
+	option = {
+		name = rename_country_great_britain.i
+		trigger = { tag = GBR }
+		override_country_name = BRITANICA_NAME
+	}
+	option = {
+		name = rename_country_holy_roman_empire.c
+		trigger = { tag = HLR }
+		override_country_name = HOLY_ROMAN_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_united_states.b
+		trigger = { tag = USA }
+		override_country_name = UNITED_STATES_OF_AMERICA_NAME
+	}
+	option = {
+		name = rename_country_united_states.c
+		trigger = { tag = USA }
+		override_country_name = AMERICA
+	}
+	option = {
+		name = rename_country_united_states.d
+		trigger = { tag = USA }
+		override_country_name = AMERICAN_UNITARY_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_united_states.e
+		trigger = { tag = USA }
+		override_country_name = KINGDOM_OF_AMERICA_NAME
+	}
+	option = {
+		name = rename_country_united_states.f
+		trigger = { tag = USA }
+		override_country_name = AMERICAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_united_states.l
+		trigger = { tag = USA }
+		override_country_name = USONIA_NAME
+	}
+	option = {
+		name = rename_country_united_states.g
+		trigger = { tag = USA }
+		override_country_name = 13_BROTHERHOODS_OF_AMERICA_NAME
+	}
+	option = {
+		name = rename_country_united_states.i
+		trigger = { tag = USA }
+		override_country_name = THE_FINAL_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_united_states.j
+		trigger = { tag = USA }
+		override_country_name = SHINING_CITY_ON_A_HILL_NAME
+	}
+	option = {
+		name = rename_country_poland.a
+		trigger = { tag = POL }
+		override_country_name = KROLESTWO_POLSKIE_NAME
+	}
+	option = {
+		name = rename_country_poland.b
+		trigger = { tag = POL }
+		override_country_name = MARKRABENKA_JAGIELLONOWIE_POLSKI_NAME
+	}
+	option = {
+		name = rename_country_poland.c
+		trigger = { tag = POL }
+		override_country_name = DESOLATE_EASTERN_KINGDOM_NAME
+	}
+	option = {
+		name = rename_country_commonwealth.a
+		trigger = { tag = PLC }
+		override_country_name = RZECZPOSPOLITA_OBOJGA_NARODOW_NAME
+	}
+	option = {
+		name = rename_country_commonwealth.b
+		trigger = { tag = PLC }
+		override_country_name = POLAND_LITHUANIA_NAME
+	}
+	option = {
+		name = rename_country_commonwealth.c
+		trigger = { tag = PLC }
+		override_country_name = LITHUANIA_POLAND_NAME
+	}
+	option = {
+		name = rename_country_commonwealth.d
+		trigger = { tag = PLC }
+		override_country_name = THE_POLISH_LITHUANIAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_commonwealth.e
+		trigger = { tag = PLC }
+		override_country_name = WATKA_WSZYSTKICH_SLOWIAN_NAME
+	}
+	option = {
+		name = rename_country_ming.b
+		trigger = { tag = MNG }
+		override_country_name = GREAT_MING_NAME
+	}
+	option = {
+		name = rename_country_ming.c
+		trigger = { tag = MNG }
+		override_country_name = DAI_MING_NAME
+	}
+	option = {
+		name = rename_country_ming.d
+		trigger = { OR = { tag = MNG tag = QNG } }
+		override_country_name = CHINA_NAME
+	}
+	option = {
+		name = rename_country_ming.e
+		trigger = { OR = { tag = MNG tag = QNG } }
+		override_country_name = CELESTIAL_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_ming.f
+		trigger = { OR = { tag = MNG tag = QNG } }
+		override_country_name = MANDATE_OF_HEAVEN_NAME
+	}
+	option = {
+		name = rename_country_ming.g
+		trigger = { OR = { tag = MNG tag = QNG } }
+		override_country_name = ZHONGGUO_NAME
+	}
+	option = {
+		name = rename_country_ming.h
+		trigger = { OR = { tag = MNG tag = QNG } }
+		override_country_name = MIDDLE_KINGDOM_NAME
+	}
+	option = {
+		name = rename_country_qing.b
+		trigger = { tag = QNG }
+		override_country_name = GREAT_QING_NAME
+	}
+	option = {
+		name = rename_country_qing.c
+		trigger = { tag = QNG }
+		override_country_name = DAI_QING_NAME
+	}
+	option = {
+		name = rename_country_qing.a
+		trigger = { tag = QNG }
+		override_country_name = IMPERIAL_QING_NAME
+	}
+	option = {
+		name = rename_country_qing.d
+		trigger = { tag = QNG }
+		override_country_name = EMPIRE_OF_EIGHT_BANNERS_NAME
+	}
+	option = {
+		name = rename_country_yuan.b
+		trigger = { tag = YUA }
+		override_country_name = GREAT_YUAN_NAME
+	}
+	option = {
+		name = rename_country_yuan.c
+		trigger = { tag = YUA }
+		override_country_name = DAI_YUAN_NAME
+	}
+	option = {
+		name = rename_country_yuan.d
+		trigger = { tag = YUA }
+		override_country_name = MONGOL_CHINA_NAME
+	}
+	option = {
+		name = rename_country_mongolia.b
+		trigger = { tag = KHA }
+		override_country_name = NORTHERN_YUAN_NAME
+	}
+	option = {
+		name = rename_country_mongol_empire.c
+		trigger = { tag = MGE }
+		override_country_name = GREAT_MONGOL_STATE_NAME
+	}
+	option = {
+		name = rename_country_mongol_empire.b
+		trigger = { tag = MGE }
+		override_country_name = GREAT_MONGOL_NATION_NAME
+	}
+	option = {
+		name = rename_country_joseon.b
+		trigger = { tag = KOR }
+		override_country_name = GREAT_JOSEON_NAME
+	}
+	option = {
+		name = rename_country_joseon.c
+		trigger = { tag = KOR }
+		override_country_name = DAI_JOSEON_NAME
+	}
+	option = {
+		name = rename_country_joseon.d
+		trigger = { tag = KOR }
+		override_country_name = KOREA_NAME
+	}
+	option = {
+		name = rename_country_joseon.a
+		trigger = { tag = KOR }
+		override_country_name = THE_TRANSGENDER_KINGDOM_OF_JESEON_NAME
+	}
+	option = {
+		name = rename_country_timurids.b
+		trigger = { tag = TIM }
+		override_country_name = GURKANI_NAME
+	}
+	option = {
+		name = rename_country_timurids.a
+		trigger = { tag = TIM }
+		override_country_name = TIMURRIZZ_NAME
+	}
+	option = {
+		name = rename_country_bohemia.b
+		trigger = { tag = BOH }
+		override_country_name = CZECHIA_NAME
+	}
+	option = {
+		name = rename_country_nitra.b
+		trigger = { tag = SLO }
+		override_country_name = SLOVAKIA_NAME
+	}
+	option = {
+		name = rename_country_persia.b
+		trigger = { tag = PER }
+		override_country_name = IRAN_NAME
+	}
+	option = {
+		name = rename_country_persia.c
+		trigger = { tag = PER }
+		override_country_name = SAFAVID_NAME
+	}
+	option = {
+		name = rename_country_persia.d
+		trigger = { tag = PER }
+		override_country_name = SAFAVID_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_persia.e
+		trigger = { tag = PER }
+		override_country_name = AFSHARID_NAME
+	}
+	option = {
+		name = rename_country_persia.f
+		trigger = { tag = PER }
+		override_country_name = AFSHARID_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_hindustan.b
+		trigger = { OR = { tag = HIN tag = BHA } }
+		override_country_name = INDIA_NAME
+	}
+	option = {
+		name = rename_country_uzbek.b
+		trigger = { tag = SHY }
+		override_country_name = UZBEKISTAN_NAME
+	}
+	option = {
+		name = rename_country_transoxiana.b
+		trigger = { tag = TRS }
+		override_country_name = MAVARANNAHR_NAME
+	}
+	option = {
+		name = rename_country_switzerland.b
+		trigger = { tag = SWI }
+		override_country_name = HELVETIA_NAME
+	}
+	option = {
+		name = rename_country_switzerland.c
+		trigger = { tag = SWI }
+		override_country_name = ALAMANNIA_NAME
+	}
+	option = {
+		name = rename_country_switzerland.d
+		trigger = { tag = SWI }
+		override_country_name = PAGONIA_UNITA_ALPINORUM_NAME
+	}
+	option = {
+		name = rename_country_switzerland.e
+		trigger = { tag = SWI }
+		override_country_name = REPUBLIK_DELLE_ALPES_NAME
+	}
+	option = {
+		name = rename_country_switzerland.f
+		trigger = { tag = SWI }
+		override_country_name = CIVITATUM_RAETIAE_ET_NORICUM_NAME
+	}
+	option = {
+		name = rename_country_france.a
+		trigger = { tag = FRA }
+		override_country_name = FRANCIA_NAME
+	}
+	option = {
+		name = rename_country_france.b
+		trigger = { tag = FRA }
+		override_country_name = LAIGLE_NAME
+	}
+	option = {
+		name = rename_country_france.c
+		trigger = { tag = FRA }
+		override_country_name = FRENCH_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_france.d
+		trigger = { tag = FRA }
+		override_country_name = EUROPEAN_UNION_NAME
+	}
+	option = {
+		name = rename_country_france.e
+		trigger = { tag = FRA }
+		override_country_name = FRANKISCH_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_milan.a
+		trigger = { tag = MLO }
+		override_country_name = AUREA_AMBROSIANA_RESPUBLICA_MEDIOLANENSIS_NAME
+	}
+	option = {
+		name = rename_country_milan.b
+		trigger = { tag = MLO }
+		override_country_name = DOMINIUM_FERRUM_MEDIOLANENSE_NAME
+	}
+	option = {
+		name = rename_country_milan.c
+		trigger = { tag = MLO }
+		override_country_name = GRADUCA_DE_MILAN_NAME
+	}
+	option = {
+		name = rename_country_zimbabwe.c
+		trigger = { OR = { tag = GZI tag = ZIM } }
+		override_country_name = FEDERATED_STATES_OF_SOUTH_EASTERN_AFRICA_NAME
+	}
+	option = {
+		name = rename_country_zimbabwe.b
+		trigger = { OR = { tag = GZI tag = ZIM } }
+		override_country_name = THE_EMPIRE_OF_THE_SWAHILI_COAST_NAME
+	}
+	option = {
+		name = rename_country_kongo.a
+		trigger = { tag = KON }
+		override_country_name = KINGDOM_OF_KONGO_NAME
+	}
+	option = {
+		name = rename_country_kongo.b
+		trigger = { tag = KON }
+		override_country_name = CHRISTIAN_REALM_OF_KONGO_NAME
+	}
+	option = {
+		name = rename_country_kongo.c
+		trigger = { tag = KON }
+		override_country_name = DEMOCRATIC_PEOPLES_REPUBLIC_OF_KONGO_NAME
+	}
+	option = {
+		name = rename_country_kongo.d
+		trigger = { tag = KON }
+		override_country_name = UNITED_KONGOLESE_STATES_NAME
+	}
+	option = {
+		name = rename_country_frankfurt.a
+		trigger = { tag = FRN }
+		override_country_name = FREIE_STADT_FRANKFURT_NAME
+	}
+	option = {
+		name = rename_country_frankfurt.b
+		trigger = { tag = FRN }
+		override_country_name = GROSSREPUBLIK_FRANKFURT_NAME
+	}
+	option = {
+		name = rename_country_frankfurt.c
+		trigger = { tag = FRN }
+		override_country_name = OBERSTER_SCHWESTERNORDEN_FRANKFURT_NAME
+	}
+	option = {
+		name = rename_country_westphalia.a
+		trigger = { tag = WES }
+		override_country_name = GROSSREPUBLIK_WESTFALEN_NAME
+	}
+	option = {
+		name = rename_country_westphalia.b
+		trigger = { tag = WES }
+		override_country_name = REICHSREPUBLIK_WESTFALEN_NAME
+	}
+	option = {
+		name = rename_country_westphalia.c
+		trigger = { tag = WES }
+		override_country_name = OBERSTER_SCHWESTERNORDEN_WESTFALEN_NAME
+	}
+	option = {
+		name = rename_country_gotland.a
+		trigger = { tag = GOT }
+		override_country_name = PIRATE_BROTHERHOOD_OF_GOATLAND_NAME
+	}
+	option = {
+		name = rename_country_gotland.b
+		trigger = { tag = GOT }
+		override_country_name = NEW_VALHALLA_NAME
+	}
+	option = {
+		name = rename_country_gotland.c
+		trigger = { tag = GOT }
+		override_country_name = SCOURGE_OF_THE_SEVEN_SEAS_NAME
+	}
+	option = {
+		name = rename_country_castile.a
+		trigger = { tag = CAS }
+		override_country_name = CROWN_OF_CASTILE_NAME
+	}
+	option = {
+		name = rename_country_castile.b
+		trigger = { tag = CAS }
+		override_country_name = CORONA_CASTELLAE_NAME
+	}
+	option = {
+		name = rename_country_castile.c
+		trigger = { tag = CAS }
+		override_country_name = CORONA_DE_CASTILLA_NAME
+	}
+	option = {
+		name = rename_country_aragon.a
+		trigger = { tag = ARA }
+		override_country_name = ARAGON_SICILY_NAME
+	}
+	option = {
+		name = rename_country_aragon.b
+		trigger = { tag = ARA }
+		override_country_name = ARAGON_ITALY_NAME
+	}
+	option = {
+		name = rename_country_aragon.c
+		trigger = { tag = ARA }
+		override_country_name = COMMUNITY_OF_ARAGON_NAME
+	}
+	option = {
+		name = rename_country_spain.a
+		trigger = { tag = SPA }
+		override_country_name = REINO_DE_ESPANA_NAME
+	}
+	option = {
+		name = rename_country_spain.b
+		trigger = { tag = SPA }
+		override_country_name = IMPERIO_ESPANOL_NAME
+	}
+	option = {
+		name = rename_country_spain.c
+		trigger = { tag = SPA }
+		override_country_name = IMPERIUM_HISPANICUM_NAME
+	}
+	option = {
+		name = rename_country_spain.d
+		trigger = { tag = SPA }
+		override_country_name = THE_CATHOLIC_MONARCHY_NAME
+	}
+	option = {
+		name = rename_country_spain.e
+		trigger = { tag = SPA }
+		override_country_name = IMPERIUM_HISPANIAE_ET_ITALIAE_NAME
+	}
+	option = {
+		name = rename_country_spain.f
+		trigger = { tag = SPA }
+		override_country_name = IMPERIUM_COMMUNIUM_NAME
+	}
+	option = {
+		name = rename_country_mali.a
+		trigger = { tag = MAL }
+		override_country_name = GOLDEN_EMPIRE_OF_MALI_NAME
+	}
+	option = {
+		name = rename_country_mali.b
+		trigger = { tag = MAL }
+		override_country_name = MALIKAR_NAME
+	}
+	option = {
+		name = rename_country_mali.c
+		trigger = { tag = MAL }
+		override_country_name = MUSAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_netherlands.a
+		trigger = { tag = NED }
+		override_country_name = LOWLAND_CONFEDERACY_NAME
+	}
+	option = {
+		name = rename_country_netherlands.b
+		trigger = { tag = NED }
+		override_country_name = UNITED_PROVINCES_NAME
+	}
+	option = {
+		name = rename_country_netherlands.c
+		trigger = { OR = { tag = HOL tag = NED } }
+		override_country_name = FREE_PROVINCES_OF_THE_LOWLANDS_NAME
+	}
+	option = {
+		name = rename_country_flanders.a
+		trigger = { tag = FLA }
+		override_country_name = SOUTH_NETHERLANDS_NAME
+	}
+	option = {
+		name = rename_country_flanders.b
+		trigger = { tag = FLA }
+		override_country_name = VLAANDEREN_NAME
+	}
+	option = {
+		name = rename_country_netherlands.d
+		trigger = { OR = { tag = FLA tag = NED } }
+		override_country_name = REPUBLIEK_DER_ZEVEN_VERENIGDE_NEDERLANDEN_NAME
+	}
+	option = {
+		name = rename_country_netherlands.e
+		trigger = { tag = NED }
+		override_country_name = BENELUX_UNIE_NAME
+	}
+	option = {
+		name = rename_country_netherlands.f
+		trigger = { tag = NED }
+		override_country_name = VERENIGDE_PROVINCIEN_DER_CARAIBEN_NAME
+	}
+	option = {
+		name = rename_country_netherlands.g
+		trigger = { tag = NED }
+		override_country_name = VRIJE_HANDELSSTAAT_NAME
+	}
+	option = {
+		name = rename_country_netherlands.h
+		trigger = { tag = NED }
+		override_country_name = GROOT_KOOPMANSRIJK_NAME
+	}
+	option = {
+		name = rename_country_netherlands.i
+		trigger = { tag = NED }
+		override_country_name = VERENIGDE_KOOPMANSSTATEN_NAME
+	}
+	option = {
+		name = rename_country_arabia.a
+		trigger = { OR = { tag = ARB tag = MAM } }
+		override_country_name = DAR_AL_ISLAM_NAME
+	}
+	option = {
+		name = rename_country_arabia.b
+		trigger = { tag = ARB }
+		override_country_name = ABBASID_CALIPHATE_NAME
+	}
+	option = {
+		name = rename_country_arabia.c
+		trigger = { tag = ARB }
+		override_country_name = ARAB_FEDERATION
+	}
+	option = {
+		name = rename_country_mamluks.a
+		trigger = { tag = MAM }
+		override_country_name = UNIVERSAL_CALIPHATE_NAME
+	}
+	option = {
+		name = rename_country_mamluks.b
+		trigger = { tag = MAM }
+		override_country_name = MAMLUK_EARTH_NAME
+	}
+	option = {
+		name = rename_country_mamluks.c
+		trigger = { tag = MAM }
+		override_country_name = KEMET_NAME
+	}
+	option = {
+		name = rename_country_mamluks.d
+		trigger = { tag = MAM }
+		override_country_name = DESHRET_NAME
+	}
+	option = {
+		name = rename_country_mamluks.e
+		trigger = { tag = MAM }
+		override_country_name = HEKA_NAME
+	}
+	option = {
+		name = rename_country_mamluks.f
+		trigger = { tag = MAM }
+		override_country_name = GIFT_OF_THE_NILE_NAME
+	}
+	option = {
+		name = rename_country_mamluks.g
+		trigger = { tag = MAM }
+		override_country_name = MOTHER_OF_THE_WORLD_NAME
+	}
+	option = {
+		name = rename_country_mamluks.h
+		trigger = { tag = MAM }
+		override_country_name = MOMMYLUKS_NAME
+	}
+	option = {
+		name = rename_country_sweden.a
+		trigger = { tag = SWE }
+		override_country_name = SVERIGE_NUMMER_ETT_NAME
+	}
+	option = {
+		name = rename_country_sweden.b
+		trigger = { tag = SWE }
+		override_country_name = SVENSKA_TIGER_NAME
+	}
+	option = {
+		name = rename_country_sweden.c
+		trigger = { tag = SWE }
+		override_country_name = IKEA_LAND_NAME
+	}
+	option = {
+		name = rename_country_sweden.d
+		trigger = { tag = SWE }
+		override_country_name = SVERIGE_NAME
+	}
+	option = {
+		name = rename_country_scandinavia.a
+		trigger = { tag = SCA }
+		override_country_name = SWEDELAW_NAME
+	}
+	option = {
+		name = rename_country_scandinavia.b
+		trigger = { tag = SCA }
+		override_country_name = LION_OF_THE_NORSE_NAME
+	}
+	option = {
+		name = rename_country_scandinavia.c
+		trigger = { tag = SCA }
+		override_country_name = EMPIRE_OF_SCANDINAVIA_NAME
+	}
+	option = {
+		name = rename_country_muscovy.a 
+		trigger = { tag = MOS }
+		override_country_name = GRAND_PRINCIPALITY_OF_MOSCOW_NAME
+	}
+	option = {
+		name = rename_country_muscovy.b 
+		trigger = { tag = MOS }
+		override_country_name = THE_MUSKOVIAN_REALM_NAME
+	}
+	option = {
+		name = rename_country_russia.a 
+		trigger = { tag = RUS }
+		override_country_name = TSARDOM_OF_RUSSIA_NAME
+	}
+	option = {
+		name = rename_country_russia.b
+		trigger = { tag = RUS }
+		override_country_name = RUSSIAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_russia.c 
+		trigger = { tag = RUS }
+		override_country_name = RUSSIAN_REPUBLIC_NAME
+	}
+	option = {
+		name = rename_country_russia.d
+		trigger = { tag = RUS }
+		override_country_name = UNION_OF_SOVEREIGN_SLAVIC_REPUBLICS_NAME
+	}
+	option = {
+		name = rename_country_russia.e 
+		trigger = { tag = RUS }
+		override_country_name = HOLY_RUSSIAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_russia.f
+		trigger = { tag = RUS }
+		override_country_name = MOMMY_RUSSIA_NAME
+	}
+	option = {
+		name = rename_country_russia.g 
+		trigger = { tag = RUS }
+		override_country_name = MOTHER_RUSSIA_NAME
+	}
+	option = {
+		name = rename_country_russia.h 
+		trigger = { tag = RUS }
+		override_country_name = MATUSHKA_ROSSIYA_NAME
+	}
+	option = {
+		name = rename_country_russia.i
+		trigger = { tag = RUS }
+		override_country_name = THIRD_ROME_NAME
+	}
+	option = {
+		name = rename_country_styria.a
+		trigger = { tag = HAB }
+		override_country_name = EISENMARK_NAME
+	}
+	option = {
+		name = rename_country_styria.b
+		trigger = { tag = HAB }
+		override_country_name = GRUNEMARK_NAME
+	}
+	option = {
+		name = rename_country_styria.c
+		trigger = { tag = HAB }
+		override_country_name = STEIRENMARK_NAME
+	}
+	option = {
+		name = rename_country_styria.d
+		trigger = { tag = HAB }
+		override_country_name = OSTERREICH_NAME
+	}
+	option = {
+		name = rename_country_styria.e
+		trigger = { tag = HAB }
+		override_country_name = AUSTRALIA_NAME
+	}
+	option = {
+		name = rename_country_styria.f
+		trigger = { tag = HAB }
+		override_country_name = HAUS_HABSBURG_NAME
+	}
+	option = {
+		name = rename_country_styria.g
+		trigger = { tag = HAB }
+		override_country_name = DANUBIAN_CONFEDERATION_NAME
+	}
+	option = {
+		name = rename_country_hungary.a
+		trigger = { tag = HUN }
+		override_country_name = THE_DANUBIAN_CROWNLANDS_NAME
+	}
+	option = {
+		name = rename_country_hungary.b
+		trigger = { tag = HUN }
+		override_country_name = EMPIRE_OF_CARPATHIA_NAME
+	}
+	option = {
+		name = rename_country_hungary.c
+		trigger = { tag = HUN }
+		override_country_name = CONFEDERATION_OF_THE_DANUBE_NAME
+	}
+	option = {
+		name = rename_country_florence.a
+		trigger = { tag = LAN }
+		override_country_name = FIORENZA_NAME
+	}
+	option = {
+		name = rename_country_florence.b
+		trigger = { tag = LAN }
+		override_country_name = REPUBLICA_FIORENTINA_NAME
+	}
+	option = {
+		name = rename_country_florence.c
+		trigger = { tag = LAN }
+		override_country_name = RES_PUBLICA_FLORENTINA_NAME
+	}
+	option = {
+		name = rename_country_florence.d
+		trigger = { tag = TUS }
+		override_country_name = GRANDUCATO_DI_TOSCANA_NAME
+	}
+	option = {
+		name = rename_country_florence.e
+		trigger = { tag = TUS }
+		override_country_name = MAGNUS_DUCATUS_ETRURIAE_NAME
+	}
+	option = {
+		name = rename_country_florence.f
+		trigger = { tag = TUS }
+		override_country_name = RES_PUBLICA_ETRURIAE_NAME
+	}
+	option = {
+		name = rename_country_italy.a
+		trigger = { tag = ITA }
+		override_country_name = REGNO_DITALIA_NAME
+	}
+	option = {
+		name = rename_country_italy.b
+		trigger = { tag = ITA }
+		override_country_name = LA_REPUBBLICA_ITALIANA_NAME
+	}
+	option = {
+		name = rename_country_italy.c
+		trigger = { tag = ITA }
+		override_country_name = ITALIA_NAME
+	}
+	option = {
+		name = rename_country_burgundy.a
+		trigger = { tag = BUR }
+		override_country_name = PURPLE_FRANCE_NAME
+	}
+	option = {
+		name = rename_country_burgundy.b
+		trigger = { tag = BUR }
+		override_country_name = RED_NETHERLANDS_NAME
+	}
+	option = {
+		name = rename_country_burgundy.c
+		trigger = { tag = BUR }
+		override_country_name = MUSTARD_COUNTRY_NAME
+	}
+	option = {
+		name = rename_country_burgundy.d
+		trigger = { tag = BUR }
+		override_country_name = THE_REJECT_FRENCHIES_NAME
+	}
+	option = {
+		name = rename_country_lothringia.a
+		trigger = { tag = LOT }
+		override_country_name = LONGTHARINGIA_NAME
+	}
+	option = {
+		name = rename_country_brandendurg.a
+		trigger = { tag = BRA }
+		override_country_name = KURBRANDENBURG_NAME
+	}
+	option = {
+		name = rename_country_brandendurg.b
+		trigger = { tag = BRA }
+		override_country_name = MARKGRAFSCHAFT_BRANDENBURG_NAME
+	}
+	option = {
+		name = rename_country_brandendurg.c
+		trigger = { tag = BRA }
+		override_country_name = KURFURSTENTURN_BRANDENBURG_NAME
+	}
+	option = {
+		name = rename_country_georgia.a
+		trigger = { tag = GEO }
+		override_country_name = CAUCASIAN_EMPIRE_NAME
+	}
+	option = {
+		name = rename_country_georgia.b
+		trigger = { tag = GEO }
+		override_country_name = NORTH_GEORGIA_NAME
+	}
+	option = {
+		name = rename_country_georgia.c
+		trigger = { tag = GEO }
+		override_country_name = IBERIA_NAME
+	}
+	option = {
+		name = rename_country_portugal.a
+		trigger = { tag = POR }
+		override_country_name = IMPERIO_POTUGUES_NAME
+	}
+	option = {
+		name = rename_country_portugal.b
+		trigger = { tag = POR }
+		override_country_name = IMPERIO_DO_OESTE_NAME
+	}
+	option = {
+		name = rename_country_portugal.c
+		trigger = { tag = POR }
+		override_country_name = EMPIRE_OF_PORTUGAL_BRAZIL_NAME
+	}
+	option = {
+		name = rename_country_portugal.d
+		trigger = { tag = POR }
+		override_country_name = REINO_DE_PORTUGAL_NAME
+	}
+	option = {
+		name = rename_country_portugal.e
+		trigger = { tag = POR }
+		override_country_name = REGNUM_PORTUGALLIAE_NAME
+	}
+	option = {
+		name = rename_country_portugal.f
+		trigger = { tag = POR }
+		override_country_name = REGNUM_PORTUGALLIAE_ET_ALGARBIAE_NAME
+	}
+	option = {
+		name = rename_country_prussia.a
+		trigger = { tag = PRU }
+		override_country_name = BRANDENBURG_PREUSSen_NAME
+	}
+	option = {
+		name = rename_country_prussia.b
+		trigger = { tag = PRU }
+		override_country_name = KONIGREICH_IN_PREUSSEN_NAME
+	}
+	option = {
+		name = rename_country_prussia.c
+		trigger = { tag = PRU }
+		override_country_name = NORDDEUTSCHER_BUND_NAME
+	}
+	option = {
+		name = rename_country_teutons.a
+		trigger = { tag = TEU }
+		override_country_name = HOLY_KNIGHT_ORDER_OF_THE_TEUTONS_NAME
+	}
+	option = {
+		name = rename_country_teutons.b
+		trigger = { tag = TEU }
+		override_country_name = EAST_GERMAN_HOLY_ORDER_NAME
+	}
+	option = {
+		name = rename_country_teutons.c
+		trigger = { tag = TEU }
+		override_country_name = GERMANIC_HOLY_HORDE_NAME
+	}
+	option = {
+		name = rename_country_knights.a
+		trigger = { tag = KNI }
+		override_country_name = KNIGHTS_HOSPITALLER_NAME
+	}
+	option = {
+		name = rename_country_latin_empire.a
+		trigger = { tag = LAE }
+		override_country_name = FRANKOKRATIA_NAME
+	}
+	option = {
+		name = rename_country_latin_empire.b
+		trigger = { tag = LAE }
+		override_country_name = EMPIRE_OF_THE_LEVANT_NAME
+	}
+	option = {
+		name = rename_country_latin_empire.c
+		trigger = { tag = LAE }
+		override_country_name = EMPIRE_OF_THE_OUTREMER_NAME
+	}
+	option = {
+		name = rename_country_jerusalem.a
+		trigger = { tag = KOJ }
+		override_country_name = KINGDOM_OF_JERUSALEM_NAME
+	}
+	option = {
+		name = rename_country_jerusalem.b
+		trigger = { tag = KOJ }
+		override_country_name = KINGDOM_OF_HEAVEN_NAME
+	}
+	option = {
+		name = rename_country_tunis.a
+		trigger = { tag = TUN }
+		override_country_name = SULTANATE_OF_IFRIQA_NAME
+	}
+	option = {
+		name = rename_country_tunis.b
+		trigger = { tag = TUN }
+		override_country_name = THE_BARBARY_COAST_NAME
+	}
+	option = {
+		name = rename_country_tunis.c
+		trigger = { tag = TUN }
+		override_country_name = CARTHAGE_NAME
+	}
+	option = {
+		name = rename_country_morocco.a
+		trigger = { tag = MOR }
+		override_country_name = ALMOHAD_CALIPHATE_NAME
+	}
+	option = {
+		name = rename_country_morocco.b
+		trigger = { tag = MOR }
+		override_country_name = KINGDOM_OF_MOROCCO_NAME
+	}
+	option = {
+		name = rename_country_morocco.c
+		trigger = { tag = MOR }
+		override_country_name = GREATER_EMPIRE_OF_SUS_NAME
+	}
+	option = {
+		name = rename_country_morocco.d
+		trigger = { tag = MOR }
+		override_country_name = MAGHREB_AL_AQSA_NAME
+	}
+	option = {
+		name = rename_country_morocco.e
+		trigger = { tag = MOR }
+		override_country_name = MARINIDS_NAME
+	}
+	option = {
+		name = rename_country_morocco.f
+		trigger = { tag = MOR }
+		override_country_name = DAR_AL_MAGHRIB_NAME
+	}
+	option = {
+		name = rename_country_bavaria.a
+		trigger = { tag = BAV }
+		override_country_name = KINGDOM_OF_BAVARIA_NAME
+	}
+	option = {
+		name = rename_country_bavaria.b
+		trigger = { tag = BAV }
+		override_country_name = KONIGREICH_BAYERN_NAME
+	}
+	option = {
+		name = rename_country_bavaria.c
+		trigger = { tag = BAV }
+		override_country_name = VOLKSSTAAT_BAYERN_NAME
+	}
+	option = {
+		name = rename_country_bavaria.d
+		trigger = { tag = BAV }
+		override_country_name = FEMBOYVARIA_NAME
+	}
+}

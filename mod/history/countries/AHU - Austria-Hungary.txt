@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = dual_monarchy_reform
+capital = 134 # Wien
+
+historical_friend = HUN
+historical_friend = GER
+historical_rival = TUR
+historical_rival = FRA
+historical_rival = PRU
+national_focus = ADM

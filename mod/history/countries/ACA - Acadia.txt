@@ -1,0 +1,7 @@
+government = republic
+technology_group = western
+primary_culture = creole
+religion = catholic
+capital = 2569	# Halifax
+
+

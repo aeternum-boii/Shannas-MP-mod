@@ -1,0 +1,389 @@
+namespace = wanted_advisor_event_dip
+
+country_event = {
+	id = wanted_advisor_event_dip.1
+	title = "wanted_advisor_event_dip.EVTNAME1"
+	desc = "wanted_advisor_event_dip.EVTDESC1"
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	option = { 	# Colonial Govenor
+		name = "wanted_advisor_event_dip.EVTOPT1"
+
+		trigger = {
+			can_grant_wanted_advisor = { colonial_governor = yes }
+		}
+
+		grant_wanted_advisor = { type = colonial_governor }
+	}
+
+	option = { 	# Diplomat
+		name = "wanted_advisor_event_dip.EVTOPT2"
+
+		trigger = {
+			can_grant_wanted_advisor = { diplomat = yes }
+		}
+
+		grant_wanted_advisor = { type = diplomat }
+	}
+
+	option = { 	# Naval Reformer
+		name = "wanted_advisor_event_dip.EVTOPT3"
+
+
+		trigger = {
+			can_grant_wanted_advisor = { naval_reformer = yes }
+		}
+
+		grant_wanted_advisor = { type = naval_reformer }
+	}
+
+	option = { 	# Navigator
+		name = "wanted_advisor_event_dip.EVTOPT4"
+
+		trigger = {
+			can_grant_wanted_advisor = { navigator = yes }
+		}
+
+		grant_wanted_advisor = { type = navigator }
+	}
+
+	option = { 	# Spymaster
+		name = "wanted_advisor_event_dip.EVTOPT5"
+
+		trigger = {
+			can_grant_wanted_advisor = { spymaster = yes }
+		}
+
+		grant_wanted_advisor = { type = spymaster }
+	}
+
+	option = { 	# Statesman
+		name = "wanted_advisor_event_dip.EVTOPT6"
+
+		trigger = {
+			can_grant_wanted_advisor = { statesman = yes }
+		}
+
+		grant_wanted_advisor = { type = statesman }
+	}
+
+	option = { 	# Trader
+		name = "wanted_advisor_event_dip.EVTOPT7"
+
+		trigger = {
+			can_grant_wanted_advisor = { trader = yes }
+		}
+
+		grant_wanted_advisor = { type = trader }
+	}
+
+	# Advisors Expanded Advisors
+	option = { 	# Negotiator
+		name = "wanted_advisor_event_dip.EVTOPT9"
+
+		trigger = {
+			can_grant_wanted_advisor = { negotiator = yes }
+		}
+
+		grant_wanted_advisor = { type = negotiator }
+	}
+
+	option = { 	# Pioneer
+		name = "wanted_advisor_event_dip.EVTOPT10"
+
+		trigger = {
+			can_grant_wanted_advisor = { pioneer = yes }
+		}
+
+		grant_wanted_advisor = { type = pioneer }
+	}
+
+	option = { 	# Marauder Captain
+		name = "wanted_advisor_event_dip.EVTOPT11"
+
+		trigger = {
+			can_grant_wanted_advisor = { marauder_captain = yes }
+		}
+
+		grant_wanted_advisor = { type = marauder_captain }
+	}
+
+	option = { 	# Marketeer
+		name = "wanted_advisor_event_dip.EVTOPT12"
+
+		trigger = {
+			can_grant_wanted_advisor = { marketeer = yes }
+		}
+
+		grant_wanted_advisor = { type = marketeer }
+	}
+
+	option = { 	# Mercantile Influencer
+		name = "wanted_advisor_event_dip.EVTOPT13"
+
+		trigger = {
+			can_grant_wanted_advisor = { mercantile_influencer = yes }
+		}
+
+		grant_wanted_advisor = { type = mercantile_influencer }
+	}
+
+	option = { 	# Navarch
+		name = "wanted_advisor_event_dip.EVTOPT14"
+
+		trigger = {
+			can_grant_wanted_advisor = { navarch = yes }
+		}
+
+		grant_wanted_advisor = { type = navarch }
+	}
+
+	option = { 	# Subject Mediator
+		name = "wanted_advisor_event_dip.EVTOPT15"
+
+		trigger = {
+			can_grant_wanted_advisor = { subject_mediator = yes }
+		}
+
+		grant_wanted_advisor = { type = subject_mediator }
+	}
+
+	# Advisor Types Expanded
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT16"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_loyal_friend_dip = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_loyal_friend_dip }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT17"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_concubine_female = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_concubine_female }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT18"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_concubine_male = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_concubine_male }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT19"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_sailors_recruitmaster = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_sailors_recruitmaster }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT20"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_blockade_specialist = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_blockade_specialist }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT21"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_pirate_captain = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_pirate_captain }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT22"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_great_negotiator = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_great_negotiator }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT23"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_vicegerent = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_vicegerent }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT24"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_traveling_salesman = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_traveling_salesman }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT25"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_naval_traditional_tactician = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_naval_traditional_tactician }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT26"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_diplomatic_genius = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_diplomatic_genius }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT27"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_cultural_commissioner = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_cultural_commissioner }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT28"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_herald = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_herald }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT29"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_arch_chancellor = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_arch_chancellor }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT30"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_envoy = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_envoy }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT31"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_vaisyas_peasant = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_vaisyas_peasant }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT32"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_guild_trader = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_guild_trader }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT33"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_historian = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_historian }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT34"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_plantation_owner = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_plantation_owner }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT35"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_galley_captain = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_galley_captain }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT36"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_galleon_captain = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_galleon_captain }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT37"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_colonial_administrator = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_colonial_administrator }
+	}
+
+	option = {
+		name = "wanted_advisor_event_dip.EVTOPT38"
+
+		trigger = {
+			can_grant_wanted_advisor = { ate_advisor_treasure_fleet_captain = yes }
+		}
+
+		grant_wanted_advisor = { type = ate_advisor_treasure_fleet_captain }
+	}
+
+	option = {	# Cancel
+		name = "wanted_advisor_event_dip.EVTOPT8"
+
+		clear_wanted_advisor_flags_and_modifiers = yes
+	}
+}

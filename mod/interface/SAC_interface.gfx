@@ -1,0 +1,6 @@
+spriteTypes = {
+		spriteType = {
+			name = "malaria_icon"
+			texturefile = "gfx/interface/malaria_icon.dds"
+	}
+}

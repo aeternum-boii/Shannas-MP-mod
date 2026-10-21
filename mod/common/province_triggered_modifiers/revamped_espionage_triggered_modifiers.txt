@@ -1,0 +1,7 @@
+esp_resolve_general = { potential = { always = yes } trigger = { always = yes } on_activation = { owner = { country_event = { id = revamped_espionage.33 } } } on_deactivation = { } }
+esp_resolve_admiral = { potential = { always = yes } trigger = { always = yes } on_activation = { owner = { country_event = { id = revamped_espionage.34 } } } on_deactivation = { } }
+esp_resolve_advisor = { potential = { always = yes } trigger = { always = yes } on_activation = { owner = { country_event = { id = revamped_espionage.35 } } } on_deactivation = { } }
+esp_resolve_rebellion = { potential = { always = yes } trigger = { always = yes } on_activation = { owner = { country_event = { id = revamped_espionage.36 } } } on_deactivation = { } }
+esp_resolve_treasury = { potential = { always = yes } trigger = { always = yes } on_activation = { owner = { country_event = { id = revamped_espionage.37 } } } on_deactivation = { } }
+esp_resolve_fort = { potential = { always = yes } trigger = { always = yes } on_activation = { owner = { country_event = { id = revamped_espionage.38 } } } on_deactivation = { } }
+esp_resolve_alliance = { potential = { always = yes } trigger = { always = yes } on_activation = { owner = { country_event = { id = revamped_espionage.39 } } } on_deactivation = { } }

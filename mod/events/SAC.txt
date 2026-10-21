@@ -1,0 +1,115 @@
+namespace = SAC
+
+country_event = {
+	id = SAC_malaria.1
+	title = "SAC_malaria.1.t"
+	desc = "SAC_malaria.1.d"
+
+	hidden = yes
+
+	trigger = {
+		NOT = { has_global_flag = african_disease_initialised }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		set_global_flag = african_disease_initialised
+		every_province = {
+			limit = {
+				OR = {
+					region = central_africa_region
+					region = kongo_region
+					region = east_africa_region
+					region = guinea_region
+					region = niger_region
+					region = sahel_region
+					region = south_africa_region
+				}
+				NOT = {
+					trade_company_region = trade_company_west_africa
+					trade_company_region = trade_company_south_africa
+					trade_company_region = trade_company_east_africa
+				}
+				has_port = no
+			}
+			add_permanent_province_modifier = {
+				name = african_disease_modifier
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = "SAC_malaria.1.a"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = {
+	id = SAC_malaria.2
+	title = "SAC_malaria.2.t"
+	desc = "SAC_malaria.2.d"
+	
+	hidden = yes
+	
+	trigger = {
+		AND = {
+			has_province_modifier = african_disease_modifier
+			NOT = has_province_modifier = african_disease_modifier_2
+			NOT = {same_continent = capital }
+			NOT = {
+				owner = {
+					tag = ADU
+				}
+			}	
+		}
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	immediate = {
+	}
+
+	option = {
+		name = "SAC_malaria.2.a"
+		ai_chance = { factor = 100 }
+		add_permanent_province_modifier = {
+			name = african_disease_modifier_2
+			duration = -1
+		}
+	}
+}
+
+province_event = {
+	id = SAC_malaria.3
+	title = "SAC_malaria.3.t"
+	desc = "SAC_malaria.3.d"
+
+	hidden = yes
+
+	trigger = {
+		AND = {
+			has_province_modifier = african_disease_modifier_2
+			same_continent = capital
+			NOT = {
+				overlord = {
+					capital_scope = {
+						same_continent = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	immediate = {
+		remove_province_modifier = african_disease_modifier_2
+	}
+
+	option = {
+		name = "SAC_malaria.3.a"
+		ai_chance = { factor = 100 }
+	}
+}

@@ -1,0 +1,85 @@
+#cultures: venetian, dalmatian 
+101 = {"Genoa" "Genoa"}
+102 = {"Niza" "Niza"}
+103 = {"Turìn" "Turìn"} #Piemonte
+104 = {"Milàn" "Milàn"}
+105 = {"Parma" "Parma"}
+106 = {"Modena" "Modena"}
+107 = {"Bressa" "Bressa"} #Bressia
+108 = {"Veròna" "Veròna"}
+109 = {"Màntoa" "Màntoa"}
+110 = {"Trénto" "Trénto"}
+111 = {"Friul" "Friul"}
+112 = {"Venèsia" "Venèsia"}
+113 = {"Ferara" "Ferara"}
+114 = {"Romagna" "Romagna"} #Ravena
+115 = {"Pixa" "Pixa"}
+116 = {"Firense" "Firense"}
+#SAME 117
+#SAME 118
+#SAME 119
+120 = {"Abruso" "Abruso"}
+121 = {"Nàpuli" "Nàpuli"}
+122 = {"Taranto" "Taranto"}
+123 = {"Calabria" "Calabria"}
+124 = {"Mesina" "Mesina"}
+125 = {"Palermo" "Palermo"}
+127 = {"Sasari" "Sasari"}
+134 = {"Viena" "Viena"}
+#136 also Dalmàssia
+151 = {"Costantinopoli" "Costantinopoli"} #?
+163 = {"Càndia" "Càndia"}
+164 = {"Nasso" "Nasso"}
+201 = {"Provensa" "Provensa"}
+213 = {"Barcelona" "Barcelona"} #SAME
+220 = {"Valénsia" "Valénsia"}
+224 = {"Sibilia" "Sibilia"}
+225 = {"Còrdoa" "Còrdoa"}
+226 = {"Gibiltera" "Gibiltera"}
+284 = {"Crimia" "Crimia"}
+321 = {"Sipro" "Sipro"}
+341 = {"Túnixi" "Túnixi"}
+358 = {"Alesandria" "Alesandria"}
+361 = {"El Cairo" "El Cairo"}
+379 = {"Hierusalem" "Hierusalem"} #Zerusaleme
+1247 = {"Còrsega" "Còrsega"}
+1749 = {"Càdice" "Càdice"}
+1774 = {"Trevixó" "Trevixó"}
+1862 = {"Cremona" "Cremona"}
+1875 = {"Cuneo" "Cuneo"}
+1933 = {"Bari" "Bari"}
+1934 = {"Baxilicata" "Baxilicata"} #Baselegada
+2348 = {"Sio" "Sio"}
+2976 = {"Peruxa" "Peruxa"} #Onbria
+#SAME 2977
+2978 = {"Arezo" "Arezo"}
+2979 = {"Novara" "Novara"}
+2980 = {"Luca" "Luca"}
+2981 = {"Monferà" "Monferà"}
+2982 = {"Siracuxa" "Siracuxa"}
+#SAME 2983
+2984 = {"Coxensa" "Coxensa"}
+2985 = {"Fogia" "Fogia"}
+2986 = {"Cajari" "Cajari"}
+2988 = {"Taragona" "Taragona"} #?
+2992 = {"Albenga" "Albenga"}
+4174 = {"Durazo" "Durazo"}
+
+# same as in latin.txt:4706 or Tülcea, Tòlcea
+4727 = {"Saluzo" "Saluzo"} #?
+#SAME 4728
+4729 = {"Pàdoa" "Pàdoa"}
+4730 = {"Bulogna" "Bulogna"}
+4731 = {"Spoleto" "Spoleto"}
+#SAME 4732
+4733 = {"Molixe" "Molixe"}
+4734 = {"Avelin" "Avelin"} #Avelino
+4735 = {"Arborea" "Arborea"}
+4736 = {"Trapani" "Trapani"}
+4737 = {"Agrixento" "Agrixento"}
+4738 = {"Trieste" "Trieste"}
+4739 = {"Bèrxem" "Bèrxem"}
+4740 = {"Como" "Como"}
+# same as in latin.txt:4753 or Jatara
+4754 = {"Càtaro" "Càtaro"}
+4758 = {"Meran" "Meran"}

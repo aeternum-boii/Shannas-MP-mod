@@ -1,0 +1,153 @@
+terrorist_rebels = {
+
+    color = { 0 0 0 }
+
+    area = nation
+    government = anti
+    defection = none
+    independence = none
+    unit_transfer = yes
+    gfx_type = culture_owner
+    will_relocate = yes
+
+    resilient = yes
+    reinforcing = yes
+    general = yes
+    smart = yes
+    disband_on_leader_death = no
+
+    artillery = 0.46
+    infantry = 0.45
+    cavalry = 0.09
+
+    morale = 1.5
+
+    # Possible handle actions
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = no
+
+    spawn_chance = {
+        factor = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                owner = {
+                    has_country_flag = esp_rebellion_target
+                }
+            }
+        }
+        modifier = {
+            factor = 15
+            owner = {
+                has_country_flag = esp_rebellion_target
+            }
+        }
+    }
+
+    movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 4.0
+			is_capital = yes
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+
+    siege_won_trigger = {
+    }
+    siege_won_effect = {
+        add_devastation = 50
+        set_local_autonomy = 50
+    }
+
+    can_negotiate_trigger = {
+		always = no
+	}
+
+    can_enforce_trigger = {
+		always = yes
+	}
+
+    demands_description = "terrorist_rebels_demand"
+
+    demands_enforced_effect = {
+        hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+        if = {
+			limit = {
+				NOT = {
+					OR = {
+						government = theocracy
+						has_reform = steppe_horde
+						has_reform = celestial_empire
+						has_reform = iqta
+						has_reform = indep_daimyo
+						has_reform = principality
+						has_reform = daimyo
+						has_reform = appanage_reform
+						has_reform = shogunate
+						has_reform = colonial_government
+						has_reform = siberian_tribe
+						government = native
+						has_reform = elective_monarchy
+						has_reform = english_monarchy
+						has_reform = ottoman_government
+						has_reform = modernized_ottoman_government
+						has_reform = reorganized_ottoman_government
+						has_reform = sultanate_of_rum_reform
+						has_reform = eyalet_government
+						has_reform = barbary_eyalet_government
+						has_reform = kalmar_union
+						has_reform = danish_archkingdom
+						has_reform = tribal_federation
+						has_reform = feudal_theocracy
+						has_reform = mamluk_government
+						government = tribal
+					}
+				}
+			}
+			change_government = REB
+			#set_legacy_government = despotic_monarchy
+		}
+        if = {
+			limit = { has_heir = yes }
+			kill_heir = { allow_new_heir = no }
+		}
+		if = {
+			limit = { has_consort = yes }
+			kill_consort = yes
+		}
+        define_ruler = {
+			rebel = yes
+		}
+        add_prestige = -200
+        add_stability = -6
+        collapse_nation = yes
+    }
+}

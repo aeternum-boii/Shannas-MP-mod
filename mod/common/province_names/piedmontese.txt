@@ -1,0 +1,60 @@
+101 = {"Génoa" "Génoa"}
+102 = {"Nissa" "Nissa"} #Nissa Marìtima
+103 = {"Túri" "Túri"}
+#SAME 104
+105 = {"Parma" "Parma"}
+106 = {"Mòdena" "Mòdena"}
+107 = {"Bressia" "Bressia"}
+108 = {"Veron-a" "Veron-a"}
+109 = {"Màntoa" "Màntoa"}
+110 = {"Trent" "Trent"}
+111 = {"Friul" "Friul"}
+112 = {"Venessia" "Venessia"}
+113 = {"Fërara" "Fërara"}
+114 = {"Romagna" "Romagna"} #Ravënna
+#SAME 115
+116 = {"Firense" "Firense"} #Florensa, Fiorensa
+117 = {"Sien-a" "Sien-a"}
+#SAME 118
+119 = {"Ancon-a" "Ancon-a"}
+120 = {"Abruss" "Abruss"}
+121 = {"Nàpoli" "Nàpoli"}
+122 = {"Tàranto" "Tàranto"}
+123 = {"Calabria" "Calabria"}
+124 = {"Messin-a" "Messin-a"}
+125 = {"Palerm" "Palerm"}
+#SAME 127
+1247 = {"Còrsica" "Còrsica"}
+1774 = {"Trevis" "Trevis"}
+1862 = {"Cremon-a" "Cremon-a"}
+1875 = {"Coni" "Coni"}
+1933 = {"Bari" "Bari"}
+1934 = {"Basilicà" "Basilicà"} #Lücannia
+#SAME 2976
+2977 = {"Urbin" "Urbin"}
+2978 = {"Aress" "Aress"}
+2979 = {"Noara" "Noara"}
+2980 = {"Luca" "Luca"}
+2981 = {"Monfrà" "Monfrà"}
+2982 = {"Siracusa" "Siracusa"}
+2983 = {"Salern" "Salern"}
+2984 = {"Cosensa" "Cosensa"}
+2985 = {"Fògia" "Fògia"}
+2986 = {"Càliari" "Càliari"}
+2992 = {"Albenga" "Albenga"}
+4719 = {"Bressa" "Bressa"}
+205 = {"Savouè" "Savouè"}
+4727 = {"Sèlusse" "Sèlusse"}
+4728 = {"Pavìa" "Pavìa"}
+#SAME 4729
+4730 = {"Bològna" "Bològna"}
+4731 = {"Spoleto" "Spoleto"}
+#SAME 4732
+4733 = {"Molise" "Molise"}
+4734 = {"Avlin" "Avlin"}
+4735 = {"Arborea" "Arborea"}
+#SAME 4736
+4737 = {"Agrigent" "Agrigent"}
+#SAME 4738
+4739 = {"Bérghem" "Bérghem"}
+4740 = {"Còm" "Còm"}

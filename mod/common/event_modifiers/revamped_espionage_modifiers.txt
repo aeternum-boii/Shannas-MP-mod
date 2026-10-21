@@ -1,0 +1,17 @@
+tightened_security = {
+	global_spy_defence = 0.50
+}
+
+lockdown_national_treasury = {
+	global_spy_defence = 0.25
+}
+
+religious_rebellion_crackdown = {
+	global_spy_defence = 0.25
+	tolerance_own = -1
+}
+
+alerted_national_security = {
+	global_spy_defence = 0.30
+	diplomatic_reputation = -1
+}

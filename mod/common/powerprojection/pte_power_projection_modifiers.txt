@@ -1,0 +1,51 @@
+pte_destabilize_nation_power_projection = {
+	max = 30
+	power = 1
+	yearly_decay = 0.5
+}
+
+pte_hegemony_peace_treaty_power_projection = {
+	max = 50
+	power = 1
+	yearly_decay = 1
+}
+
+great_power_1 = {
+	power = 30
+}
+
+great_power_2 = {
+	power = 27
+}
+
+great_power_3 = {
+	power = 24
+}
+
+great_power_4 = {
+	power = 21
+}
+
+great_power_5 = {
+	power = 18
+}
+
+great_power_6 = {
+	power = 15
+}
+
+great_power_7 = {
+	power = 12
+}
+
+great_power_8 = {
+	power = 9
+}
+
+great_power_9 = {
+	power = 7
+}
+
+great_power_10 = {
+	power = 5
+}

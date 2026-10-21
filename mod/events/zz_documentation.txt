@@ -1,0 +1,25 @@
+#############################################
+#### EVENT STRUCTURE FOR ENCYCLOPAEDIUM #####
+#############################################
+
+
+## CATEGORIES / GAMERULES ##
+
+# Colonization: small historical colonies (think New Amsterdam or Portuguese trade outposts)
+# Expansion: keep (relative) minors alive (i.e. RESTRICTED exp.) or give historical land/subjects to countries (FACILITATED exp.): Chernigov to Russia, Hungary/Egypt/Moldavia to Ottomans, Mexico to Spain?
+# Interior: geographical expansion reversion in Africa, Arabia or for certain regions: Turks out of Western Europe, Russians out of Scandinavia etc. 
+# Exclaves: cede exclaves to vassals
+# Formables: forced Persia, Qing etc.
+# Unions: forced Unions
+# Dynasties: historical dynasties unless player has the same one
+# Reformation: historical protestantism spread
+# HRE: so far - keep Austria the emperor and represent the Bohemian revolt, PLUS historical incident outcomes (e.g. no Teutons in the HRE)
+
+## WHAT TO PAY ATTENTION TO ##
+
+# land ceding sequence: make sure that the relevant events' MTTH ensures this sequence: 
+#							   annexation > return to previous owner > ceding to vassal
+#	return before a tag is able to form another tag, otherwise Livonia gets footballed btwn Russia and Muscovy
+
+
+## 

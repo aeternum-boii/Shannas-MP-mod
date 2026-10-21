@@ -1,0 +1,3 @@
+# - Mazyr
+
+add_core = MNK

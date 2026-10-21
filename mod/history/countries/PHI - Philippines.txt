@@ -1,0 +1,5 @@
+government = monarchy
+technology_group = western
+religion = catholic
+primary_culture = filipino
+capital = 656	# Manila

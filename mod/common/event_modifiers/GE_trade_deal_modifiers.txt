@@ -1,0 +1,207 @@
+GE_trade_deal_imports_1 = {
+	trade_efficiency = 0.05
+}
+GE_trade_deal_imports_2 = {
+	trade_efficiency = 0.10
+}
+GE_trade_deal_imports_3 = {
+	trade_efficiency = 0.15
+}
+GE_trade_deal_imports_4 = {
+	trade_efficiency = 0.20
+}
+GE_trade_deal_imports_5 = {
+	trade_efficiency = 0.25
+}
+GE_trade_deal_imports_6 = {
+	trade_efficiency = 0.30
+}
+GE_trade_deal_imports_7 = {
+	trade_efficiency = 0.35
+}
+GE_trade_deal_imports_8 = {
+	trade_efficiency = 0.40
+}
+GE_trade_deal_imports_9 = {
+	trade_efficiency = 0.45
+}
+GE_trade_deal_imports_10 = {
+	trade_efficiency = 0.50
+}
+
+GE_rural_trade_deal_exports_1 = {
+	rural_goods_produced_modifier = 0.10
+	rural_goods_produced_modifier_sem = 0.032
+}
+GE_rural_trade_deal_exports_2 = {
+	rural_goods_produced_modifier = 0.20
+	rural_goods_produced_modifier_sem = 0.064
+}
+GE_rural_trade_deal_exports_3 = {
+	rural_goods_produced_modifier = 0.30
+	rural_goods_produced_modifier_sem = 0.128
+}
+GE_rural_trade_deal_exports_4 = {
+	rural_goods_produced_modifier = 0.40
+	rural_goods_produced_modifier_sem = 0.256
+}
+GE_rural_trade_deal_exports_5 = {
+	rural_goods_produced_modifier = 0.50
+	rural_goods_produced_modifier_sem = 0.512
+}
+GE_rural_trade_deal_exports_6 = {
+	rural_goods_produced_modifier = 0.60
+	rural_goods_produced_modifier_sem = 1.024
+}
+
+GE_urban_trade_deal_exports_1 = {
+	urban_goods_produced_modifier = 0.10
+	urban_goods_produced_modifier_sem = 0.001
+}
+GE_urban_trade_deal_exports_2 = {
+	urban_goods_produced_modifier = 0.20
+	urban_goods_produced_modifier_sem = 0.002
+}
+GE_urban_trade_deal_exports_3 = {
+	urban_goods_produced_modifier = 0.30
+	urban_goods_produced_modifier_sem = 0.004
+}
+GE_urban_trade_deal_exports_4 = {
+	urban_goods_produced_modifier = 0.40
+	urban_goods_produced_modifier_sem = 0.008
+}
+GE_urban_trade_deal_exports_5 = {
+	urban_goods_produced_modifier = 0.50
+	urban_goods_produced_modifier_sem = 0.016
+}
+GE_urban_trade_deal_exports_6 = {
+	urban_goods_produced_modifier = 0.60
+	urban_goods_produced_modifier_sem = 0.032
+}
+
+
+GE_mining_trade_deal_exports_1 = {
+	mining_goods_produced_modifier = 0.10
+	mining_goods_produced_modifier_sem = 0.001
+}
+GE_mining_trade_deal_exports_2 = {
+	mining_goods_produced_modifier = 0.20
+	mining_goods_produced_modifier_sem = 0.002
+}
+GE_mining_trade_deal_exports_3 = {
+	mining_goods_produced_modifier = 0.30
+	mining_goods_produced_modifier_sem = 0.004
+}
+GE_mining_trade_deal_exports_4 = {
+	mining_goods_produced_modifier = 0.40
+	mining_goods_produced_modifier_sem = 0.008
+}
+GE_mining_trade_deal_exports_5 = {
+	mining_goods_produced_modifier = 0.50
+	mining_goods_produced_modifier_sem = 0.016
+}
+GE_mining_trade_deal_exports_6 = {
+	mining_goods_produced_modifier = 0.60
+	mining_goods_produced_modifier_sem = 0.032
+}
+
+GE_plantation_trade_deal_exports_1 = {
+	plantage_goods_produced_modifier = 0.10
+	plantage_goods_produced_modifier_sem = 0.001
+}
+GE_plantation_trade_deal_exports_2 = {
+	plantage_goods_produced_modifier = 0.20
+	plantage_goods_produced_modifier_sem = 0.002
+}
+GE_plantation_trade_deal_exports_3 = {
+	plantage_goods_produced_modifier = 0.30
+	plantage_goods_produced_modifier_sem = 0.004
+}
+GE_plantation_trade_deal_exports_4 = {
+	plantage_goods_produced_modifier = 0.40
+	plantage_goods_produced_modifier_sem = 0.008
+}
+GE_plantation_trade_deal_exports_5 = {
+	plantage_goods_produced_modifier = 0.50
+	plantage_goods_produced_modifier_sem = 0.016
+}
+GE_plantation_trade_deal_exports_6 = {
+	plantage_goods_produced_modifier = 0.60
+	plantage_goods_produced_modifier_sem = 0.032
+}
+
+GE_rural_trade_deal_imports_1 = {
+	development_cost = -0.05
+}
+GE_rural_trade_deal_imports_2 = {
+	development_cost = -0.10
+}
+GE_rural_trade_deal_imports_3 = {
+	development_cost = -0.15
+}
+GE_rural_trade_deal_imports_4 = {
+	development_cost = -0.20
+}
+GE_rural_trade_deal_imports_5 = {
+	development_cost = -0.25
+}
+GE_rural_trade_deal_imports_6 = {
+	development_cost = -0.3
+}
+
+GE_urban_trade_deal_imports_1 = {
+	technology_cost = -0.02
+}
+GE_urban_trade_deal_imports_2 = {
+	technology_cost = -0.04
+}
+GE_urban_trade_deal_imports_3 = {
+	technology_cost = -0.06
+}
+GE_urban_trade_deal_imports_4 = {
+	technology_cost = -0.08
+}
+GE_urban_trade_deal_imports_5 = {
+	technology_cost = -0.10
+}
+GE_urban_trade_deal_imports_6 = {
+	technology_cost = -0.12
+}
+
+GE_mining_trade_deal_imports_1 = {
+	inflation_reduction = 0.05
+}
+GE_mining_trade_deal_imports_2 = {
+	inflation_reduction = 0.10
+}
+GE_mining_trade_deal_imports_3 = {
+	inflation_reduction = 0.15
+}
+GE_mining_trade_deal_imports_4 = {
+	inflation_reduction = 0.20
+}
+GE_mining_trade_deal_imports_5 = {
+	inflation_reduction = 0.25
+}
+GE_mining_trade_deal_imports_6 = {
+	inflation_reduction = 0.3
+}
+
+GE_plantation_trade_deal_imports_1 = {
+	trade_efficiency = 0.05
+}
+GE_plantation_trade_deal_imports_2 = {
+	trade_efficiency = 0.10
+}
+GE_plantation_trade_deal_imports_3 = {
+	trade_efficiency = 0.15
+}
+GE_plantation_trade_deal_imports_4 = {
+	trade_efficiency = 0.20
+}
+GE_plantation_trade_deal_imports_5 = {
+	trade_efficiency = 0.25
+}
+GE_plantation_trade_deal_imports_6 = {
+	trade_efficiency = 0.3
+}

@@ -1,0 +1,191 @@
+######################################################################
+# Separatist rebels. Freedom!!!
+######################################################################
+aet_native_rebels = {
+
+	color = { 25 180 25 }
+
+	area = nation 			
+	government = anti				
+	defection = culture_group			
+	independence = culture_group 		
+	defect_delay = 60				
+	unit_transfer = yes				
+	gfx_type = culture_province	
+	will_relocate = yes	
+	
+	resilient = no
+	reinforcing = yes
+	general = yes				
+	smart = yes
+	
+	artillery = 0.0
+	infantry = 0.7
+	cavalry = 0.3
+	
+	morale = 1.0
+
+	# Possible handle actions
+	handle_action_negotiate = no
+	handle_action_stability = no
+	handle_action_build_core = no
+	handle_action_send_missionary = yes		
+	handle_action_change_culture = yes
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 0
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+ 		owner_is_colonial_nation = yes 
+ 	}
+	siege_won_effect = {
+		add_local_autonomy = 25
+
+		random_list = {
+			50 = {
+
+			}
+			10 = {
+				add_base_manpower = -1
+			}
+			10 = {
+				add_base_tax = -1
+			}
+			10 = {
+				add_base_production = -1
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		always = no 
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "native_rebels_demand"
+	
+	# Country scope
+	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
+		add_prestige = -100	
+		every_owned_province = {
+			limit = {
+				has_rebel_faction = REB
+			}
+
+			decolonize = yes 
+
+			add_province_modifier = {
+				name = aet_ideas_previouslyColonised
+				duration = -1
+			}
+
+			change_native_ferocity = 4 
+			change_native_hostileness = 4 
+
+			hidden_effect = {
+				export_to_variable = {
+					which = aet_devValue
+					value = trigger_value:development
+				}
+				subtract_variable = {
+					which = aet_devValue
+					value = 1
+				}
+
+				while = {
+					limit = {
+						check_variable = {
+							which = aet_devValue
+							value = 0
+						}
+					}
+
+					subtract_variable = {
+						which = aet_devValue
+						value = 1
+					}
+
+					change_native_size = 5
+				}
+			}
+
+			random = {
+				chance = 20
+				add_base_tax = -1
+			}
+			random = {
+				chance = 20
+				add_base_tax = -1
+			}	
+			random = {
+				chance = 20
+				add_base_tax = -1
+			}
+			random = {
+				chance = 20
+				add_base_manpower = -1
+			}
+			random = {
+				chance = 20
+				add_base_manpower = -1
+			}	
+			random = {
+				chance = 20
+				add_base_manpower = -1
+			}	
+			random = {
+				chance = 20
+				add_base_production = -1
+			}
+			random = {
+				chance = 20
+				add_base_production = -1
+			}	
+			random = {
+				chance = 20
+				add_base_production = -1
+			}											
+		}	
+	}
+}

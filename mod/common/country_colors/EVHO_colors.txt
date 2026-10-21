@@ -1,0 +1,98 @@
+AFU = {
+    color1= { 0  66  148 }
+    color2= { 163  0  0 }
+    color3= { 0  66  148 }
+}
+# Ukraine
+UKR = {
+    color1= { 35 84 145  }
+    color2= { 213 203 90  }
+    color3= { 134 166 117  }
+}
+# Belarus
+BLR = {
+    color1= { 255 255 255  }
+    color2= { 204 0 0 }
+    color3= { 255 255 255  }
+}
+# Belgium
+BEL = {
+    color1= { 222 149 33  }
+    color2= { 255 255 255  }
+    color3= { 49 116 224  }
+}
+
+#RH
+USS = {
+	color1= { 101 102 163  }
+	color2= { 236 159 89  }
+	color3= { 195 149 155  }
+}
+
+# North German Confederation
+NGC = {
+    color1= { 255 255 255  }
+    color2= { 80 79 88  }
+    color3= { 17 16 203  }
+}
+
+# South German Confederation
+SGC = {
+    color1= { 255 255 255  }
+    color2= { 88 79 80  }
+    color3= { 50 50 225  }
+}
+
+#Thirteen Colonies
+TTC = {
+    color1= { 150 29 44  }
+    color2= { 99 137 153  }
+    color3= { 83 149 105  }
+}
+
+#British India
+EIC = {
+    color1= { 80 20 17  }
+    color2= { 99 137 153  }
+    color3= { 83 149 105  }
+}
+
+# Bolivia
+BOL = {
+    color1= { 193 178 193  }
+    color2= { 144 52 53  }
+    color3= { 184 193 89  }
+}
+
+# Ecuador
+ECU = {
+    color1= { 84 133 147  }
+    color2= { 144 52 53  }
+    color3= { 184 193 89  }
+}
+
+# Yugoslavia
+YUG = {
+    color1= { 18 6 51  }
+    color2= { 255 255 255  }
+    color3= { 247 206 12  }
+}
+
+# United Kingdom
+UNK = {
+    color1= { 193 26 14  }
+    color2= { 99 137 153  }
+    color3= { 83 149 105  }
+}   
+
+CNO = {
+    color1= { 48  8  189 }
+    color2= { 48  8  189 }
+    color3= { 48  8  189 }
+}
+
+IBA = {
+    color1= { 244 184 12  }
+    color2= { 180 0 85  }
+    color3= { 255 255 255  }
+}

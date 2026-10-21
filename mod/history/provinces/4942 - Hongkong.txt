@@ -1,0 +1,53 @@
+#2014 - Hongkong
+
+owner = MNG
+controller = MNG
+culture = cantonese
+religion = confucianism
+capital = "Hongkong"
+trade_goods = chinaware
+hre = no
+discovered_by = nomad_group
+discovered_by = chinese
+base_tax = 1
+base_production = 1
+base_manpower = 1
+is_city = yes
+center_of_trade = 1
+add_core = MNG
+
+1368.4.18 = { owner = MNG controller = MNG add_core = MNG }
+
+1480.1.1 = {   }
+1514.1.1 = { discovered_by = POR }
+1647.4.1 = {	owner = QNG
+		controller = QNG
+		add_core = QNG
+		}
+1648.4.15 = { 	controller = MNG 
+		owner = MNG
+		}
+1650.11.11 = {	owner = QNG
+		controller = QNG
+		}
+1659.1.1  = {	owner = QNG
+				controller = QNG
+				add_core = QNG
+			} # The Qing Conquest of China finishes
+1662.4.1 = {	owner = CZH
+		controller = CZH
+		add_core = CZH
+		} # Three Feudatories
+1681.10.1 = {
+	owner = QNG
+	controller = QNG
+	add_core = QNG
+}
+
+1842.8.29  = { owner = GBR controller = GBR add_core = GBR }
+1850.1.1   = { base_tax = 5 base_production = 5 base_manpower = 3 }
+1870.1.1 = { base_tax = 9 base_production = 7 base_manpower = 7 }
+1890.1.1 = { base_tax = 17 base_production = 12 base_manpower = 12 }
+1910.1.1 = { base_tax = 24 base_production = 17 base_manpower = 16 }
+1912.2.12  = { add_core = QNG remove_core = QNG remove_core = WUU }
+

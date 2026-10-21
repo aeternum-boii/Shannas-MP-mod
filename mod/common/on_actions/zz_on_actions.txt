@@ -1,0 +1,6 @@
+on_startup = { 
+	
+	events = {
+		ae_gamerule.100
+	}
+}

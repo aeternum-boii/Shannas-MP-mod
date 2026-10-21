@@ -1,0 +1,4 @@
+4385 = {"Cotentîn" "Cotentîn"}
+168 = {"Kaem" "Kaem"}
+167 = {"Caux" "Caux"}
+1879 = {"Alençoun" "Alençoun"}

@@ -1,0 +1,3 @@
+# - Bobrujsk
+
+add_core = MNK

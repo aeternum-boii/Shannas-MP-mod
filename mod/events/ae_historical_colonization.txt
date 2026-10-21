@@ -1,0 +1,732 @@
+namespace = ae_historical_colonization
+normal_or_historical_nations = yes
+
+## HISTORICAL COLONIES #
+# Portugal - Gold Coast
+country_event = {
+	id = ae_historical_colonization.200
+	title = ae_historical_colonization.200.t
+	desc = ae_historical_colonization.200.d
+	picture = BARBARY_PIRATES_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POR
+		is_year = 1482 
+		NOT = { ae_gamerule_colonization_off = yes }
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				2258 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		2258 = { cede_province = POR }
+	}
+}
+
+
+# Portugal - Hormuz
+country_event = {
+	id = ae_historical_colonization.201
+	title = ae_historical_colonization.201.t
+	desc = ae_historical_colonization.201.d
+	picture = iberian_FORT_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POR
+		is_year = 1507
+		NOT = { owns = 2999 }
+		NOT = { ae_gamerule_colonization_off = yes }
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				2999 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		2999 = { cede_province = POR }
+	}
+}
+
+
+# Portugal - Goa
+country_event = {
+	id = ae_historical_colonization.202
+	title = ae_historical_colonization.202.t
+	desc = ae_historical_colonization.202.d
+	picture = iberian_FORT_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POR
+		is_year = 1510 
+		NOT = { ae_gamerule_colonization_off = yes }
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				2030 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		2030 = { cede_province = POR }
+	}
+}
+
+# Portugal - Socotra
+country_event = {
+	id = ae_historical_colonization.2021
+	title = ae_historical_colonization.2021.t
+	desc = ae_historical_colonization.2021.d
+	picture = BARBARY_PIRATES_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POR
+		is_year = 1507 
+		NOT = { ae_gamerule_colonization_off = yes }
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				1099 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		1099 = { cede_province = POR }
+	}
+}
+
+
+
+# Portugal - Malacca
+country_event = {
+	id = ae_historical_colonization.203
+	title = ae_historical_colonization.203.t
+	desc = ae_historical_colonization.203.d
+	picture = iberian_FORT_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POR
+		is_year = 1511  
+		
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				596 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		596 = { 
+			cede_province = POR 
+			if = {
+				limit = { religion_group = muslim }
+				change_religion = hinduism
+			}
+		}
+	}
+}
+
+
+# Portugal - Moçambique
+country_event = {
+	id = ae_historical_colonization.204
+	title = ae_historical_colonization.204.t
+	desc = ae_historical_colonization.204.d
+	picture = BARBARY_PIRATES_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POR
+		is_year = 1512 
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				1195 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		} 
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		1195 = { cede_province = POR }
+	}
+}
+
+# Portugal - Diu
+country_event = {
+	id = ae_historical_colonization.205
+	title = ae_historical_colonization.205.t
+	desc = ae_historical_colonization.205.d
+	picture = iberian_FORT_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = POR
+		is_year = 1537
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				4455 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}		 
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		4455 = { cede_province = POR }
+	}
+}
+
+
+
+# England - Roanoke
+country_event = {
+	id = ae_historical_colonization.300
+	title = ae_historical_colonization.300.t
+	desc = ae_historical_colonization.300.d
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = ENG
+		is_year = 1585  
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				2547 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		2547 = { 
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+# England - Jamestown
+country_event = {
+	id = ae_historical_colonization.301
+	title = ae_historical_colonization.301.t
+	desc = ae_historical_colonization.301.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = ENG
+		is_year = 1607 
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				950 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		950 = { 
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+# England - Plymouth
+country_event = {
+	id = ae_historical_colonization.302
+	title = ae_historical_colonization.302.t
+	desc = ae_historical_colonization.302.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = ENG
+		is_year = 1620 
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				2561 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+		is_religion_enabled = reformed
+		NOT = { religion = reformed }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		2561 = { 
+			cede_province = ROOT
+			add_core = ROOT
+			change_religion = reformed
+		}
+	}
+}
+
+
+# England - St. John
+country_event = {
+	id = ae_historical_colonization.303
+	title = ae_historical_colonization.303.t
+	desc = ae_historical_colonization.303.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = ENG
+		is_year = 1620  
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				980 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		980 = { 
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+# Netherlands - New Amsterdam
+country_event = {
+	id = ae_historical_colonization.400
+	title = ae_historical_colonization.400.t
+	desc = ae_historical_colonization.400.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = NED
+		is_year = 1624 
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				965 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		965 = {
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+# Netherlands - Pernambuco
+country_event = {
+	id = ae_historical_colonization.401
+	title = ae_historical_colonization.401.t
+	desc = ae_historical_colonization.401.d
+	picture = BARBARY_PIRATES_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = NED
+		is_year = 163
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				755 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		755 = {
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+# Netherlands - Pulicat
+country_event = {
+	id = ae_historical_colonization.402
+	title = ae_historical_colonization.402.t
+	desc = ae_historical_colonization.402.d
+	picture = iberian_FORT_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = NED
+		is_year = 1616
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				539 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		539 = { 
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+# Netherlands - Suriname
+country_event = {
+	id = ae_historical_colonization.403
+	title = ae_historical_colonization.403.t
+	desc = ae_historical_colonization.403.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = NED
+		is_year = 1616  
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				745 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		745 = { 
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+# France - Quebec City
+country_event = {
+	id = ae_historical_colonization.500
+	title = ae_historical_colonization.500.t
+	desc = ae_historical_colonization.500.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = FRA
+		is_year = 1608 
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				994 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		994 = {
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+# France - Cayenne
+country_event = {
+	id = ae_historical_colonization.501
+	title = ae_historical_colonization.501.t
+	desc = ae_historical_colonization.501.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = FRA
+		is_year = 1643
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				746 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		746 = {
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}
+
+
+
+# Sweden - Fort Christina
+country_event = {
+	id = ae_historical_colonization.600
+	title = ae_historical_colonization.600.t
+	desc = ae_historical_colonization.600.d
+	picture = COLONIZATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = SWE
+		is_year = 1638 
+		OR = {
+			ae_gamerule_colonization_on = yes 
+			AND = {
+				full_ai = yes 
+				
+				957 = {
+					owner = { 
+						NOT = { tag = ROOT }
+						full_ai = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}	
+	
+	option = { 
+		name = ae_historical_colonization.200.a 
+		957 = {
+			cede_province = ROOT
+			add_core = ROOT
+		}
+	}
+}

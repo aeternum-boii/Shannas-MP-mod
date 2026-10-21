@@ -1,0 +1,112 @@
+ae_partition_of_poland = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		is_plc_or_poland_lithuania = yes
+		is_free_or_tributary_trigger = yes
+		is_lesser_in_union = no
+		normal_or_historical_nations = yes
+		current_age = age_of_revolutions
+		
+		NOT = { ae_gamerule_historical_expansion_off = yes }
+	}
+
+	can_start = {
+		is_year = 1767
+		
+		any_country = { is_plc_partition_russia = yes }
+		any_country = { is_plc_partition_prussia = yes }
+		any_country = { is_plc_partition_austria = yes }
+	}
+	
+	can_stop = {
+		OR = {
+			NOT = {
+				any_country = { 
+					OR = {
+						is_plc_partition_russia = yes 
+						is_plc_partition_prussia = yes 
+						is_plc_partition_austria = yes 
+					} 
+					army_size = ROOT
+				}
+			}
+			NOT = {
+				AND = {
+					any_country = { is_plc_partition_russia = yes }
+					any_country = { is_plc_partition_prussia = yes }
+					any_country = { is_plc_partition_austria = yes }
+				}
+			}
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 0.5 
+			any_country = {
+				is_plc_partition_russia = yes 
+				army_size = ROOT
+			} 
+		} 
+		modifier = {
+			factor = 0.5 
+			any_country = {
+				is_plc_partition_prussia = yes
+				army_size = ROOT
+			} 
+		} 
+		modifier = {
+			factor = 0.5 
+			any_country = {
+				is_plc_partition_austria = yes
+				army_size = ROOT
+			} 
+		} 
+	}
+	
+	modifier = {
+		yearly_prestige = -1
+	}	
+	
+	can_end = {
+		OR = {
+			exists = no 
+			is_subject = yes
+			AND = {
+				had_country_flag = {
+					flag = ae_partition_of_poland_flag
+					days = 7300
+				}
+				any_country = {
+					OR = {
+						is_plc_partition_russia = yes 
+						is_plc_partition_prussia = yes 
+						is_plc_partition_austria = yes 
+					} 
+					ROOT = {
+						has_won_war_against = {
+							who = PREV
+							max_years_since = 25
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	on_start = ae_partition_of_poland.101
+	on_end = ae_partition_of_poland.100
+	
+	on_monthly = {
+		events = {
+			ae_partition_of_poland.102
+			ae_partition_of_poland.103
+		}
+		random_events = {
+			1000 = 0
+			100 = ae_partition_of_poland.104 #Kosciuszko
+		}
+		
+	}
+}
+

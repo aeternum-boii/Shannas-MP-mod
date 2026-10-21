@@ -1,0 +1,75 @@
+country_decisions = {
+ 
+	ae_move_court_spain = {
+		major = yes
+		potential = {  
+			NOT = { has_global_flag = incident_universal_empire_happened }
+			tag = HAB 
+			ai = no 
+			any_country = {
+				if = {
+					limit = { exists = SPA }
+					tag = SPA
+				}
+				else = { tag = CAS }
+				junior_union_with = HAB			 
+			}
+		} 
+		allow = {
+			tag = HAB 
+			ai = no 
+			any_country = {
+				if = {
+					limit = { exists = SPA }
+					tag = SPA
+				}
+				else = { tag = CAS }
+				junior_union_with = HAB			 
+			}
+		}
+		
+		effect = {
+			country_event = { id = ae_charlesV.500 }
+			 
+			
+		}  
+	}
+	
+	ae_move_court_austria = {
+		major = yes
+		potential = {  
+			NOT = { has_global_flag = incident_universal_empire_happened } 
+			OR = {
+				tag = SPA
+				AND = {
+					tag = CAS
+					SPA = { exists = no }
+				}
+			} 
+			ai = no 
+			HAB = {
+				junior_union_with = ROOT				 
+			}
+		} 
+		allow = {
+			NOT = { has_global_flag = incident_universal_empire_happened } 
+			OR = {
+				tag = SPA
+				AND = {
+					tag = CAS
+					SPA = { exists = no }
+				}
+			} 
+			ai = no 
+			HAB = {
+				junior_union_with = ROOT				 
+			}
+		}
+		
+		effect = {
+			country_event = { id = ae_charlesV.501 }
+			 
+		}
+	}  
+}
+	 

@@ -1,0 +1,43 @@
+#Emilian and Romagnol
+101 = {"Zêna" "Zêna"}
+102 = {"Nisa" "Nisa"}
+103 = {"Turén" "Turén"}
+104 = {"Milân" "Milân"}
+#SAME 105
+106 = {"Mòdna" "Mòdna"}
+107 = {"Brësa" "Brësa"}
+109 = {"Mantva" "Mantva"}
+111 = {"Friåul" "Friåul"}
+112 = {"Venêzia" "Venêzia"}
+113 = {"Frèra" "Frèra"}
+114 = {"Ravêna" "Ravêna"}
+#SAME 115
+116 = {"Fiuränza" "Fiuränza"}
+117 = {"Séna" "Séna"}
+118 = {"Råmma" "Råmma"}
+#SAME 119
+120 = {"Abrózz" "Abrózz"}
+121 = {"Nâpol" "Nâpol"}
+122 = {"Târent" "Târent"}
+124 = {"Messina" "Messina"}
+125 = {"Palèrum" "Palèrum"}
+1774 = {"Trevîs" "Trevîs"}
+1862 = {"Carmona" "Carmona"}
+1875 = {"Cònni" "Cònni"}
+1933 = {"Bari" "Bari"}
+1934 = {"Basilichèda" "Basilichèda"} #Lucàgna
+2976 = {"Perûgia" "Perûgia"} #Ónbria
+2977 = {"Urbén" "Urbén"}
+2979 = {"Nuvèra" "Nuvèra"}
+2980 = {"Locca" "Locca"}
+2982 = {"Siracusa" "Siracusa"}
+2985 = {"Fògia" "Fògia"}
+2986 = {"Cagliari" "Cagliari"}
+
+4728 = {"Pavéia" "Pavéia"}
+4729 = {"Pèdva" "Pèdva"}
+4730 = {"Bulåggna" "Bulåggna"}
+4733 = {"Mulìs" "Mulìs"}
+4738 = {"Trieste" "Trieste"}
+4739 = {"Bêrgum" "Bêrgum"}
+4740 = {"Còm" "Còm"}

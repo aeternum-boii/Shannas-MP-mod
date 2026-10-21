@@ -1,0 +1,69 @@
+
+
+
+
+plc_partition_annex_effect = { 
+	every_country = {
+		limit = { is_plc_or_poland_lithuania = yes }
+		every_owned_province = {
+			if = {
+				limit = { plc_$number$_partition_russia = yes }
+				cede_province = event_target:plc_partition_russia
+				add_permanent_claim = event_target:plc_partition_russia
+			}
+			else_if = {
+				limit = { plc_$number$_partition_prussia = yes }
+				cede_province = event_target:plc_partition_prussia
+				add_permanent_claim = event_target:plc_partition_prussia
+			}
+			else_if = {
+				limit = { plc_$number$_partition_austria = yes }
+				cede_province = event_target:plc_partition_austria
+				add_permanent_claim = event_target:plc_partition_austria
+			}
+		} 
+	}
+	
+}
+plc_partition_cb_effect = {
+		every_owned_province = {
+			if = {
+				limit = { plc_$number$_partition_russia = yes }
+				add_permanent_claim = event_target:plc_partition_russia
+			}
+			else_if = {
+				limit = { plc_$number$_partition_prussia = yes }
+				add_permanent_claim = event_target:plc_partition_prussia
+			}
+			else_if = {
+				limit = { plc_$number$_partition_austria = yes }
+				add_permanent_claim = event_target:plc_partition_austria
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = event_target:plc_partition_russia
+					tag = event_target:plc_partition_prussia
+					[[include_austria]
+						tag = event_target:plc_partition_austria
+					] 
+				}
+			}
+			add_casus_belli = {
+				target = event_target:plc_partition_plc
+				type = cb_plc_$number$_partition
+				months = 24
+			}
+			country_event = { id = ae_partition_of_poland.10$number$1 }
+		} 
+	
+}
+plc_partition_war_effect = {
+	
+		declare_war_with_cb = {
+			who = event_target:plc_partition_plc
+			casus_belli = cb_plc_$number$_partition
+		}
+}
+

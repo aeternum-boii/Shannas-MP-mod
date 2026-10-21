@@ -1,0 +1,872 @@
+government = republic
+add_government_reform = cossacks_reform
+technology_group = eastern
+religion = orthodox
+primary_culture = ruthenian
+capital = 283	# Zaporozhia
+
+1500.1.1 = {	
+	monarch = {		
+		name = "Semen"	
+		dynasty = Polozowicz	
+		adm = 2		
+		dip = 2		
+		mil = 2
+	}
+}
+
+1516.1.1 = {	
+	monarch = {		
+		name = "Predslav"	
+		dynasty = Lanckoronski
+		birth_date = 1485.1.1		
+		adm = 2		
+		dip = 2		
+		mil = 2
+	}
+}
+
+1528.1.1 = {	
+	monarch = {		
+		name = "Ostap"	
+		dynasty = Daszkiewicz	
+		birth_date = 1472.1.1
+		adm = 2		
+		dip = 2		
+		mil = 2
+	}
+}
+
+
+1535.1.1 = {	
+	monarch = {		
+		name = "Venceslav"	
+		dynasty = Chmielnicki	
+		adm = 2		
+		dip = 2		
+		mil = 2
+	}
+}
+
+1550.1.1 = {
+	monarch = {		
+		name = "Dmitro"	
+		dynasty = Wisniowiecki	
+		birth_date = 1416.1.1
+		adm = 3		
+		dip = 3		
+		mil = 3  
+	}
+}
+
+1550.1.1 = {
+	government_rank = 1
+}
+
+1557.1.1 = {
+	monarch = {		
+		name = "Andrij"	
+		dynasty = Lach	
+		adm = 2	
+		dip = 2		
+		mil = 2  
+	}
+}
+
+1569.1.1 = {
+	monarch = {		
+		name = "Michajlo"	
+		dynasty = Wisniowiecki		
+		birth_date = 1429.1.1
+		adm = 2	
+		dip = 2		
+		mil = 3  
+	}
+}
+
+1574.1.1 = {	
+	monarch = {		
+		name = "Ivan"	
+		dynasty = Swirgowski	
+		adm = 1		
+		dip = 1		
+		mil = 1	
+	}
+}
+
+1574.6.1 = {	
+	monarch = {		
+		name = "Samijlo"	
+		dynasty = Kiszka	
+		birth_date = 1540.1.1
+		adm = 2		
+		dip = 3		
+		mil = 3
+	}
+}
+
+1575.6.1 = {	
+	monarch = {		
+		name = "Bogdan"	
+		dynasty = Rozinski		
+		adm = 2		
+		dip = 1		
+		mil = 3
+	}
+}
+
+1576.1.1 = {	
+	monarch = {		
+		name = "Jakiv"	
+		dynasty = Szach		
+		adm = 1		
+		dip = 2		
+		mil = 2
+	}
+}
+
+1577.1.1 = {	
+	monarch = {		
+		name = "Ivan"	
+		dynasty = Pidkova	
+		adm = 1		
+		dip = 2		
+		mil = 1	
+	}
+}
+
+1578.1.1 = {	
+	monarch = {		
+		name = "Lukjan"	
+		dynasty = Czorninski
+		birth_date = 1550.1.1		
+		adm = 1		
+		dip = 1		
+		mil = 2	
+	}
+}
+
+1578.1.1 = {	
+	monarch = {		
+		name = "Jan"	
+		dynasty = Oryszowski		
+		adm = 1		
+		dip = 3		
+		mil = 2	
+	}
+}
+
+1581.1.1 = {	
+	monarch = {		
+		name = "Samijlo"	
+		dynasty = Zborowski				
+		adm = 1		
+		dip = 1		
+		mil = 1
+	}
+}
+
+1582.1.1 = {	
+	monarch = {		
+		name = "Jakiv"	
+		dynasty = Szach		
+		adm = 1		
+		dip = 2		
+		mil = 2
+	}
+}
+
+1583.1.1 = {	
+	monarch = {		
+		name = "Demjan"	
+		dynasty = Skalozub		
+		adm = 1		
+		dip = 1		
+		mil = 1
+	}
+}
+
+1584.1.1 = {	
+	monarch = {		
+		name = "Bogdan"	
+		dynasty = Makoszynski		
+		adm = 1		
+		dip = 3	
+		mil = 2
+	}
+}
+
+1585.1.1 = {	
+	monarch = {		
+		name = "Michajlo"	
+		dynasty = Rozinski		
+		adm = 3		
+		dip = 2	
+		mil = 3
+	}
+}
+
+1585.6.1 = {	
+	monarch = {		
+		name = "Kirilo"	
+		dynasty = Rozinski		
+		adm = 1		
+		dip = 1	
+		mil = 2
+	}
+}
+
+1585.6.1 = {	
+	monarch = {		
+		name = "Zachar"	
+		dynasty = Kulaha		
+		adm = 1	
+		dip = 1	
+		mil = 1
+	}
+}
+
+1586.1.1 = {	
+	monarch = {		
+		name = "Lukjan"	
+		dynasty = Czorninski	
+		birth_date = 1550.1.1		
+		adm = 1		
+		dip = 1		
+		mil = 2	
+	}
+}
+
+1586.6.1 = {	
+	monarch = {		
+		name = "Bogdan"	
+		dynasty = Makoszynski		
+		adm = 1		
+		dip = 3	
+		mil = 2
+	}
+}
+
+1588.1.1 = {	
+	monarch = {		
+		name = "Gavrilo"	
+		dynasty = Holub
+	}
+}
+
+1585.6.1 = {	
+	monarch = {		
+		name = "Zachar"	
+		dynasty = Kulaha		
+		adm = 1	
+		dip = 1	
+		mil = 1
+	}
+}
+
+1590.1.1 = {	
+	monarch = {		
+		name = "Wojcech"	
+		dynasty = Czanowicki
+	}
+}
+
+1591.1.1 = {	
+	monarch = {		
+		name = "Krzysztof"	
+		dynasty = Kosinski		
+		adm = 2	
+		dip = 2
+		mil = 4
+		birth_date = 1545.1.1
+		culture = polish
+		religion = catholic
+		leader = {	
+			name = "Krzysztof Kosinski"           	
+			type = general	
+			fire = 3	
+			shock = 3	
+			manuever = 3	
+			siege = 1 
+			death_date = 1593.10.10 
+		}
+	}
+}
+
+1593.1.1 = {	
+	monarch = {		
+		name = "Grigorij"	
+		dynasty = Loboda
+		birth_date = 1550.1.1		
+		adm = 2	
+		dip = 2
+		mil = 3
+	}
+}
+
+1594.1.1 = {	
+	monarch = {		
+		name = "Severin"	
+		dynasty = Nalivajko		
+		adm = 2	
+		dip = 2
+		mil = 5
+		leader = {	
+			name = "Severin Nalivajko"           	
+			type = general	
+			fire = 3	
+			shock = 3	
+			manuever = 5	
+			siege = 2 
+			death_date = 1597.4.11 
+		}
+	}
+}
+
+1595.1.1 = {	
+	monarch = {		
+		name = "Grigorij"	
+		dynasty = Loboda	
+		birth_date = 1550.1.1		
+		adm = 2	
+		dip = 2
+		mil = 3
+	}
+}
+
+1596.1.1 = {	
+	monarch = {		
+		name = "Gnat"	
+		dynasty = Wasilewicz	
+		adm = 1	
+		dip = 3
+		mil = 1
+	}
+}
+
+1598.1.1 = {	
+	monarch = {		
+		name = "Fedir"	
+		dynasty = Polous	
+		adm = 1	
+		dip = 1
+		mil = 3
+	}
+}
+
+1599.1.1 = {	
+	monarch = {		
+		name = "Samijlo"	
+		dynasty = Kiszka	
+		birth_date = 1540.1.1		
+		adm = 2	
+		dip = 3		
+		mil = 3
+	}
+}
+
+1602.1.1 = {	
+	monarch = {		
+		name = "Gavrilo"	
+		dynasty = Krutniewicz		
+		adm = 1	
+		dip = 1		
+		mil = 2
+	}
+}
+
+1602.1.1 = {	
+	monarch = {		
+		name = "Ivan"	
+		dynasty = Kuckiewicz		
+		adm = 1	
+		dip = 1		
+		mil = 1
+	}
+}
+
+1603.1.1 = {	
+	monarch = {		
+		name = "Ivan"	
+		dynasty = Kosyj		
+		adm = 1	
+		dip = 1		
+		mil = 2
+	}
+}
+
+1603.6.1 = {	
+	monarch = {		
+		name = "Gavrilo"	
+		dynasty = Krutniewicz		
+		adm = 1	
+		dip = 1		
+		mil = 2
+	}
+}
+
+1604.1.1 = {	
+	monarch = {		
+		name = "Grigorij"	
+		dynasty = Izapowicz		
+		adm = 3	
+		dip = 1		
+		mil = 1
+	}
+}
+
+1606.1.1 = {	
+	monarch = {		
+		name = "Bogdan"	
+		dynasty = Olevczenko		
+		adm = 1	
+		dip = 1		
+		mil = 3
+	}
+}
+
+1606.1.1 = {	
+	monarch = {		
+		name = "Kalenik"	
+		dynasty = Andrijewicz		
+		adm = 1	
+		dip = 3		
+		mil = 3
+	}
+}
+
+1610.1.1 = {	
+	monarch = {		
+		name = "Oleksandr"	
+		dynasty = Zborowski		
+		adm = 1	
+		dip = 2		
+		mil = 3
+	}
+}
+
+1611.1.1 = {	
+	monarch = {		
+		name = "Petro"	
+		dynasty = Sahajdaczny	
+		birth_date = 1570.1.1		
+		adm = 5	
+		dip = 4		
+		mil = 5
+	}
+}
+
+1617.1.1 = {	
+	monarch = {		
+		name = "Dmitro"	
+		dynasty = Barabasz		
+		adm = 1	
+		dip = 1	
+		mil = 3
+	}
+}
+
+1617.6.1 = {	
+	monarch = {		
+		name = "Petro"	
+		dynasty = Sahajdaczny	
+		birth_date = 1570.1.1		
+		adm = 5	
+		dip = 4		
+		mil = 5
+	}
+}
+
+1619.1.1 = {	
+	monarch = {		
+		name = "Jakiv"	
+		dynasty = Nerodicz-Borodavka			
+		adm = 1	
+		dip = 1	
+		mil = 2
+	}
+}
+
+1621.1.1 = {	
+	monarch = {		
+		name = "Petro"	
+		dynasty = Sahajdaczny	
+		birth_date = 1570.1.1		
+		adm = 5	
+		dip = 4		
+		mil = 5
+	}
+}
+
+1622.1.1 = {	
+	monarch = {		
+		name = "Michajlo"	
+		dynasty = Doroszenko		
+		adm = 4	
+		dip = 5		
+		mil = 5
+	}
+}
+
+1625.1.1 = {
+	leader = {	
+		name = "Marko Zmajlo"           	
+		type = general	
+		fire = 2	
+		shock = 3	
+		manuever = 3	
+		siege = 1 
+		death_date = 1626.1.1 
+	}
+}
+
+1628.1.1 = {	
+	monarch = {		
+		name = "Lev"	
+		dynasty = Iwanowicz		
+		adm = 2	
+		dip = 2		
+		mil = 3
+	}
+}
+
+1629.1.1 = {	
+	monarch = {		
+		name = "Grigorij"	
+		dynasty = Czorny		
+		adm = 2	
+		dip = 2		
+		mil = 3
+	}
+}
+
+1630.1.1 = {	
+	monarch = {		
+		name = "Taras"	
+		dynasty = Fedorowicz-Triasilo	
+		adm = 1
+		dip = 1		
+		mil = 4
+		leader = {	
+			name = "Taras Triasilo"           	
+			type = general	
+			fire = 3	
+			shock = 3	
+			manuever = 2	
+			siege = 2
+			death_date = 1639.1.1 
+		}
+	}
+	
+}
+
+1632.1.1 = {	
+	monarch = {		
+		name = "Andrij"	
+		dynasty = Didenko		
+		adm = 1
+		dip = 1		
+		mil = 3
+	}
+}
+
+1633.1.1 = {	
+	monarch = {		
+		name = "Dorofij"	
+		dynasty = Doroszenko		
+		adm = 1
+		dip = 1		
+		mil = 1
+	}
+}
+
+1635.1.1 = {	
+	monarch = {		
+		name = "Ivan"	
+		dynasty = Sulima
+		birth_date = 1600.1.1
+		adm = 1
+		dip = 1		
+		mil = 4
+		leader = {	
+			name = "Ivan Sulima"           	
+			type = general	
+			fire = 2	
+			shock = 2	
+			manuever = 2	
+			siege = 5 
+			death_date = 1535.12.12 
+		}
+	}
+}
+
+1636.1.1 = {	
+	monarch = {		
+		name = "Vasil"	
+		dynasty = Tomilenko
+		adm = 1
+		dip = 2		
+		mil = 1
+	}
+}
+
+1637.1.1 = {	
+	monarch = {		
+		name = "Pavlo"	
+		dynasty = But
+		adm = 1
+		dip = 2		
+		mil = 5
+		leader = {	
+			name = "Pavlo Pavluk-But"           	
+			type = general	
+			fire = 2	
+			shock = 3	
+			manuever = 4	
+			siege = 2
+			death_date = 1638.4.9
+		}
+	}
+}
+
+1637.6.1 = {	
+	monarch = {		
+		name = "Dmitro"	
+		dynasty = Hunia
+		adm = 2
+		dip = 2		
+		mil = 4
+		leader = {	
+			name = "Dmitro Hunia"           	
+			type = general	
+			fire = 3	
+			shock = 3	
+			manuever = 3	
+			siege = 1
+			death_date = 1638.10.10
+		}
+	}
+}
+
+1638.1.1 = {	
+	monarch = {		
+		name = "Jakiv"	
+		dynasty = Ostrianin
+		adm = 2
+		dip = 3		
+		mil = 4
+		leader = {	
+			name = "Jakiv Ostrianin"           	
+			type = general	
+			fire = 2	
+			shock = 5	
+			manuever = 2	
+			siege = 2
+			death_date = 1641.5.6
+		}
+	}
+	leader = {	
+		name = "Karpo Skidan"           	
+		type = general	
+		fire = 2	
+		shock = 2	
+		manuever = 3	
+		siege = 2
+		death_date = 1638.7.1
+	}
+}
+
+1638.6.1 = {	
+	monarch = {		
+		name = "Dmitro"	
+		dynasty = Hunia
+		adm = 2
+		dip = 2		
+		mil = 4
+	}
+}
+
+1639.1.1 = {	
+	monarch = {		
+		name = "Karpo"	
+		dynasty = Poltorakozucha
+		adm = 1
+		dip = 1		
+		mil = 3
+	}
+}
+
+1642.1.1 = {	
+	monarch = {		
+		name = "Maksim"	
+		dynasty = Hulak
+		adm = 2
+		dip = 2		
+		mil = 2
+	}
+}
+
+1647.1.1 = {	
+	monarch = {		
+		name = "Ivan"	
+		dynasty = Barabasz
+		adm = 1
+		dip = 1	
+		mil = 1
+	}
+}
+
+1648.1.1 = {
+	monarch = {
+		name = "Bogdan"
+		dynasty = Chmielnicki
+		adm = 4
+		dip = 6
+		mil = 5
+		leader = {
+			name = "Bogdan Chmielnicki"           	
+			type = general	
+			fire = 4	
+			shock = 5	
+			manuever = 4	
+			siege = 4
+		}
+	}
+	government_rank = 2
+}
+
+1654.1.8 = { government_rank = 1 }
+
+1657.1.1 = {
+	monarch = {
+		name = "Jurij"
+		dynasty = Chmielnicki
+		birth_date = 1641.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1657.6.1 = {
+	monarch = {
+		name = "Ivan"
+		dynasty = Vygovski
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1659.1.1 = {
+	monarch = {
+		name = "Jurij"
+		dynasty = Chmielnicki
+		birth_date = 1641.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1663.1.1 = {
+	monarch = {
+		name = "Ivan"
+		dynasty = Briuchovecki
+		birth_date = 1623.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1668.1.1 = {
+	monarch = {
+		name = "Demjan"
+		dynasty = Mnohohriszny
+		birth_date = 1631.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1672.1.1 = {
+	monarch = {
+		name = "Ivan"
+		dynasty = Samojlovicz
+		birth_date = 1635.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+
+1687.1.1 = {
+	monarch = {
+		name = "Ivan"
+		dynasty = Mazepa
+		birth_date = 1639.1.1
+		adm = 4
+		dip = 4
+		mil = 4
+		leader = {	
+			name = "Mazeppa"               	
+			type = general	
+			fire = 2	
+			shock = 4	
+			manuever = 5	
+			siege = 0 
+			death_date = 1709.1.1 
+		}
+	}
+}
+
+1708.6.28 = {
+	monarch = {
+		name = "Ivan"
+		dynasty = Skoropadsky
+		birth_date = 1646.1.1
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+}
+
+1722.1.1 = {
+	monarch = {
+		name = "Pavlo"
+		dynasty = Polubotok
+		birth_date = 1660.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}
+
+1727.1.1 = {
+	monarch = {
+		name = "Danilo"
+		dynasty = Apostol
+		birth_date = 1658.1.1
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+
+1727.1.1 = {
+	monarch = {
+		name = "Kirilo"
+		dynasty = Rozumovski
+		birth_date = 1728.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1775.8.3 = {
+	government_rank = 2
+}

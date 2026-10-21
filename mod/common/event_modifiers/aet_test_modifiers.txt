@@ -1,0 +1,20 @@
+vassal_tax_test = {
+	vassal_tax_modifier = 0.10 
+	vassal_tax_modifier_sem = 1073741.824
+}
+rural_goods_test = {
+	rural_goods_produced_modifier = 0.10 
+	rural_goods_produced_modifier_sem = 1073741.824
+}
+urban_goods_test = {
+	urban_goods_produced_modifier = 0.10 
+	urban_goods_produced_modifier_sem = 1073741.824
+}
+mining_goods_test = {
+	mining_goods_produced_modifier = 0.10 
+	mining_goods_produced_modifier_sem = 1073741.824
+}
+plantage_goods_test = {
+	plantage_goods_produced_modifier = 0.10 
+	plantage_goods_produced_modifier_sem = 1073741.824
+}

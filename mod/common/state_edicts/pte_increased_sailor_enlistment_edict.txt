@@ -1,0 +1,30 @@
+pte_increased_sailor_enlistment_edict = {
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		always = yes
+		custom_trigger_tooltip = {
+			tooltip = sea_remove_state_edicts_flag_tt
+			OR = {
+				NOT = { has_country_flag = sea_state_edicts_clear_flag }
+				had_country_flag = {
+					flag = sea_state_edicts_clear_flag
+					days = 33
+				}
+			}
+		}
+	}
+
+	modifier = {
+		local_sailors_modifier = 0.33
+	}
+
+	color = { 0 25 255 }
+	on_state_edict_revoked = { FROM = { clr_country_flag = sea_state_edicts_decision_pte_increased_sailor_enlistment_edict_flag } }
+
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -1,0 +1,7 @@
+government = republic
+technology_group = western
+primary_culture = canadian
+religion = anglican
+capital = 973	# Oregon City
+
+

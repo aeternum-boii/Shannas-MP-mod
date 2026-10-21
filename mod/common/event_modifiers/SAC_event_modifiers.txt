@@ -1,0 +1,16 @@
+##### Province Modifier #####
+
+african_disease_modifier = {
+	local_colonial_growth = -200
+	picture = "malaria_icon"
+}
+
+african_disease_modifier_2 = {
+	picture = "malaria_icon"
+	attrition = 100
+	local_manpower_modifier = -0.95
+	local_sailors_modifier = -0.95
+	local_tax_modifier = -0.95
+	local_production_efficiency = -0.95
+	province_trade_power_modifier = -0.95
+}

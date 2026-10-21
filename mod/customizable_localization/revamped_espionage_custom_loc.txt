@@ -1,0 +1,419 @@
+defined_text = {
+	name = GetTreasuryTheftAmount
+	random = no
+
+	text = {
+		localisation_key = esp_theft_240000
+		trigger = { monthly_income = 10000 }
+	}
+	text = {
+		localisation_key = esp_theft_216000
+		trigger = { monthly_income = 9000 }
+	}
+	text = {
+		localisation_key = esp_theft_192000
+		trigger = { monthly_income = 8000 }
+	}
+	text = {
+		localisation_key = esp_theft_180000
+		trigger = { monthly_income = 7500 }
+	}
+	text = {
+		localisation_key = esp_theft_168000
+		trigger = { monthly_income = 7000 }
+	}
+	text = {
+		localisation_key = esp_theft_156000
+		trigger = { monthly_income = 6500 }
+	}
+	text = {
+		localisation_key = esp_theft_144000
+		trigger = { monthly_income = 6000 }
+	}
+	text = {
+		localisation_key = esp_theft_132000
+		trigger = { monthly_income = 5500 }
+	}
+	text = {
+		localisation_key = esp_theft_120000
+		trigger = { monthly_income = 5000 }
+	}
+	text = {
+		localisation_key = esp_theft_108000
+		trigger = { monthly_income = 4500 }
+	}
+	text = {
+		localisation_key = esp_theft_96000
+		trigger = { monthly_income = 4000 }
+	}
+	text = {
+		localisation_key = esp_theft_84000
+		trigger = { monthly_income = 3500 }
+	}
+	text = {
+		localisation_key = esp_theft_72000
+		trigger = { monthly_income = 3000 }
+	}
+	text = {
+		localisation_key = esp_theft_62400
+		trigger = { monthly_income = 2600 }
+	}
+	text = {
+		localisation_key = esp_theft_55200
+		trigger = { monthly_income = 2300 }
+	}
+	text = {
+		localisation_key = esp_theft_48000
+		trigger = { monthly_income = 2000 }
+	}
+	text = {
+		localisation_key = esp_theft_43200
+		trigger = { monthly_income = 1800 }
+	}
+	text = {
+		localisation_key = esp_theft_38400
+		trigger = { monthly_income = 1600 }
+	}
+	text = {
+		localisation_key = esp_theft_33600
+		trigger = { monthly_income = 1400 }
+	}
+	text = {
+		localisation_key = esp_theft_28800
+		trigger = { monthly_income = 1200 }
+	}
+	text = {
+		localisation_key = esp_theft_24000
+		trigger = { monthly_income = 1000 }
+	}
+	text = {
+		localisation_key = esp_theft_21600
+		trigger = { monthly_income = 900 }
+	}
+	text = {
+		localisation_key = esp_theft_19200
+		trigger = { monthly_income = 800 }
+	}
+	text = {
+		localisation_key = esp_theft_16800
+		trigger = { monthly_income = 700 }
+	}
+	text = {
+		localisation_key = esp_theft_14400
+		trigger = { monthly_income = 600 }
+	}
+	text = {
+		localisation_key = esp_theft_12000
+		trigger = { monthly_income = 500 }
+	}
+	text = {
+		localisation_key = esp_theft_10800
+		trigger = { monthly_income = 450 }
+	}
+	text = {
+		localisation_key = esp_theft_9600
+		trigger = { monthly_income = 400 }
+	}
+	text = {
+		localisation_key = esp_theft_8400
+		trigger = { monthly_income = 350 }
+	}
+	text = {
+		localisation_key = esp_theft_7200
+		trigger = { monthly_income = 300 }
+	}
+	text = {
+		localisation_key = esp_theft_6000
+		trigger = { monthly_income = 250 }
+	}
+	text = {
+		localisation_key = esp_theft_4800
+		trigger = { monthly_income = 200 }
+	}
+	text = {
+		localisation_key = esp_theft_4200
+		trigger = { monthly_income = 175 }
+	}
+	text = {
+		localisation_key = esp_theft_3600
+		trigger = { monthly_income = 150 }
+	}
+	text = {
+		localisation_key = esp_theft_3000
+		trigger = { monthly_income = 125 }
+	}
+	text = {
+		localisation_key = esp_theft_2400
+		trigger = { monthly_income = 100 }
+	}
+	text = {
+		localisation_key = esp_theft_1920
+		trigger = { monthly_income = 80 }
+	}
+	text = {
+		localisation_key = esp_theft_1680
+		trigger = { monthly_income = 70 }
+	}
+	text = {
+		localisation_key = esp_theft_1440
+		trigger = { monthly_income = 60 }
+	}
+	text = {
+		localisation_key = esp_theft_1200
+		trigger = { monthly_income = 50 }
+	}
+	text = {
+		localisation_key = esp_theft_960
+		trigger = { monthly_income = 40 }
+	}
+	text = {
+		localisation_key = esp_theft_720
+		trigger = { monthly_income = 30 }
+	}
+	text = {
+		localisation_key = esp_theft_600
+		trigger = { monthly_income = 25 }
+	}
+	text = {
+		localisation_key = esp_theft_480
+		trigger = { monthly_income = 20 }
+	}
+	text = {
+		localisation_key = esp_theft_360
+		trigger = { monthly_income = 15 }
+	}
+	text = {
+		localisation_key = esp_theft_240
+		trigger = { monthly_income = 10 }
+	}
+	text = {
+		localisation_key = esp_theft_192
+		trigger = { monthly_income = 8 }
+	}
+	text = {
+		localisation_key = esp_theft_144
+		trigger = { monthly_income = 6 }
+	}
+	text = {
+		localisation_key = esp_theft_96
+		trigger = { monthly_income = 4 }
+	}
+	text = {
+		localisation_key = esp_theft_48
+		trigger = { monthly_income = 2 }
+	}
+	text = {
+		localisation_key = esp_theft_48
+		trigger = { always = yes }
+	}
+}
+
+defined_text = {
+	name = GetTreasuryGainAmount
+	random = no
+
+	text = {
+		localisation_key = esp_gain_240000
+		trigger = { monthly_income = 10000 }
+	}
+	text = {
+		localisation_key = esp_gain_216000
+		trigger = { monthly_income = 9000 }
+	}
+	text = {
+		localisation_key = esp_gain_192000
+		trigger = { monthly_income = 8000 }
+	}
+	text = {
+		localisation_key = esp_gain_180000
+		trigger = { monthly_income = 7500 }
+	}
+	text = {
+		localisation_key = esp_gain_168000
+		trigger = { monthly_income = 7000 }
+	}
+	text = {
+		localisation_key = esp_gain_156000
+		trigger = { monthly_income = 6500 }
+	}
+	text = {
+		localisation_key = esp_gain_144000
+		trigger = { monthly_income = 6000 }
+	}
+	text = {
+		localisation_key = esp_gain_132000
+		trigger = { monthly_income = 5500 }
+	}
+	text = {
+		localisation_key = esp_gain_120000
+		trigger = { monthly_income = 5000 }
+	}
+	text = {
+		localisation_key = esp_gain_108000
+		trigger = { monthly_income = 4500 }
+	}
+	text = {
+		localisation_key = esp_gain_96000
+		trigger = { monthly_income = 4000 }
+	}
+	text = {
+		localisation_key = esp_gain_84000
+		trigger = { monthly_income = 3500 }
+	}
+	text = {
+		localisation_key = esp_gain_72000
+		trigger = { monthly_income = 3000 }
+	}
+	text = {
+		localisation_key = esp_gain_62400
+		trigger = { monthly_income = 2600 }
+	}
+	text = {
+		localisation_key = esp_gain_55200
+		trigger = { monthly_income = 2300 }
+	}
+	text = {
+		localisation_key = esp_gain_48000
+		trigger = { monthly_income = 2000 }
+	}
+	text = {
+		localisation_key = esp_gain_43200
+		trigger = { monthly_income = 1800 }
+	}
+	text = {
+		localisation_key = esp_gain_38400
+		trigger = { monthly_income = 1600 }
+	}
+	text = {
+		localisation_key = esp_gain_33600
+		trigger = { monthly_income = 1400 }
+	}
+	text = {
+		localisation_key = esp_gain_28800
+		trigger = { monthly_income = 1200 }
+	}
+	text = {
+		localisation_key = esp_gain_24000
+		trigger = { monthly_income = 1000 }
+	}
+	text = {
+		localisation_key = esp_gain_21600
+		trigger = { monthly_income = 900 }
+	}
+	text = {
+		localisation_key = esp_gain_19200
+		trigger = { monthly_income = 800 }
+	}
+	text = {
+		localisation_key = esp_gain_16800
+		trigger = { monthly_income = 700 }
+	}
+	text = {
+		localisation_key = esp_gain_14400
+		trigger = { monthly_income = 600 }
+	}
+	text = {
+		localisation_key = esp_gain_12000
+		trigger = { monthly_income = 500 }
+	}
+	text = {
+		localisation_key = esp_gain_10800
+		trigger = { monthly_income = 450 }
+	}
+	text = {
+		localisation_key = esp_gain_9600
+		trigger = { monthly_income = 400 }
+	}
+	text = {
+		localisation_key = esp_gain_8400
+		trigger = { monthly_income = 350 }
+	}
+	text = {
+		localisation_key = esp_gain_7200
+		trigger = { monthly_income = 300 }
+	}
+	text = {
+		localisation_key = esp_gain_6000
+		trigger = { monthly_income = 250 }
+	}
+	text = {
+		localisation_key = esp_gain_4800
+		trigger = { monthly_income = 200 }
+	}
+	text = {
+		localisation_key = esp_gain_4200
+		trigger = { monthly_income = 175 }
+	}
+	text = {
+		localisation_key = esp_gain_3600
+		trigger = { monthly_income = 150 }
+	}
+	text = {
+		localisation_key = esp_gain_3000
+		trigger = { monthly_income = 125 }
+	}
+	text = {
+		localisation_key = esp_gain_2400
+		trigger = { monthly_income = 100 }
+	}
+	text = {
+		localisation_key = esp_gain_1920
+		trigger = { monthly_income = 80 }
+	}
+	text = {
+		localisation_key = esp_gain_1680
+		trigger = { monthly_income = 70 }
+	}
+	text = {
+		localisation_key = esp_gain_1440
+		trigger = { monthly_income = 60 }
+	}
+	text = {
+		localisation_key = esp_gain_1200
+		trigger = { monthly_income = 50 }
+	}
+	text = {
+		localisation_key = esp_gain_960
+		trigger = { monthly_income = 40 }
+	}
+	text = {
+		localisation_key = esp_gain_720
+		trigger = { monthly_income = 30 }
+	}
+	text = {
+		localisation_key = esp_gain_600
+		trigger = { monthly_income = 25 }
+	}
+	text = {
+		localisation_key = esp_gain_480
+		trigger = { monthly_income = 20 }
+	}
+	text = {
+		localisation_key = esp_gain_360
+		trigger = { monthly_income = 15 }
+	}
+	text = {
+		localisation_key = esp_gain_240
+		trigger = { monthly_income = 10 }
+	}
+	text = {
+		localisation_key = esp_gain_192
+		trigger = { monthly_income = 8 }
+	}
+	text = {
+		localisation_key = esp_gain_144
+		trigger = { monthly_income = 6 }
+	}
+	text = {
+		localisation_key = esp_gain_96
+		trigger = { monthly_income = 4 }
+	}
+	text = {
+		localisation_key = esp_gain_48
+		trigger = { monthly_income = 2 }
+	}
+	text = {
+		localisation_key = esp_gain_48
+		trigger = { always = yes }
+	}
+}

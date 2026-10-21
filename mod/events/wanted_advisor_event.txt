@@ -1,0 +1,97 @@
+namespace = wanted_advisor_event
+
+country_event = {
+	id = wanted_advisor_event.1
+	title = "wanted_advisor_event.EVTNAME1"
+	desc = "wanted_advisor_event.EVTDESC1"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # skill level 1
+		name = "wanted_advisor_event1.EVTOPT1"
+
+		country_event = { id = wanted_advisor_event.2 }
+		custom_tooltip = wird_50_kosten_tooltip
+		set_country_flag = new_advisor_skill_stufe_1
+	}
+
+	option = { # skill level 2
+		name = "wanted_advisor_event1.EVTOPT2"
+
+		country_event = { id = wanted_advisor_event.2 }
+		custom_tooltip = wird_100_kosten_tooltip
+		set_country_flag = new_advisor_skill_stufe_2
+	}
+
+	option = { # skill level 3
+		name = "wanted_advisor_event1.EVTOPT3"
+
+		country_event = { id = wanted_advisor_event.2 }
+		custom_tooltip = wird_150_kosten_tooltip
+		set_country_flag = new_advisor_skill_stufe_3
+	}
+
+	option = {	# Cancel
+		name = "wanted_advisor_event1.EVTOPT4"
+
+		clear_wanted_advisor_flags_and_modifiers = yes
+	}
+}
+
+country_event = {
+	id = wanted_advisor_event.2
+	title = "wanted_advisor_event.EVTNAME2"
+	desc = "wanted_advisor_event.EVTDESC2"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # skill adm
+		name = "wanted_advisor_event2.EVTOPT1"
+
+		set_country_flag = new_advisor_skill_adm
+		country_event = { id = wanted_advisor_event_adm.1 }
+	}
+
+	option = { # skill dip
+		name = "wanted_advisor_event2.EVTOPT2"
+
+		set_country_flag = new_advisor_skill_dip
+		country_event = { id = wanted_advisor_event_dip.1 }
+	}
+
+	option = { # skill mil
+		name = "wanted_advisor_event2.EVTOPT3"
+
+		set_country_flag = new_advisor_skill_mil
+		country_event = { id = wanted_advisor_event_mil.1 }
+	}
+}
+
+country_event = {
+	id = wanted_advisor_event.3
+	title = "wanted_advisor_event.EVTNAME3"
+	desc = "wanted_advisor_event.EVTDESC3"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # male
+		name = "wanted_advisor_event3.EVTOPT1"
+
+		ai_chance = { factor = 100 }
+
+		set_country_flag = new_advisor_male
+		country_event = { id = wanted_advisor_event.1 }
+	}
+
+	option = { # female
+		name = "wanted_advisor_event3.EVTOPT2"
+
+		ai_chance = { factor = 0 }
+
+		set_country_flag = new_advisor_female
+		country_event = { id = wanted_advisor_event.1 }
+	}
+}

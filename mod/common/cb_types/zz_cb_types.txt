@@ -1,0 +1,63 @@
+# INSTRUCTIONS:
+# -------------
+# is_triggered_only - Triggered from within the code or by event effects. DO NOT REMOVE THE STOCK ONES.
+# months - The number of months this CB will be valid. Only works for triggered CBs.
+# prerequisites - A condition that automatically activates a CB. Does not work for triggered CBs.
+# no_opinion_hit - If yes you get no negative opinion from this
+#
+# ROOT = attacker
+# FROM = target
+#
+# NOTE: The order in which the peace options are listed is the order in which the AI will normally prioritize them in peace treaties
+#
+# TRIGGERED - Triggered from within the code or by event effects
+# --------------------------------------------------------------
+
+
+cb_plc_1_partition = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 24
+
+	war_goal = plc_1_partition_wargoal
+	
+	attacker_disabled_po = {
+		po_release_vassals
+		po_release_annexed
+		po_return_cores
+		po_become_tributary_state   
+	}
+}
+
+cb_plc_2_partition = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 24
+
+	war_goal = plc_2_partition_wargoal
+	
+	attacker_disabled_po = {
+		po_release_vassals
+		po_release_annexed
+		po_return_cores
+		po_become_tributary_state   
+	}
+}
+
+cb_plc_3_partition = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 24
+
+	war_goal = plc_3_partition_wargoal
+	
+	attacker_disabled_po = {
+		po_release_vassals
+		po_release_annexed
+		po_return_cores
+		po_become_tributary_state   
+	}
+}

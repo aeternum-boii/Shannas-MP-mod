@@ -1,0 +1,31 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_disaster_ae_decline_of_the_mughals"
+		texturefile = "gfx//interface//disasters//ae_decline_of_the_mughals.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_disaster_ae_fall_of_cromwell"
+		texturefile = "gfx//interface//disasters//ae_fall_of_cromwell.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_disaster_ae_partition_of_poland"
+		texturefile = "gfx//interface//disasters//ae_partition_of_poland.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_ae_polish_deluge"
+		texturefile = "gfx//interface//disasters//ae_polish_deluge.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+}
+	

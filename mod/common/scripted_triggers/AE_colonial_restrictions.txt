@@ -1,0 +1,343 @@
+ae_potential_colony_GBR = {
+	if = {
+		limit = { FROM = { primary_culture = english } }
+		OR = {	
+			colonial_region = colonial_columbia
+			colonial_region = colonial_canada
+			colonial_region = colonial_hudson_bay
+			colonial_region = colonial_new_amsterdam
+			colonial_region = colonial_georgia
+			colonial_region = colonial_louisiana
+			AND = {
+				colonial_region = colonial_the_carribean
+				NOT = { 
+					area = cuba_area
+					area = east_cuba_area
+					area = hispaniola_area
+					area = dominica_area
+				}
+			}
+			area = nicaragua_area
+			area = guatemala_lowlands_area
+			area = guyana_area
+			area = suriname_area
+			province_id = 2931
+			colonial_region = colonial_australia
+			colonial_region = colonial_nzl
+			colonial_region = colonial_south_africa
+			colonial_region = colonial_india
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					is_year = 1763
+					dip_tech = 27
+				}
+			}
+			NOT = {				
+				area = florida_area
+				area = north_florida_area
+				area = west_florida_area
+				area = gulf_of_guinea_area
+			}
+		}
+		if = {
+			limit = {
+				NOT = { 
+					is_year = 1664
+					dip_tech = 20
+				}
+			}
+			NOT = { province_id = 965 } #New York
+		}
+		if = {
+			limit = {
+				NOT = { 
+					is_year = 1638
+					dip_tech = 18
+				}
+			}
+			NOT = { province_id = 957 } #Fort Christina
+		}
+		if = {
+			limit = {
+				NOT = { 
+					is_year = 1700
+					dip_tech = 23
+				}
+			}
+			NOT = { province_id = 962 } #East New Jersey
+		}
+	}
+	if = {
+		limit = { FROM = { primary_culture = scottish } }
+		OR = {
+			area = panama_area
+			province_id = 962 #East New Jersey
+		}
+	}
+	if = {
+		limit = { 
+			FROM = {
+				OR = {
+					primary_culture = welsh 
+					primary_culture = cornish 
+				}
+			}
+		}
+		area = colonial_la_plata
+	}
+	if = {
+		limit = { 
+			FROM = {
+				primary_culture = american 
+			}
+		}
+		OR = {
+			colonial_region = colonial_columbia
+			colonial_region = colonial_texas
+			colonial_region = colonial_new_amsterdam
+			colonial_region = colonial_georgia
+			colonial_region = colonial_louisiana
+		}
+	}
+}
+
+ae_potential_colony_SPA = {
+	OR = {
+		colonial_region = colonial_california
+		colonial_region = colonial_mexico
+		colonial_region = colonial_texas
+		AND = {
+			colonial_region = colonial_the_carribean
+			NOT = {
+				area = leeward_islands_area
+				area = windward_islands_area
+				area = lucayan_area
+			}
+		}
+		colonial_region = colonial_colombia
+		colonial_region = colonial_peru
+		colonial_region = colonial_la_plata
+		area = florida_area
+		area = north_florida_area
+		area = west_florida_area
+		area = gulf_of_guinea_area
+		colonial_region = colonial_philippines
+	}
+}
+
+ae_potential_colony_POR = {
+	OR = {
+		colonial_region = colonial_brazil
+		colonial_region = colonial_congo
+		colonial_region = colonial_mozam
+		trade_company_region = trade_company_west_africa
+		trade_company_region = trade_company_east_africa
+	}
+}
+
+ae_potential_colony_FRA = {
+	OR = {
+		AND = {
+			colonial_region = colonial_canada
+			NOT = { region = hudson_bay_region }
+		}
+		colonial_region = colonial_louisiana
+		AND = {
+			colonial_region = colonial_the_carribean
+			NOT = { 
+				area = cuba_area
+				area = east_cuba_area
+				area = dominica_area
+			}
+		}		
+		area = guyana_area
+		area = suriname_area
+		area = west_africa_coast_area
+		province_id = 2931
+	}
+}
+
+ae_potential_colony_NED = {
+	OR = {
+		colonial_region = colonial_brazil
+		area = new_york_area
+		province_id = 963
+		area = south_african_plateau_area
+		area = west_africa_coast_area
+		area = cape_of_good_hope_area
+		area = transvaal_area
+		area = limpopo_area
+		colonial_region = colonial_indonesia
+		colonial_region = colonial_australia
+		area = guyana_area
+		area = suriname_area
+		province_id = 2931
+	}
+}
+
+ae_potential_colony_RUS = {
+	OR = {
+		continent = asia
+		colonial_region = colonial_columbia
+		AND = {
+			colonial_region = colonial_california
+			has_port = yes 
+		}
+	}
+}
+
+ae_potential_colony_SWE = {
+	OR = {
+		area = leeward_islands_area
+		area = delaware_valley_area
+		area = maryland_area
+		area = west_africa_coast_area
+	}
+}
+
+ae_potential_colony_DAN = {
+	OR = {
+		area = leeward_islands_area
+		area = west_africa_coast_area
+		area = greenland_area
+		area = newfoundland_area
+		area = labrador_area
+	}
+}
+
+ae_potential_colony_KUR = {
+	OR = {
+		area = guyana_area
+		area = jolof_area
+	}
+}
+
+
+ae_potential_colony_MOR = {
+	continent = africa
+}
+
+
+ae_colonist_GBR = {
+	OR = {
+		culture_group = british
+		culture_group = gaelic
+		colonial_parent = { culture_group = british }
+		colonial_parent = { culture_group = gaelic }
+	}
+}
+
+ae_colonist_SPA = {
+	OR = {
+		primary_culture = castillian
+		primary_culture = mexican
+		primary_culture = platinean
+		primary_culture = leonese
+		primary_culture = aragonese
+		primary_culture = catalan
+		primary_culture = galician
+		primary_culture = andalucian
+		primary_culture = basque
+		colonial_parent = { primary_culture = castillian }
+		colonial_parent = { primary_culture = mexican }
+		colonial_parent = { primary_culture = platinean }
+		colonial_parent = { primary_culture = leonese }
+		colonial_parent = { primary_culture = aragonese }
+		colonial_parent = { primary_culture = catalan }
+		colonial_parent = { primary_culture = galician }
+		colonial_parent = { primary_culture = andalucian }
+		colonial_parent = { primary_culture = basque }
+	}
+}
+
+ae_colonist_POR = {
+	OR = {
+		primary_culture = portugese
+		primary_culture = brazilian
+		colonial_parent = { primary_culture = portugese }
+		colonial_parent = { primary_culture = brazilian }
+	}
+}
+
+ae_colonist_FRA = {
+	OR = {
+		culture_group = french
+		colonial_parent = { culture_group = french }
+	}
+	if = {
+		limit = { tag = BRI }
+		ai = no
+	}
+}
+
+ae_colonist_NED = {
+	OR = {
+		primary_culture = dutch
+		primary_culture = flemish
+		primary_culture = frisian
+		colonial_parent = { primary_culture = dutch }
+		colonial_parent = { primary_culture = flemish }
+		colonial_parent = { primary_culture = frisian }
+	}
+}
+
+ae_colonist_RUS = {
+	OR = {
+		culture_group = east_slavic
+		colonial_parent = { culture_group = east_slavic }
+	}
+}
+
+ae_colonist_SWE = {
+	OR = {
+		primary_culture = swedish
+		colonial_parent = { primary_culture = swedish }
+	}
+}
+
+ae_colonist_DAN = {
+	OR = {
+		primary_culture = danish
+		primary_culture = norwegian
+		primary_culture = icelandic
+		primary_culture = norse
+		colonial_parent = { primary_culture = danish }
+		colonial_parent = { primary_culture = norwegian }
+		colonial_parent = { primary_culture = icelandic }
+		colonial_parent = { primary_culture = norse }
+	}
+}
+
+ae_colonist_KUR = {
+	capital_scope = { region = baltic_region }
+}
+
+ae_colonist_MOR = {
+	OR = {
+		culture_group = maghrebi
+		culture_group = tuareg
+	}
+}
+
+ae_is_colonist = {
+	OR = {
+		ae_colonist_GBR = yes
+		ae_colonist_SPA = yes
+		ae_colonist_POR = yes
+		ae_colonist_FRA = yes
+		ae_colonist_NED = yes
+		ae_colonist_RUS = yes
+		ae_colonist_SWE = yes
+		ae_colonist_DAN = yes
+		ae_colonist_KUR = yes
+		ae_colonist_MOR = yes
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+		}
+	}
+}

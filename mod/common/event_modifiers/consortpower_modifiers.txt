@@ -1,0 +1,61 @@
+consort_power_mod_adm_plus_1 = {
+	country_admin_power = 1
+}
+consort_power_mod_adm_plus_2 = {
+	country_admin_power = 2
+}
+consort_power_mod_adm_plus_3 = {
+	country_admin_power = 3
+}
+consort_power_mod_adm_plus_4 = {
+	country_admin_power = 4
+}
+consort_power_mod_adm_plus_5 = {
+	country_admin_power = 5
+}
+consort_power_mod_adm_plus_6 = {
+	country_admin_power = 6
+}
+
+consort_power_mod_dip_plus_1 = {
+	country_diplomatic_power = 1
+}
+consort_power_mod_dip_plus_2 = {
+	country_diplomatic_power = 2
+}
+consort_power_mod_dip_plus_3 = {
+	country_diplomatic_power = 3
+}
+consort_power_mod_dip_plus_4 = {
+	country_diplomatic_power = 4
+}
+consort_power_mod_dip_plus_5 = {
+	country_diplomatic_power = 5
+}
+consort_power_mod_dip_plus_6 = {
+	country_diplomatic_power = 6
+}
+
+consort_power_mod_mil_plus_1 = {
+	country_military_power = 1
+}
+consort_power_mod_mil_plus_2 = {
+	country_military_power = 2
+}
+consort_power_mod_mil_plus_3 = {
+	country_military_power = 3
+}
+consort_power_mod_mil_plus_4 = {
+	country_military_power = 4
+}
+consort_power_mod_mil_plus_5 = {
+	country_military_power = 5
+}
+consort_power_mod_mil_plus_6 = {
+	country_military_power = 6
+}
+countdown_next_heir_spionage = {
+}
+
+just_got_pretender_rebels = {
+}

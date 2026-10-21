@@ -1,0 +1,5 @@
+government = republic
+technology_group = western
+primary_culture = caribeno
+religion = catholic
+capital = 484

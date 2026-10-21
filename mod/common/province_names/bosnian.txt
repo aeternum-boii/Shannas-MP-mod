@@ -1,0 +1,194 @@
+#similar: serbian, croatian, bosnian, slovene
+60 = {"Gornja Lužica" "Gornja Lužica"}
+#SAME 73
+76 = {"Solnograd" "Solnograd"}
+101 = {"Ðenova" "Ðenova"}
+102 = {"Nica" "Nica"}
+103 = {"Torino" "Torino"}
+104 = {"Milano" "Milano"}
+105 = {"Parma" "Parma"}
+106 = {"Modena" "Modena"}
+107 = {"Breša" "Breša"} #?
+108 = {"Verona" "Verona"}
+109 = {"Mantova" "Mantova"}
+110 = {"Trident" "Trident"}
+111 = {"Furlanija" "Furlanija"}
+112 = {"Mleci" "Mleci"} #Venecija
+113 = {"Ferrara" "Ferrara"}
+114 = {"Romanja" "Romanja"} #?, Ravena?
+115 = {"Piza" "Piza"}
+116 = {"Firenca" "Firenca"}
+117 = {"Sijena" "Sijena"} #?
+118 = {"Rim" "Rim"}
+119 = {"Jakin" "Jakin"} #?
+120 = {"Abruco" "Abruco"} #?
+121 = {"Napulj" "Napulj"}
+122 = {"Salento" "Salento"}
+123 = {"Kalabrija" "Kalabrija"}
+124 = {"Mesina" "Mesina"}
+125 = {"Palermo" "Palermo"}
+#SAME 126
+127 = {"Sasari" "Sasari"} #?
+128 = {"Dolnja Koruška" "Dolnja Koruška"} #Celovac
+#SAME 129
+#SAME 130
+#SAME 131
+132 = {"Štajerska" "Štajerska"}
+133 = {"Gornja Austrija" "Gornja Austrija"} #Linc?
+134 = {"Bec" "Bec"}
+135 = {"Šopron" "Šopron"}
+#SAME 136
+#SAME 137
+138 = {"Crna Gora" "Crna Gora"}
+#SAME 139
+140 = {"Bosna" "Bosna"}
+#SAME 141
+142 = {"Krf" "Krf"}
+143 = {"Valona" "Valona"}
+144 = {"Janjina" "Janjina"} #Epir
+145 = {"Moreja" "Moreja"}
+146 = {"Atina" "Atina"}
+147 = {"Tesalija" "Tesalija"}
+148 = {"Solun" "Solun"}
+149 = {"Drinopolje" "Drinopolje"}
+150 = {"Nikopolj" "Nikopolj"}
+151 = {"Carigrad" "Carigrad"}
+#SAME 152
+153 = {"Pešta" "Pešta"}
+154 = {"Nove Zamki" "Nove Zamki"} #?
+155 = {"Bekeš" "Bekeš"} #?
+156 = {"Temišvar" "Temišvar"}
+157 = {"Krišana" "Krišana"}
+158 = {"Moriš" "Moriš"}
+#SAME 159
+160 = {"Mala Vlaška" "Mala Vlaška"} #Oltenija
+161 = {"Trgovište" "Trgovište"}
+162 = {"Košice" "Košice"}
+163 = {"Kreta" "Kreta"}
+164 = {"Kikladi" "Kikladi"}
+261 = {"Galic" "Galic"} #?
+262 = {"Krakov" "Krakov"}
+263 = {"Racibož" "Racibož"} #?
+264 = {"Vroclav" "Vroclav"} #?
+#SAME 265
+266 = {"Prag" "Prag"}
+267 = {"Plzenj" "Plzenj"}
+268 = {"Sucava" "Sucava"} #?
+320 = {"Rodos" "Rodos"}
+321 = {"Kipar" "Kipar"}
+1247 = {"Korzika" "Korzika"}
+#SAME 1318
+1756 = {"Besarabija" "Besarabija"}
+1763 = {"Donja Lužica" "Donja Lužica"} #?
+#SAME 1764
+1765 = {"Sofija" "Sofija"}
+#SAME 1766
+#SAME 1767
+1768 = {"Lijenc" "Lijenc"}
+#SAME 1769
+1770 = {"Donja Austrija" "Donja Austrija"} #Krems na Dunavu
+1771 = {"Rudna gora" "Rudna gora"} #Rudogorje
+1772 = {"Požun" "Požun"}
+1773 = {"Ahaja" "Ahaja"}
+1774 = {"Treviž" "Treviž"} #?
+#SAME 1826
+#SAME 1827
+#SAME 1828 or Dolnji Kraji
+1853 = {"Kostur" "Kostur"} #?
+1831 = {"Hercegovina" "Hercegovina"}
+1862 = {"Kremona" "Kremona"} #?
+1863 = {"Gradec" "Gradec"}
+1864 = {"Šomod" "Šomod"}
+1875 = {"Kuneo" "Kuneo"} #?
+1933 = {"Veliki Bar" "Veliki Bar"} #?
+1934 = {"Bazilikata" "Bazilikata"} #?
+1951 = {"Erdeljski Biograd" "Erdeljski Biograd"} #?
+1952 = {"Maramureš" "Maramureš"} #?
+1953 = {"Debrecin" "Debrecin"} # Sabolc
+1954 = {"Vojvodina" "Vojvodina"}
+2405 = {"Bender" "Bender"} #?, Benderi?, Tigina?
+#SAME 2746
+#SAME 2750
+2960 = {"Novi Sonc" "Novi Sonc"}
+2966 = {"Glogov" "Glogov"} #?
+2967 = {"Karlove Vari" "Karlove Vari"} #?, Heb
+2968 = {"Budjejovice" "Budjejovice"} #?
+2970 = {"Kraljicin Gradec" "Kraljicin Gradec"} #?
+2976 = {"Peruða" "Peruða"} #Umbrija
+2977 = {"Urbino" "Urbino"}
+2978 = {"Areco" "Areco"} #?
+2979 = {"Novara" "Novara"}
+2980 = {"Luka" "Luka"} #?
+2982 = {"Sirakuza" "Sirakuza"}
+2983 = {"Salerno" "Salerno"}
+2984 = {"Kozenca" "Kozenca"} #?
+2985 = {"Foða" "Foða"} #?
+2986 = {"Kaljari" "Kaljari"}
+2992 = {"Albenga" "Albenga"}
+2998 = {"Buzeu" "Buzeu"} #?
+#SAME 3000
+3001 = {"Skoplje" "Skoplje"}
+#SAME 3002
+3003 = {"Eubeja" "Eubeja"}
+4125 = {"Solnok" "Solnok"} #?
+4126 = {"Segedin" "Segedin"}
+#SAME 4127
+4128 = {"Transilvanija" "Transilvanija"} # Sedmogradska, Erdelj
+#SAME 4173 or Srijem
+4174 = {"Drac" "Drac"}
+4175 = {"Skadar" "Skadar"}
+#SAME 4176
+4236 = {"Trencin" "Trencin"}
+4237 = {"Olomouc" "Olomouc"}
+4238 = {"Legnjica" "Legnjica"}
+#SAME 4239
+4240 = {"Stolni Biograd" "Stolni Biograd"}
+
+4529 = {"Jaši" "Jaši"} #?
+4530 = {"Barlad" "Barlad"} #?
+4531 = {"Ðurðevo" "Ðurðevo"} #?, Ðurðu?
+#SAME 4532
+
+4698 = {"Kefalonija" "Kefalonija"}
+4699 = {"Arta" "Arta"}
+4700 = {"Lezbos" "Lezbos"}
+4701 = {"Korint" "Korint"}
+4702 = {"Ser" "Ser"} # Seres
+4703 = {"Custendil" "Custendil"} #Velbužd
+4704 = {"Trnovo" "Trnovo"}
+4705 = {"Komotini" "Komotini"}
+4706 = {"Tulca" "Tulca"} #?
+4710 = {"Brežnice" "Brežnice"} #?, Bregenc?
+4723 = {"Opole" "Opole"}
+#SAME 4724
+4725 = {"Jindrihuv Hradec" "Jindrihuv Hradec"} #?
+4726 = {"Ostrava" "Ostrava"}
+4727 = {"Saluco" "Saluco"} #?
+4728 = {"Pavija" "Pavija"} #?
+4729 = {"Padova" "Padova"}
+4730 = {"Bolonja" "Bolonja"} #?
+4731 = {"Spoleto" "Spoleto"}
+4732 = {"Teracina" "Teracina"} #?
+4733 = {"Molize" "Molize"}
+4734 = {"Avelino" "Avelino"} #?
+4735 = {"Arboreja" "Arboreja"} #?
+4736 = {"Trapani" "Trapani"} #Trani?
+4737 = {"Agriðento" "Agriðento"} #?, Agriðent?
+4738 = {"Trst" "Trst"}
+4739 = {"Bergamo" "Bergamo"}
+4740 = {"Komo" "Komo"}
+4750 = {"Kruj" "Kruj"} #?
+4751 = {"Celje" "Celje"}
+4752 = {"Rijeka" "Rijeka"}
+#SAME 4753
+#SAME 4754
+#SAME 4755 or Višegrad
+4756 = {"Bjelovar" "Bjelovar"}
+#SAME 4757 or Valjevo
+4758 = {"Meran" "Meran"} #?
+4759 = {"Gornja Koruška" "Gornja Koruška"} #Beljak
+4760 = {"Braunau na Innu" "Braunau na Innu"}
+4761 = {"Štajr" "Štajr"} #?
+4762 = {"Becka šuma" "Becka šuma"} # Sankt Pelten?
+4779 = {"Galipolje" "Galipolje"}
+#SAME 4780

@@ -1,0 +1,54 @@
+# Edited for reduction 
+
+market_of_riga = {
+	potential = {
+		owner = { has_country_flag = tall_riga_mission_flag }
+	}
+	trigger = {
+		is_capital = yes
+		has_trade_building_trigger = yes
+		custom_trigger_tooltip = {
+			tooltip = not_more_than_6_provinces_outside_europe
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						continent = europe
+						value = 6
+					}
+				}
+			}
+		}
+	}
+	trade_goods_size = 3
+	province_trade_power_value = 5
+	naval_forcelimit = 10 # Quartered
+	local_sailors = 2500 # Halved
+	burghers_loyalty_modifier = 0.1
+}
+
+fortification_of_riga = {
+	potential = {
+		owner = { has_country_flag = tall_riga_mission_flag }
+	}
+	trigger = {
+		is_capital = yes
+		has_manpower_building_trigger = yes
+		province_has_current_tech_fort_trigger = yes
+		custom_trigger_tooltip = {
+			tooltip = not_more_than_6_provinces_outside_europe
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						continent = europe
+						value = 6
+					}
+				}
+			}
+		}
+	}
+	local_manpower = 3 # Halved
+	land_forcelimit = 10 # Quartered
+	local_fort_maintenance_modifier = -0.9
+	local_defensiveness = 0.5
+	nobles_loyalty_modifier = 0.1
+}

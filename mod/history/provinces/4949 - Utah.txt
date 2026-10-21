@@ -1,0 +1,32 @@
+#2083 - Utah
+
+culture = navajo
+religion = totemism
+capital = "Utah"
+native_size = 90
+trade_goods = unknown
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_ferocity = 4.5
+native_hostileness = 9 
+
+1540.1.1   = { discovered_by = SPA } # Francisco Vásquez de Coronado
+1851.1.1 = {	owner = USA
+		controller = USA
+		add_core = USA
+		culture = british_californian
+		religion = protestant
+		citysize = 400
+		trade_goods = grain
+		capital = "Cedar City"
+	    } # Mormon pioneers
+		1860.1.1 = { base_manpower = 2 }
+1880.1.1 = { base_tax = 2 }
+1900.1.1 = { base_manpower = 3 }
+1870.1.1   = { citysize = 800 }
+1900.1.1   = { is_city = yes }
+
+
+

@@ -1,0 +1,945 @@
+namespace = ae_decline_of_the_mughals
+normal_or_historical_nations = yes
+
+## DECLINE OF THE MUGHALS ##
+
+# Start disaster
+country_event = {
+	id = ae_decline_of_the_mughals.100
+	title = ae_decline_of_the_mughals.100.t
+	desc = ae_decline_of_the_mughals.100.d
+	picture = muslimgfx_BAD_WITH_MONARCH_eventPicture 
+	
+	is_triggered_only = yes
+	
+	
+	option = { 
+		name = ae_decline_of_the_mughals.100.a  
+		add_stability = -2
+		set_country_flag = ae_decline_of_the_mughals
+	}
+}
+
+
+# End disaster
+country_event = {
+	id = ae_decline_of_the_mughals.101
+	title = ae_decline_of_the_mughals.101.t
+	desc = ae_decline_of_the_mughals.101.d
+	picture = muslimgfx_GOOD_WITH_MONARCH_eventPicture 
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = ae_decline_of_the_mughals.101.a  
+		add_stability = 2
+	}
+}
+
+# Rajput rebellion
+country_event = {
+	id = ae_decline_of_the_mughals.102
+	title = ae_decline_of_the_mughals.102.t
+	desc = ae_decline_of_the_mughals.102.d
+	picture = 3_Rajput_Estate__eventPicture 
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	
+	trigger = { 
+		any_owned_province = { culture = rajput }
+		RJP = {	is_at_war = no }
+	}
+	
+	
+	option = { 
+		name = ae_decline_of_the_mughals.102.a  
+		add_stability = -1
+		every_province = {
+			limit = { culture = rajput }
+			add_core = RJP
+		}
+		every_owned_province = {
+			limit = { culture = rajput }
+			area = { cede_province = RJP }
+		}
+		every_country = {
+			limit = { primary_culture = rajput }
+			RJP = { inherit = PREV }
+		}
+		RJP = {
+			if = {
+				limit = { 
+					NOT = { army_size = ROOT }
+				}
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.3
+						artillery = 0.1
+					}
+				}
+			}
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_annex
+			}
+		}
+	}
+}
+
+
+# Maratha rebellion
+country_event = {
+	id = ae_decline_of_the_mughals.103
+	title = ae_decline_of_the_mughals.103.t
+	desc = ae_decline_of_the_mughals.103.d
+	picture = indiangfx_LAND_MILITARY_eventPicture 
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	
+	trigger = { 
+		any_owned_province = { culture = marathi }
+		MAR = { is_at_war = no }
+	}
+	
+	# mean_time_to_happen = {
+		# months = 1
+	# }	
+	
+	option = { 
+		name = ae_decline_of_the_mughals.103.a  
+		add_stability = -1
+		set_global_flag = ae_maratha_rebellion
+		set_ruler_flag = ae_maratha_rebellion_ruler
+		every_province = {
+			limit = { culture = marathi }
+			add_core = MAR
+		}
+		every_owned_province = {
+			limit = { culture = marathi }
+			area = { cede_province = MAR }
+		}
+		every_country = {
+			limit = { primary_culture = marathi }
+			MAR = { inherit = PREV }
+		}
+		MAR = {
+			if = {
+				limit = { 
+					NOT = { army_size = ROOT }
+				}
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.3
+						artillery = 0.1
+					}
+				}
+			}
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_annex
+			}
+		}
+	}
+}
+
+# Second Maratha rebellion
+country_event = {
+	id = ae_decline_of_the_mughals.1031
+	title = ae_decline_of_the_mughals.1031.t
+	desc = ae_decline_of_the_mughals.1031.d
+	picture = indiangfx_SIEGE_eventPicture 
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	
+	trigger = { 
+		NOT = { stability = 0 }
+		has_global_flag = ae_maratha_rebellion
+		has_ruler_flag = ae_maratha_rebellion_ruler
+		MAR = {
+			exists = yes
+			is_at_war = no
+		}
+		
+	}
+	
+	# mean_time_to_happen = {
+		# months = 1
+	# }	
+	
+	option = { 
+		name = ae_decline_of_the_mughals.103.a  
+		add_stability = -1
+		set_global_flag = ae_maratha_rebellion
+		capital_scope = {
+			area = { 
+				limit = { owned_by = ROOT }
+				add_claim = MAR
+			}
+		}
+		MAR = {
+			if = {
+				limit = { 
+					NOT = { army_size = ROOT }
+				}
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.3
+						artillery = 0.1
+					}
+				}
+			}
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_annex
+			}
+		}
+	}
+}
+
+# Afsharid invasion
+country_event = {
+	id = ae_decline_of_the_mughals.104
+	title = ae_decline_of_the_mughals.104.t
+	desc = ae_decline_of_the_mughals.104.d
+	picture = muslimgfx_BATTLE_eventPicture 
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	
+	immediate = {
+		random_neighbor_country = {
+			limit = {
+				is_at_war = no
+				OR = {
+					primary_culture = persian
+					primary_culture = luri
+					primary_culture = azerbaijani
+					primary_culture = khorasani
+					primary_culture = baluchi
+					primary_culture = afghani
+					primary_culture = kurdish
+					primary_culture = mazandarani
+					primary_culture = turco_iranian
+					primary_culture = uzbehk
+				} 
+				army_size = ROOT
+				NOT = {
+					any_country = {
+						NOT = { tag = PREV }
+						is_neighbor_of = ROOT
+						OR = {
+							primary_culture = persian
+							primary_culture = luri
+							primary_culture = azerbaijani
+							primary_culture = khorasani
+							primary_culture = baluchi
+							primary_culture = afghani
+							primary_culture = kurdish
+							primary_culture = mazandarani
+							primary_culture = turco_iranian
+							primary_culture = uzbehk
+						} 
+						army_size = PREV
+					}
+				}
+			}
+			save_event_target_as = ae_mughals_persia
+		}
+	}
+	
+	trigger = { 
+		any_neighbor_country = {
+			is_at_war = no
+			OR = {
+				primary_culture = persian
+				primary_culture = luri
+				primary_culture = azerbaijani
+				primary_culture = khorasani
+				primary_culture = baluchi
+				primary_culture = afghani
+				primary_culture = kurdish
+				primary_culture = mazandarani
+				primary_culture = turco_iranian
+				primary_culture = uzbehk
+			} 
+			army_size = ROOT
+			NOT = {
+				any_country = {
+					NOT = { tag = PREV }
+					is_neighbor_of = ROOT
+					OR = {
+						primary_culture = persian
+						primary_culture = luri
+						primary_culture = azerbaijani
+						primary_culture = khorasani
+						primary_culture = baluchi
+						primary_culture = afghani
+						primary_culture = kurdish
+						primary_culture = mazandarani
+						primary_culture = turco_iranian
+						primary_culture = uzbehk
+					} 
+					army_size = PREV
+				}
+			}
+		}
+	}
+	
+	# mean_time_to_happen = {
+		# months = 1
+	# }	
+	
+	option = { 
+		name = ae_decline_of_the_mughals.104.a  
+		add_stability = -1
+		event_target:ae_mughals_persia = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_annex
+			}
+		}
+	}
+}
+
+
+# Sikh rebellion
+country_event = {
+	id = ae_decline_of_the_mughals.105
+	title = ae_decline_of_the_mughals.105.t
+	desc = ae_decline_of_the_mughals.105.d
+	picture = muslimgfx_CIVIL_WAR_eventPicture 
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	
+	trigger = { 
+		any_owned_province = { 
+			religion = sikhism 
+		}
+		PUN = { is_at_war = no }
+	}
+	
+	# mean_time_to_happen = {
+		# months = 1
+	# }	
+	
+	option = { 
+		name = ae_decline_of_the_mughals.105.a  
+		add_stability = -1
+		set_global_flag = ae_sikh_rebellion
+		every_province = {
+			limit = { 
+				OR = {
+					religion = sikhism
+					culture = panjabi 
+				}
+			}
+			add_core = PUN
+		}
+		every_owned_province = {
+			limit = { culture = panjabi }
+			area = { cede_province = PUN }
+		}
+		every_country = {
+			limit = { primary_culture = panjabi }
+			PUN = { inherit = PREV }
+		}
+		PUN = {
+			if = {
+				limit = { 
+					NOT = { army_size = ROOT }
+				}
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.5
+						cavalry = 0.3
+						artillery = 0.1
+					}
+				}
+			}
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_annex
+			}
+		}
+	}
+}
+
+## FALL OF ENGLISH COMMONWEALTH ##
+namespace = ae_fall_of_cromwell
+normal_or_historical_nations = yes
+# The Fall of the Republic imminent
+country_event = {
+	id = ae_fall_of_cromwell.100
+	title = ae_fall_of_cromwell.100.t
+	desc = ae_fall_of_cromwell.100.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {		
+		name = ae_fall_of_cromwell.100.a
+		ai_chance = { factor = 100 }
+		add_stability = -2
+		custom_tooltip = ae_fall_of_cromwell_tt
+	}
+}
+
+# Stuart Restoration
+country_event = {
+	id = ae_fall_of_cromwell.101
+	title = ae_fall_of_cromwell.101.t
+	desc = ae_fall_of_cromwell.101.d
+	picture = REFORM_eventPicture
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {		
+		name = ae_fall_of_cromwell.101.a
+		ai_chance = { factor = 100 }
+		set_country_flag = ae_fall_of_cromwell_passed
+		change_government = monarchy
+		if = {
+			limit = { tag = GBR }
+			add_government_reform = british_monarchy
+		}
+		else_if = {
+			limit = { tag = AVE }
+			add_government_reform = angevin_monarchy
+		}
+		else = { 
+			add_government_reform = english_monarchy
+		}
+		set_ruler = english_civil_war_heir
+	}
+}
+
+# Order Restored
+country_event = {
+	id = ae_fall_of_cromwell.102
+	title = ae_fall_of_cromwell.102.t
+	desc = ae_fall_of_cromwell.102.d
+	picture = CITY_VIEW_eventPicture
+
+	major = yes
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {		
+		name = ae_fall_of_cromwell.102.a
+		ai_chance = { factor = 100 }
+		add_stability = 2
+		add_legitimacy = 75
+	}
+}
+
+
+#PARTITIONS OF POLAND
+
+
+namespace = ae_partition_of_poland
+normal_or_historical_nations = yes
+country_event = { #Poland Perseveres
+	id = ae_partition_of_poland.100
+	title = ae_partition_of_poland.100.t
+	desc = ae_partition_of_poland.100.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	 
+	
+	option = {
+		name = ae_partition_of_poland.100.a 
+		clr_country_flag = ae_partition_of_poland_flag	
+		add_stability = 2
+	}
+	
+}
+
+ country_event = { #1st Partition
+	id = ae_partition_of_poland.101
+	title = ae_partition_of_poland.101.t
+	desc = ae_partition_of_poland.101.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		save_global_event_target_as = plc_partition_plc
+		random_country = {
+			limit = { is_plc_partition_prussia = yes }
+			save_global_event_target_as = plc_partition_prussia
+		}
+		random_country = {
+			limit = { is_plc_partition_russia = yes }
+			save_global_event_target_as = plc_partition_russia
+		}
+		random_country = {
+			limit = { is_plc_partition_austria = yes }
+			save_global_event_target_as = plc_partition_austria
+		}
+		
+		set_country_flag = ae_partition_of_poland_flag
+	}
+	 
+	
+	option = {
+		name = ae_partition_of_poland.101.a # if PLC and all partitioners are full AI
+		set_global_flag = ae_1_partition
+		
+		ai_chance = { factor = 0 }
+		ROOT = {
+			plc_partition_annex_effect = {
+				number = 1 
+			}
+		} 		
+	}
+	option = {
+		name = ae_partition_of_poland.101.b # if PLC or any partitioners are not AI
+		set_global_flag = ae_1_partition
+		trigger = {
+			OR = {
+				ae_gamerule_historical_expansion_on = yes 
+				all_countries_including_self = {
+					if = {
+						limit = { 
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_plc_partition_prussia = yes
+								is_plc_partition_austria = yes
+								is_plc_partition_russia = yes
+								is_neighbor_of = PLC
+								is_neighbor_of = POL
+								is_neighbor_of = LIT
+							}
+						}
+						full_ai = yes
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+		ROOT = {
+			plc_partition_cb_effect = {
+				number = 1 
+				include_austria = yes
+			}
+		} 		
+	}
+	
+}
+ 
+country_event = { #2nd Partition
+	id = ae_partition_of_poland.102
+	title = ae_partition_of_poland.102.t
+	desc = ae_partition_of_poland.102.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		is_year = 1793
+		is_plc_or_poland_lithuania = yes
+		
+		event_target:plc_partition_prussia = { is_plc_partition_prussia = yes }
+		event_target:plc_partition_russia = { is_plc_partition_russia = yes } 
+		 
+				
+		NOT = { ae_gamerule_historical_expansion_off = yes }
+		
+	}
+	
+	
+	
+	
+	option = {
+		name = ae_partition_of_poland.102.a # if PLC and all partitioners are full AI
+		set_global_flag = ae_2_partition
+		
+		ai_chance = { factor = 0 }
+		ROOT = {
+			plc_partition_annex_effect = {
+				number = 2 
+			}
+		} 		
+	}
+	option = {
+		name = ae_partition_of_poland.102.b # if PLC and all partitioners are full AI
+		set_global_flag = ae_2_partition
+		trigger = {
+			OR = {
+				ae_gamerule_historical_expansion_on = yes 
+				all_countries_including_self = {
+					if = {
+						limit = { 
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_plc_partition_prussia = yes
+								is_plc_partition_austria = yes
+								is_plc_partition_russia = yes
+								is_neighbor_of = PLC
+								is_neighbor_of = POL
+								is_neighbor_of = LIT
+							}
+						}
+						full_ai = yes
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+		
+		ROOT = {
+			plc_partition_cb_effect = {
+				number = 2 
+			}
+		} 		
+	}
+	
+}
+country_event = { #3rd Partition
+	id = ae_partition_of_poland.103
+	title = ae_partition_of_poland.103.t
+	desc = ae_partition_of_poland.103.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		is_year = 1795
+		is_plc_or_poland_lithuania = yes
+		
+		
+		event_target:plc_partition_prussia = { is_plc_partition_prussia = yes }
+		event_target:plc_partition_russia = { is_plc_partition_russia = yes }
+		event_target:plc_partition_austria = { is_plc_partition_austria = yes }
+		 
+		NOT = { ae_gamerule_historical_expansion_off = yes }
+		
+	}
+	
+	
+	
+	
+	option = {
+		name = ae_partition_of_poland.103.a # if PLC and all partitioners are full AI
+		set_global_flag = ae_3_partition
+		
+		ai_chance = { factor = 0 }
+		ROOT = {
+			plc_partition_annex_effect = {
+				number = 3 
+			}
+		} 		
+	}
+	option = {
+		name = ae_partition_of_poland.103.b # if PLC and all partitioners are full AI
+		set_global_flag = ae_3_partition
+		trigger = {
+			OR = {
+				ae_gamerule_historical_expansion_on = yes 
+				all_countries_including_self = {
+					if = {
+						limit = { 
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+								is_plc_partition_prussia = yes
+								is_plc_partition_austria = yes
+								is_plc_partition_russia = yes
+								is_neighbor_of = PLC
+								is_neighbor_of = POL
+								is_neighbor_of = LIT
+							}
+						}
+						full_ai = yes
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 100 }
+		ROOT = {
+			plc_partition_cb_effect = {
+				number = 3 
+				include_austria = yes
+			}
+		} 		
+	}
+	
+}
+
+country_event = { #Join the 1st Partition
+	id = ae_partition_of_poland.1011
+	title = ae_partition_of_poland.101.t
+	desc = ae_partition_of_poland.101.d
+	picture = GENERALS_DISCUSSING_eventPicture 
+	is_triggered_only = yes
+	
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = ae_partition_of_poland.1011.a 
+		plc_partition_war_effect = {
+			number = 1 
+		}
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = ae_partition_of_poland.1011.b 
+		add_prestige = -50
+	}
+	
+}
+country_event = { #Join the 2nd Partition
+	id = ae_partition_of_poland.1021
+	title = ae_partition_of_poland.102.t
+	desc = ae_partition_of_poland.102.d
+	picture = GENERALS_DISCUSSING_eventPicture 
+	is_triggered_only = yes
+	
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = ae_partition_of_poland.1011.a 
+		plc_partition_war_effect = {
+			number = 2
+		}
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = ae_partition_of_poland.1011.b 
+		add_prestige = -50
+	}
+	
+}
+country_event = { #Join the 3rd Partition
+	id = ae_partition_of_poland.1031
+	title = ae_partition_of_poland.103.t
+	desc = ae_partition_of_poland.103.d
+	picture = GENERALS_DISCUSSING_eventPicture 
+	is_triggered_only = yes
+	
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = ae_partition_of_poland.1011.a 
+		plc_partition_war_effect = {
+			number = 3 
+		}
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = ae_partition_of_poland.1011.b 
+		add_prestige = -50
+	}
+	
+}
+
+country_event = { #Kosciuszko
+	id = ae_partition_of_poland.104
+	title = ae_partition_of_poland.104.t
+	desc = ae_partition_of_poland.104.d
+	picture = MILITARY_CAMP_eventPicture 
+	is_triggered_only = yes
+	
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = ae_partition_of_poland.1011.a 
+		define_general = {
+			name = "Tadeusz Kosciuszko"
+			shock = 5
+			fire = 5
+			manuever = 6
+			siege = 3
+		}
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = ae_partition_of_poland.104.b 
+		add_prestige = -10
+	}
+	
+}
+
+## POLISH DELUGE
+
+namespace = ae_polish_deluge
+normal_or_historical_nations = yes
+country_event = { 
+	id = ae_polish_deluge.100
+	title = ae_polish_deluge.100.t
+	desc = ae_polish_deluge.100.d
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture 
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { exists = RUS }
+			RUS = { save_global_event_target_as = plc_deluge_russia }
+		}
+		else_if = { 
+			limit = { exists = MOS }
+			MOS = { save_global_event_target_as = plc_deluge_russia }
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = ae_polish_deluge.100.a 
+		ZAZ = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+	
+}
+
+country_event = { 
+	id = ae_polish_deluge.101
+	title = ae_polish_deluge.101.t
+	desc = ae_polish_deluge.101.d
+	picture = GOOD_WITH_MONARCH_eventPicture 
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		ai_chance = { factor = 100 }
+		name = ae_polish_deluge.101.a 
+		add_stability = 2
+		country_event = { 
+			id = ae_historical_expansion.1044 
+			days = 10
+		}
+	}
+	
+}
+
+country_event = { 
+	id = ae_polish_deluge.102
+	title = ae_polish_deluge.102.t
+	desc = ae_polish_deluge.102.d
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture 
+	is_triggered_only = yes
+	trigger = {
+		event_target:plc_deluge_russia = { exists = yes is_subject = no }
+		had_country_flag = {
+			flag = ae_polish_deluge_flag
+			days = 2200 #6 years
+		}
+	}
+	trigger = {
+		is_neighbor_of = event_target:plc_deluge_russia
+		NOT = { army_size = event_target:plc_deluge_russia }
+		event_target:plc_deluge_russia = { is_at_war = no }
+	}
+	
+	option = {
+		name = ae_polish_deluge.102.a 
+		event_target:plc_deluge_russia = {
+			country_event = { id = ae_polish_deluge.1021 }
+		}
+	}
+	
+}
+country_event = { 
+	id = ae_polish_deluge.1021
+	title = ae_polish_deluge.102.t
+	desc = ae_polish_deluge.1021.d
+	picture = east_slavic_DIPLOMACY_eventPicture 
+	is_triggered_only = yes
+	
+	
+	option = {
+		
+		name = ae_polish_deluge.1021.a 
+		ai_chance = { factor = 100 }
+		event_target:plc_deluge_russia = {
+			create_alliance = ZAZ
+			join_all_offensive_wars_of = ZAZ
+		}
+	}
+	option = {
+		
+		name = ae_polish_deluge.1021.b 
+		ai_chance = { factor = 0 }
+		add_prestige = -25
+	}
+	
+}
+
+
+country_event = { 
+	id = ae_polish_deluge.103
+	title = ae_polish_deluge.103.t
+	desc = ae_polish_deluge.103.d
+	picture = easterngfx_LAND_MILITARY_eventPicture 
+	is_triggered_only = yes
+	
+	trigger = {
+		SWE = { exists = yes is_subject = no }
+		had_country_flag = {
+			flag = ae_polish_deluge_flag
+			days = 2600 #7 years
+		}
+	}
+	
+	option = {
+		name = ae_polish_deluge.103.a 
+		SWE = {
+			country_event = { id = ae_polish_deluge.1031 }
+		}
+	}
+	
+}
+
+country_event = { 
+	id = ae_polish_deluge.1031
+	title = ae_polish_deluge.1031.t
+	desc = ae_polish_deluge.1031.d
+	picture = easterngfx_LAND_MILITARY_eventPicture 
+	is_triggered_only = yes
+	 
+	
+	option = {
+		name = ae_polish_deluge.1031.a 
+		ai_chance = { factor = 100 }
+		declare_war_with_cb = {
+			who = PREV
+			casus_belli = cb_annex
+		}
+	}
+	option = {
+		name = ae_polish_deluge.1031.b 
+		ai_chance = { factor = 0 }
+		add_prestige = -25
+	}
+	
+}

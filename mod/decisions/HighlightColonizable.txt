@@ -1,0 +1,133 @@
+country_decisions = {
+
+	ae_what_can_we_colonize = {
+		color = { 220 30 120 }
+		potential = {
+			always = yes
+		}
+		provinces_to_highlight = {
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_GBR = yes }
+				}
+				ae_potential_colony_GBR = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_SPA = yes }
+				}
+				ae_potential_colony_SPA = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_POR = yes }
+				}
+				ae_potential_colony_POR = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_FRA = yes }
+				}
+				ae_potential_colony_FRA = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_NED = yes }
+				}
+				ae_potential_colony_NED = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_SWE = yes }
+				}
+				ae_potential_colony_SWE = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_DAN = yes }
+				}
+				ae_potential_colony_DAN = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_KUR = yes }
+				}
+				ae_potential_colony_KUR = yes
+			}
+			if = {
+				limit = { 
+					ROOT = { ae_colonist_MOR = yes }
+				}
+				ae_potential_colony_MOR = yes
+			}
+			
+			if = {
+				limit = { 
+					ROOT = { capital_scope = { superregion = europe_superregion } }
+				}
+				OR = {	
+					AND = {
+						OR = {
+							region = balkan_region
+							region = carpathia_region
+							region = crimea_region
+							region = anatolia_region
+							region = caucasia_region 
+							region = ruthenia_region 
+						}
+						province_is_on_an_island = yes	
+					} 
+					province_id = 4738	#Triest
+					province_id = 4752	#Fiume
+					province_id = 1826	#Lika 
+					province_id = 4753	#Zara
+					province_id = 136	#Spalato
+					province_id = 137	#Ragusa
+					province_id = 4753	#Cattaro
+					province_id = 138	#Zeta
+					province_id = 4175	#Lezhe
+					province_id = 4750	#Kruje
+					province_id = 143	#Avlonya
+					province_id = 146	#Athens
+					province_id = 1773	#Achaea
+					province_id = 4701	#Corinth
+					province_id = 145	#Morea
+					province_id = 4779	#Gallipoli
+					province_id = 330	#Trebizond
+					province_id = 1756	#Bessarabia
+					province_id = 2410	#Theodoro
+					province_id = 285	#Kafa
+					province_id = 2447	#Matrega
+					province_id = 286	#Azov
+					
+				} 
+			}
+			if = {
+				OR = {
+					ae_colonist_GBR = yes
+					ae_colonist_SPA = yes
+					ae_colonist_POR = yes
+					ae_colonist_FRA = yes
+					ae_colonist_NED = yes
+					ae_colonist_RUS = yes
+					ae_colonist_SWE = yes
+					ae_colonist_DAN = yes
+					ae_colonist_KUR = yes
+					ae_colonist_MOR = yes
+					ROOT = { capital_scope = { superregion = europe_superregion } }
+				}
+			}
+		}
+		allow = {
+			always = yes
+		}
+	 	effect = {
+			country_event = { id = ae_gamerule.1011 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_importance = 400
+	}
+	
+}

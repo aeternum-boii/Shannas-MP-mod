@@ -1,0 +1,112 @@
+country_decisions = {
+	aet_debug_toggleSemTests = {
+		potential = {
+			aet_is_debug = yes
+		}
+
+		allow = {
+			
+		}
+
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = aet_debug_semTest 
+				}
+				clr_global_flag = aet_debug_semTest 
+			} else = {
+				set_global_flag = aet_debug_semTest
+			}
+
+		}
+	}
+	aet_debug_vassal_tax_test = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = vassal_tax_test
+				duration = -1
+			}
+		}
+	}
+	
+	aet_debug_rural_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = rural_goods_test
+				duration = -1
+			}
+		}
+	}
+	
+	aet_debug_urban_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = urban_goods_test
+				duration = -1
+			}
+		}
+	}
+	
+	aet_debug_mining_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = mining_goods_test
+				duration = -1
+			}
+		}
+	}
+	
+	aet_debug_plantage_goods_test = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_semTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = plantage_goods_test
+				duration = -1
+			}
+		}
+	}
+}

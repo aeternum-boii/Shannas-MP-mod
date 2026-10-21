@@ -1,0 +1,30 @@
+﻿l_english:
+ FEE_Bahmanis_Events.1.T: "The First Gunpowder Empire!"
+ FEE_Bahmanis_Events.1.D: "In the great eternal wisdom of the Bahmani dynasty we were the first to adopt and revolutionise the use of infantry gunpowder weapons and the use of battlefield and siege artillery both in the subcontinent and on a semi global level. While the Yuan in China and the Mamluk sultanate in Egypt beat us to the punch in first and second place respectively for the use of them. However, we would be the very first to introduce them on a professional level, especially in the case of siege artillery. In 1368 the first documented case of artillery use was by our great Shah Mohammed Shah I against the vile state of Vijayanagara. After the great success of this battle, they would become the backbone of the Bahmani army. However, ever since then, not much revolutionising has been done; while the backbone of the Bahmani army consists of musketeers and artillery long before anyone else's, we have stagnated. While there are some that have tried to point to [Root.Monarch.GetName] that this is our strength. The more traditional line seems to be winning the argument arguing that all those boom sticks and canons are indeed nice but the main strength of our army still presides in the nobility and their personal levies. Thus [Root.Monarch.GetName] has become torn. Either fully embrace our place and identity as the first gunpowder empire, or relent to the traditionalist nobility who prefer to utilise these weapons as a compliment to the noble cavalry and their levies."
+ FEE_Bahmanis_Events.1.OPT1: "Agree with the Nobility."
+ FEE_Bahmanis_Events.1.OPT2: "Embrace the Gunpowder Identity."
+
+ FEE_Bahmanis_Events.2.T: "Legacy of Bahmanid Field Artillery"
+ FEE_Bahmanis_Events.2.D: "The Bahmani Sultanate chose to embrace its identity as an Indian gunpowder empire. Redesigning its entire army doctrine around the use of field artillery and hand-held gunpowder at the expense of traditional cavalry armies resulted in resounding success for its armies, despite coming at the displeasure and chagrin of the noble elites. Now, however, artillery technology has advanced to make our initial firearms, as finely tuned as they were, obsolete. Further investment is required in order to maintain our edge."
+ FEE_Bahmanis_Events.2.OPT1: "Gunpowder is the Future!"
+ FEE_Bahmanis_Events.2.OPT2: "Are our cannons broken, that they need fixing?"
+ FEE_Bahmanis_Events.2.OPT3: "Return to Monke."
+
+ FEE_Bahmanis_Events.3.T: "Alienation of the Hindus"
+ FEE_Bahmanis_Events.3.D: "Islamisation has always been a dangerous pastime in the subcontinent. The Hindus at large are rather religiously and culturally attached to their faith. It's the faith of the ancestors and the ancestors before those and so un all the way back to the founding Vedic kingdoms, when the gods roamed the earth. While the regular practice of importing muslims mainly from afghanistan, persia and Khorosan works to maintain the small minority of muslim nobles it however does not aid to introduce the true word of god to the Vedic peoples. While the current status quo has worked for centuries now and will probably continue to do so for centuries to come. We must endeavour however to not only spread the word of god but also to bridge the gap between vedic and persianate. Only then can we achieve true harmony. This will of course come at the cost of angering the HIndus and their priests. This is however a risk we have to take to achieve our harmony and bring all the peoples of the world under the banner of the prophet and in the light of the mighty allah."
+ FEE_Bahmanis_Events.3.OPT1: "Back Down."
+ FEE_Bahmanis_Events.3.OPT2: "We will not be cowed by cow-worshippers!"
+
+ # Modifiers:
+ fee_bahmanis_return_to_cavalry_roots: "Return to Cavalry Roots"
+ fee_bahmanis_early_field_artillery: "Early Field Artillery"
+ fee_bahmanis_first_gunpowder_army_of_india_dlc: "First Gunpowder Army of India"
+ fee_bahmanis_first_gunpowder_army_of_india: "First Gunpowder Army of India"
+ fee_bahmanis_bahmani_gunpowder_embracement: "Bahmani Gunpowder Embracement"
+ fee_bahmanis_outmoded_tactics: "Outmoded Tactics"
+ fee_bahmanis_bidir_district: "Bidir District"
+ fee_bahmanis_hindu_concessions: "Hindu Concessions"
+ fee_bahmanis_islamization_efforts: "Islamisation Efforts"
+
+ # Price Modifiers:
+ fee_bahmanis_copper_price_bidir: "Bidir"

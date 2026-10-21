@@ -1,0 +1,3220 @@
+country_decisions = {
+
+	# Adal
+	rn_ADA = {
+		major = yes
+		potential = {
+			culture_group = cushitic
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_adal_flag }
+			NOT = { has_country_flag = formed_somalia_flag }
+			NOT = { tag = ADA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1211
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = ADA }
+			owns_core_province = 1211
+		}
+		effect = {
+			change_tag = ADA
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_adal_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Ajuuraan
+	rn_AJU = {
+		major = yes
+		potential = {
+			culture_group = cushitic
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_ajuuraan_flag }
+			NOT = { has_country_flag = formed_somalia_flag }
+			NOT = { tag = AJU }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2775
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = AJU }
+			owns_core_province = 2775
+		}
+		effect = {
+			change_tag = AJU
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_ajuuraan_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	} 
+
+	# Albania
+	rn_ALB = {
+		major = yes
+		potential = {
+			primary_culture = albanian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_albania_flag }
+			NOT = { tag = ALB }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4175
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = ALB }
+			owns_core_province = 4175
+		}
+		effect = {
+			change_tag = ALB
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_albania_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Aq Qoyunlu
+	rn_AKK = {
+		major = yes
+		potential = {
+			primary_culture = turkish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_qq_flag }
+			NOT = { has_country_flag = formed_ottomans_flag }
+			NOT = { tag = AKK }
+
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 418
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = AKK }
+			owns_core_province = 418
+		}
+		effect = {
+			change_tag = AKK
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_qq_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Aragon
+	rn_ARA = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = aragonese
+				primary_culture = catalan
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_aragon_flag }
+			NOT = { has_country_flag = formed_aragon_flag }
+			NOT = { tag = ARA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 213
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = ARA }
+			owns_core_province = 213
+		}
+		effect = {
+			change_tag = ARA
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_aragon_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Granada
+	rn_GRA = {
+		major = yes
+		potential = {
+			primary_culture = andalucian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_granada_flag }
+			NOT = { has_country_flag = formed_andalusia_flag }
+			NOT = { tag = GRA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 223
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = GRA }
+			owns_core_province = 223
+		}
+		effect = {
+			change_tag = GRA
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_granada_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Catalonia
+	rn_CAT = {
+		major = yes
+		potential = {
+			primary_culture = catalan
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_catalonia_flag }
+			NOT = { has_country_flag = formed_valencia_flag }
+			NOT = { has_country_flag = formed_aragon_flag }
+			NOT = { tag = CAT }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 213
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = CAT }
+			owns_core_province = 213
+		}
+		effect = {
+			change_tag = CAT
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_catalonia_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Valencia
+	rn_VAL = {
+		major = yes
+		potential = {
+			primary_culture = catalan
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_valencia_flag }
+			NOT = { has_country_flag = formed_catalonia_flag }
+			NOT = { has_country_flag = formed_aragon_flag }
+			NOT = { tag = VAL }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 220
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = VAL }
+			owns_core_province = 220
+		}
+		effect = {
+			change_tag = VAL
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_valencia_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Bali
+	rn_BLI = {
+		major = yes
+		potential = {
+			culture_group = malay
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bali_flag }
+			NOT = { has_country_flag = formed_mayapan_flag }
+			NOT = { tag = BLI }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 631
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BLI }
+			owns_core_province = 631
+		}
+		effect = {
+			change_tag = BLI
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_bali_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Bahmanis
+	rn_BAH = {
+		major = yes
+		potential = {
+			OR = {
+				culture_group = dravidian
+				culture_group = western_aryan
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bahmanis_flag }
+			NOT = { has_country_flag = formed_deccan_flag }
+			NOT = { tag = BAH }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1948
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BAH }
+			owns_core_province = 1948
+		}
+		effect = {
+			change_tag = BAH
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_bahmanis_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Munich
+	rn_UBV = {
+		major = yes
+		potential = {
+			primary_culture = bavarian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bavaria_flag }
+			NOT = { has_country_flag = formed_munich_flag }
+			NOT = { tag = UBV }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 65
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = UBV }
+			owns_core_province = 65
+		}
+		effect = {
+			change_tag = UBV
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_munich_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Bengal
+	rn_BNG = {
+		major = yes
+		potential = {
+			primary_culture = bengali
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bengal_flag }
+			NOT = { has_country_flag = formed_delhi }
+			NOT = { tag = BNG }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 563
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BNG }
+			owns_core_province = 563
+		}
+		effect = {
+			change_tag = BNG
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_bengal_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Bohemia
+	rn_BOH = {
+		major = yes
+		potential = {
+			primary_culture = czech
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bohemia_flag }
+			NOT = { tag = BOH }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 266
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BOH }
+			owns_core_province = 266
+		}
+		effect = {
+			change_tag = BOH
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_bohemia_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Bremen
+	rn_BRE = {
+		major = yes
+		potential = {
+			primary_culture = lower_saxon
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_hannover_flag }
+			NOT = { has_country_flag = formed_bremen_flag }
+			NOT = { has_country_flag = formed_hamburg_flag }
+			NOT = { tag = BRE }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1874
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BRE }
+			owns_core_province = 1874
+		}
+		effect = {
+			change_tag = BRE
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_bremen_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Hamburg
+	rn_HAM = {
+		major = yes
+		potential = {
+			primary_culture = lower_saxon
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_hannover_flag }
+			NOT = { has_country_flag = formed_bremen_flag }
+			NOT = { has_country_flag = formed_hamburg_flag }
+			NOT = { tag = HAM }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 44
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = HAM }
+			owns_core_province = 44
+		}
+		effect = {
+			change_tag = HAM
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_hamburg_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Brittany
+	rn_BRI = {
+		major = yes
+		potential = {
+			primary_culture = breton
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_brittany_flag }
+			NOT = { tag = BRI }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 172
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BRI }
+			owns_core_province = 172
+		}
+		effect = {
+			change_tag = BRI
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_brittany_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Brunei
+	rn_BEI = {
+		major = yes
+		potential = {
+			culture_group = malay
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_brunei_flag }
+			NOT = { has_country_flag = formed_mayapan_flag }
+			NOT = { tag = BEI }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 636
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BEI }
+			owns_core_province = 636
+		}
+		effect = {
+			change_tag = BEI
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_brunei_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Burgundy
+	rn_BUR = {
+		major = yes
+		potential = {
+			primary_culture = burgundian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_burgundy_flag }
+			NOT = { tag = BUR }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 192
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BUR }
+			owns_core_province = 192
+		}
+		effect = {
+			change_tag = BUR
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_burgundy_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Castille
+	rn_CAS = {
+		major = yes
+		potential = {
+			primary_culture = castillian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_castille_flag }
+			NOT = { tag = CAS }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 219
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = CAS }
+			owns_core_province = 219
+		}
+		effect = {
+			change_tag = CAS
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_castille_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Champa
+	rn_CHA = {
+		major = yes
+		potential = {
+			primary_culture = cham
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_champa_flag }
+			NOT = { tag = CHA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 607
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = CHA }
+			owns_core_province = 607
+		}
+		effect = {
+			change_tag = CHA
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_champa_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Cherokee
+	rn_CHE = {
+		major = yes
+		potential = {
+			primary_culture = cherokee
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_cherokee_flag }
+			NOT = { tag = CHE }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4879
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = CHE }
+			owns_core_province = 4879
+		}
+		effect = {
+			change_tag = CHE
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_cherokee_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Yue
+	rn_YUE = {
+		major = yes
+		potential = {
+			primary_culture = cantonese
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_yue_flag }
+			NOT = { tag = YUE }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 667
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = YUE }
+			owns_core_province = 667
+		}
+		effect = {
+			change_tag = YUE
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_yue_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Cologne
+	rn_KOL = {
+		major = yes
+		potential = {
+			primary_culture = hessian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_cologne_flag }
+			NOT = { has_country_flag = formed_trier_flag }
+			NOT = { has_country_flag = formed_mainz_flag }
+			NOT = { tag = KOL }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 85
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = KOL }
+			owns_core_province = 85
+		}
+		effect = {
+			change_tag = KOL
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_cologne_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Mainz
+	rn_MAI = {
+		major = yes
+		potential = {
+			primary_culture = hessian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_mainz_flag }
+			NOT = { has_country_flag = formed_trier_flag }
+			NOT = { has_country_flag = formed_cologne_flag }
+			NOT = { tag = MAI }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 78
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MAI }
+			owns_core_province = 78
+		}
+		effect = {
+			change_tag = MAI
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_mainz_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Trier
+	rn_TRI = {
+		major = yes
+		potential = {
+			primary_culture = hessian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_trier_flag }
+			NOT = { has_country_flag = formed_cologne_flag }
+			NOT = { has_country_flag = formed_mainz_flag }
+			NOT = { tag = TRI }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 80
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = TRI }
+			owns_core_province = 80
+		}
+		effect = {
+			change_tag = TRI
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_trier_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# The Knights
+	rn_KNI = {
+		major = yes
+		potential = {
+			government = theocracy
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_knights_flag }
+			NOT = { tag = KNI }
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = KNI }
+		}
+		effect = {
+			change_tag = KNI
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_knights_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Denmark
+	rn_DAN = {
+		major = yes
+		potential = {
+			primary_culture = danish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_denmark_flag }
+			NOT = { tag = DAN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 12
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = DAN }
+			owns_core_province = 12
+		}
+		effect = {
+			change_tag = DAN
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_denmark_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Gdansk
+	rn_DNZ = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = prussian
+				primary_culture = polish
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_gdansk_flag }
+			NOT = { tag = DNZ }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 43
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = DNZ }
+			owns_core_province = 43
+		}
+		effect = {
+			change_tag = DNZ
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_gdansk_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Dithmarschen
+	rn_DIT = {
+		major = yes
+		potential = {
+			primary_culture = danish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_dithmarschen_flag }
+			NOT = { tag = DIT }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4141
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = DIT }
+			owns_core_province = 4141
+		}
+		effect = {
+			change_tag = DIT
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_dithmarschen_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Holland
+	rn_HOL = {
+		major = yes
+		potential = {
+			primary_culture = dutch
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_holland_flag }
+			NOT = { tag = HOL }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 97
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = HOL }
+			owns_core_province = 97
+		}
+		effect = {
+			change_tag = HOL
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_holland_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Finland
+	rn_FIN = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = finnish
+				primary_culture = estonian
+				primary_culture = karelian
+				primary_culture = sapmi
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_finland_flag }
+			NOT = { tag = FIN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 28
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = FIN }
+			owns_core_province = 28
+		}
+		effect = {
+			change_tag = FIN
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_finland_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Orleans
+	rn_ORL = {
+		major = yes
+		potential = {
+			primary_culture = cosmopolitan_french
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_orleans_flag }
+			NOT = { tag = ORL }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 184
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = ORL }
+			owns_core_province = 184
+		}
+		effect = {
+			change_tag = ORL
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_orleans_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Flanders
+	rn_FLA = {
+		major = yes
+		potential = {
+			primary_culture = flemish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_flanders_flag }
+			NOT = { tag = FLA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 90
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = FLA }
+			owns_core_province = 90
+		}
+		effect = {
+			change_tag = FLA
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_flanders_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Genoa
+	rn_GEN = {
+		major = yes
+		potential = {
+			primary_culture = ligurian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_genoa_flag }
+			NOT = { tag = GEN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 101
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = GEN }
+			owns_core_province = 101
+		}
+		effect = {
+			change_tag = GEN
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_genoa_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Gotland
+	rn_GOT = {
+		major = yes
+		potential = {
+			primary_culture = swedish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_gotland_flag }
+			NOT = { has_country_flag = formed_sweden_flag }
+			NOT = { tag = GOT }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 25
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = GOT }
+			owns_core_province = 25
+		}
+		effect = {
+			change_tag = GOT
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_gotland_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Gujarat
+	rn_GUJ = {
+		major = yes
+		potential = {
+			primary_culture = gujarati
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_gujarat_flag }
+			NOT = { tag = GUJ }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2054
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = GUJ }
+			owns_core_province = 2054
+		}
+		effect = {
+			change_tag = GUJ
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_gujarat_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Hungary
+	rn_HUN = {
+		major = yes
+		potential = {
+			primary_culture = hungarian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_hungary_flag }
+			NOT = { tag = HUN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 153
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = HUN }
+			owns_core_province = 153
+		}
+		effect = {
+			change_tag = HUN
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_hungary_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Khmer
+	rn_KHM = {
+		major = yes
+		potential = {
+			primary_culture = khmer
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_khmer_flag }
+			NOT = { tag = KHN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2380
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = KHM }
+			owns_core_province = 2380
+		}
+		effect = {
+			change_tag = KHM
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_khmer_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Kilwa
+	rn_ZAN = {
+		major = yes
+		potential = {
+			primary_culture = swahili
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_kilwa_flag }
+			NOT = { tag = ZAN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1196
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = ZAN }
+			owns_core_province = 1196
+		}
+		effect = {
+			change_tag = ZAN
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_kilwa_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Korea
+	rn_KOR = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = korean
+				primary_culture = korean_new
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_korea_flag }
+			NOT = { tag = KOR }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 735
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = KOR }
+			owns_core_province = 735
+		}
+		effect = {
+			change_tag = KOR
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_korea_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Lithuania
+	rn_LIT = {
+		major = yes
+		potential = {
+			primary_culture = lithuanian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_lithuania_flag }
+			NOT = { tag = LIT }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 272
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = LIT }
+			owns_core_province = 272
+		}
+		effect = {
+			change_tag = LIT
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_lithuania_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Livonian Oorder
+	rn_LIV = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = latvian
+				primary_culture = baltic_german
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_livonian_order_flag }
+			NOT = { tag = LIV }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 37
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = LIV }
+			owns_core_province = 37
+		}
+		effect = {
+			change_tag = LIV
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_livonian_order_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Majapahit
+	rn_MAJ = {
+		major = yes
+		potential = {
+			primary_culture = javanese
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_majapahit_flag }
+			NOT = { tag = MAJ }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 272
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MAJ }
+			owns_core_province = 272
+		}
+		effect = {
+			change_tag = MAJ
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_majapahit_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Malacca
+	rn_MLC = {
+		major = yes
+		potential = {
+			primary_culture = malayan
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_malacca_flag }
+			NOT = { tag = MLC }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 596
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MLC }
+			owns_core_province = 596
+		}
+		effect = {
+			change_tag = MLC
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_malacca_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Malvi
+	rn_MLW = {
+		major = yes
+		potential = {
+			primary_culture = malvi
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_malwa_flag }
+			NOT = { tag = MLW }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 526
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MLW }
+			owns_core_province = 526
+		}
+		effect = {
+			change_tag = MLW
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_malwa_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Mewar
+	rn_MER = {
+		major = yes
+		potential = {
+			primary_culture = rajput
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_mewar_flag }
+			NOT = { tag = MER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 518
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MER }
+			owns_core_province = 518
+		}
+		effect = {
+			change_tag = MER
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_mewar_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Milan
+	rn_MLO = {
+		major = yes
+		potential = {
+			primary_culture = lombard
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_milan_flag }
+			NOT = { tag = MLO }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 104
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MLO }
+			owns_core_province = 104
+		}
+		effect = {
+			change_tag = MLO
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_milan_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Ming
+	rn_MNG = {
+		major = yes
+		potential = {
+			culture_group = east_asian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_ming_flag }
+			NOT = { tag = MNG }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1816
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MNG }
+			owns_core_province = 1816
+		}
+		effect = {
+			change_tag = MNG
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_ming_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Moscow
+	rn_MOS = {
+		major = yes
+		potential = {
+			primary_culture = russian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_moscow_flag }
+			NOT = { tag = MOS }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 295
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MOS }
+			owns_core_province = 295
+		}
+		effect = {
+			change_tag = MOS
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_moscow_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	# Mutapa
+	rn_ZIM = {
+		major = yes
+		potential = {
+			primary_culture = shona
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_mutapa_flag }
+			NOT = { tag = ZIM }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1184
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = ZIM }
+			owns_core_province = 1184
+		}
+		effect = {
+			change_tag = ZIM
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_mutapa_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Navarra
+	rn_NAV = {
+		major = yes
+		potential = {
+			primary_culture = basque
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_navarra_flag }
+			NOT = { tag = NAV }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 210
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = NAV }
+			owns_core_province = 210
+		}
+		effect = {
+			change_tag = NAV
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_navarra_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Naples
+	rn_NAP = {
+		major = yes
+		potential = {
+			primary_culture = neapolitan
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_naples_flag }
+			NOT = { tag = NAP }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 121
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = NAP }
+			owns_core_province = 121
+		}
+		effect = {
+			change_tag = NAP
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_naples_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Norway
+	rn_NOR = {
+		major = yes
+		potential = {
+			primary_culture = norwegian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_norway_flag }
+			NOT = { tag = NOR }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 17
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = NOR }
+			owns_core_province = 17
+		}
+		effect = {
+			change_tag = NOR
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_norway_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Novgorod
+	rn_NOV = {
+		major = yes
+		potential = {
+			primary_culture = novgorodian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_novgorod_flag }
+			NOT = { tag = NOV }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 310
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = NOV }
+			owns_core_province = 310
+		}
+		effect = {
+			change_tag = NOV
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_novgorod_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Ottomans
+	rn_TUR = {
+		major = yes
+		potential = {
+			primary_culture = turkish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_ottomans_flag }
+			NOT = { tag = TUR }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 326
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = TUR }
+			owns_core_province = 326
+		}
+		effect = {
+			change_tag = TUR
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_ottomans_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Oyo
+	rn_OYO = {
+		major = yes
+		potential = {
+			primary_culture = yorumba
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_oyo_flag }
+			NOT = { tag = OYO }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1146
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = OYO }
+			owns_core_province = 1146
+		}
+		effect = {
+			change_tag = OYO
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_oyo_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Palembang
+	rn_PLB = {
+		major = yes
+		potential = {
+			primary_culture = sumatran
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_palembang_flag }
+			NOT = { tag = PLB }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 622
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = PLB }
+			owns_core_province = 622
+		}
+		effect = {
+			change_tag = PLB
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_palembang_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Papal State
+	rn_PAP = {
+		major = yes
+		potential = {
+			primary_culture = umbrian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_papal_state_flag }
+			NOT = { tag = PAP }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 118
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = PAP }
+			owns_core_province = 118
+		}
+		effect = {
+			change_tag = PAP
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_papal_state_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Pegu
+	rn_PEG = {
+		major = yes
+		potential = {
+			primary_culture = mon
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_pegu_flag }
+			NOT = { tag = PEG }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 586
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = PEG }
+			owns_core_province = 586
+		}
+		effect = {
+			change_tag = PEG
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_pegu_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Portugal
+	rn_POR = {
+		major = yes
+		potential = {
+			primary_culture = portugese
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_portugal_flag }
+			NOT = { tag = POR }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 227
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = POR }
+			owns_core_province = 227
+		}
+		effect = {
+			change_tag = POR
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_portugal_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Provence
+	rn_PRO = {
+		major = yes
+		potential = {
+			primary_culture = occitain
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_provence_flag }
+			NOT = { tag = PRO }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 201
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = PRO }
+			owns_core_province = 201
+		}
+		effect = {
+			change_tag = PRO
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_provence_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Teutonic Order
+	rn_TEU = {
+		major = yes
+		potential = {
+			primary_culture = prussian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_teutonic_order_flag }
+			NOT = { tag = TEU }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1841
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = TEU }
+			owns_core_province = 1841
+		}
+		effect = {
+			change_tag = TEU
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_teutonic_order_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Riga
+	rn_RIG = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = latvian
+				primary_culture = baltic_german
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_livonian_order_flag }
+			NOT = { has_country_flag = formed_riga_flag }
+			NOT = { tag = RIG }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 38
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = RIG }
+			owns_core_province = 38
+		}
+		effect = {
+			change_tag = RIG
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_riga_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Savoy
+	rn_SAV = {
+		major = yes
+		potential = {
+			primary_culture = piedmontese
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_savoy_flag }
+			NOT = { tag = SAV }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 103
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = SAV }
+			owns_core_province = 103
+		}
+		effect = {
+			change_tag = SAV
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_savoy_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Serbia
+	rn_SER = {
+		major = yes
+		potential = {
+			primary_culture = serbian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_serbia_flag }
+			NOT = { tag = SER }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4176
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = SER }
+			owns_core_province = 4176
+		}
+		effect = {
+			change_tag = SER
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_serbia_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Ayutthaya
+	rn_AYU = {
+		major = yes
+		potential = {
+			primary_culture = central_thai
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_ayutthaya_flag }
+			NOT = { tag = AYU }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 600
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = AYU }
+			owns_core_province = 600
+		}
+		effect = {
+			change_tag = AYU
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_ayutthaya_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Songhai
+	rn_SON = {
+		major = yes
+		potential = {
+			primary_culture = songhai
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_songhai_flag }
+			NOT = { tag = SON }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1133
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = SON }
+			owns_core_province = 1133
+		}
+		effect = {
+			change_tag = SON
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_songhai_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Sweden
+	rn_SWE = {
+		major = yes
+		potential = {
+			primary_culture = swedish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_sweden_flag }
+			NOT = { tag = SWE }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = SWE }
+			owns_core_province = 1
+		}
+		effect = {
+			change_tag = SWE
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_sweden_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Taungoo
+	rn_TAU = {
+		major = yes
+		potential = {
+			primary_culture = burmese
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_taungoo_flag }
+			NOT = { tag = TAU }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 585
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = TAU }
+			owns_core_province = 585
+		}
+		effect = {
+			change_tag = TAU
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_taungoo_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Vijayanagar
+	rn_VIJ = {
+		major = yes
+		potential = {
+			culture_group = dravidian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_vijayanagar_flag }
+			NOT = { tag = VIJ }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 541
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = VIJ }
+			owns_core_province = 541
+		}
+		effect = {
+			change_tag = VIJ
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_vijayanagar_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Venice
+	rn_VEN = {
+		major = yes
+		potential = {
+			primary_culture = venetian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_venice_flag }
+			NOT = { tag = VEN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 112
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = VEN }
+			owns_core_province = 112
+		}
+		effect = {
+			change_tag = VEN
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_venice_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Florence
+	rn_LAN = {
+		major = yes
+		potential = {
+			primary_culture = tuscan
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_florence_flag }
+			NOT = { tag = LAN }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 116
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = LAN }
+			owns_core_province = 116
+		}
+		effect = {
+			change_tag = LAN
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_florence_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Afghanistan
+	rn_AFG = {
+		major = yes
+		potential = {
+			primary_culture = afghani
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_afghanistan_flag }
+			NOT = { tag = AFG }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 451
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = AFG }
+			owns_core_province = 451
+		}
+		effect = {
+			change_tag = AFG
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_afghanistan_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Moldavia
+	rn_MOL = {
+		major = yes
+		potential = {
+			culture_group = carpathian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_moldavia_flag }
+			NOT = { has_country_flag = formed_transylvania_flag }
+			NOT = { has_country_flag = formed_wallachia_flag }
+			NOT = { tag = HUN }
+			NOT = { tag = RMN }
+			NOT = { tag = MOL }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 268
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = MOL }
+			owns_core_province = 268
+		}
+		effect = {
+			change_tag = MOL
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_moldavia_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Transylvania
+	rn_TRA = {
+		major = yes
+		potential = {
+			culture_group = carpathian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_moldavia_flag }
+			NOT = { has_country_flag = formed_transylvania_flag }
+			NOT = { has_country_flag = formed_wallachia_flag }
+			NOT = { tag = HUN }
+			NOT = { tag = RMN }
+			NOT = { tag = TRA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1951
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = TRA }
+			owns_core_province = 1951
+		}
+		effect = {
+			change_tag = TRA
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_transylvania_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Wallachia
+	rn_WAL = {
+		major = yes
+		potential = {
+			culture_group = carpathian
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_moldavia_flag }
+			NOT = { has_country_flag = formed_transylvania_flag }
+			NOT = { has_country_flag = formed_wallachia_flag }
+			NOT = { tag = HUN }
+			NOT = { tag = RMN }
+			NOT = { tag = WAL }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 161
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = WAL }
+			owns_core_province = 161
+		}
+		effect = {
+			change_tag = WAL
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_wallachia_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# Brandenburg
+	rn_BRA = {
+		major = yes
+		potential = {
+			primary_culture = saxon
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_brandenburg_flag }
+			NOT = { tag = BRA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 50
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = BRA }
+			owns_core_province = 50
+		}
+		effect = {
+			change_tag = BRA
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			country_event = { id = ideagroups.1 }
+			set_country_flag = formed_brandenburg_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# NYI
+
+	# The rest of the chinese kindoms ( Besides Yue )
+
+	# The rest of the french minors ( Besides Orleans )
+}

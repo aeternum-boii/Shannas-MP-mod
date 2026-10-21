@@ -1,0 +1,8 @@
+find_previous_owner = {
+	random_country = {
+		limit = {
+			PREV = { previous_owner = PREV }
+		}
+		save_event_target_as = previous_owner
+	}
+}

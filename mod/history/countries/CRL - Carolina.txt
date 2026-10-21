@@ -1,0 +1,7 @@
+government = republic
+technology_group = western
+primary_culture = american
+religion = anglican
+capital = 2546	# Charleston?
+
+

@@ -1,0 +1,41 @@
+defined_text = {
+	name = GetPriceForPretenderRebels
+	random = no
+
+	text = {
+		localisation_key = string_2500
+		trigger = {
+			government_rank = 3
+		}
+	}
+	text = {
+		localisation_key = string_500
+		trigger = {
+			government_rank = 2
+		}
+	}
+	text = {
+		localisation_key = string_100
+		trigger = {
+			always = yes
+		}
+	}	
+}
+
+defined_text = {
+	name = GetYearForLastTryToSupportHeirThere
+	random = no
+	
+	text = {
+		localisation_key = string_slash
+		trigger = {
+			is_variable_equal = { which = year_of_last_try_to_support_heir_in_our_country value = 0 }
+		}
+	}
+	text = {
+		localisation_key = string_year_for_last_try_to_support_heir_there
+		trigger = {
+			always = yes
+		}
+	}
+}

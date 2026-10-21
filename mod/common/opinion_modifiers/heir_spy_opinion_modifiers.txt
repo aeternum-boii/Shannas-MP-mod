@@ -1,0 +1,19 @@
+supported_heir_accepted = {
+	opinion = 25
+	yearly_decay = 2
+}
+
+supported_heir_rejected = {
+	opinion = -25
+	yearly_decay = 2
+}
+
+supported_heir_accepted_target = {
+	opinion = 25
+	yearly_decay = 2
+}
+
+supported_heir_rejected_target = {
+	opinion = -25
+	yearly_decay = 2
+}

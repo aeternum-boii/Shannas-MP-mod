@@ -1,0 +1,48 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = pommeranian
+religion = catholic
+technology_group = western
+capital = 2995	# Stolp
+
+
+1410.1.1 = {
+	monarch = {
+		name = "Bogislav IX"
+		dynasty = "Gryf"
+		birth_date = 1408.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1419.1.1 = {
+	queen = {
+		country_of_origin = MAZ
+		name = "Maria"
+		dynasty = "Piast"
+		birth_date = 1408.1.1
+		female = yes
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+}
+
+#inherited by Eric Gryf in Gotland
+
+1446.12.7 = {
+	monarch = {
+		name = "Eric VII"
+		dynasty = Gryf
+		culture = pommeranian
+		adm = 1
+		dip = 2
+		mil = 3
+		birth_date = 1382.1.1
+	}
+}
+
+#Inherited by Wolgast

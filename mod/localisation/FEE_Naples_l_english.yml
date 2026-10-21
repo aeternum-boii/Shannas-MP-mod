@@ -1,0 +1,138 @@
+﻿l_english:
+# Events
+ FEE_Naples_Events.1.T: "The Court of Alfonso il Magnanimo"
+ FEE_Naples_Events.1.D: "After the conquest and consolidation of the Kingdom of Naples Alfonso I decided that the fulcrum of the new magnified Crown of Aragon should be in Naples instead of some Spanish lands, therefore a great influx of the most prominent minds from Italy and Greece has arrived in the Royal Palace."
+ FEE_Naples_Events.1.OPT1: "Let us welcome this Umbrian humanist!"
+ FEE_Naples_Events.1.OPT2: "Our sicilian brethern will feel at home."
+ FEE_Naples_Events.1.OPT3: "An embassador from Byzantium has arrived!"
+
+ FEE_Naples_Events.2.T: "Regia Dogana della Mena delle Pecore di Puglia"
+ FEE_Naples_Events.2.D: "In 1447 Alfonso I passed a series of laws, including the imposition on the Abruzzese and Molise shepherds to spend the winter within the Neapolitan borders, in the Tavoliere, where many of the cultivated lands were also forcibly transformed into pastures. It also established, based first in Lucera and then in Foggia, the Dogana della mena delle pecore in Puglia and the very important network of sheep tracks that from Abruzzo (which from 1532 would have its detachment of the Customs, the Doganella d'Abruzzo) led to the Capitanata. These measures revived the economy of the inland cities between L'Aquila and Puglia: the economic resources linked to the transhumant sheep farming of the Abruzzo Apennines were once dispersed in the Papal State, where the herds had hitherto wintered."
+ FEE_Naples_Events.2.OPT1: "Transumanza!"
+
+ FEE_Naples_Events.3.T: "Gjergj Kastrioti Skënderbeu"
+ FEE_Naples_Events.3.D: "Echoes of your deeds have crossed the Adriatic sea since when on March 2, 1444, in the cathedral of San Nicola, you were unanimously proclaimed leader of the Albanian nation, since when sultan Murad II, furious at your betrayal, sent against your mere 20K mens forces of hundreds of thousands of heathens. You have reached us asking for help, help against one of the greatest empire the world has yet to see."
+ FEE_Naples_Events.3.OPT1: "We will help you, for the Christendom."
+ FEE_Naples_Events.3.OPT2: "We cannot risk a war!"
+
+ FEE_Naples_Events.4.T: "Helps from Naples"
+ FEE_Naples_Events.4.D: "[FROM.Monarch.GetName] has aided to our side and pledge to help us against the Turks, but their offers comes with a hint for a huge demand, our complete loyal service to the crown."
+ FEE_Naples_Events.4.OPT1: "We shall be guided by them."
+ FEE_Naples_Events.4.OPT2: "We can't do this right now."
+
+ FEE_Naples_Events.5.T: "Accademia Pontaniana"
+ FEE_Naples_Events.5.D: "Founded by Antonio Beccadelli (known as the "Panormita") in 1458, it was initially called Porticus Antonianus ("Portico di Antonio" in Latin). Some anticipate the birth of the academy in 1442, the year in which Alfonso I of Aragon, following his investiture as king of Naples, set up a very rich library in his house in Castel Capuano (later transferred to the Castel Nuovo) where they gathered men of culture to discuss literature and philosophy. In honor of him this association was called Accademia Alfonsina. From this would have descended directly that of Antonio Beccadelli, protected by the King himself."
+ FEE_Naples_Events.5.OPT1: "Marvelous!"
+
+ FEE_Naples_Events.6.T: "Porta Capuana"
+ FEE_Naples_Events.6.D: "\"Here it is today as yesterday, as always ... always the same hell, the same shops, of merchandise, of commerce, of trafficking, of different people. A babel of languages. habits between its virtues and its vices ... come to Porta Capuana, at any time of the 24 hours of the day, and you will learn about it ... Porta Capuana is the universal theater, it is the Cosmopoli of our people .. Here there is neither night nor day.\" \nBuilt in 1484 by the king [Root.Monarch.GetName] and, from the earliest stages, it was the access point coming from the east towards the city center, as well as being the nerve center of communications; in the eighteenth century the royal road of Puglia passed through it. It has therefore always been in a very lively area of Naples, and has also represented a place of artistic and cultural aggregation: it is in Porta Capuana, for example, that the so-called Latin Quarter was born at the beginning of the twentieth century, a meeting place for important Neapolitan artists of the time."
+ FEE_Naples_Events.6.OPT1: "Marble, Honour and Virtue."
+
+ FEE_Naples_Events.7.T: "Isabella di Chiaromonte"
+ FEE_Naples_Events.7.D: "Daughter of Tristano di Chiaromonte (Tristan de Clermont-Lodeve), count of Copertino, and of Caterina di Taranto, the latter's sister of the Prince of Taranto, Giovanni Antonio Orsini Del Balzo, of which Isabella was named heir. On May 30, 1445 he married [Root.Monarch.GetName], called Ferrante, later Duke of Calabria, natural son of Alfonso V of Aragon, who had risen to the throne of Naples as Alfonso I. It was the latter who arranged the marriage of his son favored with the heir of the Principality of Taranto, obtaining various advantages through this marriage. In the first place, Ferrante would succeed with his wife at the helm of the Principality, thus allowing the king and in the future Ferrante himself, destined to the throne, to confiscate one of the most important fiefdoms of the kingdom in their own domains. Furthermore, the kinship link allowed the sovereign to strengthen his power of influence over the Orsini of Taranto."
+ FEE_Naples_Events.7.OPT1: "We won't marry this princess."
+ FEE_Naples_Events.7.OPT2: "We welcome this beautiful pugliese."
+
+ FEE_Naples_Events.8.T: "Dream of Ladislao I"
+ FEE_Naples_Events.8.D: "Tamed the internal pitfalls, Ladislao soon turned his attention outside the borders of his kingdom. It was in these years that the dream of building a great state reality that included the entire Italian peninsula, unified under the crown of Naples and the insignia of the Durazzo was born in him. The idea of the Kingdom of Italy that precedes the Risorgimento enterprise by more than four hundred years and to which Ladislao will dedicate all his efforts during his short life. In the years to come, in fact, he would take advantage of the crisis situation in which the composite Italian political reality was pouring to considerably expand his kingdom and his power above all to the detriment of the papal dominions, appropriating and disposing of many of the papal territories as he pleased. \nShould we reclaim the dream of Ladislao and focus on the creation of an Italian state?"
+ FEE_Naples_Events.8.OPT1: "A dream of United Italy?"
+ FEE_Naples_Events.8.OPT2: "We must focus on internal affair."
+
+ FEE_Naples_Events.9.T: "Legacy of Ladislao I"
+ FEE_Naples_Events.9.D: "We have finally fulfilled the dream of our most beloved King Ladislao I, and now we rule over Tuscany and Rome itself is ours. We once thought about an union of the Italian" provinces under one King, one rule and one Kingdom, shall we pursue this dream today my liege?"
+ FEE_Naples_Events.9.OPT1: "We are triumphant."
+ FEE_Naples_Events.9.OPT2: "It's time to let the old ways die."
+
+ FEE_Naples_Events.10.T: "Giovanni Antonio Orsini"
+ FEE_Naples_Events.10.D: "As a member of the esteemed Orsini family, he was a central figure in the intricate tapestry of Italian politics during the Renaissance era. His rule in Taranto was marked by both political maneuvering and significant territorial influence, making him a notable character in the history of southern Italy."
+ FEE_Naples_Events.10.OPT1: "The lord of Taranto!"
+
+ FEE_Naples_Events.11.T: "Commissioni Marittime dei del Balzo"
+ FEE_Naples_Events.11.D: "One of the first things that Giovanni Antonio did was to improve the infrastructure of Apulia. He built new roads and bridges, and he repaired and maintained existing ones. He also dredged the harbors of Taranto and other coastal cities, making them more accessible to merchant ships. As a result of Giovanni Antonio's efforts, Apulia became a prosperous and productive region. The cities of Apulia, especially Taranto, became important centers of commerce and trade. Merchants from all over the Mediterranean came to Apulia to buy and sell goods. "
+ FEE_Naples_Events.11.OPT1: "A careful investement."
+ FEE_Naples_Events.11.OPT2: "No, it would bring too much power."
+
+ FEE_Naples_Events.12.T: "The Enrichment of Taranto: A Maritime Odyssey"
+ FEE_Naples_Events.12.D: "The De Balzo family had ruled Apulia for many generations. They were wise and benevolent rulers, and they cared deeply for their people. Under the leadership of the De Balzo family, Apulia became increasingly prosperous. The fields were well-tended, and the crops were bountiful. The cities were bustling with activity, and the people were content. The De Balzo family also invested in trade and commerce. They built a fleet of merchant ships, which sailed to ports all over the Mediterranean. The ships carried Apulian goods to Ragusa, Constantinople, Cyprus, and other far-off lands. In return, the ships brought back exotic goods from all over the world. The people of Apulia were able to enjoy spices from the Orient, silks from China, and perfumes from Arabia. The De Balzo family's ships also helped to spread the fame of Apulian goods. Apulian grain, olive oil, and wine were prized all over the Mediterranean. Apulian merchants became wealthy and powerful, and the cities of Apulia grew and flourished."
+ FEE_Naples_Events.12.OPT1: "Purely for commerce"
+
+ FEE_Naples_Events.13.T: "The reclusion of Giovanni Antonio Orsini"
+ FEE_Naples_Events.13.D: "With the passing of Alfonso V, the lordship of Taranto found itself in a state of uncertainty. Giovanni Antonio Orsini, a noble known for his strong-willed spirit and aspirations for Taranto's prosperity, had concerns about the new ruler and the changing tides of power. Discontent with the shifting political landscape, he chose to withdraw and seclude himself in the familiar embrace of his beloved land. The people of Taranto, who had thrived under his rule, watched as their lord retreated to the comforts of his land. Giovanni Antonio's presence had brought prosperity and ambition to the city, and his absence was keenly felt. The nobility and the common folk alike wondered about the future of Taranto and the fate of the De Balzo family."
+ FEE_Naples_Events.13.OPT1: "Giovanni Antonio pondered the path ahead."
+
+ FEE_Naples_Events.14.T: "The Orsini Conundrum"
+ FEE_Naples_Events.14.D: "The revelation sent shockwaves through the kingdom. The once-beloved lord, Giovanni Antonio Orsini, who had presided over Taranto and Apulia, had been the hidden hand behind the uprising of the Barons against the reigning power. Betrayal was a bitter pill to swallow, and the people were left to grapple with the complexity of the situation. Giovanni Antonio, known for his vision and ambition, had seemingly turned against the ruling authority. The forces he had led into battle were not just any forces; they were the rallying cry of the disenchanted nobility, the Barons who had sought to alter the course of the kingdom's history."
+ FEE_Naples_Events.14.OPT1: "Shadows of Betrayal"
+
+ FEE_Naples_Events.15.T: "End of del Balzo?"
+ FEE_Naples_Events.15.D: "The city of Taranto, which had once flourished under his rule, was now caught in a tangled web of intrigue. The De Balzo family, long celebrated for their contributions to Taranto and Apulia, now stood at the center of a storm of political turmoil. Should the family be exiled?"
+ FEE_Naples_Events.15.OPT1: "We must separate their bads from their deeds."
+ FEE_Naples_Events.15.OPT2: "We will never forgive them!"
+
+ FEE_Naples_Events.95.T: "Pedro Alvarez de Toledo"
+ FEE_Naples_Events.95.D: "Pedro Alvarez de Toledo was the first viceroy of Naples to effectively govern the kingdom on behalf of the Spanish crown. While issuing grand construction projects and modernizing the country, part of the reason for his success was his firm rule and ruthlessness. Where previous viceroys had failed to exert control over the kingdom, \"Don Pedro\" closed down humanist institutions and instituted harsh penalties for petty crimes. He centralised national institutions, and moved every court to the Castel Capuano. By breaking up traditional land holdings, barons were forced to move to the city where they would be within reach of de Toledo's government. \nHe failed in introducing the Spanish Inquisition in Naples, however, as revolts forced the Spanish king to retract the order. De Toledo passed away shortly after, in 1552, while on state business in Siena, ensuring that his legacy of state building would forever outshine the harshness of his rule."
+ FEE_Naples_Events.95.OPT1: "We need to centralize our state."
+ FEE_Naples_Events.95.OPT2: "We must focus on growing our military."
+
+ FEE_Naples_Events.96.T: "The Construction Projects of Pedro Alvarez de Toledo"
+ FEE_Naples_Events.96.D: "In addition to reforming the society of the Kingdom of Naples, Viceroy Pedro Alvarez de Toledo commissioned grand construction projects in the city of Naples itself. The old walls were expanded and new ones were built along the seafront. Fortresses, shipyards and barracks were modernised and expanded. He also commissioned a new palace for the Viceroy, which was then surrounded by buildings in square-grid streets. The Spanish Quarter, as it was called, was the first of its kind in Europe, and is still one of the most distinct areas of Naples. The express goal was to make Naples invulnerable, but it also had the side effect of making it the second largest city in Europe at the time. By his death in 1552, the legacy of the harsh ruler as a city-builder was more than secure, and Naples would continue to be a center of southern European power for centuries."
+ FEE_Naples_Events.96.OPT1: "Build additional storehouses."
+ FEE_Naples_Events.96.OPT2: "Build additional barracks."
+
+ FEE_Naples_Events.97.T: "The Flood of Bones"
+ FEE_Naples_Events.97.D: "The cave that would become the Fontanelle cemetery had for hundreds of years been used as a charnel house for old remains, which had been moved from graveyards in Naples to make space for citizens insisting on being interred near their churches. In the late 17th century, however, a series of floods caused remains to be washed from the cave into the streets of Naples. The grisly sight of skulls grinning up at them and bones resting in their gutters made the citizens realise that something had to be done to accommodate the ever-growing population."
+ FEE_Naples_Events.97.OPT1: "Establish the Fontanelle cemetery and reform the graveyards!"
+
+ FEE_Naples_Events.98.T: "Ospedale di San Gennaro dei Poveri"
+ FEE_Naples_Events.98.D: "The San Gennaro dei Poveri was the very first hospice for the poor in Naples, a city that in 1667, when the hospice was built, struggled with overpopulation and severe poverty. The ancient building had been renovated and repurposed multiple times, from a monastery in the 8th century to a plague hospital in the 17th, before it found a new purpose as a poor house. While it could never house all of the estimated 1, destitute people in the city at the time, it was the first in a long tradition of hospices for the poor in Naples."
+ FEE_Naples_Events.98.OPT1: "We need this, for the good of the poor."
+ FEE_Naples_Events.98.OPT2: "Our resources are better spent elsewhere."
+
+ FEE_Naples_Events.99.T: "Ospedale L'Albergo Reale dei Poveri"
+ FEE_Naples_Events.99.D: "The Albergo Reale dei Poveri was an enormous hospice for the poor in Naples from 1751. The institution was intended to not just provide care to the ill, but provide an entire self-sufficient community of the poor where they could live and work. At times its five stories would house as many as five thousand people, relieving some of the pressure poverty placed on the city of Naples. The building was designed by the famous architect Ferdinando Fuga, which was how it got its nickname \"Palazzo Fuga\"."
+ FEE_Naples_Events.99.OPT1: "Let us show our people we care!"
+ FEE_Naples_Events.99.OPT2: "Who can afford to spend money on the poor?"
+
+ FEE_Naples_Events.100.T: "Francesco Solimena"
+ FEE_Naples_Events.100.D: "Francesco Solimena, who lived from 1657 to 1747, was a Neapolitan painter who came to define the Baroque style in southern Italy. He trained and worked with his painter father, Angelo Solimena, and is famous for decorating churches with him, including the cathedral of Nocera. On his own, Francesco would become renown for painting frescoes in his signature dark, detailed and dramatically lit style. As Francesco's reputation grew, his atelier became a gathering point of painter students from across Naples, and he provided tutelage for many of Italy's most famous baroque painters."
+ FEE_Naples_Events.100.OPT1: "He has shown us what baroque art truly can be!"
+
+# Estate Modifiers
+ nap_nobles_restrained: "Restrained the Barones"
+ nap_nobles_happy: "Nobles are Happy"
+
+# Event Modifiers
+ fee_nap_magnanimo: "Il Magnanimo"
+ desc_fee_nap_magnanimo: ""
+ fee_nap_transumanza_ge: "Transumanza"
+ desc_fee_nap_transumanza_ge: ""
+ fee_nap_transumanza: "Transumanza"
+ desc_fee_nap_transumanza: ""
+ fee_nap_porta_capuana: "Porta Capuana"
+ desc_fee_nap_porta_capuana: ""
+
+ fee_nap_taranto_del_balzo: "Del Balzo"
+ desc_fee_nap_taranto_del_balzo: ""
+ fee_nap_commissioni_del_balzo: "Commissioni Marittime dei Del Balzo"
+ desc_fee_nap_commissioni_del_balzo: ""
+
+ fee_nap_pedro_alvarez: "Pedro Alvarez de Toledo"
+ desc_fee_nap_pedro_alvarez: "While a harsh ruler, de Toledo did much to centralise the Neapolitan state."
+ fee_nap_gennaro_poveri: "San Gennaro dei Poveri"
+ desc_fee_nap_gennaro_poveri: "We have invested in Naples' long tradition of poor houses."
+ fee_nap_albergo_reale: "Ospedale L'Albergo Reale dei Poveri"
+ desc_fee_nap_albergo_reale: "Few cities, or indeed countries, can say they have done as much to allay the plight of the poor as Naples."
+ fee_nap_de_toledo_naples: "De Toledo's Building Projects"
+ desc_fee_nap_de_toledo_naples: "The Viceroy of Naples has been expanding the city immensely."
+
+# Opinion Modifiers
+ fee_nap_recoinciliation: "Recoincilation"
+ fee_nap_helps_skanderberg: "Helping the Albanians"
+
+# Tooltips
+ NAP_ACCADEMY_BECCADELLI_TT: "\nHe has a proposal about a new accademy he wants to bring further"
+ NAP_PRE_CONJURY_TT: "If we fail to maintain the Nobles loyal (§G70§!) before the next years, they might rise in arms against us."
+ NAPLES_TWENTY_YEARS_PROSPERITY: "§YEvery Owned Province§! will gain §G15 Prosperity§!"
+ ALB_HELP_TT: "The Albanians will come to help us in our time of need"
+ FEE_NAP_FOLLOWED_DREAM_LADISLAO_TT: "Following the Dream of King Ladislao I of Naples we might §GUnite Italy§! for the first time in history."
+ FEE_NAP_TRANSUMANZA_TT: "Every province §Yowned by [Root.GetName] or its non-tributary subjects§!, in the §MItaly Region§! with either §YHills§!, §!Mountains§! or produces §YLivestock§!, will gain:"

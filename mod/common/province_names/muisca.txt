@@ -1,0 +1,3 @@
+825 = {"Muyquyta" "Muyquyta"}
+832 = {"Chunsa" "Chunsa"}
+4603 = {"Chahantamsa" "Chahantamsa"}

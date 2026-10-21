@@ -1,0 +1,7 @@
+ae_hab_emperor = {
+	reasons_to_elect = 300
+}
+
+ae_habsburg_cb = {
+	can_transfer_vassal_wargoal = yes
+} 

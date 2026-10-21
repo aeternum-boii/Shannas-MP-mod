@@ -1,0 +1,415 @@
+aet_flBuilding_dev0_5_T0 = {
+    land_forcelimit = 0
+}
+aet_flBuilding_dev0_5_T1 = {
+    land_forcelimit = 0
+}
+aet_flBuilding_dev5_10_T0 = {
+    land_forcelimit = 0.25
+}
+aet_flBuilding_dev5_10_T1 = {
+    land_forcelimit = 0.5
+}
+aet_flBuilding_dev10_15_T0 = {
+    land_forcelimit = 0.5
+}
+aet_flBuilding_dev10_15_T1 = {
+    land_forcelimit = 1
+}
+aet_flBuilding_dev15_20_T0 = {
+    land_forcelimit = 0.75
+}
+aet_flBuilding_dev15_20_T1 = {
+    land_forcelimit = 1.5
+}
+aet_flBuilding_dev20_25_T0 = {
+    land_forcelimit = 1
+}
+aet_flBuilding_dev20_25_T1 = {
+    land_forcelimit = 2
+}
+aet_flBuilding_dev25_30_T0 = {
+    land_forcelimit = 1.25
+}
+aet_flBuilding_dev25_30_T1 = {
+    land_forcelimit = 2.5
+}
+aet_flBuilding_dev30_35_T0 = {
+    land_forcelimit = 1.5
+}
+aet_flBuilding_dev30_35_T1 = {
+    land_forcelimit = 3
+}
+aet_flBuilding_dev35_40_T0 = {
+    land_forcelimit = 1.75
+}
+aet_flBuilding_dev35_40_T1 = {
+    land_forcelimit = 3.5
+}
+aet_flBuilding_dev40_45_T0 = {
+    land_forcelimit = 2
+}
+aet_flBuilding_dev40_45_T1 = {
+    land_forcelimit = 4
+}
+aet_flBuilding_dev45_50_T0 = {
+    land_forcelimit = 2.25
+}
+aet_flBuilding_dev45_50_T1 = {
+    land_forcelimit = 4.5
+}
+aet_flBuilding_dev50_55_T0 = {
+    land_forcelimit = 2.5
+}
+aet_flBuilding_dev50_55_T1 = {
+    land_forcelimit = 5
+}
+aet_flBuilding_dev55_60_T0 = {
+    land_forcelimit = 2.75
+}
+aet_flBuilding_dev55_60_T1 = {
+    land_forcelimit = 5.5
+}
+aet_flBuilding_dev60_65_T0 = {
+    land_forcelimit = 3
+}
+aet_flBuilding_dev60_65_T1 = {
+    land_forcelimit = 6
+}
+aet_flBuilding_dev65_70_T0 = {
+    land_forcelimit = 3.25
+}
+aet_flBuilding_dev65_70_T1 = {
+    land_forcelimit = 6.5
+}
+aet_flBuilding_dev70_75_T0 = {
+    land_forcelimit = 3.5
+}
+aet_flBuilding_dev70_75_T1 = {
+    land_forcelimit = 7
+}
+aet_flBuilding_dev75_T0 = {
+    land_forcelimit = 3.75
+}
+aet_flBuilding_dev75_T1 = {
+    land_forcelimit = 7.5
+}
+
+# age modifiers
+
+aet_ages_aod_30DevelopmentCity = {
+    global_tax_modifier = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_50Development = {
+    global_institution_spread = 0.2
+}
+aet_ages_aod_aragonTradepower = {
+    global_prov_trade_power_modifier = 0.50
+}
+aet_ages_aod_armedWithCannons = {
+    army_tradition = 0.25
+}
+aet_ages_aod_buildFleet = {
+    admiral_cost = -0.25
+}
+aet_ages_aod_castilleInquisition = {
+    global_heathen_missionary_strength = 0.03
+}
+aet_ages_aod_competentCourt = {
+    diplomatic_reputation = 1
+}
+aet_ages_aod_delhiClaims = {
+    ae_impact = -0.10
+}
+aet_ages_aod_denmarkLoyalty = {
+    reduced_liberty_desire = 30
+}
+aet_ages_aod_discoverAmerica = {
+    navy_tradition = 0.25
+}
+aet_ages_aod_ethiopiaInflation = {
+    inflation_reduction = 0.5
+}
+aet_ages_aod_florenceIdeas = {
+    idea_cost = -0.075
+}
+aet_ages_aod_foughtRecentWar = {
+    army_tradition = 0.25
+}
+aet_ages_aod_humiliateRival = {
+    war_exhaustion = -0.05
+}
+aet_ages_aod_hungaryDefense = {
+    defensiveness = 0.35
+}
+aet_ages_aod_isAfricanMerchant = {
+    production_efficiency = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_isAsianMerchant = {
+    production_efficiency = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_isEuropeanMerchant = {
+    production_efficiency = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_isFareastMerchant = {
+    production_efficiency = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_isIslamicMerchant = {
+    production_efficiency = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_isNativeMerchant = {
+    production_efficiency = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_isSteppeMerchant = {
+    production_efficiency = 0.05
+    	global_trade_power = 0.05
+}
+aet_ages_aod_largeNativeForce = {
+    land_morale = 0.10
+}
+aet_ages_aod_malaccaSpices = {
+    global_own_trade_power = 0.50
+}
+aet_ages_aod_mingProjects = {
+    build_cost = -0.20
+}
+aet_ages_aod_portugalColonists = {
+    global_colonial_growth = 50
+}
+aet_ages_aod_songhaiUniversity = {
+    technology_cost = -0.10
+}
+aet_ages_aod_turkeySiege = {
+    siege_ability = 0.15
+    	leader_siege = 1
+}
+aet_ages_aod_veniceTradeships = {
+    global_ship_trade_power = 0.5
+}
+aet_ages_aod_vijayanagarLeaders = {
+    leader_cost = -0.50
+}
+aet_ages_aor_auditGovernment = {
+    advisor_cost = -0.1
+}
+aet_ages_aor_bavarianCentralization = {
+    global_autonomy = -0.3
+}
+aet_ages_aor_brandenburgWarTaxes = {
+    war_taxes_cost_modifier = -1.0
+}
+aet_ages_aor_convertProvinces = {
+    missionary_maintenance_cost = -0.1
+}
+aet_ages_aor_defenderOfFaith = {
+    global_missionary_strength = 0.01
+}
+aet_ages_aor_twoContinents = {
+    global_trade_power = 0.05
+    	trade_efficiency = 0.05
+}
+aet_ages_aor_humanismReligious = {
+    religious_unity = 0.1
+}
+aet_ages_aor_mughalArtillery = {
+    artillery_cost = -0.25
+    	artillery_power = 0.15
+}
+aet_ages_aor_palatineCourt = {
+    diplomatic_upkeep = 2
+}
+aet_ages_aor_papalWarrior = {
+    leader_land_shock = 1
+}
+aet_ages_aor_persianCourt = {
+    advisor_cost = -0.1
+    	development_cost = -0.2
+}
+aet_ages_aor_polishCrown = {
+    global_trade_goods_size_modifier = 0.33
+}
+aet_ages_aor_prestigiousExample = {
+    global_missionary_strength = 0.01
+}
+aet_ages_aor_religiousUnity = {
+    global_unrest = -2
+}
+aet_ages_aor_saxonPiety = {
+    tolerance_own = 3
+}
+aet_ages_aor_spainTercios = {
+    shock_damage_received = -0.1
+    	leader_shock = 1
+}
+aet_ages_aor_swissNeutrality = {
+    improve_relation_modifier = 0.30
+}
+aet_ages_aor_taunguMilitary = {
+    infantry_power = 0.20
+}
+aet_ages_aor_theocraticRule = {
+    diplomatic_reputation = 1
+}
+aet_ages_aor_twoContinents = {
+    global_trade_power = 0.05
+    	trade_efficiency = 0.05
+}
+aet_ages_aor_unifyCulture = {
+    prestige = 0.5
+    	legitimacy = 0.5
+    	republican_tradition = 0.5
+    	devotion = 0.5
+    	horde_unity = 0.5
+    	meritocracy = 0.5
+}
+aet_ages_aoa_beverageSupply = {
+    global_trade_power = 0.05
+    	trade_efficiency = 0.05
+}
+aet_ages_aoa_britishColonies = {
+    colonists = 1
+}
+aet_ages_aoa_dutchTrade = {
+    trade_efficiency = 0.1
+    	trade_steering = 0.33
+}
+aet_ages_aoa_enlargeCrownland = {
+    max_absolutism = 5
+}
+aet_ages_aoa_flavorSupply = {
+    global_trade_power = 0.05
+    	trade_efficiency = 0.05
+}
+aet_ages_aoa_frenchMusketeers = {
+    fire_damage = 0.1
+    	max_absolutism_effect = 0.3
+}
+aet_ages_aoi_germanScience = {
+    idea_cost = -0.1
+    	technology_cost = -0.1
+}
+aet_ages_aoa_haveColony = {
+    global_trade_power = 0.05
+    	trade_efficiency = 0.05
+}
+aet_ages_aoa_hugeCapital = {
+    diplomatic_reputation = 1
+}
+aet_ages_aoi_industrialOrigins = {
+    build_cost = -0.15
+    	build_time = -0.15
+}
+aet_ages_aoa_internationalTrade = {
+    leader_cost = -0.10
+}
+aet_ages_aoi_italianUnification = {
+    discipline = 0.075
+    	reduced_liberty_desire = 25
+}
+aet_ages_aoa_japanProsperity = {
+    global_prosperity_growth = 1
+}
+aet_ages_aoa_luxurySupply = {
+    global_trade_power = 0.05
+    	trade_efficiency = 0.05
+}
+aet_ages_aoi_manifestDestiny = {
+    production_efficiency = 0.2
+    	trade_efficiency = 0.2
+    	global_manpower_modifier = 0.2
+}
+aet_ages_aoa_moroccoAttrition = {
+    land_attrition = -0.50
+}
+aet_ages_aoi_russianManpower = {
+    governing_capacity_modifier = 0.25
+    	global_manpower_modifier = 0.25
+}
+aet_ages_aoa_swedishRecruitment = {
+    manpower_recovery_speed = 0.35
+}
+aet_ages_aoa_textilesSupply = {
+    global_trade_power = 0.05
+    	trade_efficiency = 0.05
+}
+aet_ages_aoa_veniceEast = {
+    global_trade_power = 0.25
+}
+aet_ages_aorv_americanMinutemen = {
+    reinforce_speed = 0.50
+}
+aet_ages_aorv_americanSupply = {
+    global_trade_power = 0.1
+    	trade_efficiency = 0.1
+}
+aet_ages_aorv_austrianDiplomacy = {
+    diplomatic_reputation = 1
+    	morale_damage_received = -0.2
+}
+aet_ages_aorv_britishNavy = {
+    naval_maintenance_modifier = -0.15
+    	max_admiral_fire = 1
+}
+aet_ages_aorv_colonialEmpire = {
+    global_trade_power = 0.1
+    	trade_efficiency = 0.1
+}
+aet_ages_aorv_controlMultipleMarkets = {
+    global_trade_power = 0.1
+    	trade_efficiency = 0.1
+}
+aet_ages_aorv_culturesAccepted = {
+    diplomatic_reputation = 1
+}
+aet_ages_aorv_germanIndustrialisation = {
+    production_efficiency = 0.33
+}
+aet_ages_aorv_greatGeneral = {
+    global_manpower_modifier = 0.10
+    	global_sailors_modifier = 0.10
+}
+aet_ages_aorv_hanoverMarriages = {
+    prestige = 2
+}
+aet_ages_aorv_hasDisciplinedArmy = {
+    free_leader_pool = 1
+    	leader_cost = -0.20
+}
+aet_ages_aorv_isEmperor = {
+    max_absolutism = 5
+}
+aet_ages_aorv_italyHegemony = {
+    administrative_efficiency = 0.05
+}
+aet_ages_aorv_marathaHorsemen = {
+    shock_damage = 0.20
+}
+aet_ages_aorv_prussianDiscipline = {
+    fire_damage_received = -0.2
+}
+aet_ages_aorv_russianEmpire = {
+    governing_capacity_modifier = 0.15
+    	min_autonomy_in_territories = 0.1
+}
+aet_ages_aorv_universities = {
+    all_power_cost = -0.025
+}
+
+
+aet_debug_armySupport = {
+    land_forcelimit = 100
+    global_manpower = 1000
+    manpower_recovery_speed = 100
+    global_supply_limit_modifier = 10000
+    land_attrition = -5
+    recover_army_morale_speed = 500
+    global_regiment_cost = -1
+    movement_speed = 10
+}

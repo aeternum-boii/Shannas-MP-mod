@@ -1,0 +1,596 @@
+namespace = ae_historical_dynasties
+normal_or_historical_nations = yes
+
+#Habsburgs
+country_event = {
+	id = ae_historical_dynasties.100
+	title = ae_historical_dynasties.100.t
+	desc = ae_historical_dynasties.100.d
+	picture = HABSBURG_eventPicture
+	hidden = yes
+	trigger = {
+		
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = HAB 
+		government = monarchy 
+		is_lesser_in_union = no
+		
+		NOT = { dynasty = "von Habsburg" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.1.a 
+		set_dynasty = "von Habsburg"
+	}
+}
+
+#Wittelsbach
+country_event = {
+	id = ae_historical_dynasties.200
+	title = ae_historical_dynasties.200.t
+	desc = ae_historical_dynasties.200.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		OR = { 
+			tag = PAL 
+			tag = BAV 
+		}
+		government = monarchy 
+		is_lesser_in_union = no
+		NOT = { dynasty = "von Wittelsbach" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.2.a 
+		set_dynasty = "von Wittelsbach"
+	}
+}
+
+#Hohenzollern
+country_event = {
+	id = ae_historical_dynasties.300
+	title = ae_historical_dynasties.300.t
+	desc = ae_historical_dynasties.300.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		OR = {
+			tag = BRA 
+			tag = PRU 
+		}
+		government = monarchy 
+		is_lesser_in_union = no
+		NOT = { dynasty = "von Hohenzollern" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.3.a 
+		set_dynasty = "von Hohenzollern"
+	}
+}
+
+#Rurikovich
+country_event = {
+	id = ae_historical_dynasties.400
+	title = ae_historical_dynasties.400.t
+	desc = ae_historical_dynasties.400.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		OR = {
+			tag = MOS 
+			tag = RUS 
+		}
+		government = monarchy 
+		is_lesser_in_union = no
+		NOT = { has_country_flag = rus_had_time_of_troubles }
+		NOT = { is_year = 1600 }
+		NOT = { dynasty = "Rurikovich" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.4.a 
+		set_dynasty = "Rurikovich"
+	}
+}
+
+#Vasa
+country_event = {
+	id = ae_historical_dynasties.500
+	title = ae_historical_dynasties.500.t
+	desc = ae_historical_dynasties.500.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = SWE
+		NOT = { is_year = 1650 }
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Vasa" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.5.a 
+		set_dynasty = "Vasa"
+	}
+}
+
+#Bourgogne
+country_event = {
+	id = ae_historical_dynasties.600
+	title = ae_historical_dynasties.600.t
+	desc = ae_historical_dynasties.600.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = BUR
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { is_year = 1525 }
+		NOT = { dynasty = "de Bourgogne" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.6.a 
+		set_dynasty = "de Bourgogne"
+	}
+}
+
+#Osmanoglu
+country_event = {
+	id = ae_historical_dynasties.700
+	title = ae_historical_dynasties.700.t
+	desc = ae_historical_dynasties.700.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = TUR
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Osmanoglu" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.7.a 
+		set_dynasty = "Osmanoglu"
+	}
+}
+
+#Aisin Gioro
+country_event = {
+	id = ae_historical_dynasties.800
+	title = ae_historical_dynasties.800.t
+	desc = ae_historical_dynasties.800.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		OR = {
+			tag = MJZ
+			was_tag = MJZ
+		}
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Aisin Gioro" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.8.a 
+		set_dynasty = "Aisin Gioro"
+	}
+}
+
+#Zhu (Ming)
+country_event = {
+	id = ae_historical_dynasties.900
+	title = ae_historical_dynasties.900.t
+	desc = ae_historical_dynasties.900.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = MNG
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Zhu" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.9.a 
+		set_dynasty = "Zhu"
+	}
+}
+
+#Bahmanis
+country_event = {
+	id = ae_historical_dynasties.1000
+	title = ae_historical_dynasties.1000.t
+	desc = ae_historical_dynasties.1000.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = BAH
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Bahmanid" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.10.a 
+		set_dynasty = "Bahmanid"
+	}
+}
+
+#Qara Qoyunlu
+country_event = {
+	id = ae_historical_dynasties.1100
+	title = ae_historical_dynasties.1100.t
+	desc = ae_historical_dynasties.1100.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = QAR
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Qara Qoyunlu" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.11.a 
+		set_dynasty = "Qara Qoyunlu"
+	}
+}
+
+#Aq Qoyunlu
+country_event = {
+	id = ae_historical_dynasties.1200
+	title = ae_historical_dynasties.1200.t
+	desc = ae_historical_dynasties.1200.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = AKK
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Aq Qoyunlu" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.12.a 
+		set_dynasty = "Aq Qoyunlu"
+	}
+}
+
+#Savoy
+country_event = {
+	id = ae_historical_dynasties.1300
+	title = ae_historical_dynasties.1300.t
+	desc = ae_historical_dynasties.1300.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		OR = {
+			tag = SAV
+			was_tag = SAV
+		}
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "di Savoia" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.13.a 
+		set_dynasty = "di Savoia"
+	}
+}
+
+#France Salic Law
+country_event = {
+	id = ae_historical_dynasties.1400
+	title = ae_historical_dynasties.1400.t
+	desc = ae_historical_dynasties.1400.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = FRA
+		government = monarchy 
+		is_lesser_in_union = no 
+		has_female_heir = yes
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.14.a 
+		remove_heir = {}
+		}
+}
+
+
+
+#Safavids
+country_event = {
+	id = ae_historical_dynasties.1600
+	title = ae_historical_dynasties.1600.t
+	desc = ae_historical_dynasties.1600.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = ARL
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Safavid" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.16.a 
+		set_dynasty = "Safavid"
+	}
+}
+
+#Stuarts (Scotland)
+country_event = {
+	id = ae_historical_dynasties.1700
+	title = ae_historical_dynasties.1700.t
+	desc = ae_historical_dynasties.1700.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		tag = SCO
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Stuart" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.17.a 
+		set_dynasty = "Stuart"
+	}
+}
+
+
+#Timurids 
+country_event = {
+	id = ae_historical_dynasties.1800
+	title = ae_historical_dynasties.1800.t
+	desc = ae_historical_dynasties.1800.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	hidden = yes
+	trigger = {
+		NOT = { ae_gamerule_dynasties_off = yes }
+		OR = {
+			ae_gamerule_dynasties_on = yes 
+			ai = yes
+		}
+		OR = {
+			tag = TIM 
+			tag = MUG 
+			tag = TRS
+			tag = KHO
+			AND = {
+				NOT = { is_year = 1600 }
+				tag = AFG 
+			}
+		}
+		government = monarchy 
+		is_lesser_in_union = no 
+		NOT = { dynasty = "Timurid" }
+		NOT = {
+			any_country = {
+				NOT = { tag = ROOT } ai = no
+				dynasty = ROOT 
+			}
+		}
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.18.a 
+		set_dynasty = "Timurid"
+	}
+}
+
+#Poland elective on Jagiellon death 
+country_event = {
+	id = ae_historical_dynasties.1900
+	title = ae_historical_dynasties.1900.t
+	desc = ae_historical_dynasties.1900.d
+	picture = SEJM_eventPicture
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		tag = POL
+		NOT = { dynasty = "Jagiellon" }
+		NOT = { dynasty = "Piast" }
+		NOT = { has_reform = polish_elective_monarchy }
+		has_regency = no
+		NOT = { has_global_flag = ae_pol_elective }
+	} 
+	
+	option = { 
+		name = ae_historical_dynasties.1900.a 
+		country_event = { id = flavor_pol.20 }
+		set_global_flag = ae_pol_elective
+	}
+}

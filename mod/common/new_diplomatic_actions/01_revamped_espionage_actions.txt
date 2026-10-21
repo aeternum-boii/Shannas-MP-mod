@@ -1,0 +1,213 @@
+# REVAMPED ESPIONAGE v12
+assassinate_general_action = {
+	category = covert
+	require_acceptance = no
+	is_visible = { FROM = { is_free_or_tributary_trigger = yes } }
+	is_allowed = { 
+		FROM = { num_of_generals = 1 } 
+		has_spy_network_in = { who = FROM value = 50 } 
+		treasury = 400 
+		spy_ideas = 4 
+		ROOT = { 
+			OR = { 
+				had_country_flag = { flag = esp_general_cd days = 1825 }
+				NOT = {
+					has_country_flag = esp_general_cd
+				}
+			}
+			ai = no
+		} 
+	}
+	on_accept = { 
+		hidden_effect = { 
+			FROM = { set_country_flag = esp_general_target save_global_event_target_as = esp_general_pending_target }
+			country_event = { id = revamped_espionage.203 } 
+			ROOT = { clr_country_flag = esp_general_cd set_country_flag = esp_general_cd } 
+		} 
+	}
+}
+
+assassinate_admiral_action = {
+	category = covert
+	require_acceptance = no
+	is_visible = { FROM = { is_free_or_tributary_trigger = yes } }
+	is_allowed = {  
+		FROM = { num_of_admirals = 1 } 
+		has_spy_network_in = { who = FROM value = 40 } 
+		treasury = 300  
+		spy_ideas = 4
+		ROOT = { 
+			OR = { 
+				had_country_flag = { flag = esp_admiral_cd days = 1825 }
+				NOT = {
+					has_country_flag = esp_admiral_cd
+				}
+			}
+			ai = no
+		} 
+	}
+	on_accept = { 
+		hidden_effect = { 
+			FROM = { set_country_flag = esp_admiral_target save_global_event_target_as = esp_admiral_pending_target }
+			country_event = { id = revamped_espionage.204 } 
+			ROOT = { clr_country_flag = esp_admiral_cd set_country_flag = esp_admiral_cd } 
+		} 
+	}
+}
+
+assassinate_advisor_action = {
+	category = covert
+	require_acceptance = no
+	is_visible = { FROM = { is_free_or_tributary_trigger = yes } }
+	is_allowed = { 
+		FROM = { has_advisor = yes } 
+		has_spy_network_in = { who = FROM value = 40 } 
+		treasury = 500  
+		spy_ideas = 3
+		ROOT = { 
+			OR = { 
+				had_country_flag = { flag = esp_advisor_cd days = 1825 }
+				NOT = {
+					has_country_flag = esp_advisor_cd
+				}
+			}
+			ai = no
+		} 
+	}
+	on_accept = { 
+		hidden_effect = { 
+			FROM = { set_country_flag = esp_advisor_target save_global_event_target_as = esp_advisor_pending_target }
+			country_event = { id = revamped_espionage.205 } 
+			ROOT = { clr_country_flag = esp_advisor_cd set_country_flag = esp_advisor_cd } 
+		} 
+	}
+}
+
+plant_rebellion_cell_action = {
+	category = covert
+	require_acceptance = no
+	is_visible = { FROM = { is_free_or_tributary_trigger = yes } }
+	is_allowed = { 
+		FROM = { 
+			NOT = { has_country_modifier = religious_rebellion_crackdown } 
+		} 
+		has_spy_network_in = { who = FROM value = 100 } 
+		treasury = 3750  
+		spy_ideas = 6
+		ROOT = { 
+			OR = { 
+				had_country_flag = { flag = esp_rebellion_cd days = 1825 }
+				NOT = {
+					has_country_flag = esp_rebellion_cd
+				}
+			}
+			ai = no
+		} 
+	}
+	on_accept = { 
+		hidden_effect = { 
+			FROM = { set_country_flag = esp_rebellion_target save_global_event_target_as = esp_rebellion_pending_target }
+			country_event = { id = revamped_espionage.206 } 
+			ROOT = { clr_country_flag = esp_rebellion_cd set_country_flag = esp_rebellion_cd } 
+		} 
+	}
+}
+
+infiltrate_treasury_action = {
+	category = covert
+	require_acceptance = no
+	is_visible = { FROM = { is_free_or_tributary_trigger = yes } }
+	is_allowed = { 
+		FROM = {
+			NOT = { has_country_modifier = lockdown_national_treasury }
+		} 
+		has_spy_network_in = { who = FROM value = 45 } 
+		dip_power = 100  
+		spy_ideas = 2
+		ROOT = { 
+			OR = { 
+				had_country_flag = { flag = esp_treasury_cd days = 1825 }
+				NOT = {
+					has_country_flag = esp_treasury_cd
+				}
+			}
+			ai = no
+		} 
+	}
+	on_accept = { 
+		hidden_effect = {
+			FROM = { set_country_flag = esp_treasury_target save_global_event_target_as = esp_treasury_pending_target }
+			country_event = { id = revamped_espionage.207 }
+			ROOT = { clr_country_flag = esp_treasury_cd set_country_flag = esp_treasury_cd }
+		}
+	}
+}
+
+destroy_fortifications_action = {
+	category = covert
+	require_acceptance = no
+	is_visible = { FROM = { is_free_or_tributary_trigger = yes } }
+	is_allowed = { 
+		FROM = { 
+			any_owned_province = { 
+				OR = { 
+					has_building = fort_15th 
+					has_building = fort_16th 
+					has_building = fort_17th 
+					has_building = fort_18th 
+				} 
+			} 
+		} 
+		has_spy_network_in = { who = FROM value = 25 } 
+		treasury = 450  
+		spy_ideas = 5
+		ROOT = { 
+			OR = { 
+				had_country_flag = { flag = esp_fort_cd days = 1825 }
+				NOT = {
+					has_country_flag = esp_fort_cd
+				}
+			}
+			ai = no
+		} 
+	}
+	on_accept = { 
+		hidden_effect = { 
+			FROM = { set_country_flag = esp_fort_target save_global_event_target_as = esp_fort_pending_target }
+			country_event = { id = revamped_espionage.208 } 
+			ROOT = { clr_country_flag = esp_fort_cd set_country_flag = esp_fort_cd } 
+		} 
+	}
+}
+
+stage_alliance_incident_action = {
+	category = covert
+	require_acceptance = no
+	is_visible = { FROM = { is_free_or_tributary_trigger = yes } }
+	is_allowed = { 
+		FROM = { 
+			any_ally = { always = yes } 
+			NOT = { has_country_modifier = alerted_national_security }
+		} 
+		has_spy_network_in = { who = FROM value = 50 } 
+		dip_power = 150 
+		treasury = 1500 
+		spy_ideas = 7
+		ROOT = { 
+			OR = { 
+				had_country_flag = { flag = esp_alliance_cd days = 1825 }
+				NOT = {
+					has_country_flag = esp_alliance_cd
+				}
+			}
+			ai = no
+		}  
+	}
+	on_accept = { 
+		hidden_effect = { 
+			FROM = { set_country_flag = esp_alliance_target save_global_event_target_as = esp_alliance_pending_target }
+			country_event = { id = revamped_espionage.209 } 
+			ROOT = { clr_country_flag = esp_alliance_cd set_country_flag = esp_alliance_cd } 
+		} 
+	}
+}

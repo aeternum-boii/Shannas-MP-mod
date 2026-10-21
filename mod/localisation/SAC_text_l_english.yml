@@ -1,0 +1,9 @@
+﻿l_english:
+ african_disease_modifier:0 "Malaria"
+ african_disease_modifier_2:0 "Malaria"
+ desc_african_disease_modifier:0 "Tropical diseases such as Malaria make foreign expeditions into the heart of Africa a deadly endeavour."
+ desc_african_disease_modifier_2:0 "Tropical diseases such as Malaria make foreign expeditions into the heart of Africa a deadly endeavour."
+
+ SAC_malaria.2.t:0 "Malaria Infections"
+ SAC_malaria.2.d:0 "Rampart malaria infections are driving us from our recently conquered land!"
+ SAC_malaria.2.a:0 "I'll be back!"
