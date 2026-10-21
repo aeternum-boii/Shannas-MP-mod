@@ -1,5 +1,0 @@
-government = republic
-technology_group = eastern
-primary_culture = russian_culture
-religion = orthodox
-capital = 287

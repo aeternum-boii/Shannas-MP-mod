@@ -1,5 +1,0 @@
-fee_pilgrimage_holy_land = {
-	opinion = 50
-	max = 100
-	yearly_decay = 1
-}

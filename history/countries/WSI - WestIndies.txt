@@ -1,5 +1,0 @@
-government = republic
-technology_group = western
-primary_culture = afro_american #the lack of Jamaican culture is presumably an oversight by the developers, luckily EVHO adds Afro-American, close enough :)
-religion = catholic
-capital = 487

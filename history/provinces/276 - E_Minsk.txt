@@ -1,3 +1,0 @@
-#276 - Minsk
-
-add_core = MNK

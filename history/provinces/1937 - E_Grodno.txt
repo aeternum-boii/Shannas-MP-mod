@@ -1,3 +1,0 @@
-#277 - Grodno
-
-add_core = GRO

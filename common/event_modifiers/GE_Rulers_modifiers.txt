@@ -1,3 +1,0 @@
-ge_clerical_administration = {
-	technology_cost = -0.05
-}

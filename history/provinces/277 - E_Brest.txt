@@ -1,3 +1,0 @@
-#Brest-Litovsk
-
-add_core = GRO

@@ -1,6 +1,0 @@
-# Revamped Espionage opinion modifiers
-
-esp_alliance_incident = {
-	opinion = -150
-	months = 60
-}

@@ -1,3 +1,0 @@
-189 = {"Lóreine" "Lóreine"}
-188 = {"Mès" "Mès"}
-193 = {"Fraintche-Comtè" "Fraintche-Comtè"}

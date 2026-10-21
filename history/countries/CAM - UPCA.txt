@@ -1,5 +1,0 @@
-government = republic
-technology_group = western
-religion = catholic
-primary_culture = mexican
-capital = 841	# Guatemala city

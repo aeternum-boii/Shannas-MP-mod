@@ -1,3 +1,0 @@
-#278 - Pinsk
-
-add_core = TPK

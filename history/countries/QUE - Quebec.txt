@@ -1,5 +1,0 @@
-government = republic
-religion = catholic
-primary_culture = creole
-technology_group = western
-capital = 986	# Quebec city

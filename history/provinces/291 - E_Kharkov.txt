@@ -1,3 +1,0 @@
-#291 - Kharkov
-
-add_core = CHR

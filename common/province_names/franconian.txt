@@ -1,7 +1,0 @@
-79 = {"Wörtzburch" "Wörtzburch"}
-66 = {"Bambärch" "Bambärch"}
-4717 = {"Bayreuth" "Bayreuth"}
-67 = {"Nämberch" "Nämberch"}
-71 = {"Onoltspach" "Onoltspach"}
-4715 = {"Rotnbursch" "Rotnbursch"}
-4717 = {"Bareid" "Bareid"}

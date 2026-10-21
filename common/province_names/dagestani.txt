@@ -1,3 +1,0 @@
-2198 = {"Xunzäq" "Xunzäq"}
-4306 = {"Lakäy" "Lakäy"}
-2199 = {"Tärgu" "Tärgu"}

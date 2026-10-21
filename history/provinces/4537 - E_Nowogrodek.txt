@@ -1,3 +1,0 @@
-#4537 - Nowogrodek
-
-add_core = TPK

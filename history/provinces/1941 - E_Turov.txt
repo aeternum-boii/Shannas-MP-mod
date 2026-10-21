@@ -1,3 +1,0 @@
-#Turov
-
-add_core = TPK

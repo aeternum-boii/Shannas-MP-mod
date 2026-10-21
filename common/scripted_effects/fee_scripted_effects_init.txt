@@ -1,3 +1,0 @@
-FEE_initiate_starting_countries = {
-	NAP = { set_country_flag = naples_submits_to_the_pope }
-}

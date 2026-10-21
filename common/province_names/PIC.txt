@@ -1,3 +1,0 @@
-87 = {"Calés" "Calés"}
-4769 = {"Lile" "Lile"}
-167 = {"Hénau" "Hénau"}
