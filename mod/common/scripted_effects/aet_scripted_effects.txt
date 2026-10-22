@@ -1,5 +1,14 @@
 aet_flBuilding_applyCorrect = {
+	if = {
+		limit = {
+			NOT = {
+				has_building = conscription_center
+				has_building = regimental_camp
+			}
+		}
 
+		aet_flBuilding_removeAll = yes 
+	} else = {
 	if = {
 		limit = {
 			development = 40
@@ -468,6 +477,7 @@ aet_flBuilding_applyCorrect = {
 				}
 			}
 		}
+	}
 	}
 }
 

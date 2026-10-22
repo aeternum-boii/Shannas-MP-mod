@@ -3,8 +3,11 @@
 This file establishes the authoritative changelog for the project beginning with v4.0.0. 
 There have been tries to establish proper changelogs before but those usually were not exhaustive. Those can also be found here, but do not always show everything that has changed.
 
+Changelogs are also seperately saved in the folder changelogs. These are merely provided as utility for the discord server, and might be shorter than the changelogs in this file. 
+
 Versions contained in this file (descending):
  - [v4.0.0](#v400--back-to-top) *not yet released*
+ - [v3.25.2](#v3252--back-to-top) *(22.10.2026)*
  - [v3.25.1](#v3251--back-to-top) *(06.10.2026)*
  - [v3.24.3](#v3243--back-to-top) *(03.10.2026)*
  - [v3.24.2](#v3242--back-to-top) *(26.09.2026)* (sic!)
@@ -661,6 +664,11 @@ New options:
 - Pagonia Unita Alpinorum
 - Republik delle Alpes
 - Civitatum Raetiae et Noricum
+
+## v3.25.2 <small>[? Back to top](#changelogs)</small>
+
+### Bug fixes
+- Force Limit buildings apply their buff when they don't exist sometimes ([Example](https://discord.com/channels/1402647007117574164/1427011291104673986/1561095753919631370))
 
 
 ## v4.0.0 <small>[? Back to top](#changelogs)</small>
