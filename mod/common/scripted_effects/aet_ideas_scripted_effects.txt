@@ -896,7 +896,7 @@ aet_ideas_grandeurApplyModifiers = {
 
 	if = {
 		limit = {
-			grandeur_ideas = 1 
+			has_idea = grandeur_ideas_0 
 		}
 
 		if = {
@@ -949,7 +949,7 @@ aet_ideas_grandeurApplyModifiers = {
 
 	if = {
 		limit = {
-			grandeur_ideas = 2
+			has_idea = grandeur_ideas_1
 		}
 
 		if = {
@@ -958,7 +958,7 @@ aet_ideas_grandeurApplyModifiers = {
 			}
 
 			add_country_modifier = {
-				name = grandeur_ideas_1_4
+				name = grandeur_ideas_1_0
 				duration = -1
 			}
 		}
@@ -968,7 +968,7 @@ aet_ideas_grandeurApplyModifiers = {
 			}
 
 			add_country_modifier = {
-				name = grandeur_ideas_1_3
+				name = grandeur_ideas_1_1
 				duration = -1
 			}
 		}
@@ -988,13 +988,13 @@ aet_ideas_grandeurApplyModifiers = {
 			}
 
 			add_country_modifier = {
-				name = grandeur_ideas_1_1
+				name = grandeur_ideas_1_3
 				duration = -1
 			}
 		}
 		else = {
 			add_country_modifier = {
-				name = grandeur_ideas_1_0
+				name = grandeur_ideas_1_4
 				duration = -1
 			}
 		}
@@ -1002,7 +1002,7 @@ aet_ideas_grandeurApplyModifiers = {
 
 	if = {
 		limit = {
-			grandeur_ideas = 3
+			has_idea = grandeur_ideas_2
 		}
 
 		if = {
@@ -1055,7 +1055,7 @@ aet_ideas_grandeurApplyModifiers = {
 
 	if = {
 		limit = {
-			grandeur_ideas = 4
+			has_idea = grandeur_ideas_3
 		}
 
 		if = {
@@ -1108,7 +1108,7 @@ aet_ideas_grandeurApplyModifiers = {
 
 	if = {
 		limit = {
-			grandeur_ideas = 5
+			has_idea = grandeur_ideas_4
 		}
 
 		if = {
@@ -1161,7 +1161,7 @@ aet_ideas_grandeurApplyModifiers = {
 
 	if = {
 		limit = {
-			grandeur_ideas = 6
+			has_idea = grandeur_ideas_5
 		}
 
 		if = {
@@ -1214,7 +1214,7 @@ aet_ideas_grandeurApplyModifiers = {
 
 	if = {
 		limit = {
-			grandeur_ideas = 7
+			has_idea = grandeur_ideas_6
 		}
 
 		if = {
@@ -1343,7 +1343,7 @@ aet_ideas_applyNationalismModifierBasedOnIdea = {
 			if = {
 				limit = {
 					controller = {
-						nationalism_ideas = 5 
+						has_idea = nationalism_ideas_4
 					}
 				}
 
@@ -1354,7 +1354,7 @@ aet_ideas_applyNationalismModifierBasedOnIdea = {
 			} else_if = {
 				limit = {
 					controller = {
-						nationalism_ideas = 4 
+						has_idea = nationalism_ideas_3
 					}
 				}
 
@@ -1377,7 +1377,7 @@ aet_ideas_applyNationalismModifierBasedOnIdea = {
 			if = {
 				limit = {
 					controller = {
-						nationalism_ideas = 5 
+						has_idea = nationalism_ideas_4
 					}
 				}
 
@@ -1388,7 +1388,7 @@ aet_ideas_applyNationalismModifierBasedOnIdea = {
 			} else_if = {
 				limit = {
 					controller = {
-						nationalism_ideas = 4 
+						has_idea = nationalism_ideas_3
 					}
 				}
 

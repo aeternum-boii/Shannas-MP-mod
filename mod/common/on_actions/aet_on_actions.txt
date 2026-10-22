@@ -12,14 +12,7 @@ on_yearly_pulse = {
 			which = aet_eliteGuards_actions_bank
 			value = 1 
 		}
-	}
-	if = {
-		limit = {
-			has_idea_group = grandeur_ideas
-		}
-
-		aet_ideas_grandeurApplyModifiers = yes
-	}  
+	} 
 }
 
 on_monthly_pulse = {

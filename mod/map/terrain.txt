@@ -120,7 +120,7 @@ categories =  {
 			
 			43 97 98 100 4382 4383 #Netherlands
 			
-			234 235 236 238 4367 4368 4371 4375 #British isles
+			234 236 238 244 4367 4368 4371 4375 #British isles
 			
 			358 359 361 363 2316 4316 #Egypt
 			
@@ -302,7 +302,7 @@ categories =  {
 			1982 4165 4166 #Scandinavia
 			1014 1027 1819 1835 4181 4182 4184 4186 4189 #Japan
 			4127 4241 4242 4243 4251 4252 4253 4254 4260 4266 #Eastern Europe
-			240 244 4372 4377 4378 4379 4380 #Britain
+			240 4372 4377 4378 4379 4380 #Britain
 			4381 4387 4389 #France & Low Countries
 			4541 4537 4535 2963 4544 4543 4524 # New PLC provinces
 			4555 4558 # new iberia provinces 1.28
@@ -323,7 +323,7 @@ categories =  {
 		type = mountains
 		sound_type = mountains
 
-		movement_cost = 1.5
+		movement_cost = 2.25
 		defence = 2
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.75
@@ -472,7 +472,7 @@ categories =  {
 		type = jungle
 		sound_type = jungle
 
-		movement_cost = 1.5
+		movement_cost = 2.0
 		defence = 1
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.8
@@ -518,7 +518,7 @@ categories =  {
 		type = marsh
 		sound_type = forest
 
-		movement_cost = 1.3
+		movement_cost = 1.75
 		defence = 2
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
@@ -528,7 +528,7 @@ categories =  {
 		local_defensiveness = 0.6
 
 		terrain_override = {
-			1860 #England
+			1860 235 #England
 			96 #Netherlands
 			4738 #Aquilea
 			893
