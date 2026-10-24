@@ -8,7 +8,7 @@ BUILD_CONFIG="$MOD_DIR/alphaBuildConfig.vdf"
 
 cd "$MOD_DIR"
 
-echo "Pulling latest changes..."
+echo "Pulling latest changes...."
 git pull --ff-only
 
 # Read and validate the current alpha version.
