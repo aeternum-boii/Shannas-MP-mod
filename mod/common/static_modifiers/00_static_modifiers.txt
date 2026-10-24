@@ -592,8 +592,8 @@ base_values = {
 	tolerance_heathen = -3
 	tolerance_heretic = -2
 	global_missionary_strength = 0.02
-	global_manpower = 10.0
-	advisor_pool = 3
+	global_manpower = 5.0
+	advisor_pool = 6
 	colonist_placement_chance = 0.1
 	free_leader_pool = 1
 	republican_tradition = 1
@@ -820,6 +820,7 @@ war_exhaustion = {
 	monthly_arabic_trade_influence_power = -0.05
 	monthly_cultural_unity = -0.05
 	monthly_authority_power = 0.01
+	war_exhaustion = -0.025
 }
 
 doom = {
@@ -1198,6 +1199,8 @@ prestige = {
 	monthly_divine_authority = 0.1
 	monthly_authority_power = -0.2
 	monthly_italian_dinasties = 0.25
+	
+	prestige_decay = 0.10
 }
 
 no_debate_in_parliament = {
@@ -1577,8 +1580,8 @@ all_nations = {
 
 subject_nation = {
 	global_tax_income = -6
-	land_forcelimit	= -3
-	naval_forcelimit = -6
+	land_forcelimit	= -6
+	naval_forcelimit = -10
 }
 
 vassal_nation = {

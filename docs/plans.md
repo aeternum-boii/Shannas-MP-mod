@@ -18,7 +18,7 @@ These are updates of a size, that warrant a new high level version. Usually only
 
   Touching up existing adjacencies, adding new ones and potentially adding / removing provinces. Also adding Jan Mayen as a wasteland to store easter egg monuments in. In general the idea being: Driving more abilities to fight over minor water borders (like more competitive mp mods), reducing detail in areas where no players play and increasing detail in relevant areas.
 
-  Specific ideas: More Canals (Thailand, Russia, Great Lakes?), More Adjacencies in general, Guinea no wasteland, Great Lakes (Africa) wasteland
+  Specific ideas: More Canals (Thailand, Russia, Great Lakes?), More Adjacencies in general, Guinea no wasteland, Great Lakes (Africa) wasteland, lake in novgorod, maybe some crossable lakes (there literally is a 'lake' adjacency)
 
 - **Great Project Rework** - *Priority 4*
 
@@ -36,11 +36,36 @@ These are updates of a size, that warrant a new high level version. Usually only
    - British Earls in Ireland (Osmond, Desmond, Wexford, Kildare, Ulster)
    - Duchy of Aquitaine in Personal Union
    - Minor Alterations to the British / Angevin Mission tree 
+   - Make the current consort spawn via event (one year in); tied to changing the national focus to mil at game start to keep the mana balance with france
+
 - **Italy Touchup** - *Priority 1*
 
   Improving the Italian Minor mission trees to be closer to the likes of the dutch minor mission tree
 
+- **Austria Touchup** - *Priority 3*
+
+  Improving the Austrian mission tree, such that at least two thirds of it can be completed in an expected mp game.
+
+- **Building Cost Rebalance** - *Priority 6*
+
+  Increasing the cost of buildings, bringing them closer to the regular army nerfs. 
+
+- **Modularise the Country Renaming Better** - *Priority 2*
+
+  Make the Country Renaming script driven, employing json files as input and generating the whole event / loc structure.
+
+- **Take a look at the New World** - *Priority 5*
+
+  Fixing the CN Formables. Adding some more flavour to them (in the sense of ideas). Make the natives more engaging to interact with. 
+
+= **Adjust the Trade Map slightly** - *Priority 5*
+
+  Making slight adjustments to the trade map to enable more colonizers, without changing the vanilla feel too much. 
 
 ## Patches
 
 - **Reduction of minimal relations for Alliances** - *Priority 8*
+- **Remove dishonored CTA penalties** - *Priority 6*
+- **Rejectable Advisor Events** - *Priority 5*
+- **Scale the Naval FL like Land FL** - *Priority 8*
+- **remove dev cost if vassal (player only)** = *Priority 5*
