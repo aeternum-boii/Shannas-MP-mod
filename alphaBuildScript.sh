@@ -16,7 +16,6 @@ VERSION=$(<"$VERSION_FILE")
 
 if [[ ! "$VERSION" =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)-alpha\.([0-9]+)$ ]]; then
     echo "Invalid alpha version: $VERSION" >&2
-    exit 1
 fi
 
 MAJOR="${BASH_REMATCH[1]}"

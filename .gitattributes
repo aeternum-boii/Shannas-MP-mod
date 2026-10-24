@@ -8,6 +8,7 @@
 *.asset text eol=crlf
 *.dds binary
 *.sh eol=lf
+*.vdf eol=lf
 
 #
 # https://help.github.com/articles/dealing-with-line-endings/
