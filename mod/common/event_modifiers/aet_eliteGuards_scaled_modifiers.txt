@@ -1,0 +1,135 @@
+# INF 
+
+aet_eliteGuards_plutoMoraleDamage = {
+    is_revolutionary_guard_modifier = yes
+    morale_damage = 0.10
+}
+aet_eliteGuards_plutoMoraleDamageReceived = {
+    is_revolutionary_guard_modifier = yes
+    morale_damage_received = -0.10
+}
+aet_eliteGuards_plutoManpowerUsage = {
+    is_revolutionary_guard_modifier = yes
+    regiment_manpower_usage = -0.20
+}
+
+aet_eliteGuards_plutoCost_0 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 0.25
+}
+aet_eliteGuards_plutoCost_1 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 0.50
+}
+aet_eliteGuards_plutoCost_2 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 0.75
+}
+aet_eliteGuards_plutoCost_3 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.00
+}
+aet_eliteGuards_plutoCost_4 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.25
+}
+aet_eliteGuards_plutoCost_5 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.5
+}
+aet_eliteGuards_plutoCost_6 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 1.75
+}
+aet_eliteGuards_plutoCost_7 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.00
+}
+aet_eliteGuards_plutoCost_8 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.25
+}
+aet_eliteGuards_plutoCost_9 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.5
+}
+aet_eliteGuards_plutoCost_10 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 2.75
+}
+aet_eliteGuards_plutoCost_11 = {
+    is_revolutionary_guard_modifier = yes
+    land_maintenance_modifier = 3.00
+}
+
+aet_eliteGuards_offensiveShockDealt = {
+    is_revolutionary_guard_modifier = yes
+    shock_damage = 0.10
+
+    reinforce_cost_modifier = 0.33
+    land_maintenance_modifier = 0.25
+}
+aet_eliteGuards_offensiveFireDealt = {
+    is_revolutionary_guard_modifier = yes
+    fire_damage = 0.10
+
+    reinforce_cost_modifier = 0.33
+    land_maintenance_modifier = 0.25
+}
+aet_eliteGuards_offensiveAssaultAbility = {
+    is_revolutionary_guard_modifier = yes
+    assault_fort_ability = 0.50
+
+    reinforce_cost_modifier = 0.05  
+}
+
+
+# CAV
+# General Directions
+# Heavy Cav (Husar style) 
+# Light Cav (Cossack style) 
+# Light Cav Archers (Horde style / semi Muscovite Style)
+
+# Potentially (potentially due to implementation difficulty):
+# Heavy Cav Archers (late Muscovite Style)
+# Combined Arms of Heavy Cav and Light Cav Archers (Teuton Style)
+# Mounted Inf (like Dragoons)
+
+aet_eliteGuards_heavyCavalry_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	shock_damage = 0.35
+	morale_damage = 0.35
+	fire_damage = -0.05
+	morale_damage_received = -0.2
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+	cavalry_cost = 2 # seems to only affect cost of raising here 
+	land_maintenance_modifier = 1
+	recover_army_morale_speed = -0.35
+	reinforce_speed = -0.75
+}
+
+aet_eliteGuards_lightCavalry_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	shock_damage = 0.1
+	cavalry_flanking = 0.5
+	cavalry_cost = -0.05
+}
+aet_eliteGuards_lightCavalryCossack_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	shock_damage = 0.025
+	cavalry_cost = -0.05
+}
+
+aet_eliteGuards_horseArcher_specialisation = {
+	is_revolutionary_guard_modifier = yes 
+	cavalry_fire = 0.5
+	fire_damage = 0.10
+	cavalry_flanking = 1
+}
+aet_eliteGuards_horseArcher_horde = {
+	is_revolutionary_guard_modifier = yes 
+	cavalry_fire = 1.5 
+	fire_damage = 0.15
+	cavalry_cost = -0.15 
+}

@@ -5,6 +5,6 @@
     "contentfolder"      "/srv/modding/shannaMod/mod"
     "previewfile"        "/srv/modding/shannaMod/mod/thumbnail.png"
     "title"              "Shanna Mod Alpha Branch"
-    "description"        "This is the alpha branch of the Shanna Mod, basically featuring the nightly build "
+    "description"        "This is the alpha branch of the Shanna Mod, basically featuring the nightly build"
     "changenote"         "see docs/changelogs.md"
 }

@@ -1,0 +1,3616 @@
+aet_eliteGuards_heavyCavalry_specialisation_2_0_p = {
+	reinforce_speed = -0.375
+	morale_damage = 0.700
+	fire_damage = -0.025
+	land_maintenance_modifier = 0.500
+	morale_damage_received = -0.400
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.175
+	fire_damage_received = -0.100
+	cavalry_cost = 1.000
+	shock_damage_received = -0.100
+	shock_damage = 0.700
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_7_p = {
+	reinforce_speed = -1.071
+	morale_damage = 0.245
+	fire_damage = -0.071
+	land_maintenance_modifier = 1.429
+	morale_damage_received = -0.140
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.500
+	fire_damage_received = -0.035
+	cavalry_cost = 2.857
+	shock_damage_received = -0.035
+	shock_damage = 0.245
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_4_p = {
+	reinforce_speed = -1.875
+	morale_damage = 0.140
+	fire_damage = -0.125
+	land_maintenance_modifier = 2.500
+	morale_damage_received = -0.080
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.875
+	fire_damage_received = -0.020
+	cavalry_cost = 5.000
+	shock_damage_received = -0.020
+	shock_damage = 0.140
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_5_p = {
+	reinforce_speed = -0.300
+	morale_damage = 0.875
+	fire_damage = -0.020
+	land_maintenance_modifier = 0.400
+	morale_damage_received = -0.500
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.140
+	fire_damage_received = -0.125
+	cavalry_cost = 0.800
+	shock_damage_received = -0.125
+	shock_damage = 0.875
+}
+aet_eliteGuards_heavyCavalry_specialisation_3_1_p = {
+	reinforce_speed = -0.242
+	morale_damage = 1.085
+	fire_damage = -0.016
+	land_maintenance_modifier = 0.323
+	morale_damage_received = -0.620
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.113
+	fire_damage_received = -0.155
+	cavalry_cost = 0.645
+	shock_damage_received = -0.155
+	shock_damage = 1.085
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_2_p = {
+	reinforce_speed = -0.625
+	morale_damage = 0.420
+	fire_damage = -0.042
+	land_maintenance_modifier = 0.833
+	morale_damage_received = -0.240
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.292
+	fire_damage_received = -0.060
+	cavalry_cost = 1.667
+	shock_damage_received = -0.060
+	shock_damage = 0.420
+}
+aet_eliteGuards_heavyCavalry_specialisation_3_0_p = {
+	reinforce_speed = -0.250
+	morale_damage = 1.050
+	fire_damage = -0.017
+	land_maintenance_modifier = 0.333
+	morale_damage_received = -0.600
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.117
+	fire_damage_received = -0.150
+	cavalry_cost = 0.667
+	shock_damage_received = -0.150
+	shock_damage = 1.050
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_6_p = {
+	reinforce_speed = -0.288
+	morale_damage = 0.910
+	fire_damage = -0.019
+	land_maintenance_modifier = 0.385
+	morale_damage_received = -0.520
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.135
+	fire_damage_received = -0.130
+	cavalry_cost = 0.769
+	shock_damage_received = -0.130
+	shock_damage = 0.910
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_1_p = {
+	reinforce_speed = -0.357
+	morale_damage = 0.735
+	fire_damage = -0.024
+	land_maintenance_modifier = 0.476
+	morale_damage_received = -0.420
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.167
+	fire_damage_received = -0.105
+	cavalry_cost = 0.952
+	shock_damage_received = -0.105
+	shock_damage = 0.735
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_7_p = {
+	reinforce_speed = -0.441
+	morale_damage = 0.595
+	fire_damage = -0.029
+	land_maintenance_modifier = 0.588
+	morale_damage_received = -0.340
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.206
+	fire_damage_received = -0.085
+	cavalry_cost = 1.176
+	shock_damage_received = -0.085
+	shock_damage = 0.595
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_4_p = {
+	reinforce_speed = -0.536
+	morale_damage = 0.490
+	fire_damage = -0.036
+	land_maintenance_modifier = 0.714
+	morale_damage_received = -0.280
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.250
+	fire_damage_received = -0.070
+	cavalry_cost = 1.429
+	shock_damage_received = -0.070
+	shock_damage = 0.490
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_2_p = {
+	reinforce_speed = -3.750
+	morale_damage = 0.070
+	fire_damage = -0.250
+	land_maintenance_modifier = 5.000
+	morale_damage_received = -0.040
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -1.750
+	fire_damage_received = -0.010
+	cavalry_cost = 10.000
+	shock_damage_received = -0.010
+	shock_damage = 0.070
+}
+aet_eliteGuards_heavyCavalry_specialisation_3_2_p = {
+	reinforce_speed = -0.234
+	morale_damage = 1.120
+	fire_damage = -0.016
+	land_maintenance_modifier = 0.313
+	morale_damage_received = -0.640
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.109
+	fire_damage_received = -0.160
+	cavalry_cost = 0.625
+	shock_damage_received = -0.160
+	shock_damage = 1.120
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_6_p = {
+	reinforce_speed = -1.250
+	morale_damage = 0.210
+	fire_damage = -0.083
+	land_maintenance_modifier = 1.667
+	morale_damage_received = -0.120
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.583
+	fire_damage_received = -0.030
+	cavalry_cost = 3.333
+	shock_damage_received = -0.030
+	shock_damage = 0.210
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_9_p = {
+	reinforce_speed = -0.395
+	morale_damage = 0.665
+	fire_damage = -0.026
+	land_maintenance_modifier = 0.526
+	morale_damage_received = -0.380
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.184
+	fire_damage_received = -0.095
+	cavalry_cost = 1.053
+	shock_damage_received = -0.095
+	shock_damage = 0.665
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_2_p = {
+	reinforce_speed = -0.341
+	morale_damage = 0.770
+	fire_damage = -0.023
+	land_maintenance_modifier = 0.455
+	morale_damage_received = -0.440
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.159
+	fire_damage_received = -0.110
+	cavalry_cost = 0.909
+	shock_damage_received = -0.110
+	shock_damage = 0.770
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_7_p = {
+	reinforce_speed = -0.278
+	morale_damage = 0.945
+	fire_damage = -0.019
+	land_maintenance_modifier = 0.370
+	morale_damage_received = -0.540
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.130
+	fire_damage_received = -0.135
+	cavalry_cost = 0.741
+	shock_damage_received = -0.135
+	shock_damage = 0.945
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_5_p = {
+	reinforce_speed = -1.500
+	morale_damage = 0.175
+	fire_damage = -0.100
+	land_maintenance_modifier = 2.000
+	morale_damage_received = -0.100
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.700
+	fire_damage_received = -0.025
+	cavalry_cost = 4.000
+	shock_damage_received = -0.025
+	shock_damage = 0.175
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_9_p = {
+	reinforce_speed = -0.833
+	morale_damage = 0.315
+	fire_damage = -0.056
+	land_maintenance_modifier = 1.111
+	morale_damage_received = -0.180
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.389
+	fire_damage_received = -0.045
+	cavalry_cost = 2.222
+	shock_damage_received = -0.045
+	shock_damage = 0.315
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_8_p = {
+	reinforce_speed = -0.268
+	morale_damage = 0.980
+	fire_damage = -0.018
+	land_maintenance_modifier = 0.357
+	morale_damage_received = -0.560
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.125
+	fire_damage_received = -0.140
+	cavalry_cost = 0.714
+	shock_damage_received = -0.140
+	shock_damage = 0.980
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_1_p = {
+	reinforce_speed = -7.500
+	morale_damage = 0.035
+	fire_damage = -0.500
+	land_maintenance_modifier = 10.000
+	morale_damage_received = -0.020
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -3.500
+	fire_damage_received = -0.005
+	cavalry_cost = 20.000
+	shock_damage_received = -0.005
+	shock_damage = 0.035
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_6_p = {
+	reinforce_speed = -0.469
+	morale_damage = 0.560
+	fire_damage = -0.031
+	land_maintenance_modifier = 0.625
+	morale_damage_received = -0.320
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.219
+	fire_damage_received = -0.080
+	cavalry_cost = 1.250
+	shock_damage_received = -0.080
+	shock_damage = 0.560
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_3_p = {
+	reinforce_speed = -0.326
+	morale_damage = 0.805
+	fire_damage = -0.022
+	land_maintenance_modifier = 0.435
+	morale_damage_received = -0.460
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.152
+	fire_damage_received = -0.115
+	cavalry_cost = 0.870
+	shock_damage_received = -0.115
+	shock_damage = 0.805
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_3_p = {
+	reinforce_speed = -2.500
+	morale_damage = 0.105
+	fire_damage = -0.167
+	land_maintenance_modifier = 3.333
+	morale_damage_received = -0.060
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -1.167
+	fire_damage_received = -0.015
+	cavalry_cost = 6.667
+	shock_damage_received = -0.015
+	shock_damage = 0.105
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_1_p = {
+	reinforce_speed = -0.682
+	morale_damage = 0.385
+	fire_damage = -0.045
+	land_maintenance_modifier = 0.909
+	morale_damage_received = -0.220
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.318
+	fire_damage_received = -0.055
+	cavalry_cost = 1.818
+	shock_damage_received = -0.055
+	shock_damage = 0.385
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_0_p = {
+	reinforce_speed = -0.750
+	morale_damage = 0.350
+	fire_damage = -0.050
+	land_maintenance_modifier = 1.000
+	morale_damage_received = -0.200
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.350
+	fire_damage_received = -0.050
+	cavalry_cost = 2.000
+	shock_damage_received = -0.050
+	shock_damage = 0.350
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_8_p = {
+	reinforce_speed = -0.417
+	morale_damage = 0.630
+	fire_damage = -0.028
+	land_maintenance_modifier = 0.556
+	morale_damage_received = -0.360
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.194
+	fire_damage_received = -0.090
+	cavalry_cost = 1.111
+	shock_damage_received = -0.090
+	shock_damage = 0.630
+}
+aet_eliteGuards_heavyCavalry_specialisation_0_8_p = {
+	reinforce_speed = -0.938
+	morale_damage = 0.280
+	fire_damage = -0.063
+	land_maintenance_modifier = 1.250
+	morale_damage_received = -0.160
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.438
+	fire_damage_received = -0.040
+	cavalry_cost = 2.500
+	shock_damage_received = -0.040
+	shock_damage = 0.280
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_9_p = {
+	reinforce_speed = -0.259
+	morale_damage = 1.015
+	fire_damage = -0.017
+	land_maintenance_modifier = 0.345
+	morale_damage_received = -0.580
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.121
+	fire_damage_received = -0.145
+	cavalry_cost = 0.690
+	shock_damage_received = -0.145
+	shock_damage = 1.015
+}
+aet_eliteGuards_heavyCavalry_specialisation_2_4_p = {
+	reinforce_speed = -0.313
+	morale_damage = 0.840
+	fire_damage = -0.021
+	land_maintenance_modifier = 0.417
+	morale_damage_received = -0.480
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.146
+	fire_damage_received = -0.120
+	cavalry_cost = 0.833
+	shock_damage_received = -0.120
+	shock_damage = 0.840
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_5_p = {
+	reinforce_speed = -0.500
+	morale_damage = 0.525
+	fire_damage = -0.033
+	land_maintenance_modifier = 0.667
+	morale_damage_received = -0.300
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.233
+	fire_damage_received = -0.075
+	cavalry_cost = 1.333
+	shock_damage_received = -0.075
+	shock_damage = 0.525
+}
+aet_eliteGuards_heavyCavalry_specialisation_1_3_p = {
+	reinforce_speed = -0.577
+	morale_damage = 0.455
+	fire_damage = -0.038
+	land_maintenance_modifier = 0.769
+	morale_damage_received = -0.260
+	is_revolutionary_guard_modifier = yes
+	recover_army_morale_speed = -0.269
+	fire_damage_received = -0.065
+	cavalry_cost = 1.538
+	shock_damage_received = -0.065
+	shock_damage = 0.455
+}
+aet_eliteGuards_horseArcher_horde_2_0_p = {
+	fire_damage = 0.300
+	cavalry_fire = 3.000
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.300
+}
+aet_eliteGuards_horseArcher_horde_0_7_p = {
+	fire_damage = 0.105
+	cavalry_fire = 1.050
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.105
+}
+aet_eliteGuards_horseArcher_horde_0_4_p = {
+	fire_damage = 0.060
+	cavalry_fire = 0.600
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.060
+}
+aet_eliteGuards_horseArcher_horde_2_5_p = {
+	fire_damage = 0.375
+	cavalry_fire = 3.750
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.375
+}
+aet_eliteGuards_horseArcher_horde_3_1_p = {
+	fire_damage = 0.465
+	cavalry_fire = 4.650
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.465
+}
+aet_eliteGuards_horseArcher_horde_1_2_p = {
+	fire_damage = 0.180
+	cavalry_fire = 1.800
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.180
+}
+aet_eliteGuards_horseArcher_horde_3_0_p = {
+	fire_damage = 0.450
+	cavalry_fire = 4.500
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.450
+}
+aet_eliteGuards_horseArcher_horde_2_6_p = {
+	fire_damage = 0.390
+	cavalry_fire = 3.900
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.390
+}
+aet_eliteGuards_horseArcher_horde_2_1_p = {
+	fire_damage = 0.315
+	cavalry_fire = 3.150
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.315
+}
+aet_eliteGuards_horseArcher_horde_1_7_p = {
+	fire_damage = 0.255
+	cavalry_fire = 2.550
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.255
+}
+aet_eliteGuards_horseArcher_horde_1_4_p = {
+	fire_damage = 0.210
+	cavalry_fire = 2.100
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.210
+}
+aet_eliteGuards_horseArcher_horde_0_2_p = {
+	fire_damage = 0.030
+	cavalry_fire = 0.300
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.030
+}
+aet_eliteGuards_horseArcher_horde_3_2_p = {
+	fire_damage = 0.480
+	cavalry_fire = 4.800
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.480
+}
+aet_eliteGuards_horseArcher_horde_0_6_p = {
+	fire_damage = 0.090
+	cavalry_fire = 0.900
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.090
+}
+aet_eliteGuards_horseArcher_horde_1_9_p = {
+	fire_damage = 0.285
+	cavalry_fire = 2.850
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.285
+}
+aet_eliteGuards_horseArcher_horde_2_2_p = {
+	fire_damage = 0.330
+	cavalry_fire = 3.300
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.330
+}
+aet_eliteGuards_horseArcher_horde_2_7_p = {
+	fire_damage = 0.405
+	cavalry_fire = 4.050
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.405
+}
+aet_eliteGuards_horseArcher_horde_0_5_p = {
+	fire_damage = 0.075
+	cavalry_fire = 0.750
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.075
+}
+aet_eliteGuards_horseArcher_horde_0_9_p = {
+	fire_damage = 0.135
+	cavalry_fire = 1.350
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.135
+}
+aet_eliteGuards_horseArcher_horde_2_8_p = {
+	fire_damage = 0.420
+	cavalry_fire = 4.200
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.420
+}
+aet_eliteGuards_horseArcher_horde_0_1_p = {
+	fire_damage = 0.015
+	cavalry_fire = 0.150
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.015
+}
+aet_eliteGuards_horseArcher_horde_1_6_p = {
+	fire_damage = 0.240
+	cavalry_fire = 2.400
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.240
+}
+aet_eliteGuards_horseArcher_horde_2_3_p = {
+	fire_damage = 0.345
+	cavalry_fire = 3.450
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.345
+}
+aet_eliteGuards_horseArcher_horde_0_3_p = {
+	fire_damage = 0.045
+	cavalry_fire = 0.450
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.045
+}
+aet_eliteGuards_horseArcher_horde_1_1_p = {
+	fire_damage = 0.165
+	cavalry_fire = 1.650
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.165
+}
+aet_eliteGuards_horseArcher_horde_1_0_p = {
+	fire_damage = 0.150
+	cavalry_fire = 1.500
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.150
+}
+aet_eliteGuards_horseArcher_horde_1_8_p = {
+	fire_damage = 0.270
+	cavalry_fire = 2.700
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.270
+}
+aet_eliteGuards_horseArcher_horde_0_8_p = {
+	fire_damage = 0.120
+	cavalry_fire = 1.200
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.120
+}
+aet_eliteGuards_horseArcher_horde_2_9_p = {
+	fire_damage = 0.435
+	cavalry_fire = 4.350
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.435
+}
+aet_eliteGuards_horseArcher_horde_2_4_p = {
+	fire_damage = 0.360
+	cavalry_fire = 3.600
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.360
+}
+aet_eliteGuards_horseArcher_horde_1_5_p = {
+	fire_damage = 0.225
+	cavalry_fire = 2.250
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.225
+}
+aet_eliteGuards_horseArcher_horde_1_3_p = {
+	fire_damage = 0.195
+	cavalry_fire = 1.950
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.195
+}
+aet_eliteGuards_horseArcher_specialisation_2_0_p = {
+	fire_damage = 0.200
+	cavalry_fire = 1.000
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.000
+}
+aet_eliteGuards_horseArcher_specialisation_0_7_p = {
+	fire_damage = 0.070
+	cavalry_fire = 0.350
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.700
+}
+aet_eliteGuards_horseArcher_specialisation_0_4_p = {
+	fire_damage = 0.040
+	cavalry_fire = 0.200
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.400
+}
+aet_eliteGuards_horseArcher_specialisation_2_5_p = {
+	fire_damage = 0.250
+	cavalry_fire = 1.250
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.500
+}
+aet_eliteGuards_horseArcher_specialisation_3_1_p = {
+	fire_damage = 0.310
+	cavalry_fire = 1.550
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 3.100
+}
+aet_eliteGuards_horseArcher_specialisation_1_2_p = {
+	fire_damage = 0.120
+	cavalry_fire = 0.600
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.200
+}
+aet_eliteGuards_horseArcher_specialisation_3_0_p = {
+	fire_damage = 0.300
+	cavalry_fire = 1.500
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 3.000
+}
+aet_eliteGuards_horseArcher_specialisation_2_6_p = {
+	fire_damage = 0.260
+	cavalry_fire = 1.300
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.600
+}
+aet_eliteGuards_horseArcher_specialisation_2_1_p = {
+	fire_damage = 0.210
+	cavalry_fire = 1.050
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.100
+}
+aet_eliteGuards_horseArcher_specialisation_1_7_p = {
+	fire_damage = 0.170
+	cavalry_fire = 0.850
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.700
+}
+aet_eliteGuards_horseArcher_specialisation_1_4_p = {
+	fire_damage = 0.140
+	cavalry_fire = 0.700
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.400
+}
+aet_eliteGuards_horseArcher_specialisation_0_2_p = {
+	fire_damage = 0.020
+	cavalry_fire = 0.100
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.200
+}
+aet_eliteGuards_horseArcher_specialisation_3_2_p = {
+	fire_damage = 0.320
+	cavalry_fire = 1.600
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 3.200
+}
+aet_eliteGuards_horseArcher_specialisation_0_6_p = {
+	fire_damage = 0.060
+	cavalry_fire = 0.300
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.600
+}
+aet_eliteGuards_horseArcher_specialisation_1_9_p = {
+	fire_damage = 0.190
+	cavalry_fire = 0.950
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.900
+}
+aet_eliteGuards_horseArcher_specialisation_2_2_p = {
+	fire_damage = 0.220
+	cavalry_fire = 1.100
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.200
+}
+aet_eliteGuards_horseArcher_specialisation_2_7_p = {
+	fire_damage = 0.270
+	cavalry_fire = 1.350
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.700
+}
+aet_eliteGuards_horseArcher_specialisation_0_5_p = {
+	fire_damage = 0.050
+	cavalry_fire = 0.250
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.500
+}
+aet_eliteGuards_horseArcher_specialisation_0_9_p = {
+	fire_damage = 0.090
+	cavalry_fire = 0.450
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.900
+}
+aet_eliteGuards_horseArcher_specialisation_2_8_p = {
+	fire_damage = 0.280
+	cavalry_fire = 1.400
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.800
+}
+aet_eliteGuards_horseArcher_specialisation_0_1_p = {
+	fire_damage = 0.010
+	cavalry_fire = 0.050
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.100
+}
+aet_eliteGuards_horseArcher_specialisation_1_6_p = {
+	fire_damage = 0.160
+	cavalry_fire = 0.800
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.600
+}
+aet_eliteGuards_horseArcher_specialisation_2_3_p = {
+	fire_damage = 0.230
+	cavalry_fire = 1.150
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.300
+}
+aet_eliteGuards_horseArcher_specialisation_0_3_p = {
+	fire_damage = 0.030
+	cavalry_fire = 0.150
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.300
+}
+aet_eliteGuards_horseArcher_specialisation_1_1_p = {
+	fire_damage = 0.110
+	cavalry_fire = 0.550
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.100
+}
+aet_eliteGuards_horseArcher_specialisation_1_0_p = {
+	fire_damage = 0.100
+	cavalry_fire = 0.500
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.000
+}
+aet_eliteGuards_horseArcher_specialisation_1_8_p = {
+	fire_damage = 0.180
+	cavalry_fire = 0.900
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.800
+}
+aet_eliteGuards_horseArcher_specialisation_0_8_p = {
+	fire_damage = 0.080
+	cavalry_fire = 0.400
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 0.800
+}
+aet_eliteGuards_horseArcher_specialisation_2_9_p = {
+	fire_damage = 0.290
+	cavalry_fire = 1.450
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.900
+}
+aet_eliteGuards_horseArcher_specialisation_2_4_p = {
+	fire_damage = 0.240
+	cavalry_fire = 1.200
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 2.400
+}
+aet_eliteGuards_horseArcher_specialisation_1_5_p = {
+	fire_damage = 0.150
+	cavalry_fire = 0.750
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.500
+}
+aet_eliteGuards_horseArcher_specialisation_1_3_p = {
+	fire_damage = 0.130
+	cavalry_fire = 0.650
+	is_revolutionary_guard_modifier = yes
+	cavalry_flanking = 1.300
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_0_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.100
+	shock_damage = 0.050
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_7_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.035
+	shock_damage = 0.018
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_4_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.020
+	shock_damage = 0.010
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_5_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.125
+	shock_damage = 0.063
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_3_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.155
+	shock_damage = 0.078
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.060
+	shock_damage = 0.030
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_3_0_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.150
+	shock_damage = 0.075
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_6_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.130
+	shock_damage = 0.065
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.105
+	shock_damage = 0.053
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_7_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.085
+	shock_damage = 0.043
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_4_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.070
+	shock_damage = 0.035
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.010
+	shock_damage = 0.005
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_3_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.160
+	shock_damage = 0.080
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_6_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.030
+	shock_damage = 0.015
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_9_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.095
+	shock_damage = 0.048
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.110
+	shock_damage = 0.055
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_7_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.135
+	shock_damage = 0.068
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_5_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.025
+	shock_damage = 0.013
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_9_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.045
+	shock_damage = 0.023
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_8_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.140
+	shock_damage = 0.070
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.005
+	shock_damage = 0.003
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_6_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.080
+	shock_damage = 0.040
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_3_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.115
+	shock_damage = 0.058
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_3_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.015
+	shock_damage = 0.008
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.055
+	shock_damage = 0.028
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_0_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.050
+	shock_damage = 0.025
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_8_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.090
+	shock_damage = 0.045
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_0_8_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.040
+	shock_damage = 0.020
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_9_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.145
+	shock_damage = 0.073
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_2_4_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.120
+	shock_damage = 0.060
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_5_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.075
+	shock_damage = 0.038
+}
+aet_eliteGuards_lightCavalryCossack_specialisation_1_3_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.065
+	shock_damage = 0.033
+}
+aet_eliteGuards_lightCavalry_specialisation_2_0_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.100
+	shock_damage = 0.200
+	cavalry_flanking = 1.000
+}
+aet_eliteGuards_lightCavalry_specialisation_0_7_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.035
+	shock_damage = 0.070
+	cavalry_flanking = 0.350
+}
+aet_eliteGuards_lightCavalry_specialisation_0_4_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.020
+	shock_damage = 0.040
+	cavalry_flanking = 0.200
+}
+aet_eliteGuards_lightCavalry_specialisation_2_5_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.125
+	shock_damage = 0.250
+	cavalry_flanking = 1.250
+}
+aet_eliteGuards_lightCavalry_specialisation_3_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.155
+	shock_damage = 0.310
+	cavalry_flanking = 1.550
+}
+aet_eliteGuards_lightCavalry_specialisation_1_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.060
+	shock_damage = 0.120
+	cavalry_flanking = 0.600
+}
+aet_eliteGuards_lightCavalry_specialisation_3_0_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.150
+	shock_damage = 0.300
+	cavalry_flanking = 1.500
+}
+aet_eliteGuards_lightCavalry_specialisation_2_6_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.130
+	shock_damage = 0.260
+	cavalry_flanking = 1.300
+}
+aet_eliteGuards_lightCavalry_specialisation_2_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.105
+	shock_damage = 0.210
+	cavalry_flanking = 1.050
+}
+aet_eliteGuards_lightCavalry_specialisation_1_7_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.085
+	shock_damage = 0.170
+	cavalry_flanking = 0.850
+}
+aet_eliteGuards_lightCavalry_specialisation_1_4_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.070
+	shock_damage = 0.140
+	cavalry_flanking = 0.700
+}
+aet_eliteGuards_lightCavalry_specialisation_0_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.010
+	shock_damage = 0.020
+	cavalry_flanking = 0.100
+}
+aet_eliteGuards_lightCavalry_specialisation_3_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.160
+	shock_damage = 0.320
+	cavalry_flanking = 1.600
+}
+aet_eliteGuards_lightCavalry_specialisation_0_6_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.030
+	shock_damage = 0.060
+	cavalry_flanking = 0.300
+}
+aet_eliteGuards_lightCavalry_specialisation_1_9_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.095
+	shock_damage = 0.190
+	cavalry_flanking = 0.950
+}
+aet_eliteGuards_lightCavalry_specialisation_2_2_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.110
+	shock_damage = 0.220
+	cavalry_flanking = 1.100
+}
+aet_eliteGuards_lightCavalry_specialisation_2_7_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.135
+	shock_damage = 0.270
+	cavalry_flanking = 1.350
+}
+aet_eliteGuards_lightCavalry_specialisation_0_5_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.025
+	shock_damage = 0.050
+	cavalry_flanking = 0.250
+}
+aet_eliteGuards_lightCavalry_specialisation_0_9_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.045
+	shock_damage = 0.090
+	cavalry_flanking = 0.450
+}
+aet_eliteGuards_lightCavalry_specialisation_2_8_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.140
+	shock_damage = 0.280
+	cavalry_flanking = 1.400
+}
+aet_eliteGuards_lightCavalry_specialisation_0_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.005
+	shock_damage = 0.010
+	cavalry_flanking = 0.050
+}
+aet_eliteGuards_lightCavalry_specialisation_1_6_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.080
+	shock_damage = 0.160
+	cavalry_flanking = 0.800
+}
+aet_eliteGuards_lightCavalry_specialisation_2_3_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.115
+	shock_damage = 0.230
+	cavalry_flanking = 1.150
+}
+aet_eliteGuards_lightCavalry_specialisation_0_3_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.015
+	shock_damage = 0.030
+	cavalry_flanking = 0.150
+}
+aet_eliteGuards_lightCavalry_specialisation_1_1_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.055
+	shock_damage = 0.110
+	cavalry_flanking = 0.550
+}
+aet_eliteGuards_lightCavalry_specialisation_1_0_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.050
+	shock_damage = 0.100
+	cavalry_flanking = 0.500
+}
+aet_eliteGuards_lightCavalry_specialisation_1_8_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.090
+	shock_damage = 0.180
+	cavalry_flanking = 0.900
+}
+aet_eliteGuards_lightCavalry_specialisation_0_8_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.040
+	shock_damage = 0.080
+	cavalry_flanking = 0.400
+}
+aet_eliteGuards_lightCavalry_specialisation_2_9_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.145
+	shock_damage = 0.290
+	cavalry_flanking = 1.450
+}
+aet_eliteGuards_lightCavalry_specialisation_2_4_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.120
+	shock_damage = 0.240
+	cavalry_flanking = 1.200
+}
+aet_eliteGuards_lightCavalry_specialisation_1_5_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.075
+	shock_damage = 0.150
+	cavalry_flanking = 0.750
+}
+aet_eliteGuards_lightCavalry_specialisation_1_3_p = {
+	is_revolutionary_guard_modifier = yes
+	cavalry_cost = -0.065
+	shock_damage = 0.130
+	cavalry_flanking = 0.650
+}
+aet_eliteGuards_offensiveAssaultAbility_2_0_p = {
+	reinforce_cost_modifier = 0.025
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.000
+}
+aet_eliteGuards_offensiveAssaultAbility_0_7_p = {
+	reinforce_cost_modifier = 0.071
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.350
+}
+aet_eliteGuards_offensiveAssaultAbility_0_4_p = {
+	reinforce_cost_modifier = 0.125
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.200
+}
+aet_eliteGuards_offensiveAssaultAbility_2_5_p = {
+	reinforce_cost_modifier = 0.020
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.250
+}
+aet_eliteGuards_offensiveAssaultAbility_3_1_p = {
+	reinforce_cost_modifier = 0.016
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.550
+}
+aet_eliteGuards_offensiveAssaultAbility_1_2_p = {
+	reinforce_cost_modifier = 0.042
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.600
+}
+aet_eliteGuards_offensiveAssaultAbility_3_0_p = {
+	reinforce_cost_modifier = 0.017
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.500
+}
+aet_eliteGuards_offensiveAssaultAbility_2_6_p = {
+	reinforce_cost_modifier = 0.019
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.300
+}
+aet_eliteGuards_offensiveAssaultAbility_2_1_p = {
+	reinforce_cost_modifier = 0.024
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.050
+}
+aet_eliteGuards_offensiveAssaultAbility_1_7_p = {
+	reinforce_cost_modifier = 0.029
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.850
+}
+aet_eliteGuards_offensiveAssaultAbility_1_4_p = {
+	reinforce_cost_modifier = 0.036
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.700
+}
+aet_eliteGuards_offensiveAssaultAbility_0_2_p = {
+	reinforce_cost_modifier = 0.250
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.100
+}
+aet_eliteGuards_offensiveAssaultAbility_3_2_p = {
+	reinforce_cost_modifier = 0.016
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.600
+}
+aet_eliteGuards_offensiveAssaultAbility_0_6_p = {
+	reinforce_cost_modifier = 0.083
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.300
+}
+aet_eliteGuards_offensiveAssaultAbility_1_9_p = {
+	reinforce_cost_modifier = 0.026
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.950
+}
+aet_eliteGuards_offensiveAssaultAbility_2_2_p = {
+	reinforce_cost_modifier = 0.023
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.100
+}
+aet_eliteGuards_offensiveAssaultAbility_2_7_p = {
+	reinforce_cost_modifier = 0.019
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.350
+}
+aet_eliteGuards_offensiveAssaultAbility_0_5_p = {
+	reinforce_cost_modifier = 0.100
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.250
+}
+aet_eliteGuards_offensiveAssaultAbility_0_9_p = {
+	reinforce_cost_modifier = 0.056
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.450
+}
+aet_eliteGuards_offensiveAssaultAbility_2_8_p = {
+	reinforce_cost_modifier = 0.018
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.400
+}
+aet_eliteGuards_offensiveAssaultAbility_0_1_p = {
+	reinforce_cost_modifier = 0.500
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.050
+}
+aet_eliteGuards_offensiveAssaultAbility_1_6_p = {
+	reinforce_cost_modifier = 0.031
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.800
+}
+aet_eliteGuards_offensiveAssaultAbility_2_3_p = {
+	reinforce_cost_modifier = 0.022
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.150
+}
+aet_eliteGuards_offensiveAssaultAbility_0_3_p = {
+	reinforce_cost_modifier = 0.167
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.150
+}
+aet_eliteGuards_offensiveAssaultAbility_1_1_p = {
+	reinforce_cost_modifier = 0.045
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.550
+}
+aet_eliteGuards_offensiveAssaultAbility_1_0_p = {
+	reinforce_cost_modifier = 0.050
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.500
+}
+aet_eliteGuards_offensiveAssaultAbility_1_8_p = {
+	reinforce_cost_modifier = 0.028
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.900
+}
+aet_eliteGuards_offensiveAssaultAbility_0_8_p = {
+	reinforce_cost_modifier = 0.063
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.400
+}
+aet_eliteGuards_offensiveAssaultAbility_2_9_p = {
+	reinforce_cost_modifier = 0.017
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.450
+}
+aet_eliteGuards_offensiveAssaultAbility_2_4_p = {
+	reinforce_cost_modifier = 0.021
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 1.200
+}
+aet_eliteGuards_offensiveAssaultAbility_1_5_p = {
+	reinforce_cost_modifier = 0.033
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.750
+}
+aet_eliteGuards_offensiveAssaultAbility_1_3_p = {
+	reinforce_cost_modifier = 0.038
+	is_revolutionary_guard_modifier = yes
+	assault_fort_ability = 0.650
+}
+aet_eliteGuards_offensiveFireDealt_2_0_p = {
+	fire_damage = 0.200
+	land_maintenance_modifier = 0.125
+	reinforce_cost_modifier = 0.165
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_7_p = {
+	fire_damage = 0.070
+	land_maintenance_modifier = 0.357
+	reinforce_cost_modifier = 0.471
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_4_p = {
+	fire_damage = 0.040
+	land_maintenance_modifier = 0.625
+	reinforce_cost_modifier = 0.825
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_5_p = {
+	fire_damage = 0.250
+	land_maintenance_modifier = 0.100
+	reinforce_cost_modifier = 0.132
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_3_1_p = {
+	fire_damage = 0.310
+	land_maintenance_modifier = 0.081
+	reinforce_cost_modifier = 0.106
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_2_p = {
+	fire_damage = 0.120
+	land_maintenance_modifier = 0.208
+	reinforce_cost_modifier = 0.275
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_3_0_p = {
+	fire_damage = 0.300
+	land_maintenance_modifier = 0.083
+	reinforce_cost_modifier = 0.110
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_6_p = {
+	fire_damage = 0.260
+	land_maintenance_modifier = 0.096
+	reinforce_cost_modifier = 0.127
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_1_p = {
+	fire_damage = 0.210
+	land_maintenance_modifier = 0.119
+	reinforce_cost_modifier = 0.157
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_7_p = {
+	fire_damage = 0.170
+	land_maintenance_modifier = 0.147
+	reinforce_cost_modifier = 0.194
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_4_p = {
+	fire_damage = 0.140
+	land_maintenance_modifier = 0.179
+	reinforce_cost_modifier = 0.236
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_2_p = {
+	fire_damage = 0.020
+	land_maintenance_modifier = 1.250
+	reinforce_cost_modifier = 1.650
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_3_2_p = {
+	fire_damage = 0.320
+	land_maintenance_modifier = 0.078
+	reinforce_cost_modifier = 0.103
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_6_p = {
+	fire_damage = 0.060
+	land_maintenance_modifier = 0.417
+	reinforce_cost_modifier = 0.550
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_9_p = {
+	fire_damage = 0.190
+	land_maintenance_modifier = 0.132
+	reinforce_cost_modifier = 0.174
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_2_p = {
+	fire_damage = 0.220
+	land_maintenance_modifier = 0.114
+	reinforce_cost_modifier = 0.150
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_7_p = {
+	fire_damage = 0.270
+	land_maintenance_modifier = 0.093
+	reinforce_cost_modifier = 0.122
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_5_p = {
+	fire_damage = 0.050
+	land_maintenance_modifier = 0.500
+	reinforce_cost_modifier = 0.660
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_9_p = {
+	fire_damage = 0.090
+	land_maintenance_modifier = 0.278
+	reinforce_cost_modifier = 0.367
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_8_p = {
+	fire_damage = 0.280
+	land_maintenance_modifier = 0.089
+	reinforce_cost_modifier = 0.118
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_1_p = {
+	fire_damage = 0.010
+	land_maintenance_modifier = 2.500
+	reinforce_cost_modifier = 3.300
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_6_p = {
+	fire_damage = 0.160
+	land_maintenance_modifier = 0.156
+	reinforce_cost_modifier = 0.206
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_3_p = {
+	fire_damage = 0.230
+	land_maintenance_modifier = 0.109
+	reinforce_cost_modifier = 0.143
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_3_p = {
+	fire_damage = 0.030
+	land_maintenance_modifier = 0.833
+	reinforce_cost_modifier = 1.100
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_1_p = {
+	fire_damage = 0.110
+	land_maintenance_modifier = 0.227
+	reinforce_cost_modifier = 0.300
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_0_p = {
+	fire_damage = 0.100
+	land_maintenance_modifier = 0.250
+	reinforce_cost_modifier = 0.330
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_8_p = {
+	fire_damage = 0.180
+	land_maintenance_modifier = 0.139
+	reinforce_cost_modifier = 0.183
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_0_8_p = {
+	fire_damage = 0.080
+	land_maintenance_modifier = 0.313
+	reinforce_cost_modifier = 0.413
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_9_p = {
+	fire_damage = 0.290
+	land_maintenance_modifier = 0.086
+	reinforce_cost_modifier = 0.114
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_2_4_p = {
+	fire_damage = 0.240
+	land_maintenance_modifier = 0.104
+	reinforce_cost_modifier = 0.137
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_5_p = {
+	fire_damage = 0.150
+	land_maintenance_modifier = 0.167
+	reinforce_cost_modifier = 0.220
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveFireDealt_1_3_p = {
+	fire_damage = 0.130
+	land_maintenance_modifier = 0.192
+	reinforce_cost_modifier = 0.254
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_offensiveShockDealt_2_0_p = {
+	land_maintenance_modifier = 0.125
+	reinforce_cost_modifier = 0.165
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.200
+}
+aet_eliteGuards_offensiveShockDealt_0_7_p = {
+	land_maintenance_modifier = 0.357
+	reinforce_cost_modifier = 0.471
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.070
+}
+aet_eliteGuards_offensiveShockDealt_0_4_p = {
+	land_maintenance_modifier = 0.625
+	reinforce_cost_modifier = 0.825
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.040
+}
+aet_eliteGuards_offensiveShockDealt_2_5_p = {
+	land_maintenance_modifier = 0.100
+	reinforce_cost_modifier = 0.132
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.250
+}
+aet_eliteGuards_offensiveShockDealt_3_1_p = {
+	land_maintenance_modifier = 0.081
+	reinforce_cost_modifier = 0.106
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.310
+}
+aet_eliteGuards_offensiveShockDealt_1_2_p = {
+	land_maintenance_modifier = 0.208
+	reinforce_cost_modifier = 0.275
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.120
+}
+aet_eliteGuards_offensiveShockDealt_3_0_p = {
+	land_maintenance_modifier = 0.083
+	reinforce_cost_modifier = 0.110
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.300
+}
+aet_eliteGuards_offensiveShockDealt_2_6_p = {
+	land_maintenance_modifier = 0.096
+	reinforce_cost_modifier = 0.127
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.260
+}
+aet_eliteGuards_offensiveShockDealt_2_1_p = {
+	land_maintenance_modifier = 0.119
+	reinforce_cost_modifier = 0.157
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.210
+}
+aet_eliteGuards_offensiveShockDealt_1_7_p = {
+	land_maintenance_modifier = 0.147
+	reinforce_cost_modifier = 0.194
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.170
+}
+aet_eliteGuards_offensiveShockDealt_1_4_p = {
+	land_maintenance_modifier = 0.179
+	reinforce_cost_modifier = 0.236
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.140
+}
+aet_eliteGuards_offensiveShockDealt_0_2_p = {
+	land_maintenance_modifier = 1.250
+	reinforce_cost_modifier = 1.650
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.020
+}
+aet_eliteGuards_offensiveShockDealt_3_2_p = {
+	land_maintenance_modifier = 0.078
+	reinforce_cost_modifier = 0.103
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.320
+}
+aet_eliteGuards_offensiveShockDealt_0_6_p = {
+	land_maintenance_modifier = 0.417
+	reinforce_cost_modifier = 0.550
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.060
+}
+aet_eliteGuards_offensiveShockDealt_1_9_p = {
+	land_maintenance_modifier = 0.132
+	reinforce_cost_modifier = 0.174
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.190
+}
+aet_eliteGuards_offensiveShockDealt_2_2_p = {
+	land_maintenance_modifier = 0.114
+	reinforce_cost_modifier = 0.150
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.220
+}
+aet_eliteGuards_offensiveShockDealt_2_7_p = {
+	land_maintenance_modifier = 0.093
+	reinforce_cost_modifier = 0.122
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.270
+}
+aet_eliteGuards_offensiveShockDealt_0_5_p = {
+	land_maintenance_modifier = 0.500
+	reinforce_cost_modifier = 0.660
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.050
+}
+aet_eliteGuards_offensiveShockDealt_0_9_p = {
+	land_maintenance_modifier = 0.278
+	reinforce_cost_modifier = 0.367
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.090
+}
+aet_eliteGuards_offensiveShockDealt_2_8_p = {
+	land_maintenance_modifier = 0.089
+	reinforce_cost_modifier = 0.118
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.280
+}
+aet_eliteGuards_offensiveShockDealt_0_1_p = {
+	land_maintenance_modifier = 2.500
+	reinforce_cost_modifier = 3.300
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.010
+}
+aet_eliteGuards_offensiveShockDealt_1_6_p = {
+	land_maintenance_modifier = 0.156
+	reinforce_cost_modifier = 0.206
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.160
+}
+aet_eliteGuards_offensiveShockDealt_2_3_p = {
+	land_maintenance_modifier = 0.109
+	reinforce_cost_modifier = 0.143
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.230
+}
+aet_eliteGuards_offensiveShockDealt_0_3_p = {
+	land_maintenance_modifier = 0.833
+	reinforce_cost_modifier = 1.100
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.030
+}
+aet_eliteGuards_offensiveShockDealt_1_1_p = {
+	land_maintenance_modifier = 0.227
+	reinforce_cost_modifier = 0.300
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.110
+}
+aet_eliteGuards_offensiveShockDealt_1_0_p = {
+	land_maintenance_modifier = 0.250
+	reinforce_cost_modifier = 0.330
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.100
+}
+aet_eliteGuards_offensiveShockDealt_1_8_p = {
+	land_maintenance_modifier = 0.139
+	reinforce_cost_modifier = 0.183
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.180
+}
+aet_eliteGuards_offensiveShockDealt_0_8_p = {
+	land_maintenance_modifier = 0.313
+	reinforce_cost_modifier = 0.413
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.080
+}
+aet_eliteGuards_offensiveShockDealt_2_9_p = {
+	land_maintenance_modifier = 0.086
+	reinforce_cost_modifier = 0.114
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.290
+}
+aet_eliteGuards_offensiveShockDealt_2_4_p = {
+	land_maintenance_modifier = 0.104
+	reinforce_cost_modifier = 0.137
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.240
+}
+aet_eliteGuards_offensiveShockDealt_1_5_p = {
+	land_maintenance_modifier = 0.167
+	reinforce_cost_modifier = 0.220
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.150
+}
+aet_eliteGuards_offensiveShockDealt_1_3_p = {
+	land_maintenance_modifier = 0.192
+	reinforce_cost_modifier = 0.254
+	is_revolutionary_guard_modifier = yes
+	shock_damage = 0.130
+}
+aet_eliteGuards_plutoCost_0_2_0_p = {
+	land_maintenance_modifier = 0.125
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_7_p = {
+	land_maintenance_modifier = 0.357
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_4_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_5_p = {
+	land_maintenance_modifier = 0.100
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_3_1_p = {
+	land_maintenance_modifier = 0.081
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_2_p = {
+	land_maintenance_modifier = 0.208
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_3_0_p = {
+	land_maintenance_modifier = 0.083
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_6_p = {
+	land_maintenance_modifier = 0.096
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_1_p = {
+	land_maintenance_modifier = 0.119
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_7_p = {
+	land_maintenance_modifier = 0.147
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_4_p = {
+	land_maintenance_modifier = 0.179
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_2_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_3_2_p = {
+	land_maintenance_modifier = 0.078
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_6_p = {
+	land_maintenance_modifier = 0.417
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_9_p = {
+	land_maintenance_modifier = 0.132
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_2_p = {
+	land_maintenance_modifier = 0.114
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_7_p = {
+	land_maintenance_modifier = 0.093
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_5_p = {
+	land_maintenance_modifier = 0.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_9_p = {
+	land_maintenance_modifier = 0.278
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_8_p = {
+	land_maintenance_modifier = 0.089
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_1_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_6_p = {
+	land_maintenance_modifier = 0.156
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_3_p = {
+	land_maintenance_modifier = 0.109
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_3_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_1_p = {
+	land_maintenance_modifier = 0.227
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_0_p = {
+	land_maintenance_modifier = 0.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_8_p = {
+	land_maintenance_modifier = 0.139
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_0_8_p = {
+	land_maintenance_modifier = 0.313
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_9_p = {
+	land_maintenance_modifier = 0.086
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_2_4_p = {
+	land_maintenance_modifier = 0.104
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_5_p = {
+	land_maintenance_modifier = 0.167
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_0_1_3_p = {
+	land_maintenance_modifier = 0.192
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_0_p = {
+	land_maintenance_modifier = 0.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_7_p = {
+	land_maintenance_modifier = 0.714
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_4_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_5_p = {
+	land_maintenance_modifier = 0.200
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_3_1_p = {
+	land_maintenance_modifier = 0.161
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_2_p = {
+	land_maintenance_modifier = 0.417
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_3_0_p = {
+	land_maintenance_modifier = 0.167
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_6_p = {
+	land_maintenance_modifier = 0.192
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_1_p = {
+	land_maintenance_modifier = 0.238
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_7_p = {
+	land_maintenance_modifier = 0.294
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_4_p = {
+	land_maintenance_modifier = 0.357
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_2_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_3_2_p = {
+	land_maintenance_modifier = 0.156
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_6_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_9_p = {
+	land_maintenance_modifier = 0.263
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_2_p = {
+	land_maintenance_modifier = 0.227
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_7_p = {
+	land_maintenance_modifier = 0.185
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_5_p = {
+	land_maintenance_modifier = 1.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_9_p = {
+	land_maintenance_modifier = 0.556
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_8_p = {
+	land_maintenance_modifier = 0.179
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_1_p = {
+	land_maintenance_modifier = 5.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_6_p = {
+	land_maintenance_modifier = 0.313
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_3_p = {
+	land_maintenance_modifier = 0.217
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_3_p = {
+	land_maintenance_modifier = 1.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_1_p = {
+	land_maintenance_modifier = 0.455
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_0_p = {
+	land_maintenance_modifier = 0.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_8_p = {
+	land_maintenance_modifier = 0.278
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_0_8_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_9_p = {
+	land_maintenance_modifier = 0.172
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_2_4_p = {
+	land_maintenance_modifier = 0.208
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_5_p = {
+	land_maintenance_modifier = 0.333
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_1_1_3_p = {
+	land_maintenance_modifier = 0.385
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_0_p = {
+	land_maintenance_modifier = 1.375
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_7_p = {
+	land_maintenance_modifier = 3.929
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_4_p = {
+	land_maintenance_modifier = 6.875
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_5_p = {
+	land_maintenance_modifier = 1.100
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_3_1_p = {
+	land_maintenance_modifier = 0.887
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_2_p = {
+	land_maintenance_modifier = 2.292
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_3_0_p = {
+	land_maintenance_modifier = 0.917
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_6_p = {
+	land_maintenance_modifier = 1.058
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_1_p = {
+	land_maintenance_modifier = 1.310
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_7_p = {
+	land_maintenance_modifier = 1.618
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_4_p = {
+	land_maintenance_modifier = 1.964
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_2_p = {
+	land_maintenance_modifier = 13.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_3_2_p = {
+	land_maintenance_modifier = 0.859
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_6_p = {
+	land_maintenance_modifier = 4.583
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_9_p = {
+	land_maintenance_modifier = 1.447
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_2_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_7_p = {
+	land_maintenance_modifier = 1.019
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_5_p = {
+	land_maintenance_modifier = 5.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_9_p = {
+	land_maintenance_modifier = 3.056
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_8_p = {
+	land_maintenance_modifier = 0.982
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_1_p = {
+	land_maintenance_modifier = 27.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_6_p = {
+	land_maintenance_modifier = 1.719
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_3_p = {
+	land_maintenance_modifier = 1.196
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_3_p = {
+	land_maintenance_modifier = 9.167
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_1_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_0_p = {
+	land_maintenance_modifier = 2.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_8_p = {
+	land_maintenance_modifier = 1.528
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_0_8_p = {
+	land_maintenance_modifier = 3.438
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_9_p = {
+	land_maintenance_modifier = 0.948
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_2_4_p = {
+	land_maintenance_modifier = 1.146
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_5_p = {
+	land_maintenance_modifier = 1.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_10_1_3_p = {
+	land_maintenance_modifier = 2.115
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_0_p = {
+	land_maintenance_modifier = 1.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_7_p = {
+	land_maintenance_modifier = 4.286
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_4_p = {
+	land_maintenance_modifier = 7.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_5_p = {
+	land_maintenance_modifier = 1.200
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_3_1_p = {
+	land_maintenance_modifier = 0.968
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_2_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_3_0_p = {
+	land_maintenance_modifier = 1.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_6_p = {
+	land_maintenance_modifier = 1.154
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_1_p = {
+	land_maintenance_modifier = 1.429
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_7_p = {
+	land_maintenance_modifier = 1.765
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_4_p = {
+	land_maintenance_modifier = 2.143
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_2_p = {
+	land_maintenance_modifier = 15.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_3_2_p = {
+	land_maintenance_modifier = 0.938
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_6_p = {
+	land_maintenance_modifier = 5.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_9_p = {
+	land_maintenance_modifier = 1.579
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_2_p = {
+	land_maintenance_modifier = 1.364
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_7_p = {
+	land_maintenance_modifier = 1.111
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_5_p = {
+	land_maintenance_modifier = 6.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_9_p = {
+	land_maintenance_modifier = 3.333
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_8_p = {
+	land_maintenance_modifier = 1.071
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_1_p = {
+	land_maintenance_modifier = 30.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_6_p = {
+	land_maintenance_modifier = 1.875
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_3_p = {
+	land_maintenance_modifier = 1.304
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_3_p = {
+	land_maintenance_modifier = 10.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_1_p = {
+	land_maintenance_modifier = 2.727
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_0_p = {
+	land_maintenance_modifier = 3.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_8_p = {
+	land_maintenance_modifier = 1.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_0_8_p = {
+	land_maintenance_modifier = 3.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_9_p = {
+	land_maintenance_modifier = 1.034
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_2_4_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_5_p = {
+	land_maintenance_modifier = 2.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_11_1_3_p = {
+	land_maintenance_modifier = 2.308
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_0_p = {
+	land_maintenance_modifier = 0.375
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_7_p = {
+	land_maintenance_modifier = 1.071
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_4_p = {
+	land_maintenance_modifier = 1.875
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_5_p = {
+	land_maintenance_modifier = 0.300
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_3_1_p = {
+	land_maintenance_modifier = 0.242
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_2_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_3_0_p = {
+	land_maintenance_modifier = 0.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_6_p = {
+	land_maintenance_modifier = 0.288
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_1_p = {
+	land_maintenance_modifier = 0.357
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_7_p = {
+	land_maintenance_modifier = 0.441
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_4_p = {
+	land_maintenance_modifier = 0.536
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_2_p = {
+	land_maintenance_modifier = 3.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_3_2_p = {
+	land_maintenance_modifier = 0.234
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_6_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_9_p = {
+	land_maintenance_modifier = 0.395
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_2_p = {
+	land_maintenance_modifier = 0.341
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_7_p = {
+	land_maintenance_modifier = 0.278
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_5_p = {
+	land_maintenance_modifier = 1.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_9_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_8_p = {
+	land_maintenance_modifier = 0.268
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_1_p = {
+	land_maintenance_modifier = 7.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_6_p = {
+	land_maintenance_modifier = 0.469
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_3_p = {
+	land_maintenance_modifier = 0.326
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_3_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_1_p = {
+	land_maintenance_modifier = 0.682
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_0_p = {
+	land_maintenance_modifier = 0.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_8_p = {
+	land_maintenance_modifier = 0.417
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_0_8_p = {
+	land_maintenance_modifier = 0.938
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_9_p = {
+	land_maintenance_modifier = 0.259
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_2_4_p = {
+	land_maintenance_modifier = 0.313
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_5_p = {
+	land_maintenance_modifier = 0.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_2_1_3_p = {
+	land_maintenance_modifier = 0.577
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_0_p = {
+	land_maintenance_modifier = 0.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_7_p = {
+	land_maintenance_modifier = 1.429
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_4_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_5_p = {
+	land_maintenance_modifier = 0.400
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_3_1_p = {
+	land_maintenance_modifier = 0.323
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_2_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_3_0_p = {
+	land_maintenance_modifier = 0.333
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_6_p = {
+	land_maintenance_modifier = 0.385
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_1_p = {
+	land_maintenance_modifier = 0.476
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_7_p = {
+	land_maintenance_modifier = 0.588
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_4_p = {
+	land_maintenance_modifier = 0.714
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_2_p = {
+	land_maintenance_modifier = 5.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_3_2_p = {
+	land_maintenance_modifier = 0.313
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_6_p = {
+	land_maintenance_modifier = 1.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_9_p = {
+	land_maintenance_modifier = 0.526
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_2_p = {
+	land_maintenance_modifier = 0.455
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_7_p = {
+	land_maintenance_modifier = 0.370
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_5_p = {
+	land_maintenance_modifier = 2.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_9_p = {
+	land_maintenance_modifier = 1.111
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_8_p = {
+	land_maintenance_modifier = 0.357
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_1_p = {
+	land_maintenance_modifier = 10.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_6_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_3_p = {
+	land_maintenance_modifier = 0.435
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_3_p = {
+	land_maintenance_modifier = 3.333
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_1_p = {
+	land_maintenance_modifier = 0.909
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_0_p = {
+	land_maintenance_modifier = 1.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_8_p = {
+	land_maintenance_modifier = 0.556
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_0_8_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_9_p = {
+	land_maintenance_modifier = 0.345
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_2_4_p = {
+	land_maintenance_modifier = 0.417
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_5_p = {
+	land_maintenance_modifier = 0.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_3_1_3_p = {
+	land_maintenance_modifier = 0.769
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_0_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_7_p = {
+	land_maintenance_modifier = 1.786
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_4_p = {
+	land_maintenance_modifier = 3.125
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_5_p = {
+	land_maintenance_modifier = 0.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_3_1_p = {
+	land_maintenance_modifier = 0.403
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_2_p = {
+	land_maintenance_modifier = 1.042
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_3_0_p = {
+	land_maintenance_modifier = 0.417
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_6_p = {
+	land_maintenance_modifier = 0.481
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_1_p = {
+	land_maintenance_modifier = 0.595
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_7_p = {
+	land_maintenance_modifier = 0.735
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_4_p = {
+	land_maintenance_modifier = 0.893
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_2_p = {
+	land_maintenance_modifier = 6.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_3_2_p = {
+	land_maintenance_modifier = 0.391
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_6_p = {
+	land_maintenance_modifier = 2.083
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_9_p = {
+	land_maintenance_modifier = 0.658
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_2_p = {
+	land_maintenance_modifier = 0.568
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_7_p = {
+	land_maintenance_modifier = 0.463
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_5_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_9_p = {
+	land_maintenance_modifier = 1.389
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_8_p = {
+	land_maintenance_modifier = 0.446
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_1_p = {
+	land_maintenance_modifier = 12.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_6_p = {
+	land_maintenance_modifier = 0.781
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_3_p = {
+	land_maintenance_modifier = 0.543
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_3_p = {
+	land_maintenance_modifier = 4.167
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_1_p = {
+	land_maintenance_modifier = 1.136
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_0_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_8_p = {
+	land_maintenance_modifier = 0.694
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_0_8_p = {
+	land_maintenance_modifier = 1.563
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_9_p = {
+	land_maintenance_modifier = 0.431
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_2_4_p = {
+	land_maintenance_modifier = 0.521
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_5_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_4_1_3_p = {
+	land_maintenance_modifier = 0.962
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_0_p = {
+	land_maintenance_modifier = 0.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_7_p = {
+	land_maintenance_modifier = 2.143
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_4_p = {
+	land_maintenance_modifier = 3.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_5_p = {
+	land_maintenance_modifier = 0.600
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_3_1_p = {
+	land_maintenance_modifier = 0.484
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_2_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_3_0_p = {
+	land_maintenance_modifier = 0.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_6_p = {
+	land_maintenance_modifier = 0.577
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_1_p = {
+	land_maintenance_modifier = 0.714
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_7_p = {
+	land_maintenance_modifier = 0.882
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_4_p = {
+	land_maintenance_modifier = 1.071
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_2_p = {
+	land_maintenance_modifier = 7.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_3_2_p = {
+	land_maintenance_modifier = 0.469
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_6_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_9_p = {
+	land_maintenance_modifier = 0.789
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_2_p = {
+	land_maintenance_modifier = 0.682
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_7_p = {
+	land_maintenance_modifier = 0.556
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_5_p = {
+	land_maintenance_modifier = 3.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_9_p = {
+	land_maintenance_modifier = 1.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_8_p = {
+	land_maintenance_modifier = 0.536
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_1_p = {
+	land_maintenance_modifier = 15.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_6_p = {
+	land_maintenance_modifier = 0.938
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_3_p = {
+	land_maintenance_modifier = 0.652
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_3_p = {
+	land_maintenance_modifier = 5.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_1_p = {
+	land_maintenance_modifier = 1.364
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_0_p = {
+	land_maintenance_modifier = 1.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_8_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_0_8_p = {
+	land_maintenance_modifier = 1.875
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_9_p = {
+	land_maintenance_modifier = 0.517
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_2_4_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_5_p = {
+	land_maintenance_modifier = 1.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_5_1_3_p = {
+	land_maintenance_modifier = 1.154
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_0_p = {
+	land_maintenance_modifier = 0.875
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_7_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_4_p = {
+	land_maintenance_modifier = 4.375
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_5_p = {
+	land_maintenance_modifier = 0.700
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_3_1_p = {
+	land_maintenance_modifier = 0.565
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_2_p = {
+	land_maintenance_modifier = 1.458
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_3_0_p = {
+	land_maintenance_modifier = 0.583
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_6_p = {
+	land_maintenance_modifier = 0.673
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_1_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_7_p = {
+	land_maintenance_modifier = 1.029
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_4_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_2_p = {
+	land_maintenance_modifier = 8.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_3_2_p = {
+	land_maintenance_modifier = 0.547
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_6_p = {
+	land_maintenance_modifier = 2.917
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_9_p = {
+	land_maintenance_modifier = 0.921
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_2_p = {
+	land_maintenance_modifier = 0.795
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_7_p = {
+	land_maintenance_modifier = 0.648
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_5_p = {
+	land_maintenance_modifier = 3.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_9_p = {
+	land_maintenance_modifier = 1.944
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_8_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_1_p = {
+	land_maintenance_modifier = 17.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_6_p = {
+	land_maintenance_modifier = 1.094
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_3_p = {
+	land_maintenance_modifier = 0.761
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_3_p = {
+	land_maintenance_modifier = 5.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_1_p = {
+	land_maintenance_modifier = 1.591
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_0_p = {
+	land_maintenance_modifier = 1.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_8_p = {
+	land_maintenance_modifier = 0.972
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_0_8_p = {
+	land_maintenance_modifier = 2.188
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_9_p = {
+	land_maintenance_modifier = 0.603
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_2_4_p = {
+	land_maintenance_modifier = 0.729
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_5_p = {
+	land_maintenance_modifier = 1.167
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_6_1_3_p = {
+	land_maintenance_modifier = 1.346
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_0_p = {
+	land_maintenance_modifier = 1.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_7_p = {
+	land_maintenance_modifier = 2.857
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_4_p = {
+	land_maintenance_modifier = 5.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_5_p = {
+	land_maintenance_modifier = 0.800
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_3_1_p = {
+	land_maintenance_modifier = 0.645
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_2_p = {
+	land_maintenance_modifier = 1.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_3_0_p = {
+	land_maintenance_modifier = 0.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_6_p = {
+	land_maintenance_modifier = 0.769
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_1_p = {
+	land_maintenance_modifier = 0.952
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_7_p = {
+	land_maintenance_modifier = 1.176
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_4_p = {
+	land_maintenance_modifier = 1.429
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_2_p = {
+	land_maintenance_modifier = 10.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_3_2_p = {
+	land_maintenance_modifier = 0.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_6_p = {
+	land_maintenance_modifier = 3.333
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_9_p = {
+	land_maintenance_modifier = 1.053
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_2_p = {
+	land_maintenance_modifier = 0.909
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_7_p = {
+	land_maintenance_modifier = 0.741
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_5_p = {
+	land_maintenance_modifier = 4.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_9_p = {
+	land_maintenance_modifier = 2.222
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_8_p = {
+	land_maintenance_modifier = 0.714
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_1_p = {
+	land_maintenance_modifier = 20.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_6_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_3_p = {
+	land_maintenance_modifier = 0.870
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_3_p = {
+	land_maintenance_modifier = 6.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_1_p = {
+	land_maintenance_modifier = 1.818
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_0_p = {
+	land_maintenance_modifier = 2.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_8_p = {
+	land_maintenance_modifier = 1.111
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_0_8_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_9_p = {
+	land_maintenance_modifier = 0.690
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_2_4_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_5_p = {
+	land_maintenance_modifier = 1.333
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_7_1_3_p = {
+	land_maintenance_modifier = 1.538
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_0_p = {
+	land_maintenance_modifier = 1.125
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_7_p = {
+	land_maintenance_modifier = 3.214
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_4_p = {
+	land_maintenance_modifier = 5.625
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_5_p = {
+	land_maintenance_modifier = 0.900
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_3_1_p = {
+	land_maintenance_modifier = 0.726
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_2_p = {
+	land_maintenance_modifier = 1.875
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_3_0_p = {
+	land_maintenance_modifier = 0.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_6_p = {
+	land_maintenance_modifier = 0.865
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_1_p = {
+	land_maintenance_modifier = 1.071
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_7_p = {
+	land_maintenance_modifier = 1.324
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_4_p = {
+	land_maintenance_modifier = 1.607
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_2_p = {
+	land_maintenance_modifier = 11.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_3_2_p = {
+	land_maintenance_modifier = 0.703
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_6_p = {
+	land_maintenance_modifier = 3.750
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_9_p = {
+	land_maintenance_modifier = 1.184
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_2_p = {
+	land_maintenance_modifier = 1.023
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_7_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_5_p = {
+	land_maintenance_modifier = 4.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_9_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_8_p = {
+	land_maintenance_modifier = 0.804
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_1_p = {
+	land_maintenance_modifier = 22.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_6_p = {
+	land_maintenance_modifier = 1.406
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_3_p = {
+	land_maintenance_modifier = 0.978
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_3_p = {
+	land_maintenance_modifier = 7.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_1_p = {
+	land_maintenance_modifier = 2.045
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_0_p = {
+	land_maintenance_modifier = 2.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_8_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_0_8_p = {
+	land_maintenance_modifier = 2.813
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_9_p = {
+	land_maintenance_modifier = 0.776
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_2_4_p = {
+	land_maintenance_modifier = 0.937
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_5_p = {
+	land_maintenance_modifier = 1.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_8_1_3_p = {
+	land_maintenance_modifier = 1.731
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_0_p = {
+	land_maintenance_modifier = 1.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_7_p = {
+	land_maintenance_modifier = 3.571
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_4_p = {
+	land_maintenance_modifier = 6.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_5_p = {
+	land_maintenance_modifier = 1.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_3_1_p = {
+	land_maintenance_modifier = 0.806
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_2_p = {
+	land_maintenance_modifier = 2.083
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_3_0_p = {
+	land_maintenance_modifier = 0.833
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_6_p = {
+	land_maintenance_modifier = 0.962
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_1_p = {
+	land_maintenance_modifier = 1.190
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_7_p = {
+	land_maintenance_modifier = 1.471
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_4_p = {
+	land_maintenance_modifier = 1.786
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_2_p = {
+	land_maintenance_modifier = 12.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_3_2_p = {
+	land_maintenance_modifier = 0.781
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_6_p = {
+	land_maintenance_modifier = 4.167
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_9_p = {
+	land_maintenance_modifier = 1.316
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_2_p = {
+	land_maintenance_modifier = 1.136
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_7_p = {
+	land_maintenance_modifier = 0.926
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_5_p = {
+	land_maintenance_modifier = 5.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_9_p = {
+	land_maintenance_modifier = 2.778
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_8_p = {
+	land_maintenance_modifier = 0.893
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_1_p = {
+	land_maintenance_modifier = 25.000
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_6_p = {
+	land_maintenance_modifier = 1.563
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_3_p = {
+	land_maintenance_modifier = 1.087
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_3_p = {
+	land_maintenance_modifier = 8.333
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_1_p = {
+	land_maintenance_modifier = 2.273
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_0_p = {
+	land_maintenance_modifier = 2.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_8_p = {
+	land_maintenance_modifier = 1.389
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_0_8_p = {
+	land_maintenance_modifier = 3.125
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_9_p = {
+	land_maintenance_modifier = 0.862
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_2_4_p = {
+	land_maintenance_modifier = 1.042
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_5_p = {
+	land_maintenance_modifier = 1.667
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoCost_9_1_3_p = {
+	land_maintenance_modifier = 1.923
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_0_p = {
+	regiment_manpower_usage = -0.400
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_7_p = {
+	regiment_manpower_usage = -0.140
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_4_p = {
+	regiment_manpower_usage = -0.080
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_5_p = {
+	regiment_manpower_usage = -0.500
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_3_1_p = {
+	regiment_manpower_usage = -0.620
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_2_p = {
+	regiment_manpower_usage = -0.240
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_3_0_p = {
+	regiment_manpower_usage = -0.600
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_6_p = {
+	regiment_manpower_usage = -0.520
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_1_p = {
+	regiment_manpower_usage = -0.420
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_7_p = {
+	regiment_manpower_usage = -0.340
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_4_p = {
+	regiment_manpower_usage = -0.280
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_2_p = {
+	regiment_manpower_usage = -0.040
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_3_2_p = {
+	regiment_manpower_usage = -0.640
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_6_p = {
+	regiment_manpower_usage = -0.120
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_9_p = {
+	regiment_manpower_usage = -0.380
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_2_p = {
+	regiment_manpower_usage = -0.440
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_7_p = {
+	regiment_manpower_usage = -0.540
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_5_p = {
+	regiment_manpower_usage = -0.100
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_9_p = {
+	regiment_manpower_usage = -0.180
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_8_p = {
+	regiment_manpower_usage = -0.560
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_1_p = {
+	regiment_manpower_usage = -0.020
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_6_p = {
+	regiment_manpower_usage = -0.320
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_3_p = {
+	regiment_manpower_usage = -0.460
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_3_p = {
+	regiment_manpower_usage = -0.060
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_1_p = {
+	regiment_manpower_usage = -0.220
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_0_p = {
+	regiment_manpower_usage = -0.200
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_8_p = {
+	regiment_manpower_usage = -0.360
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_0_8_p = {
+	regiment_manpower_usage = -0.160
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_9_p = {
+	regiment_manpower_usage = -0.580
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_2_4_p = {
+	regiment_manpower_usage = -0.480
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_5_p = {
+	regiment_manpower_usage = -0.300
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoManpowerUsage_1_3_p = {
+	regiment_manpower_usage = -0.260
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_0_p = {
+	morale_damage = 0.200
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_7_p = {
+	morale_damage = 0.070
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_4_p = {
+	morale_damage = 0.040
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_5_p = {
+	morale_damage = 0.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_3_1_p = {
+	morale_damage = 0.310
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_2_p = {
+	morale_damage = 0.120
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_3_0_p = {
+	morale_damage = 0.300
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_6_p = {
+	morale_damage = 0.260
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_1_p = {
+	morale_damage = 0.210
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_7_p = {
+	morale_damage = 0.170
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_4_p = {
+	morale_damage = 0.140
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_2_p = {
+	morale_damage = 0.020
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_3_2_p = {
+	morale_damage = 0.320
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_6_p = {
+	morale_damage = 0.060
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_9_p = {
+	morale_damage = 0.190
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_2_p = {
+	morale_damage = 0.220
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_7_p = {
+	morale_damage = 0.270
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_5_p = {
+	morale_damage = 0.050
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_9_p = {
+	morale_damage = 0.090
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_8_p = {
+	morale_damage = 0.280
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_1_p = {
+	morale_damage = 0.010
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_6_p = {
+	morale_damage = 0.160
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_3_p = {
+	morale_damage = 0.230
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_3_p = {
+	morale_damage = 0.030
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_1_p = {
+	morale_damage = 0.110
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_0_p = {
+	morale_damage = 0.100
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_8_p = {
+	morale_damage = 0.180
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_0_8_p = {
+	morale_damage = 0.080
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_9_p = {
+	morale_damage = 0.290
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_2_4_p = {
+	morale_damage = 0.240
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_5_p = {
+	morale_damage = 0.150
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamage_1_3_p = {
+	morale_damage = 0.130
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_0_p = {
+	morale_damage_received = -0.200
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_7_p = {
+	morale_damage_received = -0.070
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_4_p = {
+	morale_damage_received = -0.040
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_5_p = {
+	morale_damage_received = -0.250
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_3_1_p = {
+	morale_damage_received = -0.310
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_2_p = {
+	morale_damage_received = -0.120
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_3_0_p = {
+	morale_damage_received = -0.300
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_6_p = {
+	morale_damage_received = -0.260
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_1_p = {
+	morale_damage_received = -0.210
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_7_p = {
+	morale_damage_received = -0.170
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_4_p = {
+	morale_damage_received = -0.140
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_2_p = {
+	morale_damage_received = -0.020
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_3_2_p = {
+	morale_damage_received = -0.320
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_6_p = {
+	morale_damage_received = -0.060
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_9_p = {
+	morale_damage_received = -0.190
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_2_p = {
+	morale_damage_received = -0.220
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_7_p = {
+	morale_damage_received = -0.270
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_5_p = {
+	morale_damage_received = -0.050
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_9_p = {
+	morale_damage_received = -0.090
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_8_p = {
+	morale_damage_received = -0.280
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_1_p = {
+	morale_damage_received = -0.010
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_6_p = {
+	morale_damage_received = -0.160
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_3_p = {
+	morale_damage_received = -0.230
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_3_p = {
+	morale_damage_received = -0.030
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_1_p = {
+	morale_damage_received = -0.110
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_0_p = {
+	morale_damage_received = -0.100
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_8_p = {
+	morale_damage_received = -0.180
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_0_8_p = {
+	morale_damage_received = -0.080
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_9_p = {
+	morale_damage_received = -0.290
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_2_4_p = {
+	morale_damage_received = -0.240
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_5_p = {
+	morale_damage_received = -0.150
+	is_revolutionary_guard_modifier = yes
+}
+aet_eliteGuards_plutoMoraleDamageReceived_1_3_p = {
+	morale_damage_received = -0.130
+	is_revolutionary_guard_modifier = yes
+}

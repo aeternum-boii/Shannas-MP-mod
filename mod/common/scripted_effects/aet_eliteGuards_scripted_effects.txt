@@ -28,6 +28,13 @@
 
 # State Management
 
+# aet_eliteGuards_addCountryModifier
+# Applies a country modifier that can be scaled via buffMultiplier
+# Requires the modifier to be in event_modifiers/aet_eliteGuards_scaled_modifiers.txt as well as a cycle of the java util EliteGuardsBuffMultiplierBuilder
+
+# aet_eliteGuards_removeCountryModifier
+# Removes a country modifier that can be scaled via buffMultiplier
+
 # aet_eliteGuards_refreshAll
 # Recalculates and refreshes state.
 
@@ -1531,4 +1538,30 @@ aet_eliteGuards_removePlutoCost = {
 	remove_country_modifier = aet_eliteGuards_plutoCost_9
 	remove_country_modifier = aet_eliteGuards_plutoCost_10
 	remove_country_modifier = aet_eliteGuards_plutoCost_11
+}
+
+aet_eliteGuards_addCountryModifier = {
+	tooltip = {
+		add_country_modifier = {
+			name = $modifier$_1_0_p
+			duration = -1
+		}
+	}
+	hidden_effect = {
+		set_country_flag = $modifier$
+		aet_eliteGuards_refreshScaledModifiers = yes
+	}
+}
+
+aet_eliteGuards_removeCountryModifier = {
+	tooltip = {
+		remove_country_modifier = {
+			name = $modifier$_1_0_p
+			duration = -1
+		}
+	}
+	hidden_effect = {
+		clr_country_flag = $modifier$
+		aet_eliteGuards_refreshScaledModifiers = yes
+	}
 }
