@@ -1,5 +1,8 @@
 {
     "files.encoding": "windows1252",
+	"[markdown]": {
+		"files.encoding": "utf8"
+	},
     "paradoxcode.gameDirectory": "c:\\Program Files (x86)\\Steam\\steamapps\\common\\Europa Universalis IV",
     "hoi4ModUtilities.modFile": "c:\\Users\\simon\\OneDrive\\Dokumente\\Paradox Interactive\\Europa Universalis IV\\mod\\shannaMod\\mod\\descriptor.mod"
 }

@@ -14,7 +14,7 @@ Versions contained in this file (descending):
  - [v3.24.0](#v3240--back-to-top) *(26.09.2026)*
 
 
-## v3.24.0 <small>[? Back to top](#changelogs)</small>
+## v3.24.0 <small>[â†‘ Back to top](#changelogs)</small>
 #### Cumulative changelog vs. vanilla Europa Universalis IV
 
 > **Historical baseline:** This section is a reconstructed comparison of the
@@ -70,7 +70,7 @@ Combat is more terrain-sensitive and generally more punishing.
 ##### Global combat changes
 - Armies cannot retreat for the first **8 days** of combat.
 - Siege phases last **25 days**.
-- Besieging forts requires **2×** the normal fort-level manpower multiplier.
+- Besieging forts requires **2ï¿½** the normal fort-level manpower multiplier.
 - Crossing penalties are increased:
   - River: **-2**
   - Strait: **-3**
@@ -262,7 +262,7 @@ The mod defines **20 colonial regions**, including Canada, Louisiana, California
 ##### Trade companies
 There are **61 trade-company regions**, including trade-company zones across Europe as well as Africa and Asia.
 
-This includes nodes such as English Channel, North Sea, Lübeck, Baltic Sea, Sevilla, Genoa, Venice, Constantinople, Novgorod, Kiev, Persia, India, China, Japan and Polynesia.
+This includes nodes such as English Channel, North Sea, Lï¿½beck, Baltic Sea, Sevilla, Genoa, Venice, Constantinople, Novgorod, Kiev, Persia, India, China, Japan and Polynesia.
 
 ##### Trade-company investments
 Trade-company investments are rebalanced into stronger military, production, development, manpower and naval paths.
@@ -483,7 +483,7 @@ While the rest of this document is cumulative versus vanilla, the **3.24 release
 - Stalemate-system revisions.
 - Several map/history cleanup changes.
 
-## v3.24.2 <small>[? Back to top](#changelogs)</small>
+## v3.24.2 <small>[â†‘ Back to top](#changelogs)</small>
 
 **Compared against:** 3.24  
 **3.24 commit:** `5e2908ce277c047279b62a3144e979dc86d18de0`  
@@ -523,7 +523,7 @@ Bavaria can now use the country-renaming decision.
 
 New options:
 - **Kingdom of Bavaria**
-- **Königreich Bayern**
+- **Kï¿½nigreich Bayern**
 - **Volksstaat Bayern**
 
 ##### France
@@ -564,7 +564,7 @@ The custom options now include:
 - **OwOman Empire**
 - **Ottoman Sultanate**
 - **Ottoman Empire**
-- **Rûm**
+- **Rï¿½m**
 
 Removed rename choices include:
 - The Eastern Sun
@@ -577,7 +577,7 @@ Removed rename choices include:
 - Turkey
 - Sublime Osman State
 - Devlet-i Aliyye-i Osmaniyye
-- Devlet-i Rûm
+- Devlet-i Rï¿½m
 
 #### Technical summary
 
@@ -590,7 +590,7 @@ Between the exact 3.24 and 3.24.2 snapshots, **95 files differ**:
 - `common/technologies/dip.txt` changed for the colonial-range rollback.
 - `decisions/country_rename.txt`, `events/lukat_events.txt`, and `localisation/rename_country_l_english.yml` changed for the rename additions and cleanup.
 
-## v3.24.3 <small>[? Back to top](#changelogs)</small>
+## v3.24.3 <small>[â†‘ Back to top](#changelogs)</small>
 
 **Compared against:** 3.24.2  
 **3.24.2 commit:** `d10ad43416aa49935f9d5199310bf914bed74df2`  
@@ -615,7 +615,7 @@ This changelog compares the exact numbered release snapshots of **3.24.2** and *
 
 - Corrected the **Caribbean colonial region** by removing province **481** (Bermuda) from its province list.
 
-## v3.25.1 <small>[? Back to top](#changelogs)</small>
+## v3.25.1 <small>[â†‘ Back to top](#changelogs)</small>
 
 **Compared against:** 3.24.3  
 **3.24.3 commit:** `942912ebe5b050787b96f76ad9af962580cacbcd`  
@@ -646,7 +646,7 @@ The Dutch election event has been substantially rewritten.
 A set of new country-renaming options has been added.
 
 ##### Netherlands
-- Verenigde Provinciën der Caraïben
+- Verenigde Provinciï¿½n der Caraï¿½ben
 - Vrije Handelsstaat
 - Groot Koopmansrijk
 - Verenigde Koopmansstaten
@@ -665,13 +665,13 @@ New options:
 - Republik delle Alpes
 - Civitatum Raetiae et Noricum
 
-## v3.25.2 <small>[? Back to top](#changelogs)</small>
+## v3.25.2 <small>[â†‘ Back to top](#changelogs)</small>
 
 ### Bug fixes
 - Force Limit buildings apply their buff when they don't exist sometimes ([Example](https://discord.com/channels/1402647007117574164/1427011291104673986/1561095753919631370))
 
 
-## v4.0.0 <small>[? Back to top](#changelogs)</small>
+## v4.0.0 <small>[â†‘ Back to top](#changelogs)</small>
 
 *Not yet released.*
 

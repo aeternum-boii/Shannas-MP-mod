@@ -68,4 +68,5 @@ These are updates of a size, that warrant a new high level version. Usually only
 - **Remove dishonored CTA penalties** - *Priority 6*
 - **Rejectable Advisor Events** - *Priority 5*
 - **Scale the Naval FL like Land FL** - *Priority 8*
-- **remove dev cost if vassal (player only)** = *Priority 5*
+- **remove dev cost if vassal (player only)** - *Priority 5*
+- **Fix Manpower Buildings** - *Priority 8*
