@@ -287,4 +287,18 @@ spriteTypes = {
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
+
+	spriteType = {
+		name = "GFX_idea_militarism_ideas"
+		texturefile = "gfx/interface/ideas/idea_militarisation_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+
+	spriteType = {
+		name = "GFX_idea_leadership_ideas"
+		texturefile = "gfx/interface/ideas/idea_leadership_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}		
 }
