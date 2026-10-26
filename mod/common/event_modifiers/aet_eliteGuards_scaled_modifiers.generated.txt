@@ -421,7 +421,7 @@ aet_eliteGuards_lightCavalryCossack_specialisation_0_6_p = {
 aet_eliteGuards_lightCavalryCossack_specialisation_0_7_p = {
 	is_revolutionary_guard_modifier = yes
 	cavalry_cost = -0.035
-	shock_damage = 0.018
+	shock_damage = 0.017
 }
 aet_eliteGuards_lightCavalryCossack_specialisation_0_8_p = {
 	is_revolutionary_guard_modifier = yes

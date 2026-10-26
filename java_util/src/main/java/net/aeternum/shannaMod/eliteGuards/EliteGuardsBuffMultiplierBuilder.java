@@ -29,7 +29,9 @@ public class EliteGuardsBuffMultiplierBuilder {
         modifiers = new ArrayList<>(1 << (bitWidth - 1));
         this.cfg = cfg;
         for (int i = 3; i < (1 << (bitWidth - 1)) + 3; i++) {
-            modifiers.add(step * i);
+            double d = step * i;
+            String s = String.format("%.3f", d);
+            modifiers.add(Double.parseDouble(s));
         }
     }
 
