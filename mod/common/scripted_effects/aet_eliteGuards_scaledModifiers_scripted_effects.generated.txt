@@ -4,6 +4,10 @@ aet_eliteGuards_refreshScaledModifiers = {
 		which = aet_eliteGuards_buffMultiplier_var
 		value = modifier:aet_eliteGuards_buffMultiplier
 	}
+	change_variable = {
+		which = aet_eliteGuards_buffMultiplier_var
+		value = 1
+	}
 	if = {
 		limit = { has_country_flag = aet_eliteGuards_lightCavalry_specialisation }
 		# Automatically generated function for a binary lookup table

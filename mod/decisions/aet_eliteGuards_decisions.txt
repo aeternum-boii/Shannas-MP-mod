@@ -173,8 +173,8 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_heavyCavalry_specialisation
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_heavyCavalry_specialisation_country
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_heavyCavalry_specialisation }
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_heavyCavalry_specialisation_country }
 		}
 
 		ai_will_do = {
@@ -286,8 +286,8 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_lightCavalry_specialisation
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_lightCavalry_country
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_lightCavalry_specialisation }
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_lightCavalry_country }
 		}
 
 		ai_will_do = {
@@ -347,10 +347,10 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_specialisation
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_country
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_horde
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_horde_country
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_horseArcher_specialisation }
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_horseArcher_country }
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_horseArcher_horde }
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_horseArcher_horde_country }
 		}
 
 		ai_will_do = {
@@ -485,7 +485,7 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_plutoMoraleDamage
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_plutoMoraleDamage }
 
 			hidden_effect = {
 				aet_eliteGuards_removePlutoCost = yes 
@@ -575,7 +575,7 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_plutoMoraleDamageReceived
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_plutoMoraleDamageReceived }
 
 			hidden_effect = {
 				aet_eliteGuards_removePlutoCost = yes 
@@ -665,7 +665,7 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_plutoManpowerUsage
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_plutoManpowerUsage }
 
 			hidden_effect = {
 				aet_eliteGuards_removePlutoCost = yes 
@@ -753,7 +753,7 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_offensiveShockDealt
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_offensiveShockDealt }
 		}
 
 		ai_importance = 0
@@ -834,7 +834,7 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_offensiveFireDealt
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_offensiveFireDealt }
 		}
 
 		ai_importance = 0
@@ -914,7 +914,7 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_offensiveAssaultAbility
+			aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_offensiveAssaultAbility }
 		}
 
 		ai_importance = 0

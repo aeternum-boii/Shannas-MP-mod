@@ -20,10 +20,10 @@ plantage_goods_test = {
 }
 
 aet_mercHireTest_05 = {
-	merc_hire_cost = -0.5
+	mercenary_cost = -0.5
 }
 aet_mercHireTest_1 = {
-	merc_hire_cost = -1
+	mercenary_cost = -1
 }
 aet_mercMaintenanceTest_05 = {
 	merc_maintenance_modifier = -0.5

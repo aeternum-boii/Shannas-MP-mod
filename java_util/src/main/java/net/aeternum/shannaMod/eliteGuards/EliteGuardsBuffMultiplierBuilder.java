@@ -81,6 +81,9 @@ public class EliteGuardsBuffMultiplierBuilder {
         sb.append(cfg.indent(1)).append("export_to_variable = {\n");
         sb.append(cfg.indent(2)).append("which = ").append(modVariableName).append("\n").append(cfg.indent(2))
                 .append("value = modifier:").append(buffModifier).append("\n").append(cfg.indent(1)).append("}\n");
+        sb.append(cfg.indent(1)).append("change_variable = {\n").append(cfg.indent(2)).append("which = ").append(modVariableName)
+                .append("\n").append(cfg.indent(2)).append("value = 1\n").append(cfg.indent(1)).append("}\n");
+
 
         final BinLookupGenerator gen = new BinLookupGenerator(cfg);
 
