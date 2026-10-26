@@ -295,7 +295,7 @@ restrictions_for_colonies = {
 
 	potential = {
 		has_idea_group = exploration_ideas
-		full_religious_ideas = yes
+		has_religious_ideas = yes
 	}
 	
 	allow = {
@@ -777,7 +777,7 @@ chaplains_of_the_fleet = {
 	monarch_power = DIP
 
 	potential = {
-		full_religious_ideas = yes
+		has_religious_ideas = yes
 		has_idea_group = maritime_ideas
 	}
 	
@@ -882,7 +882,7 @@ cultural_unity = {
 	
 	potential = {
 		has_idea_group = influence_ideas
-		full_religious_ideas = yes
+		has_religious_ideas = yes
 	}
 	
 	allow = {

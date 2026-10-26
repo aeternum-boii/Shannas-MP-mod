@@ -351,7 +351,7 @@ military_zeal_act = {
 	
 	potential = {
 		has_idea_group = quality_ideas
-		full_religious_ideas = yes
+		has_religious_ideas = yes
 	}
 	
 	allow = {
@@ -377,7 +377,7 @@ field_priests = {
 	monarch_power = MIL
 
 	potential = {
-		full_religious_ideas = yes
+		has_religious_ideas = yes
 		has_idea_group = quantity_ideas
 	}
 	
@@ -633,7 +633,7 @@ zealous_captains = {
 	
 	potential = {
 		has_idea_group = naval_ideas
-		full_religious_ideas = yes
+		has_religious_ideas = yes
 	}
 	
 	allow = {
@@ -1227,7 +1227,7 @@ wielders_of_the_flaming_sword_policy = {
 
 	potential = {
 		has_idea_group = theocracy_gov_ideas
-		full_religious_ideas = yes
+		has_religious_ideas = yes
 	}
 	
 	allow = {
@@ -1771,7 +1771,7 @@ dutiful_mercenaries_act = {
 	
 	potential = {
 		has_idea_group = mercenary_ideas
-		full_religious_ideas = yes  
+		has_religious_ideas = yes  
 	}
 	
 	allow = {

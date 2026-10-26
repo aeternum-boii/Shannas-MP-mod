@@ -12,6 +12,17 @@ aet_ideas_hasMilAcademy = {
 	}
 }
 
+has_religious_ideas = {
+	OR = {
+		has_idea_group = religious_ideas
+		has_idea_group = jewish_ideas
+		has_idea_group = christian_ideas
+		has_idea_group = muslim_ideas
+		has_idea_group = eastern_ideas
+		has_idea_group = dharmic_ideas
+	}	
+}
+
 full_religious_ideas = {
 	OR = {
 		full_idea_group = religious_ideas
