@@ -9,7 +9,7 @@ public class Main {
     static void main() throws IOException {
         Path p = Path.of("..","mod","common");
 
-        EliteGuardsBuffMultiplierBuilder builder = new EliteGuardsBuffMultiplierBuilder(p, 6)
+        EliteGuardsBuffMultiplierBuilder builder = new EliteGuardsBuffMultiplierBuilder(p, 5)
                 .generateScaledModifiers()
                 .writeScaledModifiers()
                 .writeLogic();

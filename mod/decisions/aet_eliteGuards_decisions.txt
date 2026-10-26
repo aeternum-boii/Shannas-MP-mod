@@ -131,9 +131,9 @@ country_decisions = {
 				modifier = aet_eliteGuards_heavyCavalry_specialisation
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
-				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
-				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+				has_country_flag = aet_eliteGuards_heavyCavalry_specialisation
+				has_country_flag = aet_eliteGuards_lightCavalry_specialisation
+				has_country_flag = aet_eliteGuards_horseArcher_specialisation
 			}
 			aet_eliteGuard_heavyCavPersistentRequirements = yes 
 		}
@@ -141,13 +141,13 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_heavyCavalry_specialisation
-				duration = -1
+				
 			}
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_heavyCavalry_specialisation_country
-				duration = -1
+				
 			}
 		}
 
@@ -163,7 +163,7 @@ country_decisions = {
 	aet_eliteGuards_HeavyCav_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+			has_country_flag = aet_eliteGuards_heavyCavalry_specialisation
 		}
 		
 		allow = {
@@ -173,8 +173,8 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
-			remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation_country
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_heavyCavalry_specialisation
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_heavyCavalry_specialisation_country
 		}
 
 		ai_will_do = {
@@ -195,9 +195,9 @@ country_decisions = {
 				modifier = aet_eliteGuards_lightCavalry_specialisation
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
-				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
-				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+				has_country_flag = aet_eliteGuards_heavyCavalry_specialisation
+				has_country_flag = aet_eliteGuards_lightCavalry_specialisation
+				has_country_flag = aet_eliteGuards_horseArcher_specialisation
 			}
 			aet_eliteGuard_lightCavPersistentRequirements = yes 
 		}
@@ -205,13 +205,13 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_lightCavalry_specialisation
-				duration = -1
+				
 			}
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_lightCavalry_country
-				duration = -1
+				
 			}
 		}
 
@@ -229,7 +229,7 @@ country_decisions = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_lightCavalryCossack_specialisation
+				has_country_flag = aet_eliteGuards_lightCavalryCossack_specialisation
 			}				
 			OR = {
 				aet_is_debug = yes 
@@ -246,7 +246,7 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+			has_country_flag = aet_eliteGuards_lightCavalry_specialisation
 			aet_eliteGuard_lightCavCossackPersistentRequirements = yes 
 			cossacks_percentage = 0.20
 			estate_influence = {
@@ -262,13 +262,13 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_lightCavalryCossack_specialisation
-				duration = -1
+				
 			}
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_lightCavalryCossack_country
-				duration = -1
+				
 			}
 		}
 	}
@@ -276,7 +276,7 @@ country_decisions = {
 	aet_eliteGuards_LightCav_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+			has_country_flag = aet_eliteGuards_lightCavalry_specialisation
 		}
 		
 		allow = {
@@ -286,8 +286,8 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_lightCavalry_specialisation
-			remove_country_modifier = aet_eliteGuards_lightCavalry_country
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_lightCavalry_specialisation
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_lightCavalry_country
 		}
 
 		ai_will_do = {
@@ -307,9 +307,9 @@ country_decisions = {
 				modifier = aet_eliteGuards_lightCavalry_specialisation
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
-				has_country_modifier = aet_eliteGuards_lightCavalry_specialisation
-				has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+				has_country_flag = aet_eliteGuards_heavyCavalry_specialisation
+				has_country_flag = aet_eliteGuards_lightCavalry_specialisation
+				has_country_flag = aet_eliteGuards_horseArcher_specialisation
 			}
 			aet_eliteGuard_cavArcherPersistentRequirements = yes 			
 		}
@@ -317,13 +317,13 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_horseArcher_specialisation
-				duration = -1
+				
 			}
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_horseArcher_country
-				duration = -1
+				
 			}			
 		}
 
@@ -337,7 +337,7 @@ country_decisions = {
 	aet_eliteGuards_HorseArchers_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			has_country_flag = aet_eliteGuards_horseArcher_specialisation
 		}
 		
 		allow = {
@@ -347,10 +347,10 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_horseArcher_specialisation
-			remove_country_modifier = aet_eliteGuards_horseArcher_country
-			remove_country_modifier = aet_eliteGuards_horseArcher_horde
-			remove_country_modifier = aet_eliteGuards_horseArcher_horde_country
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_specialisation
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_country
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_horde
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_horseArcher_horde_country
 		}
 
 		ai_will_do = {
@@ -362,7 +362,7 @@ country_decisions = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_horseArcher_horde
+				has_country_flag = aet_eliteGuards_horseArcher_horde
 			}
 			OR = {
 				aet_is_debug = yes 
@@ -379,9 +379,9 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_horseArcher_specialisation
+			has_country_flag = aet_eliteGuards_horseArcher_specialisation
 			NOT = {
-				has_country_modifier = aet_eliteGuards_horseArcher_horde
+				has_country_flag = aet_eliteGuards_horseArcher_horde
 			}
 			aet_eliteGuard_cavArcherNomadPersistentRequirements = yes 
 		}
@@ -389,14 +389,14 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_horseArcher_horde
-				duration = -1
+				
 			}
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_horseArcher_horde_country
-				duration = -1
+				
 			}			
 		}
 
@@ -414,7 +414,7 @@ country_decisions = {
 			}
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+				has_country_flag = aet_eliteGuards_plutoMoraleDamage
 			}
 			OR = {
 				aet_is_debug = yes 
@@ -432,7 +432,7 @@ country_decisions = {
 				var = aet_eliteGuards_fullcost
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+				has_country_flag = aet_eliteGuards_plutoMoraleDamage
 			}
 			aet_eliteGuards_plutoPersistentRequirements = yes 
 		}
@@ -440,9 +440,9 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_plutoMoraleDamage
-				duration = -1
+				
 			}	
 
 			hidden_effect = {
@@ -461,7 +461,7 @@ country_decisions = {
 	aet_eliteGuards_plutoMoraleDamage_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+			has_country_flag = aet_eliteGuards_plutoMoraleDamage
 
 			OR = {
 				aet_is_debug = yes 
@@ -478,14 +478,14 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_plutoMoraleDamage
+			has_country_flag = aet_eliteGuards_plutoMoraleDamage
 			aet_eliteGuards_plutoPersistentRequirements = yes 
 		}
 		
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_plutoMoraleDamage
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_plutoMoraleDamage
 
 			hidden_effect = {
 				aet_eliteGuards_removePlutoCost = yes 
@@ -504,7 +504,7 @@ country_decisions = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+				has_country_flag = aet_eliteGuards_plutoMoraleDamageReceived
 			}
 			OR = {
 				aet_is_debug = yes 
@@ -522,7 +522,7 @@ country_decisions = {
 				var = aet_eliteGuards_fullcost
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+				has_country_flag = aet_eliteGuards_plutoMoraleDamageReceived
 			}
 			aet_eliteGuards_plutoPersistentRequirements = yes 
 		}
@@ -530,9 +530,9 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_plutoMoraleDamageReceived
-				duration = -1
+				
 			}	
 
 			hidden_effect = {
@@ -551,7 +551,7 @@ country_decisions = {
 	aet_eliteGuards_plutoMoraleDamageReceived_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+			has_country_flag = aet_eliteGuards_plutoMoraleDamageReceived
 
 			OR = {
 				aet_is_debug = yes 
@@ -568,14 +568,14 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+			has_country_flag = aet_eliteGuards_plutoMoraleDamageReceived
 			aet_eliteGuards_plutoPersistentRequirements = yes 
 		}
 		
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_plutoMoraleDamageReceived
 
 			hidden_effect = {
 				aet_eliteGuards_removePlutoCost = yes 
@@ -594,7 +594,7 @@ country_decisions = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+				has_country_flag = aet_eliteGuards_plutoManpowerUsage
 			}
 			OR = {
 				aet_is_debug = yes 
@@ -612,7 +612,7 @@ country_decisions = {
 				var = aet_eliteGuards_fullcost
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+				has_country_flag = aet_eliteGuards_plutoManpowerUsage
 			}
 			aet_eliteGuards_plutoPersistentRequirements = yes 
 		}
@@ -620,9 +620,9 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_plutoManpowerUsage
-				duration = -1
+				
 			}	
 
 			hidden_effect = {
@@ -641,7 +641,7 @@ country_decisions = {
 	aet_eliteGuards_plutoManpower_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+			has_country_flag = aet_eliteGuards_plutoManpowerUsage
 
 			OR = {
 				aet_is_debug = yes 
@@ -658,14 +658,14 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_plutoManpowerUsage
+			has_country_flag = aet_eliteGuards_plutoManpowerUsage
 			aet_eliteGuards_plutoPersistentRequirements = yes 
 		}
 		
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_plutoManpowerUsage
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_plutoManpowerUsage
 
 			hidden_effect = {
 				aet_eliteGuards_removePlutoCost = yes 
@@ -686,7 +686,7 @@ country_decisions = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_offensiveShockDealt
+				has_country_flag = aet_eliteGuards_offensiveShockDealt
 			}
 			OR = {
 				aet_is_debug = yes 
@@ -704,8 +704,8 @@ country_decisions = {
 				var = aet_eliteGuards_fullcost
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_offensiveShockDealt
-				has_country_modifier = aet_eliteGuards_offensiveFireDealt
+				has_country_flag = aet_eliteGuards_offensiveShockDealt
+				has_country_flag = aet_eliteGuards_offensiveFireDealt
 			}
 			aet_eliteGuards_offensivePersistentRequirements = yes 
 		}
@@ -713,9 +713,9 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_offensiveShockDealt
-				duration = -1
+				
 			}	
 		}
 
@@ -729,7 +729,7 @@ country_decisions = {
 	aet_eliteGuards_offensiveShock_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_offensiveShockDealt
+			has_country_flag = aet_eliteGuards_offensiveShockDealt
 
 			OR = {
 				aet_is_debug = yes 
@@ -746,14 +746,14 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_offensiveShockDealt
+			has_country_flag = aet_eliteGuards_offensiveShockDealt
 			aet_eliteGuards_offensivePersistentRequirements = yes 
 		}
 		
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_offensiveShockDealt
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_offensiveShockDealt
 		}
 
 		ai_importance = 0
@@ -767,7 +767,7 @@ country_decisions = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_offensiveFireDealt
+				has_country_flag = aet_eliteGuards_offensiveFireDealt
 			}
 			OR = {
 				aet_is_debug = yes 
@@ -785,8 +785,8 @@ country_decisions = {
 				var = aet_eliteGuards_fullcost
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_offensiveShockDealt
-				has_country_modifier = aet_eliteGuards_offensiveFireDealt
+				has_country_flag = aet_eliteGuards_offensiveShockDealt
+				has_country_flag = aet_eliteGuards_offensiveFireDealt
 			}
 			aet_eliteGuards_offensivePersistentRequirements = yes 
 		}
@@ -794,9 +794,9 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_offensiveFireDealt
-				duration = -1
+				
 			}	
 		}
 
@@ -810,7 +810,7 @@ country_decisions = {
 	aet_eliteGuards_offensiveFire_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_offensiveFireDealt
+			has_country_flag = aet_eliteGuards_offensiveFireDealt
 
 			OR = {
 				aet_is_debug = yes 
@@ -827,14 +827,14 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_offensiveFireDealt
+			has_country_flag = aet_eliteGuards_offensiveFireDealt
 			aet_eliteGuards_offensivePersistentRequirements = yes 
 		}
 		
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_offensiveFireDealt
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_offensiveFireDealt
 		}
 
 		ai_importance = 0
@@ -848,7 +848,7 @@ country_decisions = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
 			NOT = {
-				has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+				has_country_flag = aet_eliteGuards_offensiveAssaultAbility
 			}
 			OR = {
 				aet_is_debug = yes 
@@ -866,7 +866,7 @@ country_decisions = {
 				var = aet_eliteGuards_fullcost
 			}
 			NOT = {
-				has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+				has_country_flag = aet_eliteGuards_offensiveAssaultAbility
 			}
 			aet_eliteGuards_offensivePersistentRequirements = yes 
 		}
@@ -874,9 +874,9 @@ country_decisions = {
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_offensiveAssaultAbility
-				duration = -1
+				
 			}	
 		}
 
@@ -890,7 +890,7 @@ country_decisions = {
 	aet_eliteGuards_offensiveAssault_remove = {
 		potential = {
 			aet_eliteGuards_baseDecisionTrigger = yes 
-			has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+			has_country_flag = aet_eliteGuards_offensiveAssaultAbility
 
 			OR = {
 				aet_is_debug = yes 
@@ -907,14 +907,14 @@ country_decisions = {
 				left = mil_power
 				var = aet_eliteGuards_fullcost
 			}
-			has_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+			has_country_flag = aet_eliteGuards_offensiveAssaultAbility
 			aet_eliteGuards_offensivePersistentRequirements = yes 
 		}
 		
 		effect = {
 			aet_eliteGuards_takeFullAction = yes
 
-			remove_country_modifier = aet_eliteGuards_offensiveAssaultAbility
+			aet_eliteGuards_removeCountryModifier = aet_eliteGuards_offensiveAssaultAbility
 		}
 
 		ai_importance = 0

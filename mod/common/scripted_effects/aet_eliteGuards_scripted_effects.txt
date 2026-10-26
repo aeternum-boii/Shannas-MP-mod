@@ -211,6 +211,7 @@ aet_eliteGuards_initialSetup = {
 aet_eliteGuards_refreshAll = {
 	aet_eliteGuards_recalcFL = yes
 	aet_eliteGuards_checkDecisions = yes 
+	aet_eliteGuards_refreshScaledModifiers = yes
 }
 
 aet_eliteGuards_checkDecisions = {
@@ -348,6 +349,8 @@ aet_eliteGuards_cleanup = {
 		remove_country_modifier = aet_eliteGuardsFL_39
 
 		aet_eliteGuards_removeFLModifiers = yes
+		aet_eliteGuards_removeBuffModifiers = yes
+		aet_eliteGuards_cleanUpBuffFlags = yes
 	}
 }
 
@@ -1333,6 +1336,7 @@ aet_eliteGuards_reduce_FL = {
 	aet_eliteGuards_recalcFL = yes
 }
 
+# formula = c * (merc_hire_cost + merc_maintenance_modifier - 1) * num_of_buffs
 aet_eliteGuards_getPlutoCost = {
 	aet_eliteGuards_removePlutoCost = yes 
 
@@ -1354,172 +1358,94 @@ aet_eliteGuards_getPlutoCost = {
 		value = aet_eliteGuardsMercCost
 	}
 
-	# Multiplier 1: modifiers 0-3
+	change_variable = {
+		which = aet_eliteGuardsCombinedModifier
+		value = 1 
+	}
+	multiply_variable = {
+		which = aet_eliteGuardsCombinedModifier
+		value = 0.5
+	}
+
+
+	# Automatically generated function for a binary lookup table
+	# Parameters:
+	# 	Trigger Block:
+	# 	check_variable = {
+	# 		which = aet_eliteGuardsCombinedModifier
+	# 		value = 0.250
+	# 	}
+	# 	Effect Block: 
+	# 	aet_eliteGuards_addCountryModifier = {
+	# 		name = aet_eliteGuards_plutoCost_0
+	# 	}
+	# 
+	# 	Values: [0.250, 0.479, 0.793, 1.193, 1.679, 2.250]
 	if = {
 		limit = {
 			check_variable = {
-				which = aet_eliteGuardsMultiplier
-				value = 1
+				which = aet_eliteGuardsCombinedModifier
+				value = 1.193
 			}
 		}
-
 		if = {
 			limit = {
-				NOT = {
-					check_variable = {
-						which = aet_eliteGuardsCombinedModifier
-						value = -0.5
-					}
+				check_variable = {
+					which = aet_eliteGuardsCombinedModifier
+					value = 1.679
 				}
 			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_0
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
+			if = {
+				limit = {
 					check_variable = {
 						which = aet_eliteGuardsCombinedModifier
-						value = 0
+						value = 2.250
 					}
 				}
-			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_1
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					check_variable = {
-						which = aet_eliteGuardsCombinedModifier
-						value = 0.5
-					}
+				aet_eliteGuards_addCountryModifier = {
+					name = aet_eliteGuards_plutoCost_5
 				}
 			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_2
-				duration = -1
+			else = {
+				aet_eliteGuards_addCountryModifier = {
+					name = aet_eliteGuards_plutoCost_4
+				}
 			}
 		}
 		else = {
-			add_country_modifier = {
+			aet_eliteGuards_addCountryModifier = {
 				name = aet_eliteGuards_plutoCost_3
-				duration = -1
 			}
 		}
 	}
-
-	# Multiplier 2: modifiers 4-7
-	else_if = {
-		limit = {
-			check_variable = {
-				which = aet_eliteGuardsMultiplier
-				value = 2
-			}
-		}
-
-		if = {
-			limit = {
-				NOT = {
-					check_variable = {
-						which = aet_eliteGuardsCombinedModifier
-						value = -0.5
-					}
-				}
-			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_4
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					check_variable = {
-						which = aet_eliteGuardsCombinedModifier
-						value = 0
-					}
-				}
-			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_5
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					check_variable = {
-						which = aet_eliteGuardsCombinedModifier
-						value = 0.5
-					}
-				}
-			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_6
-				duration = -1
-			}
-		}
-		else = {
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_7
-				duration = -1
-			}
-		}
-	}
-
-	# Multiplier 3: modifiers 8-11
 	else = {
 		if = {
 			limit = {
-				NOT = {
-					check_variable = {
-						which = aet_eliteGuardsCombinedModifier
-						value = -0.5
-					}
+				check_variable = {
+					which = aet_eliteGuardsCombinedModifier
+					value = 0.479
 				}
 			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_8
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
+			if = {
+				limit = {
 					check_variable = {
 						which = aet_eliteGuardsCombinedModifier
-						value = 0
+						value = 0.793
 					}
 				}
-			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_9
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					check_variable = {
-						which = aet_eliteGuardsCombinedModifier
-						value = 0.5
-					}
+				aet_eliteGuards_addCountryModifier = {
+					name = aet_eliteGuards_plutoCost_2
 				}
 			}
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_10
-				duration = -1
+			else = {
+				aet_eliteGuards_addCountryModifier = {
+					name = aet_eliteGuards_plutoCost_1
+				}
 			}
 		}
 		else = {
-			add_country_modifier = {
-				name = aet_eliteGuards_plutoCost_11
-				duration = -1
+			aet_eliteGuards_addCountryModifier = {
+				name = aet_eliteGuards_plutoCost_0
 			}
 		}
 	}
@@ -1543,12 +1469,12 @@ aet_eliteGuards_removePlutoCost = {
 aet_eliteGuards_addCountryModifier = {
 	tooltip = {
 		add_country_modifier = {
-			name = $modifier$_1_0_p
+			name = $name$_1_0_p
 			duration = -1
 		}
 	}
 	hidden_effect = {
-		set_country_flag = $modifier$
+		set_country_flag = $name$
 		aet_eliteGuards_refreshScaledModifiers = yes
 	}
 }
@@ -1556,12 +1482,12 @@ aet_eliteGuards_addCountryModifier = {
 aet_eliteGuards_removeCountryModifier = {
 	tooltip = {
 		remove_country_modifier = {
-			name = $modifier$_1_0_p
+			name = $name$_1_0_p
 			duration = -1
 		}
 	}
 	hidden_effect = {
-		clr_country_flag = $modifier$
+		clr_country_flag = $name$
 		aet_eliteGuards_refreshScaledModifiers = yes
 	}
 }

@@ -18,3 +18,22 @@ plantage_goods_test = {
 	plantage_goods_produced_modifier = 0.10 
 	plantage_goods_produced_modifier_sem = 1073741.824
 }
+
+aet_mercHireTest_05 = {
+	merc_hire_cost = -0.5
+}
+aet_mercHireTest_1 = {
+	merc_hire_cost = -1
+}
+aet_mercMaintenanceTest_05 = {
+	merc_maintenance_modifier = -0.5
+}
+aet_mercMaintenanceTest_1 = {
+	merc_maintenance_modifier = -1
+}
+aet_eliteBuffTest = {
+	aet_eliteGuards_buffMultiplier = 0.30
+}
+aet_eliteBuffTest_bad = {
+	aet_eliteGuards_buffMultiplier = -0.30
+}

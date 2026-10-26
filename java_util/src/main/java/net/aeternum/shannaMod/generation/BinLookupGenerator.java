@@ -1,10 +1,9 @@
-package net.aeternum.shannaMod.eliteGuards;
+package net.aeternum.shannaMod.generation;
 
 import net.aeternum.shannaMod.Config;
 import org.jetbrains.annotations.Contract;
 import org.jspecify.annotations.NonNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BinLookupGenerator {
@@ -21,8 +20,15 @@ public class BinLookupGenerator {
     public String generate(@NonNull ValueInjection injection, @NonNull List<Double> values) {
         values.sort(Double::compareTo);
         String genComment = "Automatically generated function for a binary lookup table\n"
-                + "Parameters:\n" +  cfg.indent(1) + "Trigger Block:\n" + cfg.indent(1) + injection.genTriggerBlock(values.getFirst(), 2) +
-                cfg.indent(1) + "Effect Block: " + injection.genEffectBlock(values.getFirst(), 0) + "\n" + cfg.indent(1) + "Values: [" +
+                + "Parameters:\n" +  cfg.indent(1) +
+
+                "Trigger Block:\n" + cfg.indent(1) + injection.genTriggerBlock(values.getFirst(), 1) +
+                cfg.indent(1) +
+
+                "Effect Block: \n" + cfg.indent() + injection.genEffectBlock(values.getFirst(), 1) + "\n" + cfg.indent(1) +
+
+
+                "Values: [" +
                 values.stream().map("%.3f"::formatted).reduce((a, b) -> a + ", " + b).orElse("") + "]";
         String[] genCommentLines = genComment.split("\n");
         for(int i = 0; i < genCommentLines.length; i++) genCommentLines[i] = "# " + genCommentLines[i];

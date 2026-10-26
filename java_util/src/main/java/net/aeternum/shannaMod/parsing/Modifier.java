@@ -7,8 +7,8 @@ public record Modifier(
         String value,
         boolean failsDoubleParse
 ) {
-    public Modifier(String modifier, double v, boolean failsDoubleParse) {
-        this(modifier, String.format("%.3f", v), failsDoubleParse);
+    public Modifier(String modifier, double v) {
+        this(modifier, String.format("%.3f", v), false);
     }
 
     public @NonNull Double parsedValue() {
@@ -17,7 +17,7 @@ public record Modifier(
 
     public @NonNull Modifier scale(Double multiplier) {
         if(failsDoubleParse) return new Modifier(modifier, value, true);
-        return new Modifier(modifier, parsedValue() * multiplier, false);
+        return new Modifier(modifier, parsedValue() * multiplier);
     }
 
     @Override @NonNull

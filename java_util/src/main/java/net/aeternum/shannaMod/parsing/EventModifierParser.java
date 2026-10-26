@@ -29,7 +29,7 @@ public class EventModifierParser {
                         (k,v) -> {
                             String s = v.single();
                             try {
-                                modifiers.add(new Modifier(k, Double.parseDouble(s), false));
+                                modifiers.add(new Modifier(k, Double.parseDouble(s)));
                             } catch (NumberFormatException e) {
                                 modifiers.add(new Modifier(k, s, true));
                             }

@@ -1,6 +1,8 @@
 package net.aeternum.shannaMod.eliteGuards;
 
 import net.aeternum.shannaMod.Config;
+import net.aeternum.shannaMod.generation.BinLookupGenerator;
+import net.aeternum.shannaMod.generation.ScaledModifierGenerator;
 import net.aeternum.shannaMod.parsing.EventModifier;
 
 import java.io.BufferedWriter;
@@ -26,7 +28,7 @@ public class EliteGuardsBuffMultiplierBuilder {
 
         modifiers = new ArrayList<>(1 << (bitWidth - 1));
         this.cfg = cfg;
-        for (int i = 1; i < (1 << (bitWidth - 1)) + 1; i++) {
+        for (int i = 3; i < (1 << (bitWidth - 1)) + 3; i++) {
             modifiers.add(step * i);
         }
     }
@@ -47,7 +49,7 @@ public class EliteGuardsBuffMultiplierBuilder {
             scaledModifiers.putIfAbsent(modifier.getSuffixlessName(), new ArrayList<>());
             scaledModifiers.get(modifier.getSuffixlessName()).add(modifier);
         }
-        for (List<EventModifier> modifierList : scaledModifiers.values()) modifierList.sort(Comparator.comparing(EventModifier::getSuffixlessName));
+        for (List<EventModifier> modifierList : scaledModifiers.values()) modifierList.sort(Comparator.comparing(EventModifier::name));
 
         return this;
     }
@@ -73,6 +75,7 @@ public class EliteGuardsBuffMultiplierBuilder {
         final StringBuilder sb = new StringBuilder();
         final String modVariableName = "aet_eliteGuards_buffMultiplier_var";
         sb.append("aet_eliteGuards_refreshScaledModifiers = {\n");
+        sb.append(cfg.indent(1)).append("aet_eliteGuards_removeBuffModifiers = yes\n");
         sb.append(cfg.indent(1)).append("export_to_variable = {\n");
         sb.append(cfg.indent(2)).append("which = ").append(modVariableName).append("\n").append(cfg.indent(2))
                 .append("value = modifier:").append(buffModifier).append("\n").append(cfg.indent(1)).append("}\n");
@@ -112,6 +115,20 @@ public class EliteGuardsBuffMultiplierBuilder {
             sb.append("\n").append(cfg.indent(1)).append("}\n");
         });
 
+        sb.append("}\n");
+
+        sb.append("aet_eliteGuards_removeBuffModifiers = {\n");
+        for(List<EventModifier> modifierLists : scaledModifiers.values()) {
+            for(EventModifier modifier : modifierLists) {
+                sb.append(cfg.indent(1)).append("remove_country_modifier = ").append(modifier.name()).append("\n");
+            }
+        }
+        sb.append("}\n");
+
+        sb.append("aet_eliteGuards_cleanUpBuffFlags = { # Effectively equal to calling aet_eliteGuards_removeCountryModifier on all modifiers\n");
+        for(String flagName : scaledModifiers.keySet()) {
+            sb.append(cfg.indent(1)).append("clr_country_flag = ").append(flagName).append("\n");
+        }
         sb.append("}\n");
 
         try (BufferedWriter writer = Files.newBufferedWriter(commonPath.resolve(logicTarget))) {

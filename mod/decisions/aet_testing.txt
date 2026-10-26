@@ -109,4 +109,170 @@ country_decisions = {
 			}
 		}
 	}
+
+	aet_debug_toggleGuardsTest = {
+		potential = {
+			aet_is_debug = yes 
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = aet_debug_guardsTest 
+				}
+				clr_global_flag = aet_debug_guardsTest 
+			} else = {
+				set_global_flag = aet_debug_guardsTest
+			}
+		}
+	}	
+
+	aet_debug_mercHire_05 = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_guardsTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = aet_mercHireTest_05
+				}
+				remove_country_modifier = aet_mercHireTest_05
+			} else = {
+				add_country_modifier = {
+					name = aet_mercHireTest_05
+					duration = -1
+				}
+			}
+		}
+	}			
+	aet_debug_mercHire_1 = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_guardsTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = aet_mercHireTest_1
+				}
+				remove_country_modifier = aet_mercHireTest_1
+			} else = {
+				add_country_modifier = {
+					name = aet_mercHireTest_1
+					duration = -1
+				}
+			}
+		}
+	}		
+	aet_debug_mercMain_05 = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_guardsTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = aet_mercMaintenanceTest_05
+				}
+				remove_country_modifier = aet_mercMaintenanceTest_05
+			} else = {
+				add_country_modifier = {
+					name = aet_mercMaintenanceTest_05
+					duration = -1
+				}
+			}
+		}
+	}		
+	aet_debug_mercMain_1 = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_guardsTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = aet_mercMaintenanceTest_1
+				}
+				remove_country_modifier = aet_mercMaintenanceTest_1
+			} else = {
+				add_country_modifier = {
+					name = aet_mercMaintenanceTest_1
+					duration = -1
+				}
+			}
+		}
+	}		
+	aet_debug_eliteBuff = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_guardsTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = aet_eliteBuffTest
+				}
+				remove_country_modifier = aet_eliteBuffTest
+			} else = {
+				add_country_modifier = {
+					name = aet_eliteBuffTest
+					duration = -1
+				}
+			}
+		}
+	}		
+	aet_debug_eliteBuff_neg = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_guardsTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					has_country_modifier = aet_eliteBuffTest_bad
+				}
+				remove_country_modifier = aet_eliteBuffTest_bad
+			} else = {
+				add_country_modifier = {
+					name = aet_eliteBuffTest_bad
+					duration = -1
+				}
+			}
+		}
+	}		
 }

@@ -23,7 +23,7 @@ aet_eliteGuards_baseDecisionTrigger = {
 aet_eliteGuards_upgradeTrigger = {
 	aet_eliteGuards_baseDecisionTrigger = yes 
 	NOT = {
-		has_country_modifier = $modifier$
+		has_country_flag = $modifier$
 	}	
 }
 aet_eliteGuards_upgradeTrigger_inf = {

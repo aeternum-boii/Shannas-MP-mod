@@ -14,52 +14,28 @@ aet_eliteGuards_plutoManpowerUsage = {
 }
 
 aet_eliteGuards_plutoCost_0 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 0.25
+	is_revolutionary_guard_modifier = yes
+	land_maintenance_modifier = 0.250
 }
 aet_eliteGuards_plutoCost_1 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 0.50
+	is_revolutionary_guard_modifier = yes
+	land_maintenance_modifier = 0.479
 }
 aet_eliteGuards_plutoCost_2 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 0.75
+	is_revolutionary_guard_modifier = yes
+	land_maintenance_modifier = 0.793
 }
 aet_eliteGuards_plutoCost_3 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 1.00
+	is_revolutionary_guard_modifier = yes
+	land_maintenance_modifier = 1.193
 }
 aet_eliteGuards_plutoCost_4 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 1.25
+	is_revolutionary_guard_modifier = yes
+	land_maintenance_modifier = 1.679
 }
 aet_eliteGuards_plutoCost_5 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 1.5
-}
-aet_eliteGuards_plutoCost_6 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 1.75
-}
-aet_eliteGuards_plutoCost_7 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 2.00
-}
-aet_eliteGuards_plutoCost_8 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 2.25
-}
-aet_eliteGuards_plutoCost_9 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 2.5
-}
-aet_eliteGuards_plutoCost_10 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 2.75
-}
-aet_eliteGuards_plutoCost_11 = {
-    is_revolutionary_guard_modifier = yes
-    land_maintenance_modifier = 3.00
+	is_revolutionary_guard_modifier = yes
+	land_maintenance_modifier = 2.250
 }
 
 aet_eliteGuards_offensiveShockDealt = {
