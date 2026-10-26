@@ -275,4 +275,18 @@ country_decisions = {
 			}
 		}
 	}		
+	aet_debug_eliteBuff_forceReload = {
+		potential = {
+			aet_is_debug = yes 
+			has_global_flag = aet_debug_guardsTest
+		}
+		
+		allow = { # UI I guess 
+			aet_is_debug = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_refreshScaledModifiers = yes
+		}
+	}			
 }
