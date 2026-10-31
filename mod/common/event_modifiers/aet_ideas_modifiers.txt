@@ -574,3 +574,10 @@ aet_ideas_nationalismProvinceModifier_1_uncontrolled = {
 	local_tax_modifier = 0.35
 	trade_goods_size_modifier = 0.35
 }
+
+harmonized_buddhism_group = {
+	infantry_power = 0.10
+	idea_cost = -0.10
+	advisor_cost = -0.10
+	production_efficiency = 0.10
+}

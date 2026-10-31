@@ -37,11 +37,11 @@ NDefines.NAI.CHARTER_COMPANY_BASE_RELUCTANCE = 35
 NDefines.NAI.CHARTER_COMPANY_ALLIANCE_BONUS = 0
 NDefines.NAI.CHARTER_COMPANY_OPINION_MULTIPLIER = 0.06
 NDefines.NAI.DRILLING_BUDGET_OF_SURPLUS = 0
+NDefines.NAI.ONLY_INFANTRY_MERCS = 0
 
 
 NDefines.NMilitary.SUPPLYLI_ATTRITION = 2 -- This looks like a typo but I can't find the real one 
 NDefines.NMilitary.LEADER_MIN_PIPS = 1
-NDefines.NMilitary.ARMY_DRILL_MAX_MORALE = 0.1
 NDefines.NMilitary.ARMY_DRILL_SKILL_MONTHS = 48
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = 2
 NDefines.NMilitary.STRAIT_CROSSING_PENALTY = 3
@@ -53,6 +53,10 @@ NDefines.NMilitary.DAYS_PER_SIEGE_PHASE = 25
 NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.125
 NDefines.NMilitary.SIEGE_FORCE_NEEDED_MULTIPLIER = 2
 NDefines.NMilitary.FLAGSHIP_REQUIRED_NAVY_SIZE_IN_SAILORS = 750
+NDefines.NMilitary.MERCENARY_COMPANY_MAX_REGIMENTS = 300;                   -- Maximum size of a mercenary company, regardless of nation's development.
+NDefines.NMilitary.MERCENARY_COMPANY_ARMY_TRADITION = 60.0;                -- At what army tradition mercenary leaders are generated at.
+NDefines.NMilitary.MERCENARY_BASE_COST = 15.0;                             -- Increased hiring cost per regiment in the mercenary company.
+NDefines.NMilitary.MERCENARY_COMPANY_STARTING_MORALE = 2.0;                -- How much morale mercenary armies have upon recruitment.
 
 NDefines.NEconomy.ADVISOR_COST = 2
 NDefines.NEconomy.GALLEY_MAINT_FACTOR = 0.064
