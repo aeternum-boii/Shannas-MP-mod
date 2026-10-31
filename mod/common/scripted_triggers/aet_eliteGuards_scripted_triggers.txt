@@ -165,15 +165,18 @@ aet_eliteGuard_cavArcherPersistentRequirements = {
 	}
 }
 aet_eliteGuard_cavArcherNomadPersistentRequirements = {
-	has_idea_group = horde_gov_ideas
+	full_idea_group = horde_gov_ideas
 }
 
 aet_eliteGuards_plutoPersistentRequirements = {
 	OR = {
-		has_idea_group = plutocracy_ideas
-		has_idea_group = mercenary_ideas
+		full_idea_group = plutocracy_ideas
+		full_idea_group = mercenary_ideas
 	}
 }
 aet_eliteGuards_offensivePersistentRequirements = {
-	has_idea_group = offensive_ideas
+	full_idea_group = offensive_ideas
+}
+aet_eliteGuards_quantityPersistentRequirements = {
+	full_idea_group = quantity_ideas
 }

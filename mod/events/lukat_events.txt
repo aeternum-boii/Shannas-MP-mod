@@ -94,54 +94,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = lukat_events.3
-	title = none 
-	desc = none 
-	picture = none 
-	hidden = yes
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	trigger = {
-		naval_ideas = 5
-	}
-
-	option = {
-		name = lukat_events.3.1
-		add_country_modifier = {
-			name = professional_marines_tm
-			duration = -1
-		}
-		ai_chance = { factor = 100 }
-	}
-}
-
-country_event = {
-	id = lukat_events.4
-	title = none 
-	desc = none 
-	picture = none 
-	hidden = yes
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	trigger = {
-		offensive_ideas = 7
-	}
-
-	option = {
-		name = lukat_events.4.1
-		add_country_modifier = {
-			name = napoleonic_warfare_tm
-			duration = -1
-		}
-		ai_chance = { factor = 100 }
-	}
-}
-
 namespace = lukat_heir_events
 
 country_event = { #start event spy heir

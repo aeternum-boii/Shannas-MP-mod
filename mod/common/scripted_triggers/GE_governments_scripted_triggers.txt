@@ -367,7 +367,6 @@ has_mercenary_reform_35 = {
 
 has_professionals_reform_35 = {
 	OR = {
-		has_reform = professional_army_reform
 		has_reform = empowered_royal_guard_reform
 		has_reform = expanded_devshirme_reform
 		has_reform = portugese_marines_reform

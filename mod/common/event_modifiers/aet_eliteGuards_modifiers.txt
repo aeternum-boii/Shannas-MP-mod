@@ -1,3 +1,8 @@
+international_nobility = {
+    aet_eliteGuards_forceLimit = 0.05
+}
+
+
 aet_eliteGuards_infEnable = {
 	is_revolutionary_guard_modifier = yes 
 	infantry_power = 2
@@ -37,8 +42,9 @@ aet_eliteGuards_artyEnable = {
 }
 
 aet_eliteGuards_FLbelow50_c = {
-    aet_eliteGuards_buffMultiplier = 0.375
+    aet_eliteGuards_buffMultiplier = 0.4
 }
+
 aet_eliteGuards_FLbelow50_u = {
     is_revolutionary_guard_modifier = yes 
     infantry_cost = -0.35 # regiment cost did not work for some reason
@@ -47,8 +53,9 @@ aet_eliteGuards_FLbelow50_u = {
     land_maintenance_modifier = -0.35
 }
 
+
 aet_eliteGuards_FLbelow70_c = {
-    aet_eliteGuards_buffMultiplier = 0.25
+    aet_eliteGuards_buffMultiplier = 0.3
 }
 aet_eliteGuards_FLbelow70_u = {
     is_revolutionary_guard_modifier = yes 
@@ -59,11 +66,11 @@ aet_eliteGuards_FLbelow70_u = {
 }
 
 aet_eliteGuards_FLbelow80_c = {
-    aet_eliteGuards_buffMultiplier = 0.125
+    aet_eliteGuards_buffMultiplier = 0.1
 }
 
 aet_eliteGuards_FLabove125_c = {
-    aet_eliteGuards_buffMultiplier = -0.125
+    aet_eliteGuards_buffMultiplier = -0.1
 }
 aet_eliteGuards_FLabove125_u = {
     is_revolutionary_guard_modifier = yes 
@@ -74,7 +81,7 @@ aet_eliteGuards_FLabove125_u = {
 }
 
 aet_eliteGuards_FLabove135_c = {
-    aet_eliteGuards_buffMultiplier = -0.25
+    aet_eliteGuards_buffMultiplier = -0.3
     land_forcelimit_modifier = -0.05
 }
 aet_eliteGuards_FLabove135_u = {
@@ -86,7 +93,7 @@ aet_eliteGuards_FLabove135_u = {
 }
 
 aet_eliteGuards_FLabove150_c = {
-    aet_eliteGuards_buffMultiplier = -0.375
+    aet_eliteGuards_buffMultiplier = -0.4
     land_forcelimit_modifier = -0.10
 }
 aet_eliteGuards_FLabove150_u = {
@@ -126,6 +133,12 @@ aet_eliteGuards_FLabove200_u = {
     artillery_cost = 1
     land_maintenance_modifier = 1
 }
+
+aet_eliteGuards_quantitySize = {
+    aet_eliteGuards_buffMultiplier = -0.10
+    aet_eliteGuards_forceLimit = 0.075
+}
+
 
 aet_eliteGuardsFL_0 = {
     can_recruit_revolutionary_guards = yes

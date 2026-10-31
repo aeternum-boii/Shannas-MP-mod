@@ -1456,15 +1456,9 @@ country_event = {
 			limit = {
 				has_reform = empowered_royal_guard_reform
 			}
-		custom_tooltip = AVAILABLE_BECAUSE_OF_REFORM_LES_VIEUX_CORPS
+			custom_tooltip = AVAILABLE_BECAUSE_OF_REFORM_LES_VIEUX_CORPS
 		}
-		else_if = {
-			limit = {
-				has_reform = professional_army_reform
-			}
-		custom_tooltip = AVAILABLE_BECAUSE_OF_REFORM_PROFESSIONAL_ARMY
-		}
-		
+
 		trigger = {
 			OR = {
 				has_professionals_reform_35 = yes

@@ -1051,46 +1051,6 @@ estate_nobles_berber_guides = {
 	}
 }
 
-estate_nobles_elite_guards = {
-	icon = privilege_promote_purbias
-	max_absolutism = -5
-	loyalty = 0.00
-	influence = 0.05
-	is_valid = {
-		has_government_attribute = enables_elite_regiments
-	}
-	can_select = {
-		has_government_attribute = enables_elite_regiments
-	}
-	penalties = {
-		nobles_loyalty_modifier = -0.10
-		nobles_influence_modifier = -0.10
-	}
-	benefits = {
-		allowed_rajput_fraction = 0.10
-	}
-	on_granted = {
-		add_country_modifier = {
-			name = GE_guards_regiments
-			duration = -1
-		}
-	}
-	on_revoked = {
-		remove_country_modifier = GE_guards_regiments
-	}
-	on_invalid = {
-		remove_country_modifier = GE_guards_regiments
-	}
-	modifier_by_land_ownership = {
-	}
-	mechanics = {
-		enables_rajput_regiments
-	}
-	ai_will_do = {
-		factor = 100
-	}
-}
-
 ###############Burgher Privileges###############
 
 estate_burghers_town_rights = {

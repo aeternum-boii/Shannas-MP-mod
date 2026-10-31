@@ -11,7 +11,7 @@ country_event = {
 		name = join_war_event.1
 		join_all_offensive_wars_of = FROM
         join_all_defensive_wars_of = FROM
-		ai_chance = { 100 }
+		ai_chance = { factor = 100 }
 	}
 
     option = {

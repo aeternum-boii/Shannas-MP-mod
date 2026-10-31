@@ -550,7 +550,6 @@ monarchy = {
 				national_guard_reform
 				mercenary_corps_reform
 				landsknecht_captains_reform
-				professional_army_reform
 				empowered_royal_guard_reform
 				empowered_mercenary_corps_reform
 				empowered_heavy_knights_reform
@@ -995,7 +994,6 @@ monarchy = {
 	}
 
 	exclusive_reforms = {
-		professional_army_reform
 		hessian_militarized_monarchy_reform
 		hessian_modern_militarized_monarchy_reform
 	}
@@ -1314,7 +1312,6 @@ republic = {
 				national_guard_reform
 				milizia_nationale_reform
 				mercenary_corps_reform
-				professional_army_reform
 				italian_mercenaries_reform
 				imperial_circles_reform
 				expanded_devshirme_reform

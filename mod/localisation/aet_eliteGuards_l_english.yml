@@ -2,4 +2,8 @@
  aet_eliteGuards_FL_deFactoLimit: "Force Limit Applied (multiply by 5%)"
  aet_eliteGuards_FL_deFactoUsage: "Force Limit Used (absolute value)"
 
- aet_eliteGuards_valueDump: "[Root.aet_eliteGuards_FL_deFactoLimit.GetName]: §[Root.aet_eliteGuards_FL_deFactoLimit.GetValue]|+§!\n[Root.aet_eliteGuards_FL_deFactoUsage.GetName]: §[Root.aet_eliteGuards_FL_deFactoUsage.GetValue]|*§!"
+ aet_eliteGuards_buffMultiplier: "Elite Guards Buff Multiplier"
+ aet_eliteGuards_forceLimit: "Elite Guards Forcelimit"
+ aet_eliteGuards_forceLimit_infGfx: "Elite Guards Forcelimit"
+ aet_eliteGuards_forceLimit_artyGfx: "Elite Guards Forcelimit"
+ aet_eliteGuards_forceLimit_cavGfx: "Elite Guards Forcelimit"

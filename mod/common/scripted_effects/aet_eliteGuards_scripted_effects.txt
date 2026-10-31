@@ -220,14 +220,14 @@ aet_eliteGuards_checkDecisions = {
 		limit = {
 			NOT = { aet_eliteGuard_heavyCavPersistentRequirements = yes }
 		}
-		remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_heavyCavalry_specialisation }
 		remove_country_modifier = aet_eliteGuards_heavyCavalry_specialisation_country
 	}
 	if = {
 		limit = {
 			NOT = { aet_eliteGuard_lightCavPersistentRequirements = yes }
 		}
-		remove_country_modifier = aet_eliteGuards_lightCavalry_specialisation
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_lightCavalry_specialisation }
 		remove_country_modifier = aet_eliteGuards_lightCavalry_country
 	}
 	if = {
@@ -235,15 +235,15 @@ aet_eliteGuards_checkDecisions = {
 			NOT = { aet_eliteGuard_cavArcherPersistentRequirements = yes }
 		}
 		remove_country_modifier = aet_eliteGuards_horseArcher_country
-		remove_country_modifier = aet_eliteGuards_horseArcher_specialisation
-		remove_country_modifier = aet_eliteGuards_horseArcher_horde
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_horseArcher_specialisation }
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_horseArcher_horde }
 		remove_country_modifier = aet_eliteGuards_horseArcher_horde_country		
 	}
 	if = {
 		limit = {
 			NOT = { aet_eliteGuard_cavArcherNomadPersistentRequirements = yes }
 		}
-		remove_country_modifier = aet_eliteGuards_horseArcher_horde
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_horseArcher_horde }
 		remove_country_modifier = aet_eliteGuards_horseArcher_horde_country	
 	}			
 	if = {
@@ -264,11 +264,27 @@ aet_eliteGuards_checkDecisions = {
 				aet_eliteGuards_plutoPersistentRequirements = yes 
 			}
 		}
-		remove_country_modifier = aet_eliteGuards_plutoMoraleDamage
-		remove_country_modifier = aet_eliteGuards_plutoMoraleDamageReceived
-		remove_country_modifier = aet_eliteGuards_plutoManpowerUsage
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_plutoMoraleDamage }
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_plutoMoraleDamageReceived }
+		aet_eliteGuards_removeCountryModifier = { name = aet_eliteGuards_plutoManpowerUsage } 
 
 		aet_eliteGuards_removePlutoCost = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				aet_eliteGuards_offensivePersistentRequirements = yes
+			}
+		}
+		aet_eliteGuards_removeCountryModifier = {
+			name = aet_eliteGuards_offensiveAssaultAbility
+		}
+		aet_eliteGuards_removeCountryModifier = {
+			name = aet_eliteGuards_offensiveFireDealt
+		}
+		aet_eliteGuards_removeCountryModifier = {
+			name = aet_eliteGuards_offensiveShockDealt
+		}
 	}
 }
 

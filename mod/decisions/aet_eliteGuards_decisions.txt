@@ -922,5 +922,76 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}		
+	}
+
+	aet_eliteGuards_quantitySize = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			NOT = {
+				has_country_modifier = aet_eliteGuards_quantitySize
+			}
+			OR = {
+				aet_is_debug = yes 
+
+				check_variable = {
+					which = aet_eliteGuards_inf_enable
+					value = 1
+				}
+			}
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			NOT = {
+				has_country_modifier = aet_eliteGuards_quantitySize
+			}
+			aet_eliteGuards_quantityPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			add_country_modifier = {
+				name = aet_eliteGuards_quantitySize
+				duration = -1
+			}	
+		}
+
+		ai_importance = 400
+
+		ai_will_do = {
+			factor = 400
+		}		
+	}
+
+	aet_eliteGuards_quantitySize_remove = {
+		potential = {
+			aet_eliteGuards_baseDecisionTrigger = yes 
+			has_country_modifier = aet_eliteGuards_quantitySize
+		}
+		
+		allow = { 
+			aet_applyVar = {
+				left = mil_power
+				var = aet_eliteGuards_fullcost
+			}
+			has_country_modifier = aet_eliteGuards_quantitySize
+			aet_eliteGuards_quantityPersistentRequirements = yes 
+		}
+		
+		effect = {
+			aet_eliteGuards_takeFullAction = yes
+
+			remove_country_modifier = aet_eliteGuards_quantitySize
+		}
+
+		ai_importance = 0
+
+		ai_will_do = {
+			factor = 0
+		}		
 	}		
 }
