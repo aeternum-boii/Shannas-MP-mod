@@ -4243,8 +4243,8 @@ humanist_modernisation = {# Open Military Academies
 		full_idea_group = modernisation_ideas
 	}
 	
-		technology_cost = -0.05
-		yearly_army_professionalism = 0.025
+	technology_cost = -0.05
+	yearly_army_professionalism = 0.0025
 
 	effect = {}
 	removed_effect = {}

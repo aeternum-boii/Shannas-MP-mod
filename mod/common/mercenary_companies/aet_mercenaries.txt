@@ -836,10 +836,10 @@ aet_englishLongbowmen = {
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	home_province = 236
 
-	regiments_per_development = 0.045
-	cavalry_weight = 0.00
+	regiments_per_development = 0.05
+	cavalry_cap = 0
 	cost_modifier = 0.2
-	sprites = { dlc001_eng_sprite_pack dlc016_eng_sprite_pack dlc028_eng_sprite_pack dlc028_eng_sprite_pack_anglois westerngfx_sprite_pack }
+	sprites = { dlc001_eng_sprite_pack dlc028_eng_sprite_pack_anglois westerngfx_sprite_pack }
 
 	trigger = {
 		OR = {
@@ -852,40 +852,6 @@ aet_englishLongbowmen = {
 			has_country_flag = eng_took_ave_branch
 			NOT = { is_year = 1460 }
 		}
-	}
-
-	modifier = {
-		infantry_fire = 0.25
-		merc_leader_army_tradition = 1
-	}
-
-	min_size = 14
-	counts_towards_force_limit = no
-}
-
-aet_englishLongbowmen_late = {
-	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
-	home_province = 236
-
-	regiments_per_development = 0.6
-	cavalry_weight = 0.00
-	artillery_weight = 0.35
-	cost_modifier = 0.2
-	sprites = { dlc001_eng_sprite_pack dlc016_eng_sprite_pack dlc028_eng_sprite_pack dlc028_eng_sprite_pack_anglois westerngfx_sprite_pack }
-
-	trigger = {
-		OR = {
-			tag = ENG
-			was_tag = ENG
-		}
-		NOT = { has_country_flag = eng_took_gbr_branch }
-
-		OR = {
-			has_country_flag = eng_took_ave_branch
-			NOT = { is_year = 1460 }
-		}
-
-		has_global_flag = new_european_mercs
 	}
 
 	modifier = {

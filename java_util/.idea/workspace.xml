@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5eff02d8-4d86-4ec3-b210-8fac24901221" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/parsing/FileSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/common/defines/lukat_defines.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/defines/lukat_defines.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/common/ideas/00_basic_ideas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/ideas/00_basic_ideas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/common/mercenary_companies/aet_mercenaries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/mercenary_companies/aet_mercenaries.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/common/religions/00_religion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/religions/00_religion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/descriptor.mod" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/descriptor.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_decentralisation_ideas.dds" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_decentralisation_ideas.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_exploitation_ideas.dds" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_exploitation_ideas.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_fiscal_ideas.dds" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_fiscal_ideas.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_grandeur_ideas.dds" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/gfx/interface/ideas/idea_grandeur_ideas.dds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/gfx/interface/ideas/images.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/gfx/interface/ideas/images.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/interface/ideas.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/interface/ideas.gfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/localisation/replace/aet_ideas_replace_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/localisation/replace/aet_ideas_replace_l_english.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="98" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="java_util" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\Simon\.gradle\wrapper\dists\gradle-9.8.0-bin\3m7h6ceboy5k31n8kzwzuxssm\gradle-9.8.0" javaHome="C:\Program Files\Java\latest\jdk-26" gradleVersion="9.8.0" />
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000000040088" />
+      <entry key="MS500" value="1.005568243101013" />
+      <entry key="S2" value="1.4093174583269836" />
+      <entry key="S5" value="2.3712459730361988" />
+      <entry key="S10" value="3.7624985489120517" />
+      <entry key="S30" value="6.363149317259577" />
+      <entry key="S60" value="7.656095228201158" />
+      <entry key="M2" value="8.794084236741377" />
+      <entry key="M5" value="10.664963596183231" />
+      <entry key="M10" value="12.190830620330724" />
+      <entry key="M15" value="12.936642633793152" />
+      <entry key="M30" value="13.856894195733966" />
+      <entry key="H1" value="14.397055299474614" />
+      <entry key="H2" value="14.69018654746494" />
+      <entry key="H4" value="14.84294282459808" />
+      <entry key="D1" value="14.973519426258072" />
+      <entry key="W1" value="14.996209531166697" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="6.691935384568287E-22" />
+      <entry key="MS500" value="6.301355285665106E-5" />
+      <entry key="S2" value="0.1342110691630813" />
+      <entry key="S5" value="0.6938178540099299" />
+      <entry key="S10" value="1.307466881751182" />
+      <entry key="S30" value="2.2433392258058973" />
+      <entry key="S60" value="2.8573984050906223" />
+      <entry key="M2" value="3.6240272859312306" />
+      <entry key="M5" value="4.821229050504819" />
+      <entry key="M10" value="5.647383246491161" />
+      <entry key="M15" value="6.022639940371075" />
+      <entry key="M30" value="6.467893702862426" />
+      <entry key="H1" value="6.721875306136366" />
+      <entry key="H2" value="6.8577517866179205" />
+      <entry key="H4" value="6.928057327844567" />
+      <entry key="D1" value="6.987893935639227" />
+      <entry key="W1" value="6.998267705219896" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="3.6340255791655077E-6" />
+      <entry key="MS500" value="0.08354314250201288" />
+      <entry key="S2" value="0.9618215966339554" />
+      <entry key="S5" value="2.6399779738534606" />
+      <entry key="S10" value="4.685441513292485" />
+      <entry key="S30" value="8.326371788698037" />
+      <entry key="S60" value="10.325134199206811" />
+      <entry key="M2" value="12.291282612304858" />
+      <entry key="M5" value="15.405528816527637" />
+      <entry key="M10" value="17.78601374736375" />
+      <entry key="M15" value="18.920813475456722" />
+      <entry key="M30" value="20.303368843340476" />
+      <entry key="H1" value="21.107598068873283" />
+      <entry key="H2" value="21.54210557291325" />
+      <entry key="H4" value="21.768040728477903" />
+      <entry key="D1" value="21.960914021991005" />
+      <entry key="W1" value="21.994405751015925" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LJDAhbjn0Rvbu8P5ccO3N0xt6m" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.FileSorter.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Gradle.java_util [:net.aeternum.shannaMod.parsing.FileSorter.main()].executor": "Run",
+    "Gradle.java_util [build].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "elitesRework",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "profiler.jvm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.FileSorter">
+    <configuration name="FileSorter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.aeternum.shannaMod.parsing.FileSorter" />
+      <module name="java_util.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.aeternum.shannaMod.parsing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.aeternum.shannaMod.Main" />
+      <module name="java_util.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.aeternum.shannaMod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java_util [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FileSorter" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.java_util [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5eff02d8-4d86-4ec3-b210-8fac24901221" name="Changes" comment="" />
+      <created>1793163136966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793163136966</updated>
+      <workItem from="1793163139419" duration="240000" />
+      <workItem from="1793163388227" duration="452000" />
+      <workItem from="1793163851137" duration="102000" />
+      <workItem from="1793164221137" duration="1410000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

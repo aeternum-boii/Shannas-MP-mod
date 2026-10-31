@@ -2436,7 +2436,8 @@ court_modernisation = {
 		full_idea_group = modernisation_ideas
 	}
 	
-	yearly_army_professionalism = 0.025
+	max_absolutism = 5
+	yearly_army_professionalism = 0.0025
 
 	effect = {}
 	removed_effect = {}

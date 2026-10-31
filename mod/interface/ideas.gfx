@@ -301,4 +301,53 @@ spriteTypes = {
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}		
+
+	spriteType = {
+		name = "GFX_idea_logistics_ideas"
+		texturefile = "gfx/interface/ideas/idea_logistics_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}		
+
+		spriteType = {
+		name = "GFX_idea_modernisation_ideas"
+		texturefile = "gfx/interface/ideas/idea_modernisation_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_christian_ideas"
+		texturefile = "gfx/interface/ideas/idea_christian_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}		
+
+	spriteType = {
+		name = "GFX_idea_muslim_ideas"
+		texturefile = "gfx/interface/ideas/idea_muslim_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}			
+
+	spriteType = {
+		name = "GFX_idea_jewish_ideas"
+		texturefile = "gfx/interface/ideas/idea_jewish_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}			
+
+	spriteType = {
+		name = "GFX_idea_eastern_ideas"
+		texturefile = "gfx/interface/ideas/idea_eastern_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}			
+
+	spriteType = {
+		name = "GFX_idea_dharmic_ideas"
+		texturefile = "gfx/interface/ideas/idea_dharmic_ideas.dds"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}			
 }
