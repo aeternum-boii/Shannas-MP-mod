@@ -843,7 +843,7 @@ NED_ideas = {
 		trade_range_modifier = 0.1
 	}
 	polders = {
-		development_cost = -0.2
+		development_cost = -0.1
 	}
 	instructie_voor_de_admiraliteiten = {
 		leader_naval_fire = 2
@@ -4073,7 +4073,7 @@ TUS_ideas = {
 		papal_influence = 2
 		church_power_modifier = 0.1
 		monthly_fervor_increase = 0.25
-		development_cost = -0.2
+		development_cost = -0.1
 	}
 	
 	bonus = {
@@ -4089,8 +4089,8 @@ TUS_ideas = {
 	free = yes
 	
 	birthplace_of_the_renaissance = {
-		idea_cost = -0.05
-		technology_cost = -0.05
+		idea_cost = -0.065
+		technology_cost = -0.065
 	}
 	tuscan_condottieri = {
 		merc_maintenance_modifier = -0.15

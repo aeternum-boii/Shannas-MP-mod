@@ -6,6 +6,7 @@ There have been tries to establish proper changelogs before but those usually we
 Changelogs are also seperately saved in the folder changelogs. These are merely provided as utility for the discord server, and might be shorter than the changelogs in this file. 
 
 Versions contained in this file (descending):
+ - [v4.0.1](#v401--back-to-top) *(20.11.2026)*
  - [v4.0.0-rc.2](#v400-rc2--back-to-top) *(12.11.2026)*
  - [v4.0.0-rc.1](#v400-rc1--back-to-top) *(08.11.2026)*
  - [v3.25.2](#v3252--back-to-top) *(22.10.2026)*
@@ -2393,3 +2394,9 @@ A small improvement to performance can be seen with v.4.0.0-rc.1 in the early ga
 - Nerfed Portuguese Ideas by reordering them  
 - Removed Malaria
 - Reduced the minimum relations for alliance to -200 from -100
+
+## v4.0.1 <small>[↑ Back to top](#changelogs)</small>
+
+- Reverted Dutch Ideas to Vanilla 
+- Reverted Tuscan Ideas to Vanilla 
+- Made Industrial Ideas and Infrastructure Ideas mutually exclusive 

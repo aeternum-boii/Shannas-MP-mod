@@ -499,7 +499,7 @@ economic_ideas = { # INDUSTRIAL IDEAS IN LOC
 	category = ADM
 
 	trigger = {
-
+		NOT = { has_idea_group = infrastructure_ideas } 
 	}
 
 	bonus = {
@@ -902,12 +902,7 @@ infrastructure_ideas = {
 	category = ADM
 
 	trigger = {
-		if = {
-			limit = { 
-				ai = yes
-				
-			}
-		}
+		NOT = { has_idea_group = economic_ideas } 
 	}
 
 	bonus = {
