@@ -69,3 +69,4 @@ These are updates of a size, that warrant a new high level version. Usually only
 - **remove dev cost if vassal (player only)** - *Priority 5*
 - **Easter Egg for disbanded Byzantine Navy** - *Priority 1* 
 - **Fix Revolution Handling of Elite Guards** - *Priority 7* 
+- **Remove the Prestige Cost of Returning Provinces** - *Priority 5* 

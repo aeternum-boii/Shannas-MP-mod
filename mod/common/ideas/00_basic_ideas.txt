@@ -16,6 +16,7 @@
 
 
 
+
 administrative_ideas = {
 	category = ADM
 
@@ -118,6 +119,7 @@ administrative_ideas = {
 
 
 
+
 christian_ideas = {
 	category = ADM
 
@@ -202,6 +204,7 @@ christian_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -305,6 +308,7 @@ decentralised_ideas = {
 
 
 
+
 dharmic_ideas = {
 	category = ADM
 
@@ -391,6 +395,7 @@ dharmic_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -495,6 +500,7 @@ eastern_ideas = {
 
 
 
+
 economic_ideas = { # INDUSTRIAL IDEAS IN LOC 
 	category = ADM
 
@@ -591,6 +597,7 @@ economic_ideas = { # INDUSTRIAL IDEAS IN LOC
 		}
 	}
 }
+
 
 
 
@@ -707,6 +714,7 @@ expansion_ideas = {
 
 
 
+
 fiscal_ideas = { # Death war ideas 
 	category = ADM 
 
@@ -769,6 +777,7 @@ fiscal_ideas = { # Death war ideas
 		}
 	}
 }
+
 
 
 
@@ -898,6 +907,7 @@ humanist_ideas = {
 
 
 
+
 infrastructure_ideas = {
 	category = ADM
 
@@ -967,6 +977,7 @@ infrastructure_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -1048,6 +1059,7 @@ innovativeness_ideas = {
 
 
 
+
 internal_affair_ideas = {
 	category = ADM 
 
@@ -1114,6 +1126,7 @@ internal_affair_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -1212,6 +1225,7 @@ jewish_ideas = {
 
 
 
+
 muslim_ideas = {
 	category = ADM
 
@@ -1291,6 +1305,7 @@ muslim_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -1406,6 +1421,7 @@ religious_ideas = {
 
 
 
+
 statecraft_ideas = {
 	category = ADM 
 
@@ -1468,6 +1484,7 @@ statecraft_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -1566,6 +1583,7 @@ court_ideas = {
 
 
 
+
 diplomatic_ideas = {
 	category = DIP
 
@@ -1639,6 +1657,7 @@ diplomatic_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -1797,6 +1816,7 @@ exploitation_ideas = {
 
 
 
+
 exploration_ideas = {
 	category = DIP
 	important = yes
@@ -1923,6 +1943,7 @@ exploration_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -2061,6 +2082,7 @@ grandeur_ideas = {
 
 
 
+
 influence_ideas = {
 	category = DIP
 
@@ -2152,6 +2174,7 @@ influence_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -2278,6 +2301,7 @@ maritime_ideas = {
 
 
 
+
 nationalism_ideas = {
 	category = DIP 
 
@@ -2383,6 +2407,7 @@ nationalism_ideas = {
 
 
 
+
 societal_ideas = {
 	category = DIP
 
@@ -2435,6 +2460,7 @@ societal_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -2531,6 +2557,7 @@ spy_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -2639,6 +2666,7 @@ trade_ideas = {
 
 
 
+
 aristocracy_ideas = {
 	category = MIL
 
@@ -2732,6 +2760,7 @@ aristocracy_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -2893,6 +2922,7 @@ defensive_ideas = {
 
 
 
+
 horde_gov_ideas = {
 	category = MIL
 	
@@ -2946,6 +2976,7 @@ horde_gov_ideas = {
 		factor = 10000.0
 	}
 }
+
 
 
 
@@ -3020,6 +3051,7 @@ indigenous_ideas = {
 
 
 
+
 leadership_ideas = {
 	category = MIL
 	
@@ -3075,6 +3107,7 @@ leadership_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -3154,6 +3187,7 @@ logistics_ideas = {
 
 
 
+
 mercenary_ideas = {
 	category = MIL 
 
@@ -3209,6 +3243,7 @@ mercenary_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -3304,6 +3339,7 @@ militarism_ideas = {
 
 
 
+
 modernisation_ideas = {
 	category = MIL
 	
@@ -3379,6 +3415,7 @@ modernisation_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -3469,6 +3506,7 @@ naval_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -3576,6 +3614,7 @@ offensive_ideas = {
 
 
 
+
 plutocracy_ideas = {
 	category = MIL
 
@@ -3645,6 +3684,7 @@ plutocracy_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -3731,6 +3771,7 @@ quality_ideas = {
 		}
 	}
 }
+
 
 
 
@@ -3836,6 +3877,7 @@ quantity_ideas = {
 
 
 
+
 theocracy_gov_ideas = {
 	category = MIL
 	
@@ -3911,6 +3953,7 @@ theocracy_gov_ideas = {
 		}
 	}
 }
+
 
 
 

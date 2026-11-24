@@ -12,11 +12,11 @@ import java.util.regex.Pattern;
 
 public class Main {
     static void main() {
-        EliteGuardsBuffMultiplierBuilder egbmb = new EliteGuardsBuffMultiplierBuilder(5)
-                .generateScaledModifiers()
-                .writeScaledModifiers()
-                .writeLogic()
-                .writeLocalisation();
+//        EliteGuardsBuffMultiplierBuilder egbmb = new EliteGuardsBuffMultiplierBuilder(5)
+//                .generateScaledModifiers()
+//                .writeScaledModifiers()
+//                .writeLogic()
+//                .writeLocalisation();
 
         FLBuildings flb = FLBuildings.fromDefaultConfig()
                 .setBuildingModifier(new String[]{"regimental_camp", "conscription_center"}, "land_forcelimit")

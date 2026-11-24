@@ -12,3 +12,4 @@ plugins {
 }
 
 rootProject.name = "java_util"
+include("maputil")

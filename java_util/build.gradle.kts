@@ -1,9 +1,7 @@
 plugins {
     id("java")
 }
-
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
@@ -19,11 +17,11 @@ dependencies {
     // Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
     //implementation("com.fasterxml.jackson.core:jackson-databind:2.22.3")
     implementation(files("libs/ironj-semantics-1.1.0.jar")) // contains all the other dependencies already
+    implementation(files("libs/csv.jar"))
 }
 
 group = "net.aeternum"
 
-// Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(27)

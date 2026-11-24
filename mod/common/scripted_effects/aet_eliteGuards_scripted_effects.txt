@@ -222,7 +222,7 @@ aet_eliteGuards_refreshAll = {
 	aet_eliteGuards_recalcFL = yes
 	aet_eliteGuards_checkDecisions = yes 
 	aet_eliteGuards_getPlutoCost = yes 
-	aet_eliteGuards_refreshScaledModifiers = yes
+	#aet_eliteGuards_refreshScaledModifiers = yes
 }
 
 aet_eliteGuards_checkDecisions = {
@@ -1542,24 +1542,30 @@ aet_eliteGuards_removePlutoCost = {
 }
 
 aet_eliteGuards_addCountryModifier = {
-	tooltip = {
-		add_country_modifier = {
-			name = $name$_1_0_p
-			duration = -1
-		}
+	add_country_modifier = {
+		name = $name$
+		duration = -1 
 	}
-	hidden_effect = {
-		set_country_flag = $name$
-		aet_eliteGuards_refreshScaledModifiers = yes
-	}
+
+	#tooltip = {
+	#	add_country_modifier = {
+	#		name = $name$_1_0_p
+	#		duration = -1
+	#	}
+	#}
+	#hidden_effect = {
+	#	set_country_flag = $name$
+	#	aet_eliteGuards_refreshScaledModifiers = yes
+	#}
 }
 
 aet_eliteGuards_removeCountryModifier = {
-	tooltip = {
-		remove_country_modifier = $name$_1_0_p
-	}
-	hidden_effect = {
-		clr_country_flag = $name$
-		aet_eliteGuards_refreshScaledModifiers = yes
-	}
+	remove_country_modifier = $name$
+	#tooltip = {
+	#	remove_country_modifier = $name$_1_0_p
+	#}
+	#hidden_effect = {
+    #	clr_country_flag = $name$
+	#	aet_eliteGuards_refreshScaledModifiers = yes
+	#}
 }
