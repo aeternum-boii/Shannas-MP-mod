@@ -81,43 +81,6 @@ aet_saveGlobalEventTarget = {
 	}
 }
 
-# Provides a way to dynamically generate event target names with a number prefix 
-# @param string the string for the event target
-# @param var the prefix variable 
-# @see aet_executeInEventTarget
-# @see aet_clearGlobalEventTarget
-aet_saveGlobalEventTargetNR = {
-	aet_applyPrefixed = {
-		var = $var$
-		string = $string$
-		left = save_global_event_target_as
-	}
-}
-
-aet_clearGlobalEventTarget = {
-	aet_applyPrefixed = {
-		var = $var$
-		string = $string$
-		left = clear_global_event_target
-	}
-}
-
-aet_setCountryFlag = {
-	aet_applyPrefixed = {
-		var = $var$
-		string = $string$
-		left = set_country_flag
-	}
-}
-
-aet_clearCountryFlag = {
-	aet_applyPrefixed = {
-		var = $var$
-		string = $string$
-		left = clr_country_flag
-	}
-}
-
 #Country effect
 # Copy of transfer_treasury without the giver (so FROM = { FROM = {}} bs is not necessary)
 #Make sure to make your own custom tooltip for it because parameters can't be given as input. Sadly. 

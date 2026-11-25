@@ -13,7 +13,7 @@ country_event = {
 		name = none
 		ai_chance = { factor = 1 }
 		
-		consumer_tick_vassal_tax_modifier = yes
+		#consumer_tick_vassal_tax_modifier = yes # currently unused
 		consumer_tick_rural_goods_produced_modifier = yes
 		consumer_tick_urban_goods_produced_modifier = yes
 		consumer_tick_mining_goods_produced_modifier = yes

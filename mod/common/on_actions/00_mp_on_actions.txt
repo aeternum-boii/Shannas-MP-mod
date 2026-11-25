@@ -77,15 +77,10 @@ on_startup = {
 		limit = { province_has_center_of_trade_of_level = 1 }
 		set_province_flag = fee_trading_fair_eligible
 	}
-	set_global_flag = fee_meme_active
 }
 
 # province
 on_adm_development = {
-	on_development_effect = { type = adm }
-	owner = {
-		country_event = { id = funny.1 }
-	}
 	#ARUMBA LINES
     hidden_effect = {
 		owner = {
@@ -103,7 +98,6 @@ on_adm_development = {
 
 # province
 on_dip_development = {
-	on_development_effect = { type = dip }
 	#ARUMBA LINES
 	hidden_effect = {
 		owner = {
@@ -121,7 +115,6 @@ on_dip_development = {
 
 # province
 on_mil_development = {
-	on_development_effect = { type = mil }
 	#ARUMBA LINES
     hidden_effect = {
 		owner = {

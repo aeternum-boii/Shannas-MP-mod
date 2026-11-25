@@ -1,4 +1,4 @@
-version="4.0.2-alpha"
+version="4.0.2-alpha.1"
 tags={
 	"Balance"
 }

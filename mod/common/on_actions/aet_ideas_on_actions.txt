@@ -16,7 +16,7 @@ on_bankruptcy = {
 on_yearly_pulse = {
 	if = {
 		limit = {
-			ai = no 
+			OR = { was_player = yes luck = yes } 
 			has_idea_group = grandeur_ideas
 		}
 
@@ -106,6 +106,7 @@ on_province_culture_changed = {
 		limit = {
 			owner = {
 				has_idea_group = nationalism_ideas
+				OR = { was_player = yes luck = yes }
 			}
 		}
 		aet_ideas_applyNationalismModifier = yes
@@ -116,6 +117,7 @@ on_province_culture_converted = {
 		limit = {
 			owner = {
 				has_idea_group = nationalism_ideas
+				OR = { was_player = yes luck = yes }
 			}
 		}
 		aet_ideas_applyNationalismModifier = yes
@@ -126,6 +128,7 @@ on_province_owner_change = {
 		limit = {
 			owner = {
 				has_idea_group = nationalism_ideas
+				OR = { was_player = yes luck = yes }
 			}
 		}
 		aet_ideas_applyNationalismModifier = yes
@@ -136,6 +139,7 @@ on_siege_lost_province = {
 		limit = {
 			owner = {
 				has_idea_group = nationalism_ideas
+				OR = { was_player = yes luck = yes }
 			}
 		}
 		aet_ideas_applyNationalismModifier = yes
@@ -146,6 +150,7 @@ on_siege_won_province = {
 		limit = {
 			owner = {
 				has_idea_group = nationalism_ideas
+				OR = { was_player = yes luck = yes }
 			}
 		}
 		aet_ideas_applyNationalismModifier = yes

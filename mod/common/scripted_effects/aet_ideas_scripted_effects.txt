@@ -19,7 +19,9 @@ aet_ideas_clearExploitationModifiers = {
 	remove_country_modifier = aet_ideas_exploitedSubject_2
 }
 aet_ideas_clearExploitationModifiersProvince = {
-
+	remove_province_modifier = aet_ideas_colony_administrativeDevelopment
+	remove_province_modifier = aet_ideas_colony_diplomaticDevelopment
+	remove_province_modifier = aet_ideas_colony_militaryDevelopment
 }
 aet_ideas_applyBaseExploitationModifier = {
 	if = {

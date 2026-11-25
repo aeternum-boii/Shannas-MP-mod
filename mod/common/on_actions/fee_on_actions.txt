@@ -136,40 +136,6 @@ on_culture_demoted = {
 	}
 }
 
-
-# province
-on_adm_development = {
-	if = {
-		limit = {
-			has_province_modifier = fee_mug_bengali_expansion
-			development = 55
-		}
-		remove_province_modifier = fee_mug_bengali_expansion
-	}
-}
-
-# province
-on_dip_development = {
-	if = {
-		limit = {
-			has_province_modifier = fee_mug_bengali_expansion
-			development = 55
-		}
-		remove_province_modifier = fee_mug_bengali_expansion
-	}
-}
-
-# province
-on_mil_development = {
-	if = {
-		limit = {
-			has_province_modifier = fee_mug_bengali_expansion
-			development = 55
-		}
-		remove_province_modifier = fee_mug_bengali_expansion
-	}
-}
-
 # ROOT = Overlord, FROM = Minor
 on_dependency_lost = {
 	FROM = {
@@ -693,15 +659,6 @@ on_siege_lost_province =  {
 			clr_country_flag = fee_mug_fighting_babur_rebels
 		}
 	}
-	if = {
-		limit = {
-			ROOT = 94
-		}
-		add_great_project_tier = {
-			type = fortress_of_luxembourg
-			tier = -1
-		}
-	}
 }
 
 # country
@@ -741,16 +698,6 @@ on_siege_won_country = {
 	}
 }
 
-on_adm_development = {
-	change_variable = { which = fee_adm_dev_improved value = 1 }
-}
-on_dip_development = {
-	change_variable = { which = fee_dip_dev_improved value = 1 }
-}
-on_mil_development = {
-	change_variable = { which = fee_mil_dev_improved value = 1 }
-}
-
 on_startup = {
 	if = {
 		limit = {
@@ -759,16 +706,6 @@ on_startup = {
 		FEE_initiate_starting_countries = yes
 	}
 	country_event = { id = flavour_and_events_expanded_events.1 } # set flag
-	country_event = { #set the meme flag
-		id = FEE_Meme_Events.1000
-		days = 10
-		random = 5
-	}
-	country_event = { #set the Fair flag
-		id = FEE_Fairs_Events.1
-		days = 30
-		random = 15
-	}
 }
 
 # ROOT = province, FROM = country

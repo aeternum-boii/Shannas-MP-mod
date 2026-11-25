@@ -658,6 +658,80 @@ aet_ages_refreshPulse_age_of_revolutions = {
 	aet_ages_aorv_universities = yes
 }
 
+aet_ages_refreshPulse_lite = {
+	if = {
+		limit = {
+			current_age = age_of_discovery
+		}
+		aet_ages_refreshPulse_age_of_discovery_lite = yes
+	} else_if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		aet_ages_refreshPulse_age_of_reformation_lite = yes 
+	} else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		aet_ages_refreshPulse_age_of_revolutions_lite = yes
+	} else = {
+		aet_ages_refreshPulse_age_of_absolutism_lite = yes
+	}		
+}
+
+aet_ages_refreshPulse_age_of_discovery_lite = {
+	aet_ages_aod_30DevelopmentCity = yes
+	aet_ages_aod_50Development = yes
+	aet_ages_aod_armedWithCannons = yes
+	aet_ages_aod_buildFleet = yes
+	aet_ages_aod_competentCourt = yes
+	aet_ages_aod_discoverAmerica = yes
+	aet_ages_aod_foughtRecentWar = yes
+	aet_ages_aod_humiliateRival = yes
+	aet_ages_aod_isAfricanMerchant = yes
+	aet_ages_aod_isAsianMerchant = yes
+	aet_ages_aod_isEuropeanMerchant = yes
+	aet_ages_aod_isFareastMerchant = yes
+	aet_ages_aod_isIslamicMerchant = yes
+	aet_ages_aod_isNativeMerchant = yes
+	aet_ages_aod_isSteppeMerchant = yes
+	aet_ages_aod_largeNativeForce = yes
+}
+aet_ages_refreshPulse_age_of_reformation_lite = {
+	aet_ages_aor_auditGovernment = yes
+	aet_ages_aor_convertProvinces = yes
+	aet_ages_aor_defenderOfFaith = yes
+	aet_ages_aor_twoContinents = yes
+	aet_ages_aor_humanismReligious = yes
+	aet_ages_aor_palatineCourt = yes
+	aet_ages_aor_papalWarrior = yes
+	aet_ages_aor_prestigiousExample = yes
+	aet_ages_aor_religiousUnity = yes
+	aet_ages_aor_theocraticRule = yes
+	aet_ages_aor_twoContinents = yes
+	aet_ages_aor_unifyCulture = yes
+}
+aet_ages_refreshPulse_age_of_absolutism_lite = {
+	aet_ages_aoa_beverageSupply = yes
+	aet_ages_aoa_enlargeCrownland = yes
+	aet_ages_aoa_flavorSupply = yes
+	aet_ages_aoa_haveColony = yes
+	aet_ages_aoa_hugeCapital = yes
+	aet_ages_aoi_industrialOrigins = yes
+	aet_ages_aoa_internationalTrade = yes
+	aet_ages_aoa_luxurySupply = yes
+	aet_ages_aoa_textilesSupply = yes
+}
+aet_ages_refreshPulse_age_of_revolutions_lite = {
+	aet_ages_aorv_americanSupply = yes
+	aet_ages_aorv_colonialEmpire = yes
+	aet_ages_aorv_controlMultipleMarkets = yes
+	aet_ages_aorv_culturesAccepted = yes
+	aet_ages_aorv_greatGeneral = yes
+	aet_ages_aorv_hasDisciplinedArmy = yes
+	aet_ages_aorv_isEmperor = yes
+	aet_ages_aorv_universities = yes
+}
 
 aet_ages_aod_30DevelopmentCity = {
 	if = {

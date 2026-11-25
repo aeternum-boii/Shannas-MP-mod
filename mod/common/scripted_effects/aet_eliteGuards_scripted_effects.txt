@@ -222,7 +222,7 @@ aet_eliteGuards_refreshAll = {
 	aet_eliteGuards_recalcFL = yes
 	aet_eliteGuards_checkDecisions = yes 
 	aet_eliteGuards_getPlutoCost = yes 
-	#aet_eliteGuards_refreshScaledModifiers = yes
+	#aet_eliteGuards_refreshScaledModifiers = yes # no longer a thing 
 }
 
 aet_eliteGuards_checkDecisions = {
