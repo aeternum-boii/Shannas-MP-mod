@@ -1,5 +1,6 @@
 # Returns the Current Date as used in aet (so 360 day years, 30 day months) 
 # @param var the return variable 
+
 aet_getCurrentDate = {
 	export_to_variable = {
 		variable_name = current_month

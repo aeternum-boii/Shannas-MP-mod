@@ -2,6 +2,7 @@ package net.aeternum.shannaMod;
 
 import net.aeternum.shannaMod.building.FLBuildings;
 import net.aeternum.shannaMod.building.eliteGuards.EliteGuardsBuffMultiplierBuilder;
+import net.aeternum.shannaMod.mixins.EnumToggle;
 import net.aeternum.shannaMod.parsing.FileSorter;
 
 import java.io.BufferedWriter;
@@ -39,5 +40,10 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        EnumToggle et = EnumToggle.fromDefaultConfig()
+                .setMarker("# ET-Marker: performancePlayerCheck #")
+                .toggleContent(1)
+                .writeToFiles();
     }
 }

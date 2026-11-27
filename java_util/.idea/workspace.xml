@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eff02d8-4d86-4ec3-b210-8fac24901221" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/mixins/EnumToggle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/et_fallback.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mod/common/scripted_effects/aet_ideas_scripted_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/scripted_effects/aet_ideas_scripted_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mod/common/scripted_effects/aet_util.generated.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/scripted_effects/aet_util.generated.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/mixins/EnumToggle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/aeternum/shannaMod/mixins/EnumToggle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod/common/ideas/00_basic_ideas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/ideas/00_basic_ideas.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mod/common/scripted_effects/aet_util.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/scripted_effects/aet_util.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mod/common/scripted_effects/zzz_aet_headers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/scripted_effects/zzz_aet_headers.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mod/common/scripted_triggers/aet_util.generated.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../mod/common/scripted_triggers/aet_util.generated.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,61 +71,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0319066289283498" />
-      <entry key="MS500" value="1.5020837716194864" />
-      <entry key="S2" value="1.8417711673929609" />
-      <entry key="S5" value="1.9334211097859901" />
-      <entry key="S10" value="1.9661554681304847" />
-      <entry key="S30" value="2.1826905228788593" />
-      <entry key="S60" value="4.637476901597342" />
-      <entry key="M2" value="14.411369938272703" />
-      <entry key="M5" value="47.13547661224462" />
-      <entry key="M10" value="92.21045712517659" />
-      <entry key="M15" value="129.44665361505747" />
-      <entry key="M30" value="225.10827061587665" />
-      <entry key="H1" value="359.23742651148495" />
-      <entry key="H2" value="509.9853924939185" />
-      <entry key="H4" value="690.6957253750129" />
-      <entry key="D1" value="1112.9775532094075" />
-      <entry key="W1" value="1256.3418044963887" />
+      <entry key="MS100" value="8.365072580705696E-106" />
+      <entry key="MS500" value="9.64927494116601E-22" />
+      <entry key="S2" value="6.126971626911454E-6" />
+      <entry key="S5" value="0.015412331848298173" />
+      <entry key="S10" value="0.29162959473242794" />
+      <entry key="S30" value="2.8115341075473386" />
+      <entry key="S60" value="5.585040326265546" />
+      <entry key="M2" value="8.503013507620802" />
+      <entry key="M5" value="14.263086034578658" />
+      <entry key="M10" value="29.29167035950992" />
+      <entry key="M15" value="48.13863053663579" />
+      <entry key="M30" value="114.28691046073826" />
+      <entry key="H1" value="253.33948129138722" />
+      <entry key="H2" value="459.02075677070576" />
+      <entry key="H4" value="706.3208462220495" />
+      <entry key="D1" value="1256.2777355269207" />
+      <entry key="W1" value="1442.0869552190345" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.2457473752504824E-111" />
-      <entry key="S2" value="2.552891629987179E-28" />
-      <entry key="S5" value="9.410507505900955E-12" />
-      <entry key="S10" value="3.5186613057237583E-6" />
-      <entry key="S30" value="0.024346239472733303" />
-      <entry key="S60" value="0.26249001279738" />
-      <entry key="M2" value="1.0601311556386337" />
-      <entry key="M5" value="4.437404888008941" />
-      <entry key="M10" value="10.623237336229268" />
-      <entry key="M15" value="15.896797422125534" />
-      <entry key="M30" value="28.77641129164846" />
-      <entry key="H1" value="46.32583403764491" />
-      <entry key="H2" value="67.16904439027087" />
-      <entry key="H4" value="95.53417399288273" />
-      <entry key="D1" value="168.36255208752303" />
-      <entry key="W1" value="194.01546536884584" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.00000020111225" />
+      <entry key="S5" value="1.0021088323185947" />
+      <entry key="S10" value="1.04938099858058" />
+      <entry key="S30" value="1.529753944407256" />
+      <entry key="S60" value="2.148031731868996" />
+      <entry key="M2" value="3.050400406527467" />
+      <entry key="M5" value="5.518467702990745" />
+      <entry key="M10" value="9.615153182190578" />
+      <entry key="M15" value="13.442379876044706" />
+      <entry key="M30" value="24.68183782686749" />
+      <entry key="H1" value="45.43643577289935" />
+      <entry key="H2" value="74.97558399525049" />
+      <entry key="H4" value="112.4092343118186" />
+      <entry key="D1" value="203.48026214669108" />
+      <entry key="W1" value="235.7115410771768" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.03656124581185435" />
-      <entry key="MS500" value="0.690311169739702" />
-      <entry key="S2" value="1.4939569008898617" />
-      <entry key="S5" value="1.7758472919791575" />
-      <entry key="S10" value="1.883926059316746" />
-      <entry key="S30" value="2.1732767365746724" />
-      <entry key="S60" value="4.849958579204912" />
-      <entry key="M2" value="15.381199058583638" />
-      <entry key="M5" value="51.44700766936542" />
-      <entry key="M10" value="102.7089847146467" />
-      <entry key="M15" value="145.22694025027633" />
-      <entry key="M30" value="253.7842252952141" />
-      <entry key="H1" value="405.4836684801614" />
-      <entry key="H2" value="577.0965517984447" />
-      <entry key="H4" value="786.1880371545848" />
-      <entry key="D1" value="1281.3276192459923" />
-      <entry key="W1" value="1450.3552157498232" />
+      <entry key="MS100" value="4.964225217597706E-6" />
+      <entry key="MS500" value="0.08693012323187424" />
+      <entry key="S2" value="0.5429958339232395" />
+      <entry key="S5" value="0.7995490981575032" />
+      <entry key="S10" value="1.2136261629103555" />
+      <entry key="S30" value="4.245716688394185" />
+      <entry key="S60" value="7.649302623705744" />
+      <entry key="M2" value="11.488501501450449" />
+      <entry key="M5" value="19.73480010259747" />
+      <entry key="M10" value="38.86386447378156" />
+      <entry key="M15" value="61.53783151081656" />
+      <entry key="M30" value="138.9207268425581" />
+      <entry key="H1" value="298.7225077782873" />
+      <entry key="H2" value="533.9464708153047" />
+      <entry key="H4" value="818.6892055062606" />
+      <entry key="D1" value="1459.7444725595828" />
+      <entry key="W1" value="1677.7962273318424" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -190,7 +190,7 @@
       <recent name="net.aeternum.shannaMod.building" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.EnumToggle">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="EnumToggle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.aeternum.shannaMod.mixins.EnumToggle" />
       <module name="java_util.main" />
@@ -217,12 +217,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSorter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.aeternum.shannaMod.parsing.FileSorter" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.aeternum.shannaMod.Main" />
       <module name="java_util.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="net.aeternum.shannaMod.parsing.*" />
+          <option name="PATTERN" value="net.aeternum.shannaMod.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -281,11 +281,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.EnumToggle" />
         <item itemvalue="Application.net.aeternum.eu4MapUtil.Main" />
         <item itemvalue="Gradle.java_util [build]" />
         <item itemvalue="Application.FLBuildings" />
-        <item itemvalue="Application.FileSorter" />
       </list>
     </recent_temporary>
   </component>
@@ -316,12 +316,19 @@
       <workItem from="1795164418565" duration="1500000" />
       <workItem from="1795184648163" duration="3423000" />
       <workItem from="1795465011394" duration="1335000" />
-      <workItem from="1795770474460" duration="5398000" />
+      <workItem from="1795770474460" duration="10952000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="((String)oldFile).value" custom="java.lang.String" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

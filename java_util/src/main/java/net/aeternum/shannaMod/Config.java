@@ -6,21 +6,25 @@ import org.jetbrains.annotations.Contract;
 import org.jspecify.annotations.NonNull;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 
 public record Config(
         String indent,
         Path commonPath,
-        int maxBitWidth
+        int maxBitWidth,
+        Charset charset
 ) {
     public static final Config DEFAULT;
+    public static final Charset DEFAULT_CHARSET = Charset.forName("windows-1252");
     static {
         Config cfg;
         try {
             ObjectMapper mapper = new ObjectMapper();
             cfg = mapper.readValue(Path.of("config", "config.json").toFile(), Config.class);
         } catch (IOException e) {
-            cfg = new Config("\t", Path.of("..", "mod", "common"), 6);
+            cfg = new Config("\t", Path.of("..", "mod", "common"), 6, DEFAULT_CHARSET);
         }
         DEFAULT = cfg;
     }

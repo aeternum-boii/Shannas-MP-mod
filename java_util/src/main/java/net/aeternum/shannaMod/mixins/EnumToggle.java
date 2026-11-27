@@ -9,14 +9,14 @@ import org.jspecify.annotations.NonNull;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.zip.DataFormatException;
 import java.util.zip.Deflater;
@@ -68,71 +68,89 @@ public class EnumToggle {
         return this;
     }
 
-    public EnumToggle writeToFiles() {
+    public enum Option {
+        NO_CONTENT_WRITE,
+        NO_CACHE_WRITE,
+        NO_CACHE_READ
+    }
+
+    public EnumToggle writeToFiles(Option... options) {
+        Set<Option> optionSet = new HashSet<>(Arrays.asList(options));
         if(marker == null) throw new IllegalStateException("marker not set");
         Path root = cfg.commonPath().resolve("..");
+        Pattern pattern = Pattern.compile("(?<=" + Pattern.quote(marker) + ").*?(?=" + Pattern.quote(marker) + ")", Pattern.DOTALL);
         try {
-            List<Path> files = Files.walk(root).filter(Files::isRegularFile).filter(Files::isWritable).filter(f -> f.endsWith(".txt"))
+            List<Path> files = Files.walk(root).parallel().filter(Files::isRegularFile).filter(Files::isWritable)
                     .filter(f -> {
                         try {
-                            String[] lines = Files.readString(f).split("\n");
-                            for(String line : lines) {
-                                line = line.trim();
-                                if(line.equals(marker)) return true;
-                            }
+                            return pattern.matcher(Files.readString(f, cfg.charset())).find();
                         } catch (IOException e) {
                             return false;
                         }
-                        return false;
                     }).toList();
-            Pattern pattern = Pattern.compile("(?<=" + Pattern.quote(marker) + ").*?(?=" + Pattern.quote(marker) + ")", Pattern.DOTALL);
+            System.out.println("Files found: " + files);
             if (content == null) {
                 for (Path file : files) {
-                    String fileStr = Files.readString(file);
+                    String fileStr = Files.readString(file, cfg.charset());
                     Matcher matcher = pattern.matcher(fileStr);
 
                     if (!matcher.find()) {
                         continue;
                     }
 
-                    String[] contentStr = matcher.group().split("\n");
-                    List<String> contentList = new ArrayList<>();
-
-                    for (int i = 1; i < contentStr.length; i++) {
-                        String line = contentStr[i].trim();
-
-                        if (line.contains("END OF CONTENT")) {
-                            break;
-                        }
-
-                        contentList.add(decompress(line.substring(1)));
-                    }
-
-                    content = contentList.toArray(new String[0]);
+                    decodeRawContent(matcher);
                     break;
                 }
 
-                if (content == null) {
-                    return this;
+                if ((content == null || content.length == 0) && (optionSet.contains(Option.NO_CACHE_READ) || !readContentFallBack())) {
+                    throw new RuntimeException("No content found");
                 }
             }
+            if(!optionSet.contains(Option.NO_CACHE_WRITE)) writeContentFallBack();
 
-            StringBuilder sb = new StringBuilder();
-            for(String contentBlock : content) {
-                sb.append("#").append(compress(contentBlock)).append("\n");
+            StringBuilder sb = new StringBuilder("\n");
+            if(!optionSet.contains(Option.NO_CONTENT_WRITE)) {
+                for (String contentBlock : content) {
+                    sb.append("#").append(new String(compressBytes(contentBlock), cfg.charset())).append("\n");
+                }
+                sb.append("# END OF CONTENT\n");
             }
-            sb.append("# END OF CONTENT\n");
-            sb.append(content[index]);
+            sb.append(content[index]).append("\n");
 
             String outString = sb.toString();
 
             files.forEach(file -> {
                 try {
-                    String fileStr = Files.readString(file);
-                    fileStr = pattern.matcher(fileStr).replaceAll(
-                            Matcher.quoteReplacement(outString)
-                    );
-                    Files.writeString(file, fileStr);
+                    String fileStr = Files.readString(file, cfg.charset());
+                    Matcher matcher = pattern.matcher(fileStr);
+                    StringBuilder result = new StringBuilder();
+
+                    int matchIndex = 0;
+
+                    while (matcher.find()) {
+                        String replacement = matcher.group();
+
+                        if (matchIndex++ % 2 == 0) {
+                            int lineStart = fileStr.lastIndexOf('\n', matcher.start() - 1) + 1;
+
+                            String indentation = fileStr.substring(lineStart, matcher.start())
+                                    .replaceFirst("\\S.*$", "");
+
+                            replacement = outString.lines()
+                                    .map(line -> indentation + line)
+                                    .collect(Collectors.joining("\n")) + "\n" + indentation;
+                        }
+
+                        matcher.appendReplacement(
+                                result,
+                                Matcher.quoteReplacement(replacement)
+                        );
+                    }
+
+                    matcher.appendTail(result);
+                    fileStr = result.toString();
+
+                    Files.writeString(file, fileStr, cfg.charset());
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -144,16 +162,86 @@ public class EnumToggle {
         return this;
     }
 
+    private void decodeContent(@NonNull Matcher matcher) throws DecoderException {
+        String[] contentStr = matcher.group().split("\n");
+        List<String> contentList = new ArrayList<>();
 
-    static void main() {
-        EnumToggle enumToggle = new EnumToggle(Config.readDefaultConfig())
-                .setMarker("# ET-Marker: 001 #")
-                .setContent(new String[]{"# Test 1", "# Test 2"})
-                .toggleContent(0)
-                .writeToFiles();
+        for (int i = 1; i < contentStr.length; i++) {
+            String line = contentStr[i].trim();
+            if(line.isEmpty()) continue;
+
+            if (line.contains("END OF CONTENT")) {
+                break;
+            }
+
+            contentList.add(decompress(line.substring(1)));
+        }
+
+        content = contentList.toArray(new String[0]);
     }
 
+    private void decodeRawContent(@NonNull Matcher matcher) throws DecoderException {
+        String[] contentStr = matcher.group().split("\n");
+        List<String> contentList = new ArrayList<>();
 
+        for (int i = 1; i < contentStr.length; i++) {
+            String line = contentStr[i].trim();
+            if(line.isEmpty()) continue;
+
+            if (line.contains("END OF CONTENT")) {
+                break;
+            }
+
+            contentList.add(decompressBytes(line.substring(1).getBytes(cfg.charset())));
+        }
+
+        content = contentList.toArray(new String[0]);
+    }
+
+    private void writeContentFallBack() {
+        if(content == null || content.length == 0) return;
+        try {
+            Path fallBack = Path.of("config", "et_fallback.txt");
+            if(!Files.exists(fallBack)) Files.createFile(fallBack);
+            String oldFile = Files.readString(fallBack, cfg.charset());
+            Pattern pattern = Pattern.compile("(?<=" + Pattern.quote(marker) + ").*?(?=" + Pattern.quote(marker) + ")", Pattern.DOTALL);
+
+            StringBuilder sb = new StringBuilder("\n");
+            for(String contentBlock : content) {
+                sb.append("#").append(compress(contentBlock)).append("\n");
+            }
+            sb.append("END OF CONTENT\n");
+            String outString = sb.toString();
+
+            if(pattern.matcher(oldFile).find()) {
+                oldFile = pattern.matcher(oldFile).replaceAll(
+                        Matcher.quoteReplacement(outString)
+                );
+            } else {
+                oldFile += "\n" + marker + "\n" + outString + "\n" + marker;
+            }
+
+            Files.writeString(fallBack, oldFile, cfg.charset());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private boolean readContentFallBack() {
+        try {
+            Path fallBack = Path.of("config", "et_fallback.txt");
+            if(!Files.exists(fallBack)) Files.createFile(fallBack);
+            String oldFile = Files.readString(fallBack, cfg.charset());
+            Pattern pattern = Pattern.compile("(?<=" + Pattern.quote(marker) + ").*?(?=" + Pattern.quote(marker) + ")", Pattern.DOTALL);
+            Matcher matcher = pattern.matcher(oldFile);
+            if(!matcher.find()) return false;
+
+            decodeContent(matcher);
+            return true;
+        } catch (DecoderException | IOException e) {
+            return false;
+        }
+    }
 
 
 
