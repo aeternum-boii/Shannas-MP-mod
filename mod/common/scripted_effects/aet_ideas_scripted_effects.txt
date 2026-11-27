@@ -748,7 +748,7 @@ aet_ideas_exploitationCalculateJointBuildCost = {
 			value = 1	
 		}]
 
-		[[apply_cost]aet_applyVar_int = {
+		[[apply_cost]aet_applyVar_overflowSafe = {
 			left = add_treasury
 			var = aet_ownCost
 		}]

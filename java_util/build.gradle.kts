@@ -18,6 +18,8 @@ dependencies {
     //implementation("com.fasterxml.jackson.core:jackson-databind:2.22.3")
     implementation(files("libs/ironj-semantics-1.1.0.jar")) // contains all the other dependencies already
     implementation(files("libs/csv.jar"))
+    // Source: https://mvnrepository.com/artifact/commons-codec/commons-codec
+    implementation("commons-codec:commons-codec:1.23.0")
 }
 
 group = "net.aeternum"

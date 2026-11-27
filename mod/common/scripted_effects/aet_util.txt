@@ -128,3 +128,60 @@ aet_transfer_treasury = {
 		custom_tooltip = $custom_tooltip$
 	]
 }
+
+# Wrapper of appylyVar to allow for values > 4k
+aet_applyVar_overflowSafe = {
+	if = {
+		limit = {
+			check_variable = {
+				which = $var$
+				value = 0
+			}
+		}
+
+		while = {
+			limit = {
+				check_variable = { 
+					which = $var$
+					value = 4096
+				}
+			}
+
+			subtract_variable = {
+				which = $var$
+				value = 4096
+			}
+
+			aet_applyVar = {
+				var = $var$ 
+				left = $left$ 
+			}
+		}
+	} else = {
+		while = {
+			limit = {
+				NOT = {
+					check_variable = { 
+						which = $var$
+						value = -4096
+					}
+				}
+			}
+
+			change_variable = {
+				which = $var$
+				value = 4096
+			}
+
+			aet_applyVar = {
+				var = $var$ 
+				left = $left$ 
+			}
+		}
+	}
+
+	aet_applyVar = {
+		var = $var$ 
+		left = $left$ 
+	}	
+}
